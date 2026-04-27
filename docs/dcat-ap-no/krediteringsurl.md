@@ -3,7 +3,7 @@
 # Slot: krediteringsurl 
 
 
-_URL for kreditering av rettighetshaver._
+_URL for kreditering av rettshavar._
 
 
 
@@ -22,7 +22,7 @@ Alias: krediteringsurl
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: krediteringsurl
 <details>
 ```yaml
 name: krediteringsurl
-description: URL for kreditering av rettighetshaver.
+description: URL for kreditering av rettshavar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: odrs:attributionURL

@@ -3,7 +3,7 @@
 # Class: Mediatype 
 
 
-_En medietype eller filformat._
+_Ein medietype eller filformat (dct:MediaTypeOrExtent)._
 
 
 
@@ -102,7 +102,7 @@ URI: [dct:MediaTypeOrExtent](http://purl.org/dc/terms/MediaTypeOrExtent)
 <details>
 ```yaml
 name: Mediatype
-description: En medietype eller filformat.
+description: Ein medietype eller filformat (dct:MediaTypeOrExtent).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -116,7 +116,7 @@ class_uri: dct:MediaTypeOrExtent
 <details>
 ```yaml
 name: Mediatype
-description: En medietype eller filformat.
+description: Ein medietype eller filformat (dct:MediaTypeOrExtent).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -128,10 +128,6 @@ attributes:
     alias: id
     owner: Mediatype
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -151,6 +147,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dct:MediaTypeOrExtent

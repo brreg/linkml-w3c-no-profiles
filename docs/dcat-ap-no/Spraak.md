@@ -3,7 +3,7 @@
 # Class: Spraak 
 
 
-_En språkreferanse._
+_Ein språkreferanse (dct:LinguisticSystem)._
 
 
 
@@ -102,7 +102,7 @@ URI: [dct:LinguisticSystem](http://purl.org/dc/terms/LinguisticSystem)
 <details>
 ```yaml
 name: Spraak
-description: En språkreferanse.
+description: Ein språkreferanse (dct:LinguisticSystem).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -116,7 +116,7 @@ class_uri: dct:LinguisticSystem
 <details>
 ```yaml
 name: Spraak
-description: En språkreferanse.
+description: Ein språkreferanse (dct:LinguisticSystem).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -128,10 +128,6 @@ attributes:
     alias: id
     owner: Spraak
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -151,6 +147,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dct:LinguisticSystem

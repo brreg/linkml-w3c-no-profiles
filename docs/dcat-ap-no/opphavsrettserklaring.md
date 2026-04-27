@@ -22,7 +22,7 @@ Alias: opphavsrettserklaring
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 

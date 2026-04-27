@@ -3,7 +3,7 @@
 # Slot: tittel 
 
 
-_Navn/tittel på ressursen._
+_Namn/tittel på ressursen (dct:title)._
 
 
 
@@ -22,12 +22,14 @@ Alias: tittel
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  yes  |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  yes  |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |  no  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  yes  |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
+| [Standard](Standard.md) | Ein standard som ein ressurs er i samsvar med |  yes  |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
 
 
 
@@ -41,7 +43,7 @@ Alias: tittel
 | Property | Value |
 | --- | --- |
 | Range | [LangString](LangString.md) |
-| Domain Of | [Distribusjon](Distribusjon.md), [Datasett](Datasett.md), [Datasettserie](Datasettserie.md), [Datatjeneste](Datatjeneste.md), [Katalogpost](Katalogpost.md), [Katalog](Katalog.md) |
+| Domain Of | [Standard](Standard.md), [RegulativRessurs](RegulativRessurs.md), [Distribusjon](Distribusjon.md), [Datasett](Datasett.md), [Datasettserie](Datasettserie.md), [Datatjeneste](Datatjeneste.md), [Katalogpost](Katalogpost.md), [Katalog](Katalog.md) |
 | Slot URI | [dct:title](http://purl.org/dc/terms/title) |
 
 ### Cardinality and Requirements
@@ -88,12 +90,14 @@ Alias: tittel
 <details>
 ```yaml
 name: tittel
-description: Navn/tittel på ressursen.
+description: Namn/tittel på ressursen (dct:title).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:title
 alias: tittel
 domain_of:
+- Standard
+- RegulativRessurs
 - Distribusjon
 - Datasett
 - Datasettserie

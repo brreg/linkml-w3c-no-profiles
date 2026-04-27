@@ -22,7 +22,7 @@ Alias: sjekksumverdi
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sjekksum](Sjekksum.md) | En sjekksum for en distribusjon |  yes  |
+| [Sjekksum](Sjekksum.md) | Ein sjekksum for ein distribusjon |  yes  |
 
 
 

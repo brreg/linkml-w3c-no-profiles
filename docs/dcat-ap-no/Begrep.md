@@ -3,7 +3,7 @@
 # Slot: begrep 
 
 
-_Fagbegrep som datasettet handler om._
+_Fagomgrep som datasettet handlar om._
 
 
 
@@ -22,7 +22,7 @@ Alias: begrep
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: begrep
 <details>
 ```yaml
 name: begrep
-description: Fagbegrep som datasettet handler om.
+description: Fagomgrep som datasettet handlar om.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:subject

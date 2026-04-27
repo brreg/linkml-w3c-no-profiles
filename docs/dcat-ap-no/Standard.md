@@ -3,7 +3,7 @@
 # Class: Standard 
 
 
-_En standard som en ressurs er i samsvar med._
+_Ein standard som ein ressurs er i samsvar med._
 
 
 
@@ -23,7 +23,7 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
         
       Standard : id
         
-      Standard : tittel_literal
+      Standard : tittel
         
       Standard : versjon
         
@@ -47,8 +47,8 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [tittel_literal](tittel_literal.md) | 1..* <br/> [String](String.md) | Navn/tittel uten språktag | direct |
-| [har_referanse](har_referanse.md) | * <br/> [Uri](Uri.md) | Referanse til standarden | direct |
+| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
+| [har_referanse](har_referanse.md) | * <br/> [Uri](Uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) | direct |
 | [versjon](versjon.md) | 0..1 <br/> [String](String.md) | Versjonsnummer | direct |
 
 
@@ -111,16 +111,16 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 <details>
 ```yaml
 name: Standard
-description: En standard som en ressurs er i samsvar med.
+description: Ein standard som ein ressurs er i samsvar med.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
-- tittel_literal
+- tittel
 - har_referanse
 - versjon
 slot_usage:
-  tittel_literal:
-    name: tittel_literal
+  tittel:
+    name: tittel
     in_subset:
     - Obligatorisk
     required: true
@@ -134,11 +134,11 @@ class_uri: dct:Standard
 <details>
 ```yaml
 name: Standard
-description: En standard som en ressurs er i samsvar med.
+description: Ein standard som ein ressurs er i samsvar med.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
-  tittel_literal:
-    name: tittel_literal
+  tittel:
+    name: tittel
     in_subset:
     - Obligatorisk
     required: true
@@ -152,10 +152,6 @@ attributes:
     alias: id
     owner: Standard
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -175,27 +171,37 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
-  tittel_literal:
-    name: tittel_literal
-    description: Navn/tittel uten språktag.
+  tittel:
+    name: tittel
+    description: Namn/tittel på ressursen (dct:title).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:title
-    alias: tittel_literal
+    alias: tittel
     owner: Standard
     domain_of:
     - Standard
     - RegulativRessurs
-    range: string
+    - Distribusjon
+    - Datasett
+    - Datasettserie
+    - Datatjeneste
+    - Katalogpost
+    - Katalog
+    range: LangString
     required: true
     multivalued: true
   har_referanse:
     name: har_referanse
-    description: Referanse til standarden.
+    description: Referanse til ekstern ressurs (rdfs:seeAlso).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: rdfs:seeAlso
@@ -203,6 +209,7 @@ attributes:
     owner: Standard
     domain_of:
     - Standard
+    - RegulativRessurs
     range: uri
     multivalued: true
   versjon:

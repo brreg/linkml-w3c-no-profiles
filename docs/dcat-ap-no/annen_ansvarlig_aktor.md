@@ -3,7 +3,7 @@
 # Slot: annen_ansvarlig_aktor 
 
 
-_Kvalifisert attributering til ansvarlig aktør._
+_Kvalifisert attributering til ansvarleg aktør._
 
 
 
@@ -22,7 +22,7 @@ Alias: annen_ansvarlig_aktor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: annen_ansvarlig_aktor
 <details>
 ```yaml
 name: annen_ansvarlig_aktor
-description: Kvalifisert attributering til ansvarlig aktør.
+description: Kvalifisert attributering til ansvarleg aktør.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: prov:qualifiedAttribution

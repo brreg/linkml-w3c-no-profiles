@@ -3,7 +3,7 @@
 # Slot: relasjon_til 
 
 
-_Den relaterte ressursen i en kvalifisert relasjon._
+_Den relaterte ressursen i ein kvalifisert relasjon._
 
 
 
@@ -22,7 +22,7 @@ Alias: relasjon_til
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Relasjon](Relasjon.md) | En kvalifisert relasjon mellom to ressurser |  yes  |
+| [Relasjon](Relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: relasjon_til
 <details>
 ```yaml
 name: relasjon_til
-description: Den relaterte ressursen i en kvalifisert relasjon.
+description: Den relaterte ressursen i ein kvalifisert relasjon.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:relation

@@ -22,7 +22,7 @@ Alias: sluttdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tidsrom](Tidsrom.md) | Et tidsintervall med start- og sluttdato |  no  |
+| [Tidsrom](Tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
 
 
 

@@ -3,7 +3,7 @@
 # Slot: har_rolle 
 
 
-_Rolle en aktør eller ressurs har i en relasjon._
+_Rolle ein aktør eller ressurs har i ein relasjon._
 
 
 
@@ -22,7 +22,7 @@ Alias: har_rolle
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Relasjon](Relasjon.md) | En kvalifisert relasjon mellom to ressurser |  yes  |
+| [Relasjon](Relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: har_rolle
 <details>
 ```yaml
 name: har_rolle
-description: Rolle en aktør eller ressurs har i en relasjon.
+description: Rolle ein aktør eller ressurs har i ein relasjon.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:hadRole

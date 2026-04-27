@@ -3,7 +3,7 @@
 # Class: Kontaktopplysning 
 
 
-_Kontaktinformasjon for en aktør._
+_Kontaktinformasjon for ein aktør._
 
 
 
@@ -47,7 +47,7 @@ URI: [vcard:Kind](http://www.w3.org/2006/vcard/ns#Kind)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [navn_vcard](navn_vcard.md) | 1..* <br/> [LangString](LangString.md) | Formatert navn (vCard) | direct |
+| [navn_vcard](navn_vcard.md) | 1..* <br/> [LangString](LangString.md) | Formatert namn (vCard) | direct |
 | [har_epost](har_epost.md) | 0..1 <br/> [Uri](Uri.md) | E-postadresse til kontaktpunktet | direct |
 | [har_kontaktside](har_kontaktside.md) | 0..1 <br/> [Uri](Uri.md) | Nettside for kontakt | direct |
 
@@ -111,7 +111,7 @@ URI: [vcard:Kind](http://www.w3.org/2006/vcard/ns#Kind)
 <details>
 ```yaml
 name: Kontaktopplysning
-description: Kontaktinformasjon for en aktør.
+description: Kontaktinformasjon for ein aktør.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -134,7 +134,7 @@ class_uri: vcard:Kind
 <details>
 ```yaml
 name: Kontaktopplysning
-description: Kontaktinformasjon for en aktør.
+description: Kontaktinformasjon for ein aktør.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   navn_vcard:
@@ -152,10 +152,6 @@ attributes:
     alias: id
     owner: Kontaktopplysning
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -175,11 +171,15 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   navn_vcard:
     name: navn_vcard
-    description: Formatert navn (vCard).
+    description: Formatert namn (vCard).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no

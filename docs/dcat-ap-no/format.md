@@ -3,7 +3,7 @@
 # Slot: format 
 
 
-_Filformat eller medietype._
+_Filformat eller medietype (dct:format)._
 
 
 
@@ -22,8 +22,8 @@ Alias: format
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: format
 <details>
 ```yaml
 name: format
-description: Filformat eller medietype.
+description: Filformat eller medietype (dct:format).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:format

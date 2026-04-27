@@ -3,7 +3,7 @@
 # Slot: endepunktsbeskrivelse 
 
 
-_URL til beskrivelse av endepunktet (f.eks. OpenAPI-dokument)._
+_URL til beskriving av endepunktet (t.d. OpenAPI-dokument)._
 
 
 
@@ -22,7 +22,7 @@ Alias: endepunktsbeskrivelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: endepunktsbeskrivelse
 <details>
 ```yaml
 name: endepunktsbeskrivelse
-description: URL til beskrivelse av endepunktet (f.eks. OpenAPI-dokument).
+description: URL til beskriving av endepunktet (t.d. OpenAPI-dokument).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:endpointDescription

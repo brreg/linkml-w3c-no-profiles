@@ -3,7 +3,7 @@
 # Class: Katalog 
 
 
-_En kuratert samling av metadata om datasett, datatjenester og/eller andre kataloger._
+_Ei kuratert samling av metadata om datasett, datatenestar og/eller andre katalogar._
 
 
 
@@ -224,27 +224,27 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen | direct |
-| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for henvendelser om ressursen | direct |
-| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Navn/tittel på ressursen | direct |
-| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen | direct |
+| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) | direct |
+| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for hendvendelsar om ressursen | direct |
+| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
+| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen | direct |
 | [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) | Datasett som er del av katalogen | direct |
 | [datatjeneste](datatjeneste.md) | * <br/> [Datatjeneste](Datatjeneste.md) | Datatjeneste som er del av katalogen | direct |
 | [dekningsomrade](dekningsomrade.md) | * <br/> [Begrep](Begrep.md) | Geografisk dekningsområde | direct |
-| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen | direct |
-| [hjemmeside](hjemmeside.md) | 0..1 <br/> [Uri](Uri.md) | Katalogenes hjemmeside | direct |
+| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen (dct:modified) | direct |
+| [hjemmeside](hjemmeside.md) | 0..1 <br/> [Uri](Uri.md) | Heimeside for katalogen | direct |
 | [lisens](lisens.md) | 0..1 <br/> [Begrep](Begrep.md) | Lisens for bruk av ressursen | direct |
-| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen | direct |
-| [temaer](temaer.md) | * <br/> [Begrepssamling](Begrepssamling.md) | Temavokabular som brukes i katalogen | direct |
-| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen ble første gang publisert | direct |
-| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgivning som gjelder for ressursen | direct |
+| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) | direct |
+| [temaer](temaer.md) | * <br/> [Begrepssamling](Begrepssamling.md) | Temavokabular som vert brukt i katalogen | direct |
+| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen vart første gong publisert (dct:issued) | direct |
+| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgjeving som gjeld for ressursen | direct |
 | [har_del](har_del.md) | * <br/> [Katalog](Katalog.md) | Delkatalog inkludert i denne katalogen | direct |
-| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstlig identifikator for ressursen | direct |
-| [underkatalog](underkatalog.md) | * <br/> [Katalog](Katalog.md) | Katalog som er en del av denne katalogen | direct |
-| [katalogpost](katalogpost.md) | * <br/> [Katalogpost](Katalogpost.md) | Katalogposter i katalogen | direct |
+| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) | direct |
+| [underkatalog](underkatalog.md) | * <br/> [Katalog](Katalog.md) | Katalog som er ein del av denne katalogen | direct |
+| [katalogpost](katalogpost.md) | * <br/> [Katalogpost](Katalogpost.md) | Katalogpostar i katalogen | direct |
 | [produsent](produsent.md) | 0..1 <br/> [Aktor](Aktor.md) | Aktøren som primært har skapt ressursen | direct |
-| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettigheter knyttet til ressursen | direct |
-| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekker | direct |
+| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettar knytte til ressursen | direct |
+| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekkar | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [KatalogisertRessurs](KatalogisertRessurs.md) |
 
 
@@ -305,8 +305,8 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 <details>
 ```yaml
 name: Katalog
-description: En kuratert samling av metadata om datasett, datatjenester og/eller andre
-  kataloger.
+description: Ei kuratert samling av metadata om datasett, datatenestar og/eller andre
+  katalogar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 is_a: KatalogisertRessurs
 slots:
@@ -398,8 +398,8 @@ class_uri: dcat:Catalog
 <details>
 ```yaml
 name: Katalog
-description: En kuratert samling av metadata om datasett, datatjenester og/eller andre
-  kataloger.
+description: Ei kuratert samling av metadata om datasett, datatenestar og/eller andre
+  katalogar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 is_a: KatalogisertRessurs
 slot_usage:
@@ -462,7 +462,7 @@ slot_usage:
 attributes:
   beskrivelse:
     name: beskrivelse
-    description: Fritekstbeskrivelse av ressursen.
+    description: Fritekstbeskrivelse av ressursen (dct:description).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -484,7 +484,7 @@ attributes:
     multivalued: true
   kontaktpunkt:
     name: kontaktpunkt
-    description: Kontaktinformasjon for henvendelser om ressursen.
+    description: Kontaktinformasjon for hendvendelsar om ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -502,7 +502,7 @@ attributes:
     multivalued: true
   tittel:
     name: tittel
-    description: Navn/tittel på ressursen.
+    description: Namn/tittel på ressursen (dct:title).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -511,6 +511,8 @@ attributes:
     alias: tittel
     owner: Katalog
     domain_of:
+    - Standard
+    - RegulativRessurs
     - Distribusjon
     - Datasett
     - Datasettserie
@@ -522,7 +524,7 @@ attributes:
     multivalued: true
   utgiver:
     name: utgiver
-    description: Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen.
+    description: Aktøren som er ansvarleg for å tilgjengeleggjere ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -584,7 +586,7 @@ attributes:
     multivalued: true
   endringsdato:
     name: endringsdato
-    description: Dato for siste endring av ressursen.
+    description: Dato for siste endring av ressursen (dct:modified).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -601,7 +603,7 @@ attributes:
     range: date
   hjemmeside:
     name: hjemmeside
-    description: Katalogenes hjemmeside.
+    description: Heimeside for katalogen.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -629,7 +631,7 @@ attributes:
     range: Begrep
   sprak:
     name: sprak
-    description: Språk brukt i ressursen.
+    description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -647,7 +649,7 @@ attributes:
     multivalued: true
   temaer:
     name: temaer
-    description: Temavokabular som brukes i katalogen.
+    description: Temavokabular som vert brukt i katalogen.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -661,7 +663,7 @@ attributes:
     multivalued: true
   utgivelsesdato:
     name: utgivelsesdato
-    description: Dato ressursen ble første gang publisert.
+    description: Dato ressursen vart første gong publisert (dct:issued).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -678,7 +680,7 @@ attributes:
     range: date
   gjeldende_lovgivning:
     name: gjeldende_lovgivning
-    description: Lovgivning som gjelder for ressursen.
+    description: Lovgjeving som gjeld for ressursen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcatap:applicableLegislation
@@ -706,7 +708,7 @@ attributes:
     multivalued: true
   identifikator_literal:
     name: identifikator_literal
-    description: Tekstlig identifikator for ressursen.
+    description: Tekstleg identifikator for ressursen (dct:identifier).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:identifier
@@ -721,7 +723,7 @@ attributes:
     range: string
   underkatalog:
     name: underkatalog
-    description: Katalog som er en del av denne katalogen.
+    description: Katalog som er ein del av denne katalogen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:catalog
@@ -733,7 +735,7 @@ attributes:
     multivalued: true
   katalogpost:
     name: katalogpost
-    description: Katalogposter i katalogen.
+    description: Katalogpostar i katalogen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:record
@@ -757,7 +759,7 @@ attributes:
     range: Aktor
   rettigheter:
     name: rettigheter
-    description: Rettigheter knyttet til ressursen.
+    description: Rettar knytte til ressursen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:rights
@@ -770,7 +772,7 @@ attributes:
     range: Rettighetserklaring
   tidsrom:
     name: tidsrom
-    description: Tidsperiode ressursen dekker.
+    description: Tidsperiode ressursen dekkar.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:temporal
@@ -792,10 +794,6 @@ attributes:
     alias: id
     owner: Katalog
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -815,6 +813,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dcat:Catalog

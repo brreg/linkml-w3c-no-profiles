@@ -47,7 +47,7 @@ distribusjonar:
     medietype: https://www.iana.org/assignments/media-types/text/csv
     lisens: http://publications.europa.eu/resource/authority/licence/CC_BY_4_0
 
-aktørar:
+aktorar:
   - id: https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827
     navn_aktor:
       - Digitaliseringsdirektoratet

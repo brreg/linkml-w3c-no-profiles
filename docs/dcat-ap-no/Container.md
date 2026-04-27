@@ -19,13 +19,13 @@ URI: [https://data.norge.no/linkml/dcat-ap-no/Container](https://data.norge.no/l
  classDiagram
     class Container
     click Container href "../Container/"
-      Container : aktørar
+      Container : aktorar
         
           
     
         
         
-        Container --> "*" Aktor : aktørar
+        Container --> "*" Aktor : aktorar
         click Aktor href "../Aktor/"
     
 
@@ -219,7 +219,7 @@ URI: [https://data.norge.no/linkml/dcat-ap-no/Container](https://data.norge.no/l
 | [datasettprofil](datasettprofil.md) | * <br/> [Datasettserie](Datasettserie.md) |  | direct |
 | [datatenestar](datatenestar.md) | * <br/> [Datatjeneste](Datatjeneste.md) |  | direct |
 | [distribusjonar](distribusjonar.md) | * <br/> [Distribusjon](Distribusjon.md) |  | direct |
-| [aktørar](aktørar.md) | * <br/> [Aktor](Aktor.md) |  | direct |
+| [aktorar](aktorar.md) | * <br/> [Aktor](Aktor.md) |  | direct |
 | [kontaktopplysningar](kontaktopplysningar.md) | * <br/> [Kontaktopplysning](Kontaktopplysning.md) |  | direct |
 | [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) |  | direct |
 | [standardar](standardar.md) | * <br/> [Standard](Standard.md) |  | direct |
@@ -334,8 +334,8 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
-  aktørar:
-    name: aktørar
+  aktorar:
+    name: aktorar
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     domain_of:
@@ -515,11 +515,11 @@ attributes:
     range: Distribusjon
     multivalued: true
     inlined_as_list: true
-  aktørar:
-    name: aktørar
+  aktorar:
+    name: aktorar
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
-    alias: aktørar
+    alias: aktorar
     owner: Container
     domain_of:
     - Container

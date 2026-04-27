@@ -3,7 +3,7 @@
 # Slot: sjekksum 
 
 
-_Sjekksum for distribusjonsfilen._
+_Sjekksum for distribusjonsfila._
 
 
 
@@ -22,7 +22,7 @@ Alias: sjekksum
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: sjekksum
 <details>
 ```yaml
 name: sjekksum
-description: Sjekksum for distribusjonsfilen.
+description: Sjekksum for distribusjonsfila.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: spdx:checksum

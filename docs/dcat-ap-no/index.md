@@ -12,34 +12,34 @@ Name: dcat-ap-no
 
 | Class | Description |
 | --- | --- |
-| [Aktor](Aktor.md) | En aktør (person, organisasjon eller system) med ansvar for en ressurs |
-| [Begrep](Begrep.md) | Et SKOS-begrep fra et kontrollert vokabular |
-| [Begrepssamling](Begrepssamling.md) | En SKOS-begrepssamling (temavokabular) |
+| [Aktor](Aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |
+| [Begrep](Begrep.md) | Eit SKOS-omgrep frå eit kontrollert vokabular |
+| [Begrepssamling](Begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |
 | [Container](Container.md) | Rotklasse for DCAT-AP-NO-datafiler |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |
-| [Frekvens](Frekvens.md) | En oppdateringsfrekvens |
-| [Gebyr](Gebyr.md) | Et gebyr knyttet til bruk av en datatjeneste |
-| [Identifikator](Identifikator.md) | En alternativ identifikator for en ressurs |
-| [KatalogisertRessurs](KatalogisertRessurs.md) | Basisklasse for ressurser som kan katalogiseres |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |
-| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for en aktør |
-| [Mediatype](Mediatype.md) | En medietype eller filformat |
-| [OdrlPolicy](OdrlPolicy.md) | En ODRL-policy |
-| [ProvAktivitet](ProvAktivitet.md) | En PROV-aktivitet |
-| [ProvAttributering](ProvAttributering.md) | En kvalifisert PROV-attributering |
-| [ProvenanceStatement](ProvenanceStatement.md) | En provenienserklæring |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |
-| [Relasjon](Relasjon.md) | En kvalifisert relasjon mellom to ressurser |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |
-| [Sjekksum](Sjekksum.md) | En sjekksum for en distribusjon |
-| [Spraak](Spraak.md) | En språkreferanse |
-| [Standard](Standard.md) | En standard som en ressurs er i samsvar med |
-| [Tidsinstant](Tidsinstant.md) | Et tidspunkt (OWL Time) |
-| [Tidsrom](Tidsrom.md) | Et tidsintervall med start- og sluttdato |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |
+| [Frekvens](Frekvens.md) | Ein oppdateringsfrekvens |
+| [Gebyr](Gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |
+| [Identifikator](Identifikator.md) | Ein alternativ identifikator for ein ressurs |
+| [KatalogisertRessurs](KatalogisertRessurs.md) | Basisklasse for ressursar som kan katalogiserast |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |
+| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for ein aktør |
+| [Mediatype](Mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
+| [OdrlPolicy](OdrlPolicy.md) | Ein ODRL-policy |
+| [ProvAktivitet](ProvAktivitet.md) | Ein PROV-aktivitet |
+| [ProvAttributering](ProvAttributering.md) | Ein kvalifisert PROV-attributering |
+| [ProvenanceStatement](ProvenanceStatement.md) | Ein provenienserklæring |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |
+| [Relasjon](Relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |
+| [Sjekksum](Sjekksum.md) | Ein sjekksum for ein distribusjon |
+| [Spraak](Spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
+| [Standard](Standard.md) | Ein standard som ein ressurs er i samsvar med |
+| [Tidsinstant](Tidsinstant.md) | Eit tidspunkt (OWL Time) |
+| [Tidsrom](Tidsrom.md) | Eit tidsintervall med start- og sluttdato |
 
 
 
@@ -47,111 +47,113 @@ Name: dcat-ap-no
 
 | Slot | Description |
 | --- | --- |
-| [aktørar](aktørar.md) |  |
-| [algoritme](algoritme.md) | Hashalgoritme brukt for sjekksummen |
-| [annen_ansvarlig_aktor](annen_ansvarlig_aktor.md) | Kvalifisert attributering til ansvarlig aktør |
-| [annen_identifikator](annen_identifikator.md) | Alternativ identifikator fra et annet system |
-| [annen_spesifikk_relasjon](annen_spesifikk_relasjon.md) | Kvalifisert relasjon til en annen ressurs |
+| [aktorar](aktorar.md) |  |
+| [algoritme](algoritme.md) | Hash-algoritme brukt for sjekksummen |
+| [annen_ansvarlig_aktor](annen_ansvarlig_aktor.md) | Kvalifisert attributering til ansvarleg aktør |
+| [annen_identifikator](annen_identifikator.md) | Alternativ identifikator frå eit anna system |
+| [annen_spesifikk_relasjon](annen_spesifikk_relasjon.md) | Kvalifisert relasjon til ein annan ressurs |
 | [anvendelsesretningslinjer](anvendelsesretningslinjer.md) | Retningslinjer for gjenbruk av data |
-| [begrep](begrep.md) | Fagbegrep som datasettet handler om |
-| [begynnelse](begynnelse.md) | Starttidspunkt for et tidsrom |
+| [begrep](begrep.md) | Fagomgrep som datasettet handlar om |
+| [begynnelse](begynnelse.md) | Starttidspunkt for eit tidsrom |
 | [belop](belop.md) | Beløp for gebyret |
-| [beskrivelse](beskrivelse.md) | Fritekstbeskrivelse av ressursen |
+| [beskrivelse](beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [ble_generert_ved](ble_generert_ved.md) | Aktiviteten som genererte datasettet |
 | [datasett](datasett.md) | Datasett som er del av katalogen |
-| [datasettdistribusjon](datasettdistribusjon.md) | Tilgjengelige distribusjoner av datasettet |
+| [datasettdistribusjon](datasettdistribusjon.md) | Tilgjengelege distribusjonar av datasettet |
 | [datasettprofil](datasettprofil.md) |  |
 | [datatenestar](datatenestar.md) |  |
 | [datatjeneste](datatjeneste.md) | Datatjeneste som er del av katalogen |
 | [dekningsomrade](dekningsomrade.md) | Geografisk dekningsområde |
 | [distribusjonar](distribusjonar.md) |  |
 | [dokumentasjon](dokumentasjon.md) | Lenke til dokumentasjon om ressursen |
-| [eierskapshistorikk](eierskapshistorikk.md) | Opprinnelse og eierskapshistorikk for ressursen |
+| [eierskapshistorikk](eierskapshistorikk.md) | Opphav og eigarskapshistorikk for ressursen |
 | [eksempeldata](eksempeldata.md) | Eksempeldata som distribusjon |
 | [endepunkts_url](endepunkts_url.md) | URL til datatjenestens endepunkt |
-| [endepunktsbeskrivelse](endepunktsbeskrivelse.md) | URL til beskrivelse av endepunktet (f |
-| [endringsdato](endringsdato.md) | Dato for siste endring av ressursen |
+| [endepunktsbeskrivelse](endepunktsbeskrivelse.md) | URL til beskriving av endepunktet (t |
+| [endringsdato](endringsdato.md) | Dato for siste endring av ressursen (dct:modified) |
 | [filstorrelse](filstorrelse.md) | Filstørrelse i bytes |
-| [format](format.md) | Filformat eller medietype |
-| [forste](forste.md) | Første datasett i en datasettserie |
+| [format](format.md) | Filformat eller medietype (dct:format) |
+| [forste](forste.md) | Første datasett i ei datasettserie |
 | [frekvens](frekvens.md) | Oppdateringsfrekvens for datasettet |
 | [gebyr](gebyr.md) |  |
-| [gjeldende_lovgivning](gjeldende_lovgivning.md) | Lovgivning som gjelder for ressursen |
+| [gjeldende_lovgivning](gjeldende_lovgivning.md) | Lovgjeving som gjeld for ressursen |
 | [har_del](har_del.md) | Delkatalog inkludert i denne katalogen |
 | [har_epost](har_epost.md) | E-postadresse til kontaktpunktet |
-| [har_gebyr](har_gebyr.md) | Gebyr knyttet til bruk av datatjenesten |
+| [har_gebyr](har_gebyr.md) | Gebyr knytt til bruk av datatjenesten |
 | [har_kontaktside](har_kontaktside.md) | Nettside for kontakt |
-| [har_referanse](har_referanse.md) | Referanse til standarden |
-| [har_rolle](har_rolle.md) | Rolle en aktør eller ressurs har i en relasjon |
-| [hjemmeside](hjemmeside.md) | Katalogenes hjemmeside |
+| [har_merknad](har_merknad.md) | Fritekstmerknad (rdfs:comment) |
+| [har_referanse](har_referanse.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
+| [har_rolle](har_rolle.md) | Rolle ein aktør eller ressurs har i ein relasjon |
+| [har_versjonsnummer](har_versjonsnummer.md) | Versjonsnummer for ressursen (owl:versionInfo) |
+| [hjemmeside](hjemmeside.md) | Heimeside for katalogen |
 | [i_samsvar_med](i_samsvar_med.md) | Standard ressursen er i samsvar med |
-| [i_serie](i_serie.md) | Datasettserie dette datasettet er en del av |
+| [i_serie](i_serie.md) | Datasettserie dette datasettet er ein del av |
 | [id](id.md) | URI-identifikator for ressursen |
-| [identifikator_literal](identifikator_literal.md) | Tekstlig identifikator for ressursen |
+| [identifikator_literal](identifikator_literal.md) | Tekstleg identifikator for ressursen (dct:identifier) |
 | [identifikatorar](identifikatorar.md) |  |
-| [jurisdiksjon](jurisdiksjon.md) | Jurisdiksjon for rettighetserklæringen |
+| [jurisdiksjon](jurisdiksjon.md) | Jurisdiksjon for rettigheitserklæringa |
 | [katalogar](katalogar.md) |  |
-| [katalogpost](katalogpost.md) | Katalogposter i katalogen |
+| [katalogpost](katalogpost.md) | Katalogpostar i katalogen |
 | [katalogpostar](katalogpostar.md) |  |
-| [kilde_datasett](kilde_datasett.md) | Datasett som dette datasettet er avledet fra |
-| [kilde_post](kilde_post.md) | Kilde for katalogposten (ekstern oppføring) |
+| [kilde_datasett](kilde_datasett.md) | Datasett dette datasettet er avleidd frå |
+| [kilde_post](kilde_post.md) | Kjelde for katalogposten (ekstern oppføring) |
 | [komprimeringsformat](komprimeringsformat.md) | Komprimeringsformat brukt i distribusjonen |
 | [kontaktopplysningar](kontaktopplysningar.md) |  |
-| [kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for henvendelser om ressursen |
-| [krediteringstekst](krediteringstekst.md) | Tekst som skal brukes ved kreditering |
-| [krediteringsurl](krediteringsurl.md) | URL for kreditering av rettighetshaver |
+| [kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for hendvendelsar om ressursen |
+| [krediteringstekst](krediteringstekst.md) | Tekst som skal brukast ved kreditering |
+| [krediteringsurl](krediteringsurl.md) | URL for kreditering av rettshavar |
 | [landingsside](landingsside.md) | Nettside med informasjon om ressursen |
 | [lisens](lisens.md) | Lisens for bruk av ressursen |
-| [medietype](medietype.md) | Medietype i henhold til IANA-registeret |
-| [navn_aktor](navn_aktor.md) | Navn på aktøren |
-| [navn_vcard](navn_vcard.md) | Formatert navn (vCard) |
-| [nedlastningslenke](nedlastningslenke.md) | Direkte nedlastningslenke for distribusjonsfilen |
-| [nokkelord](nokkelord.md) | Nøkkelord som beskriver ressursen |
+| [medietype](medietype.md) | Medietype i samsvar med IANA-registeret |
+| [navn_aktor](navn_aktor.md) | Namn på aktøren |
+| [navn_vcard](navn_vcard.md) | Formatert namn (vCard) |
+| [nedlastningslenke](nedlastningslenke.md) | Direkte nedlastingslenke for distribusjonsfila |
+| [nokkelord](nokkelord.md) | Nøkkelord som beskriv ressursen |
 | [notasjon](notasjon.md) | Notasjon/kode for identifikatoren |
-| [opphavsrettsaar](opphavsrettsaar.md) | Årstall for opphavsrett |
+| [opphavsrettsaar](opphavsrettsaar.md) | Årstal for opphavsrett |
 | [opphavsrettserklaring](opphavsrettserklaring.md) | Opphavsrettserklæring |
-| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | Navn på opphavsrettsinnehaver |
+| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | Namn på opphavsrettsinnehavar |
 | [opphavsrettsnotis](opphavsrettsnotis.md) | Opphavsrettsnotis |
 | [pakkeformat](pakkeformat.md) | Pakkeformat brukt i distribusjonen |
 | [policy](policy.md) | ODRL-policy som regulerer bruk av ressursen |
-| [primaertema](primaertema.md) | Ressursen som katalogposten primært beskriver |
+| [primaertema](primaertema.md) | Ressursen katalogposten primært beskriv |
 | [produsent](produsent.md) | Aktøren som primært har skapt ressursen |
 | [referanse](referanse.md) | Referanse til ekstern ressurs |
 | [regulativeRessursar](regulativeRessursar.md) |  |
-| [relasjon_til](relasjon_til.md) | Den relaterte ressursen i en kvalifisert relasjon |
+| [relasjon_til](relasjon_til.md) | Den relaterte ressursen i ein kvalifisert relasjon |
 | [relasjonar](relasjonar.md) |  |
 | [relatert_regulativ_ressurs](relatert_regulativ_ressurs.md) | Relatert regulativ ressurs |
-| [relatert_ressurs](relatert_ressurs.md) | Generisk relasjon til en annen ressurs |
+| [relatert_ressurs](relatert_ressurs.md) | Generisk relasjon til ein annan ressurs |
 | [rettigheitserklaringar](rettigheitserklaringar.md) |  |
-| [rettigheter](rettigheter.md) | Rettigheter knyttet til ressursen |
-| [siste](siste.md) | Siste datasett i en datasettserie |
-| [sjekksum](sjekksum.md) | Sjekksum for distribusjonsfilen |
+| [rettigheter](rettigheter.md) | Rettar knytte til ressursen |
+| [siste](siste.md) | Siste datasett i ei datasettserie |
+| [sjekksum](sjekksum.md) | Sjekksum for distribusjonsfila |
 | [sjekksumar](sjekksumar.md) |  |
 | [sjekksumverdi](sjekksumverdi.md) | Sjekksumverdi som heksadesimal streng |
-| [slutt](slutt.md) | Sluttidspunkt for et tidsrom |
+| [slutt](slutt.md) | Sluttidspunkt for eit tidsrom |
 | [sluttdato](sluttdato.md) | Sluttdato for tidsrommet |
-| [sprak](sprak.md) | Språk brukt i ressursen |
+| [sprak](sprak.md) | Språk brukt i ressursen (dct:language) |
 | [standardar](standardar.md) |  |
 | [startdato](startdato.md) | Startdato for tidsrommet |
-| [status](status.md) | Status for ressursen fra et kontrollert vokabular |
-| [tema](tema.md) | Tema fra et kontrollert vokabular |
-| [temaer](temaer.md) | Temavokabular som brukes i katalogen |
-| [tidsopplosning](tidsopplosning.md) | Minste tidsoppløsning i datasettet |
-| [tidsrom](tidsrom.md) | Tidsperiode ressursen dekker |
+| [status](status.md) | Status for ressursen frå eit kontrollert vokabular |
+| [tema](tema.md) | Tema frå eit kontrollert vokabular |
+| [temaer](temaer.md) | Temavokabular som vert brukt i katalogen |
+| [tidsopplosning](tidsopplosning.md) | Minste tidsoppløysing i datasettet |
+| [tidsrom](tidsrom.md) | Tidsperiode ressursen dekkar |
 | [tilgangs_url](tilgangs_url.md) | URL for tilgang til distribusjonen |
-| [tilgangsrettigheter](tilgangsrettigheter.md) | Tilgangsrettigheter for ressursen |
-| [tilgangstjeneste](tilgangstjeneste.md) | Datatjeneste som gir tilgang til distribusjonen |
-| [tilgjengeliggjor_datasett](tilgjengeliggjor_datasett.md) | Datasett som datatjenesten tilgjengeliggjør |
-| [tilgjengelighet](tilgjengelighet.md) | Planlagt tilgjengelighet for ressursen |
-| [tittel](tittel.md) | Navn/tittel på ressursen |
-| [tittel_literal](tittel_literal.md) | Navn/tittel uten språktag |
-| [type_concept](type_concept.md) | Type ressurs fra et kontrollert vokabular |
-| [underkatalog](underkatalog.md) | Katalog som er en del av denne katalogen |
-| [utgivelsesdato](utgivelsesdato.md) | Dato ressursen ble første gang publisert |
-| [utgiver](utgiver.md) | Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen |
+| [tilgangsrettigheter](tilgangsrettigheter.md) | Tilgangsrettar for ressursen |
+| [tilgangstjeneste](tilgangstjeneste.md) | Datatjeneste som gjev tilgang til distribusjonen |
+| [tilgjengeliggjor_datasett](tilgjengeliggjor_datasett.md) | Datasett som datatjenesten tilgjengeleggjer |
+| [tilgjengelighet](tilgjengelighet.md) | Planlagt tilgjengelegheit for ressursen |
+| [tittel](tittel.md) | Namn/tittel på ressursen (dct:title) |
+| [tittel_literal](tittel_literal.md) | Namn/tittel utan språktag |
+| [type_concept](type_concept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
+| [underkatalog](underkatalog.md) | Katalog som er ein del av denne katalogen |
+| [utgivelsesdato](utgivelsesdato.md) | Dato ressursen vart første gong publisert (dct:issued) |
+| [utgiver](utgiver.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen |
 | [valuta](valuta.md) | Valuta for gebyret |
 | [versjon](versjon.md) | Versjonsnummer |
-| [versjonsmerknad](versjonsmerknad.md) | Merknad om endringer i denne versjonen |
+| [versjonsmerknad](versjonsmerknad.md) | Merknad om endringar i denne versjonen |
 
 
 ## Enumerations
@@ -180,7 +182,7 @@ Name: dcat-ap-no
 | [LangString](LangString.md) | Språktagget streng (rdf:langString) |
 | [Ncname](Ncname.md) | Prefix part of CURIE |
 | [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
-| [NonNegativeInteger](NonNegativeInteger.md) | Ikke-negativ heltalsverdi (xsd:nonNegativeInteger) |
+| [NonNegativeInteger](NonNegativeInteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path |
 | [String](String.md) | A character string |
@@ -193,6 +195,6 @@ Name: dcat-ap-no
 
 | Subset | Description |
 | --- | --- |
-| [Anbefalt](Anbefalt.md) | Anbefalte egenskaper i DCAT-AP-NO |
-| [Obligatorisk](Obligatorisk.md) | Obligatoriske egenskaper i DCAT-AP-NO |
-| [Valgfri](Valgfri.md) | Valgfrie egenskaper i DCAT-AP-NO |
+| [Anbefalt](Anbefalt.md) | Anbefalte eigenskapar i ein AP-NO-profil |
+| [Obligatorisk](Obligatorisk.md) | Obligatoriske eigenskapar i ein AP-NO-profil |
+| [Valgfri](Valgfri.md) | Valfrie eigenskapar i ein AP-NO-profil |

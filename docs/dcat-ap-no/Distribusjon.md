@@ -3,7 +3,7 @@
 # Class: Distribusjon 
 
 
-_En spesifikk representasjon/nedlastbar form av et datasett._
+_Ein spesifikk representasjon/nedlastbar form av eit datasett._
 
 
 
@@ -214,28 +214,28 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
 | [tilgangs_url](tilgangs_url.md) | 1..* <br/> [Uri](Uri.md) | URL for tilgang til distribusjonen | direct |
-| [beskrivelse](beskrivelse.md) | * <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen | direct |
-| [format](format.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Filformat eller medietype | direct |
+| [beskrivelse](beskrivelse.md) | * <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) | direct |
+| [format](format.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Filformat eller medietype (dct:format) | direct |
 | [lisens](lisens.md) | 0..1 <br/> [Begrep](Begrep.md) | Lisens for bruk av ressursen | direct |
-| [status](status.md) | 0..1 <br/> [Begrep](Begrep.md) | Status for ressursen fra et kontrollert vokabular | direct |
-| [tilgjengelighet](tilgjengelighet.md) | 0..1 <br/> [Begrep](Begrep.md) | Planlagt tilgjengelighet for ressursen | direct |
+| [status](status.md) | 0..1 <br/> [Begrep](Begrep.md) | Status for ressursen frå eit kontrollert vokabular | direct |
+| [tilgjengelighet](tilgjengelighet.md) | 0..1 <br/> [Begrep](Begrep.md) | Planlagt tilgjengelegheit for ressursen | direct |
 | [dokumentasjon](dokumentasjon.md) | * <br/> [Uri](Uri.md) | Lenke til dokumentasjon om ressursen | direct |
-| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen | direct |
+| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen (dct:modified) | direct |
 | [filstorrelse](filstorrelse.md) | 0..1 <br/> [NonNegativeInteger](NonNegativeInteger.md) | Filstørrelse i bytes | direct |
-| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgivning som gjelder for ressursen | direct |
+| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgjeving som gjeld for ressursen | direct |
 | [i_samsvar_med](i_samsvar_med.md) | * <br/> [Standard](Standard.md) | Standard ressursen er i samsvar med | direct |
 | [komprimeringsformat](komprimeringsformat.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Komprimeringsformat brukt i distribusjonen | direct |
-| [medietype](medietype.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Medietype i henhold til IANA-registeret | direct |
-| [nedlastningslenke](nedlastningslenke.md) | * <br/> [Uri](Uri.md) | Direkte nedlastningslenke for distribusjonsfilen | direct |
+| [medietype](medietype.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Medietype i samsvar med IANA-registeret | direct |
+| [nedlastningslenke](nedlastningslenke.md) | * <br/> [Uri](Uri.md) | Direkte nedlastingslenke for distribusjonsfila | direct |
 | [pakkeformat](pakkeformat.md) | 0..1 <br/> [Mediatype](Mediatype.md) | Pakkeformat brukt i distribusjonen | direct |
 | [policy](policy.md) | 0..1 <br/> [OdrlPolicy](OdrlPolicy.md) | ODRL-policy som regulerer bruk av ressursen | direct |
-| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettigheter knyttet til ressursen | direct |
-| [sjekksum](sjekksum.md) | 0..1 <br/> [Sjekksum](Sjekksum.md) | Sjekksum for distribusjonsfilen | direct |
-| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen | direct |
-| [tidsopplosning](tidsopplosning.md) | 0..1 <br/> [Duration](Duration.md) | Minste tidsoppløsning i datasettet | direct |
-| [tilgangstjeneste](tilgangstjeneste.md) | * <br/> [Datatjeneste](Datatjeneste.md) | Datatjeneste som gir tilgang til distribusjonen | direct |
-| [tittel](tittel.md) | * <br/> [LangString](LangString.md) | Navn/tittel på ressursen | direct |
-| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen ble første gang publisert | direct |
+| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettar knytte til ressursen | direct |
+| [sjekksum](sjekksum.md) | 0..1 <br/> [Sjekksum](Sjekksum.md) | Sjekksum for distribusjonsfila | direct |
+| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) | direct |
+| [tidsopplosning](tidsopplosning.md) | 0..1 <br/> [Duration](Duration.md) | Minste tidsoppløysing i datasettet | direct |
+| [tilgangstjeneste](tilgangstjeneste.md) | * <br/> [Datatjeneste](Datatjeneste.md) | Datatjeneste som gjev tilgang til distribusjonen | direct |
+| [tittel](tittel.md) | * <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
+| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen vart første gong publisert (dct:issued) | direct |
 
 
 
@@ -295,7 +295,7 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 <details>
 ```yaml
 name: Distribusjon
-description: En spesifikk representasjon/nedlastbar form av et datasett.
+description: Ein spesifikk representasjon/nedlastbar form av eit datasett.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -358,7 +358,7 @@ class_uri: dcat:Distribution
 <details>
 ```yaml
 name: Distribusjon
-description: En spesifikk representasjon/nedlastbar form av et datasett.
+description: Ein spesifikk representasjon/nedlastbar form av eit datasett.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   tilgangs_url:
@@ -396,10 +396,6 @@ attributes:
     alias: id
     owner: Distribusjon
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -419,6 +415,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   tilgangs_url:
@@ -438,7 +438,7 @@ attributes:
     multivalued: true
   beskrivelse:
     name: beskrivelse
-    description: Fritekstbeskrivelse av ressursen.
+    description: Fritekstbeskrivelse av ressursen (dct:description).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -459,7 +459,7 @@ attributes:
     multivalued: true
   format:
     name: format
-    description: Filformat eller medietype.
+    description: Filformat eller medietype (dct:format).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -488,7 +488,7 @@ attributes:
     range: Begrep
   status:
     name: status
-    description: Status for ressursen fra et kontrollert vokabular.
+    description: Status for ressursen frå eit kontrollert vokabular.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -503,7 +503,7 @@ attributes:
     range: Begrep
   tilgjengelighet:
     name: tilgjengelighet
-    description: Planlagt tilgjengelighet for ressursen.
+    description: Planlagt tilgjengelegheit for ressursen.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -532,7 +532,7 @@ attributes:
     multivalued: true
   endringsdato:
     name: endringsdato
-    description: Dato for siste endring av ressursen.
+    description: Dato for siste endring av ressursen (dct:modified).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:modified
@@ -558,7 +558,7 @@ attributes:
     range: NonNegativeInteger
   gjeldende_lovgivning:
     name: gjeldende_lovgivning
-    description: Lovgivning som gjelder for ressursen.
+    description: Lovgjeving som gjeld for ressursen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcatap:applicableLegislation
@@ -600,7 +600,7 @@ attributes:
     range: Mediatype
   medietype:
     name: medietype
-    description: Medietype i henhold til IANA-registeret.
+    description: Medietype i samsvar med IANA-registeret.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:mediaType
@@ -611,7 +611,7 @@ attributes:
     range: Mediatype
   nedlastningslenke:
     name: nedlastningslenke
-    description: Direkte nedlastningslenke for distribusjonsfilen.
+    description: Direkte nedlastingslenke for distribusjonsfila.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:downloadURL
@@ -645,7 +645,7 @@ attributes:
     range: OdrlPolicy
   rettigheter:
     name: rettigheter
-    description: Rettigheter knyttet til ressursen.
+    description: Rettar knytte til ressursen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:rights
@@ -658,7 +658,7 @@ attributes:
     range: Rettighetserklaring
   sjekksum:
     name: sjekksum
-    description: Sjekksum for distribusjonsfilen.
+    description: Sjekksum for distribusjonsfila.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: spdx:checksum
@@ -669,7 +669,7 @@ attributes:
     range: Sjekksum
   sprak:
     name: sprak
-    description: Språk brukt i ressursen.
+    description: Språk brukt i ressursen (dct:language).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:language
@@ -685,7 +685,7 @@ attributes:
     multivalued: true
   tidsopplosning:
     name: tidsopplosning
-    description: Minste tidsoppløsning i datasettet.
+    description: Minste tidsoppløysing i datasettet.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:temporalResolution
@@ -696,7 +696,7 @@ attributes:
     range: Duration
   tilgangstjeneste:
     name: tilgangstjeneste
-    description: Datatjeneste som gir tilgang til distribusjonen.
+    description: Datatjeneste som gjev tilgang til distribusjonen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:accessService
@@ -708,13 +708,15 @@ attributes:
     multivalued: true
   tittel:
     name: tittel
-    description: Navn/tittel på ressursen.
+    description: Namn/tittel på ressursen (dct:title).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:title
     alias: tittel
     owner: Distribusjon
     domain_of:
+    - Standard
+    - RegulativRessurs
     - Distribusjon
     - Datasett
     - Datasettserie
@@ -725,7 +727,7 @@ attributes:
     multivalued: true
   utgivelsesdato:
     name: utgivelsesdato
-    description: Dato ressursen ble første gang publisert.
+    description: Dato ressursen vart første gong publisert (dct:issued).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:issued

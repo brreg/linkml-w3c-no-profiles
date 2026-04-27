@@ -3,7 +3,7 @@
 # Slot: krediteringstekst 
 
 
-_Tekst som skal brukes ved kreditering._
+_Tekst som skal brukast ved kreditering._
 
 
 
@@ -22,7 +22,7 @@ Alias: krediteringstekst
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: krediteringstekst
 <details>
 ```yaml
 name: krediteringstekst
-description: Tekst som skal brukes ved kreditering.
+description: Tekst som skal brukast ved kreditering.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: odrs:attributionText

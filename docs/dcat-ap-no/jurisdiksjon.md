@@ -3,7 +3,7 @@
 # Slot: jurisdiksjon 
 
 
-_Jurisdiksjon for rettighetserklæringen._
+_Jurisdiksjon for rettigheitserklæringa._
 
 
 
@@ -22,7 +22,7 @@ Alias: jurisdiksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: jurisdiksjon
 <details>
 ```yaml
 name: jurisdiksjon
-description: Jurisdiksjon for rettighetserklæringen.
+description: Jurisdiksjon for rettigheitserklæringa.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: odrs:jurisdiction

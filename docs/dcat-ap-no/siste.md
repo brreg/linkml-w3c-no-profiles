@@ -3,7 +3,7 @@
 # Slot: siste 
 
 
-_Siste datasett i en datasettserie._
+_Siste datasett i ei datasettserie._
 
 
 
@@ -22,7 +22,7 @@ Alias: siste
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  yes  |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: siste
 <details>
 ```yaml
 name: siste
-description: Siste datasett i en datasettserie.
+description: Siste datasett i ei datasettserie.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:last

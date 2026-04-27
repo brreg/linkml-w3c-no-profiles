@@ -22,7 +22,7 @@ Alias: valuta
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Gebyr](Gebyr.md) | Et gebyr knyttet til bruk av en datatjeneste |  no  |
+| [Gebyr](Gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |  no  |
 
 
 

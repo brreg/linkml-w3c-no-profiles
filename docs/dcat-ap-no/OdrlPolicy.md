@@ -3,7 +3,7 @@
 # Class: OdrlPolicy 
 
 
-_En ODRL-policy._
+_Ein ODRL-policy._
 
 
 
@@ -98,7 +98,7 @@ URI: [odrl:Policy](http://www.w3.org/ns/odrl/2/Policy)
 <details>
 ```yaml
 name: OdrlPolicy
-description: En ODRL-policy.
+description: Ein ODRL-policy.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -112,7 +112,7 @@ class_uri: odrl:Policy
 <details>
 ```yaml
 name: OdrlPolicy
-description: En ODRL-policy.
+description: Ein ODRL-policy.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -124,10 +124,6 @@ attributes:
     alias: id
     owner: OdrlPolicy
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -147,6 +143,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: odrl:Policy

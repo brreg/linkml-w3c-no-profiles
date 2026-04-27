@@ -1,7 +1,7 @@
 # Subset: Obligatorisk 
 
 
-_Obligatoriske egenskaper i DCAT-AP-NO._
+_Obligatoriske eigenskapar i ein AP-NO-profil._
 
 
 
@@ -24,6 +24,8 @@ URI: [Obligatorisk](Obligatorisk.md)
 
 
 * from schema: https://data.norge.no/linkml/dcat-ap-no
+
+
 
 
 

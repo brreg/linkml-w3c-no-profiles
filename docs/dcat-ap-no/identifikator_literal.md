@@ -3,7 +3,7 @@
 # Slot: identifikator_literal 
 
 
-_Tekstlig identifikator for ressursen._
+_Tekstleg identifikator for ressursen (dct:identifier)._
 
 
 
@@ -22,11 +22,11 @@ Alias: identifikator_literal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  no  |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |  no  |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
-| [Aktor](Aktor.md) | En aktør (person, organisasjon eller system) med ansvar for en ressurs |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
+| [Aktor](Aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
 
 
 
@@ -86,7 +86,7 @@ Alias: identifikator_literal
 <details>
 ```yaml
 name: identifikator_literal
-description: Tekstlig identifikator for ressursen.
+description: Tekstleg identifikator for ressursen (dct:identifier).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:identifier

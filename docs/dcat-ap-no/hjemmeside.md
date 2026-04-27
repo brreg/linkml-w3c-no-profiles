@@ -3,7 +3,7 @@
 # Slot: hjemmeside 
 
 
-_Katalogenes hjemmeside._
+_Heimeside for katalogen._
 
 
 
@@ -22,7 +22,7 @@ Alias: hjemmeside
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  yes  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: hjemmeside
 <details>
 ```yaml
 name: hjemmeside
-description: Katalogenes hjemmeside.
+description: Heimeside for katalogen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: foaf:homepage

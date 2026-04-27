@@ -3,7 +3,7 @@
 # Slot: endringsdato 
 
 
-_Dato for siste endring av ressursen._
+_Dato for siste endring av ressursen (dct:modified)._
 
 
 
@@ -22,11 +22,11 @@ Alias: endringsdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  yes  |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  no  |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |  yes  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -86,7 +86,7 @@ Alias: endringsdato
 <details>
 ```yaml
 name: endringsdato
-description: Dato for siste endring av ressursen.
+description: Dato for siste endring av ressursen (dct:modified).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:modified

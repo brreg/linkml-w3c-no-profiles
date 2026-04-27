@@ -3,7 +3,7 @@
 # Class: Datasettserie 
 
 
-_En serie av relaterte datasett publisert separat men med felles metadata._
+_Ei serie av relaterte datasett publisert separat men med felles metadata._
 
 
 
@@ -154,19 +154,19 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen | direct |
-| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for henvendelser om ressursen | direct |
-| [tema](tema.md) | 1..* <br/> [Begrep](Begrep.md) | Tema fra et kontrollert vokabular | direct |
-| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Navn/tittel på ressursen | direct |
-| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen | direct |
+| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) | direct |
+| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for hendvendelsar om ressursen | direct |
+| [tema](tema.md) | 1..* <br/> [Begrep](Begrep.md) | Tema frå eit kontrollert vokabular | direct |
+| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
+| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen | direct |
 | [dekningsomrade](dekningsomrade.md) | * <br/> [Begrep](Begrep.md) | Geografisk dekningsområde | direct |
-| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgivning som gjelder for ressursen | direct |
-| [siste](siste.md) | 0..1 <br/> [Datasett](Datasett.md) | Siste datasett i en datasettserie | direct |
-| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekker | direct |
-| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen | direct |
+| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgjeving som gjeld for ressursen | direct |
+| [siste](siste.md) | 0..1 <br/> [Datasett](Datasett.md) | Siste datasett i ei datasettserie | direct |
+| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekkar | direct |
+| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen (dct:modified) | direct |
 | [frekvens](frekvens.md) | 0..1 <br/> [Frekvens](Frekvens.md) | Oppdateringsfrekvens for datasettet | direct |
-| [forste](forste.md) | 0..1 <br/> [Datasett](Datasett.md) | Første datasett i en datasettserie | direct |
-| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen ble første gang publisert | direct |
+| [forste](forste.md) | 0..1 <br/> [Datasett](Datasett.md) | Første datasett i ei datasettserie | direct |
+| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen vart første gong publisert (dct:issued) | direct |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [KatalogisertRessurs](KatalogisertRessurs.md) |
 
 
@@ -226,7 +226,7 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 <details>
 ```yaml
 name: Datasettserie
-description: En serie av relaterte datasett publisert separat men med felles metadata.
+description: Ei serie av relaterte datasett publisert separat men med felles metadata.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 is_a: KatalogisertRessurs
 slots:
@@ -295,7 +295,7 @@ class_uri: dcat:DatasetSeries
 <details>
 ```yaml
 name: Datasettserie
-description: En serie av relaterte datasett publisert separat men med felles metadata.
+description: Ei serie av relaterte datasett publisert separat men med felles metadata.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 is_a: KatalogisertRessurs
 slot_usage:
@@ -343,7 +343,7 @@ slot_usage:
 attributes:
   beskrivelse:
     name: beskrivelse
-    description: Fritekstbeskrivelse av ressursen.
+    description: Fritekstbeskrivelse av ressursen (dct:description).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -365,7 +365,7 @@ attributes:
     multivalued: true
   kontaktpunkt:
     name: kontaktpunkt
-    description: Kontaktinformasjon for henvendelser om ressursen.
+    description: Kontaktinformasjon for hendvendelsar om ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -383,7 +383,7 @@ attributes:
     multivalued: true
   tema:
     name: tema
-    description: Tema fra et kontrollert vokabular.
+    description: Tema frå eit kontrollert vokabular.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -400,7 +400,7 @@ attributes:
     multivalued: true
   tittel:
     name: tittel
-    description: Navn/tittel på ressursen.
+    description: Namn/tittel på ressursen (dct:title).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -409,6 +409,8 @@ attributes:
     alias: tittel
     owner: Datasettserie
     domain_of:
+    - Standard
+    - RegulativRessurs
     - Distribusjon
     - Datasett
     - Datasettserie
@@ -420,7 +422,7 @@ attributes:
     multivalued: true
   utgiver:
     name: utgiver
-    description: Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen.
+    description: Aktøren som er ansvarleg for å tilgjengeleggjere ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -453,7 +455,7 @@ attributes:
     multivalued: true
   gjeldende_lovgivning:
     name: gjeldende_lovgivning
-    description: Lovgivning som gjelder for ressursen.
+    description: Lovgjeving som gjeld for ressursen.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -471,7 +473,7 @@ attributes:
     multivalued: true
   siste:
     name: siste
-    description: Siste datasett i en datasettserie.
+    description: Siste datasett i ei datasettserie.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -484,7 +486,7 @@ attributes:
     range: Datasett
   tidsrom:
     name: tidsrom
-    description: Tidsperiode ressursen dekker.
+    description: Tidsperiode ressursen dekkar.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -501,7 +503,7 @@ attributes:
     multivalued: true
   endringsdato:
     name: endringsdato
-    description: Dato for siste endring av ressursen.
+    description: Dato for siste endring av ressursen (dct:modified).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:modified
@@ -527,7 +529,7 @@ attributes:
     range: Frekvens
   forste:
     name: forste
-    description: Første datasett i en datasettserie.
+    description: Første datasett i ei datasettserie.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dcat:first
@@ -538,7 +540,7 @@ attributes:
     range: Datasett
   utgivelsesdato:
     name: utgivelsesdato
-    description: Dato ressursen ble første gang publisert.
+    description: Dato ressursen vart første gong publisert (dct:issued).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:issued
@@ -560,10 +562,6 @@ attributes:
     alias: id
     owner: Datasettserie
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -583,6 +581,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dcat:DatasetSeries

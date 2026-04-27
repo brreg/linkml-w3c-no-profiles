@@ -3,7 +3,7 @@
 # Slot: tilgjengeliggjor_datasett 
 
 
-_Datasett som datatjenesten tilgjengeliggjør._
+_Datasett som datatjenesten tilgjengeleggjer._
 
 
 
@@ -22,7 +22,7 @@ Alias: tilgjengeliggjor_datasett
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: tilgjengeliggjor_datasett
 <details>
 ```yaml
 name: tilgjengeliggjor_datasett
-description: Datasett som datatjenesten tilgjengeliggjør.
+description: Datasett som datatjenesten tilgjengeleggjer.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:servesDataset

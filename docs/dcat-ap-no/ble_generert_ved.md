@@ -22,7 +22,7 @@ Alias: ble_generert_ved
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 

@@ -3,7 +3,7 @@
 # Slot: tema 
 
 
-_Tema fra et kontrollert vokabular._
+_Tema frå eit kontrollert vokabular._
 
 
 
@@ -22,9 +22,9 @@ Alias: tema
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 
@@ -85,7 +85,7 @@ Alias: tema
 <details>
 ```yaml
 name: tema
-description: Tema fra et kontrollert vokabular.
+description: Tema frå eit kontrollert vokabular.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:theme

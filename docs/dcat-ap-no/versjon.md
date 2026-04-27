@@ -22,9 +22,9 @@ Alias: versjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
-| [Standard](Standard.md) | En standard som en ressurs er i samsvar med |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [Standard](Standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
 
 
 

@@ -3,7 +3,7 @@
 # Slot: opphavsrettsinnehaver 
 
 
-_Navn på opphavsrettsinnehaver._
+_Namn på opphavsrettsinnehavar._
 
 
 
@@ -22,7 +22,7 @@ Alias: opphavsrettsinnehaver
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: opphavsrettsinnehaver
 <details>
 ```yaml
 name: opphavsrettsinnehaver
-description: Navn på opphavsrettsinnehaver.
+description: Namn på opphavsrettsinnehavar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: odrs:copyrightHolder

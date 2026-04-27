@@ -3,7 +3,7 @@
 # Slot: annen_identifikator 
 
 
-_Alternativ identifikator fra et annet system._
+_Alternativ identifikator frå eit anna system._
 
 
 
@@ -22,7 +22,7 @@ Alias: annen_identifikator
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: annen_identifikator
 <details>
 ```yaml
 name: annen_identifikator
-description: Alternativ identifikator fra et annet system.
+description: Alternativ identifikator frå eit anna system.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: adms:identifier

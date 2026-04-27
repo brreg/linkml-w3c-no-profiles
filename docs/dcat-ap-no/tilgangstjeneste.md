@@ -3,7 +3,7 @@
 # Slot: tilgangstjeneste 
 
 
-_Datatjeneste som gir tilgang til distribusjonen._
+_Datatjeneste som gjev tilgang til distribusjonen._
 
 
 
@@ -22,7 +22,7 @@ Alias: tilgangstjeneste
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: tilgangstjeneste
 <details>
 ```yaml
 name: tilgangstjeneste
-description: Datatjeneste som gir tilgang til distribusjonen.
+description: Datatjeneste som gjev tilgang til distribusjonen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:accessService

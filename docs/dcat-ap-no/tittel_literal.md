@@ -3,7 +3,7 @@
 # Slot: tittel_literal 
 
 
-_Navn/tittel uten språktag._
+_Namn/tittel utan språktag._
 
 
 
@@ -18,16 +18,6 @@ Alias: tittel_literal
 
 
 
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |  no  |
-| [Standard](Standard.md) | En standard som en ressurs er i samsvar med |  yes  |
-
-
-
-
 
 
 ## Properties
@@ -37,7 +27,6 @@ Alias: tittel_literal
 | Property | Value |
 | --- | --- |
 | Range | [String](String.md) |
-| Domain Of | [Standard](Standard.md), [RegulativRessurs](RegulativRessurs.md) |
 | Slot URI | [dct:title](http://purl.org/dc/terms/title) |
 
 ### Cardinality and Requirements
@@ -84,14 +73,11 @@ Alias: tittel_literal
 <details>
 ```yaml
 name: tittel_literal
-description: Navn/tittel uten språktag.
+description: Namn/tittel utan språktag.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:title
 alias: tittel_literal
-domain_of:
-- Standard
-- RegulativRessurs
 range: string
 multivalued: true
 

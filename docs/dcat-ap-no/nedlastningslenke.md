@@ -3,7 +3,7 @@
 # Slot: nedlastningslenke 
 
 
-_Direkte nedlastningslenke for distribusjonsfilen._
+_Direkte nedlastingslenke for distribusjonsfila._
 
 
 
@@ -22,7 +22,7 @@ Alias: nedlastningslenke
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: nedlastningslenke
 <details>
 ```yaml
 name: nedlastningslenke
-description: Direkte nedlastningslenke for distribusjonsfilen.
+description: Direkte nedlastingslenke for distribusjonsfila.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:downloadURL

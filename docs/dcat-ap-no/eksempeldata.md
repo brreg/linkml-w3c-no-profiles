@@ -22,7 +22,7 @@ Alias: eksempeldata
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 

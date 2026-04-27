@@ -3,7 +3,7 @@
 # Slot: nokkelord 
 
 
-_Nøkkelord som beskriver ressursen._
+_Nøkkelord som beskriv ressursen._
 
 
 
@@ -22,8 +22,8 @@ Alias: nokkelord
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 
@@ -84,7 +84,7 @@ Alias: nokkelord
 <details>
 ```yaml
 name: nokkelord
-description: Nøkkelord som beskriver ressursen.
+description: Nøkkelord som beskriv ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:keyword

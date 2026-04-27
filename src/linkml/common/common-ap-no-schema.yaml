@@ -1,0 +1,164 @@
+id: https://data.norge.no/linkml/common-ap-no
+name: common-ap-no
+title: Common AP-NO
+description: >-
+  Felles typar, subsets, klassar og slots som går igjen i alle norske
+  W3C-applikasjonsprofiler (AP-NO). Importerast av dei einskilde profilane.
+
+prefixes:
+  linkml:  https://w3id.org/linkml/
+  dct:     http://purl.org/dc/terms/
+  skos:    http://www.w3.org/2004/02/skos/core#
+  rdfs:    http://www.w3.org/2000/01/rdf-schema#
+  xsd:     http://www.w3.org/2001/XMLSchema#
+  rdf:     http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  owl:     http://www.w3.org/2002/07/owl#
+
+default_prefix: https://data.norge.no/linkml/common-ap-no/
+default_range: string
+
+imports:
+  - linkml:types
+
+# ---------------------------------------------------------------------------
+# Typar
+# ---------------------------------------------------------------------------
+
+types:
+
+  LangString:
+    uri: rdf:langString
+    base: str
+    description: Språktagget streng (rdf:langString).
+
+  NonNegativeInteger:
+    uri: xsd:nonNegativeInteger
+    base: int
+    minimum_value: 0
+    description: Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger).
+
+  Duration:
+    uri: xsd:duration
+    base: str
+    description: ISO 8601-varigheit (xsd:duration), t.d. PT15M.
+
+  GYear:
+    uri: xsd:gYear
+    base: str
+    description: Gregorisk årstal (xsd:gYear), t.d. 2024.
+
+# ---------------------------------------------------------------------------
+# Subsets
+# ---------------------------------------------------------------------------
+
+subsets:
+
+  Obligatorisk:
+    description: Obligatoriske eigenskapar i ein AP-NO-profil.
+
+  Anbefalt:
+    description: Anbefalte eigenskapar i ein AP-NO-profil.
+
+  Valgfri:
+    description: Valfrie eigenskapar i ein AP-NO-profil.
+
+# ---------------------------------------------------------------------------
+# Klassar
+# ---------------------------------------------------------------------------
+
+classes:
+
+  Spraak:
+    class_uri: dct:LinguisticSystem
+    description: Ein språkreferanse (dct:LinguisticSystem).
+    slots:
+      - id
+
+  Mediatype:
+    class_uri: dct:MediaTypeOrExtent
+    description: Ein medietype eller filformat (dct:MediaTypeOrExtent).
+    slots:
+      - id
+
+  Begrep:
+    class_uri: skos:Concept
+    description: Eit SKOS-omgrep frå eit kontrollert vokabular.
+    slots:
+      - id
+
+  Begrepssamling:
+    class_uri: skos:ConceptScheme
+    description: Ei SKOS-omgrepssamling (temavokabular).
+    slots:
+      - id
+
+# ---------------------------------------------------------------------------
+# Slots
+# ---------------------------------------------------------------------------
+
+slots:
+
+  id:
+    identifier: true
+    range: uriorcurie
+    description: URI-identifikator for ressursen.
+
+  tittel:
+    slot_uri: dct:title
+    range: LangString
+    multivalued: true
+    description: Namn/tittel på ressursen (dct:title).
+
+  beskrivelse:
+    slot_uri: dct:description
+    range: LangString
+    multivalued: true
+    description: Fritekstbeskrivelse av ressursen (dct:description).
+
+  identifikator_literal:
+    slot_uri: dct:identifier
+    range: string
+    description: Tekstleg identifikator for ressursen (dct:identifier).
+
+  type_concept:
+    slot_uri: dct:type
+    range: Begrep
+    description: Type ressurs frå eit kontrollert vokabular (dct:type).
+
+  endringsdato:
+    slot_uri: dct:modified
+    range: date
+    description: Dato for siste endring av ressursen (dct:modified).
+
+  utgivelsesdato:
+    slot_uri: dct:issued
+    range: date
+    description: Dato ressursen vart første gong publisert (dct:issued).
+
+  sprak:
+    slot_uri: dct:language
+    range: Spraak
+    multivalued: true
+    description: Språk brukt i ressursen (dct:language).
+
+  format:
+    slot_uri: dct:format
+    range: Mediatype
+    description: Filformat eller medietype (dct:format).
+
+  har_referanse:
+    slot_uri: rdfs:seeAlso
+    range: uri
+    multivalued: true
+    description: Referanse til ekstern ressurs (rdfs:seeAlso).
+
+  har_merknad:
+    slot_uri: rdfs:comment
+    range: LangString
+    multivalued: true
+    description: Fritekstmerknad (rdfs:comment).
+
+  har_versjonsnummer:
+    slot_uri: owl:versionInfo
+    range: string
+    description: Versjonsnummer for ressursen (owl:versionInfo).

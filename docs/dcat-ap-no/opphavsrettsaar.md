@@ -3,7 +3,7 @@
 # Slot: opphavsrettsaar 
 
 
-_Årstall for opphavsrett._
+_Årstal for opphavsrett._
 
 
 
@@ -22,7 +22,7 @@ Alias: opphavsrettsaar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighetserklaring](Rettighetserklaring.md) | En erklæring om rettigheter til en ressurs (ODRS) |  no  |
+| [Rettighetserklaring](Rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: opphavsrettsaar
 <details>
 ```yaml
 name: opphavsrettsaar
-description: Årstall for opphavsrett.
+description: Årstal for opphavsrett.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: odrs:copyrightYear

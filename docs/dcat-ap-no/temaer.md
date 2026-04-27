@@ -3,7 +3,7 @@
 # Slot: temaer 
 
 
-_Temavokabular som brukes i katalogen._
+_Temavokabular som vert brukt i katalogen._
 
 
 
@@ -22,7 +22,7 @@ Alias: temaer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  yes  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: temaer
 <details>
 ```yaml
 name: temaer
-description: Temavokabular som brukes i katalogen.
+description: Temavokabular som vert brukt i katalogen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:themeTaxonomy

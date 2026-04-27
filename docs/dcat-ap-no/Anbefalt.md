@@ -1,7 +1,7 @@
 # Subset: Anbefalt 
 
 
-_Anbefalte egenskaper i DCAT-AP-NO._
+_Anbefalte eigenskapar i ein AP-NO-profil._
 
 
 
@@ -24,6 +24,8 @@ URI: [Anbefalt](Anbefalt.md)
 
 
 * from schema: https://data.norge.no/linkml/dcat-ap-no
+
+
 
 
 

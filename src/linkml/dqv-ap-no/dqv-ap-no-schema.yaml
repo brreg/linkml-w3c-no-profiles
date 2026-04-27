@@ -1,0 +1,373 @@
+id: https://data.norge.no/linkml/dqv-ap-no
+name: dqv-ap-no
+title: DQV-AP-NO
+description: >-
+  Norsk applikasjonsprofil av DQV (Data Quality Vocabulary), modellert i LinkML
+  med lenking framfor inlining.
+  Basert på https://informasjonsforvaltning.github.io/dqv-ap-no/
+
+version: "1.0"
+
+prefixes:
+  linkml:  https://w3id.org/linkml/
+  dcat:    http://www.w3.org/ns/dcat#
+  dct:     http://purl.org/dc/terms/
+  dqv:     http://www.w3.org/ns/dqv#
+  dqvno:   https://data.norge.no/vocabulary/dqvno#
+  oa:      http://www.w3.org/ns/oa#
+  skos:    http://www.w3.org/2004/02/skos/core#
+  rdfs:    http://www.w3.org/2000/01/rdf-schema#
+  xsd:     http://www.w3.org/2001/XMLSchema#
+  rdf:     http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+default_prefix: https://data.norge.no/linkml/dqv-ap-no/
+default_range: string
+
+imports:
+  - linkml:types
+  - ../common/common-ap-no-schema
+
+# ---------------------------------------------------------------------------
+# Rotklasse (tree_root)
+# ---------------------------------------------------------------------------
+
+classes:
+
+  Container:
+    tree_root: true
+    description: >-
+      Rotklasse for DQV-AP-NO-datafiler. Held flate lister av alle instansierbare
+      klassar; referansar mellom objekta brukar URI-lenking.
+    attributes:
+      datasett:
+        range: Datasett
+        multivalued: true
+        inlined_as_list: true
+      kvalitetsdimensjonar:
+        range: Kvalitetsdimensjon
+        multivalued: true
+        inlined_as_list: true
+      kvalitetsdeldimensjonar:
+        range: Kvalitetsdeldimensjon
+        multivalued: true
+        inlined_as_list: true
+      kvalitetsmaal:
+        range: Kvalitetsmaal
+        multivalued: true
+        inlined_as_list: true
+      kvalitetsmerknader:
+        range: Kvalitetsmerknad
+        multivalued: true
+        inlined_as_list: true
+      brukartilbakemeldingar:
+        range: Brukartilbakemelding
+        multivalued: true
+        inlined_as_list: true
+      kvalitetssertifikat:
+        range: Kvalitetssertifikat
+        multivalued: true
+        inlined_as_list: true
+      kvalitetsmaalingar:
+        range: Kvalitetsmaaling
+        multivalued: true
+        inlined_as_list: true
+      standardar:
+        range: Standard
+        multivalued: true
+        inlined_as_list: true
+      tekstdelar:
+        range: Tekstdel
+        multivalued: true
+        inlined_as_list: true
+
+# ---------------------------------------------------------------------------
+# Klasser
+# ---------------------------------------------------------------------------
+
+  # ---- Hjelpeklassar -------------------------------------------------------
+
+  DcatRessurs:
+    class_uri: dcat:Resource
+    description: Ein katalogisert ressurs (brukt som målklasse for oa:hasTarget).
+    slots:
+      - id
+
+  # ---- Hovudklassar --------------------------------------------------------
+
+  Datasett:
+    class_uri: dcat:Dataset
+    description: >-
+      Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for
+      kvalitetsinformasjon.
+    slots:
+      - id
+      - er_i_samsvar_med
+      - har_kvalitetsmerknad
+      - har_kvalitetsmaaling
+    slot_usage:
+      er_i_samsvar_med:
+        in_subset:
+          - Anbefalt
+      har_kvalitetsmerknad:
+        in_subset:
+          - Anbefalt
+      har_kvalitetsmaaling:
+        in_subset:
+          - Anbefalt
+
+  Kvalitetsdimensjon:
+    class_uri: dqv:Dimension
+    description: Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål.
+    slots:
+      - id
+      - har_anbefalt_term
+      - har_definisjon
+    slot_usage:
+      har_anbefalt_term:
+        in_subset:
+          - Anbefalt
+      har_definisjon:
+        in_subset:
+          - Anbefalt
+
+  Kvalitetsdeldimensjon:
+    is_a: Kvalitetsdimensjon
+    class_uri: dqvno:SubDimension
+    description: Ein deldimensjon av ein kvalitetsdimensjon.
+    slots:
+      - er_deldimensjon_av
+    slot_usage:
+      er_deldimensjon_av:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_anbefalt_term:
+        in_subset:
+          - Anbefalt
+      har_definisjon:
+        in_subset:
+          - Anbefalt
+
+  Kvalitetsmaal:
+    class_uri: dqv:Metric
+    description: Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon.
+    slots:
+      - id
+      - er_i_kvalitetsdeldimensjon
+      - har_forventet_datatype
+      - har_anbefalt_term
+      - har_definisjon
+    slot_usage:
+      er_i_kvalitetsdeldimensjon:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_forventet_datatype:
+        in_subset:
+          - Anbefalt
+      har_anbefalt_term:
+        in_subset:
+          - Anbefalt
+      har_definisjon:
+        in_subset:
+          - Anbefalt
+
+  Kvalitetsmerknad:
+    class_uri: dqv:QualityAnnotation
+    description: Ein merknad om kvaliteten til eit datasett.
+    slots:
+      - id
+      - er_motivert_av
+      - er_i_kvalitetsdimensjon
+      - har_tekstdel
+      - har_merknad
+      - har_maal
+    slot_usage:
+      er_motivert_av:
+        required: true
+        in_subset:
+          - Obligatorisk
+      er_i_kvalitetsdimensjon:
+        in_subset:
+          - Anbefalt
+      har_tekstdel:
+        in_subset:
+          - Anbefalt
+      har_merknad:
+        in_subset:
+          - Valgfri
+      har_maal:
+        in_subset:
+          - Valgfri
+
+  Brukartilbakemelding:
+    is_a: Kvalitetsmerknad
+    class_uri: dqv:UserQualityFeedback
+    description: Tilbakemelding frå ein brukar om kvaliteten til eit datasett.
+
+  Kvalitetssertifikat:
+    is_a: Kvalitetsmerknad
+    class_uri: dqv:QualityCertificate
+    description: Eit sertifikat som stadfester kvaliteten til eit datasett.
+
+  Kvalitetsmaaling:
+    class_uri: dqv:QualityMeasurement
+    description: Ei konkret måling av eit kvalitetsmål for eit datasett.
+    slots:
+      - id
+      - er_kvalitetsmaaling_av
+      - har_verdi
+      - har_merknad
+    slot_usage:
+      er_kvalitetsmaaling_av:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_verdi:
+        in_subset:
+          - Anbefalt
+      har_merknad:
+        in_subset:
+          - Valgfri
+
+  Standard:
+    class_uri: dct:Standard
+    description: Ein standard eller spesifikasjon som eit datasett er i samsvar med.
+    slots:
+      - id
+      - tittel
+      - er_i_kvalitetsdimensjon
+      - har_referanse
+      - har_merknad
+      - har_versjonsnummer
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      er_i_kvalitetsdimensjon:
+        in_subset:
+          - Anbefalt
+      har_referanse:
+        in_subset:
+          - Anbefalt
+      har_merknad:
+        in_subset:
+          - Valgfri
+      har_versjonsnummer:
+        in_subset:
+          - Valgfri
+
+  Tekstdel:
+    class_uri: oa:TextualBody
+    description: Ein tekstleg del av ein kvalitetsmerknad (Web Annotation).
+    slots:
+      - id
+      - har_verdi_tekstdel
+      - format
+      - sprak
+    slot_usage:
+      har_verdi_tekstdel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      format:
+        in_subset:
+          - Anbefalt
+      sprak:
+        in_subset:
+          - Anbefalt
+
+  Motivasjon:
+    class_uri: oa:Motivation
+    description: Motivasjonen bak ein kvalitetsmerknad (Web Annotation).
+    slots:
+      - id
+
+# ---------------------------------------------------------------------------
+# Slots (berre DQV-AP-NO-spesifikke)
+# ---------------------------------------------------------------------------
+
+slots:
+
+  er_i_samsvar_med:
+    slot_uri: dct:conformsTo
+    range: Standard
+    multivalued: true
+    description: Standard eller spesifikasjon datasettet er i samsvar med.
+
+  har_kvalitetsmerknad:
+    slot_uri: dqv:hasQualityAnnotation
+    range: Kvalitetsmerknad
+    multivalued: true
+    description: Kvalitetsmerknad knytt til datasettet.
+
+  har_kvalitetsmaaling:
+    slot_uri: dqv:hasQualityMeasurement
+    range: Kvalitetsmaaling
+    multivalued: true
+    description: Kvalitetsmåling knytt til datasettet.
+
+  er_deldimensjon_av:
+    slot_uri: skos:broader
+    range: Kvalitetsdimensjon
+    description: Overordna kvalitetsdimensjon denne deldimensjonen høyrer til.
+
+  har_anbefalt_term:
+    slot_uri: skos:prefLabel
+    range: LangString
+    multivalued: true
+    description: Føretrekt term/namn for dimensjonen eller målet.
+
+  har_definisjon:
+    slot_uri: skos:definition
+    range: LangString
+    multivalued: true
+    description: Definisjon av dimensjonen eller målet.
+
+  er_i_kvalitetsdeldimensjon:
+    slot_uri: dqvno:inSubDimension
+    range: Kvalitetsdeldimensjon
+    description: Kvalitetsdeldimensjonen dette målet operasjonaliserer.
+
+  har_forventet_datatype:
+    slot_uri: dqv:expectedDataType
+    range: uriorcurie
+    description: Forventa XSD-datatype for verdien av ei kvalitetsmåling.
+
+  er_motivert_av:
+    slot_uri: oa:motivatedBy
+    range: uriorcurie
+    description: Motivasjonen bak kvalitetsmerknaden (t.d. oa:assessing).
+
+  er_i_kvalitetsdimensjon:
+    slot_uri: dqv:inDimension
+    range: Kvalitetsdimensjon
+    description: Kvalitetsdimensjonen denne merknaden eller standarden gjeld.
+
+  har_tekstdel:
+    slot_uri: oa:hasBody
+    range: Tekstdel
+    description: Tekstleg innhald i merknaden.
+
+  har_maal:
+    slot_uri: oa:hasTarget
+    range: DcatRessurs
+    description: Ressursen merknaden gjeld.
+
+  er_kvalitetsmaaling_av:
+    slot_uri: dqv:isMeasurementOf
+    range: Kvalitetsmaal
+    description: Kvalitetsmålet denne målinga er ei måling av.
+
+  har_verdi:
+    slot_uri: dqv:value
+    range: string
+    description: >-
+      Målt verdi (xsd:boolean, xsd:double, xsd:nonNegativeInteger eller
+      rdfs:Literal avhengig av kvalitetsmålet).
+
+  har_verdi_tekstdel:
+    slot_uri: rdfs:value
+    range: string
+    description: Tekstinnhaldet i tekstdelen.

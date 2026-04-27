@@ -3,7 +3,7 @@
 # Slot: tilgjengelighet 
 
 
-_Planlagt tilgjengelighet for ressursen._
+_Planlagt tilgjengelegheit for ressursen._
 
 
 
@@ -22,8 +22,8 @@ Alias: tilgjengelighet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  yes  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: tilgjengelighet
 <details>
 ```yaml
 name: tilgjengelighet
-description: Planlagt tilgjengelighet for ressursen.
+description: Planlagt tilgjengelegheit for ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcatap:availability

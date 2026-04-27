@@ -3,7 +3,7 @@
 # Class: ProvenanceStatement 
 
 
-_En provenienserklæring._
+_Ein provenienserklæring._
 
 
 
@@ -98,7 +98,7 @@ URI: [dct:ProvenanceStatement](http://purl.org/dc/terms/ProvenanceStatement)
 <details>
 ```yaml
 name: ProvenanceStatement
-description: En provenienserklæring.
+description: Ein provenienserklæring.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -112,7 +112,7 @@ class_uri: dct:ProvenanceStatement
 <details>
 ```yaml
 name: ProvenanceStatement
-description: En provenienserklæring.
+description: Ein provenienserklæring.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -124,10 +124,6 @@ attributes:
     alias: id
     owner: ProvenanceStatement
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -147,6 +143,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dct:ProvenanceStatement

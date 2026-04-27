@@ -3,7 +3,7 @@
 # Slot: katalogpost 
 
 
-_Katalogposter i katalogen._
+_Katalogpostar i katalogen._
 
 
 
@@ -22,7 +22,7 @@ Alias: katalogpost
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: katalogpost
 <details>
 ```yaml
 name: katalogpost
-description: Katalogposter i katalogen.
+description: Katalogpostar i katalogen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:record

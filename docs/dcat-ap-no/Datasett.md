@@ -23,7 +23,7 @@ Alias: datasett
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Container](Container.md) | Rotklasse for DCAT-AP-NO-datafiler |  no  |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  yes  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
 
 
 

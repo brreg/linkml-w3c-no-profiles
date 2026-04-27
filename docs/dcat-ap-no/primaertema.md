@@ -3,7 +3,7 @@
 # Slot: primaertema 
 
 
-_Ressursen som katalogposten primært beskriver._
+_Ressursen katalogposten primært beskriv._
 
 
 
@@ -22,7 +22,7 @@ Alias: primaertema
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |  yes  |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: primaertema
 <details>
 ```yaml
 name: primaertema
-description: Ressursen som katalogposten primært beskriver.
+description: Ressursen katalogposten primært beskriv.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: foaf:primaryTopic

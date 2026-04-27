@@ -22,7 +22,7 @@ Alias: har_kontaktside
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for en aktør |  no  |
+| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for ein aktør |  no  |
 
 
 

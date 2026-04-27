@@ -3,7 +3,7 @@
 # Slot: relatert_ressurs 
 
 
-_Generisk relasjon til en annen ressurs._
+_Generisk relasjon til ein annan ressurs._
 
 
 
@@ -22,7 +22,7 @@ Alias: relatert_ressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: relatert_ressurs
 <details>
 ```yaml
 name: relatert_ressurs
-description: Generisk relasjon til en annen ressurs.
+description: Generisk relasjon til ein annan ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:relation

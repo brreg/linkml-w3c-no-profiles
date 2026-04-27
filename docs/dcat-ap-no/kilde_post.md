@@ -3,7 +3,7 @@
 # Slot: kilde_post 
 
 
-_Kilde for katalogposten (ekstern oppføring)._
+_Kjelde for katalogposten (ekstern oppføring)._
 
 
 
@@ -22,7 +22,7 @@ Alias: kilde_post
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |  no  |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: kilde_post
 <details>
 ```yaml
 name: kilde_post
-description: Kilde for katalogposten (ekstern oppføring).
+description: Kjelde for katalogposten (ekstern oppføring).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:source

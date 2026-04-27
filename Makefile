@@ -1,10 +1,10 @@
-SCHEMAS    := dcat-ap-no
+SCHEMAS    := dcat-ap-no dqv-ap-no
 SCHEMA_DIR := src/linkml
 GEN_DIR    := generated
 IMAGE      := docker.io/linkml/linkml:latest
 PODMAN     := podman run --rm -v "$(CURDIR):/work" -w /work $(IMAGE)
 
-.PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl clean
+.PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl gen-rdf convert-rdf clean
 
 all: test docs
 
@@ -34,6 +34,24 @@ gen-jsonschema:
 # Generer OWL/Turtle
 gen-owl:
 	$(foreach s,$(SCHEMAS),mkdir -p $(GEN_DIR)/$(s) && $(PODMAN) gen-owl $(SCHEMA_DIR)/$(s)/$(s)-schema.yaml > $(GEN_DIR)/$(s)/$(s)-ontology.ttl;)
+
+# Generer RDF/Turtle (skjema som RDF-graf)
+gen-rdf:
+	$(foreach s,$(SCHEMAS),mkdir -p $(GEN_DIR)/$(s) && $(PODMAN) gen-rdf $(SCHEMA_DIR)/$(s)/$(s)-schema.yaml > $(GEN_DIR)/$(s)/$(s)-schema.ttl;)
+
+# Konverter eksempeldata (YAML) til RDF/Turtle
+convert-rdf:
+	for example in examples/*/eksempel-*.yaml; do \
+		profil=$$(echo "$$example" | cut -d/ -f2); \
+		name=$$(basename "$$example" .yaml); \
+		mkdir -p $(GEN_DIR)/$$profil; \
+		$(PODMAN) linkml-convert \
+			--schema $(SCHEMA_DIR)/$$profil/$$profil-schema.yaml \
+			--output-format ttl \
+			--no-validate \
+			--output $(GEN_DIR)/$$profil/$$name.ttl \
+			$$example; \
+	done
 
 # Generer HTML-dokumentasjon
 docs:

@@ -3,7 +3,7 @@
 # Slot: type_concept 
 
 
-_Type ressurs fra et kontrollert vokabular._
+_Type ressurs frå eit kontrollert vokabular (dct:type)._
 
 
 
@@ -22,9 +22,9 @@ Alias: type_concept
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |  no  |
-| [Aktor](Aktor.md) | En aktør (person, organisasjon eller system) med ansvar for en ressurs |  no  |
+| [Aktor](Aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
 
 
 
@@ -84,7 +84,7 @@ Alias: type_concept
 <details>
 ```yaml
 name: type_concept
-description: Type ressurs fra et kontrollert vokabular.
+description: Type ressurs frå eit kontrollert vokabular (dct:type).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:type

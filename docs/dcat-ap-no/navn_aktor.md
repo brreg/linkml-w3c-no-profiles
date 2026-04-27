@@ -3,7 +3,7 @@
 # Slot: navn_aktor 
 
 
-_Navn på aktøren._
+_Namn på aktøren._
 
 
 
@@ -22,7 +22,7 @@ Alias: navn_aktor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Aktor](Aktor.md) | En aktør (person, organisasjon eller system) med ansvar for en ressurs |  yes  |
+| [Aktor](Aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: navn_aktor
 <details>
 ```yaml
 name: navn_aktor
-description: Navn på aktøren.
+description: Namn på aktøren.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: foaf:name

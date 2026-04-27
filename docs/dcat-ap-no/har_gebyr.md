@@ -3,7 +3,7 @@
 # Slot: har_gebyr 
 
 
-_Gebyr knyttet til bruk av datatjenesten._
+_Gebyr knytt til bruk av datatjenesten._
 
 
 
@@ -22,7 +22,7 @@ Alias: har_gebyr
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: har_gebyr
 <details>
 ```yaml
 name: har_gebyr
-description: Gebyr knyttet til bruk av datatjenesten.
+description: Gebyr knytt til bruk av datatjenesten.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: cv:hasCost

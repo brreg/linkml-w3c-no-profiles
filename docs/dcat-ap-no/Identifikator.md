@@ -3,7 +3,7 @@
 # Class: Identifikator 
 
 
-_En alternativ identifikator for en ressurs._
+_Ein alternativ identifikator for ein ressurs._
 
 
 
@@ -102,7 +102,7 @@ URI: [adms:Identifier](http://www.w3.org/ns/adms#Identifier)
 <details>
 ```yaml
 name: Identifikator
-description: En alternativ identifikator for en ressurs.
+description: Ein alternativ identifikator for ein ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -123,7 +123,7 @@ class_uri: adms:Identifier
 <details>
 ```yaml
 name: Identifikator
-description: En alternativ identifikator for en ressurs.
+description: Ein alternativ identifikator for ein ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   notasjon:
@@ -141,10 +141,6 @@ attributes:
     alias: id
     owner: Identifikator
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -164,6 +160,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   notasjon:

@@ -1,7 +1,7 @@
 # Subset: Valgfri 
 
 
-_Valgfrie egenskaper i DCAT-AP-NO._
+_Valfrie eigenskapar i ein AP-NO-profil._
 
 
 
@@ -24,6 +24,8 @@ URI: [Valgfri](Valgfri.md)
 
 
 * from schema: https://data.norge.no/linkml/dcat-ap-no
+
+
 
 
 

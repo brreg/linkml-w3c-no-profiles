@@ -3,7 +3,7 @@
 # Slot: status 
 
 
-_Status for ressursen fra et kontrollert vokabular._
+_Status for ressursen frå eit kontrollert vokabular._
 
 
 
@@ -22,9 +22,9 @@ Alias: status
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
-| [Katalogpost](Katalogpost.md) | En katalogpost som beskriver en ressurs i katalogen |  yes  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 
 
 
@@ -84,7 +84,7 @@ Alias: status
 <details>
 ```yaml
 name: status
-description: Status for ressursen fra et kontrollert vokabular.
+description: Status for ressursen frå eit kontrollert vokabular.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: adms:status

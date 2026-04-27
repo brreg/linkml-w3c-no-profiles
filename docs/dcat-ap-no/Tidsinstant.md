@@ -3,13 +3,13 @@
 # Class: Tidsinstant 
 
 
-_Et tidspunkt (OWL Time)._
+_Eit tidspunkt (OWL Time)._
 
 
 
 
 
-URI: [time:Instant](http://www.w3.org/2006/time#Instant)
+URI: [time:Instant](http://www.w3.org/6006/time#Instant)
 
 
 
@@ -33,7 +33,7 @@ URI: [time:Instant](http://www.w3.org/2006/time#Instant)
 
 | Property | Value |
 | --- | --- |
-| Class URI | [time:Instant](http://www.w3.org/2006/time#Instant) |
+| Class URI | [time:Instant](http://www.w3.org/6006/time#Instant) |
 
 
 ## Slots
@@ -99,7 +99,7 @@ URI: [time:Instant](http://www.w3.org/2006/time#Instant)
 <details>
 ```yaml
 name: Tidsinstant
-description: Et tidspunkt (OWL Time).
+description: Eit tidspunkt (OWL Time).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -113,7 +113,7 @@ class_uri: time:Instant
 <details>
 ```yaml
 name: Tidsinstant
-description: Et tidspunkt (OWL Time).
+description: Eit tidspunkt (OWL Time).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -125,10 +125,6 @@ attributes:
     alias: id
     owner: Tidsinstant
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -148,6 +144,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: time:Instant

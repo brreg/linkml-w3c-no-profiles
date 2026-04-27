@@ -3,7 +3,7 @@
 # Slot: har_referanse 
 
 
-_Referanse til standarden._
+_Referanse til ekstern ressurs (rdfs:seeAlso)._
 
 
 
@@ -22,7 +22,8 @@ Alias: har_referanse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Standard](Standard.md) | En standard som en ressurs er i samsvar med |  no  |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Standard](Standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
 
 
 
@@ -36,7 +37,7 @@ Alias: har_referanse
 | Property | Value |
 | --- | --- |
 | Range | [Uri](Uri.md) |
-| Domain Of | [Standard](Standard.md) |
+| Domain Of | [Standard](Standard.md), [RegulativRessurs](RegulativRessurs.md) |
 | Slot URI | [rdfs:seeAlso](http://www.w3.org/2000/01/rdf-schema#seeAlso) |
 
 ### Cardinality and Requirements
@@ -83,13 +84,14 @@ Alias: har_referanse
 <details>
 ```yaml
 name: har_referanse
-description: Referanse til standarden.
+description: Referanse til ekstern ressurs (rdfs:seeAlso).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: rdfs:seeAlso
 alias: har_referanse
 domain_of:
 - Standard
+- RegulativRessurs
 range: uri
 multivalued: true
 

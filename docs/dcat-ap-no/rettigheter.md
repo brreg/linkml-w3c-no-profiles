@@ -3,7 +3,7 @@
 # Slot: rettigheter 
 
 
-_Rettigheter knyttet til ressursen._
+_Rettar knytte til ressursen._
 
 
 
@@ -22,9 +22,9 @@ Alias: rettigheter
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  no  |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
 
 
 
@@ -84,7 +84,7 @@ Alias: rettigheter
 <details>
 ```yaml
 name: rettigheter
-description: Rettigheter knyttet til ressursen.
+description: Rettar knytte til ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:rights

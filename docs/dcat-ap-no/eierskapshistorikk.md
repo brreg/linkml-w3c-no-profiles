@@ -3,7 +3,7 @@
 # Slot: eierskapshistorikk 
 
 
-_Opprinnelse og eierskapshistorikk for ressursen._
+_Opphav og eigarskapshistorikk for ressursen._
 
 
 
@@ -22,7 +22,7 @@ Alias: eierskapshistorikk
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: eierskapshistorikk
 <details>
 ```yaml
 name: eierskapshistorikk
-description: Opprinnelse og eierskapshistorikk for ressursen.
+description: Opphav og eigarskapshistorikk for ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:provenance

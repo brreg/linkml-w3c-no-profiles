@@ -3,7 +3,7 @@
 # Slot: annen_spesifikk_relasjon 
 
 
-_Kvalifisert relasjon til en annen ressurs._
+_Kvalifisert relasjon til ein annan ressurs._
 
 
 
@@ -22,7 +22,7 @@ Alias: annen_spesifikk_relasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: annen_spesifikk_relasjon
 <details>
 ```yaml
 name: annen_spesifikk_relasjon
-description: Kvalifisert relasjon til en annen ressurs.
+description: Kvalifisert relasjon til ein annan ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:qualifiedRelation

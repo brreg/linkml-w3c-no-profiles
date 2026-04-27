@@ -3,7 +3,7 @@
 # Slot: tidsopplosning 
 
 
-_Minste tidsoppløsning i datasettet._
+_Minste tidsoppløysing i datasettet._
 
 
 
@@ -22,7 +22,7 @@ Alias: tidsopplosning
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: tidsopplosning
 <details>
 ```yaml
 name: tidsopplosning
-description: Minste tidsoppløsning i datasettet.
+description: Minste tidsoppløysing i datasettet.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:temporalResolution

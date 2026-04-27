@@ -3,7 +3,7 @@
 # Class: Relasjon 
 
 
-_En kvalifisert relasjon mellom to ressurser._
+_Ein kvalifisert relasjon mellom to ressursar._
 
 
 
@@ -54,8 +54,8 @@ URI: [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [har_rolle](har_rolle.md) | 1 <br/> [Begrep](Begrep.md) | Rolle en aktør eller ressurs har i en relasjon | direct |
-| [relasjon_til](relasjon_til.md) | 1 <br/> [Uri](Uri.md) | Den relaterte ressursen i en kvalifisert relasjon | direct |
+| [har_rolle](har_rolle.md) | 1 <br/> [Begrep](Begrep.md) | Rolle ein aktør eller ressurs har i ein relasjon | direct |
+| [relasjon_til](relasjon_til.md) | 1 <br/> [Uri](Uri.md) | Den relaterte ressursen i ein kvalifisert relasjon | direct |
 
 
 
@@ -114,7 +114,7 @@ URI: [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship)
 <details>
 ```yaml
 name: Relasjon
-description: En kvalifisert relasjon mellom to ressurser.
+description: Ein kvalifisert relasjon mellom to ressursar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -141,7 +141,7 @@ class_uri: dcat:Relationship
 <details>
 ```yaml
 name: Relasjon
-description: En kvalifisert relasjon mellom to ressurser.
+description: Ein kvalifisert relasjon mellom to ressursar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   har_rolle:
@@ -164,10 +164,6 @@ attributes:
     alias: id
     owner: Relasjon
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -187,11 +183,15 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   har_rolle:
     name: har_rolle
-    description: Rolle en aktør eller ressurs har i en relasjon.
+    description: Rolle ein aktør eller ressurs har i ein relasjon.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -205,7 +205,7 @@ attributes:
     required: true
   relasjon_til:
     name: relasjon_til
-    description: Den relaterte ressursen i en kvalifisert relasjon.
+    description: Den relaterte ressursen i ein kvalifisert relasjon.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no

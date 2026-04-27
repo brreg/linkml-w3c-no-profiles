@@ -3,7 +3,7 @@
 # Slot: tidsrom 
 
 
-_Tidsperiode ressursen dekker._
+_Tidsperiode ressursen dekkar._
 
 
 
@@ -22,10 +22,10 @@ Alias: tidsrom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
 | [Container](Container.md) | Rotklasse for DCAT-AP-NO-datafiler |  no  |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  no  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  yes  |
 
 
 
@@ -86,7 +86,7 @@ Alias: tidsrom
 <details>
 ```yaml
 name: tidsrom
-description: Tidsperiode ressursen dekker.
+description: Tidsperiode ressursen dekkar.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:temporal

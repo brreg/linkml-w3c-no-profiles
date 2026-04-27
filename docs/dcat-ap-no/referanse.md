@@ -18,15 +18,6 @@ Alias: referanse
 
 
 
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |  no  |
-
-
-
-
 
 
 ## Properties
@@ -36,7 +27,6 @@ Alias: referanse
 | Property | Value |
 | --- | --- |
 | Range | [Uri](Uri.md) |
-| Domain Of | [RegulativRessurs](RegulativRessurs.md) |
 | Slot URI | [rdfs:seeAlso](http://www.w3.org/2000/01/rdf-schema#seeAlso) |
 
 ### Cardinality and Requirements
@@ -88,8 +78,6 @@ from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: rdfs:seeAlso
 alias: referanse
-domain_of:
-- RegulativRessurs
 range: uri
 multivalued: true
 

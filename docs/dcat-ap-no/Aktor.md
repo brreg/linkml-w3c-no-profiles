@@ -3,7 +3,7 @@
 # Class: Aktor 
 
 
-_En aktør (person, organisasjon eller system) med ansvar for en ressurs._
+_Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs._
 
 
 
@@ -56,9 +56,9 @@ URI: [foaf:Agent](http://xmlns.com/foaf/0.1/Agent)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [navn_aktor](navn_aktor.md) | 1..* <br/> [LangString](LangString.md) | Navn på aktøren | direct |
-| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstlig identifikator for ressursen | direct |
-| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs fra et kontrollert vokabular | direct |
+| [navn_aktor](navn_aktor.md) | 1..* <br/> [LangString](LangString.md) | Namn på aktøren | direct |
+| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) | direct |
+| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs frå eit kontrollert vokabular (dct:type) | direct |
 
 
 
@@ -68,7 +68,7 @@ URI: [foaf:Agent](http://xmlns.com/foaf/0.1/Agent)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Container](Container.md) | [aktørar](aktørar.md) | range | [Aktor](Aktor.md) |
+| [Container](Container.md) | [aktorar](aktorar.md) | range | [Aktor](Aktor.md) |
 | [Datasett](Datasett.md) | [utgiver](utgiver.md) | range | [Aktor](Aktor.md) |
 | [Datasett](Datasett.md) | [produsent](produsent.md) | range | [Aktor](Aktor.md) |
 | [Datasettserie](Datasettserie.md) | [utgiver](utgiver.md) | range | [Aktor](Aktor.md) |
@@ -122,7 +122,7 @@ URI: [foaf:Agent](http://xmlns.com/foaf/0.1/Agent)
 <details>
 ```yaml
 name: Aktor
-description: En aktør (person, organisasjon eller system) med ansvar for en ressurs.
+description: Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -145,7 +145,7 @@ class_uri: foaf:Agent
 <details>
 ```yaml
 name: Aktor
-description: En aktør (person, organisasjon eller system) med ansvar for en ressurs.
+description: Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   navn_aktor:
@@ -163,10 +163,6 @@ attributes:
     alias: id
     owner: Aktor
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -186,11 +182,15 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   navn_aktor:
     name: navn_aktor
-    description: Navn på aktøren.
+    description: Namn på aktøren.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/dcat-ap-no
@@ -205,7 +205,7 @@ attributes:
     multivalued: true
   identifikator_literal:
     name: identifikator_literal
-    description: Tekstlig identifikator for ressursen.
+    description: Tekstleg identifikator for ressursen (dct:identifier).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:identifier
@@ -220,7 +220,7 @@ attributes:
     range: string
   type_concept:
     name: type_concept
-    description: Type ressurs fra et kontrollert vokabular.
+    description: Type ressurs frå eit kontrollert vokabular (dct:type).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:type

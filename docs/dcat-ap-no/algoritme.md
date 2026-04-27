@@ -3,7 +3,7 @@
 # Slot: algoritme 
 
 
-_Hashalgoritme brukt for sjekksummen._
+_Hash-algoritme brukt for sjekksummen._
 
 
 
@@ -22,7 +22,7 @@ Alias: algoritme
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sjekksum](Sjekksum.md) | En sjekksum for en distribusjon |  yes  |
+| [Sjekksum](Sjekksum.md) | Ein sjekksum for ein distribusjon |  yes  |
 
 
 
@@ -82,7 +82,7 @@ Alias: algoritme
 <details>
 ```yaml
 name: algoritme
-description: Hashalgoritme brukt for sjekksummen.
+description: Hash-algoritme brukt for sjekksummen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: spdx:algorithm

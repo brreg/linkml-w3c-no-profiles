@@ -3,7 +3,7 @@
 # Slot: navn_vcard 
 
 
-_Formatert navn (vCard)._
+_Formatert namn (vCard)._
 
 
 
@@ -22,7 +22,7 @@ Alias: navn_vcard
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for en aktør |  yes  |
+| [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for ein aktør |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: navn_vcard
 <details>
 ```yaml
 name: navn_vcard
-description: Formatert navn (vCard).
+description: Formatert namn (vCard).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: vcard:fn

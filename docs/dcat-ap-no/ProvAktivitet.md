@@ -3,7 +3,7 @@
 # Class: ProvAktivitet 
 
 
-_En PROV-aktivitet._
+_Ein PROV-aktivitet._
 
 
 
@@ -98,7 +98,7 @@ URI: [prov:Activity](http://www.w3.org/ns/prov#Activity)
 <details>
 ```yaml
 name: ProvAktivitet
-description: En PROV-aktivitet.
+description: Ein PROV-aktivitet.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -112,7 +112,7 @@ class_uri: prov:Activity
 <details>
 ```yaml
 name: ProvAktivitet
-description: En PROV-aktivitet.
+description: Ein PROV-aktivitet.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -124,10 +124,6 @@ attributes:
     alias: id
     owner: ProvAktivitet
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -147,6 +143,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: prov:Activity

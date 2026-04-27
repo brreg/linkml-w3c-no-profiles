@@ -3,7 +3,7 @@
 # Slot: versjonsmerknad 
 
 
-_Merknad om endringer i denne versjonen._
+_Merknad om endringar i denne versjonen._
 
 
 
@@ -22,8 +22,8 @@ Alias: versjonsmerknad
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | En samling operasjoner tilgjengeliggjort via et API-grensesnitt |  no  |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -84,7 +84,7 @@ Alias: versjonsmerknad
 <details>
 ```yaml
 name: versjonsmerknad
-description: Merknad om endringer i denne versjonen.
+description: Merknad om endringar i denne versjonen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: adms:versionNotes

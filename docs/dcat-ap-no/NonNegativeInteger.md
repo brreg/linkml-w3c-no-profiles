@@ -3,7 +3,7 @@
 
 
 
-_Ikke-negativ heltalsverdi (xsd:nonNegativeInteger)._
+_Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger)._
 
 
 

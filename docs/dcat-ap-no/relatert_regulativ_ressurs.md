@@ -22,7 +22,7 @@ Alias: relatert_regulativ_ressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [RegulativRessurs](RegulativRessurs.md) | En regulativ ressurs (lov, forskrift e |  no  |
+| [RegulativRessurs](RegulativRessurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
 
 
 

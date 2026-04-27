@@ -3,13 +3,13 @@
 # Slot: begynnelse 
 
 
-_Starttidspunkt for et tidsrom._
+_Starttidspunkt for eit tidsrom._
 
 
 
 
 
-URI: [time:hasBeginning](http://www.w3.org/2006/time#hasBeginning)
+URI: [time:hasBeginning](http://www.w3.org/6006/time#hasBeginning)
 Alias: begynnelse
 
 <!-- no inheritance hierarchy -->
@@ -22,7 +22,7 @@ Alias: begynnelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tidsrom](Tidsrom.md) | Et tidsintervall med start- og sluttdato |  no  |
+| [Tidsrom](Tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
 
 
 
@@ -37,7 +37,7 @@ Alias: begynnelse
 | --- | --- |
 | Range | [Tidsinstant](Tidsinstant.md) |
 | Domain Of | [Tidsrom](Tidsrom.md) |
-| Slot URI | [time:hasBeginning](http://www.w3.org/2006/time#hasBeginning) |
+| Slot URI | [time:hasBeginning](http://www.w3.org/6006/time#hasBeginning) |
 
 ### Cardinality and Requirements
 
@@ -82,7 +82,7 @@ Alias: begynnelse
 <details>
 ```yaml
 name: begynnelse
-description: Starttidspunkt for et tidsrom.
+description: Starttidspunkt for eit tidsrom.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: time:hasBeginning

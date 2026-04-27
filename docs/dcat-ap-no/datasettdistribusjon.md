@@ -3,7 +3,7 @@
 # Slot: datasettdistribusjon 
 
 
-_Tilgjengelige distribusjoner av datasettet._
+_Tilgjengelege distribusjonar av datasettet._
 
 
 
@@ -22,7 +22,7 @@ Alias: datasettdistribusjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  yes  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 
@@ -83,7 +83,7 @@ Alias: datasettdistribusjon
 <details>
 ```yaml
 name: datasettdistribusjon
-description: Tilgjengelige distribusjoner av datasettet.
+description: Tilgjengelege distribusjonar av datasettet.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:distribution

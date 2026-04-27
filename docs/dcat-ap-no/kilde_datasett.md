@@ -3,7 +3,7 @@
 # Slot: kilde_datasett 
 
 
-_Datasett som dette datasettet er avledet fra._
+_Datasett dette datasettet er avleidd frå._
 
 
 
@@ -22,7 +22,7 @@ Alias: kilde_datasett
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](Datasett.md) | En samling av data utgitt eller kuratert av én aktør |  no  |
+| [Datasett](Datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: kilde_datasett
 <details>
 ```yaml
 name: kilde_datasett
-description: Datasett som dette datasettet er avledet fra.
+description: Datasett dette datasettet er avleidd frå.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:source

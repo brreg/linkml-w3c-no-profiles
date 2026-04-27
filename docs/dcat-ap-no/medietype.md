@@ -3,7 +3,7 @@
 # Slot: medietype 
 
 
-_Medietype i henhold til IANA-registeret._
+_Medietype i samsvar med IANA-registeret._
 
 
 
@@ -22,7 +22,7 @@ Alias: medietype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](Distribusjon.md) | En spesifikk representasjon/nedlastbar form av et datasett |  no  |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: medietype
 <details>
 ```yaml
 name: medietype
-description: Medietype i henhold til IANA-registeret.
+description: Medietype i samsvar med IANA-registeret.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:mediaType

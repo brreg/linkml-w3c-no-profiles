@@ -3,7 +3,7 @@
 # Class: Rettighetserklaring 
 
 
-_En erklæring om rettigheter til en ressurs (ODRS)._
+_Ei erklæring om rettar til ein ressurs (ODRS)._
 
 
 
@@ -58,13 +58,13 @@ URI: [dct:RightsStatement](http://purl.org/dc/terms/RightsStatement)
 | ---  | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
 | [anvendelsesretningslinjer](anvendelsesretningslinjer.md) | 0..1 <br/> [String](String.md) | Retningslinjer for gjenbruk av data | direct |
-| [jurisdiksjon](jurisdiksjon.md) | 0..1 <br/> [String](String.md) | Jurisdiksjon for rettighetserklæringen | direct |
-| [krediteringstekst](krediteringstekst.md) | 0..1 <br/> [String](String.md) | Tekst som skal brukes ved kreditering | direct |
-| [krediteringsurl](krediteringsurl.md) | 0..1 <br/> [Uri](Uri.md) | URL for kreditering av rettighetshaver | direct |
+| [jurisdiksjon](jurisdiksjon.md) | 0..1 <br/> [String](String.md) | Jurisdiksjon for rettigheitserklæringa | direct |
+| [krediteringstekst](krediteringstekst.md) | 0..1 <br/> [String](String.md) | Tekst som skal brukast ved kreditering | direct |
+| [krediteringsurl](krediteringsurl.md) | 0..1 <br/> [Uri](Uri.md) | URL for kreditering av rettshavar | direct |
 | [opphavsrettserklaring](opphavsrettserklaring.md) | 0..1 <br/> [String](String.md) | Opphavsrettserklæring | direct |
-| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | 0..1 <br/> [String](String.md) | Navn på opphavsrettsinnehaver | direct |
+| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | 0..1 <br/> [String](String.md) | Namn på opphavsrettsinnehavar | direct |
 | [opphavsrettsnotis](opphavsrettsnotis.md) | 0..1 <br/> [String](String.md) | Opphavsrettsnotis | direct |
-| [opphavsrettsaar](opphavsrettsaar.md) | 0..1 <br/> [GYear](GYear.md) | Årstall for opphavsrett | direct |
+| [opphavsrettsaar](opphavsrettsaar.md) | 0..1 <br/> [GYear](GYear.md) | Årstal for opphavsrett | direct |
 
 
 
@@ -127,7 +127,7 @@ URI: [dct:RightsStatement](http://purl.org/dc/terms/RightsStatement)
 <details>
 ```yaml
 name: Rettighetserklaring
-description: En erklæring om rettigheter til en ressurs (ODRS).
+description: Ei erklæring om rettar til ein ressurs (ODRS).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -149,7 +149,7 @@ class_uri: dct:RightsStatement
 <details>
 ```yaml
 name: Rettighetserklaring
-description: En erklæring om rettigheter til en ressurs (ODRS).
+description: Ei erklæring om rettar til ein ressurs (ODRS).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -161,10 +161,6 @@ attributes:
     alias: id
     owner: Rettighetserklaring
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -184,6 +180,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
   anvendelsesretningslinjer:
@@ -199,7 +199,7 @@ attributes:
     range: string
   jurisdiksjon:
     name: jurisdiksjon
-    description: Jurisdiksjon for rettighetserklæringen.
+    description: Jurisdiksjon for rettigheitserklæringa.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: odrs:jurisdiction
@@ -210,7 +210,7 @@ attributes:
     range: string
   krediteringstekst:
     name: krediteringstekst
-    description: Tekst som skal brukes ved kreditering.
+    description: Tekst som skal brukast ved kreditering.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: odrs:attributionText
@@ -221,7 +221,7 @@ attributes:
     range: string
   krediteringsurl:
     name: krediteringsurl
-    description: URL for kreditering av rettighetshaver.
+    description: URL for kreditering av rettshavar.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: odrs:attributionURL
@@ -243,7 +243,7 @@ attributes:
     range: string
   opphavsrettsinnehaver:
     name: opphavsrettsinnehaver
-    description: Navn på opphavsrettsinnehaver.
+    description: Namn på opphavsrettsinnehavar.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: odrs:copyrightHolder
@@ -265,7 +265,7 @@ attributes:
     range: string
   opphavsrettsaar:
     name: opphavsrettsaar
-    description: Årstall for opphavsrett.
+    description: Årstal for opphavsrett.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: odrs:copyrightYear

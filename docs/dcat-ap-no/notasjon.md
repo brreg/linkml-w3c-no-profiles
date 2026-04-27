@@ -22,7 +22,7 @@ Alias: notasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Identifikator](Identifikator.md) | En alternativ identifikator for en ressurs |  yes  |
+| [Identifikator](Identifikator.md) | Ein alternativ identifikator for ein ressurs |  yes  |
 
 
 

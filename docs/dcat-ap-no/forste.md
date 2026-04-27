@@ -3,7 +3,7 @@
 # Slot: forste 
 
 
-_Første datasett i en datasettserie._
+_Første datasett i ei datasettserie._
 
 
 
@@ -22,7 +22,7 @@ Alias: forste
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasettserie](Datasettserie.md) | En serie av relaterte datasett publisert separat men med felles metadata |  no  |
+| [Datasettserie](Datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
 
 
 
@@ -82,7 +82,7 @@ Alias: forste
 <details>
 ```yaml
 name: forste
-description: Første datasett i en datasettserie.
+description: Første datasett i ei datasettserie.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:first

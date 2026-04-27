@@ -3,13 +3,13 @@
 # Slot: slutt 
 
 
-_Sluttidspunkt for et tidsrom._
+_Sluttidspunkt for eit tidsrom._
 
 
 
 
 
-URI: [time:hasEnd](http://www.w3.org/2006/time#hasEnd)
+URI: [time:hasEnd](http://www.w3.org/6006/time#hasEnd)
 Alias: slutt
 
 <!-- no inheritance hierarchy -->
@@ -22,7 +22,7 @@ Alias: slutt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tidsrom](Tidsrom.md) | Et tidsintervall med start- og sluttdato |  no  |
+| [Tidsrom](Tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
 
 
 
@@ -37,7 +37,7 @@ Alias: slutt
 | --- | --- |
 | Range | [Tidsinstant](Tidsinstant.md) |
 | Domain Of | [Tidsrom](Tidsrom.md) |
-| Slot URI | [time:hasEnd](http://www.w3.org/2006/time#hasEnd) |
+| Slot URI | [time:hasEnd](http://www.w3.org/6006/time#hasEnd) |
 
 ### Cardinality and Requirements
 
@@ -82,7 +82,7 @@ Alias: slutt
 <details>
 ```yaml
 name: slutt
-description: Sluttidspunkt for et tidsrom.
+description: Sluttidspunkt for eit tidsrom.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: time:hasEnd

@@ -3,7 +3,7 @@
 # Class: Begrepssamling 
 
 
-_En SKOS-begrepssamling (temavokabular)._
+_Ei SKOS-omgrepssamling (temavokabular)._
 
 
 
@@ -98,7 +98,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 <details>
 ```yaml
 name: Begrepssamling
-description: En SKOS-begrepssamling (temavokabular).
+description: Ei SKOS-omgrepssamling (temavokabular).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -112,7 +112,7 @@ class_uri: skos:ConceptScheme
 <details>
 ```yaml
 name: Begrepssamling
-description: En SKOS-begrepssamling (temavokabular).
+description: Ei SKOS-omgrepssamling (temavokabular).
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -124,10 +124,6 @@ attributes:
     alias: id
     owner: Begrepssamling
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -147,6 +143,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: skos:ConceptScheme

@@ -3,7 +3,7 @@
 # Slot: underkatalog 
 
 
-_Katalog som er en del av denne katalogen._
+_Katalog som er ein del av denne katalogen._
 
 
 
@@ -22,7 +22,7 @@ Alias: underkatalog
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Katalog](Katalog.md) | En kuratert samling av metadata om datasett, datatjenester og/eller andre kat... |  no  |
+| [Katalog](Katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
 
 
 
@@ -83,7 +83,7 @@ Alias: underkatalog
 <details>
 ```yaml
 name: underkatalog
-description: Katalog som er en del av denne katalogen.
+description: Katalog som er ein del av denne katalogen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dcat:catalog

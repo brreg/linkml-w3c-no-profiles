@@ -3,7 +3,7 @@
 # Class: KatalogisertRessurs 
 
 
-_Basisklasse for ressurser som kan katalogiseres._
+_Basisklasse for ressursar som kan katalogiserast._
 
 
 
@@ -114,7 +114,7 @@ URI: [dcat:Resource](http://www.w3.org/ns/dcat#Resource)
 <details>
 ```yaml
 name: KatalogisertRessurs
-description: Basisklasse for ressurser som kan katalogiseres.
+description: Basisklasse for ressursar som kan katalogiserast.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
@@ -128,7 +128,7 @@ class_uri: dcat:Resource
 <details>
 ```yaml
 name: KatalogisertRessurs
-description: Basisklasse for ressurser som kan katalogiseres.
+description: Basisklasse for ressursar som kan katalogiserast.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 attributes:
   id:
@@ -140,10 +140,6 @@ attributes:
     alias: id
     owner: KatalogisertRessurs
     domain_of:
-    - Begrep
-    - Begrepssamling
-    - Spraak
-    - Mediatype
     - Frekvens
     - ProvenanceStatement
     - OdrlPolicy
@@ -163,6 +159,10 @@ attributes:
     - Relasjon
     - Distribusjon
     - Katalogpost
+    - Spraak
+    - Mediatype
+    - Begrep
+    - Begrepssamling
     range: uriorcurie
     required: true
 class_uri: dcat:Resource

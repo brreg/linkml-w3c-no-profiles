@@ -55,7 +55,7 @@ convert-rdf:
 
 # Generer HTML-dokumentasjon
 docs:
-	$(foreach s,$(SCHEMAS),$(PODMAN) gen-doc -d docs/$(s) $(SCHEMA_DIR)/$(s)/$(s)-schema.yaml;)
+	$(foreach s,$(SCHEMAS),$(PODMAN) gen-doc --template-directory src/templates/docgen -d docs/$(s) $(SCHEMA_DIR)/$(s)/$(s)-schema.yaml;)
 
 clean:
 	rm -rf $(GEN_DIR) docs

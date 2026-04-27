@@ -144,20 +144,205 @@ URI: [https://data.norge.no/linkml/dqv-ap-no/Container](https://data.norge.no/li
 | Tree Root | Yes |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) |  | direct |
-| [kvalitetsdimensjonar](kvalitetsdimensjonar.md) | * <br/> [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |  | direct |
-| [kvalitetsdeldimensjonar](kvalitetsdeldimensjonar.md) | * <br/> [Kvalitetsdeldimensjon](Kvalitetsdeldimensjon.md) |  | direct |
-| [kvalitetsmaal](kvalitetsmaal.md) | * <br/> [Kvalitetsmaal](Kvalitetsmaal.md) |  | direct |
-| [kvalitetsmerknader](kvalitetsmerknader.md) | * <br/> [Kvalitetsmerknad](Kvalitetsmerknad.md) |  | direct |
-| [brukartilbakemeldingar](brukartilbakemeldingar.md) | * <br/> [Brukartilbakemelding](Brukartilbakemelding.md) |  | direct |
-| [kvalitetssertifikat](kvalitetssertifikat.md) | * <br/> [Kvalitetssertifikat](Kvalitetssertifikat.md) |  | direct |
-| [kvalitetsmaalingar](kvalitetsmaalingar.md) | * <br/> [Kvalitetsmaaling](Kvalitetsmaaling.md) |  | direct |
-| [standardar](standardar.md) | * <br/> [Standard](Standard.md) |  | direct |
-| [tekstdelar](tekstdelar.md) | * <br/> [Tekstdel](Tekstdel.md) |  | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) |  |
+| [kvalitetsdimensjonar](kvalitetsdimensjonar.md) | * <br/> [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |  |
+| [kvalitetsdeldimensjonar](kvalitetsdeldimensjonar.md) | * <br/> [Kvalitetsdeldimensjon](Kvalitetsdeldimensjon.md) |  |
+| [kvalitetsmaal](kvalitetsmaal.md) | * <br/> [Kvalitetsmaal](Kvalitetsmaal.md) |  |
+| [kvalitetsmerknader](kvalitetsmerknader.md) | * <br/> [Kvalitetsmerknad](Kvalitetsmerknad.md) |  |
+| [brukartilbakemeldingar](brukartilbakemeldingar.md) | * <br/> [Brukartilbakemelding](Brukartilbakemelding.md) |  |
+| [kvalitetssertifikat](kvalitetssertifikat.md) | * <br/> [Kvalitetssertifikat](Kvalitetssertifikat.md) |  |
+| [kvalitetsmaalingar](kvalitetsmaalingar.md) | * <br/> [Kvalitetsmaaling](Kvalitetsmaaling.md) |  |
+| [standardar](standardar.md) | * <br/> [Standard](Standard.md) |  |
+| [tekstdelar](tekstdelar.md) | * <br/> [Tekstdel](Tekstdel.md) |  |
+
+
+
 
 
 

@@ -58,12 +58,65 @@ URI: [dqvno:SubDimension](https://data.norge.no/vocabulary/dqvno#SubDimension)
 | Class URI | [dqvno:SubDimension](https://data.norge.no/vocabulary/dqvno#SubDimension) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [er_deldimensjon_av](er_deldimensjon_av.md) | 1 <br/> [Kvalitetsdimensjon](Kvalitetsdimensjon.md) | Overordna kvalitetsdimensjon denne deldimensjonen høyrer til | direct |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [er_deldimensjon_av](er_deldimensjon_av.md) | 1 <br/> [Kvalitetsdimensjon](Kvalitetsdimensjon.md) | Overordna kvalitetsdimensjon denne deldimensjonen høyrer til |
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+
+
+
+### Arva
+
+| Namn | Kardinalitet og domene | Beskriving | Frå |
+| --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |
 | [har_anbefalt_term](har_anbefalt_term.md) | * <br/> [LangString](LangString.md) | Føretrekt term/namn for dimensjonen eller målet | [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |
 | [har_definisjon](har_definisjon.md) | * <br/> [LangString](LangString.md) | Definisjon av dimensjonen eller målet | [Kvalitetsdimensjon](Kvalitetsdimensjon.md) |
 

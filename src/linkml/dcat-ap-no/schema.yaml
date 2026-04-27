@@ -1,0 +1,1225 @@
+id: https://data.norge.no/linkml/dcat-ap-no
+name: dcat-ap-no
+title: DCAT-AP-NO
+description: >-
+  Norsk applikasjonsprofil av DCAT-AP, modellert i LinkML med lenking framfor inlining.
+  Basert på https://informasjonsforvaltning.github.io/dcat-ap-no/
+
+version: "2.0"
+
+prefixes:
+  linkml:  https://w3id.org/linkml/
+  dcat:    http://www.w3.org/ns/dcat#
+  dct:     http://purl.org/dc/terms/
+  foaf:    http://xmlns.com/foaf/0.1/
+  skos:    http://www.w3.org/2004/02/skos/core#
+  vcard:   http://www.w3.org/2006/vcard/ns#
+  prov:    http://www.w3.org/ns/prov#
+  dcatap:  http://data.europa.eu/r5r/
+  eli:     http://data.europa.eu/eli/ontology#
+  adms:    http://www.w3.org/ns/adms#
+  odrl:    http://www.w3.org/ns/odrl/2/
+  spdx:    http://spdx.org/rdf/terms#
+  cv:      http://data.europa.eu/m8g/
+  odrs:    http://schema.theodi.org/odrs#
+  time:    http://www.w3.org/2006/time#
+  xsd:     http://www.w3.org/2001/XMLSchema#
+  rdfs:    http://www.w3.org/2000/01/rdf-schema#
+  rdf:     http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+default_prefix: https://data.norge.no/linkml/dcat-ap-no/
+default_range: string
+
+imports:
+  - linkml:types
+
+types:
+
+  LangString:
+    uri: rdf:langString
+    base: str
+    description: Språktagget streng (rdf:langString).
+
+  NonNegativeInteger:
+    uri: xsd:nonNegativeInteger
+    base: int
+    minimum_value: 0
+    description: Ikke-negativ heltalsverdi (xsd:nonNegativeInteger).
+
+  Duration:
+    uri: xsd:duration
+    base: str
+    description: ISO 8601-varigheit (xsd:duration), t.d. PT15M.
+
+  GYear:
+    uri: xsd:gYear
+    base: str
+    description: Gregorisk årstal (xsd:gYear), t.d. 2024.
+
+subsets:
+
+  Obligatorisk:
+    description: Obligatoriske egenskaper i DCAT-AP-NO.
+
+  Anbefalt:
+    description: Anbefalte egenskaper i DCAT-AP-NO.
+
+  Valgfri:
+    description: Valgfrie egenskaper i DCAT-AP-NO.
+
+# ---------------------------------------------------------------------------
+# Rotklasse (tree_root)
+# ---------------------------------------------------------------------------
+
+classes:
+
+  Container:
+    tree_root: true
+    description: >-
+      Rotklasse for DCAT-AP-NO-datafiler. Held flate lister av alle instansierbare
+      klassar; referansar mellom objekta brukar URI-lenking.
+    attributes:
+      katalogar:
+        range: Katalog
+        multivalued: true
+        inlined_as_list: true
+      datasett:
+        range: Datasett
+        multivalued: true
+        inlined_as_list: true
+      datasettprofil:
+        range: Datasettserie
+        multivalued: true
+        inlined_as_list: true
+      datatenestar:
+        range: Datatjeneste
+        multivalued: true
+        inlined_as_list: true
+      distribusjonar:
+        range: Distribusjon
+        multivalued: true
+        inlined_as_list: true
+      aktørar:
+        range: Aktor
+        multivalued: true
+        inlined_as_list: true
+      kontaktopplysningar:
+        range: Kontaktopplysning
+        multivalued: true
+        inlined_as_list: true
+      tidsrom:
+        range: Tidsrom
+        multivalued: true
+        inlined_as_list: true
+      standardar:
+        range: Standard
+        multivalued: true
+        inlined_as_list: true
+      regulativeRessursar:
+        range: RegulativRessurs
+        multivalued: true
+        inlined_as_list: true
+      rettigheitserklaringar:
+        range: Rettighetserklaring
+        multivalued: true
+        inlined_as_list: true
+      sjekksumar:
+        range: Sjekksum
+        multivalued: true
+        inlined_as_list: true
+      gebyr:
+        range: Gebyr
+        multivalued: true
+        inlined_as_list: true
+      relasjonar:
+        range: Relasjon
+        multivalued: true
+        inlined_as_list: true
+      identifikatorar:
+        range: Identifikator
+        multivalued: true
+        inlined_as_list: true
+      katalogpostar:
+        range: Katalogpost
+        multivalued: true
+        inlined_as_list: true
+
+# ---------------------------------------------------------------------------
+# Klasser
+# ---------------------------------------------------------------------------
+
+  # ---- Hjelpeklasser for refererte vokabularressurser ----------------------
+
+  Begrep:
+    class_uri: skos:Concept
+    description: Et SKOS-begrep fra et kontrollert vokabular.
+    slots:
+      - id
+
+  Begrepssamling:
+    class_uri: skos:ConceptScheme
+    description: En SKOS-begrepssamling (temavokabular).
+    slots:
+      - id
+
+  Spraak:
+    class_uri: dct:LinguisticSystem
+    description: En språkreferanse.
+    slots:
+      - id
+
+  Mediatype:
+    class_uri: dct:MediaTypeOrExtent
+    description: En medietype eller filformat.
+    slots:
+      - id
+
+  Frekvens:
+    class_uri: dct:Frequency
+    description: En oppdateringsfrekvens.
+    slots:
+      - id
+
+  ProvenanceStatement:
+    class_uri: dct:ProvenanceStatement
+    description: En provenienserklæring.
+    slots:
+      - id
+
+  OdrlPolicy:
+    class_uri: odrl:Policy
+    description: En ODRL-policy.
+    slots:
+      - id
+
+  ProvAktivitet:
+    class_uri: prov:Activity
+    description: En PROV-aktivitet.
+    slots:
+      - id
+
+  ProvAttributering:
+    class_uri: prov:Attribution
+    description: En kvalifisert PROV-attributering.
+    slots:
+      - id
+
+  Tidsinstant:
+    class_uri: time:Instant
+    description: Et tidspunkt (OWL Time).
+    slots:
+      - id
+
+  # ---- Hovedklasser --------------------------------------------------------
+
+  KatalogisertRessurs:
+    class_uri: dcat:Resource
+    description: Basisklasse for ressurser som kan katalogiseres.
+    slots:
+      - id
+
+  Aktor:
+    class_uri: foaf:Agent
+    description: En aktør (person, organisasjon eller system) med ansvar for en ressurs.
+    slots:
+      - id
+      - navn_aktor
+      - identifikator_literal
+      - type_concept
+    slot_usage:
+      navn_aktor:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  Kontaktopplysning:
+    class_uri: vcard:Kind
+    description: Kontaktinformasjon for en aktør.
+    slots:
+      - id
+      - navn_vcard
+      - har_epost
+      - har_kontaktside
+    slot_usage:
+      navn_vcard:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  Tidsrom:
+    class_uri: dct:PeriodOfTime
+    description: Et tidsintervall med start- og sluttdato.
+    slots:
+      - id
+      - startdato
+      - sluttdato
+      - begynnelse
+      - slutt
+
+  Standard:
+    class_uri: dct:Standard
+    description: En standard som en ressurs er i samsvar med.
+    slots:
+      - id
+      - tittel_literal
+      - har_referanse
+      - versjon
+    slot_usage:
+      tittel_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  RegulativRessurs:
+    class_uri: eli:LegalResource
+    description: En regulativ ressurs (lov, forskrift e.l.) som gjelder for en ressurs.
+    slots:
+      - id
+      - beskrivelse
+      - identifikator_literal
+      - referanse
+      - sprak
+      - tittel_literal
+      - type_concept
+      - relatert_regulativ_ressurs
+
+  Identifikator:
+    class_uri: adms:Identifier
+    description: En alternativ identifikator for en ressurs.
+    slots:
+      - id
+      - notasjon
+    slot_usage:
+      notasjon:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  Rettighetserklaring:
+    class_uri: dct:RightsStatement
+    description: En erklæring om rettigheter til en ressurs (ODRS).
+    slots:
+      - id
+      - anvendelsesretningslinjer
+      - jurisdiksjon
+      - krediteringstekst
+      - krediteringsurl
+      - opphavsrettserklaring
+      - opphavsrettsinnehaver
+      - opphavsrettsnotis
+      - opphavsrettsaar
+
+  Sjekksum:
+    class_uri: spdx:Checksum
+    description: En sjekksum for en distribusjon.
+    slots:
+      - id
+      - algoritme
+      - sjekksumverdi
+    slot_usage:
+      algoritme:
+        required: true
+        in_subset:
+          - Obligatorisk
+      sjekksumverdi:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  Gebyr:
+    class_uri: cv:Cost
+    description: Et gebyr knyttet til bruk av en datatjeneste.
+    slots:
+      - id
+      - belop
+      - beskrivelse
+      - dokumentasjon
+      - valuta
+
+  Relasjon:
+    class_uri: dcat:Relationship
+    description: En kvalifisert relasjon mellom to ressurser.
+    slots:
+      - id
+      - har_rolle
+      - relasjon_til
+    slot_usage:
+      har_rolle:
+        required: true
+        in_subset:
+          - Obligatorisk
+      relasjon_til:
+        required: true
+        in_subset:
+          - Obligatorisk
+
+  Distribusjon:
+    class_uri: dcat:Distribution
+    description: En spesifikk representasjon/nedlastbar form av et datasett.
+    slots:
+      - id
+      - tilgangs_url
+      - beskrivelse
+      - format
+      - lisens
+      - status
+      - tilgjengelighet
+      - dokumentasjon
+      - endringsdato
+      - filstorrelse
+      - gjeldende_lovgivning
+      - i_samsvar_med
+      - komprimeringsformat
+      - medietype
+      - nedlastningslenke
+      - pakkeformat
+      - policy
+      - rettigheter
+      - sjekksum
+      - sprak
+      - tidsopplosning
+      - tilgangstjeneste
+      - tittel
+      - utgivelsesdato
+    slot_usage:
+      tilgangs_url:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        in_subset:
+          - Anbefalt
+      format:
+        in_subset:
+          - Anbefalt
+      lisens:
+        in_subset:
+          - Anbefalt
+      status:
+        in_subset:
+          - Anbefalt
+      tilgjengelighet:
+        in_subset:
+          - Anbefalt
+
+  Datasett:
+    is_a: KatalogisertRessurs
+    class_uri: dcat:Dataset
+    description: En samling av data utgitt eller kuratert av én aktør.
+    slots:
+      - beskrivelse
+      - kontaktpunkt
+      - tema
+      - tittel
+      - utgiver
+      - begrep
+      - ble_generert_ved
+      - datasettdistribusjon
+      - dekningsomrade
+      - gjeldende_lovgivning
+      - nokkelord
+      - tidsrom
+      - tilgangsrettigheter
+      - annen_ansvarlig_aktor
+      - annen_identifikator
+      - annen_spesifikk_relasjon
+      - dokumentasjon
+      - eierskapshistorikk
+      - eksempeldata
+      - endringsdato
+      - identifikator_literal
+      - i_samsvar_med
+      - i_serie
+      - kilde_datasett
+      - landingsside
+      - produsent
+      - relatert_ressurs
+      - sprak
+      - type_concept
+      - utgivelsesdato
+      - versjon
+      - versjonsmerknad
+    slot_usage:
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tema:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      utgiver:
+        required: true
+        in_subset:
+          - Obligatorisk
+      begrep:
+        in_subset:
+          - Anbefalt
+      ble_generert_ved:
+        in_subset:
+          - Anbefalt
+      datasettdistribusjon:
+        in_subset:
+          - Anbefalt
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      gjeldende_lovgivning:
+        in_subset:
+          - Anbefalt
+      nokkelord:
+        in_subset:
+          - Anbefalt
+      tidsrom:
+        in_subset:
+          - Anbefalt
+      tilgangsrettigheter:
+        in_subset:
+          - Anbefalt
+
+  Datasettserie:
+    is_a: KatalogisertRessurs
+    class_uri: dcat:DatasetSeries
+    description: En serie av relaterte datasett publisert separat men med felles metadata.
+    slots:
+      - beskrivelse
+      - kontaktpunkt
+      - tema
+      - tittel
+      - utgiver
+      - dekningsomrade
+      - gjeldende_lovgivning
+      - siste
+      - tidsrom
+      - endringsdato
+      - frekvens
+      - forste
+      - utgivelsesdato
+    slot_usage:
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tema:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      utgiver:
+        required: true
+        in_subset:
+          - Obligatorisk
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      gjeldende_lovgivning:
+        in_subset:
+          - Anbefalt
+      siste:
+        in_subset:
+          - Anbefalt
+      tidsrom:
+        in_subset:
+          - Anbefalt
+
+  Datatjeneste:
+    is_a: KatalogisertRessurs
+    class_uri: dcat:DataService
+    description: En samling operasjoner tilgjengeliggjort via et API-grensesnitt.
+    slots:
+      - endepunkts_url
+      - kontaktpunkt
+      - tittel
+      - utgiver
+      - endepunktsbeskrivelse
+      - format
+      - gjeldende_lovgivning
+      - i_samsvar_med
+      - nokkelord
+      - tema
+      - tilgjengeliggjor_datasett
+      - tilgjengelighet
+      - beskrivelse
+      - dokumentasjon
+      - har_gebyr
+      - identifikator_literal
+      - landingsside
+      - lisens
+      - rettigheter
+      - status
+      - tilgangsrettigheter
+      - versjon
+      - versjonsmerknad
+    slot_usage:
+      endepunkts_url:
+        required: true
+        in_subset:
+          - Obligatorisk
+      kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      utgiver:
+        required: true
+        in_subset:
+          - Obligatorisk
+      endepunktsbeskrivelse:
+        in_subset:
+          - Anbefalt
+      format:
+        in_subset:
+          - Anbefalt
+      gjeldende_lovgivning:
+        in_subset:
+          - Anbefalt
+      i_samsvar_med:
+        in_subset:
+          - Anbefalt
+      nokkelord:
+        in_subset:
+          - Anbefalt
+      tema:
+        in_subset:
+          - Anbefalt
+      tilgjengeliggjor_datasett:
+        in_subset:
+          - Anbefalt
+      tilgjengelighet:
+        in_subset:
+          - Anbefalt
+
+  Katalogpost:
+    class_uri: dcat:CatalogRecord
+    description: En katalogpost som beskriver en ressurs i katalogen.
+    slots:
+      - id
+      - endringsdato
+      - primaertema
+      - i_samsvar_med
+      - status
+      - utgivelsesdato
+      - beskrivelse
+      - kilde_post
+      - sprak
+      - tittel
+    slot_usage:
+      endringsdato:
+        required: true
+        in_subset:
+          - Obligatorisk
+      primaertema:
+        required: true
+        in_subset:
+          - Obligatorisk
+      i_samsvar_med:
+        in_subset:
+          - Anbefalt
+      status:
+        in_subset:
+          - Anbefalt
+      utgivelsesdato:
+        in_subset:
+          - Anbefalt
+
+  Katalog:
+    is_a: KatalogisertRessurs
+    class_uri: dcat:Catalog
+    description: En kuratert samling av metadata om datasett, datatjenester og/eller andre kataloger.
+    slots:
+      - beskrivelse
+      - kontaktpunkt
+      - tittel
+      - utgiver
+      - datasett
+      - datatjeneste
+      - dekningsomrade
+      - endringsdato
+      - hjemmeside
+      - lisens
+      - sprak
+      - temaer
+      - utgivelsesdato
+      - gjeldende_lovgivning
+      - har_del
+      - identifikator_literal
+      - underkatalog
+      - katalogpost
+      - produsent
+      - rettigheter
+      - tidsrom
+    slot_usage:
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      utgiver:
+        required: true
+        in_subset:
+          - Obligatorisk
+      datasett:
+        in_subset:
+          - Anbefalt
+      datatjeneste:
+        in_subset:
+          - Anbefalt
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      endringsdato:
+        in_subset:
+          - Anbefalt
+      hjemmeside:
+        in_subset:
+          - Anbefalt
+      lisens:
+        in_subset:
+          - Anbefalt
+      sprak:
+        in_subset:
+          - Anbefalt
+      temaer:
+        in_subset:
+          - Anbefalt
+      utgivelsesdato:
+        in_subset:
+          - Anbefalt
+
+# ---------------------------------------------------------------------------
+# Slots
+# ---------------------------------------------------------------------------
+
+slots:
+
+  id:
+    identifier: true
+    range: uriorcurie
+    description: URI-identifikator for ressursen.
+
+  # ---- Tekst ---------------------------------------------------------------
+
+  beskrivelse:
+    slot_uri: dct:description
+    range: LangString
+    multivalued: true
+    description: Fritekstbeskrivelse av ressursen.
+
+  tittel:
+    slot_uri: dct:title
+    range: LangString
+    multivalued: true
+    description: Navn/tittel på ressursen.
+
+  tittel_literal:
+    slot_uri: dct:title
+    range: string
+    multivalued: true
+    description: Navn/tittel uten språktag.
+
+  nokkelord:
+    slot_uri: dcat:keyword
+    range: LangString
+    multivalued: true
+    description: Nøkkelord som beskriver ressursen.
+
+  identifikator_literal:
+    slot_uri: dct:identifier
+    range: string
+    description: Tekstlig identifikator for ressursen.
+
+  notasjon:
+    slot_uri: skos:notation
+    range: string
+    description: Notasjon/kode for identifikatoren.
+
+  versjon:
+    slot_uri: dcat:version
+    range: string
+    description: Versjonsnummer.
+
+  versjonsmerknad:
+    slot_uri: adms:versionNotes
+    range: LangString
+    multivalued: true
+    description: Merknad om endringer i denne versjonen.
+
+  navn_aktor:
+    slot_uri: foaf:name
+    range: LangString
+    multivalued: true
+    description: Navn på aktøren.
+
+  navn_vcard:
+    slot_uri: vcard:fn
+    range: LangString
+    multivalued: true
+    description: Formatert navn (vCard).
+
+  algoritme:
+    slot_uri: spdx:algorithm
+    range: string
+    description: Hashalgoritme brukt for sjekksummen.
+
+  sjekksumverdi:
+    slot_uri: spdx:checksumValue
+    range: string
+    description: Sjekksumverdi som heksadesimal streng.
+
+  belop:
+    slot_uri: cv:hasValue
+    range: string
+    description: Beløp for gebyret.
+
+  # ---- Datoer --------------------------------------------------------------
+
+  endringsdato:
+    slot_uri: dct:modified
+    range: date
+    description: Dato for siste endring av ressursen.
+
+  utgivelsesdato:
+    slot_uri: dct:issued
+    range: date
+    description: Dato ressursen ble første gang publisert.
+
+  startdato:
+    slot_uri: dcat:startDate
+    range: date
+    description: Startdato for tidsrommet.
+
+  sluttdato:
+    slot_uri: dcat:endDate
+    range: date
+    description: Sluttdato for tidsrommet.
+
+  tidsopplosning:
+    slot_uri: dcat:temporalResolution
+    range: Duration
+    description: Minste tidsoppløsning i datasettet.
+
+  # ---- URI-verdier ---------------------------------------------------------
+
+  endepunkts_url:
+    slot_uri: dcat:endpointURL
+    range: uri
+    multivalued: true
+    description: URL til datatjenestens endepunkt.
+
+  endepunktsbeskrivelse:
+    slot_uri: dcat:endpointDescription
+    range: uri
+    multivalued: true
+    description: URL til beskrivelse av endepunktet (f.eks. OpenAPI-dokument).
+
+  tilgangs_url:
+    slot_uri: dcat:accessURL
+    range: uri
+    multivalued: true
+    description: URL for tilgang til distribusjonen.
+
+  nedlastningslenke:
+    slot_uri: dcat:downloadURL
+    range: uri
+    multivalued: true
+    description: Direkte nedlastningslenke for distribusjonsfilen.
+
+  landingsside:
+    slot_uri: dcat:landingPage
+    range: uri
+    multivalued: true
+    description: Nettside med informasjon om ressursen.
+
+  hjemmeside:
+    slot_uri: foaf:homepage
+    range: uri
+    description: Katalogenes hjemmeside.
+
+  har_epost:
+    slot_uri: vcard:hasEmail
+    range: uri
+    description: E-postadresse til kontaktpunktet.
+
+  har_kontaktside:
+    slot_uri: vcard:hasURL
+    range: uri
+    description: Nettside for kontakt.
+
+  dokumentasjon:
+    slot_uri: foaf:page
+    range: uri
+    multivalued: true
+    description: Lenke til dokumentasjon om ressursen.
+
+  referanse:
+    slot_uri: rdfs:seeAlso
+    range: uri
+    multivalued: true
+    description: Referanse til ekstern ressurs.
+
+  har_referanse:
+    slot_uri: rdfs:seeAlso
+    range: uri
+    multivalued: true
+    description: Referanse til standarden.
+
+  relatert_ressurs:
+    slot_uri: dct:relation
+    range: uri
+    multivalued: true
+    description: Generisk relasjon til en annen ressurs.
+
+  kilde_post:
+    slot_uri: dct:source
+    range: uri
+    description: Kilde for katalogposten (ekstern oppføring).
+
+  krediteringsurl:
+    slot_uri: odrs:attributionURL
+    range: uri
+    description: URL for kreditering av rettighetshaver.
+
+  filstorrelse:
+    slot_uri: dcat:byteSize
+    range: NonNegativeInteger
+    description: Filstørrelse i bytes.
+
+  # ---- ODRS-strenger -------------------------------------------------------
+
+  anvendelsesretningslinjer:
+    slot_uri: odrs:reuserGuidelines
+    range: string
+    description: Retningslinjer for gjenbruk av data.
+
+  jurisdiksjon:
+    slot_uri: odrs:jurisdiction
+    range: string
+    description: Jurisdiksjon for rettighetserklæringen.
+
+  krediteringstekst:
+    slot_uri: odrs:attributionText
+    range: string
+    description: Tekst som skal brukes ved kreditering.
+
+  opphavsrettserklaring:
+    slot_uri: odrs:copyrightStatement
+    range: string
+    description: Opphavsrettserklæring.
+
+  opphavsrettsinnehaver:
+    slot_uri: odrs:copyrightHolder
+    range: string
+    description: Navn på opphavsrettsinnehaver.
+
+  opphavsrettsnotis:
+    slot_uri: odrs:copyrightNotice
+    range: string
+    description: Opphavsrettsnotis.
+
+  opphavsrettsaar:
+    slot_uri: odrs:copyrightYear
+    range: GYear
+    description: Årstall for opphavsrett.
+
+  # ---- Klasse-referanser ---------------------------------------------------
+
+  utgiver:
+    slot_uri: dct:publisher
+    range: Aktor
+    description: Aktøren som er ansvarlig for å tilgjengeliggjøre ressursen.
+
+  produsent:
+    slot_uri: dct:creator
+    range: Aktor
+    description: Aktøren som primært har skapt ressursen.
+
+  kontaktpunkt:
+    slot_uri: dcat:contactPoint
+    range: Kontaktopplysning
+    multivalued: true
+    description: Kontaktinformasjon for henvendelser om ressursen.
+
+  tema:
+    slot_uri: dcat:theme
+    range: Begrep
+    multivalued: true
+    description: Tema fra et kontrollert vokabular.
+
+  temaer:
+    slot_uri: dcat:themeTaxonomy
+    range: Begrepssamling
+    multivalued: true
+    description: Temavokabular som brukes i katalogen.
+
+  begrep:
+    slot_uri: dct:subject
+    range: Begrep
+    multivalued: true
+    description: Fagbegrep som datasettet handler om.
+
+  dekningsomrade:
+    slot_uri: dct:spatial
+    range: Begrep
+    multivalued: true
+    description: Geografisk dekningsområde.
+
+  sprak:
+    slot_uri: dct:language
+    range: Spraak
+    multivalued: true
+    description: Språk brukt i ressursen.
+
+  format:
+    slot_uri: dct:format
+    range: Mediatype
+    description: Filformat eller medietype.
+
+  medietype:
+    slot_uri: dcat:mediaType
+    range: Mediatype
+    description: Medietype i henhold til IANA-registeret.
+
+  komprimeringsformat:
+    slot_uri: dcat:compressFormat
+    range: Mediatype
+    description: Komprimeringsformat brukt i distribusjonen.
+
+  pakkeformat:
+    slot_uri: dcat:packageFormat
+    range: Mediatype
+    description: Pakkeformat brukt i distribusjonen.
+
+  frekvens:
+    slot_uri: dct:accrualPeriodicity
+    range: Frekvens
+    description: Oppdateringsfrekvens for datasettet.
+
+  status:
+    slot_uri: adms:status
+    range: Begrep
+    description: Status for ressursen fra et kontrollert vokabular.
+
+  tilgjengelighet:
+    slot_uri: dcatap:availability
+    range: Begrep
+    description: Planlagt tilgjengelighet for ressursen.
+
+  type_concept:
+    slot_uri: dct:type
+    range: Begrep
+    description: Type ressurs fra et kontrollert vokabular.
+
+  valuta:
+    slot_uri: cv:currency
+    range: Begrep
+    description: Valuta for gebyret.
+
+  har_rolle:
+    slot_uri: dcat:hadRole
+    range: Begrep
+    description: Rolle en aktør eller ressurs har i en relasjon.
+
+  lisens:
+    slot_uri: dct:license
+    range: Begrep
+    description: Lisens for bruk av ressursen.
+
+  gjeldende_lovgivning:
+    slot_uri: dcatap:applicableLegislation
+    range: RegulativRessurs
+    multivalued: true
+    description: Lovgivning som gjelder for ressursen.
+
+  tidsrom:
+    slot_uri: dct:temporal
+    range: Tidsrom
+    multivalued: true
+    description: Tidsperiode ressursen dekker.
+
+  tilgangsrettigheter:
+    slot_uri: dct:accessRights
+    range: Rettighetserklaring
+    description: Tilgangsrettigheter for ressursen.
+
+  rettigheter:
+    slot_uri: dct:rights
+    range: Rettighetserklaring
+    description: Rettigheter knyttet til ressursen.
+
+  i_samsvar_med:
+    slot_uri: dct:conformsTo
+    range: Standard
+    multivalued: true
+    description: Standard ressursen er i samsvar med.
+
+  sjekksum:
+    slot_uri: spdx:checksum
+    range: Sjekksum
+    description: Sjekksum for distribusjonsfilen.
+
+  policy:
+    slot_uri: odrl:hasPolicy
+    range: OdrlPolicy
+    description: ODRL-policy som regulerer bruk av ressursen.
+
+  eierskapshistorikk:
+    slot_uri: dct:provenance
+    range: ProvenanceStatement
+    multivalued: true
+    description: Opprinnelse og eierskapshistorikk for ressursen.
+
+  ble_generert_ved:
+    slot_uri: prov:wasGeneratedBy
+    range: ProvAktivitet
+    description: Aktiviteten som genererte datasettet.
+
+  annen_ansvarlig_aktor:
+    slot_uri: prov:qualifiedAttribution
+    range: ProvAttributering
+    multivalued: true
+    description: Kvalifisert attributering til ansvarlig aktør.
+
+  annen_identifikator:
+    slot_uri: adms:identifier
+    range: Identifikator
+    multivalued: true
+    description: Alternativ identifikator fra et annet system.
+
+  annen_spesifikk_relasjon:
+    slot_uri: dcat:qualifiedRelation
+    range: Relasjon
+    multivalued: true
+    description: Kvalifisert relasjon til en annen ressurs.
+
+  relasjon_til:
+    slot_uri: dct:relation
+    range: uri
+    description: Den relaterte ressursen i en kvalifisert relasjon.
+
+  primaertema:
+    slot_uri: foaf:primaryTopic
+    range: KatalogisertRessurs
+    description: Ressursen som katalogposten primært beskriver.
+
+  datasettdistribusjon:
+    slot_uri: dcat:distribution
+    range: Distribusjon
+    multivalued: true
+    description: Tilgjengelige distribusjoner av datasettet.
+
+  eksempeldata:
+    slot_uri: adms:sample
+    range: Distribusjon
+    multivalued: true
+    description: Eksempeldata som distribusjon.
+
+  tilgangstjeneste:
+    slot_uri: dcat:accessService
+    range: Datatjeneste
+    multivalued: true
+    description: Datatjeneste som gir tilgang til distribusjonen.
+
+  tilgjengeliggjor_datasett:
+    slot_uri: dcat:servesDataset
+    range: Datasett
+    multivalued: true
+    description: Datasett som datatjenesten tilgjengeliggjør.
+
+  har_gebyr:
+    slot_uri: cv:hasCost
+    range: Gebyr
+    multivalued: true
+    description: Gebyr knyttet til bruk av datatjenesten.
+
+  kilde_datasett:
+    slot_uri: dct:source
+    range: Datasett
+    multivalued: true
+    description: Datasett som dette datasettet er avledet fra.
+
+  i_serie:
+    slot_uri: dcat:inSeries
+    range: Datasettserie
+    multivalued: true
+    description: Datasettserie dette datasettet er en del av.
+
+  siste:
+    slot_uri: dcat:last
+    range: Datasett
+    description: Siste datasett i en datasettserie.
+
+  forste:
+    slot_uri: dcat:first
+    range: Datasett
+    description: Første datasett i en datasettserie.
+
+  relatert_regulativ_ressurs:
+    slot_uri: dct:relation
+    range: RegulativRessurs
+    multivalued: true
+    description: Relatert regulativ ressurs.
+
+  datasett:
+    slot_uri: dcat:dataset
+    range: Datasett
+    multivalued: true
+    description: Datasett som er del av katalogen.
+
+  datatjeneste:
+    slot_uri: dcat:service
+    range: Datatjeneste
+    multivalued: true
+    description: Datatjeneste som er del av katalogen.
+
+  har_del:
+    slot_uri: dct:hasPart
+    range: Katalog
+    multivalued: true
+    description: Delkatalog inkludert i denne katalogen.
+
+  underkatalog:
+    slot_uri: dcat:catalog
+    range: Katalog
+    multivalued: true
+    description: Katalog som er en del av denne katalogen.
+
+  katalogpost:
+    slot_uri: dcat:record
+    range: Katalogpost
+    multivalued: true
+    description: Katalogposter i katalogen.
+
+  begynnelse:
+    slot_uri: time:hasBeginning
+    range: Tidsinstant
+    description: Starttidspunkt for et tidsrom.
+
+  slutt:
+    slot_uri: time:hasEnd
+    range: Tidsinstant
+    description: Sluttidspunkt for et tidsrom.

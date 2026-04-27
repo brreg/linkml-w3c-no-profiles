@@ -7,7 +7,7 @@ SCHEMA_DIR="src/linkml"
 PASS=0
 FAIL=0
 
-for schema in "$SCHEMA_DIR"/*/schema.yaml; do
+for schema in "$SCHEMA_DIR"/*/*-schema.yaml; do
   echo -n "Lint $schema ... "
   if eval "$PODMAN linkml lint --ignore-warnings $schema" > /dev/null 2>&1; then
     echo "OK"
@@ -21,7 +21,7 @@ done
 
 for example in examples/*/eksempel-*.yaml; do
   profil=$(echo "$example" | cut -d/ -f2)
-  schema="$SCHEMA_DIR/$profil/schema.yaml"
+  schema="$SCHEMA_DIR/$profil/$profil-schema.yaml"
   class=$(grep -m1 '^id:' "$example" | sed 's|.*||' || echo "")
   echo -n "Valider $example ... "
   if eval "$PODMAN linkml validate --schema $schema $example" > /dev/null 2>&1; then

@@ -7,7 +7,11 @@ description: >-
 
 prefixes:
   linkml:  https://w3id.org/linkml/
+  adms:    http://www.w3.org/ns/adms#
+  cv:      http://data.europa.eu/m8g/
+  dcat:    http://www.w3.org/ns/dcat#
   dct:     http://purl.org/dc/terms/
+  foaf:    http://xmlns.com/foaf/0.1/
   skos:    http://www.w3.org/2004/02/skos/core#
   rdfs:    http://www.w3.org/2000/01/rdf-schema#
   xsd:     http://www.w3.org/2001/XMLSchema#
@@ -162,3 +166,31 @@ slots:
     slot_uri: owl:versionInfo
     range: string
     description: Versjonsnummer for ressursen (owl:versionInfo).
+
+  nokkelord:
+    slot_uri: dcat:keyword
+    range: LangString
+    multivalued: true
+    description: Nøkkelord som beskriv ressursen (dcat:keyword).
+
+  dekningsomrade:
+    slot_uri: dct:spatial
+    range: Begrep
+    multivalued: true
+    description: Geografisk dekningsområde (dct:spatial).
+
+  status:
+    slot_uri: adms:status
+    range: Begrep
+    description: Status for ressursen frå eit kontrollert vokabular (adms:status).
+
+  valuta:
+    slot_uri: cv:currency
+    range: Begrep
+    description: Valuta (cv:currency).
+
+  heimeside:
+    slot_uri: foaf:homepage
+    range: uri
+    multivalued: true
+    description: Heimeside for ressursen eller organisasjonen (foaf:homepage).

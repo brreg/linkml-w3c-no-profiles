@@ -596,7 +596,7 @@ classes:
       - datatjeneste
       - dekningsomrade
       - endringsdato
-      - hjemmeside
+      - heimeside
       - lisens
       - sprak
       - temaer
@@ -638,7 +638,7 @@ classes:
       endringsdato:
         in_subset:
           - Anbefalt
-      hjemmeside:
+      heimeside:
         in_subset:
           - Anbefalt
       lisens:
@@ -667,12 +667,6 @@ slots:
     range: string
     multivalued: true
     description: Namn/tittel utan språktag.
-
-  nokkelord:
-    slot_uri: dcat:keyword
-    range: LangString
-    multivalued: true
-    description: Nøkkelord som beskriv ressursen.
 
   notasjon:
     slot_uri: skos:notation
@@ -765,11 +759,6 @@ slots:
     range: uri
     multivalued: true
     description: Nettside med informasjon om ressursen.
-
-  hjemmeside:
-    slot_uri: foaf:homepage
-    range: uri
-    description: Heimeside for katalogen.
 
   har_epost:
     slot_uri: vcard:hasEmail
@@ -887,12 +876,6 @@ slots:
     multivalued: true
     description: Fagomgrep som datasettet handlar om.
 
-  dekningsomrade:
-    slot_uri: dct:spatial
-    range: Begrep
-    multivalued: true
-    description: Geografisk dekningsområde.
-
   medietype:
     slot_uri: dcat:mediaType
     range: Mediatype
@@ -912,11 +895,6 @@ slots:
     slot_uri: dct:accrualPeriodicity
     range: Frekvens
     description: Oppdateringsfrekvens for datasettet.
-
-  status:
-    slot_uri: adms:status
-    range: Begrep
-    description: Status for ressursen frå eit kontrollert vokabular.
 
   tilgjengelighet:
     slot_uri: dcatap:availability
@@ -1108,7 +1086,3 @@ slots:
     range: Tidsinstant
     description: Sluttidspunkt for eit tidsrom.
 
-  valuta:
-    slot_uri: cv:currency
-    range: Begrep
-    description: Valuta for gebyret.

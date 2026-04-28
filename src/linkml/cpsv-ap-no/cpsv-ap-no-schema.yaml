@@ -1003,11 +1003,6 @@ slots:
     multivalued: true
     description: Lovpålagd teneste denne offentlege tenesta realiserer.
 
-  status:
-    slot_uri: adms:status
-    range: Begrep
-    description: Status for tenesta frå eit kontrollert vokabular.
-
   behandlingstid:
     slot_uri: cv:processingTime
     range: Duration
@@ -1090,23 +1085,11 @@ slots:
     multivalued: true
     description: Målgruppe for tenesta.
 
-  nokkelord:
-    slot_uri: dcat:keyword
-    range: LangString
-    multivalued: true
-    description: Nøkkelord for tenesta.
-
   sektor:
     slot_uri: cv:sector
     range: Begrep
     multivalued: true
     description: Industri/sektor tenesta tilhøyrer.
-
-  dekningsomrade:
-    slot_uri: dct:spatial
-    range: Begrep
-    multivalued: true
-    description: Geografisk dekningsområde.
 
   tema:
     slot_uri: dct:subject
@@ -1125,12 +1108,6 @@ slots:
     range: Dokumentasjonstype
     multivalued: true
     description: Dokumentasjon som krevst for tenesta.
-
-  heimeside:
-    slot_uri: foaf:homepage
-    range: uri
-    multivalued: true
-    description: Heimeside for tenesta eller organisasjonen.
 
   eigd_av:
     slot_uri: cv:ownedBy
@@ -1255,11 +1232,6 @@ slots:
     slot_uri: cv:value
     range: float
     description: Verdien av gebyret.
-
-  valuta:
-    slot_uri: cv:currency
-    range: Begrep
-    description: Valutaen gebyret er oppgjeve i.
 
   full_adresse:
     slot_uri: locn:fullAddress

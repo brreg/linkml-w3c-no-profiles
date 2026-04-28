@@ -24,39 +24,10 @@ imports:
   - ../common/common-ap-no-schema
 
 # ---------------------------------------------------------------------------
-# Toppnivå-behaldrar (tree_root)
+# Klasser
 # ---------------------------------------------------------------------------
 
 classes:
-
-  XkosApNoDataset:
-    tree_root: true
-    description: Toppnivå-behaldrar for XKOS-AP-NO-data.
-    attributes:
-      klassifikasjonar:
-        range: Klassifikasjon
-        multivalued: true
-        inlined_as_list: true
-      klassifikasjonsnivaar:
-        range: Klassifikasjonsnivaa
-        multivalued: true
-        inlined_as_list: true
-      kategoriar:
-        range: Kategori
-        multivalued: true
-        inlined_as_list: true
-      klassifikasjonssamanlikningar:
-        range: Klassifikasjonssamanlikning
-        multivalued: true
-        inlined_as_list: true
-      kategorisamanlikningar:
-        range: Kategorisamanlikning
-        multivalued: true
-        inlined_as_list: true
-      organisasjonar:
-        range: Organisasjon
-        multivalued: true
-        inlined_as_list: true
 
   # -------------------------------------------------------------------------
   # Klassifikasjon  (skos:ConceptScheme)

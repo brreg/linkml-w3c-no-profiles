@@ -4,9 +4,11 @@ set -euo pipefail
 IMAGE="docker.io/linkml/linkml:latest"
 PODMAN="podman run --rm -v \"$(pwd):/work\" -w /work -e PYTHONWARNINGS=ignore $IMAGE"
 SCHEMA_DIR="src/linkml"
+FIXTURE_DIR="tests/fixtures"
 PASS=0
 FAIL=0
 
+# Lint AP-NO-profilskjema (utan Container – reine profildefinisjonar)
 for schema in "$SCHEMA_DIR"/*/*-schema.yaml; do
   echo -n "Lint $schema ... "
   if eval "$PODMAN linkml lint --ignore-warnings $schema" > /dev/null 2>&1; then
@@ -19,17 +21,17 @@ for schema in "$SCHEMA_DIR"/*/*-schema.yaml; do
   fi
 done
 
+# Valider eksempeldata mot fixture-skjema (fixture legg til Container/tree_root)
 for example in examples/*-eksempel.yaml; do
   profil=$(basename "$example" .yaml | sed 's/-eksempel$//')
-  schema="$SCHEMA_DIR/$profil/$profil-schema.yaml"
-  class=$(grep -m1 '^id:' "$example" | sed 's|.*||' || echo "")
+  fixture="$FIXTURE_DIR/$profil-fixture.yaml"
   echo -n "Valider $example ... "
-  if eval "$PODMAN linkml validate --schema $schema $example" > /dev/null 2>&1; then
+  if eval "$PODMAN linkml validate --schema $fixture $example" > /dev/null 2>&1; then
     echo "OK"
     PASS=$((PASS + 1))
   else
     echo "FEIL"
-    eval "$PODMAN linkml validate --schema $schema $example" || true
+    eval "$PODMAN linkml validate --schema $fixture $example" || true
     FAIL=$((FAIL + 1))
   fi
 done

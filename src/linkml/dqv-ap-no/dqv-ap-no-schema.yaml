@@ -28,61 +28,10 @@ imports:
   - ../common/common-ap-no-schema
 
 # ---------------------------------------------------------------------------
-# Rotklasse (tree_root)
+# Klasser
 # ---------------------------------------------------------------------------
 
 classes:
-
-  Container:
-    tree_root: true
-    description: >-
-      Rotklasse for DQV-AP-NO-datafiler. Held flate lister av alle instansierbare
-      klassar; referansar mellom objekta brukar URI-lenking.
-    attributes:
-      datasett:
-        range: Datasett
-        multivalued: true
-        inlined_as_list: true
-      kvalitetsdimensjonar:
-        range: Kvalitetsdimensjon
-        multivalued: true
-        inlined_as_list: true
-      kvalitetsdeldimensjonar:
-        range: Kvalitetsdeldimensjon
-        multivalued: true
-        inlined_as_list: true
-      kvalitetsmaal:
-        range: Kvalitetsmaal
-        multivalued: true
-        inlined_as_list: true
-      kvalitetsmerknader:
-        range: Kvalitetsmerknad
-        multivalued: true
-        inlined_as_list: true
-      brukartilbakemeldingar:
-        range: Brukartilbakemelding
-        multivalued: true
-        inlined_as_list: true
-      kvalitetssertifikat:
-        range: Kvalitetssertifikat
-        multivalued: true
-        inlined_as_list: true
-      kvalitetsmaalingar:
-        range: Kvalitetsmaaling
-        multivalued: true
-        inlined_as_list: true
-      standardar:
-        range: Standard
-        multivalued: true
-        inlined_as_list: true
-      tekstdelar:
-        range: Tekstdel
-        multivalued: true
-        inlined_as_list: true
-
-# ---------------------------------------------------------------------------
-# Klasser
-# ---------------------------------------------------------------------------
 
   # ---- Hjelpeklassar -------------------------------------------------------
 

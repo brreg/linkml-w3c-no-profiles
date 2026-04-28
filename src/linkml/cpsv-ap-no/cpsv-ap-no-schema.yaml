@@ -37,97 +37,10 @@ imports:
   - ../common/common-ap-no-schema
 
 # ---------------------------------------------------------------------------
-# Rotklasse (tree_root)
+# Klasser
 # ---------------------------------------------------------------------------
 
 classes:
-
-  Container:
-    tree_root: true
-    description: >-
-      Rotklasse for CPSV-AP-NO-datafiler. Held flate lister av alle instansierbare
-      klassar; referansar mellom objekta brukar URI-lenking.
-    attributes:
-      katalogar:
-        range: Katalog
-        multivalued: true
-        inlined_as_list: true
-      lovpalagdeTenestar:
-        range: LovpalagtTjeneste
-        multivalued: true
-        inlined_as_list: true
-      offentligeTenestar:
-        range: OffentligTjeneste
-        multivalued: true
-        inlined_as_list: true
-      tenestar:
-        range: Tjeneste
-        multivalued: true
-        inlined_as_list: true
-      hendingar:
-        range: Hendelse
-        multivalued: true
-        inlined_as_list: true
-      livshendingar:
-        range: Livshendelse
-        multivalued: true
-        inlined_as_list: true
-      verksemdhendingar:
-        range: Virksomhetshendelse
-        multivalued: true
-        inlined_as_list: true
-      aktørar:
-        range: Aktør
-        multivalued: true
-        inlined_as_list: true
-      offentligeOrganisasjonar:
-        range: OffentligOrganisasjon
-        multivalued: true
-        inlined_as_list: true
-      kontaktpunkt:
-        range: Kontaktpunkt
-        multivalued: true
-        inlined_as_list: true
-      tenestekanalar:
-        range: Tjenestekanal
-        multivalued: true
-        inlined_as_list: true
-      dokumentasjonstypar:
-        range: Dokumentasjonstype
-        multivalued: true
-        inlined_as_list: true
-      tenesteresultattypar:
-        range: Tjenesteresultattype
-        multivalued: true
-        inlined_as_list: true
-      tenesteresultattypleister:
-        range: Tjenesteresultattypeliste
-        multivalued: true
-        inlined_as_list: true
-      gebyr:
-        range: Gebyr
-        multivalued: true
-        inlined_as_list: true
-      reglar:
-        range: Regel
-        multivalued: true
-        inlined_as_list: true
-      regulativeRessursar:
-        range: RegulativRessurs
-        multivalued: true
-        inlined_as_list: true
-      deltakarar:
-        range: Deltagelse
-        multivalued: true
-        inlined_as_list: true
-      adressar:
-        range: Adresse
-        multivalued: true
-        inlined_as_list: true
-
-# ---------------------------------------------------------------------------
-# Klasser
-# ---------------------------------------------------------------------------
 
   # ---- Lovpålagt tjeneste -------------------------------------------------
 

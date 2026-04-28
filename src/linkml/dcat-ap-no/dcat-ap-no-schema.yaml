@@ -35,85 +35,10 @@ imports:
   - ../common/common-ap-no-schema
 
 # ---------------------------------------------------------------------------
-# Rotklasse (tree_root)
+# Klasser
 # ---------------------------------------------------------------------------
 
 classes:
-
-  Container:
-    tree_root: true
-    description: >-
-      Rotklasse for DCAT-AP-NO-datafiler. Held flate lister av alle instansierbare
-      klassar; referansar mellom objekta brukar URI-lenking.
-    attributes:
-      katalogar:
-        range: Katalog
-        multivalued: true
-        inlined_as_list: true
-      datasett:
-        range: Datasett
-        multivalued: true
-        inlined_as_list: true
-      datasettprofil:
-        range: Datasettserie
-        multivalued: true
-        inlined_as_list: true
-      datatenestar:
-        range: Datatjeneste
-        multivalued: true
-        inlined_as_list: true
-      distribusjonar:
-        range: Distribusjon
-        multivalued: true
-        inlined_as_list: true
-      aktorar:
-        range: Aktor
-        multivalued: true
-        inlined_as_list: true
-      kontaktopplysningar:
-        range: Kontaktopplysning
-        multivalued: true
-        inlined_as_list: true
-      tidsrom:
-        range: Tidsrom
-        multivalued: true
-        inlined_as_list: true
-      standardar:
-        range: Standard
-        multivalued: true
-        inlined_as_list: true
-      regulativeRessursar:
-        range: RegulativRessurs
-        multivalued: true
-        inlined_as_list: true
-      rettigheitserklaringar:
-        range: Rettighetserklaring
-        multivalued: true
-        inlined_as_list: true
-      sjekksumar:
-        range: Sjekksum
-        multivalued: true
-        inlined_as_list: true
-      gebyr:
-        range: Gebyr
-        multivalued: true
-        inlined_as_list: true
-      relasjonar:
-        range: Relasjon
-        multivalued: true
-        inlined_as_list: true
-      identifikatorar:
-        range: Identifikator
-        multivalued: true
-        inlined_as_list: true
-      katalogpostar:
-        range: Katalogpost
-        multivalued: true
-        inlined_as_list: true
-
-# ---------------------------------------------------------------------------
-# Klasser
-# ---------------------------------------------------------------------------
 
   # ---- Hjelpeklassar for refererte vokabularressursar ----------------------
 

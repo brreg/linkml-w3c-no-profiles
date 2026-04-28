@@ -46,7 +46,7 @@ convert-rdf:
 		profil=$$(echo "$$name" | sed 's/-eksempel$$//'); \
 		mkdir -p $(GEN_DIR)/$$profil; \
 		$(PODMAN) linkml-convert \
-			--schema $(SCHEMA_DIR)/$$profil/$$profil-schema.yaml \
+			--schema tests/fixtures/$$profil-fixture.yaml \
 			--output-format ttl \
 			--no-validate \
 			--output $(GEN_DIR)/$$profil/$$name.ttl \

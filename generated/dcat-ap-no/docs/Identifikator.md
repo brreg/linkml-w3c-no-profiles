@@ -38,12 +38,83 @@ URI: [adms:Identifier](http://www.w3.org/ns/adms#Identifier)
 | Class URI | [adms:Identifier](http://www.w3.org/ns/adms#Identifier) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [notasjon](notasjon.md) | 1 <br/> [String](String.md) | Notasjon/kode for identifikatoren | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [notasjon](notasjon.md) | 1 <br/> [String](String.md) | Notasjon/kode for identifikatoren |
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+
+
+
 
 
 

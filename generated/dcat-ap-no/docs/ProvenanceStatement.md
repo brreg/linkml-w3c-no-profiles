@@ -36,11 +36,52 @@ URI: [dct:ProvenanceStatement](http://purl.org/dc/terms/ProvenanceStatement)
 | Class URI | [dct:ProvenanceStatement](http://purl.org/dc/terms/ProvenanceStatement) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+
+
+
 
 
 

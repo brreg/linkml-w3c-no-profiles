@@ -49,13 +49,108 @@ URI: [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship)
 | Class URI | [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [har_rolle](har_rolle.md) | 1 <br/> [Begrep](Begrep.md) | Rolle ein aktør eller ressurs har i ein relasjon | direct |
-| [relasjon_til](relasjon_til.md) | 1 <br/> [Uri](Uri.md) | Den relaterte ressursen i ein kvalifisert relasjon | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [har_rolle](har_rolle.md) | 1 <br/> [Begrep](Begrep.md) | Rolle ein aktør eller ressurs har i ein relasjon |
+| [relasjon_til](relasjon_til.md) | 1 <br/> [Uri](Uri.md) | Den relaterte ressursen i ein kvalifisert relasjon |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+
+
+
 
 
 

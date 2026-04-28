@@ -77,18 +77,171 @@ URI: [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource)
 | Class URI | [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [beskrivelse](beskrivelse.md) | * <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) | direct |
-| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) | direct |
-| [har_referanse](har_referanse.md) | * <br/> [Uri](Uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) | direct |
-| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) | direct |
-| [tittel](tittel.md) | * <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
-| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs frå eit kontrollert vokabular (dct:type) | direct |
-| [relatert_regulativ_ressurs](relatert_regulativ_ressurs.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Relatert regulativ ressurs | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+| [beskrivelse](beskrivelse.md) | * <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) |
+| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) |
+| [har_referanse](har_referanse.md) | * <br/> [Uri](Uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
+| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) |
+| [tittel](tittel.md) | * <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) |
+| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
+| [relatert_regulativ_ressurs](relatert_regulativ_ressurs.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Relatert regulativ ressurs |
+
+
+
 
 
 

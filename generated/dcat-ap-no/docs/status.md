@@ -22,9 +22,9 @@ Alias: status
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 | [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
 | [Katalogpost](Katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
-| [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 
 
 

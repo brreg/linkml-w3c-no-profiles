@@ -23,8 +23,8 @@ Alias: har_definisjon
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Kvalitetsdeldimensjon](Kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |  yes  |
-| [Kvalitetsdimensjon](Kvalitetsdimensjon.md) | Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål |  yes  |
 | [Kvalitetsmaal](Kvalitetsmaal.md) | Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon |  yes  |
+| [Kvalitetsdimensjon](Kvalitetsdimensjon.md) | Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål |  yes  |
 
 
 

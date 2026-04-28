@@ -220,32 +220,513 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 | Class URI | [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) | direct |
-| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for hendvendelsar om ressursen | direct |
-| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) | direct |
-| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen | direct |
-| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) | Datasett som er del av katalogen | direct |
-| [datatjeneste](datatjeneste.md) | * <br/> [Datatjeneste](Datatjeneste.md) | Datatjeneste som er del av katalogen | direct |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Begrep](Begrep.md) | Geografisk dekningsområde | direct |
-| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen (dct:modified) | direct |
-| [hjemmeside](hjemmeside.md) | 0..1 <br/> [Uri](Uri.md) | Heimeside for katalogen | direct |
-| [lisens](lisens.md) | 0..1 <br/> [Begrep](Begrep.md) | Lisens for bruk av ressursen | direct |
-| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) | direct |
-| [temaer](temaer.md) | * <br/> [Begrepssamling](Begrepssamling.md) | Temavokabular som vert brukt i katalogen | direct |
-| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen vart første gong publisert (dct:issued) | direct |
-| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgjeving som gjeld for ressursen | direct |
-| [har_del](har_del.md) | * <br/> [Katalog](Katalog.md) | Delkatalog inkludert i denne katalogen | direct |
-| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) | direct |
-| [underkatalog](underkatalog.md) | * <br/> [Katalog](Katalog.md) | Katalog som er ein del av denne katalogen | direct |
-| [katalogpost](katalogpost.md) | * <br/> [Katalogpost](Katalogpost.md) | Katalogpostar i katalogen | direct |
-| [produsent](produsent.md) | 0..1 <br/> [Aktor](Aktor.md) | Aktøren som primært har skapt ressursen | direct |
-| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettar knytte til ressursen | direct |
-| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekkar | direct |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [KatalogisertRessurs](KatalogisertRessurs.md) |
+
+
+
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](LangString.md) | Fritekstbeskrivelse av ressursen (dct:description) |
+| [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](Kontaktopplysning.md) | Kontaktinformasjon for hendvendelsar om ressursen |
+| [tittel](tittel.md) | 1..* <br/> [LangString](LangString.md) | Namn/tittel på ressursen (dct:title) |
+| [utgiver](utgiver.md) | 1 <br/> [Aktor](Aktor.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+### Anbefalt
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) | Datasett som er del av katalogen |
+| [datatjeneste](datatjeneste.md) | * <br/> [Datatjeneste](Datatjeneste.md) | Datatjeneste som er del av katalogen |
+| [dekningsomrade](dekningsomrade.md) | * <br/> [Begrep](Begrep.md) | Geografisk dekningsområde |
+| [endringsdato](endringsdato.md) | 0..1 <br/> [Date](Date.md) | Dato for siste endring av ressursen (dct:modified) |
+| [hjemmeside](hjemmeside.md) | 0..1 <br/> [Uri](Uri.md) | Heimeside for katalogen |
+| [lisens](lisens.md) | 0..1 <br/> [Begrep](Begrep.md) | Lisens for bruk av ressursen |
+| [sprak](sprak.md) | * <br/> [Spraak](Spraak.md) | Språk brukt i ressursen (dct:language) |
+| [temaer](temaer.md) | * <br/> [Begrepssamling](Begrepssamling.md) | Temavokabular som vert brukt i katalogen |
+| [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](Date.md) | Dato ressursen vart første gong publisert (dct:issued) |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) | Lovgjeving som gjeld for ressursen |
+| [har_del](har_del.md) | * <br/> [Katalog](Katalog.md) | Delkatalog inkludert i denne katalogen |
+| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) |
+| [underkatalog](underkatalog.md) | * <br/> [Katalog](Katalog.md) | Katalog som er ein del av denne katalogen |
+| [katalogpost](katalogpost.md) | * <br/> [Katalogpost](Katalogpost.md) | Katalogpostar i katalogen |
+| [produsent](produsent.md) | 0..1 <br/> [Aktor](Aktor.md) | Aktøren som primært har skapt ressursen |
+| [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](Rettighetserklaring.md) | Rettar knytte til ressursen |
+| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) | Tidsperiode ressursen dekkar |
+
+
+
+
+### Arva
+
+| Namn | Kardinalitet og domene | Beskriving | Frå |
+| --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | [KatalogisertRessurs](KatalogisertRessurs.md) |
 
 
 

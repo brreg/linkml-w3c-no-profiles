@@ -52,11 +52,52 @@ URI: [dcat:Resource](http://www.w3.org/ns/dcat#Resource)
 | Class URI | [dcat:Resource](http://www.w3.org/ns/dcat#Resource) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+
+
+
 
 
 

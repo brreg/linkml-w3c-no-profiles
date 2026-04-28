@@ -22,8 +22,8 @@ Alias: tilgjengelighet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
 | [Distribusjon](Distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
+| [Datatjeneste](Datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
 
 
 

@@ -51,14 +51,117 @@ URI: [foaf:Agent](http://xmlns.com/foaf/0.1/Agent)
 | Class URI | [foaf:Agent](http://xmlns.com/foaf/0.1/Agent) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [navn_aktor](navn_aktor.md) | 1..* <br/> [LangString](LangString.md) | Namn på aktøren | direct |
-| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) | direct |
-| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs frå eit kontrollert vokabular (dct:type) | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [navn_aktor](navn_aktor.md) | 1..* <br/> [LangString](LangString.md) | Namn på aktøren |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+| [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](String.md) | Tekstleg identifikator for ressursen (dct:identifier) |
+| [type_concept](type_concept.md) | 0..1 <br/> [Begrep](Begrep.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
+
+
+
 
 
 

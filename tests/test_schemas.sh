@@ -2,7 +2,7 @@
 set -euo pipefail
 
 IMAGE="docker.io/linkml/linkml:latest"
-PODMAN="podman run --rm -v \"$(pwd):/work\" -w /work $IMAGE"
+PODMAN="podman run --rm -v \"$(pwd):/work\" -w /work -e PYTHONWARNINGS=ignore $IMAGE"
 SCHEMA_DIR="src/linkml"
 PASS=0
 FAIL=0

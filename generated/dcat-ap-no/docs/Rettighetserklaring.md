@@ -52,19 +52,188 @@ URI: [dct:RightsStatement](http://purl.org/dc/terms/RightsStatement)
 | Class URI | [dct:RightsStatement](http://purl.org/dc/terms/RightsStatement) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [anvendelsesretningslinjer](anvendelsesretningslinjer.md) | 0..1 <br/> [String](String.md) | Retningslinjer for gjenbruk av data | direct |
-| [jurisdiksjon](jurisdiksjon.md) | 0..1 <br/> [String](String.md) | Jurisdiksjon for rettigheitserklæringa | direct |
-| [krediteringstekst](krediteringstekst.md) | 0..1 <br/> [String](String.md) | Tekst som skal brukast ved kreditering | direct |
-| [krediteringsurl](krediteringsurl.md) | 0..1 <br/> [Uri](Uri.md) | URL for kreditering av rettshavar | direct |
-| [opphavsrettserklaring](opphavsrettserklaring.md) | 0..1 <br/> [String](String.md) | Opphavsrettserklæring | direct |
-| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | 0..1 <br/> [String](String.md) | Namn på opphavsrettsinnehavar | direct |
-| [opphavsrettsnotis](opphavsrettsnotis.md) | 0..1 <br/> [String](String.md) | Opphavsrettsnotis | direct |
-| [opphavsrettsaar](opphavsrettsaar.md) | 0..1 <br/> [GYear](GYear.md) | Årstal for opphavsrett | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+| [anvendelsesretningslinjer](anvendelsesretningslinjer.md) | 0..1 <br/> [String](String.md) | Retningslinjer for gjenbruk av data |
+| [jurisdiksjon](jurisdiksjon.md) | 0..1 <br/> [String](String.md) | Jurisdiksjon for rettigheitserklæringa |
+| [krediteringstekst](krediteringstekst.md) | 0..1 <br/> [String](String.md) | Tekst som skal brukast ved kreditering |
+| [krediteringsurl](krediteringsurl.md) | 0..1 <br/> [Uri](Uri.md) | URL for kreditering av rettshavar |
+| [opphavsrettserklaring](opphavsrettserklaring.md) | 0..1 <br/> [String](String.md) | Opphavsrettserklæring |
+| [opphavsrettsinnehaver](opphavsrettsinnehaver.md) | 0..1 <br/> [String](String.md) | Namn på opphavsrettsinnehavar |
+| [opphavsrettsnotis](opphavsrettsnotis.md) | 0..1 <br/> [String](String.md) | Opphavsrettsnotis |
+| [opphavsrettsaar](opphavsrettsaar.md) | 0..1 <br/> [GYear](GYear.md) | Årstal for opphavsrett |
+
+
+
 
 
 

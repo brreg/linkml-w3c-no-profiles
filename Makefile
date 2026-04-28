@@ -2,11 +2,11 @@ SCHEMAS    := dcat-ap-no dqv-ap-no
 SCHEMA_DIR := src/linkml
 GEN_DIR    := generated
 IMAGE      := docker.io/linkml/linkml:latest
-PODMAN     := podman run --rm -v "$(CURDIR):/work" -w /work $(IMAGE)
+PODMAN     := podman run --rm -v "$(CURDIR):/work" -w /work -e PYTHONWARNINGS=ignore $(IMAGE)
 
 .PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl gen-rdf convert-rdf clean
 
-all: test docs
+all: test
 
 test:
 	bash tests/test_schemas.sh
@@ -44,12 +44,11 @@ convert-rdf:
 	for example in examples/*-eksempel.yaml; do \
 		name=$$(basename "$$example" .yaml); \
 		profil=$$(echo "$$name" | sed 's/-eksempel$$//'); \
-		mkdir -p $(GEN_DIR)/$$profil; \
 		$(PODMAN) linkml-convert \
 			--schema $(SCHEMA_DIR)/$$profil/$$profil-schema.yaml \
 			--output-format ttl \
 			--no-validate \
-			--output $(GEN_DIR)/$$profil/$$name.ttl \
+			--output $(GEN_DIR)/$$name.ttl \
 			$$example; \
 	done
 

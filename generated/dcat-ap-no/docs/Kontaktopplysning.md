@@ -42,14 +42,117 @@ URI: [vcard:Kind](http://www.w3.org/2006/vcard/ns#Kind)
 | Class URI | [vcard:Kind](http://www.w3.org/2006/vcard/ns#Kind) |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen | direct |
-| [navn_vcard](navn_vcard.md) | 1..* <br/> [LangString](LangString.md) | Formatert namn (vCard) | direct |
-| [har_epost](har_epost.md) | 0..1 <br/> [Uri](Uri.md) | E-postadresse til kontaktpunktet | direct |
-| [har_kontaktside](har_kontaktside.md) | 0..1 <br/> [Uri](Uri.md) | Nettside for kontakt | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [navn_vcard](navn_vcard.md) | 1..* <br/> [LangString](LangString.md) | Formatert namn (vCard) |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | URI-identifikator for ressursen |
+| [har_epost](har_epost.md) | 0..1 <br/> [Uri](Uri.md) | E-postadresse til kontaktpunktet |
+| [har_kontaktside](har_kontaktside.md) | 0..1 <br/> [Uri](Uri.md) | Nettside for kontakt |
+
+
+
 
 
 

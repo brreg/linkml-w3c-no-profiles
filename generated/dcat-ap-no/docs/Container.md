@@ -210,26 +210,307 @@ URI: [https://data.norge.no/linkml/dcat-ap-no/Container](https://data.norge.no/l
 | Tree Root | Yes |
 
 
-## Slots
+## Eigenskapar
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [katalogar](katalogar.md) | * <br/> [Katalog](Katalog.md) |  | direct |
-| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) |  | direct |
-| [datasettprofil](datasettprofil.md) | * <br/> [Datasettserie](Datasettserie.md) |  | direct |
-| [datatenestar](datatenestar.md) | * <br/> [Datatjeneste](Datatjeneste.md) |  | direct |
-| [distribusjonar](distribusjonar.md) | * <br/> [Distribusjon](Distribusjon.md) |  | direct |
-| [aktorar](aktorar.md) | * <br/> [Aktor](Aktor.md) |  | direct |
-| [kontaktopplysningar](kontaktopplysningar.md) | * <br/> [Kontaktopplysning](Kontaktopplysning.md) |  | direct |
-| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) |  | direct |
-| [standardar](standardar.md) | * <br/> [Standard](Standard.md) |  | direct |
-| [regulativeRessursar](regulativeRessursar.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) |  | direct |
-| [rettigheitserklaringar](rettigheitserklaringar.md) | * <br/> [Rettighetserklaring](Rettighetserklaring.md) |  | direct |
-| [sjekksumar](sjekksumar.md) | * <br/> [Sjekksum](Sjekksum.md) |  | direct |
-| [gebyr](gebyr.md) | * <br/> [Gebyr](Gebyr.md) |  | direct |
-| [relasjonar](relasjonar.md) | * <br/> [Relasjon](Relasjon.md) |  | direct |
-| [identifikatorar](identifikatorar.md) | * <br/> [Identifikator](Identifikator.md) |  | direct |
-| [katalogpostar](katalogpostar.md) | * <br/> [Katalogpost](Katalogpost.md) |  | direct |
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+
+### Andre
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [katalogar](katalogar.md) | * <br/> [Katalog](Katalog.md) |  |
+| [datasett](datasett.md) | * <br/> [Datasett](Datasett.md) |  |
+| [datasettprofil](datasettprofil.md) | * <br/> [Datasettserie](Datasettserie.md) |  |
+| [datatenestar](datatenestar.md) | * <br/> [Datatjeneste](Datatjeneste.md) |  |
+| [distribusjonar](distribusjonar.md) | * <br/> [Distribusjon](Distribusjon.md) |  |
+| [aktorar](aktorar.md) | * <br/> [Aktor](Aktor.md) |  |
+| [kontaktopplysningar](kontaktopplysningar.md) | * <br/> [Kontaktopplysning](Kontaktopplysning.md) |  |
+| [tidsrom](tidsrom.md) | * <br/> [Tidsrom](Tidsrom.md) |  |
+| [standardar](standardar.md) | * <br/> [Standard](Standard.md) |  |
+| [regulativeRessursar](regulativeRessursar.md) | * <br/> [RegulativRessurs](RegulativRessurs.md) |  |
+| [rettigheitserklaringar](rettigheitserklaringar.md) | * <br/> [Rettighetserklaring](Rettighetserklaring.md) |  |
+| [sjekksumar](sjekksumar.md) | * <br/> [Sjekksum](Sjekksum.md) |  |
+| [gebyr](gebyr.md) | * <br/> [Gebyr](Gebyr.md) |  |
+| [relasjonar](relasjonar.md) | * <br/> [Relasjon](Relasjon.md) |  |
+| [identifikatorar](identifikatorar.md) | * <br/> [Identifikator](Identifikator.md) |  |
+| [katalogpostar](katalogpostar.md) | * <br/> [Katalogpost](Katalogpost.md) |  |
+
+
+
 
 
 

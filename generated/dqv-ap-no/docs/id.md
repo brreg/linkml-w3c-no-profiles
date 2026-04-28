@@ -22,22 +22,22 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kvalitetsdeldimensjon](Kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |  no  |
-| [Standard](Standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  no  |
-| [Kvalitetsmerknad](Kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  no  |
-| [Brukartilbakemelding](Brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |  no  |
-| [Kvalitetssertifikat](Kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |  no  |
-| [DcatRessurs](DcatRessurs.md) | Ein katalogisert ressurs (brukt som målklasse for oa:hasTarget) |  no  |
-| [Kvalitetsmaal](Kvalitetsmaal.md) | Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon |  no  |
-| [Begrep](Begrep.md) | Eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
-| [Begrepssamling](Begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
-| [Datasett](Datasett.md) | Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for kvalitetsinf... |  no  |
 | [Mediatype](Mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
-| [Spraak](Spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
+| [Begrep](Begrep.md) | Eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
 | [Kvalitetsdimensjon](Kvalitetsdimensjon.md) | Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål |  no  |
-| [Motivasjon](Motivasjon.md) | Motivasjonen bak ein kvalitetsmerknad (Web Annotation) |  no  |
-| [Kvalitetsmaaling](Kvalitetsmaaling.md) | Ei konkret måling av eit kvalitetsmål for eit datasett |  no  |
+| [Kvalitetssertifikat](Kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |  no  |
+| [Brukartilbakemelding](Brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |  no  |
+| [Kvalitetsmaal](Kvalitetsmaal.md) | Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon |  no  |
+| [Datasett](Datasett.md) | Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for kvalitetsinf... |  no  |
+| [Spraak](Spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
+| [DcatRessurs](DcatRessurs.md) | Ein katalogisert ressurs (brukt som målklasse for oa:hasTarget) |  no  |
 | [Tekstdel](Tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |  no  |
+| [Standard](Standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  no  |
+| [Motivasjon](Motivasjon.md) | Motivasjonen bak ein kvalitetsmerknad (Web Annotation) |  no  |
+| [Kvalitetsdeldimensjon](Kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |  no  |
+| [Kvalitetsmerknad](Kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  no  |
+| [Begrepssamling](Begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
+| [Kvalitetsmaaling](Kvalitetsmaaling.md) | Ei konkret måling av eit kvalitetsmål for eit datasett |  no  |
 
 
 

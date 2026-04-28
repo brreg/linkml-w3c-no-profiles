@@ -1,0 +1,1311 @@
+id: https://data.norge.no/linkml/cpsv-ap-no
+name: cpsv-ap-no
+title: CPSV-AP-NO
+description: >-
+  Norsk applikasjonsprofil av CPSV (Core Public Service Vocabulary), modellert i LinkML
+  med lenking framfor inlining.
+  Basert på https://informasjonsforvaltning.github.io/cpsv-ap-no/
+
+version: "1.0"
+
+prefixes:
+  linkml:   https://w3id.org/linkml/
+  cpsv:     http://purl.org/vocab/cpsv#
+  cpsvno:   https://data.norge.no/vocabulary/cpsvno#
+  cv:       http://data.europa.eu/m8g/
+  dcat:     http://www.w3.org/ns/dcat#
+  dcatno:   https://data.norge.no/vocabulary/dcatno#
+  dct:      http://purl.org/dc/terms/
+  eli:      http://data.europa.eu/eli/ontology#
+  foaf:     http://xmlns.com/foaf/0.1/
+  locn:     http://www.w3.org/ns/locn#
+  org:      http://www.w3.org/ns/org#
+  skos:     http://www.w3.org/2004/02/skos/core#
+  adms:     http://www.w3.org/ns/adms#
+  xkos:     http://rdf-vocabulary.ddialliance.org/xkos#
+  vcard:    http://www.w3.org/2006/vcard/ns#
+  cccevno:  https://data.norge.no/vocabulary/cccevno#
+  rdfs:     http://www.w3.org/2000/01/rdf-schema#
+  xsd:      http://www.w3.org/2001/XMLSchema#
+  rdf:      http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+default_prefix: https://data.norge.no/linkml/cpsv-ap-no/
+default_range: string
+
+imports:
+  - linkml:types
+  - ../common/common-ap-no-schema
+
+# ---------------------------------------------------------------------------
+# Rotklasse (tree_root)
+# ---------------------------------------------------------------------------
+
+classes:
+
+  Container:
+    tree_root: true
+    description: >-
+      Rotklasse for CPSV-AP-NO-datafiler. Held flate lister av alle instansierbare
+      klassar; referansar mellom objekta brukar URI-lenking.
+    attributes:
+      katalogar:
+        range: Katalog
+        multivalued: true
+        inlined_as_list: true
+      lovpalagdeTenestar:
+        range: LovpalagtTjeneste
+        multivalued: true
+        inlined_as_list: true
+      offentligeTenestar:
+        range: OffentligTjeneste
+        multivalued: true
+        inlined_as_list: true
+      tenestar:
+        range: Tjeneste
+        multivalued: true
+        inlined_as_list: true
+      hendingar:
+        range: Hendelse
+        multivalued: true
+        inlined_as_list: true
+      livshendingar:
+        range: Livshendelse
+        multivalued: true
+        inlined_as_list: true
+      verksemdhendingar:
+        range: Virksomhetshendelse
+        multivalued: true
+        inlined_as_list: true
+      aktørar:
+        range: Aktør
+        multivalued: true
+        inlined_as_list: true
+      offentligeOrganisasjonar:
+        range: OffentligOrganisasjon
+        multivalued: true
+        inlined_as_list: true
+      kontaktpunkt:
+        range: Kontaktpunkt
+        multivalued: true
+        inlined_as_list: true
+      tenestekanalar:
+        range: Tjenestekanal
+        multivalued: true
+        inlined_as_list: true
+      dokumentasjonstypar:
+        range: Dokumentasjonstype
+        multivalued: true
+        inlined_as_list: true
+      tenesteresultattypar:
+        range: Tjenesteresultattype
+        multivalued: true
+        inlined_as_list: true
+      tenesteresultattypleister:
+        range: Tjenesteresultattypeliste
+        multivalued: true
+        inlined_as_list: true
+      gebyr:
+        range: Gebyr
+        multivalued: true
+        inlined_as_list: true
+      reglar:
+        range: Regel
+        multivalued: true
+        inlined_as_list: true
+      regulativeRessursar:
+        range: RegulativRessurs
+        multivalued: true
+        inlined_as_list: true
+      deltakarar:
+        range: Deltagelse
+        multivalued: true
+        inlined_as_list: true
+      adressar:
+        range: Adresse
+        multivalued: true
+        inlined_as_list: true
+
+# ---------------------------------------------------------------------------
+# Klasser
+# ---------------------------------------------------------------------------
+
+  # ---- Lovpålagt tjeneste -------------------------------------------------
+
+  LovpalagtTjeneste:
+    class_uri: cpsvno:StatutoryService
+    description: Ei lovpålagd teneste som offentlege organ er pålagde å utføre.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - har_kontaktpunkt
+      - har_tenesteresultattype
+      - tema
+      - dekningsomrade
+      - har_dokumentasjonstype
+      - heimeside
+      - type_concept
+      - temaomrade
+      - er_del_av
+      - har_del
+      - er_gruppert_av
+      - er_klassifisert_av
+      - følgjer
+      - har_gebyr
+      - har_regulativ_ressurs
+      - krev
+      - malgruppe
+      - nokkelord
+      - sektor
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_tenesteresultattype:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tema:
+        in_subset:
+          - Anbefalt
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      har_dokumentasjonstype:
+        in_subset:
+          - Anbefalt
+      heimeside:
+        in_subset:
+          - Anbefalt
+      type_concept:
+        in_subset:
+          - Anbefalt
+      temaomrade:
+        in_subset:
+          - Anbefalt
+      er_del_av:
+        in_subset:
+          - Valgfri
+      har_del:
+        in_subset:
+          - Valgfri
+      er_gruppert_av:
+        in_subset:
+          - Valgfri
+      er_klassifisert_av:
+        in_subset:
+          - Valgfri
+      følgjer:
+        in_subset:
+          - Valgfri
+      har_gebyr:
+        in_subset:
+          - Valgfri
+      har_regulativ_ressurs:
+        in_subset:
+          - Valgfri
+      krev:
+        in_subset:
+          - Valgfri
+      malgruppe:
+        in_subset:
+          - Valgfri
+      nokkelord:
+        in_subset:
+          - Valgfri
+      sektor:
+        in_subset:
+          - Valgfri
+
+  # ---- Offentlig tjeneste -------------------------------------------------
+
+  OffentligTjeneste:
+    class_uri: cpsv:PublicService
+    description: Ei konkret offentleg teneste levert av ein offentleg organisasjon.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - har_kontaktpunkt
+      - har_tenesteresultattype
+      - har_ansvarleg_styremakt
+      - tema
+      - dekningsomrade
+      - har_dokumentasjonstype
+      - heimeside
+      - type_concept
+      - realiserer
+      - status
+      - temaomrade
+      - behandlingstid
+      - er_beskrive_av
+      - er_del_av
+      - har_del
+      - har_tenestekanal
+      - har_deltaking
+      - sprak
+      - relatert_teneste
+      - er_gruppert_av
+      - er_klassifisert_av
+      - følgjer
+      - har_gebyr
+      - har_regulativ_ressurs
+      - krev
+      - malgruppe
+      - nokkelord
+      - sektor
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_tenesteresultattype:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_ansvarleg_styremakt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tema:
+        in_subset:
+          - Anbefalt
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      har_dokumentasjonstype:
+        in_subset:
+          - Anbefalt
+      heimeside:
+        in_subset:
+          - Anbefalt
+      type_concept:
+        in_subset:
+          - Anbefalt
+      realiserer:
+        in_subset:
+          - Anbefalt
+      status:
+        in_subset:
+          - Anbefalt
+      temaomrade:
+        in_subset:
+          - Anbefalt
+      behandlingstid:
+        in_subset:
+          - Valgfri
+      er_beskrive_av:
+        in_subset:
+          - Valgfri
+      er_del_av:
+        in_subset:
+          - Valgfri
+      har_del:
+        in_subset:
+          - Valgfri
+      har_tenestekanal:
+        in_subset:
+          - Valgfri
+      har_deltaking:
+        in_subset:
+          - Valgfri
+      sprak:
+        in_subset:
+          - Valgfri
+      relatert_teneste:
+        in_subset:
+          - Valgfri
+      er_gruppert_av:
+        in_subset:
+          - Valgfri
+      er_klassifisert_av:
+        in_subset:
+          - Valgfri
+      følgjer:
+        in_subset:
+          - Valgfri
+      har_gebyr:
+        in_subset:
+          - Valgfri
+      har_regulativ_ressurs:
+        in_subset:
+          - Valgfri
+      krev:
+        in_subset:
+          - Valgfri
+      malgruppe:
+        in_subset:
+          - Valgfri
+      nokkelord:
+        in_subset:
+          - Valgfri
+      sektor:
+        in_subset:
+          - Valgfri
+
+  # ---- Tjeneste -----------------------------------------------------------
+
+  Tjeneste:
+    class_uri: cpsvno:Service
+    description: Ei teneste levert av ein ikkje-offentleg aktør.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - har_kontaktpunkt
+      - har_tenesteresultattype
+      - eigd_av
+      - tema
+      - dekningsomrade
+      - har_dokumentasjonstype
+      - heimeside
+      - type_concept
+      - status
+      - temaomrade
+      - behandlingstid
+      - er_beskrive_av
+      - er_del_av
+      - har_del
+      - har_tenestekanal
+      - har_deltaking
+      - sprak
+      - relatert_teneste
+      - er_gruppert_av
+      - er_klassifisert_av
+      - følgjer
+      - har_gebyr
+      - har_regulativ_ressurs
+      - krev
+      - malgruppe
+      - nokkelord
+      - sektor
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_tenesteresultattype:
+        required: true
+        in_subset:
+          - Obligatorisk
+      eigd_av:
+        required: true
+        in_subset:
+          - Obligatorisk
+      tema:
+        in_subset:
+          - Anbefalt
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      har_dokumentasjonstype:
+        in_subset:
+          - Anbefalt
+      heimeside:
+        in_subset:
+          - Anbefalt
+      status:
+        in_subset:
+          - Anbefalt
+      temaomrade:
+        in_subset:
+          - Anbefalt
+      behandlingstid:
+        in_subset:
+          - Valgfri
+      er_beskrive_av:
+        in_subset:
+          - Valgfri
+      er_del_av:
+        in_subset:
+          - Valgfri
+      har_del:
+        in_subset:
+          - Valgfri
+      har_tenestekanal:
+        in_subset:
+          - Valgfri
+      har_deltaking:
+        in_subset:
+          - Valgfri
+      sprak:
+        in_subset:
+          - Valgfri
+      relatert_teneste:
+        in_subset:
+          - Valgfri
+      er_gruppert_av:
+        in_subset:
+          - Valgfri
+      er_klassifisert_av:
+        in_subset:
+          - Valgfri
+      følgjer:
+        in_subset:
+          - Valgfri
+      har_gebyr:
+        in_subset:
+          - Valgfri
+      har_regulativ_ressurs:
+        in_subset:
+          - Valgfri
+      krev:
+        in_subset:
+          - Valgfri
+      malgruppe:
+        in_subset:
+          - Valgfri
+      nokkelord:
+        in_subset:
+          - Valgfri
+      sektor:
+        in_subset:
+          - Valgfri
+
+  # ---- Hendelse -----------------------------------------------------------
+
+  Hendelse:
+    class_uri: cv:Event
+    description: Ei hending som kan utløyse behov for ei offentleg teneste.
+    slots:
+      - id
+      - tittel
+      - identifikator_literal
+      - har_kontaktpunkt
+      - beskrivelse
+      - kan_utlose
+      - tema
+      - er_beskrive_av
+      - type_concept
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        in_subset:
+          - Anbefalt
+      kan_utlose:
+        in_subset:
+          - Anbefalt
+      tema:
+        in_subset:
+          - Valgfri
+      er_beskrive_av:
+        in_subset:
+          - Valgfri
+      type_concept:
+        in_subset:
+          - Valgfri
+
+  Livshendelse:
+    is_a: Hendelse
+    class_uri: cv:LifeEvent
+    description: Ei livshending som kan utløyse behov for tenester (t.d. fødsel, ekteskap).
+    slots:
+      - kan_utlose_behov_for
+    slot_usage:
+      kan_utlose_behov_for:
+        in_subset:
+          - Anbefalt
+
+  Virksomhetshendelse:
+    is_a: Hendelse
+    class_uri: cv:BusinessEvent
+    description: Ei verksemdhending som kan utløyse behov for tenester (t.d. oppstart, konkurs).
+    slots:
+      - kan_utlose_behov_for
+    slot_usage:
+      kan_utlose_behov_for:
+        in_subset:
+          - Anbefalt
+
+  # ---- Aktør --------------------------------------------------------------
+
+  Aktør:
+    class_uri: foaf:Agent
+    description: Ein aktør (person eller organisasjon) relatert til ei teneste.
+    slots:
+      - id
+      - tittel
+      - identifikator_literal
+      - adresse_ref
+      - deltek_i
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      adresse_ref:
+        in_subset:
+          - Valgfri
+      deltek_i:
+        in_subset:
+          - Valgfri
+
+  OffentligOrganisasjon:
+    is_a: Aktør
+    class_uri: cv:PublicOrganisation
+    description: Ein offentleg organisasjon som er ansvarleg for ei teneste.
+    slots:
+      - føretrekt_namn
+      - dekningsomrade
+      - heimeside
+      - type_concept
+    slot_usage:
+      dekningsomrade:
+        required: true
+        in_subset:
+          - Obligatorisk
+      føretrekt_namn:
+        required: true
+        in_subset:
+          - Obligatorisk
+      type_concept:
+        in_subset:
+          - Anbefalt
+      heimeside:
+        in_subset:
+          - Valgfri
+      adresse_ref:
+        in_subset:
+          - Valgfri
+
+  # ---- Kontaktpunkt -------------------------------------------------------
+
+  Kontaktpunkt:
+    class_uri: cv:ContactPoint
+    description: Kontaktinformasjon for ei teneste eller ein organisasjon.
+    slots:
+      - id
+      - epost
+      - telefon
+      - kontaktside
+      - opningstider
+      - sprak
+      - kategori
+    slot_usage:
+      epost:
+        in_subset:
+          - Valgfri
+      telefon:
+        in_subset:
+          - Valgfri
+      kontaktside:
+        in_subset:
+          - Valgfri
+      opningstider:
+        in_subset:
+          - Valgfri
+      sprak:
+        in_subset:
+          - Valgfri
+      kategori:
+        in_subset:
+          - Valgfri
+
+  # ---- Tjenestekanal ------------------------------------------------------
+
+  Tjenestekanal:
+    class_uri: cv:Channel
+    description: Ein kanal for å få tilgang til ei teneste (t.d. nett, telefon, oppmøte).
+    slots:
+      - id
+      - identifikator_literal
+      - type_concept
+      - behandlingstid
+      - opningstider
+      - beskrivelse
+      - nettside
+    slot_usage:
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      type_concept:
+        in_subset:
+          - Anbefalt
+      behandlingstid:
+        in_subset:
+          - Valgfri
+      opningstider:
+        in_subset:
+          - Valgfri
+      beskrivelse:
+        in_subset:
+          - Valgfri
+      nettside:
+        in_subset:
+          - Valgfri
+
+  # ---- Dokumentasjonstype -------------------------------------------------
+
+  Dokumentasjonstype:
+    class_uri: cv:EvidenceType
+    description: Ein type dokumentasjon som krevst for å levere ei teneste.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - gyldig_i
+      - godtek_sprak
+      - klassifisering
+      - er_beskrive_av
+      - er_spesifisert_i
+      - utstedingsstad
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      gyldig_i:
+        in_subset:
+          - Anbefalt
+      godtek_sprak:
+        in_subset:
+          - Anbefalt
+      klassifisering:
+        in_subset:
+          - Valgfri
+      er_beskrive_av:
+        in_subset:
+          - Valgfri
+      er_spesifisert_i:
+        in_subset:
+          - Valgfri
+      utstedingsstad:
+        in_subset:
+          - Valgfri
+
+  # ---- Tjenesteresultattype -----------------------------------------------
+
+  Tjenesteresultattype:
+    class_uri: cpsvno:OutputType
+    description: Typen resultat som ei teneste produserer.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - mogleg_sprak
+      - er_beskrive_av
+      - er_spesifisert_i
+      - kan_skape_hending
+      - type_concept
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      mogleg_sprak:
+        in_subset:
+          - Anbefalt
+      identifikator_literal:
+        in_subset:
+          - Valgfri
+      er_beskrive_av:
+        in_subset:
+          - Valgfri
+      er_spesifisert_i:
+        in_subset:
+          - Valgfri
+      kan_skape_hending:
+        in_subset:
+          - Valgfri
+      type_concept:
+        in_subset:
+          - Valgfri
+
+  Tjenesteresultattypeliste:
+    class_uri: cpsvno:OutputTypeList
+    description: Ei liste over moglege tjenesteresultattypar.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+
+  # ---- Gebyr --------------------------------------------------------------
+
+  Gebyr:
+    class_uri: cv:Cost
+    description: Eit gebyr knytt til ei teneste.
+    slots:
+      - id
+      - beskrivelse
+      - identifikator_literal
+      - verdi
+      - valuta
+    slot_usage:
+      beskrivelse:
+        in_subset:
+          - Valgfri
+      identifikator_literal:
+        in_subset:
+          - Valgfri
+      verdi:
+        in_subset:
+          - Valgfri
+      valuta:
+        in_subset:
+          - Valgfri
+
+  # ---- Regel --------------------------------------------------------------
+
+  Regel:
+    class_uri: cpsv:Rule
+    description: Eit regelverk eller retningsliner som styrer levering av ei teneste.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - sprak
+      - type_concept
+    slot_usage:
+      tittel:
+        in_subset:
+          - Valgfri
+      beskrivelse:
+        in_subset:
+          - Valgfri
+      identifikator_literal:
+        in_subset:
+          - Valgfri
+      sprak:
+        in_subset:
+          - Valgfri
+      type_concept:
+        in_subset:
+          - Valgfri
+
+  # ---- Regulativ ressurs --------------------------------------------------
+
+  RegulativRessurs:
+    class_uri: eli:LegalResource
+    description: Ein regulativ ressurs (lov, forskrift o.l.) knytt til ei teneste.
+    slots:
+      - id
+      - tittel
+      - identifikator_literal
+      - type_concept
+    slot_usage:
+      tittel:
+        in_subset:
+          - Valgfri
+      identifikator_literal:
+        in_subset:
+          - Valgfri
+      type_concept:
+        in_subset:
+          - Valgfri
+
+  # ---- Deltagelse ---------------------------------------------------------
+
+  Deltagelse:
+    class_uri: cv:Participation
+    description: Ei rolle ein aktør har i leveringa av ei teneste.
+    slots:
+      - id
+      - har_rolle
+      - deltakar
+    slot_usage:
+      har_rolle:
+        in_subset:
+          - Valgfri
+      deltakar:
+        in_subset:
+          - Valgfri
+
+  # ---- Adresse ------------------------------------------------------------
+
+  Adresse:
+    class_uri: locn:Address
+    description: Ei postadresse knytt til ein aktør, organisasjon eller kontaktpunkt.
+    slots:
+      - id
+      - full_adresse
+      - postnummer
+      - poststad
+      - land
+    slot_usage:
+      full_adresse:
+        in_subset:
+          - Valgfri
+      postnummer:
+        in_subset:
+          - Valgfri
+      poststad:
+        in_subset:
+          - Valgfri
+      land:
+        in_subset:
+          - Valgfri
+
+  # ---- Katalog ------------------------------------------------------------
+
+  Katalog:
+    class_uri: dcat:Catalog
+    description: Ein katalog over offentlege tenester og hendingar.
+    slots:
+      - id
+      - tittel
+      - beskrivelse
+      - identifikator_literal
+      - inneheld_teneste
+      - har_kontaktpunkt
+      - utgjevar
+      - dekningsomrade
+      - endringsdato
+      - oppdateringsfrekvens
+      - heimeside
+      - inneheld_hending
+      - lisens
+      - sprak
+    slot_usage:
+      tittel:
+        required: true
+        in_subset:
+          - Obligatorisk
+      beskrivelse:
+        required: true
+        in_subset:
+          - Obligatorisk
+      identifikator_literal:
+        required: true
+        in_subset:
+          - Obligatorisk
+      inneheld_teneste:
+        required: true
+        in_subset:
+          - Obligatorisk
+      har_kontaktpunkt:
+        required: true
+        in_subset:
+          - Obligatorisk
+      utgjevar:
+        required: true
+        in_subset:
+          - Obligatorisk
+      dekningsomrade:
+        in_subset:
+          - Anbefalt
+      endringsdato:
+        in_subset:
+          - Anbefalt
+      oppdateringsfrekvens:
+        in_subset:
+          - Anbefalt
+      heimeside:
+        in_subset:
+          - Anbefalt
+      inneheld_hending:
+        in_subset:
+          - Anbefalt
+      lisens:
+        in_subset:
+          - Anbefalt
+      sprak:
+        in_subset:
+          - Anbefalt
+
+# ---------------------------------------------------------------------------
+# Slots (CPSV-AP-NO-spesifikke)
+# ---------------------------------------------------------------------------
+
+slots:
+
+  har_kontaktpunkt:
+    slot_uri: cv:contactPoint
+    range: Kontaktpunkt
+    multivalued: true
+    description: Kontaktpunkt for tenesta eller organisasjonen.
+
+  har_tenesteresultattype:
+    slot_uri: cpsvno:hasOutputType
+    range: Tjenesteresultattype
+    multivalued: true
+    description: Typen resultat tenesta kan produsere.
+
+  har_ansvarleg_styremakt:
+    slot_uri: cv:hasCompetentAuthority
+    range: OffentligOrganisasjon
+    multivalued: true
+    description: Offentleg organisasjon ansvarleg for tenesta.
+
+  realiserer:
+    slot_uri: cpsvno:realizes
+    range: LovpalagtTjeneste
+    multivalued: true
+    description: Lovpålagd teneste denne offentlege tenesta realiserer.
+
+  status:
+    slot_uri: adms:status
+    range: Begrep
+    description: Status for tenesta frå eit kontrollert vokabular.
+
+  behandlingstid:
+    slot_uri: cv:processingTime
+    range: Duration
+    description: Forventa behandlingstid for tenesta eller kanalen (ISO 8601).
+
+  er_beskrive_av:
+    slot_uri: cccevno:isDescribedBy
+    range: uri
+    multivalued: true
+    description: Datasett som beskriv ressursen.
+
+  har_tenestekanal:
+    slot_uri: cv:hasChannel
+    range: Tjenestekanal
+    multivalued: true
+    description: Kanal for tilgang til tenesta.
+
+  har_deltaking:
+    slot_uri: cv:hasParticipation
+    range: Deltagelse
+    multivalued: true
+    description: Deltakarar med spesifikke roller i levering av tenesta.
+
+  relatert_teneste:
+    slot_uri: cv:relatedService
+    range: uriorcurie
+    multivalued: true
+    description: Relatert teneste.
+
+  er_del_av:
+    slot_uri: dct:isPartOf
+    range: uriorcurie
+    description: Tenesta er del av ei anna teneste.
+
+  har_del:
+    slot_uri: dct:hasPart
+    range: uriorcurie
+    multivalued: true
+    description: Deltenester som inngår i denne tenesta.
+
+  er_gruppert_av:
+    slot_uri: cv:isGroupedBy
+    range: Hendelse
+    multivalued: true
+    description: Hending(ar) som grupperer tenesta.
+
+  er_klassifisert_av:
+    slot_uri: cv:isClassifiedBy
+    range: Begrep
+    multivalued: true
+    description: Omgrep tenesta er klassifisert med.
+
+  følgjer:
+    slot_uri: cpsv:follows
+    range: Regel
+    multivalued: true
+    description: Regelverk tenesta følgjer.
+
+  har_gebyr:
+    slot_uri: cv:hasCost
+    range: Gebyr
+    multivalued: true
+    description: Gebyr knytt til tenesta.
+
+  har_regulativ_ressurs:
+    slot_uri: cv:hasLegalResource
+    range: RegulativRessurs
+    multivalued: true
+    description: Regulativ ressurs (lov, forskrift) knytt til tenesta.
+
+  krev:
+    slot_uri: dct:requires
+    range: uriorcurie
+    multivalued: true
+    description: Teneste eller ressurs denne tenesta krev.
+
+  malgruppe:
+    slot_uri: dct:audience
+    range: Begrep
+    multivalued: true
+    description: Målgruppe for tenesta.
+
+  nokkelord:
+    slot_uri: dcat:keyword
+    range: LangString
+    multivalued: true
+    description: Nøkkelord for tenesta.
+
+  sektor:
+    slot_uri: cv:sector
+    range: Begrep
+    multivalued: true
+    description: Industri/sektor tenesta tilhøyrer.
+
+  dekningsomrade:
+    slot_uri: dct:spatial
+    range: Begrep
+    multivalued: true
+    description: Geografisk dekningsområde.
+
+  tema:
+    slot_uri: dct:subject
+    range: Begrep
+    multivalued: true
+    description: Emne/tema tenesta handlar om.
+
+  temaomrade:
+    slot_uri: cv:thematicArea
+    range: Begrep
+    multivalued: true
+    description: Tematisk område for tenesta.
+
+  har_dokumentasjonstype:
+    slot_uri: cv:hasInputType
+    range: Dokumentasjonstype
+    multivalued: true
+    description: Dokumentasjon som krevst for tenesta.
+
+  heimeside:
+    slot_uri: foaf:homepage
+    range: uri
+    multivalued: true
+    description: Heimeside for tenesta eller organisasjonen.
+
+  eigd_av:
+    slot_uri: cv:ownedBy
+    range: Aktør
+    multivalued: true
+    description: Aktør som eig eller er ansvarleg for tenesta.
+
+  kan_utlose:
+    slot_uri: cpsvno:mayTrigger
+    range: OffentligTjeneste
+    multivalued: true
+    description: Offentlege tenester hendinga kan utløyse.
+
+  kan_utlose_behov_for:
+    slot_uri: cpsvno:mayTriggerNeedFor
+    range: uriorcurie
+    multivalued: true
+    description: Tenester det kan oppstå behov for som følgje av hendinga.
+
+  føretrekt_namn:
+    slot_uri: skos:prefLabel
+    range: LangString
+    multivalued: true
+    description: Føretrekt namn/term for organisasjonen.
+
+  adresse_ref:
+    slot_uri: locn:address
+    range: Adresse
+    description: Postadresse knytt til aktøren.
+
+  deltek_i:
+    slot_uri: cv:participates
+    range: Deltagelse
+    multivalued: true
+    description: Deltakingar aktøren er del av.
+
+  har_rolle:
+    slot_uri: cv:role
+    range: Begrep
+    description: Rolla aktøren har i ei deltaking.
+
+  deltakar:
+    slot_uri: cv:participant
+    range: Aktør
+    description: Aktøren som deltek.
+
+  epost:
+    slot_uri: cv:email
+    range: uri
+    multivalued: true
+    description: E-postadresse (mailto:-URI).
+
+  telefon:
+    slot_uri: cv:telephone
+    range: string
+    multivalued: true
+    description: Telefonnummer.
+
+  kontaktside:
+    slot_uri: cv:contactPage
+    range: uri
+    multivalued: true
+    description: Kontaktside (nettadresse).
+
+  opningstider:
+    slot_uri: cv:openingHours
+    range: string
+    multivalued: true
+    description: Opningstider.
+
+  nettside:
+    slot_uri: vcard:hasURL
+    range: uri
+    multivalued: true
+    description: Nettside for tenestekanalane.
+
+  kategori:
+    slot_uri: vcard:category
+    range: string
+    multivalued: true
+    description: Kategori for kontaktpunktet.
+
+  gyldig_i:
+    slot_uri: cccevno:acceptableValidityDuration
+    range: Duration
+    description: Kor lenge dokumentasjonen er gyldig (ISO 8601 varigheit).
+
+  godtek_sprak:
+    slot_uri: cccevno:acceptableLanguage
+    range: Spraak
+    multivalued: true
+    description: Språk dokumentasjonstypen er akseptert i.
+
+  klassifisering:
+    slot_uri: cv:evidenceTypeClassification
+    range: Begrep
+    description: Klassifisering av dokumentasjonstypen.
+
+  er_spesifisert_i:
+    slot_uri: cv:isSpecifiedIn
+    range: uriorcurie
+    description: Liste eller spesifikasjon ressursen er del av.
+
+  utstedingsstad:
+    slot_uri: cccevno:acceptableIssuingPlace
+    range: Begrep
+    description: Stad dokumentasjonen er akseptert frå.
+
+  mogleg_sprak:
+    slot_uri: cpsvno:possibleLanguage
+    range: Spraak
+    multivalued: true
+    description: Mogleg språk for tenesteresultatet.
+
+  kan_skape_hending:
+    slot_uri: xkos:causes
+    range: Hendelse
+    multivalued: true
+    description: Hending tenesteresultatet kan skape.
+
+  verdi:
+    slot_uri: cv:value
+    range: float
+    description: Verdien av gebyret.
+
+  valuta:
+    slot_uri: cv:currency
+    range: Begrep
+    description: Valutaen gebyret er oppgjeve i.
+
+  full_adresse:
+    slot_uri: locn:fullAddress
+    range: string
+    multivalued: true
+    description: Full adresse som fritekst.
+
+  postnummer:
+    slot_uri: locn:postCode
+    range: string
+    description: Postnummer.
+
+  poststad:
+    slot_uri: locn:postName
+    range: LangString
+    multivalued: true
+    description: Poststad/by.
+
+  land:
+    slot_uri: locn:adminUnitL1
+    range: string
+    description: Land (ISO 3166-1 alpha-2 kode).
+
+  inneheld_teneste:
+    slot_uri: dcatno:containsService
+    range: OffentligTjeneste
+    multivalued: true
+    description: Offentlege tenester i katalogen.
+
+  inneheld_hending:
+    slot_uri: dcatno:containsEvent
+    range: Hendelse
+    multivalued: true
+    description: Hendingar i katalogen.
+
+  utgjevar:
+    slot_uri: dct:publisher
+    range: Aktør
+    description: Utgjevar av katalogen.
+
+  oppdateringsfrekvens:
+    slot_uri: dct:accrualPeriodicity
+    range: Begrep
+    description: Kor ofte katalogen vert oppdatert.
+
+  lisens:
+    slot_uri: dct:license
+    range: uri
+    description: Lisens for katalogen.

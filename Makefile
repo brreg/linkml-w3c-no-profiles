@@ -1,4 +1,4 @@
-SCHEMAS    := dcat-ap-no dqv-ap-no
+SCHEMAS    := dcat-ap-no dqv-ap-no cpsv-ap-no
 SCHEMA_DIR := src/linkml
 GEN_DIR    := generated
 IMAGE      := docker.io/linkml/linkml:latest
@@ -44,11 +44,12 @@ convert-rdf:
 	for example in examples/*-eksempel.yaml; do \
 		name=$$(basename "$$example" .yaml); \
 		profil=$$(echo "$$name" | sed 's/-eksempel$$//'); \
+		mkdir -p $(GEN_DIR)/$$profil; \
 		$(PODMAN) linkml-convert \
 			--schema $(SCHEMA_DIR)/$$profil/$$profil-schema.yaml \
 			--output-format ttl \
 			--no-validate \
-			--output $(GEN_DIR)/$$name.ttl \
+			--output $(GEN_DIR)/$$profil/$$name.ttl \
 			$$example; \
 	done
 

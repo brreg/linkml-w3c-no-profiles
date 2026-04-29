@@ -4,7 +4,8 @@
       "Bash(bash *)",
       "Bash(podman run *)",
       "Bash(make test *)",
-      "WebFetch(domain:informasjonsforvaltning.github.io)"
+      "WebFetch(domain:informasjonsforvaltning.github.io)",
+      "Bash(echo \"Exit: $?\")"
     ]
   }
 }

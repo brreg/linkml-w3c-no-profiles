@@ -1,0 +1,237 @@
+id: https://data.norge.no/linkml/fair-metadata
+name: fair-metadata
+title: FAIR Metadata Overbygning
+description: >
+  FAIR metadata-overbygning som utfyllar norske applikasjonsprofilar
+  for å sikre maskin-aksjonerbar FAIR-konformitet i tråd med
+  FAIR-prinsippa (Findable, Accessible, Interoperable, Reusable).
+version: "1.0.0"
+
+default_prefix: https://data.norge.no/fair#
+default_range: string
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  fair:   https://data.norge.no/fair#
+  dct:    http://purl.org/dc/terms/
+  dcat:   http://www.w3.org/ns/dcat#
+  prov:   http://www.w3.org/ns/prov#
+
+subsets:
+  Findable:
+    description: Eigenskapar knytt til FAIR F-prinsippa (Findable).
+  Accessible:
+    description: Eigenskapar knytt til FAIR A-prinsippa (Accessible).
+  Interoperable:
+    description: Eigenskapar knytt til FAIR I-prinsippa (Interoperable).
+  Reusable:
+    description: Eigenskapar knytt til FAIR R-prinsippa (Reusable).
+
+# ---------------------------------------------------------------------------
+# Klasser
+# ---------------------------------------------------------------------------
+
+classes:
+
+  FAIRMetadata:
+    description: >
+      Maskin-aksjonerbar metadata som beskriv ein digital ressurs
+      i tråd med FAIR-prinsippa.
+    class_uri: fair:FAIRMetadata
+    slots:
+      - id
+    attributes:
+      ressursIdentifikator:
+        slot_uri: dct:identifier
+        range: uriorcurie
+        required: true
+        description: >
+          Global og persistent identifikator for ressursen (FAIR F1).
+          Skal vere ein PID (t.d. DOI, Handle, eller stabil URI).
+        in_subset:
+          - Findable
+      ressurstype:
+        slot_uri: dct:type
+        range: uriorcurie
+        required: true
+        description: >
+          Type digital ressurs, t.d. dcat:Dataset, dcat:DataService
+          eller ein URI frå eit kontrollert vokabular (FAIR F2).
+        in_subset:
+          - Findable
+      beskriv:
+        slot_uri: dct:subject
+        range: uriorcurie
+        description: URI til ressursen som denne metadata-posten beskriv (FAIR F3).
+        in_subset:
+          - Findable
+      tilgangsmetadata:
+        slot_uri: fair:tilgangsmetadata
+        range: Tilgangsmetadata
+        inlined: true
+        description: Metadata for tilgang og tilgjengelegheit (FAIR A1/A2).
+        in_subset:
+          - Accessible
+      gjenbruksmetadata:
+        slot_uri: fair:gjenbruksmetadata
+        range: Gjenbruksmetadata
+        inlined: true
+        description: Metadata som støttar gjenbruk av ressursen (FAIR R1.1/R1.3).
+        in_subset:
+          - Reusable
+      proveniensmetadata:
+        slot_uri: fair:proveniensmetadata
+        range: Proveniensmetadata
+        inlined: true
+        description: Metadata om opphav og endringshistorie (FAIR R1.2).
+        in_subset:
+          - Reusable
+      katalogregistrering:
+        slot_uri: fair:katalogregistrering
+        range: Katalogregistrering
+        inlined: true
+        description: Dokumenterer registrering i søkbar katalog (FAIR F4).
+        in_subset:
+          - Findable
+
+  Tilgangsmetadata:
+    description: Metadata for tilgang, autentisering og tilgjengelegheit (FAIR A1/A2).
+    class_uri: fair:Tilgangsmetadata
+    attributes:
+      tilgangsURL:
+        slot_uri: dcat:accessURL
+        range: uriorcurie
+        description: URL for maskinell tilgang til ressurs eller metadata (FAIR A1).
+        in_subset:
+          - Accessible
+      tilgangsprotokoll:
+        slot_uri: fair:tilgangsprotokoll
+        range: string
+        description: Kommunikasjonsprotokoll, t.d. HTTPS eller SPARQL (FAIR A1.1).
+        in_subset:
+          - Accessible
+      tilgangsrettar:
+        slot_uri: dct:accessRights
+        range: uriorcurie
+        description: >
+          Tilgangsnivå som URI, t.d. frå EU Publications Office
+          (offentleg, avgrensa, lukka) (FAIR A1.2).
+        in_subset:
+          - Accessible
+      autentiseringPaakrevd:
+        slot_uri: fair:autentiseringPaakrevd
+        range: boolean
+        description: Om autentisering eller autorisasjon er nødvendig (FAIR A1.2).
+        in_subset:
+          - Accessible
+      metadataPersistens:
+        slot_uri: fair:metadataPersistens
+        range: boolean
+        description: >
+          Metadata er tilgjengeleg sjølv om sjølve ressursen ikkje lenger
+          er tilgjengeleg (FAIR A2).
+        in_subset:
+          - Accessible
+
+  Gjenbruksmetadata:
+    description: Metadata som støttar gjenbruk av ressursen (FAIR R1.1, R1.3).
+    class_uri: fair:Gjenbruksmetadata
+    attributes:
+      lisens:
+        slot_uri: dct:license
+        range: uriorcurie
+        description: Brukslisens for ressursen som URI (FAIR R1.1).
+        in_subset:
+          - Reusable
+      bruksavgrensingar:
+        slot_uri: dct:rights
+        range: string
+        description: Eventuelle juridiske eller praktiske bruksavgrensingar (FAIR R1.1).
+        in_subset:
+          - Reusable
+      standardoverensstemming:
+        slot_uri: dct:conformsTo
+        range: uriorcurie
+        multivalued: true
+        description: >
+          Standardar eller profilar ressursen følgjer, t.d. DCAT-AP-NO
+          eller ISO 19115 (FAIR R1.3 / I3).
+        in_subset:
+          - Interoperable
+      vokabular:
+        slot_uri: fair:vokabular
+        range: uriorcurie
+        multivalued: true
+        description: >
+          Kontrollerte vokabular eller ontologiar som ressursen brukar
+          (FAIR I2).
+        in_subset:
+          - Interoperable
+
+  Proveniensmetadata:
+    description: Metadata om opphav og endringshistorie (FAIR R1.2).
+    class_uri: fair:Proveniensmetadata
+    attributes:
+      ansvarlegAktoer:
+        slot_uri: prov:wasAttributedTo
+        range: uriorcurie
+        description: >
+          Organisasjon eller aktør som er ansvarleg for ressursen,
+          som URI (FAIR R1.2).
+        in_subset:
+          - Reusable
+      generertAvAktivitet:
+        slot_uri: prov:wasGeneratedBy
+        range: uriorcurie
+        description: Aktivitet som har generert ressursen (FAIR R1.2).
+        in_subset:
+          - Reusable
+      opprettingsdato:
+        slot_uri: dct:created
+        range: date
+        description: Dato ressursen blei oppretta (FAIR R1.2).
+        in_subset:
+          - Reusable
+      endringsdato:
+        slot_uri: dct:modified
+        range: date
+        description: Sist endra dato (FAIR R1.2).
+        in_subset:
+          - Reusable
+
+  Katalogregistrering:
+    description: Dokumenterer registrering i søkbar katalog (FAIR F4).
+    class_uri: fair:Katalogregistrering
+    attributes:
+      registrertIKatalog:
+        slot_uri: fair:registrertIKatalog
+        range: uriorcurie
+        description: URI til katalogen der metadata er registrert (FAIR F4).
+        in_subset:
+          - Findable
+      katalogOppfoeringURL:
+        slot_uri: fair:katalogOppfoeringURL
+        range: uriorcurie
+        description: Direkte URL til oppføringa i katalogen (FAIR F4).
+        in_subset:
+          - Findable
+      registreringsdato:
+        slot_uri: fair:registreringsdato
+        range: date
+        description: Dato for katalogregistrering (FAIR F4).
+        in_subset:
+          - Findable
+
+# ---------------------------------------------------------------------------
+# Slots
+# ---------------------------------------------------------------------------
+
+slots:
+
+  id:
+    identifier: true
+    range: uriorcurie
+    description: Persistent URI-identifikator for metadata-posten (FAIR F1).

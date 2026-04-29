@@ -1,0 +1,111 @@
+# Eksempel: FAIR metadata-postar for tre ulike ressurstypar
+# - Eit ope datasett (F/A/I/R fullt ut)
+# - Ein datamodell med avgrensa tilgang
+# - Ein datateneste
+
+postar:
+
+  # -------------------------------------------------------------------------
+  # Post 1: Ope datasett — Norsk adresseregister
+  # -------------------------------------------------------------------------
+  - id: https://data.norge.no/fair/metadata/norsk-adresseregister
+    ressursIdentifikator: https://data.norge.no/datasets/adresseregister
+    ressurstype: dcat:Dataset
+    beskriv: https://data.norge.no/datasets/adresseregister
+
+    tilgangsmetadata:
+      tilgangsURL: https://data.kartverket.no/api/adresser
+      tilgangsprotokoll: HTTPS
+      tilgangsrettar: http://publications.europa.eu/resource/authority/access-right/PUBLIC
+      autentiseringPaakrevd: false
+      metadataPersistens: true
+
+    gjenbruksmetadata:
+      lisens: https://creativecommons.org/licenses/by/4.0/
+      bruksavgrensingar: Attribution påkravd. Ingen andre avgrensingar.
+      standardoverensstemming:
+        - https://data.norge.no/specification/dcat-ap-no
+        - https://www.w3.org/TR/vocab-dcat-2/
+      vokabular:
+        - http://www.w3.org/ns/dcat#
+        - http://purl.org/dc/terms/
+        - https://data.norge.no/vocabulary/adressetyper#
+
+    proveniensmetadata:
+      ansvarlegAktoer: https://organization-catalog.fellesdatakatalog.digdir.no/organizations/971040238
+      opprettingsdato: "2015-03-01"
+      endringsdato: "2024-11-15"
+
+    katalogregistrering:
+      registrertIKatalog: https://data.norge.no
+      katalogOppfoeringURL: https://data.norge.no/datasets/adresseregister
+      registreringsdato: "2020-06-10"
+
+  # -------------------------------------------------------------------------
+  # Post 2: Datamodell — NVDB Vegnettvokabular (avgrensa tilgang)
+  # -------------------------------------------------------------------------
+  - id: https://data.norge.no/fair/metadata/nvdb-vegnettvokabular
+    ressursIdentifikator: https://data.norge.no/models/nvdb-vegnett
+    ressurstype: modelldcatno:InformationModel
+    beskriv: https://data.norge.no/models/nvdb-vegnett
+
+    tilgangsmetadata:
+      tilgangsURL: https://nvdbapiles-v3.atlas.vegvesen.no/
+      tilgangsprotokoll: HTTPS
+      tilgangsrettar: http://publications.europa.eu/resource/authority/access-right/RESTRICTED
+      autentiseringPaakrevd: true
+      metadataPersistens: true
+
+    gjenbruksmetadata:
+      lisens: https://data.norge.no/nlod/no/2.0
+      standardoverensstemming:
+        - https://data.norge.no/specification/modelldcat-ap-no
+        - https://www.w3.org/TR/owl2-overview/
+      vokabular:
+        - http://www.w3.org/2002/07/owl#
+        - http://www.w3.org/2004/02/skos/core#
+
+    proveniensmetadata:
+      ansvarlegAktoer: https://organization-catalog.fellesdatakatalog.digdir.no/organizations/971032081
+      opprettingsdato: "2010-01-01"
+      endringsdato: "2024-09-30"
+
+    katalogregistrering:
+      registrertIKatalog: https://data.norge.no
+      katalogOppfoeringURL: https://data.norge.no/informationmodels/nvdb-vegnett
+      registreringsdato: "2021-04-20"
+
+  # -------------------------------------------------------------------------
+  # Post 3: Datateneste — SSB SPARQL-endepunkt for statistikk
+  # -------------------------------------------------------------------------
+  - id: https://data.norge.no/fair/metadata/ssb-sparql-endepunkt
+    ressursIdentifikator: https://data.ssb.no/api/v0/sparql
+    ressurstype: dcat:DataService
+    beskriv: https://data.ssb.no/api/v0/sparql
+
+    tilgangsmetadata:
+      tilgangsURL: https://data.ssb.no/api/v0/sparql
+      tilgangsprotokoll: SPARQL 1.1
+      tilgangsrettar: http://publications.europa.eu/resource/authority/access-right/PUBLIC
+      autentiseringPaakrevd: false
+      metadataPersistens: true
+
+    gjenbruksmetadata:
+      lisens: https://creativecommons.org/licenses/by/4.0/
+      standardoverensstemming:
+        - https://www.w3.org/TR/sparql11-overview/
+        - https://data.norge.no/specification/dcat-ap-no
+      vokabular:
+        - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        - http://www.w3.org/2002/07/owl#
+        - https://data.ssb.no/vocabulary/statistikk#
+
+    proveniensmetadata:
+      ansvarlegAktoer: https://organization-catalog.fellesdatakatalog.digdir.no/organizations/971526920
+      opprettingsdato: "2019-05-01"
+      endringsdato: "2025-01-08"
+
+    katalogregistrering:
+      registrertIKatalog: https://data.norge.no
+      katalogOppfoeringURL: https://data.norge.no/dataservices/ssb-sparql
+      registreringsdato: "2022-11-01"

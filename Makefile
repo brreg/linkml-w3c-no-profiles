@@ -125,9 +125,10 @@ clean:
 # MCP-validator
 # ---------------------------------------------------------------------------
 
-# Policyar er ikkje bakt inn i image — dei vert montert inn ved køyring
-# slik at endringar i policies/ tek effekt utan rebuild.
+# server.py og policies/ er ikkje bakt inn i image — dei vert montert
+# inn ved køyring slik at endringar tek effekt utan rebuild.
 MCP_RUN := podman run -i --rm \
+  -v "$(CURDIR)/$(MCP_DIR)/server.py:/app/server.py:ro" \
   -v "$(CURDIR)/$(MCP_DIR)/policies:/app/policies:ro"
 
 # Bygg container-bilete (trengst berre når server.py, requirements.txt

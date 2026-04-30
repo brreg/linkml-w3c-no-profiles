@@ -51,6 +51,34 @@ Alle klasser som kan opptre selvstendig får et `id`-slot med `identifier: true`
 ### Klassenavn
 Norske navn brukes for alle DCAT-AP-NO-klasser (f.eks. `Datasett`, `Katalog`, `Distribusjon`). Hjelpeklasser for W3C-vokabulartermer brukes med kortere engelske navn (`Begrep`, `Spraak`, `Mediatype`).
 
+### Slots, ikkje attributes
+Alle eigenskapar modellerast som globale slots under `slots:` på toppnivå i skjemaet — aldri som `attributes:` inne i ein klasse. Klasser refererer til slots via `slots:`-lista. Klassesspesifikke innskrenkingar (`required`, `in_subset` o.l.) leggast i `slot_usage` på klassen.
+
+```yaml
+# Rett
+slots:
+  tittel:
+    slot_uri: dct:title
+    range: string
+
+classes:
+  Datasett:
+    slots:
+      - tittel
+    slot_usage:
+      tittel:
+        required: true
+
+# Feil
+classes:
+  Datasett:
+    attributes:
+      tittel:
+        slot_uri: dct:title
+        range: string
+        required: true
+```
+
 ### Slot-uri og class-uri
 Alle klasser og slots har eksplisitt `class_uri` / `slot_uri` som mapper til de korrekte RDF-vokabularene (dcat:, dct:, foaf:, vcard: osv.).
 

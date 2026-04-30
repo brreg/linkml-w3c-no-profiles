@@ -88,8 +88,11 @@ def _fair_f2_title(sv, schema, issues):
 
 
 def _fair_f3_class_uris(sv, schema, issues):
-    """F3/I1: Alle klasser bør ha class_uri for formal ressursbeskrivelse."""
+    """F3/I1: Alle klasser bør ha class_uri for formal ressursbeskrivelse.
+    tree_root-klasser er friteke (dei er strukturelle hjelpeklasser)."""
     for cname, cls in (schema.classes or {}).items():
+        if cls.tree_root:
+            continue
         if not cls.class_uri:
             issues.append(issue(
                 "warning", "fair_f3", f"class:{cname}",

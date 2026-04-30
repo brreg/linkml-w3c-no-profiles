@@ -14,7 +14,9 @@ RUN apt-get update \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY server.py ./
+# server.py og policies/ vert montert inn ved køyring (sjå MCP_RUN i Makefile).
+# Legg att ein tom placeholder slik at CMD ikkje feilar ved bygg utan mount.
+RUN touch server.py
 
 RUN useradd -m mcp
 USER mcp

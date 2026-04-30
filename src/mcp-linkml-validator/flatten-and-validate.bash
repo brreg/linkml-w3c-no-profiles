@@ -27,6 +27,28 @@ podman run --rm \
   gen-linkml --mergeimports --format yaml "$SCHEMA" \
   > "$TMPFILE" 2>/dev/null
 
+# Steg 1b: gen-linkml --mergeimports strip tree_root — les det tilbake frå original-skjemaet.
+python3 - "$REPO_ROOT/$SCHEMA" "$TMPFILE" << 'PYEOF'
+import yaml, sys
+
+orig_path, flat_path = sys.argv[1], sys.argv[2]
+with open(orig_path) as f:
+    orig = yaml.safe_load(f)
+tree_root_classes = {
+    name for name, cls in (orig.get("classes") or {}).items()
+    if isinstance(cls, dict) and cls.get("tree_root")
+}
+if not tree_root_classes:
+    sys.exit(0)
+with open(flat_path) as f:
+    flat = yaml.safe_load(f)
+for name in tree_root_classes:
+    if name in (flat.get("classes") or {}) and isinstance(flat["classes"][name], dict):
+        flat["classes"][name]["tree_root"] = True
+with open(flat_path, "w") as f:
+    yaml.dump(flat, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+PYEOF
+
 # Steg 2: Send flattened schema til MCP-serveren og print resultatet.
 # Policyar vert montert inn frå repoet slik at endringar tek effekt utan rebuild.
 echo "→ Validerer (policy: $POLICY) ..." >&2
@@ -43,6 +65,7 @@ msgs = [
 ]
 print('\n'.join(json.dumps(m) for m in msgs))
 " "$TMPFILE" "$POLICY" | podman run -i --rm \
+  -v "$REPO_ROOT/src/mcp-linkml-validator/server.py:/app/server.py:ro" \
   -v "$REPO_ROOT/src/mcp-linkml-validator/policies:/app/policies:ro" \
   "$MCP_IMAGE" | python3 -c "
 import json, sys

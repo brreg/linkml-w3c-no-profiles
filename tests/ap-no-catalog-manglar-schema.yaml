@@ -1,0 +1,60 @@
+id: https://data.norge.no/linkml/test/ap-no-catalog-manglar
+name: ap-no-catalog-manglar
+title: Testskjema – domenemodell med mangelfull DCAT-AP-NO og DQV-AP-NO container
+description: >-
+  Testskjema som skal FEILE ap-no-catalog-policyen. Containerklassen manglar
+  desse klassane:
+    Feil (error):   Katalog, Kvalitetsmaal, Kvalitetsmaaling
+    Åtvaring (warning): Distribusjon, Datatjeneste, Kvalitetsdimensjon, Kvalitetsmerknad
+
+prefixes:
+  linkml:  https://w3id.org/linkml/
+  test:    https://data.norge.no/linkml/test/ap-no-catalog-manglar#
+  dcat:    http://www.w3.org/ns/dcat#
+  dqv:     http://www.w3.org/ns/dqv#
+  dct:     http://purl.org/dc/terms/
+
+default_prefix: https://data.norge.no/linkml/test/ap-no-catalog-manglar/
+default_range: string
+
+imports:
+  - linkml:types
+
+# ---------------------------------------------------------------------------
+# Stub-klasser (berre dei som faktisk er brukte i containeren)
+# ---------------------------------------------------------------------------
+
+classes:
+
+  Datasett:
+    class_uri: dcat:Dataset
+    description: Ei samling data publisert av ein einskapleg aktør.
+    slots: [id]
+
+  # --- Containerklasse (tree_root) ------------------------------------------
+
+  DomeneContainer:
+    tree_root: true
+    description: >-
+      Rotklasse for domenemodellen. Manglar Katalog (obligatorisk DCAT-AP-NO),
+      Kvalitetsmaal og Kvalitetsmaaling (obligatorisk DQV-AP-NO) — skal FEILE
+      ap-no-catalog-policyen med 3 feil og 4 åtvaringar.
+    attributes:
+      # Berre Datasett er med — Katalog manglar (obligatorisk)
+      datasett:
+        range: Datasett
+        multivalued: true
+        inlined_as_list: true
+        description: Datasett i domenemodellen.
+      # Distribusjon manglar (anbefalt)
+      # Datatjeneste manglar (anbefalt)
+      # Kvalitetsmaal manglar (obligatorisk)
+      # Kvalitetsmaaling manglar (obligatorisk)
+      # Kvalitetsdimensjon manglar (anbefalt)
+      # Kvalitetsmerknad manglar (anbefalt)
+
+slots:
+  id:
+    identifier: true
+    range: uriorcurie
+    description: URI-identifikator.

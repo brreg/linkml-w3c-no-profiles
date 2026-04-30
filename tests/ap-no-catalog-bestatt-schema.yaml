@@ -1,0 +1,129 @@
+id: https://data.norge.no/linkml/test/ap-no-catalog-bestatt
+name: ap-no-catalog-bestatt
+title: Testskjema – domenemodell med fullstendig DCAT-AP-NO og DQV-AP-NO container
+description: >-
+  Testskjema som skal BESTÅ ap-no-catalog-policyen. Containerklassen
+  inneheld alle obligatoriske og anbefalte klasser frå DCAT-AP-NO og DQV-AP-NO.
+
+prefixes:
+  linkml:  https://w3id.org/linkml/
+  test:    https://data.norge.no/linkml/test/ap-no-catalog-bestatt#
+  dcat:    http://www.w3.org/ns/dcat#
+  dqv:     http://www.w3.org/ns/dqv#
+  dct:     http://purl.org/dc/terms/
+
+default_prefix: https://data.norge.no/linkml/test/ap-no-catalog-bestatt/
+default_range: string
+
+imports:
+  - linkml:types
+
+# ---------------------------------------------------------------------------
+# Stub-klasser som representerer DCAT-AP-NO og DQV-AP-NO
+# (i eit reelt skjema ville desse vore importerte frå AP-NO-profilane)
+# ---------------------------------------------------------------------------
+
+classes:
+
+  # --- DCAT-AP-NO-klasser ---------------------------------------------------
+
+  Katalog:
+    class_uri: dcat:Catalog
+    description: Ei kuratert samling av metadata om datasett og datatenestar.
+    slots: [id]
+
+  Datasett:
+    class_uri: dcat:Dataset
+    description: Ei samling data publisert eller kurert av ein einskapleg aktør.
+    slots: [id]
+
+  Distribusjon:
+    class_uri: dcat:Distribution
+    description: Ei spesifikk representasjon av eit datasett.
+    slots: [id]
+
+  Datatjeneste:
+    class_uri: dcat:DataService
+    description: Ei samling operasjonar som gir tilgang til data.
+    slots: [id]
+
+  # --- DQV-AP-NO-klasser ----------------------------------------------------
+
+  Kvalitetsdimensjon:
+    class_uri: dqv:Dimension
+    description: Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål.
+    slots: [id]
+
+  Kvalitetsmaal:
+    class_uri: dqv:Metric
+    description: Eit kvalitetsmål som operasjonaliserer ein kvalitetsdimensjon.
+    slots: [id]
+
+  Kvalitetsmaaling:
+    class_uri: dqv:QualityMeasurement
+    description: Resultatet av å evaluere eit datasett mot eit kvalitetsmål.
+    slots: [id]
+
+  Kvalitetsmerknad:
+    class_uri: dqv:QualityAnnotation
+    description: Ein merknad om kvaliteten til eit datasett.
+    slots: [id]
+
+  # --- Containerklasse (tree_root) ------------------------------------------
+
+  DomeneContainer:
+    tree_root: true
+    description: >-
+      Rotklasse for domenemodellen. Inkluderer alle obligatoriske og anbefalte
+      klasser frå DCAT-AP-NO og DQV-AP-NO — skal BESTÅ ap-no-catalog-policyen.
+    attributes:
+      # DCAT-AP-NO obligatorisk
+      katalogar:
+        range: Katalog
+        multivalued: true
+        inlined_as_list: true
+        description: Katalogar i domenemodellen.
+      datasett:
+        range: Datasett
+        multivalued: true
+        inlined_as_list: true
+        description: Datasett i domenemodellen.
+      # DCAT-AP-NO anbefalt
+      distribusjonar:
+        range: Distribusjon
+        multivalued: true
+        inlined_as_list: true
+        description: Distribusjonar av datasett.
+      datatenestar:
+        range: Datatjeneste
+        multivalued: true
+        inlined_as_list: true
+        description: Datatenestar i domenemodellen.
+      # DQV-AP-NO obligatorisk
+      kvalitetsmaal:
+        range: Kvalitetsmaal
+        multivalued: true
+        inlined_as_list: true
+        description: Kvalitetsmål definerte for domenemodellen.
+      kvalitetsmaaling:
+        range: Kvalitetsmaaling
+        multivalued: true
+        inlined_as_list: true
+        description: Kvalitetsmålingar utførte på datasett.
+      # DQV-AP-NO anbefalt
+      kvalitetsdimensjonar:
+        range: Kvalitetsdimensjon
+        multivalued: true
+        inlined_as_list: true
+        description: Kvalitetsdimensjonar som organiserer kvalitetsmål.
+      kvalitetsmerknader:
+        range: Kvalitetsmerknad
+        multivalued: true
+        inlined_as_list: true
+        description: Merknader om datakvalitet.
+
+slots:
+  id:
+    identifier: true
+    range: uriorcurie
+    description: URI-identifikator.

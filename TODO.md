@@ -1,4 +1,3 @@
-Modellere ferdig ngr-virksomhet
 Lage ap-no profil for validering (alle obligatoriske klaser)
 lage eksempler for fint med tilhørende testing
 Modellere opp BR modell fra MagicDraw

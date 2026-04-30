@@ -159,6 +159,58 @@ _FAIR_CHECKS = {
 }
 
 
+def _check_container_classes(schema, policy: dict, issues: list) -> None:
+    """Sjekkar at tree_root-klassen har attributtar med range for spesifiserte klasser.
+
+    Policy-nøklar:
+      container_classes.must_include   – manglar → error
+      container_classes.should_include – manglar → warning
+    """
+    must_include   = policy.get("container_classes", {}).get("must_include", [])
+    should_include = policy.get("container_classes", {}).get("should_include", [])
+    if not must_include and not should_include:
+        return
+
+    # Finn tree_root-klassen i dette skjemaet (ikkje importerte klasser)
+    container_cls  = None
+    container_name = None
+    for cname, cls in (schema.classes or {}).items():
+        if cls.tree_root:
+            container_cls  = cls
+            container_name = cname
+            break
+
+    if container_cls is None:
+        issues.append(issue(
+            "error", "no_container_class", "schema",
+            "Ingen tree_root-klasse funnen — kan ikkje sjekke container-klasse-krav",
+        ))
+        return
+
+    # Samle range-verdiar frå attributtane til container-klassen
+    container_ranges = {
+        str(attr.range)
+        for attr in (container_cls.attributes or {}).values()
+        if attr.range
+    }
+
+    for cls_name in must_include:
+        if cls_name not in container_ranges:
+            issues.append(issue(
+                "error", "container_missing_required_class",
+                f"class:{container_name}",
+                f"Container '{container_name}' manglar obligatorisk attributt med range '{cls_name}'",
+            ))
+
+    for cls_name in should_include:
+        if cls_name not in container_ranges:
+            issues.append(issue(
+                "warning", "container_missing_recommended_class",
+                f"class:{container_name}",
+                f"Container '{container_name}' manglar anbefalt attributt med range '{cls_name}'",
+            ))
+
+
 def _run_fair_checks(sv, schema, policy: dict, issues: list) -> None:
     for check_name in policy.get("fair_checks", []):
         fn = _FAIR_CHECKS.get(check_name)
@@ -247,6 +299,9 @@ def validate_schema(schema_text: str, policy_name: str = "default") -> dict:
                     "error", "missing_common_class", f"class:{cc}",
                     f"Påkravd fellesklasse manglar: {cc}",
                 ))
+
+        # Container-klasse-sjekkar
+        _check_container_classes(schema, policy, issues)
 
         # 4) FAIR-strukturelle sjekkar (berre for policyer som definerer fair_checks)
         _run_fair_checks(sv, schema, policy, issues)

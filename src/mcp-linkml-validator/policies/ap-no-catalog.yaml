@@ -1,0 +1,48 @@
+version: 1
+
+# Grunnleggande felt-krav (same som default)
+required:
+  schema:
+    - id
+    - name
+  class: []
+  slot: []
+
+recommended:
+  schema:
+    - description
+  class:
+    - description
+  slot:
+    - description
+
+common_classes:
+  must_use: []
+
+# Sjekkar at containerklassen (tree_root) i ein domenemodell
+# inkluderer dei obligatoriske og anbefalte klassane frå
+# DCAT-AP-NO og DQV-AP-NO som range på container-attributtar.
+#
+# Bruk: make mcp-validate SCHEMA=<skjema> POLICY=ap-no-catalog
+#
+# DCAT-AP-NO-klasser
+#   Obligatorisk: Katalog (dcat:Catalog), Datasett (dcat:Dataset)
+#   Anbefalt:     Distribusjon (dcat:Distribution),
+#                 Datatjeneste (dcat:DataService)
+#
+# DQV-AP-NO-klasser
+#   Obligatorisk: Kvalitetsmaal (dqv:Metric),
+#                 Kvalitetsmaaling (dqv:QualityMeasurement)
+#   Anbefalt:     Kvalitetsdimensjon (dqv:Dimension),
+#                 Kvalitetsmerknad (dqv:QualityAnnotation)
+container_classes:
+  must_include:
+    - Katalog           # dcat:Catalog        — obligatorisk i DCAT-AP-NO
+    - Datasett          # dcat:Dataset        — obligatorisk i DCAT-AP-NO
+    - Kvalitetsmaal     # dqv:Metric          — obligatorisk i DQV-AP-NO
+    - Kvalitetsmaaling  # dqv:QualityMeasurement — obligatorisk i DQV-AP-NO
+  should_include:
+    - Distribusjon      # dcat:Distribution   — anbefalt i DCAT-AP-NO
+    - Datatjeneste      # dcat:DataService    — anbefalt i DCAT-AP-NO
+    - Kvalitetsdimensjon  # dqv:Dimension     — anbefalt i DQV-AP-NO
+    - Kvalitetsmerknad    # dqv:QualityAnnotation — anbefalt i DQV-AP-NO

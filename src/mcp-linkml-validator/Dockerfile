@@ -14,7 +14,8 @@ RUN apt-get update \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY server.py policy.yaml ./
+COPY server.py ./
+COPY policies/ ./policies/
 
 RUN useradd -m mcp
 USER mcp

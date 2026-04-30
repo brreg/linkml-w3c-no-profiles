@@ -23,45 +23,33 @@ Modellerer norske W3C-applikasjonsprofiler og tilknytte domenemodeller i [LinkML
 | `make docs` | Generer HTML-dokumentasjon til `generated/` |
 | `make clean` | Slett `generated/` |
 
+### Enkeltskjema direkte
+
+```bash
+podman run --rm -v "$(pwd):/work" -w /work -e PYTHONWARNINGS=ignore \
+  docker.io/linkml/linkml:latest \
+  linkml lint --ignore-warnings src/linkml/ap-no/dcat-ap-no/dcat-ap-no-schema.yaml
+```
+
 ### MCP-validator
 
 | Kommando | Beskriving |
 |---|---|
 | `make mcp-build` | Bygg container-bilete for MCP-serveren |
 | `make mcp-test` | Køyr unit-testar for MCP-serveren |
-| `make mcp-smoke` | Røyk-test MCP-serveren med eksempel-JSON-RPC-meldingar |
+| `make mcp-smoke` | Røyk-test med eksempel-JSON-RPC-meldingar |
 | `make mcp-run` | Start MCP-serveren interaktivt (stdin/stdout) |
-
-### Eksempel: validering via MCP-serveren
+| `make mcp-validate SCHEMA=<sti>` | Valider eit skjema med alle importar flatta ut (standard policy) |
+| `make mcp-validate SCHEMA=<sti> POLICY=fair` | Valider med FAIR-policy (F1–R1.3) |
 
 MCP-serveren les JSON-RPC-meldingar frå stdin og skriv responsar til stdout. Kvar melding er éi linje.
 
-```bash
-make mcp-build   # éin gong
-make mcp-smoke   # røyk-test med tests/test-mcp-linkml-validator.json
-```
-
-For å validere eit eige sjølvstendig skjema (utan relative importer), pipe meldingane direkte:
+**Sjølvstendige skjema** (berre `linkml:types`-import) kan sendast direkte som tekst:
 
 ```bash
 python3 -c "
 import json
-schema = '''
-id: https://example.org/mitt-skjema
-name: mitt-skjema
-prefixes:
-  linkml: https://w3id.org/linkml/
-  ex: https://example.org/
-default_prefix: ex
-imports:
-  - linkml:types
-classes:
-  Datasett:
-    class_uri: ex:Datasett
-    attributes:
-      tittel:
-        range: string
-'''
+schema = open('src/linkml/fair/fair-metadata/fair-metadata-schema.yaml').read()
 msgs = [
     {'jsonrpc':'2.0','id':1,'method':'initialize','params':{}},
     {'jsonrpc':'2.0','id':2,'method':'tools/call','params':{
@@ -73,86 +61,97 @@ print('\n'.join(json.dumps(m) for m in msgs))
 " | podman run -i --rm mcp-linkml-validator
 ```
 
-Valideringsresultatet kjem i `result.content[0].text` for melding 2:
+**Domenemodeller med relative importar** (FINT, AP-NO) vert flatta ut automatisk med `gen-linkml --mergeimports` før validering:
 
-```json
+```bash
+make mcp-validate SCHEMA=src/linkml/fint/fint-administrasjon/fint-administrasjon-schema.yaml
+```
+
+```
+→ Flattar ut src/linkml/fint/fint-administrasjon/fint-administrasjon-schema.yaml ...
+→ Validerer (policy: default) ...
 {
   "valid": true,
   "errorCount": 0,
-  "warningCount": 2,
+  "warningCount": 0,
+  "issues": []
+}
+```
+
+**FAIR-validering** — sjekkar om ein domenemodell oppfyller FAIR-prinsippa (F1–R1.3):
+
+```bash
+make mcp-validate SCHEMA=src/linkml/fint/fint-administrasjon/fint-administrasjon-schema.yaml POLICY=fair
+```
+
+```
+→ Flattar ut src/linkml/fint/fint-administrasjon/fint-administrasjon-schema.yaml ...
+→ Validerer (policy: fair) ...
+{
+  "valid": false,
+  "errorCount": 0,
+  "warningCount": 4,
   "issues": [
-    {
-      "severity": "warning",
-      "code": "missing_recommended_metadata",
-      "target": "schema:mitt-skjema",
-      "message": "Manglar anbefalt metadata: description"
-    },
-    {
-      "severity": "warning",
-      "code": "missing_recommended_metadata",
-      "target": "class:Datasett",
-      "message": "Manglar anbefalt metadata: description"
-    }
+    {"severity": "warning", "code": "fair_f2", "target": "schema", "message": "FAIR F2: schema.title manglar ..."},
+    ...
   ]
 }
 ```
 
-> **Merk:** Skjema med relative importer (t.d. `../../common/`) kan ikkje resolverast frå MCP-serveren sin tempkatalog. Bruk `make test` / `linkml lint` direkte for slike skjema.
+Valideringsresultatet inneheld `valid`, `errorCount`, `warningCount` og ei liste med `issues` (kvar med `severity`, `code`, `target` og `message`). Policy-baserte reglar konfigurerast i `src/mcp-linkml-validator/policies/`:
 
-Policy-baserte tilleggsreglar (`required`/`recommended`-felt, påkravde fellesklassar) konfigurerast i `src/mcp-linkml-validator/policy.yaml`.
-
-### Lint enkeltskjema direkte
-
-```bash
-podman run --rm -v "$(pwd):/work" -w /work -e PYTHONWARNINGS=ignore \
-  docker.io/linkml/linkml:latest \
-  linkml lint --ignore-warnings src/linkml/ap-no/dcat-ap-no/dcat-ap-no-schema.yaml
-```
+| Policy | Fil | Beskriving |
+|---|---|---|
+| `default` | `policies/default.yaml` | Obligatoriske og anbefalte metadata-felt |
+| `fair` | `policies/fair.yaml` | FAIR-sjekkar F1–R1.3 (tittel, class_uri, lisens, proveniens m.m.) |
 
 ## Katalogstruktur
 
 ```
 src/
 ├── linkml/
-│   ├── ap-no/                      # Norske W3C-applikasjonsprofiler
-│   │   ├── common/                 # Felles slot-definisjonar (delt av alle AP-NO)
-│   │   ├── dcat-ap-no/             # Datakatalogar og datasett
-│   │   ├── dqv-ap-no/              # Datakvalitet
-│   │   ├── cpsv-ap-no/             # Offentlege tenester
-│   │   ├── skos-ap-no/             # Begrepssamlingar
-│   │   └── xkos-ap-no/             # Utvidet klassifikasjon
+│   ├── ap-no/                          # Norske W3C-applikasjonsprofiler
+│   │   ├── common/                     # Felles slot-definisjonar (delt av alle AP-NO)
+│   │   ├── dcat-ap-no/                 # Datakatalogar og datasett
+│   │   ├── dqv-ap-no/                  # Datakvalitet
+│   │   ├── cpsv-ap-no/                 # Offentlege tenester
+│   │   ├── skos-ap-no/                 # Begrepssamlingar
+│   │   └── xkos-ap-no/                 # Utvidet klassifikasjon
 │   ├── ngr/
-│   │   └── ngr-adresse/            # Adressemodell (Matrikkelen)
-│   ├── fint/                       # FINT-domenemodeller
-│   │   ├── fint-common/            # Felles typar og abstrakte klassar
-│   │   ├── fint-administrasjon/    # Lønn, arbeidsforhold, organisasjon
-│   │   ├── fint-arkiv/             # Sak, journal, dokument
-│   │   ├── fint-okonomi/           # Økonomi og rekneskap
-│   │   ├── fint-personvern/        # Personvernmeldingar
-│   │   ├── fint-ressurs/           # Ressursar
-│   │   └── fint-utdanning/         # Utdanning og skole
+│   │   └── ngr-adresse/                # Adressemodell (Matrikkelen)
+│   ├── fint/                           # FINT-domenemodeller
+│   │   ├── fint-common/                # Felles typar og abstrakte klassar
+│   │   ├── fint-administrasjon/        # Lønn, arbeidsforhold, organisasjon
+│   │   ├── fint-arkiv/                 # Sak, journal, dokument
+│   │   ├── fint-okonomi/               # Økonomi og rekneskap
+│   │   ├── fint-personvern/            # Personvernmeldingar
+│   │   ├── fint-ressurs/               # Ressursar
+│   │   └── fint-utdanning/             # Utdanning og skole
 │   └── fair/
-│       └── fair-metadata/          # FAIR-metadataoverbygning (F/A/I/R-prinsippa)
-├── mcp-linkml-validator/           # MCP-server for LinkML-validering
-│   ├── server.py                   # JSON-RPC MCP-server
-│   ├── policy.yaml                 # Konfigurerbare valideringsreglar
+│       └── fair-metadata/              # FAIR-metadataoverbygning (F/A/I/R-prinsippa)
+├── mcp-linkml-validator/               # MCP-server for LinkML-validering
+│   ├── server.py                       # JSON-RPC MCP-server
+│   ├── policies/
+│   │   ├── default.yaml                # Standard validering (required/recommended felt)
+│   │   └── fair.yaml                   # FAIR-sjekkar F1–R1.3
+│   ├── flatten-and-validate.bash       # Flattar ut importar og validerer via MCP
 │   ├── Dockerfile
 │   └── requirements.txt
 └── templates/
-    └── docgen/                     # Jinja2-malar for HTML-dokumentasjon
+    └── docgen/                         # Jinja2-malar for HTML-dokumentasjon
 
 examples/
-├── ap-no/                          # Eksempeldata for AP-NO-profilene
-├── ngr/                            # Eksempeldata for NGR-domenemodellane
-└── fair/                           # Eksempeldata for FAIR-metadata
+├── ap-no/                              # Eksempeldata for AP-NO-profilene
+├── ngr/                                # Eksempeldata for NGR-domenemodellane
+└── fair/                               # Eksempeldata for FAIR-metadata
 
 tests/
-├── fixtures/                       # Testfixturer med Container/tree_root for AP-NO og FAIR
-├── test_schemas.sh                 # Lint og valider alle skjema og eksempel
-├── test_mcp_server.py              # Unit-testar for MCP-validator (pytest)
-└── test-mcp-linkml-validator.json  # Eksempel-JSON-RPC-meldingar for røyk-test
+├── fixtures/                           # Testfixturer med Container/tree_root for AP-NO og FAIR
+├── test_schemas.sh                     # Lint og valider alle skjema og eksempel
+├── test_mcp_server.py                  # Unit-testar for MCP-validator (pytest)
+└── test-mcp-linkml-validator.json      # Eksempel-JSON-RPC-meldingar for røyk-test
 
-generated/                          # Genererte artefakter (ikkje innsjekka i git)
+generated/                              # Genererte artefakter (ikkje innsjekka i git)
 ```
 
 ## Arkitekturprinsipp
@@ -173,4 +172,6 @@ Skjema under `src/linkml/ngr/` og `src/linkml/fint/` er sjølvstendige og har ei
 
 ### MCP-validator
 
-`src/mcp-linkml-validator/` er ein [MCP-server](https://modelcontextprotocol.io/) som eksponerer LinkML-validering som eit verktøy (`validate_linkml_schema`). Serveren køyrer standard LinkML-linting og policy-baserte tilleggsreglar konfigurerbare via `policy.yaml`. Bygg og køyr med `make mcp-build` og `make mcp-run`.
+`src/mcp-linkml-validator/` er ein [MCP-server](https://modelcontextprotocol.io/) som eksponerer LinkML-validering som eit verktøy (`validate_linkml_schema`). Serveren køyrer standard LinkML-linting og policy-baserte tilleggsreglar konfigurerbare via `policy.yaml`.
+
+For skjema med relative importar brukar `make mcp-validate` scriptet `flatten-and-validate.bash`, som fyrst flattar ut alle importar med `gen-linkml --mergeimports` i linkml-containeren (som har tilgang til heile repoet), og deretter sender det flattened skjemaet til MCP-serveren.

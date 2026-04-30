@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Validerer eit LinkML-skjema med alle importar resolve (flatten + validate).
+# Nyttig for domenemodeller med relative importar (t.d. FINT, AP-NO).
+#
+# Bruk: bash src/mcp-linkml-validator/flatten-and-validate.bash <sti-til-skjema> [policy]
+# Eks:  bash src/mcp-linkml-validator/flatten-and-validate.bash \
+#           src/linkml/fint/fint-administrasjon/fint-administrasjon-schema.yaml fair
+
+set -euo pipefail
+
+SCHEMA="${1:?Bruk: $0 <sti-til-skjema> [policy]}"
+POLICY="${2:-default}"
+REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+LINKML_IMAGE="docker.io/linkml/linkml:latest"
+MCP_IMAGE="mcp-linkml-validator"
+
+TMPFILE=$(mktemp /tmp/flat-XXXXXX.yaml)
+trap 'rm -f "$TMPFILE"' EXIT
+
+# Steg 1: Flat ut alle importar til eitt komplett skjema
+echo "→ Flattar ut $SCHEMA ..." >&2
+podman run --rm \
+  -v "$REPO_ROOT:/work" \
+  -w /work \
+  -e PYTHONWARNINGS=ignore \
+  "$LINKML_IMAGE" \
+  gen-linkml --mergeimports --format yaml "$SCHEMA" \
+  > "$TMPFILE" 2>/dev/null
+
+# Steg 2: Send flattened schema til MCP-serveren og print resultatet
+echo "→ Validerer (policy: $POLICY) ..." >&2
+python3 -c "
+import json, sys
+schema = open(sys.argv[1]).read()
+policy = sys.argv[2]
+msgs = [
+    {'jsonrpc': '2.0', 'id': 1, 'method': 'initialize', 'params': {}},
+    {'jsonrpc': '2.0', 'id': 2, 'method': 'tools/call', 'params': {
+        'name': 'validate_linkml_schema',
+        'arguments': {'schemaText': schema, 'policy': policy},
+    }},
+]
+print('\n'.join(json.dumps(m) for m in msgs))
+" "$TMPFILE" "$POLICY" | podman run -i --rm "$MCP_IMAGE" | python3 -c "
+import json, sys
+for line in sys.stdin:
+    r = json.loads(line)
+    if r.get('id') == 2:
+        print(r['result']['content'][0]['text'])
+"

@@ -16,7 +16,7 @@ fint_schema   = $(SCHEMA_DIR)/fint/$(1)/$(1)-schema.yaml
 fair_schema   = $(SCHEMA_DIR)/fair/$(1)/$(1)-schema.yaml
 
 .PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl gen-rdf convert-rdf clean \
-        mcp-build mcp-run mcp-test mcp-smoke
+        mcp-build mcp-run mcp-test mcp-smoke mcp-validate
 
 
 all: test
@@ -140,3 +140,9 @@ mcp-test:
 # Røyk-test med eksempel-JSON-RPC-meldingar
 mcp-smoke: mcp-build
 	cat tests/test-mcp-linkml-validator.json | podman run -i --rm $(MCP_IMAGE)
+
+# Valider eit skjema med alle importar flatta ut (støttar relative importar)
+# Bruk: make mcp-validate SCHEMA=<sti> [POLICY=fair]
+mcp-validate: mcp-build
+	@test -n "$(SCHEMA)" || (echo "Bruk: make mcp-validate SCHEMA=<sti-til-skjema> [POLICY=fair]"; exit 1)
+	bash $(MCP_DIR)/flatten-and-validate.bash $(SCHEMA) $(POLICY)

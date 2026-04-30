@@ -1,0 +1,49 @@
+version: 1
+
+# Standard felt-sjekkar (lik default)
+required:
+  schema:
+    - id
+    - name
+  class: []
+  slot: []
+
+recommended:
+  schema:
+    - description
+  class:
+    - description
+  slot:
+    - description
+
+common_classes:
+  must_use: []
+
+# FAIR-strukturelle sjekkar.
+# Kvart namn svarar til ein sjekk i _FAIR_CHECKS i server.py.
+#
+# F — Findable
+#   f1_persistent_id  : schema.id er HTTP(S)-URI (persistent identifikator)
+#   f2_title          : schema.title er sett (rike metadata)
+#   f3_class_uris     : alle klasser har class_uri (ressursbeskrivelse)
+#   f4_version        : schema.version er sett (versjonering / katalogregistrering)
+#
+# A — Accessible
+#   (dekt av f1 — HTTP(S)-URI er per definisjon resolvbar)
+#
+# I — Interoperable
+#   i1_slot_uris          : alle global slots har slot_uri (formal semantikk)
+#   i2_standard_prefixes  : schema deklarerer minst eitt standard vokabularprefiks
+#
+# R — Reusable
+#   r11_license    : schema har ein slot med dct:license (lisensinformasjon)
+#   r12_provenance : schema har ein proveniens-slot (prov:* eller dct:creator/publisher)
+fair_checks:
+  - f1_persistent_id
+  - f2_title
+  - f3_class_uris
+  - f4_version
+  - i1_slot_uris
+  - i2_standard_prefixes
+  - r11_license
+  - r12_provenance

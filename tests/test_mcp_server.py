@@ -73,6 +73,56 @@ classes:
 
 INVALID_YAML = "dette er ikkje gyldig yaml: {["
 
+# Schema som dekker alle FAIR-sjekkar
+FAIR_SCHEMA = """\
+id: https://example.org/fair-test
+name: fair-test
+title: FAIR testskjema
+description: Eit skjema for FAIR-testing
+version: "1.0.0"
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ex:  https://example.org/
+  dct: http://purl.org/dc/terms/
+  prov: http://www.w3.org/ns/prov#
+default_prefix: ex
+imports:
+  - linkml:types
+classes:
+  Ressurs:
+    description: Ein ressurs
+    class_uri: ex:Ressurs
+    tree_root: true
+    attributes:
+      namn:
+        description: Namn på ressursen
+        slot_uri: dct:title
+        range: string
+slots:
+  lisens:
+    slot_uri: dct:license
+    range: uriorcurie
+  ansvarleg:
+    slot_uri: prov:wasAttributedTo
+    range: uriorcurie
+"""
+
+# Schema som bryt fleire FAIR-sjekkar (har HTTP id for å kunne parsast,
+# men manglar title, version, class_uri, standard prefiks og lisens/proveniens)
+SCHEMA_NOT_FAIR = """\
+id: https://example.org/ikkje-fair
+name: ikkje-fair
+prefixes:
+  linkml: https://w3id.org/linkml/
+  ex: https://example.org/
+default_prefix: ex
+imports:
+  - linkml:types
+classes:
+  Ting:
+    description: Ei ting utan class_uri
+"""
+
 
 # ---------------------------------------------------------------------------
 # Testar: MCP-protokoll (handle-funksjonen, ingen linkml nødvendig)
@@ -190,3 +240,71 @@ class TestValidation:
         result = validate_schema(SCHEMA_NO_DESCRIPTION)
         actual_warnings = sum(1 for i in result["issues"] if i["severity"] == "warning")
         assert result["warningCount"] == actual_warnings
+
+
+# ---------------------------------------------------------------------------
+# Testar: FAIR-policy
+# ---------------------------------------------------------------------------
+
+class TestFAIRPolicy:
+    def test_fair_policy_valid_schema_passes(self):
+        result = validate_schema(FAIR_SCHEMA, "fair")
+        assert result["valid"] is True
+        assert result["errorCount"] == 0
+
+    def test_fair_policy_non_http_id_gives_error(self):
+        # Brukar VALID_SCHEMA med id erstatta av ein URN (ikkje HTTP/HTTPS) → fair_f1
+        schema = VALID_SCHEMA.replace(
+            "id: https://example.org/test", "id: urn:example:test"
+        )
+        result = validate_schema(schema, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "error"]
+        assert "fair_f1" in codes
+
+    def test_fair_policy_missing_title_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_f2" in codes
+
+    def test_fair_policy_class_without_class_uri_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_f3" in codes
+
+    def test_fair_policy_missing_version_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_f4" in codes
+
+    def test_fair_policy_no_standard_prefixes_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_i2" in codes
+
+    def test_fair_policy_missing_license_slot_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_r11" in codes
+
+    def test_fair_policy_missing_provenance_slot_gives_warning(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "fair")
+        codes = [i["code"] for i in result["issues"] if i["severity"] == "warning"]
+        assert "fair_r12" in codes
+
+    def test_handle_accepts_policy_parameter(self):
+        r = handle({
+            "jsonrpc": "2.0", "id": 10, "method": "tools/call",
+            "params": {
+                "name": "validate_linkml_schema",
+                "arguments": {"schemaText": FAIR_SCHEMA, "policy": "fair"},
+            },
+        })
+        text = r["result"]["content"][0]["text"]
+        result = json.loads(text)
+        assert "valid" in result
+
+    def test_default_policy_has_no_fair_checks(self):
+        result = validate_schema(SCHEMA_NOT_FAIR, "default")
+        codes = [i["code"] for i in result["issues"]]
+        assert "fair_f1" not in codes
+        assert "fair_r11" not in codes

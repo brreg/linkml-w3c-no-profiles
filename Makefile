@@ -125,13 +125,19 @@ clean:
 # MCP-validator
 # ---------------------------------------------------------------------------
 
-# Bygg container-bilete
+# Policyar er ikkje bakt inn i image — dei vert montert inn ved køyring
+# slik at endringar i policies/ tek effekt utan rebuild.
+MCP_RUN := podman run -i --rm \
+  -v "$(CURDIR)/$(MCP_DIR)/policies:/app/policies:ro"
+
+# Bygg container-bilete (trengst berre når server.py, requirements.txt
+# eller Dockerfile er endra)
 mcp-build:
 	podman build -t $(MCP_IMAGE) $(MCP_DIR)
 
 # Køyr MCP-serveren interaktivt (stdin/stdout)
 mcp-run:
-	podman run -i --rm $(MCP_IMAGE)
+	$(MCP_RUN) $(MCP_IMAGE)
 
 # Køyr unit-testar inne i linkml-imaget
 mcp-test:
@@ -139,10 +145,12 @@ mcp-test:
 
 # Røyk-test med eksempel-JSON-RPC-meldingar
 mcp-smoke: mcp-build
-	cat tests/test-mcp-linkml-validator.json | podman run -i --rm $(MCP_IMAGE)
+	cat tests/test-mcp-linkml-validator.json | $(MCP_RUN) $(MCP_IMAGE)
 
-# Valider eit skjema med alle importar flatta ut (støttar relative importar)
+# Valider eit skjema med alle importar flatta ut (støttar relative importar).
+# Bygger image automatisk viss det ikkje finst, men ikkje på nytt kvar gong.
 # Bruk: make mcp-validate SCHEMA=<sti> [POLICY=fair]
-mcp-validate: mcp-build
+mcp-validate:
 	@test -n "$(SCHEMA)" || (echo "Bruk: make mcp-validate SCHEMA=<sti-til-skjema> [POLICY=fair]"; exit 1)
+	@podman image exists $(MCP_IMAGE) 2>/dev/null || $(MAKE) --no-print-directory mcp-build
 	bash $(MCP_DIR)/flatten-and-validate.bash $(SCHEMA) $(POLICY)

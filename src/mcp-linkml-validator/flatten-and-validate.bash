@@ -27,7 +27,8 @@ podman run --rm \
   gen-linkml --mergeimports --format yaml "$SCHEMA" \
   > "$TMPFILE" 2>/dev/null
 
-# Steg 2: Send flattened schema til MCP-serveren og print resultatet
+# Steg 2: Send flattened schema til MCP-serveren og print resultatet.
+# Policyar vert montert inn frå repoet slik at endringar tek effekt utan rebuild.
 echo "→ Validerer (policy: $POLICY) ..." >&2
 python3 -c "
 import json, sys
@@ -41,7 +42,9 @@ msgs = [
     }},
 ]
 print('\n'.join(json.dumps(m) for m in msgs))
-" "$TMPFILE" "$POLICY" | podman run -i --rm "$MCP_IMAGE" | python3 -c "
+" "$TMPFILE" "$POLICY" | podman run -i --rm \
+  -v "$REPO_ROOT/src/mcp-linkml-validator/policies:/app/policies:ro" \
+  "$MCP_IMAGE" | python3 -c "
 import json, sys
 for line in sys.stdin:
     r = json.loads(line)

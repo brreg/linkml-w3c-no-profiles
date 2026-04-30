@@ -9,7 +9,8 @@
       "Bash(make mcp-build *)",
       "Bash(make mcp-smoke *)",
       "Bash(make mcp-test *)",
-      "Bash(make mcp-validate *)"
+      "Bash(make mcp-validate *)",
+      "Bash(podman build *)"
     ]
   }
 }

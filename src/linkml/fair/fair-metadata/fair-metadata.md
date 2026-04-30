@@ -12,7 +12,7 @@ Denne modellen kombinerer:
   - CPSV-AP-NO
 
 - 🧠 FAIR-overbygning:
-  - `FAIRMetadataPost`
+  - `FAIRMetadata`
   - `Tilgangsmetadata`
   - `Gjenbruksmetadata`
   - `Proveniensmetadata`
@@ -42,7 +42,7 @@ Dette gir ein to-lags modell:
 
 - **F1** → Persistente URIar (PID)
 - **F2** → DCAT-AP-NO rike metadata
-- **F3** → `beskrivRessurs` i FAIRMetadataPost
+- **F3** → `beskrivRessurs` i FAIRMetadata
 - **F4** → `Katalogregistrering`
 
 ---
@@ -84,7 +84,7 @@ MODEL["ModellDCAT-AP-NO"]
 DQV["DQV-AP-NO"]
 SKOS["SKOS / XKOS"]
 
-FAIR["FAIRMetadataPost"]
+FAIR["FAIRMetadata"]
 
 TILGANG["Tilgangsmetadata"]
 GJENBRUK["Gjenbruksmetadata"]

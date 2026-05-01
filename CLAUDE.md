@@ -73,7 +73,9 @@ src/linkml/
 examples/<domene>/          – Eksempeldata (YAML)
 tests/                      – Testskript og fixtures
 generated/                  – Genererte artefakter (ikke innsjekket)
-docs/                       – Utviklerveiledninger
+mkdocs/                     – Dokumentasjonsportal (MkDocs Material)
+  mkdocs.yml                – Konfigurasjon
+  docs/                     – Markdown-sider
 ```
 
 ## Modelleringsprinsipper

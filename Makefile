@@ -18,7 +18,7 @@ fair_schema   = $(SCHEMA_DIR)/fair/$(1)/$(1)-schema.yaml
 oreg_schema   = $(SCHEMA_DIR)/oreg/$(1)/$(1)-schema.yaml
 
 DOCS_IMAGE  := docker.io/squidfunk/mkdocs-material:9.5
-DOCS_RUN    := podman run --rm -v "$(CURDIR):/docs"
+DOCS_RUN    := podman run --rm -v "$(CURDIR)/mkdocs:/docs"
 
 .PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl gen-rdf convert-rdf clean \
         mcp-build mcp-run mcp-test mcp-smoke mcp-validate \

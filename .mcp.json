@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "linkml-validator": {
+      "type": "stdio",
+      "command": "podman",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/mnt/c/dev/github/linkml-w3c-no-profiles/src/mcp-linkml-validator/server.py:/app/server.py:ro",
+        "-v",
+        "/mnt/c/dev/github/linkml-w3c-no-profiles/src/mcp-linkml-validator/policies:/app/policies:ro",
+        "mcp-linkml-validator"
+      ],
+      "env": {}
+    }
+  }
+}

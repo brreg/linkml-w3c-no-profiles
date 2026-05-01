@@ -1,0 +1,49 @@
+# Eksempel på FINT Utdanning: skule, elevar, elevforhold og klasse.
+
+skolar:
+  - id: finta:skole/bakkehaugen-skole
+    navn: "Bakkehaugen skole"
+    juridiskNavn: "Bakkehaugen skole"
+    domenenavn: "bakkehaugen.skole.no"
+
+skoleressursar:
+  - id: finta:skoleressurs/sr-p23456
+    feidenavn:
+      identifikatorverdi: "kari.olsen@bakkehaugen.skole.no"
+    personalressurs: finta:personalressurs/p23456
+    skole:
+      - finta:skole/bakkehaugen-skole
+
+elevar:
+  - id: finta:elev/elev-1
+    elevnummer:
+      identifikatorverdi: "E-2024-001"
+    person: finta:person/ola-nordmann
+
+  - id: finta:elev/elev-2
+    elevnummer:
+      identifikatorverdi: "E-2024-002"
+
+klasser:
+  - id: finta:klasse/7a-2024
+    navn: "7A"
+
+  - id: finta:klasse/7b-2024
+    navn: "7B"
+
+elevforhold:
+  - id: finta:elevforhold/ef-elev-1-2024
+    beskrivelse: "Elevforhold for Ola Nordmann ved Bakkehaugen skole, 2024–2025"
+    elev: finta:elev/elev-1
+    skole: finta:skole/bakkehaugen-skole
+
+  - id: finta:elevforhold/ef-elev-2-2024
+    beskrivelse: "Elevforhold ved Bakkehaugen skole, 2024–2025"
+    elev: finta:elev/elev-2
+    skole: finta:skole/bakkehaugen-skole
+
+kontaktlaerergrupper:
+  - id: finta:kontaktlaerergruppe/7a-laerergruppe
+    navn: "Kontaktlærergruppe 7A"
+    klasse:
+      - finta:klasse/7a-2024

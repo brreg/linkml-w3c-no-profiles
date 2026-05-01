@@ -1,0 +1,109 @@
+# Eksempel på FINT Administrasjon: organisasjonselement, personalressurs og arbeidsforhold.
+
+personar:
+  - id: finta:person/ola-nordmann
+    fodselsnummer:
+      identifikatorverdi: "12056712345"
+    navn:
+      fornavn: "Ola"
+      etternavn: "Nordmann"
+    fodselsdato: "1967-05-12"
+    kontaktinformasjon:
+      epostadresse: "ola.nordmann@kommune.no"
+      mobiltelefonnummer: "97012345"
+
+  - id: finta:person/kari-olsen
+    fodselsnummer:
+      identifikatorverdi: "23047823456"
+    navn:
+      fornavn: "Kari"
+      mellomnavn: "Marie"
+      etternavn: "Olsen"
+    fodselsdato: "1978-04-23"
+
+organisasjonselement:
+  - id: finta:organisasjonselement/raadhuset
+    organisasjonsId:
+      identifikatorverdi: "100"
+    organisasjonsKode:
+      identifikatorverdi: "KOM"
+    navn: "Kommunedirektøren"
+    kortnavn: "KOM"
+    overordnet: finta:organisasjonselement/raadhuset
+
+  - id: finta:organisasjonselement/it-avdeling
+    organisasjonsId:
+      identifikatorverdi: "110"
+    organisasjonsKode:
+      identifikatorverdi: "IKT"
+    navn: "IKT-avdelingen"
+    kortnavn: "IKT"
+    overordnet: finta:organisasjonselement/raadhuset
+
+personalressurskategoriar:
+  - id: finta:personalressurskategori/fast-ansatt
+    kode: "F"
+    navn: "Fast ansatt"
+
+stillingskoder:
+  - id: finta:stillingskode/raadgiver
+    kode: "7451"
+    navn: "Rådgiver"
+
+  - id: finta:stillingskode/overingenir
+    kode: "8530"
+    navn: "Overingeniør"
+
+personalressursar:
+  - id: finta:personalressurs/p12345
+    ansattnummer:
+      identifikatorverdi: "P12345"
+    ansettelsesperiode:
+      start: "2020-01-15T00:00:00Z"
+    jobbtittel: "Rådgiver IKT"
+    kontaktinformasjon:
+      epostadresse: "ola.nordmann@kommune.no"
+      telefonnummer: "55123456"
+    person: finta:person/ola-nordmann
+    personalressurskategori: finta:personalressurskategori/fast-ansatt
+
+  - id: finta:personalressurs/p23456
+    ansattnummer:
+      identifikatorverdi: "P23456"
+    ansettelsesperiode:
+      start: "2018-08-01T00:00:00Z"
+    jobbtittel: "IKT-sjef"
+    kontaktinformasjon:
+      epostadresse: "kari.olsen@kommune.no"
+      telefonnummer: "55123490"
+    person: finta:person/kari-olsen
+    personalressurskategori: finta:personalressurskategori/fast-ansatt
+
+arbeidsforhold:
+  - id: finta:arbeidsforhold/af-p12345-1
+    stillingsnummer: "1001"
+    stillingstittel: "Rådgiver IKT"
+    ansettelsesprosent: 100
+    tilstedeprosent: 100
+    lonnsprosent: 100
+    aarslonn: 650000
+    hovedstilling: true
+    gyldighetsperiode:
+      start: "2020-01-15T00:00:00Z"
+    personalressurs: finta:personalressurs/p12345
+    arbeidssted: finta:organisasjonselement/it-avdeling
+    stillingskode: finta:stillingskode/raadgiver
+
+  - id: finta:arbeidsforhold/af-p23456-1
+    stillingsnummer: "1000"
+    stillingstittel: "IKT-sjef"
+    ansettelsesprosent: 100
+    tilstedeprosent: 100
+    lonnsprosent: 100
+    aarslonn: 850000
+    hovedstilling: true
+    gyldighetsperiode:
+      start: "2018-08-01T00:00:00Z"
+    personalressurs: finta:personalressurs/p23456
+    arbeidssted: finta:organisasjonselement/it-avdeling
+    stillingskode: finta:stillingskode/overingenir

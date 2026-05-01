@@ -1,0 +1,81 @@
+# Eksempel på FINT Arkiv: sak, journalpost og tilhøyrande kodeverk.
+
+administrativeEiningar:
+  - id: finta:administrativenhet/post-og-arkiv
+    navn: "Post og arkiv"
+
+arkivressursar:
+  - id: finta:arkivressurs/ar-1
+    kildesystemId:
+      identifikatorverdi: "AR001"
+    personalressurs: finta:personalressurs/p12345
+
+sakstatuskodar:
+  - id: finta:saksstatus/under-behandling
+    kode: "B"
+    navn: "Under behandling"
+
+  - id: finta:saksstatus/avsluttet
+    kode: "A"
+    navn: "Avsluttet"
+
+journalstatuskodar:
+  - id: finta:journalstatus/journalfoert
+    kode: "J"
+    navn: "Journalført"
+
+journalposttypar:
+  - id: finta:journalposttype/inngaaende-dokument
+    kode: "I"
+    navn: "Inngående dokument"
+
+  - id: finta:journalposttype/utgaaende-dokument
+    kode: "U"
+    navn: "Utgående dokument"
+
+sakar:
+  - id: finta:sak/2024-0001
+    tittel: "Søknad om tilskudd til lokalt kulturtiltak"
+    saksstatus: finta:saksstatus/avsluttet
+    administrativEnhet: finta:administrativenhet/post-og-arkiv
+    saksansvarlig: finta:arkivressurs/ar-1
+    opprettetAv: finta:arkivressurs/ar-1
+    saksaar: "2024"
+    sakssekvensnummer: "1"
+    saksdato: "2024-02-15T09:00:00Z"
+
+  - id: finta:sak/2024-0002
+    tittel: "Reguleringsplan Sentrum Nord"
+    saksstatus: finta:saksstatus/under-behandling
+    administrativEnhet: finta:administrativenhet/post-og-arkiv
+    saksansvarlig: finta:arkivressurs/ar-1
+    opprettetAv: finta:arkivressurs/ar-1
+    saksaar: "2024"
+    sakssekvensnummer: "2"
+    saksdato: "2024-03-01T08:30:00Z"
+
+journalpostar:
+  - id: finta:journalpost/2024-0001-1
+    tittel: "Søknad om tilskudd"
+    journalposttype: finta:journalposttype/inngaaende-dokument
+    journalstatus: finta:journalstatus/journalfoert
+    arkivertAv: finta:arkivressurs/ar-1
+    opprettetAv: "Ola Nordmann"
+    opprettetDato: "2024-02-15T09:05:00Z"
+    journalDato: "2024-02-15T09:05:00Z"
+    journalAr: "2024"
+    journalPostnummer: 1
+    journalSekvensnummer: 42
+
+  - id: finta:journalpost/2024-0001-2
+    tittel: "Vedtak om tilskudd"
+    journalposttype: finta:journalposttype/utgaaende-dokument
+    journalstatus: finta:journalstatus/journalfoert
+    arkivertAv: finta:arkivressurs/ar-1
+    opprettetAv: "Kari Olsen"
+    opprettetDato: "2024-03-10T13:00:00Z"
+    journalDato: "2024-03-10T13:00:00Z"
+    journalAr: "2024"
+    journalPostnummer: 2
+    journalSekvensnummer: 87
+    sendtDato: "2024-03-10T14:00:00Z"

@@ -1,0 +1,61 @@
+# Eksempel på FINT Ressurs: applikasjonar, identitetar og rettigheiter.
+
+brukertypar:
+  - id: finta:brukertype/ansatt
+    kode: "ANSATT"
+    navn: "Ansatt"
+    gyldighetsperiode:
+      start: "2020-01-01T00:00:00Z"
+
+  - id: finta:brukertype/elev
+    kode: "ELEV"
+    navn: "Elev"
+    gyldighetsperiode:
+      start: "2020-01-01T00:00:00Z"
+
+applikasjonar:
+  - id: finta:applikasjon/hr-portal
+    navn: "HR-portalen"
+    beskrivelse: "Sjølvbeteningsportal for HR-tenester"
+    gyldighetsperiode:
+      start: "2022-01-01T00:00:00Z"
+
+  - id: finta:applikasjon/teams
+    navn: "Microsoft Teams"
+    beskrivelse: "Kommunikasjons- og samarbeidsplattform"
+    gyldighetsperiode:
+      start: "2020-03-01T00:00:00Z"
+
+applikasjonsressursar:
+  - id: finta:applikasjonsressurs/hr-portal-ansatt
+    navn: "HR-portal – ansatttilgang"
+    gyldighetsperiode:
+      start: "2022-01-01T00:00:00Z"
+    eier: finta:organisasjonselement/it-avdeling
+    applikasjon: finta:applikasjon/hr-portal
+    brukertype:
+      - finta:brukertype/ansatt
+
+rettigheiter:
+  - id: finta:rettighet/les-ansattdata
+    kode: "HR_READ"
+    navn: "Les ansattdata"
+    beskrivelse: "Tilgang til å lese eigne personalopplysningar i HR-portalen"
+
+  - id: finta:rettighet/teams-bruker
+    kode: "TEAMS_USER"
+    navn: "Teams-bruker"
+    beskrivelse: "Rett til å bruke Microsoft Teams som kommunikasjonsplattform"
+
+identitetar:
+  - id: finta:identitet/id-p12345
+    personalressurs: finta:personalressurs/p12345
+    rettighet:
+      - finta:rettighet/les-ansattdata
+      - finta:rettighet/teams-bruker
+
+  - id: finta:identitet/id-p23456
+    personalressurs: finta:personalressurs/p23456
+    rettighet:
+      - finta:rettighet/les-ansattdata
+      - finta:rettighet/teams-bruker

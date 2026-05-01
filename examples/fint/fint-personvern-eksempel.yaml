@@ -1,0 +1,49 @@
+# Eksempel på FINT Personvern: behandlingsaktivitetar, samtykke og tilhøyrande kodeverk.
+
+behandlingsgrunnlag:
+  - id: finta:behandlingsgrunnlag/avtale
+    kode: "GDPR-6-1-b"
+    navn: "Nødvendig for å oppfylle en avtale"
+
+  - id: finta:behandlingsgrunnlag/rettslig-plikt
+    kode: "GDPR-6-1-c"
+    navn: "Nødvendig for å oppfylle en rettslig forpliktelse"
+
+personopplysningar:
+  - id: finta:personopplysning/kontaktinformasjon
+    kode: "KI"
+    navn: "Kontaktinformasjon (e-post, telefon)"
+
+  - id: finta:personopplysning/identifikasjon
+    kode: "ID"
+    navn: "Identifikasjonsopplysninger (navn, fødselsnummer)"
+
+tenester:
+  - id: finta:tjeneste/hr-system
+    navn: "HR-systemet"
+
+  - id: finta:tjeneste/lonn-system
+    navn: "Lønnssystemet"
+
+behandlingar:
+  - id: finta:behandling/behandling-lonn
+    formal: "Behandling av lønnsopplysninger for utbetaling av lønn til ansatte."
+    aktiv: true
+    behandlingsgrunnlag: finta:behandlingsgrunnlag/rettslig-plikt
+    personopplysning: finta:personopplysning/identifikasjon
+    tjeneste: finta:tjeneste/lonn-system
+
+  - id: finta:behandling/behandling-hr
+    formal: "Administrasjon av arbeidsforhold og personalopplysninger."
+    aktiv: true
+    behandlingsgrunnlag: finta:behandlingsgrunnlag/avtale
+    personopplysning: finta:personopplysning/kontaktinformasjon
+    tjeneste: finta:tjeneste/hr-system
+
+samtykker:
+  - id: finta:samtykke/samtykke-1
+    gyldighetsperiode:
+      start: "2024-01-01T00:00:00Z"
+    opprettet: "2024-01-01T10:00:00Z"
+    behandling: finta:behandling/behandling-hr
+    person: finta:person/ola-nordmann

@@ -1,0 +1,71 @@
+# Eksempel på FINT Økonomi: faktura, fakturagrunnlag og leverandør.
+
+fakturautstederear:
+  - id: finta:fakturautsteder/kommunen
+    navn: "Eksempel kommune"
+
+leverandorar:
+  - id: finta:leverandor/leverandor-1
+    leverandornummer:
+      identifikatorverdi: "LEV001"
+    kontonummer: "1503.12.34567"
+
+merverdiavgifter:
+  - id: finta:merverdiavgift/mva25
+    kode: "25"
+    navn: "Standard MVA 25%"
+    sats: 25
+
+varer:
+  - id: finta:vare/konsulenttenester
+    kode: "KON"
+    navn: "Konsulenttjenester"
+    enhet: "time"
+    pris: 1250000
+    fakturautsteder: finta:fakturautsteder/kommunen
+    merverdiavgift: finta:merverdiavgift/mva25
+
+fakturagrunnlag:
+  - id: finta:fakturagrunnlag/fg-2024-001
+    ordrenummer:
+      identifikatorverdi: "ORD-2024-001"
+    mottaker:
+      person: finta:person/ola-nordmann
+    fakturalinjer:
+      - antall: 10.0
+        pris: 1250000
+        vare: finta:vare/konsulenttenester
+        fritekst:
+          - "Konsulenttimer mars 2024"
+    leveringsdato: "2024-03-31"
+    nettobelop: 12500000
+    avgiftsbelop: 3125000
+    totalbelop: 15625000
+    fakturautsteder: finta:fakturautsteder/kommunen
+
+fakturaer:
+  - id: finta:faktura/f-2024-001
+    fakturanummer:
+      identifikatorverdi: "F-2024-001"
+    dato: "2024-04-01"
+    forfallsdato: "2024-05-01"
+    belop: 15625000
+    mottaker: "Ola Nordmann"
+    betalt: false
+    fakturert: true
+    kreditert: false
+    restbelop: 15625000
+    fakturagrunnlag: finta:fakturagrunnlag/fg-2024-001
+
+  - id: finta:faktura/f-2024-002
+    fakturanummer:
+      identifikatorverdi: "F-2024-002"
+    dato: "2024-04-15"
+    forfallsdato: "2024-05-15"
+    belop: 8750000
+    mottaker: "Leverandør AS"
+    betalt: true
+    fakturert: true
+    kreditert: false
+    restbelop: 0
+    fakturagrunnlag: finta:fakturagrunnlag/fg-2024-001

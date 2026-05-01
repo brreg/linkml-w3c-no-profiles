@@ -220,7 +220,7 @@ importer `fair-metadata` og legg til en referanse til `FAIRMetadata`:
 imports:
   - linkml:types
   - ../../ap-no/dcat-ap-no/dcat-ap-no-schema
-  - ../../fair/fair-metadata/fair-metadata-schema
+  - ../../fair/fair-metadata/fair-metadata-schema # ← importerer FAIR-metadata-schema
 
 classes:
   MittDatasett:

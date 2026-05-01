@@ -172,9 +172,13 @@ Skjema under `src/linkml/ap-no/` modellerer [norske applikasjonsprofiler](https:
 
 Testfixturer (`tests/fixtures/`) legg til ein `Container`-klasse med `tree_root: true` for kvar profil, slik at eksempeldata kan validerast isolert.
 
+### FAIR-metadata
+
+`src/linkml/fair/fair-metadata/` modellerer gapet mellom AP-NO-profilene og [FAIR-prinsippa](https://www.go-fair.org/fair-principles/) (Findable, Accessible, Interoperable, Reusable). Dei er meint å importerast av domenemodeller og er ikkje sjølvstendige. Skjemaet er eit bibliotek utan `tree_root`; testfixturen (`tests/fixtures/fair-metadata-fixture.yaml`) legg til `Container` for validering.
+
 ### NGR-domenemodeller
 
-Skjema under `src/linkml/ngr/` modellerer Nasjonale grunndata — dei autoritative grunnlagsregistra i norsk offentleg sektor:
+Skjema under `src/linkml/ngr/` modellerer [Nasjonale grunndata](https://informasjonsforvaltning.github.io/nasjonale-grunndata/) — dei autoritative grunnlagsregistra i norsk offentleg sektor:
 
 | Skjema | Register | Beskriving |
 |---|---|---|
@@ -185,15 +189,17 @@ Skjema under `src/linkml/ngr/` modellerer Nasjonale grunndata — dei autoritati
 
 Alle NGR-skjema er sjølvstendige med eigen `tree_root`-klasse og importerer berre `linkml:types`. Klasser frå andre domene (t.d. `OffisiellAdresse` i ngr-eiendom, `Person` i ngr-virksomhet) er modellerte som stub-klasser med berre `id`.
 
+### OREG-domenemodeller
+Skjema under `src/linkml/oreg/` modellerer offentlige registre.
+
 ### FINT-domenemodeller
 
-Skjema under `src/linkml/fint/` modellerer [FINT](https://www.fintlabs.no/)-informasjonsmodellen for norsk offentleg sektor. Alle FINT-skjema importerer `fint-common` for felles abstrakte klassar og typar (`Aktoer`, `Enhet`, `Begrep`, `Identifikator` m.fl.) og er sjølvstendige med eigen `tree_root`-klasse.
+Skjema under `src/linkml/fint/` modellerer [FINT-informasjonsmodellen](https://informasjonsmodell.felleskomponent.no/docs?v=v4.0.20) for integrasjon i norsk fylkeskommune sektor. Alle FINT-skjema importerer `fint-common` for felles abstrakte klassar og typar (`Aktoer`, `Enhet`, `Begrep`, `Identifikator` m.fl.) og er sjølvstendige med eigen `tree_root`-klasse.
 
-### FAIR-metadata
+### SAMT-domenemodeller
+Skjema under `src/linkml/samt/` modellerer [SAMT-informasjonsmodellen](https://docs.samt-bu.no/om/om-samt-bu/) for integrasjon i norsk kommune sektor.
 
-`src/linkml/fair/fair-metadata/` modellerer gapet mellom AP-NO-profilene og [FAIR-prinsippa](https://www.go-fair.org/fair-principles/) (Findable, Accessible, Interoperable, Reusable). Skjemaet er eit bibliotek utan `tree_root`; testfixturen (`tests/fixtures/fair-metadata-fixture.yaml`) legg til `Container` for validering.
-
-### MCP-validator
+### MCP-linkml-validator
 
 `src/mcp-linkml-validator/` er ein [MCP-server](https://modelcontextprotocol.io/) som eksponerer LinkML-validering som eit verktøy (`validate_linkml_schema`). Serveren køyrer standard LinkML-linting og policy-baserte tilleggsreglar konfigurerbare via `policy.yaml`.
 

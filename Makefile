@@ -15,8 +15,12 @@ ngr_schema    = $(SCHEMA_DIR)/ngr/$(1)/$(1)-schema.yaml
 fint_schema   = $(SCHEMA_DIR)/fint/$(1)/$(1)-schema.yaml
 fair_schema   = $(SCHEMA_DIR)/fair/$(1)/$(1)-schema.yaml
 
+DOCS_IMAGE  := docker.io/squidfunk/mkdocs-material
+DOCS_RUN    := podman run --rm -v "$(CURDIR):/docs"
+
 .PHONY: all test validate docs gen-jsonld gen-shacl gen-python gen-jsonschema gen-owl gen-rdf convert-rdf clean \
-        mcp-build mcp-run mcp-test mcp-smoke mcp-validate
+        mcp-build mcp-run mcp-test mcp-smoke mcp-validate \
+        docs-serve docs-build
 
 
 all: test
@@ -120,6 +124,18 @@ docs:
 
 clean:
 	rm -rf $(GEN_DIR)
+
+# ---------------------------------------------------------------------------
+# Dokumentasjonsportal (MkDocs Material)
+# ---------------------------------------------------------------------------
+
+# Køyr lokal dev-server med live-reload på http://localhost:8000
+docs-serve:
+	$(DOCS_RUN) -it -p 8000:8000 $(DOCS_IMAGE) serve --dev-addr=0.0.0.0:8000
+
+# Bygg statisk HTML til site/
+docs-build:
+	$(DOCS_RUN) $(DOCS_IMAGE) build
 
 # ---------------------------------------------------------------------------
 # MCP-validator

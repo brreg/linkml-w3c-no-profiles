@@ -33,7 +33,7 @@ URI: [samtbuskole:Elev](https://example.no/ontology/skole#Elev)
     
 
         
-      Elev : identifikator
+      Elev : id
         
       Elev : navn
         
@@ -99,7 +99,7 @@ URI: [samtbuskole:Elev](https://example.no/ontology/skole#Elev)
 ### Arva
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
-| --- | --- | --- | --- || [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) | [Person](person.md) |
+| --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Person](person.md) |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen | [Person](person.md) |
 
 
@@ -196,13 +196,13 @@ attributes:
     domain_of:
     - Elev
     range: Basisgruppe
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Elev
     domain_of:
     - Containerklasse
@@ -210,6 +210,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

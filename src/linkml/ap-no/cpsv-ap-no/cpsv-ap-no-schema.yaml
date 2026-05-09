@@ -42,108 +42,6 @@ imports:
 
 classes:
 
-  # ---- Lovpålagt tjeneste -------------------------------------------------
-
-  LovpalagtTjeneste:
-    class_uri: cpsvno:StatutoryService
-    description: Ei lovpålagd teneste som offentlege organ er pålagde å utføre.
-    slots:
-      - id
-      - tittel
-      - beskrivelse
-      - identifikator_literal
-      - har_kontaktpunkt
-      - har_tenesteresultattype
-      - tema
-      - dekningsomrade
-      - har_dokumentasjonstype
-      - heimeside
-      - type_concept
-      - temaomrade
-      - er_del_av
-      - har_del
-      - er_gruppert_av
-      - er_klassifisert_av
-      - folger
-      - har_gebyr
-      - har_regulativ_ressurs
-      - krev
-      - malgruppe
-      - nokkelord
-      - sektor
-    slot_usage:
-      tittel:
-        required: true
-        in_subset:
-          - Obligatorisk
-      beskrivelse:
-        required: true
-        in_subset:
-          - Obligatorisk
-      identifikator_literal:
-        required: true
-        in_subset:
-          - Obligatorisk
-      har_kontaktpunkt:
-        required: true
-        in_subset:
-          - Obligatorisk
-      har_tenesteresultattype:
-        required: true
-        in_subset:
-          - Obligatorisk
-      tema:
-        in_subset:
-          - Anbefalt
-      dekningsomrade:
-        in_subset:
-          - Anbefalt
-      har_dokumentasjonstype:
-        in_subset:
-          - Anbefalt
-      heimeside:
-        in_subset:
-          - Anbefalt
-      type_concept:
-        in_subset:
-          - Anbefalt
-      temaomrade:
-        in_subset:
-          - Anbefalt
-      er_del_av:
-        in_subset:
-          - Valgfri
-      har_del:
-        in_subset:
-          - Valgfri
-      er_gruppert_av:
-        in_subset:
-          - Valgfri
-      er_klassifisert_av:
-        in_subset:
-          - Valgfri
-      folger:
-        in_subset:
-          - Valgfri
-      har_gebyr:
-        in_subset:
-          - Valgfri
-      har_regulativ_ressurs:
-        in_subset:
-          - Valgfri
-      krev:
-        in_subset:
-          - Valgfri
-      malgruppe:
-        in_subset:
-          - Valgfri
-      nokkelord:
-        in_subset:
-          - Valgfri
-      sektor:
-        in_subset:
-          - Valgfri
-
   # ---- Offentlig tjeneste -------------------------------------------------
 
   OffentligTjeneste:
@@ -158,11 +56,10 @@ classes:
       - har_tenesteresultattype
       - har_ansvarleg_styremakt
       - tema
-      - dekningsomrade
+      - dekningsomraade
       - har_dokumentasjonstype
       - heimeside
       - type_concept
-      - realiserer
       - status
       - temaomrade
       - behandlingstid
@@ -171,7 +68,7 @@ classes:
       - har_del
       - har_tenestekanal
       - har_deltaking
-      - sprak
+      - spraak
       - relatert_teneste
       - er_gruppert_av
       - er_klassifisert_av
@@ -210,7 +107,7 @@ classes:
       tema:
         in_subset:
           - Anbefalt
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       har_dokumentasjonstype:
@@ -220,9 +117,6 @@ classes:
         in_subset:
           - Anbefalt
       type_concept:
-        in_subset:
-          - Anbefalt
-      realiserer:
         in_subset:
           - Anbefalt
       status:
@@ -249,7 +143,7 @@ classes:
       har_deltaking:
         in_subset:
           - Valgfri
-      sprak:
+      spraak:
         in_subset:
           - Valgfri
       relatert_teneste:
@@ -297,7 +191,7 @@ classes:
       - har_tenesteresultattype
       - eigd_av
       - tema
-      - dekningsomrade
+      - dekningsomraade
       - har_dokumentasjonstype
       - heimeside
       - type_concept
@@ -309,7 +203,7 @@ classes:
       - har_del
       - har_tenestekanal
       - har_deltaking
-      - sprak
+      - spraak
       - relatert_teneste
       - er_gruppert_av
       - er_klassifisert_av
@@ -348,7 +242,7 @@ classes:
       tema:
         in_subset:
           - Anbefalt
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       har_dokumentasjonstype:
@@ -381,7 +275,7 @@ classes:
       har_deltaking:
         in_subset:
           - Valgfri
-      sprak:
+      spraak:
         in_subset:
           - Valgfri
       relatert_teneste:
@@ -514,11 +408,11 @@ classes:
     description: Ein offentleg organisasjon som er ansvarleg for ei teneste.
     slots:
       - foretrekt_namn
-      - dekningsomrade
+      - dekningsomraade
       - heimeside
       - type_concept
     slot_usage:
-      dekningsomrade:
+      dekningsomraade:
         required: true
         in_subset:
           - Obligatorisk
@@ -547,7 +441,7 @@ classes:
       - telefon
       - kontaktside
       - opningstider
-      - sprak
+      - spraak
       - kategori
     slot_usage:
       epost:
@@ -562,7 +456,7 @@ classes:
       opningstider:
         in_subset:
           - Valgfri
-      sprak:
+      spraak:
         in_subset:
           - Valgfri
       kategori:
@@ -614,7 +508,7 @@ classes:
       - beskrivelse
       - identifikator_literal
       - gyldig_i
-      - godtek_sprak
+      - godtek_spraak
       - klassifisering
       - er_beskrive_av
       - er_spesifisert_i
@@ -635,7 +529,7 @@ classes:
       gyldig_i:
         in_subset:
           - Anbefalt
-      godtek_sprak:
+      godtek_spraak:
         in_subset:
           - Anbefalt
       klassifisering:
@@ -661,7 +555,7 @@ classes:
       - tittel
       - beskrivelse
       - identifikator_literal
-      - mogleg_sprak
+      - mogleg_spraak
       - er_beskrive_av
       - er_spesifisert_i
       - kan_skape_hending
@@ -675,7 +569,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      mogleg_sprak:
+      mogleg_spraak:
         in_subset:
           - Anbefalt
       identifikator_literal:
@@ -737,7 +631,7 @@ classes:
       - tittel
       - beskrivelse
       - identifikator_literal
-      - sprak
+      - spraak
       - type_concept
     slot_usage:
       tittel:
@@ -749,7 +643,7 @@ classes:
       identifikator_literal:
         in_subset:
           - Valgfri
-      sprak:
+      spraak:
         in_subset:
           - Valgfri
       type_concept:
@@ -832,13 +726,13 @@ classes:
       - inneheld_teneste
       - har_kontaktpunkt
       - utgjevar
-      - dekningsomrade
+      - dekningsomraade
       - endringsdato
       - oppdateringsfrekvens
       - heimeside
       - inneheld_hending
       - lisens
-      - sprak
+      - spraak
     slot_usage:
       tittel:
         required: true
@@ -864,7 +758,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       endringsdato:
@@ -882,7 +776,7 @@ classes:
       lisens:
         in_subset:
           - Anbefalt
-      sprak:
+      spraak:
         in_subset:
           - Anbefalt
 
@@ -909,12 +803,6 @@ slots:
     range: OffentligOrganisasjon
     multivalued: true
     description: Offentleg organisasjon ansvarleg for tenesta.
-
-  realiserer:
-    slot_uri: cpsvno:realizes
-    range: LovpalagtTjeneste
-    multivalued: true
-    description: Lovpålagd teneste denne offentlege tenesta realiserer.
 
   behandlingstid:
     slot_uri: cv:processingTime
@@ -1108,7 +996,7 @@ slots:
     range: Duration
     description: Kor lenge dokumentasjonen er gyldig (ISO 8601 varigheit).
 
-  godtek_sprak:
+  godtek_spraak:
     slot_uri: cccevno:acceptableLanguage
     range: Spraak
     multivalued: true
@@ -1129,7 +1017,7 @@ slots:
     range: Konsept
     description: Stad dokumentasjonen er akseptert frå.
 
-  mogleg_sprak:
+  mogleg_spraak:
     slot_uri: cpsvno:possibleLanguage
     range: Spraak
     multivalued: true

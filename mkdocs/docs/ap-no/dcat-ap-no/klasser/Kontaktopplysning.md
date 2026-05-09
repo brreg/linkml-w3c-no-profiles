@@ -148,8 +148,8 @@ URI: [vcard:Kind](http://www.w3.org/2006/vcard/ns#Kind)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [har_epost](har_epost.md) | 0..1 <br/> [Uri](uri.md) | E-postadresse til kontaktpunktet |
-| [har_kontaktside](har_kontaktside.md) | 0..1 <br/> [Uri](uri.md) | Nettside for kontakt |
+| [har_epost](har_epost.md) | 0..1 <br/> [String](string.md) | E-postadresse til kontaktpunktet |
+| [har_kontaktside](har_kontaktside.md) | 0..1 <br/> [String](string.md) | Nettside for kontakt |
 
 
 
@@ -254,17 +254,10 @@ attributes:
     alias: id
     owner: Kontaktopplysning
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -272,11 +265,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn_vcard:
@@ -304,7 +303,7 @@ attributes:
     owner: Kontaktopplysning
     domain_of:
     - Kontaktopplysning
-    range: uri
+    range: string
   har_kontaktside:
     name: har_kontaktside
     description: Nettside for kontakt.
@@ -315,7 +314,7 @@ attributes:
     owner: Kontaktopplysning
     domain_of:
     - Kontaktopplysning
-    range: uri
+    range: string
 class_uri: vcard:Kind
 
 ```

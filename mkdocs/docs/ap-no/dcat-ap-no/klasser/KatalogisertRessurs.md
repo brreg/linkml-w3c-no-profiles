@@ -8,6 +8,8 @@ _Basisklasse for ressursar som kan katalogiserast._
 
 
 
+* __NOTE__: this is an abstract class and should not be instantiated directly
+
 
 URI: [dcat:Resource](http://www.w3.org/ns/dcat#Resource)
 
@@ -157,6 +159,7 @@ URI: [dcat:Resource](http://www.w3.org/ns/dcat#Resource)
 name: KatalogisertRessurs
 description: Basisklasse for ressursar som kan katalogiserast.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
+abstract: true
 slots:
 - id
 class_uri: dcat:Resource
@@ -171,6 +174,7 @@ class_uri: dcat:Resource
 name: KatalogisertRessurs
 description: Basisklasse for ressursar som kan katalogiserast.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
+abstract: true
 attributes:
   id:
     name: id
@@ -181,17 +185,10 @@ attributes:
     alias: id
     owner: KatalogisertRessurs
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -199,13 +196,18 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
-    required: true
 class_uri: dcat:Resource
 
 ```

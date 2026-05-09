@@ -80,6 +80,8 @@ Datatype {
 }
 Dokument {
     uriorcurie id  
+    string format  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Eigenskap {
@@ -133,6 +135,7 @@ Informasjonsmodell {
     string identifikator_literal  
     string informasjonsmodellidentifikator  
     LangStringList nokkelord  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
     LangStringList versjonsmerknad  
@@ -188,6 +191,7 @@ Modelkatalog {
     date endringsdato  
     uriList heimeside  
     string identifikator_literal  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
 }
@@ -288,9 +292,6 @@ Spesialisering {
     NonNegativeInteger sekvensnummer  
     LangStringList tittel  
 }
-Spraak {
-    uriorcurie id  
-}
 Standard {
     uriorcurie id  
     uriList har_referanse  
@@ -355,8 +356,6 @@ Betingelsesregel ||--}| Modellelement : "betinger"
 Datatype ||--}o Eigenskap : "har_eigenskap"
 Datatype ||--}o Konsept : "begrep"
 Datatype ||--}o Modul : "tilhorer_modul"
-Dokument ||--|o Mediatype : "format"
-Dokument ||--}o Spraak : "sprak"
 Eigenskap ||--|o Eigenskap : "danner_symmetri_med"
 Eigenskap ||--}o Konsept : "begrep"
 Eigenskap ||--}o Modellelement : "har_type"
@@ -376,10 +375,9 @@ Informasjonsmodell ||--|o Lisensdokument : "lisens"
 Informasjonsmodell ||--|| Aktor : "utgiver"
 Informasjonsmodell ||--}o Dokument : "har_format"
 Informasjonsmodell ||--}o Informasjonsmodell : "er_del_av_modell, er_erstatta_av, erstatter, har_del_modell"
-Informasjonsmodell ||--}o Konsept : "begrep, dekningsomrade, tema"
+Informasjonsmodell ||--}o Konsept : "begrep, dekningsomraade, tema"
 Informasjonsmodell ||--}o Kontaktopplysning : "kontaktpunkt"
 Informasjonsmodell ||--}o Modellelement : "inneholder_modellelement"
-Informasjonsmodell ||--}o Spraak : "sprak"
 Informasjonsmodell ||--}o Standard : "er_i_samsvar_med, er_profil_av"
 Informasjonsmodell ||--}o Tidsperiode : "tidsperiode"
 Kodeelement ||--|o Kodeelement : "forrige, neste"
@@ -398,7 +396,6 @@ Modelkatalog ||--|| Aktor : "utgiver"
 Modelkatalog ||--}o Begrepssamling : "temaer"
 Modelkatalog ||--}o Informasjonsmodell : "modell"
 Modelkatalog ||--}o Konsept : "tema"
-Modelkatalog ||--}o Spraak : "sprak"
 Modelkatalog ||--}| KatalogisertRessurs : "har_del"
 Modelkatalog ||--}| Kontaktopplysning : "kontaktpunkt"
 Modellelement ||--}o Eigenskap : "har_eigenskap"
@@ -506,7 +503,6 @@ Name: modelldcat-ap-no
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Modul](klasser/modul.md) | Ein modul som grupperer modellelement i informasjonsmodellen |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Objekttype](klasser/objekttype.md) | Ein objekttype — ein klasse med eigenskapar i informasjonsmodellen |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RootObjekttype](klasser/rootobjekttype.md) | Ein rotobjekttype — toppnivå-klasse i informasjonsmodellen |
-| [Spraak](klasser/spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Standard](klasser/standard.md) | Ein standard (dct:Standard) |
 | [Tidsperiode](klasser/tidsperiode.md) | Eit tidsintervall med start- og sluttdato |
 
@@ -526,7 +522,7 @@ Name: modelldcat-ap-no
 | [betinger](klasser/betinger.md) | Modellelement betingelsesregelen avgrensar (modelldcatno:constrains) |
 | [danner_symmetri_med](klasser/danner_symmetri_med.md) | Eigenskap som denne eigenskapen dannar symmetri med (modelldcatno:formsSymmet... |
 | [definisjon](klasser/definisjon.md) | Definisjon av kodeelementet (skos:definition) |
-| [dekningsomrade](klasser/dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](klasser/dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [eigenskapsmerknad](klasser/eigenskapsmerknad.md) | Fritekstmerknad om ein eigenskap (modelldcatno:propertyNote) |
 | [eksempel_kode](klasser/eksempel_kode.md) | Eksempel på bruk av kodeelementet (skos:example) |
 | [eksklusjonsnotat](klasser/eksklusjonsnotat.md) | Notat om kva som er ekskludert frå kodeelementet (xkos:exclusionNote) |
@@ -591,7 +587,7 @@ Name: modelldcat-ap-no
 | [skapar](klasser/skapar.md) | Aktøren som primært har skapt ressursen (dct:creator) |
 | [skjult_term](klasser/skjult_term.md) | Skjult term for kodeelementet (skos:hiddenLabel) |
 | [sluttdato](klasser/sluttdato.md) | Sluttdato for tidsperioden (dcat:endDate) |
-| [sprak](klasser/sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](klasser/spraak.md) | Språk brukt i ressursen (dct:language) |
 | [startdato](klasser/startdato.md) | Startdato for tidsperioden (dcat:startDate) |
 | [status](klasser/status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tema](klasser/tema.md) | Tema frå eit kontrollert vokabular (dcat:theme) |
@@ -638,6 +634,7 @@ Name: modelldcat-ap-no
 | [NonNegativeInteger](klasser/nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](klasser/objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](klasser/sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](klasser/spraak.md) | Språk |
 | [String](klasser/string.md) | A character string |
 | [Time](klasser/time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](klasser/uri.md) | a complete URI |

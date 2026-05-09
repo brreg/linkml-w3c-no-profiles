@@ -3,7 +3,7 @@
 # Slot: ble_generert_ved 
 
 
-_Aktiviteten som genererte datasettet._
+_Brukes til å referere til en aktivitet som genererte datasettet, eller som gir forretningskontekst for oppretting av det._
 
 
 
@@ -35,7 +35,8 @@ Alias: ble_generert_ved
 
 | Property | Value |
 | --- | --- |
-| Range | [ProvAktivitet](provaktivitet.md) |
+| Range | [Uri](uri.md) |
+| Domain | [Datasett](datasett.md) |
 | Domain Of | [Datasett](datasett.md) |
 | Slot URI | [prov:wasGeneratedBy](http://www.w3.org/ns/prov#wasGeneratedBy) |
 
@@ -43,6 +44,7 @@ Alias: ble_generert_ved
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,6 +57,13 @@ Alias: ble_generert_ved
 
 ## Identifier and Mapping Information
 
+
+
+### Annotations
+
+| property | value |
+| --- | --- |
+| gyldige_verdier | URI til prov:Activity |
 
 
 
@@ -82,14 +91,21 @@ Alias: ble_generert_ved
 <details>
 ```yaml
 name: ble_generert_ved
-description: Aktiviteten som genererte datasettet.
+annotations:
+  gyldige_verdier:
+    tag: gyldige_verdier
+    value: URI til prov:Activity
+description: Brukes til å referere til en aktivitet som genererte datasettet, eller
+  som gir forretningskontekst for oppretting av det.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
+domain: Datasett
 slot_uri: prov:wasGeneratedBy
 alias: ble_generert_ved
 domain_of:
 - Datasett
-range: ProvAktivitet
+range: uri
+multivalued: true
 
 ```
 </details>

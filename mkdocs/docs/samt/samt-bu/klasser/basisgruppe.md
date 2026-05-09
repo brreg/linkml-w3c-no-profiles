@@ -30,7 +30,7 @@ URI: [samtbuskole:Basisgruppe](https://example.no/ontology/skole#Basisgruppe)
     
 
         
-      Basisgruppe : identifikator
+      Basisgruppe : id
         
       Basisgruppe : navn
         
@@ -134,7 +134,7 @@ URI: [samtbuskole:Basisgruppe](https://example.no/ontology/skole#Basisgruppe)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen |
 | [trinniva](trinniva.md) | 0..1 <br/> [String](string.md) | Grunnskolen (6-15 år) er delt opp i 10 trinn, eit for kvart år |
 | [del_av_skole](del_av_skole.md) | 0..1 <br/> [Skole](skole.md) | Skolen basisgruppa tilhører |
@@ -208,7 +208,7 @@ close_mappings:
 - schema:EducationalOccupationalProgram
 - schema:Course
 slots:
-- identifikator
+- id
 - navn
 - trinniva
 - del_av_skole
@@ -227,13 +227,13 @@ close_mappings:
 - schema:EducationalOccupationalProgram
 - schema:Course
 attributes:
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Basisgruppe
     domain_of:
     - Containerklasse
@@ -241,6 +241,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

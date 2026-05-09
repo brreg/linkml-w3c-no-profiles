@@ -22,6 +22,8 @@ Alias: format
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 | [Tekstdel](tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |  yes  |
 
 
@@ -35,8 +37,8 @@ Alias: format
 
 | Property | Value |
 | --- | --- |
-| Range | [Mediatype](mediatype.md) |
-| Domain Of | [Tekstdel](tekstdel.md) |
+| Range | [String](string.md) |
+| Domain Of | [Tekstdel](tekstdel.md), [Distribusjon](distribusjon.md), [Datatjeneste](datatjeneste.md) |
 | Slot URI | [dct:format](http://purl.org/dc/terms/format) |
 
 ### Cardinality and Requirements
@@ -89,7 +91,9 @@ slot_uri: dct:format
 alias: format
 domain_of:
 - Tekstdel
-range: Mediatype
+- Distribusjon
+- Datatjeneste
+range: string
 
 ```
 </details>

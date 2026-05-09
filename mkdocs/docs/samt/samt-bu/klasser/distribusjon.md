@@ -652,7 +652,7 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 | [policy](policy.md) | 0..1 <br/> [String](string.md) | ODRL-policy som regulerer bruk av ressursen |
 | [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](rettighetserklaring.md) | Rettar knytte til ressursen |
 | [sjekksum](sjekksum.md) | 0..1 <br/> [Sjekksum](sjekksum.md) | Sjekksum for distribusjonsfila |
-| [spraak](spraak.md) | * <br/> [String](string.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [tidsopplosning](tidsopplosning.md) | 0..1 <br/> [Duration](duration.md) | Minste tidsoppløysing i datasettet |
 | [tilgangstjeneste](tilgangstjeneste.md) | * <br/> [Datatjeneste](datatjeneste.md) | Datatjeneste som gjev tilgang til distribusjonen |
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
@@ -820,10 +820,11 @@ attributes:
     alias: id
     owner: Distribusjon
     domain_of:
-    - Spraak
-    - Mediatype
-    - Konsept
-    - Begrepssamling
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
@@ -837,6 +838,9 @@ attributes:
     - Distribusjon
     - Datasett
     - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
@@ -1111,7 +1115,7 @@ attributes:
     - Katalogpost
     - Katalog
     - Tekstdel
-    range: string
+    range: Spraak
     multivalued: true
   tidsopplosning:
     name: tidsopplosning

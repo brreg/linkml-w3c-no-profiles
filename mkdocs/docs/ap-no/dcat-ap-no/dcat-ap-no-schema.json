@@ -52,6 +52,60 @@
             "title": "Begrepssamling",
             "type": "object"
         },
+        "Brukartilbakemelding": {
+            "additionalProperties": false,
+            "description": "Tilbakemelding fr\u00e5 ein brukar om kvaliteten til eit datasett.",
+            "properties": {
+                "er_i_kvalitetsdimensjon": {
+                    "description": "Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.\n",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "er_motivert_av": {
+                    "description": "Motivasjonen bak kvalitetsmerknaden (t.d. oa:assessing).",
+                    "type": "string"
+                },
+                "har_maal": {
+                    "description": "Ressursen merknaden gjeld.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "har_merknad": {
+                    "description": "Fritekstmerknad (rdfs:comment).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_tekstdel": {
+                    "description": "Tekstleg innhald i merknaden.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "er_motivert_av"
+            ],
+            "title": "Brukartilbakemelding",
+            "type": "object"
+        },
         "Datasett": {
             "additionalProperties": false,
             "description": "Ei samling av data utgjeven eller kuratert av \u00e9in akt\u00f8r.",
@@ -104,9 +158,12 @@
                     "type": "array"
                 },
                 "ble_generert_ved": {
-                    "description": "Aktiviteten som genererte datasettet.",
+                    "description": "Brukes til \u00e5 referere til en aktivitet som genererte datasettet, eller som gir forretningskontekst for oppretting av det.",
+                    "items": {
+                        "type": "string"
+                    },
                     "type": [
-                        "string",
+                        "array",
                         "null"
                     ]
                 },
@@ -120,7 +177,7 @@
                         "null"
                     ]
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -170,6 +227,26 @@
                 },
                 "gjeldende_lovgivning": {
                     "description": "Lovgjeving som gjeld for ressursen.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_kvalitetsmaaling": {
+                    "description": "Kvalitetsm\u00e5ling knytt til datasettet.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_kvalitetsmerknad": {
+                    "description": "Kvalitetsmerknad knytt til datasettet.",
                     "items": {
                         "type": "string"
                     },
@@ -263,7 +340,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -291,9 +368,12 @@
                     ]
                 },
                 "tilgangsrettigheter": {
-                    "description": "Tilgangsrettar for ressursen.",
+                    "description": "Egenskapen brukes til \u00e5 angi om det er allmenn tilgang, betinget tilgang eller ikke-allmenn tilgang til datasettet.",
+                    "items": {
+                        "type": "string"
+                    },
                     "type": [
-                        "string",
+                        "array",
                         "null"
                     ]
                 },
@@ -342,12 +422,12 @@
                 }
             },
             "required": [
+                "id",
                 "beskrivelse",
                 "kontaktpunkt",
                 "tema",
                 "tittel",
-                "utgiver",
-                "id"
+                "utgiver"
             ],
             "title": "Datasett",
             "type": "object"
@@ -363,7 +443,7 @@
                     },
                     "type": "array"
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -619,9 +699,12 @@
                     ]
                 },
                 "tilgangsrettigheter": {
-                    "description": "Tilgangsrettar for ressursen.",
+                    "description": "Egenskapen brukes til \u00e5 angi om det er allmenn tilgang, betinget tilgang eller ikke-allmenn tilgang til datasettet.",
+                    "items": {
+                        "type": "string"
+                    },
                     "type": [
-                        "string",
+                        "array",
                         "null"
                     ]
                 },
@@ -811,7 +894,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -883,21 +966,6 @@
                 "tilgangs_url"
             ],
             "title": "Distribusjon",
-            "type": "object"
-        },
-        "Frekvens": {
-            "additionalProperties": false,
-            "description": "Ein oppdateringsfrekvens.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Frekvens",
             "type": "object"
         },
         "Gebyr": {
@@ -1000,7 +1068,7 @@
                         "null"
                     ]
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -1097,7 +1165,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1167,21 +1235,6 @@
             "title": "Katalog",
             "type": "object"
         },
-        "KatalogisertRessurs": {
-            "additionalProperties": false,
-            "description": "Basisklasse for ressursar som kan katalogiserast.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "KatalogisertRessurs",
-            "type": "object"
-        },
         "Katalogpost": {
             "additionalProperties": false,
             "description": "Ein katalogpost som beskriv ein ressurs i katalogen.",
@@ -1226,7 +1279,7 @@
                     "description": "Ressursen katalogposten prim\u00e6rt beskriv.",
                     "type": "string"
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1322,79 +1375,289 @@
             "title": "Kontaktopplysning",
             "type": "object"
         },
+        "Kvalitetsdeldimensjon": {
+            "additionalProperties": false,
+            "description": "Ein deldimensjon av ein kvalitetsdimensjon.",
+            "properties": {
+                "er_deldimensjon_av": {
+                    "description": "Overordna kvalitetsdimensjon denne deldimensjonen h\u00f8yrer til.",
+                    "type": "string"
+                },
+                "har_anbefalt_term": {
+                    "description": "F\u00f8retrekt term/namn for dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_definisjon": {
+                    "description": "Definisjon av dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "er_deldimensjon_av",
+                "id"
+            ],
+            "title": "Kvalitetsdeldimensjon",
+            "type": "object"
+        },
+        "Kvalitetsdimensjon": {
+            "additionalProperties": false,
+            "description": "Ein kvalitetsdimensjon som grupperer relaterte kvalitetsm\u00e5l.",
+            "properties": {
+                "har_anbefalt_term": {
+                    "description": "F\u00f8retrekt term/namn for dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_definisjon": {
+                    "description": "Definisjon av dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Kvalitetsdimensjon",
+            "type": "object"
+        },
+        "Kvalitetsmaal": {
+            "additionalProperties": false,
+            "description": "Eit kvalitetsm\u00e5l som operasjonaliserer ein kvalitetsdeldimensjon.",
+            "properties": {
+                "er_i_kvalitetsdeldimensjon": {
+                    "description": "Kvalitetsdeldimensjonen dette m\u00e5let operasjonaliserer.",
+                    "type": "string"
+                },
+                "har_anbefalt_term": {
+                    "description": "F\u00f8retrekt term/namn for dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_definisjon": {
+                    "description": "Definisjon av dimensjonen eller m\u00e5let.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_forventet_datatype": {
+                    "description": "Forventa XSD-datatype for verdien av ei kvalitetsm\u00e5ling.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "er_i_kvalitetsdeldimensjon"
+            ],
+            "title": "Kvalitetsmaal",
+            "type": "object"
+        },
+        "Kvalitetsmaaling": {
+            "additionalProperties": false,
+            "description": "Ei konkret m\u00e5ling av eit kvalitetsm\u00e5l for eit datasett.",
+            "properties": {
+                "er_kvalitetsmaaling_av": {
+                    "description": "Kvalitetsm\u00e5let denne m\u00e5linga er ei m\u00e5ling av.",
+                    "type": "string"
+                },
+                "har_merknad": {
+                    "description": "Fritekstmerknad (rdfs:comment).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_verdi": {
+                    "description": "M\u00e5lt verdi (xsd:boolean, xsd:double, xsd:nonNegativeInteger eller rdfs:Literal avhengig av kvalitetsm\u00e5let).",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "er_kvalitetsmaaling_av"
+            ],
+            "title": "Kvalitetsmaaling",
+            "type": "object"
+        },
+        "Kvalitetsmerknad": {
+            "additionalProperties": false,
+            "description": "Ein merknad om kvaliteten til eit datasett.",
+            "properties": {
+                "er_i_kvalitetsdimensjon": {
+                    "description": "Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.\n",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "er_motivert_av": {
+                    "description": "Motivasjonen bak kvalitetsmerknaden (t.d. oa:assessing).",
+                    "type": "string"
+                },
+                "har_maal": {
+                    "description": "Ressursen merknaden gjeld.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "har_merknad": {
+                    "description": "Fritekstmerknad (rdfs:comment).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_tekstdel": {
+                    "description": "Tekstleg innhald i merknaden.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "er_motivert_av"
+            ],
+            "title": "Kvalitetsmerknad",
+            "type": "object"
+        },
+        "Kvalitetssertifikat": {
+            "additionalProperties": false,
+            "description": "Eit sertifikat som stadfester kvaliteten til eit datasett.",
+            "properties": {
+                "er_i_kvalitetsdimensjon": {
+                    "description": "Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.\n",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "er_motivert_av": {
+                    "description": "Motivasjonen bak kvalitetsmerknaden (t.d. oa:assessing).",
+                    "type": "string"
+                },
+                "har_maal": {
+                    "description": "Ressursen merknaden gjeld.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "har_merknad": {
+                    "description": "Fritekstmerknad (rdfs:comment).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_tekstdel": {
+                    "description": "Tekstleg innhald i merknaden.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "er_motivert_av"
+            ],
+            "title": "Kvalitetssertifikat",
+            "type": "object"
+        },
         "Mediatype": {
             "additionalProperties": false,
             "description": "Ein medietype eller filformat (dct:MediaTypeOrExtent).",
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
                 "id"
             ],
             "title": "Mediatype",
-            "type": "object"
-        },
-        "OdrlPolicy": {
-            "additionalProperties": false,
-            "description": "Ein ODRL-policy.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "OdrlPolicy",
-            "type": "object"
-        },
-        "ProvAktivitet": {
-            "additionalProperties": false,
-            "description": "Ein PROV-aktivitet.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ProvAktivitet",
-            "type": "object"
-        },
-        "ProvAttributering": {
-            "additionalProperties": false,
-            "description": "Ein kvalifisert PROV-attributering.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ProvAttributering",
-            "type": "object"
-        },
-        "ProvenanceStatement": {
-            "additionalProperties": false,
-            "description": "Ein provenienserkl\u00e6ring.",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "ProvenanceStatement",
             "type": "object"
         },
         "RegulativRessurs": {
@@ -1442,7 +1705,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1597,28 +1860,30 @@
             "title": "Sjekksum",
             "type": "object"
         },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Spraak",
-            "type": "object"
-        },
         "Standard": {
             "additionalProperties": false,
-            "description": "Ein standard som ein ressurs er i samsvar med.",
+            "description": "Ein standard eller spesifikasjon som eit datasett er i samsvar med.",
             "properties": {
+                "er_i_kvalitetsdimensjon": {
+                    "description": "Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.\n",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "har_merknad": {
+                    "description": "Fritekstmerknad (rdfs:comment).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "har_referanse": {
                     "description": "Referanse til ekstern ressurs (rdfs:seeAlso).",
                     "items": {
@@ -1626,6 +1891,13 @@
                     },
                     "type": [
                         "array",
+                        "null"
+                    ]
+                },
+                "har_versjonsnummer": {
+                    "description": "Versjonsnummer for ressursen (owl:versionInfo).",
+                    "type": [
+                        "string",
                         "null"
                     ]
                 },
@@ -1639,13 +1911,6 @@
                         "type": "string"
                     },
                     "type": "array"
-                },
-                "versjon": {
-                    "description": "Versjonsnummer.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
                 }
             },
             "required": [
@@ -1655,19 +1920,41 @@
             "title": "Standard",
             "type": "object"
         },
-        "Tidsinstant": {
+        "Tekstdel": {
             "additionalProperties": false,
-            "description": "Eit tidspunkt (OWL Time).",
+            "description": "Ein tekstleg del av ein kvalitetsmerknad (Web Annotation).",
             "properties": {
+                "format": {
+                    "description": "Filformat eller medietype (dct:format).",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "har_verdi_tekstdel": {
+                    "description": "Tekstinnhaldet i tekstdelen.",
+                    "type": "string"
+                },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
+                },
+                "spraak": {
+                    "description": "Spr\u00e5k brukt i ressursen (dct:language).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
             "required": [
-                "id"
+                "id",
+                "har_verdi_tekstdel"
             ],
-            "title": "Tidsinstant",
+            "title": "Tekstdel",
             "type": "object"
         },
         "Tidsrom": {
@@ -1676,6 +1963,7 @@
             "properties": {
                 "begynnelse": {
                     "description": "Starttidspunkt for eit tidsrom.",
+                    "format": "date-time",
                     "type": [
                         "string",
                         "null"
@@ -1687,6 +1975,7 @@
                 },
                 "slutt": {
                     "description": "Sluttidspunkt for eit tidsrom.",
+                    "format": "date-time",
                     "type": [
                         "string",
                         "null"

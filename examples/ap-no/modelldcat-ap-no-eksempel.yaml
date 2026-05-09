@@ -15,7 +15,7 @@ modelkatalogar:
       - https://example.org/informasjonsmodellar/offisiell-adresse
     modell:
       - https://example.org/informasjonsmodellar/offisiell-adresse
-    sprak:
+    spraak:
       - http://publications.europa.eu/resource/authority/language/NOB
     utgivelsesdato: "2024-01-15"
     endringsdato: "2024-06-01"

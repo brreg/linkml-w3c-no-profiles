@@ -87,13 +87,6 @@ URI: [dct:MediaTypeOrExtent](http://purl.org/dc/terms/MediaTypeOrExtent)
 
 
 
-## Usages
-
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Dokument](dokument.md) | [format](format.md) | range | [Mediatype](mediatype.md) |
-
-
 
 
 
@@ -179,7 +172,6 @@ attributes:
     - Eigenskap
     - Merknad
     - Kodeelement
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling

@@ -22,13 +22,12 @@ Alias: har_kontaktpunkt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Livshendelse](livshendelse.md) | Ei livshending som kan utløyse behov for tenester (t |  no  |
+| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  yes  |
 | [Hendelse](hendelse.md) | Ei hending som kan utløyse behov for ei offentleg teneste |  yes  |
+| [Virksomhetshendelse](virksomhetshendelse.md) | Ei verksemdhending som kan utløyse behov for tenester (t |  no  |
+| [Livshendelse](livshendelse.md) | Ei livshending som kan utløyse behov for tenester (t |  no  |
 | [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |  yes  |
 | [Katalog](katalog.md) | Ein katalog over offentlege tenester og hendingar |  yes  |
-| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  yes  |
-| [Virksomhetshendelse](virksomhetshendelse.md) | Ei verksemdhending som kan utløyse behov for tenester (t |  no  |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | Ei lovpålagd teneste som offentlege organ er pålagde å utføre |  yes  |
 
 
 
@@ -42,7 +41,7 @@ Alias: har_kontaktpunkt
 | Property | Value |
 | --- | --- |
 | Range | [Kontaktpunkt](kontaktpunkt.md) |
-| Domain Of | [LovpalagtTjeneste](lovpalagttjeneste.md), [OffentligTjeneste](offentligtjeneste.md), [Tjeneste](tjeneste.md), [Hendelse](hendelse.md), [Katalog](katalog.md) |
+| Domain Of | [OffentligTjeneste](offentligtjeneste.md), [Tjeneste](tjeneste.md), [Hendelse](hendelse.md), [Katalog](katalog.md) |
 | Slot URI | [cv:contactPoint](http://data.europa.eu/m8g/contactPoint) |
 
 ### Cardinality and Requirements
@@ -95,7 +94,6 @@ rank: 1000
 slot_uri: cv:contactPoint
 alias: har_kontaktpunkt
 domain_of:
-- LovpalagtTjeneste
 - OffentligTjeneste
 - Tjeneste
 - Hendelse

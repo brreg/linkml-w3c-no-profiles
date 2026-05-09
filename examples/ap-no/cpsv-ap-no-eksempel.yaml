@@ -14,20 +14,6 @@ katalogar:
       - https://example.org/kontaktpunkt/nav-hovud
     utgjevar: https://example.org/organisasjonar/nav
 
-lovpalagdeTenestar:
-  - id: https://example.org/lovpalagde/retten-til-dagpenger
-    tittel:
-      - "Rett til dagpengar ved arbeidsløyse"
-    beskrivelse:
-      - "Lovpålagd teneste som sikrar rett til dagpengar ved ufrivillig arbeidsløyse, jf. folketrygdlova kapittel 4."
-    identifikator_literal: "lovpalagd-dagpenger-ftrl-kap4"
-    har_kontaktpunkt:
-      - https://example.org/kontaktpunkt/nav-hovud
-    har_tenesteresultattype:
-      - https://example.org/resultattypar/dagpengar-vedtak
-    har_regulativ_ressurs:
-      - https://example.org/regelverk/folketrygdlova-kap4
-
 offentligeTenestar:
   - id: https://example.org/tenestar/dagpenger
     tittel:
@@ -41,8 +27,6 @@ offentligeTenestar:
       - https://example.org/resultattypar/dagpengar-vedtak
     har_ansvarleg_styremakt:
       - https://example.org/organisasjonar/nav
-    realiserer:
-      - https://example.org/lovpalagde/retten-til-dagpenger
     har_tenestekanal:
       - https://example.org/kanalar/nav-nett
       - https://example.org/kanalar/nav-telefon
@@ -53,7 +37,7 @@ tenesteresultattypar:
       - "Vedtak om dagpengar"
     beskrivelse:
       - "Eit vedtak som innvilgar eller avslår søknad om dagpengar."
-    mogleg_sprak:
+    mogleg_spraak:
       - http://publications.europa.eu/resource/authority/language/NOB
       - http://publications.europa.eu/resource/authority/language/NNO
 
@@ -64,7 +48,7 @@ offentligeOrganisasjonar:
     identifikator_literal: "974652269"
     foretrekt_namn:
       - "Arbeids- og velferdsetaten"
-    dekningsomrade:
+    dekningsomraade:
       - http://publications.europa.eu/resource/authority/country/NOR
 
 kontaktpunkt:

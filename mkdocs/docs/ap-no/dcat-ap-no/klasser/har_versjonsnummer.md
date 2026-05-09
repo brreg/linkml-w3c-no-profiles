@@ -18,6 +18,15 @@ Alias: har_versjonsnummer
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  yes  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +36,7 @@ Alias: har_versjonsnummer
 | Property | Value |
 | --- | --- |
 | Range | [String](string.md) |
+| Domain Of | [Standard](standard.md) |
 | Slot URI | [owl:versionInfo](http://www.w3.org/2002/07/owl#versionInfo) |
 
 ### Cardinality and Requirements
@@ -77,6 +87,8 @@ from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: owl:versionInfo
 alias: har_versjonsnummer
+domain_of:
+- Standard
 range: string
 
 ```

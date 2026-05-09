@@ -18,6 +18,16 @@ Alias: versjonsmerknad
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +37,7 @@ Alias: versjonsmerknad
 | Property | Value |
 | --- | --- |
 | Range | [LangString](langstring.md) |
+| Domain Of | [Datasett](datasett.md), [Datatjeneste](datatjeneste.md) |
 | Slot URI | [adms:versionNotes](http://www.w3.org/ns/adms#versionNotes) |
 
 ### Cardinality and Requirements
@@ -78,6 +89,9 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: adms:versionNotes
 alias: versjonsmerknad
+domain_of:
+- Datasett
+- Datatjeneste
 range: LangString
 multivalued: true
 

@@ -21,29 +21,11 @@ URI: [oa:TextualBody](http://www.w3.org/ns/oa#TextualBody)
     click Tekstdel href "../Tekstdel/"
       Tekstdel : format
         
-          
-    
-        
-        
-        Tekstdel --> "0..1" Mediatype : format
-        click Mediatype href "../Mediatype/"
-    
-
-        
       Tekstdel : har_verdi_tekstdel
         
       Tekstdel : id
         
-      Tekstdel : sprak
-        
-          
-    
-        
-        
-        Tekstdel --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Tekstdel : spraak
         
       
 ```
@@ -114,8 +96,8 @@ URI: [oa:TextualBody](http://www.w3.org/ns/oa#TextualBody)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [format](format.md) | 0..1 <br/> [Mediatype](mediatype.md) | Filformat eller medietype (dct:format) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [format](format.md) | 0..1 <br/> [String](string.md) | Filformat eller medietype (dct:format) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 
 
 
@@ -258,7 +240,7 @@ slots:
 - id
 - har_verdi_tekstdel
 - format
-- sprak
+- spraak
 slot_usage:
   har_verdi_tekstdel:
     name: har_verdi_tekstdel
@@ -269,8 +251,8 @@ slot_usage:
     name: format
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
 class_uri: oa:TextualBody
@@ -295,8 +277,8 @@ slot_usage:
     name: format
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
 attributes:
@@ -309,19 +291,28 @@ attributes:
     alias: id
     owner: Tekstdel
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
   har_verdi_tekstdel:
@@ -350,19 +341,26 @@ attributes:
     owner: Tekstdel
     domain_of:
     - Tekstdel
-    range: Mediatype
-  sprak:
-    name: sprak
+    - Distribusjon
+    - Datatjeneste
+    range: string
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dqv-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Tekstdel
     domain_of:
     - Tekstdel
+    - RegulativRessurs
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Katalog
     range: Spraak
     multivalued: true
 class_uri: oa:TextualBody

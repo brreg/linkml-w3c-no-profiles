@@ -22,6 +22,7 @@ Klassifikasjon {
     uriList heimeside  
     string identifikator_literal  
     LangStringList nokkelord  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
 }
@@ -44,9 +45,6 @@ Mediatype {
 Organisasjon {
     uriorcurie id  
 }
-Spraak {
-    uriorcurie id  
-}
 Tidsrom {
     uriorcurie id  
     date tidsrom_slutt  
@@ -62,7 +60,6 @@ Klassifikasjon ||--|| Organisasjon : "utgjevar"
 Klassifikasjon ||--}o Klassifikasjon : "er_samanlikna_med"
 Klassifikasjon ||--}o Klassifikasjonsnivaa : "forste_nivaa"
 Klassifikasjon ||--}o Konsept : "tema"
-Klassifikasjon ||--}o Spraak : "sprak"
 Klassifikasjonsnivaa ||--}o Klassifikasjonsnivaa : "underordna_klassifikasjonsnivaa"
 Klassifikasjonsnivaa ||--}| Kategori : "har_medlem"
 Klassifikasjonssamanlikning ||--|| Organisasjon : "utgjevar"
@@ -94,7 +91,6 @@ Name: xkos-ap-no
 | [Konsept](klasser/konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |
 | [Mediatype](klasser/mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
 | [Organisasjon](klasser/organisasjon.md) | Ein organisasjon eller aktør (foaf:Agent) |
-| [Spraak](klasser/spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Tidsrom](klasser/tidsrom.md) | Eit tidsrom med start- og/eller sluttdato (dct:PeriodOfTime) |
 
 
@@ -107,7 +103,7 @@ Name: xkos-ap-no
 | [antall_nivaa](klasser/antall_nivaa.md) | Antal nivå i klassifikasjonen (xkos:numberOfLevels) |
 | [beskrivelse](klasser/beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [bestar_av](klasser/bestar_av.md) | Kategorisamanlikningar som inngår i klassifikasjonssamanlikninga (xkos:madeOf... |
-| [dekningsomrade](klasser/dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](klasser/dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [endringsdato](klasser/endringsdato.md) | Dato for siste endring av ressursen (dct:modified) |
 | [er_eksklusivt_ekvivalent_med](klasser/er_eksklusivt_ekvivalent_med.md) | Eksklusiv breid ekvivalens (xkos:exclusivelyBroadMatch) |
 | [er_ekvivalent_med](klasser/er_ekvivalent_med.md) | Breid ekvivalens til kategori i annan klassifikasjon (uneskos:broadMatch) |
@@ -131,7 +127,7 @@ Name: xkos-ap-no
 | [nokkelord](klasser/nokkelord.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
 | [overordna_kategori](klasser/overordna_kategori.md) | Overordna kategori (skos:broader) |
 | [samanliknar](klasser/samanliknar.md) | Klassifikasjonar som er samanlikna i korrespondansen (xkos:compares) |
-| [sprak](klasser/sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](klasser/spraak.md) | Språk brukt i ressursen (dct:language) |
 | [status](klasser/status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tema](klasser/tema.md) | Fagleg tema klassifikasjonen dekkjer (dct:subject) |
 | [tidsrom_slutt](klasser/tidsrom_slutt.md) | Sluttdato for tidsromet (dct:endDate) |
@@ -176,6 +172,7 @@ Name: xkos-ap-no
 | [NonNegativeInteger](klasser/nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](klasser/objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](klasser/sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](klasser/spraak.md) | Språk |
 | [String](klasser/string.md) | A character string |
 | [Time](klasser/time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](klasser/uri.md) | a complete URI |

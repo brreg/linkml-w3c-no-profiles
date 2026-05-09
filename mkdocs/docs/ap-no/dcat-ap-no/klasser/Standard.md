@@ -3,7 +3,7 @@
 # Class: Standard 
 
 
-_Ein standard som ein ressurs er i samsvar med._
+_Ein standard eller spesifikasjon som eit datasett er i samsvar med._
 
 
 
@@ -19,13 +19,26 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
  classDiagram
     class Standard
     click Standard href "../Standard/"
+      Standard : er_i_kvalitetsdimensjon
+        
+          
+    
+        
+        
+        Standard --> "*" Kvalitetsdimensjon : er_i_kvalitetsdimensjon
+        click Kvalitetsdimensjon href "../Kvalitetsdimensjon/"
+    
+
+        
+      Standard : har_merknad
+        
       Standard : har_referanse
+        
+      Standard : har_versjonsnummer
         
       Standard : id
         
       Standard : tittel
-        
-      Standard : versjon
         
       
 ```
@@ -64,6 +77,12 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
   
   
 
+  
+  
+
+  
+  
+
 
 ### Obligatorisk
 
@@ -83,15 +102,12 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 
   
   
+    
+  
 
   
   
-
-
-
-
-
-  
+    
   
 
   
@@ -100,8 +116,47 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
   
   
 
+
+### Anbefalt
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | * <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
+| [har_referanse](har_referanse.md) | * <br/> [Uri](uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
+
+
+
+
+
   
   
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [har_merknad](har_merknad.md) | * <br/> [LangString](langstring.md) | Fritekstmerknad (rdfs:comment) |
+| [har_versjonsnummer](har_versjonsnummer.md) | 0..1 <br/> [String](string.md) | Versjonsnummer for ressursen (owl:versionInfo) |
 
 
 
@@ -131,15 +186,53 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
   
     
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -148,8 +241,6 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [har_referanse](har_referanse.md) | * <br/> [Uri](uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
-| [versjon](versjon.md) | 0..1 <br/> [String](string.md) | Versjonsnummer |
 
 
 
@@ -213,19 +304,37 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 <details>
 ```yaml
 name: Standard
-description: Ein standard som ein ressurs er i samsvar med.
+description: Ein standard eller spesifikasjon som eit datasett er i samsvar med.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slots:
 - id
 - tittel
+- er_i_kvalitetsdimensjon
 - har_referanse
-- versjon
+- har_merknad
+- har_versjonsnummer
 slot_usage:
   tittel:
     name: tittel
     in_subset:
     - Obligatorisk
     required: true
+  er_i_kvalitetsdimensjon:
+    name: er_i_kvalitetsdimensjon
+    in_subset:
+    - Anbefalt
+  har_referanse:
+    name: har_referanse
+    in_subset:
+    - Anbefalt
+  har_merknad:
+    name: har_merknad
+    in_subset:
+    - Valgfri
+  har_versjonsnummer:
+    name: har_versjonsnummer
+    in_subset:
+    - Valgfri
 class_uri: dct:Standard
 
 ```
@@ -236,7 +345,7 @@ class_uri: dct:Standard
 <details>
 ```yaml
 name: Standard
-description: Ein standard som ein ressurs er i samsvar med.
+description: Ein standard eller spesifikasjon som eit datasett er i samsvar med.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 slot_usage:
   tittel:
@@ -244,6 +353,22 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
+  er_i_kvalitetsdimensjon:
+    name: er_i_kvalitetsdimensjon
+    in_subset:
+    - Anbefalt
+  har_referanse:
+    name: har_referanse
+    in_subset:
+    - Anbefalt
+  har_merknad:
+    name: har_merknad
+    in_subset:
+    - Valgfri
+  har_versjonsnummer:
+    name: har_versjonsnummer
+    in_subset:
+    - Valgfri
 attributes:
   id:
     name: id
@@ -254,17 +379,10 @@ attributes:
     alias: id
     owner: Standard
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -272,11 +390,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   tittel:
@@ -290,7 +414,6 @@ attributes:
     alias: tittel
     owner: Standard
     domain_of:
-    - Standard
     - RegulativRessurs
     - Distribusjon
     - Datasett
@@ -298,34 +421,71 @@ attributes:
     - Datatjeneste
     - Katalogpost
     - Katalog
+    - Standard
     range: LangString
     required: true
+    multivalued: true
+  er_i_kvalitetsdimensjon:
+    name: er_i_kvalitetsdimensjon
+    description: 'Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.
+
+      '
+    in_subset:
+    - Anbefalt
+    from_schema: https://data.norge.no/linkml/dcat-ap-no
+    rank: 1000
+    slot_uri: dqv:inDimension
+    alias: er_i_kvalitetsdimensjon
+    owner: Standard
+    domain_of:
+    - Kvalitetsmerknad
+    - Standard
+    range: Kvalitetsdimensjon
+    required: false
     multivalued: true
   har_referanse:
     name: har_referanse
     description: Referanse til ekstern ressurs (rdfs:seeAlso).
+    in_subset:
+    - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: rdfs:seeAlso
     alias: har_referanse
     owner: Standard
     domain_of:
-    - Standard
     - RegulativRessurs
+    - Standard
     range: uri
     multivalued: true
-  versjon:
-    name: versjon
-    description: Versjonsnummer.
+  har_merknad:
+    name: har_merknad
+    description: Fritekstmerknad (rdfs:comment).
+    in_subset:
+    - Valgfri
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
-    slot_uri: dcat:version
-    alias: versjon
+    slot_uri: rdfs:comment
+    alias: har_merknad
+    owner: Standard
+    domain_of:
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    range: LangString
+    multivalued: true
+  har_versjonsnummer:
+    name: har_versjonsnummer
+    description: Versjonsnummer for ressursen (owl:versionInfo).
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/dcat-ap-no
+    rank: 1000
+    slot_uri: owl:versionInfo
+    alias: har_versjonsnummer
     owner: Standard
     domain_of:
     - Standard
-    - Datasett
-    - Datatjeneste
     range: string
 class_uri: dct:Standard
 

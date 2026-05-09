@@ -38,7 +38,7 @@ classes:
       - tidsromer
       - tekstdeler
 # data
-      - identifikator
+      - id
       - skoler
       - kommuner
       - fylker
@@ -54,7 +54,7 @@ classes:
       - org:OrganizationalUnit
       - schema:EducationalOrganization
     slots:
-      - identifikator
+      - id
       - navn
       - har_skoleeier
 
@@ -65,7 +65,7 @@ classes:
       - foaf:Agent
     description: Superklasse for alle typer skoleeiere.
     slots:
-      - identifikator
+      - id
       - navn
 
   Kommune:
@@ -99,7 +99,7 @@ classes:
       - schema:EducationalOccupationalProgram
       - schema:Course
     slots:
-      - identifikator
+      - id
       - navn
       - trinniva
       - del_av_skole
@@ -110,7 +110,7 @@ classes:
     exact_mappings:
       - foaf:Person
     slots:
-      - identifikator
+      - id
       - navn
 
   Elev:
@@ -139,10 +139,10 @@ classes:
 slots:
 
   # --- Identifikator og namn ---
-  identifikator:
-    identifier: true
-    range: uriorcurie
-    description: Global identifikator (CURIE/URI).
+  # identifikator:
+  #   identifier: true
+  #   range: uriorcurie
+  #   description: Global identifikator (CURIE/URI).
 
   navn:
     range: string

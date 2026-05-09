@@ -25,6 +25,7 @@ Dokumentasjonstype {
     LangStringList beskrivelse  
     uriList er_beskrive_av  
     uriorcurie er_spesifisert_i  
+    SpraakList godtek_spraak  
     Duration gyldig_i  
     string identifikator_literal  
     LangStringList tittel  
@@ -49,6 +50,7 @@ Katalog {
     uriList heimeside  
     string identifikator_literal  
     uri lisens  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Konsept {
@@ -60,6 +62,7 @@ Kontaktpunkt {
     stringList kategori  
     uriList kontaktside  
     stringList opningstider  
+    SpraakList spraak  
     stringList telefon  
 }
 Livshendelse {
@@ -68,17 +71,6 @@ Livshendelse {
     LangStringList beskrivelse  
     uriList er_beskrive_av  
     string identifikator_literal  
-    LangStringList tittel  
-}
-LovpalagtTjeneste {
-    uriorcurie id  
-    LangStringList beskrivelse  
-    uriorcurie er_del_av  
-    uriorcurieList har_del  
-    uriList heimeside  
-    string identifikator_literal  
-    uriorcurieList krev  
-    LangStringList nokkelord  
     LangStringList tittel  
 }
 Mediatype {
@@ -103,21 +95,20 @@ OffentligTjeneste {
     uriorcurieList krev  
     LangStringList nokkelord  
     uriorcurieList relatert_teneste  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Regel {
     uriorcurie id  
     LangStringList beskrivelse  
     string identifikator_literal  
+    SpraakList spraak  
     LangStringList tittel  
 }
 RegulativRessurs {
     uriorcurie id  
     string identifikator_literal  
     LangStringList tittel  
-}
-Spraak {
-    uriorcurie id  
 }
 Tjeneste {
     uriorcurie id  
@@ -131,6 +122,7 @@ Tjeneste {
     uriorcurieList krev  
     LangStringList nokkelord  
     uriorcurieList relatert_teneste  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Tjenestekanal {
@@ -147,6 +139,7 @@ Tjenesteresultattype {
     uriList er_beskrive_av  
     uriorcurie er_spesifisert_i  
     string identifikator_literal  
+    SpraakList mogleg_spraak  
     LangStringList tittel  
 }
 Tjenesteresultattypeliste {
@@ -168,7 +161,6 @@ Aktor ||--}o Deltagelse : "deltek_i"
 Deltagelse ||--|o Aktor : "deltakar"
 Deltagelse ||--|o Konsept : "har_rolle"
 Dokumentasjonstype ||--|o Konsept : "klassifisering, utstedingsstad"
-Dokumentasjonstype ||--}o Spraak : "godtek_sprak"
 Gebyr ||--|o Konsept : "valuta"
 Hendelse ||--|o Konsept : "type_concept"
 Hendelse ||--}o Konsept : "tema"
@@ -177,54 +169,39 @@ Hendelse ||--}| Kontaktpunkt : "har_kontaktpunkt"
 Katalog ||--|o Konsept : "oppdateringsfrekvens"
 Katalog ||--|| Aktor : "utgjevar"
 Katalog ||--}o Hendelse : "inneheld_hending"
-Katalog ||--}o Konsept : "dekningsomrade"
-Katalog ||--}o Spraak : "sprak"
+Katalog ||--}o Konsept : "dekningsomraade"
 Katalog ||--}| Kontaktpunkt : "har_kontaktpunkt"
 Katalog ||--}| OffentligTjeneste : "inneheld_teneste"
-Kontaktpunkt ||--}o Spraak : "sprak"
 Livshendelse ||--|o Konsept : "type_concept"
 Livshendelse ||--}o Konsept : "tema"
 Livshendelse ||--}o OffentligTjeneste : "kan_utlose"
 Livshendelse ||--}| Kontaktpunkt : "har_kontaktpunkt"
-LovpalagtTjeneste ||--|o Konsept : "type_concept"
-LovpalagtTjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
-LovpalagtTjeneste ||--}o Gebyr : "har_gebyr"
-LovpalagtTjeneste ||--}o Hendelse : "er_gruppert_av"
-LovpalagtTjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
-LovpalagtTjeneste ||--}o Regel : "folger"
-LovpalagtTjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-LovpalagtTjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
-LovpalagtTjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 OffentligOrganisasjon ||--|o Adresse : "adresse_ref"
 OffentligOrganisasjon ||--|o Konsept : "type_concept"
 OffentligOrganisasjon ||--}o Deltagelse : "deltek_i"
-OffentligOrganisasjon ||--}| Konsept : "dekningsomrade"
+OffentligOrganisasjon ||--}| Konsept : "dekningsomraade"
 OffentligTjeneste ||--|o Konsept : "status, type_concept"
 OffentligTjeneste ||--}o Deltagelse : "har_deltaking"
 OffentligTjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
 OffentligTjeneste ||--}o Gebyr : "har_gebyr"
 OffentligTjeneste ||--}o Hendelse : "er_gruppert_av"
-OffentligTjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
-OffentligTjeneste ||--}o LovpalagtTjeneste : "realiserer"
+OffentligTjeneste ||--}o Konsept : "dekningsomraade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
 OffentligTjeneste ||--}o Regel : "folger"
 OffentligTjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-OffentligTjeneste ||--}o Spraak : "sprak"
 OffentligTjeneste ||--}o Tjenestekanal : "har_tenestekanal"
 OffentligTjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
 OffentligTjeneste ||--}| OffentligOrganisasjon : "har_ansvarleg_styremakt"
 OffentligTjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 Regel ||--|o Konsept : "type_concept"
-Regel ||--}o Spraak : "sprak"
 RegulativRessurs ||--|o Konsept : "type_concept"
 Tjeneste ||--|o Konsept : "status, type_concept"
 Tjeneste ||--}o Deltagelse : "har_deltaking"
 Tjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
 Tjeneste ||--}o Gebyr : "har_gebyr"
 Tjeneste ||--}o Hendelse : "er_gruppert_av"
-Tjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
+Tjeneste ||--}o Konsept : "dekningsomraade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
 Tjeneste ||--}o Regel : "folger"
 Tjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-Tjeneste ||--}o Spraak : "sprak"
 Tjeneste ||--}o Tjenestekanal : "har_tenestekanal"
 Tjeneste ||--}| Aktor : "eigd_av"
 Tjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
@@ -232,7 +209,6 @@ Tjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 Tjenestekanal ||--|o Konsept : "type_concept"
 Tjenesteresultattype ||--|o Konsept : "type_concept"
 Tjenesteresultattype ||--}o Hendelse : "kan_skape_hending"
-Tjenesteresultattype ||--}o Spraak : "mogleg_sprak"
 Virksomhetshendelse ||--|o Konsept : "type_concept"
 Virksomhetshendelse ||--}o Konsept : "tema"
 Virksomhetshendelse ||--}o OffentligTjeneste : "kan_utlose"
@@ -267,12 +243,10 @@ Name: cpsv-ap-no
 | [Katalog](klasser/katalog.md) | Ein katalog over offentlege tenester og hendingar |
 | [Konsept](klasser/konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |
 | [Kontaktpunkt](klasser/kontaktpunkt.md) | Kontaktinformasjon for ei teneste eller ein organisasjon |
-| [LovpalagtTjeneste](klasser/lovpalagttjeneste.md) | Ei lovpålagd teneste som offentlege organ er pålagde å utføre |
 | [Mediatype](klasser/mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
 | [OffentligTjeneste](klasser/offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |
 | [Regel](klasser/regel.md) | Eit regelverk eller retningsliner som styrer levering av ei teneste |
 | [RegulativRessurs](klasser/regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |
-| [Spraak](klasser/spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Tjeneste](klasser/tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |
 | [Tjenestekanal](klasser/tjenestekanal.md) | Ein kanal for å få tilgang til ei teneste (t |
 | [Tjenesteresultattype](klasser/tjenesteresultattype.md) | Typen resultat som ei teneste produserer |
@@ -288,7 +262,7 @@ Name: cpsv-ap-no
 | [anbefalt_term](klasser/anbefalt_term.md) | Føretrukke term/namn for ressursen (skos:prefLabel) |
 | [behandlingstid](klasser/behandlingstid.md) | Forventa behandlingstid for tenesta eller kanalen (ISO 8601) |
 | [beskrivelse](klasser/beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
-| [dekningsomrade](klasser/dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](klasser/dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [deltakar](klasser/deltakar.md) | Aktøren som deltek |
 | [deltek_i](klasser/deltek_i.md) | Deltakingar aktøren er del av |
 | [eigd_av](klasser/eigd_av.md) | Aktør som eig eller er ansvarleg for tenesta |
@@ -303,7 +277,7 @@ Name: cpsv-ap-no
 | [foretrekt_namn](klasser/foretrekt_namn.md) | Føretrekt namn/term for organisasjonen |
 | [format](klasser/format.md) | Filformat eller medietype (dct:format) |
 | [full_adresse](klasser/full_adresse.md) | Full adresse som fritekst |
-| [godtek_sprak](klasser/godtek_sprak.md) | Språk dokumentasjonstypen er akseptert i |
+| [godtek_spraak](klasser/godtek_spraak.md) | Språk dokumentasjonstypen er akseptert i |
 | [gyldig_i](klasser/gyldig_i.md) | Kor lenge dokumentasjonen er gyldig (ISO 8601 varigheit) |
 | [har_ansvarleg_styremakt](klasser/har_ansvarleg_styremakt.md) | Offentleg organisasjon ansvarleg for tenesta |
 | [har_del](klasser/har_del.md) | Deltenester som inngår i denne tenesta |
@@ -333,17 +307,16 @@ Name: cpsv-ap-no
 | [land](klasser/land.md) | Land (ISO 3166-1 alpha-2 kode) |
 | [lisens](klasser/lisens.md) | Lisens for katalogen |
 | [malgruppe](klasser/malgruppe.md) | Målgruppe for tenesta |
-| [mogleg_sprak](klasser/mogleg_sprak.md) | Mogleg språk for tenesteresultatet |
+| [mogleg_spraak](klasser/mogleg_spraak.md) | Mogleg språk for tenesteresultatet |
 | [nettside](klasser/nettside.md) | Nettside for tenestekanalane |
 | [nokkelord](klasser/nokkelord.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
 | [opningstider](klasser/opningstider.md) | Opningstider |
 | [oppdateringsfrekvens](klasser/oppdateringsfrekvens.md) | Kor ofte katalogen vert oppdatert |
 | [postnummer](klasser/postnummer.md) | Postnummer |
 | [poststad](klasser/poststad.md) | Poststad/by |
-| [realiserer](klasser/realiserer.md) | Lovpålagd teneste denne offentlege tenesta realiserer |
 | [relatert_teneste](klasser/relatert_teneste.md) | Relatert teneste |
 | [sektor](klasser/sektor.md) | Industri/sektor tenesta tilhøyrer |
-| [sprak](klasser/sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](klasser/spraak.md) | Språk brukt i ressursen (dct:language) |
 | [status](klasser/status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [telefon](klasser/telefon.md) | Telefonnummer |
 | [tema](klasser/tema.md) | Emne/tema tenesta handlar om |
@@ -387,6 +360,7 @@ Name: cpsv-ap-no
 | [NonNegativeInteger](klasser/nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](klasser/objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](klasser/sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](klasser/spraak.md) | Språk |
 | [String](klasser/string.md) | A character string |
 | [Time](klasser/time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](klasser/uri.md) | a complete URI |

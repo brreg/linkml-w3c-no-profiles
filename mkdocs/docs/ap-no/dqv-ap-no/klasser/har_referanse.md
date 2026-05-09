@@ -23,6 +23,7 @@ Alias: har_referanse
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  yes  |
+| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
 
 
 
@@ -36,7 +37,7 @@ Alias: har_referanse
 | Property | Value |
 | --- | --- |
 | Range | [Uri](uri.md) |
-| Domain Of | [Standard](standard.md) |
+| Domain Of | [Standard](standard.md), [RegulativRessurs](regulativressurs.md) |
 | Slot URI | [rdfs:seeAlso](http://www.w3.org/2000/01/rdf-schema#seeAlso) |
 
 ### Cardinality and Requirements
@@ -90,6 +91,7 @@ slot_uri: rdfs:seeAlso
 alias: har_referanse
 domain_of:
 - Standard
+- RegulativRessurs
 range: uri
 multivalued: true
 

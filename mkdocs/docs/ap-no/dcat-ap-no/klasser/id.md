@@ -22,33 +22,34 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tidsinstant](tidsinstant.md) | Eit tidspunkt (OWL Time) |  no  |
-| [ProvAttributering](provattributering.md) | Ein kvalifisert PROV-attributering |  no  |
-| [Rettighetserklaring](rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
-| [Tidsrom](tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
-| [OdrlPolicy](odrlpolicy.md) | Ein ODRL-policy |  no  |
-| [Relasjon](relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  no  |
-| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
-| [Sjekksum](sjekksum.md) | Ein sjekksum for ein distribusjon |  no  |
-| [Standard](standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
-| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
-| [KatalogisertRessurs](katalogisertressurs.md) | Basisklasse for ressursar som kan katalogiserast |  no  |
-| [ProvAktivitet](provaktivitet.md) | Ein PROV-aktivitet |  no  |
-| [Datasettserie](datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
-| [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
-| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
-| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
-| [Frekvens](frekvens.md) | Ein oppdateringsfrekvens |  no  |
-| [Identifikator](identifikator.md) | Ein alternativ identifikator for ein ressurs |  no  |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
-| [Aktor](aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
-| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
-| [Katalogpost](katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  no  |
-| [ProvenanceStatement](provenancestatement.md) | Ein provenienserklæring |  no  |
 | [Kontaktopplysning](kontaktopplysning.md) | Kontaktinformasjon for ein aktør |  no  |
-| [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
 | [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Datasettserie](datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [Sjekksum](sjekksum.md) | Ein sjekksum for ein distribusjon |  no  |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål |  no  |
+| [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  no  |
+| [Tidsrom](tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
 | [Gebyr](gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |  no  |
+| [Aktor](aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
+| [Identifikator](identifikator.md) | Ein alternativ identifikator for ein ressurs |  no  |
+| [Rettighetserklaring](rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
+| [Tekstdel](tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |  no  |
+| [KatalogisertRessurs](katalogisertressurs.md) | Basisklasse for ressursar som kan katalogiserast |  no  |
+| [Kvalitetsmaal](kvalitetsmaal.md) | Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon |  no  |
+| [Kvalitetsmerknad](kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  no  |
+| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
+| [Kvalitetsdeldimensjon](kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |  no  |
+| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
+| [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
+| [Kvalitetssertifikat](kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |  no  |
+| [Relasjon](relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  no  |
+| [Brukartilbakemelding](brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |  no  |
+| [Kvalitetsmaaling](kvalitetsmaaling.md) | Ei konkret måling av eit kvalitetsmål for eit datasett |  no  |
+| [Katalogpost](katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  no  |
+| [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
 
 
 
@@ -62,7 +63,7 @@ Alias: id
 | Property | Value |
 | --- | --- |
 | Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Frekvens](frekvens.md), [ProvenanceStatement](provenancestatement.md), [OdrlPolicy](odrlpolicy.md), [ProvAktivitet](provaktivitet.md), [ProvAttributering](provattributering.md), [Tidsinstant](tidsinstant.md), [KatalogisertRessurs](katalogisertressurs.md), [Aktor](aktor.md), [Kontaktopplysning](kontaktopplysning.md), [Tidsrom](tidsrom.md), [Standard](standard.md), [RegulativRessurs](regulativressurs.md), [Identifikator](identifikator.md), [Rettighetserklaring](rettighetserklaring.md), [Sjekksum](sjekksum.md), [Gebyr](gebyr.md), [Relasjon](relasjon.md), [Distribusjon](distribusjon.md), [Katalogpost](katalogpost.md), [Spraak](spraak.md), [Mediatype](mediatype.md), [Konsept](konsept.md), [Begrepssamling](begrepssamling.md) |
+| Domain Of | [KatalogisertRessurs](katalogisertressurs.md), [Aktor](aktor.md), [Kontaktopplysning](kontaktopplysning.md), [Tidsrom](tidsrom.md), [RegulativRessurs](regulativressurs.md), [Identifikator](identifikator.md), [Rettighetserklaring](rettighetserklaring.md), [Sjekksum](sjekksum.md), [Gebyr](gebyr.md), [Relasjon](relasjon.md), [Distribusjon](distribusjon.md), [Datasett](datasett.md), [Katalogpost](katalogpost.md), [Mediatype](mediatype.md), [Konsept](konsept.md), [Begrepssamling](begrepssamling.md), [Kvalitetsdimensjon](kvalitetsdimensjon.md), [Kvalitetsmaal](kvalitetsmaal.md), [Kvalitetsmerknad](kvalitetsmerknad.md), [Kvalitetsmaaling](kvalitetsmaaling.md), [Standard](standard.md), [Tekstdel](tekstdel.md) |
 
 ### Cardinality and Requirements
 
@@ -121,17 +122,10 @@ rank: 1000
 identifier: true
 alias: id
 domain_of:
-- Frekvens
-- ProvenanceStatement
-- OdrlPolicy
-- ProvAktivitet
-- ProvAttributering
-- Tidsinstant
 - KatalogisertRessurs
 - Aktor
 - Kontaktopplysning
 - Tidsrom
-- Standard
 - RegulativRessurs
 - Identifikator
 - Rettighetserklaring
@@ -139,11 +133,17 @@ domain_of:
 - Gebyr
 - Relasjon
 - Distribusjon
+- Datasett
 - Katalogpost
-- Spraak
 - Mediatype
 - Konsept
 - Begrepssamling
+- Kvalitetsdimensjon
+- Kvalitetsmaal
+- Kvalitetsmerknad
+- Kvalitetsmaaling
+- Standard
+- Tekstdel
 range: uriorcurie
 required: true
 

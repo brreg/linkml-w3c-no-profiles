@@ -25,12 +25,10 @@ Name: cpsv-ap-no
 | [Katalog](katalog.md) | Ein katalog over offentlege tenester og hendingar |
 | [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |
 | [Kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for ei teneste eller ein organisasjon |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | Ei lovpålagd teneste som offentlege organ er pålagde å utføre |
 | [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
 | [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |
 | [Regel](regel.md) | Eit regelverk eller retningsliner som styrer levering av ei teneste |
 | [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |
 | [Tjenestekanal](tjenestekanal.md) | Ein kanal for å få tilgang til ei teneste (t |
 | [Tjenesteresultattype](tjenesteresultattype.md) | Typen resultat som ei teneste produserer |
@@ -46,7 +44,7 @@ Name: cpsv-ap-no
 | [anbefalt_term](anbefalt_term.md) | Føretrukke term/namn for ressursen (skos:prefLabel) |
 | [behandlingstid](behandlingstid.md) | Forventa behandlingstid for tenesta eller kanalen (ISO 8601) |
 | [beskrivelse](beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
-| [dekningsomrade](dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [deltakar](deltakar.md) | Aktøren som deltek |
 | [deltek_i](deltek_i.md) | Deltakingar aktøren er del av |
 | [eigd_av](eigd_av.md) | Aktør som eig eller er ansvarleg for tenesta |
@@ -61,7 +59,7 @@ Name: cpsv-ap-no
 | [foretrekt_namn](foretrekt_namn.md) | Føretrekt namn/term for organisasjonen |
 | [format](format.md) | Filformat eller medietype (dct:format) |
 | [full_adresse](full_adresse.md) | Full adresse som fritekst |
-| [godtek_sprak](godtek_sprak.md) | Språk dokumentasjonstypen er akseptert i |
+| [godtek_spraak](godtek_spraak.md) | Språk dokumentasjonstypen er akseptert i |
 | [gyldig_i](gyldig_i.md) | Kor lenge dokumentasjonen er gyldig (ISO 8601 varigheit) |
 | [har_ansvarleg_styremakt](har_ansvarleg_styremakt.md) | Offentleg organisasjon ansvarleg for tenesta |
 | [har_del](har_del.md) | Deltenester som inngår i denne tenesta |
@@ -91,17 +89,16 @@ Name: cpsv-ap-no
 | [land](land.md) | Land (ISO 3166-1 alpha-2 kode) |
 | [lisens](lisens.md) | Lisens for katalogen |
 | [malgruppe](malgruppe.md) | Målgruppe for tenesta |
-| [mogleg_sprak](mogleg_sprak.md) | Mogleg språk for tenesteresultatet |
+| [mogleg_spraak](mogleg_spraak.md) | Mogleg språk for tenesteresultatet |
 | [nettside](nettside.md) | Nettside for tenestekanalane |
 | [nokkelord](nokkelord.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
 | [opningstider](opningstider.md) | Opningstider |
 | [oppdateringsfrekvens](oppdateringsfrekvens.md) | Kor ofte katalogen vert oppdatert |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststad](poststad.md) | Poststad/by |
-| [realiserer](realiserer.md) | Lovpålagd teneste denne offentlege tenesta realiserer |
 | [relatert_teneste](relatert_teneste.md) | Relatert teneste |
 | [sektor](sektor.md) | Industri/sektor tenesta tilhøyrer |
-| [sprak](sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [status](status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [telefon](telefon.md) | Telefonnummer |
 | [tema](tema.md) | Emne/tema tenesta handlar om |
@@ -145,6 +142,7 @@ Name: cpsv-ap-no
 | [NonNegativeInteger](nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](spraak.md) | Språk |
 | [String](string.md) | A character string |
 | [Time](time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](uri.md) | a complete URI |

@@ -3,7 +3,16 @@
 
 datasett:
   - id: https://example.org/datasett/aapen-adresseregister
-    er_i_samsvar_med:
+    tittel:
+      - Ope adresseregister
+    beskrivelse:
+      - Eit datasett med norske adresser tilgjengeleg for allmenta.
+    utgiver: https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827
+    kontaktpunkt:
+      - https://example.org/kontaktpunkt/1
+    tema:
+      - http://publications.europa.eu/resource/authority/data-theme/REGI
+    i_samsvar_med:
       - https://example.org/standardar/iso-19157
     har_kvalitetsmerknad:
       - https://example.org/merknader/adresser-kompletheit-1
@@ -50,7 +59,7 @@ kvalitetsmerknader:
 tekstdelar:
   - id: https://example.org/tekstdelar/adresser-vurdering-1
     har_verdi_tekstdel: "Datasettet har svært høg kompletheit basert på samanlikning mot matrikkelen."
-    sprak:
+    spraak:
       - http://publications.europa.eu/resource/authority/language/NOB
 
 standardar:

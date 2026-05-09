@@ -31,6 +31,11 @@ imports:
 
 types:
 
+  Spraak:
+    uri: dct:language
+    base: str
+    description: Språk
+  
   LangString:
     uri: rdf:langString
     base: str
@@ -73,11 +78,7 @@ subsets:
 
 classes:
 
-  Spraak:
-    class_uri: dct:LinguisticSystem
-    description: Ein språkreferanse (dct:LinguisticSystem).
-    slots:
-      - id
+
 
   Mediatype:
     class_uri: dct:MediaTypeOrExtent
@@ -142,7 +143,7 @@ slots:
 
   spraak:
     slot_uri: dct:language
-    range: string
+    range: Spraak
     multivalued: true
     description: Språk brukt i ressursen (dct:language).
 

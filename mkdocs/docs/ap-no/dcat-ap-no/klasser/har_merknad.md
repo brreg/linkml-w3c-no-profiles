@@ -18,6 +18,19 @@ Alias: har_merknad
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Kvalitetssertifikat](kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |  no  |
+| [Kvalitetsmerknad](kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  yes  |
+| [Brukartilbakemelding](brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |  no  |
+| [Kvalitetsmaaling](kvalitetsmaaling.md) | Ei konkret måling av eit kvalitetsmål for eit datasett |  yes  |
+| [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  yes  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +40,7 @@ Alias: har_merknad
 | Property | Value |
 | --- | --- |
 | Range | [LangString](langstring.md) |
+| Domain Of | [Kvalitetsmerknad](kvalitetsmerknad.md), [Kvalitetsmaaling](kvalitetsmaaling.md), [Standard](standard.md) |
 | Slot URI | [rdfs:comment](http://www.w3.org/2000/01/rdf-schema#comment) |
 
 ### Cardinality and Requirements
@@ -78,6 +92,10 @@ from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: rdfs:comment
 alias: har_merknad
+domain_of:
+- Kvalitetsmerknad
+- Kvalitetsmaaling
+- Standard
 range: LangString
 multivalued: true
 

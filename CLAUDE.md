@@ -4,7 +4,7 @@ Dette filen gir veiledning til Claude Code (claude.ai/code) ved arbeid i dette r
 
 ## Formål
 
-Dette repoet modellerer norske W3C-applikasjonsprofiler fra [data.norge.no/showroom](https://data.norge.no/showroom/overview) i [LinkML-format](https://linkml.io/linkml-model/latest/docs/specification/).
+Dette repoet modellerer norske W3C-applikasjonsprofiler fra [data.norge.no/showroom](https://data.norge.no/showroom/overview) og norske offentlige domenemodeller i [LinkML-format](https://linkml.io/linkml-model/latest/docs/specification/).
 
 Profiler som skal modelleres:
 - **DCAT-AP-NO** – Datakataloger (`src/linkml/ap-no/dcat-ap-no/dcat-ap-no-schema.yaml`) ✅
@@ -16,8 +16,11 @@ Profiler som skal modelleres:
 
 Egenskaper som går igjen i flere profiler samles i `common-ap-no-schema.yaml`.
 
-Domenemodeller utover AP-NO og FINT:
+Domenemodeller som skal modelleres:
 - **OREG** – Offentlige registre (`src/linkml/oreg/`) – f.eks. register-over-aksjeeiere
+- **FINT** – Integrasjonsmodeller for fylkeskommunesektoren (`src/linkml/fint/`) – f.eks. fint-personvern
+- **SAMT** – Integrasjonsmodeller for kommunesektoren (`src/linkml/samt/`) – f.eks. samt-bu
+- **NGR** – Nasjonale grunndata (`src/linkml/ngr/`) – f.eks. ngr-adresse
 
 ## Importhierarki
 
@@ -51,9 +54,11 @@ make gen-jsonschema         # Generer JSON Schema
 make gen-owl                # Generer OWL/Turtle-ontologi
 make docs                   # Generer HTML-dokumentasjon
 
-# Enkelt skjema direkte:
-podman run --rm -v "$(pwd):/work" -w /work docker.io/linkml/linkml:latest \
-  gen-linkml --validate src/linkml/ap-no/dcat-ap-no/dcat-ap-no-schema.yaml
+# Lint enkelt skjema direkte:
+./tests/lint_schema.bash ./src/linkml/samt/samt-bu/samt-bu-schema.yaml 
+
+# Valider eksempelfil mot skjema direkte: NB bruk denne til å validere alle endringar du utfører på eit skjema.
+./tests/validate_schema.bash ./src/linkml/samt/samt-bu/samt-bu-schema.yaml ./examples/samt/samt-bu-eksempel.yaml
 
 # MCP-validator (raskere tilbakemelding under utvikling):
 make mcp-validate SCHEMA=src/linkml/<domene>/<modell>/<modell>-schema.yaml

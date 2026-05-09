@@ -21,7 +21,6 @@ Name: xkos-ap-no
 | [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |
 | [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
 | [Organisasjon](organisasjon.md) | Ein organisasjon eller aktør (foaf:Agent) |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Tidsrom](tidsrom.md) | Eit tidsrom med start- og/eller sluttdato (dct:PeriodOfTime) |
 
 
@@ -34,7 +33,7 @@ Name: xkos-ap-no
 | [antall_nivaa](antall_nivaa.md) | Antal nivå i klassifikasjonen (xkos:numberOfLevels) |
 | [beskrivelse](beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [bestar_av](bestar_av.md) | Kategorisamanlikningar som inngår i klassifikasjonssamanlikninga (xkos:madeOf... |
-| [dekningsomrade](dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [endringsdato](endringsdato.md) | Dato for siste endring av ressursen (dct:modified) |
 | [er_eksklusivt_ekvivalent_med](er_eksklusivt_ekvivalent_med.md) | Eksklusiv breid ekvivalens (xkos:exclusivelyBroadMatch) |
 | [er_ekvivalent_med](er_ekvivalent_med.md) | Breid ekvivalens til kategori i annan klassifikasjon (uneskos:broadMatch) |
@@ -58,7 +57,7 @@ Name: xkos-ap-no
 | [nokkelord](nokkelord.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
 | [overordna_kategori](overordna_kategori.md) | Overordna kategori (skos:broader) |
 | [samanliknar](samanliknar.md) | Klassifikasjonar som er samanlikna i korrespondansen (xkos:compares) |
-| [sprak](sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [status](status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tema](tema.md) | Fagleg tema klassifikasjonen dekkjer (dct:subject) |
 | [tidsrom_slutt](tidsrom_slutt.md) | Sluttdato for tidsromet (dct:endDate) |
@@ -103,6 +102,7 @@ Name: xkos-ap-no
 | [NonNegativeInteger](nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](spraak.md) | Språk |
 | [String](string.md) | A character string |
 | [Time](time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](uri.md) | a complete URI |

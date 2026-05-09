@@ -32,13 +32,13 @@ URI: [modelldcatno:InformationModel](https://data.norge.no/vocabulary/modelldcat
         
       Informasjonsmodell : beskrivelse
         
-      Informasjonsmodell : dekningsomrade
+      Informasjonsmodell : dekningsomraade
         
           
     
         
         
-        Informasjonsmodell --> "*" Konsept : dekningsomrade
+        Informasjonsmodell --> "*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -178,16 +178,7 @@ URI: [modelldcatno:InformationModel](https://data.norge.no/vocabulary/modelldcat
     
 
         
-      Informasjonsmodell : sprak
-        
-          
-    
-        
-        
-        Informasjonsmodell --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Informasjonsmodell : spraak
         
       Informasjonsmodell : status
         
@@ -636,7 +627,7 @@ URI: [modelldcatno:InformationModel](https://data.norge.no/vocabulary/modelldcat
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
 | [er_del_av_modell](er_del_av_modell.md) | * <br/> [Informasjonsmodell](informasjonsmodell.md) | Overordna informasjonsmodell (dct:isPartOf) |
 | [er_profil_av](er_profil_av.md) | * <br/> [Standard](standard.md) | Standard denne informasjonsmodellen er ein profil av (prof:isProfileOf) |
@@ -650,7 +641,7 @@ URI: [modelldcatno:InformationModel](https://data.norge.no/vocabulary/modelldcat
 | [status](status.md) | 0..1 <br/> [Konsept](konsept.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [nokkelord](nokkelord.md) | * <br/> [LangString](langstring.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
 | [skapar](skapar.md) | 0..1 <br/> [Aktor](aktor.md) | Aktøren som primært har skapt ressursen (dct:creator) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [type_concept](type_concept.md) | 0..1 <br/> [Konsept](konsept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
 | [har_versjonsnummer](har_versjonsnummer.md) | 0..1 <br/> [String](string.md) | Versjonsnummer for ressursen (owl:versionInfo) |
@@ -1129,7 +1120,7 @@ slots:
 - kontaktpunkt
 - lisens
 - tema
-- dekningsomrade
+- dekningsomraade
 - endringsdato
 - er_del_av_modell
 - er_profil_av
@@ -1143,7 +1134,7 @@ slots:
 - status
 - nokkelord
 - skapar
-- sprak
+- spraak
 - type_concept
 - utgivelsesdato
 - har_versjonsnummer
@@ -1191,8 +1182,8 @@ slot_usage:
     name: tema
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Valgfri
   endringsdato:
@@ -1247,8 +1238,8 @@ slot_usage:
     name: skapar
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   type_concept:
@@ -1322,8 +1313,8 @@ slot_usage:
     name: tema
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Valgfri
   endringsdato:
@@ -1378,8 +1369,8 @@ slot_usage:
     name: skapar
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   type_concept:
@@ -1422,7 +1413,6 @@ attributes:
     - Eigenskap
     - Merknad
     - Kodeelement
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -1588,15 +1578,15 @@ attributes:
     - Informasjonsmodell
     range: Konsept
     multivalued: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/modelldcat-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: Informasjonsmodell
     domain_of:
     - Informasjonsmodell
@@ -1783,15 +1773,15 @@ attributes:
     domain_of:
     - Informasjonsmodell
     range: Aktor
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/modelldcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Informasjonsmodell
     domain_of:
     - Dokument

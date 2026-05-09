@@ -334,19 +334,28 @@ attributes:
     alias: id
     owner: Kvalitetsmaal
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
   er_i_kvalitetsdeldimensjon:

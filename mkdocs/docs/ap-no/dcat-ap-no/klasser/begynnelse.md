@@ -35,7 +35,7 @@ Alias: begynnelse
 
 | Property | Value |
 | --- | --- |
-| Range | [Tidsinstant](tidsinstant.md) |
+| Range | [Datetime](datetime.md) |
 | Domain Of | [Tidsrom](tidsrom.md) |
 | Slot URI | [time:hasBeginning](http://www.w3.org/6006/time#hasBeginning) |
 
@@ -89,7 +89,7 @@ slot_uri: time:hasBeginning
 alias: begynnelse
 domain_of:
 - Tidsrom
-range: Tidsinstant
+range: datetime
 
 ```
 </details>

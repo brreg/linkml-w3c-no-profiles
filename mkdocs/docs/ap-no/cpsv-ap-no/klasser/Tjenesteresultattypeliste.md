@@ -198,7 +198,6 @@ attributes:
     alias: id
     owner: Tjenesteresultattypeliste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -214,7 +213,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -229,7 +227,6 @@ attributes:
     alias: tittel
     owner: Tjenesteresultattypeliste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -251,7 +248,6 @@ attributes:
     alias: beskrivelse
     owner: Tjenesteresultattypeliste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

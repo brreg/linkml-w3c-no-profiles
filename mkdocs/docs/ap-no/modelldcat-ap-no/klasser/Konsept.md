@@ -96,7 +96,7 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 | [Modelkatalog](modelkatalog.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
 | [Informasjonsmodell](informasjonsmodell.md) | [begrep](begrep.md) | range | [Konsept](konsept.md) |
 | [Informasjonsmodell](informasjonsmodell.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [Informasjonsmodell](informasjonsmodell.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [Informasjonsmodell](informasjonsmodell.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [Informasjonsmodell](informasjonsmodell.md) | [status](status.md) | range | [Konsept](konsept.md) |
 | [Informasjonsmodell](informasjonsmodell.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Modellelement](modellelement.md) | [begrep](begrep.md) | range | [Konsept](konsept.md) |
@@ -207,7 +207,6 @@ attributes:
     - Eigenskap
     - Merknad
     - Kodeelement
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling

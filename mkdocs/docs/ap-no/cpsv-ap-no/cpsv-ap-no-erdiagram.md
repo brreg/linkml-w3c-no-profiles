@@ -23,6 +23,7 @@ Dokumentasjonstype {
     LangStringList beskrivelse  
     uriList er_beskrive_av  
     uriorcurie er_spesifisert_i  
+    SpraakList godtek_spraak  
     Duration gyldig_i  
     string identifikator_literal  
     LangStringList tittel  
@@ -47,6 +48,7 @@ Katalog {
     uriList heimeside  
     string identifikator_literal  
     uri lisens  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Konsept {
@@ -58,6 +60,7 @@ Kontaktpunkt {
     stringList kategori  
     uriList kontaktside  
     stringList opningstider  
+    SpraakList spraak  
     stringList telefon  
 }
 Livshendelse {
@@ -66,17 +69,6 @@ Livshendelse {
     LangStringList beskrivelse  
     uriList er_beskrive_av  
     string identifikator_literal  
-    LangStringList tittel  
-}
-LovpalagtTjeneste {
-    uriorcurie id  
-    LangStringList beskrivelse  
-    uriorcurie er_del_av  
-    uriorcurieList har_del  
-    uriList heimeside  
-    string identifikator_literal  
-    uriorcurieList krev  
-    LangStringList nokkelord  
     LangStringList tittel  
 }
 Mediatype {
@@ -101,21 +93,20 @@ OffentligTjeneste {
     uriorcurieList krev  
     LangStringList nokkelord  
     uriorcurieList relatert_teneste  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Regel {
     uriorcurie id  
     LangStringList beskrivelse  
     string identifikator_literal  
+    SpraakList spraak  
     LangStringList tittel  
 }
 RegulativRessurs {
     uriorcurie id  
     string identifikator_literal  
     LangStringList tittel  
-}
-Spraak {
-    uriorcurie id  
 }
 Tjeneste {
     uriorcurie id  
@@ -129,6 +120,7 @@ Tjeneste {
     uriorcurieList krev  
     LangStringList nokkelord  
     uriorcurieList relatert_teneste  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Tjenestekanal {
@@ -145,6 +137,7 @@ Tjenesteresultattype {
     uriList er_beskrive_av  
     uriorcurie er_spesifisert_i  
     string identifikator_literal  
+    SpraakList mogleg_spraak  
     LangStringList tittel  
 }
 Tjenesteresultattypeliste {
@@ -166,7 +159,6 @@ Aktor ||--}o Deltagelse : "deltek_i"
 Deltagelse ||--|o Aktor : "deltakar"
 Deltagelse ||--|o Konsept : "har_rolle"
 Dokumentasjonstype ||--|o Konsept : "klassifisering, utstedingsstad"
-Dokumentasjonstype ||--}o Spraak : "godtek_sprak"
 Gebyr ||--|o Konsept : "valuta"
 Hendelse ||--|o Konsept : "type_concept"
 Hendelse ||--}o Konsept : "tema"
@@ -175,54 +167,39 @@ Hendelse ||--}| Kontaktpunkt : "har_kontaktpunkt"
 Katalog ||--|o Konsept : "oppdateringsfrekvens"
 Katalog ||--|| Aktor : "utgjevar"
 Katalog ||--}o Hendelse : "inneheld_hending"
-Katalog ||--}o Konsept : "dekningsomrade"
-Katalog ||--}o Spraak : "sprak"
+Katalog ||--}o Konsept : "dekningsomraade"
 Katalog ||--}| Kontaktpunkt : "har_kontaktpunkt"
 Katalog ||--}| OffentligTjeneste : "inneheld_teneste"
-Kontaktpunkt ||--}o Spraak : "sprak"
 Livshendelse ||--|o Konsept : "type_concept"
 Livshendelse ||--}o Konsept : "tema"
 Livshendelse ||--}o OffentligTjeneste : "kan_utlose"
 Livshendelse ||--}| Kontaktpunkt : "har_kontaktpunkt"
-LovpalagtTjeneste ||--|o Konsept : "type_concept"
-LovpalagtTjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
-LovpalagtTjeneste ||--}o Gebyr : "har_gebyr"
-LovpalagtTjeneste ||--}o Hendelse : "er_gruppert_av"
-LovpalagtTjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
-LovpalagtTjeneste ||--}o Regel : "folger"
-LovpalagtTjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-LovpalagtTjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
-LovpalagtTjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 OffentligOrganisasjon ||--|o Adresse : "adresse_ref"
 OffentligOrganisasjon ||--|o Konsept : "type_concept"
 OffentligOrganisasjon ||--}o Deltagelse : "deltek_i"
-OffentligOrganisasjon ||--}| Konsept : "dekningsomrade"
+OffentligOrganisasjon ||--}| Konsept : "dekningsomraade"
 OffentligTjeneste ||--|o Konsept : "status, type_concept"
 OffentligTjeneste ||--}o Deltagelse : "har_deltaking"
 OffentligTjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
 OffentligTjeneste ||--}o Gebyr : "har_gebyr"
 OffentligTjeneste ||--}o Hendelse : "er_gruppert_av"
-OffentligTjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
-OffentligTjeneste ||--}o LovpalagtTjeneste : "realiserer"
+OffentligTjeneste ||--}o Konsept : "dekningsomraade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
 OffentligTjeneste ||--}o Regel : "folger"
 OffentligTjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-OffentligTjeneste ||--}o Spraak : "sprak"
 OffentligTjeneste ||--}o Tjenestekanal : "har_tenestekanal"
 OffentligTjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
 OffentligTjeneste ||--}| OffentligOrganisasjon : "har_ansvarleg_styremakt"
 OffentligTjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 Regel ||--|o Konsept : "type_concept"
-Regel ||--}o Spraak : "sprak"
 RegulativRessurs ||--|o Konsept : "type_concept"
 Tjeneste ||--|o Konsept : "status, type_concept"
 Tjeneste ||--}o Deltagelse : "har_deltaking"
 Tjeneste ||--}o Dokumentasjonstype : "har_dokumentasjonstype"
 Tjeneste ||--}o Gebyr : "har_gebyr"
 Tjeneste ||--}o Hendelse : "er_gruppert_av"
-Tjeneste ||--}o Konsept : "dekningsomrade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
+Tjeneste ||--}o Konsept : "dekningsomraade, er_klassifisert_av, malgruppe, sektor, tema, temaomrade"
 Tjeneste ||--}o Regel : "folger"
 Tjeneste ||--}o RegulativRessurs : "har_regulativ_ressurs"
-Tjeneste ||--}o Spraak : "sprak"
 Tjeneste ||--}o Tjenestekanal : "har_tenestekanal"
 Tjeneste ||--}| Aktor : "eigd_av"
 Tjeneste ||--}| Kontaktpunkt : "har_kontaktpunkt"
@@ -230,7 +207,6 @@ Tjeneste ||--}| Tjenesteresultattype : "har_tenesteresultattype"
 Tjenestekanal ||--|o Konsept : "type_concept"
 Tjenesteresultattype ||--|o Konsept : "type_concept"
 Tjenesteresultattype ||--}o Hendelse : "kan_skape_hending"
-Tjenesteresultattype ||--}o Spraak : "mogleg_sprak"
 Virksomhetshendelse ||--|o Konsept : "type_concept"
 Virksomhetshendelse ||--}o Konsept : "tema"
 Virksomhetshendelse ||--}o OffentligTjeneste : "kan_utlose"

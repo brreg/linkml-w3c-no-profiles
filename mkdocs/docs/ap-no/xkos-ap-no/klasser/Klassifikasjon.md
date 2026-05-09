@@ -68,16 +68,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
         
       Klassifikasjon : nokkelord
         
-      Klassifikasjon : sprak
-        
-          
-    
-        
-        
-        Klassifikasjon --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Klassifikasjon : spraak
         
       Klassifikasjon : tema
         
@@ -268,7 +259,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 | --- | --- | --- |
 | [tema](tema.md) | * <br/> [Konsept](konsept.md) | Fagleg tema klassifikasjonen dekkjer (dct:subject) |
 | [nokkelord](nokkelord.md) | * <br/> [LangString](langstring.md) | Nøkkelord som beskriv ressursen (dcat:keyword) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [har_versjonsnummer](har_versjonsnummer.md) | 0..1 <br/> [String](string.md) | Versjonsnummer for ressursen (owl:versionInfo) |
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
@@ -621,7 +612,7 @@ slots:
 - utgjevar
 - tema
 - nokkelord
-- sprak
+- spraak
 - har_versjonsnummer
 - endringsdato
 - utgivelsesdato
@@ -654,8 +645,8 @@ slot_usage:
     name: nokkelord
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   har_versjonsnummer:
@@ -727,8 +718,8 @@ slot_usage:
     name: nokkelord
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   har_versjonsnummer:
@@ -780,7 +771,6 @@ attributes:
     - Kategorisamanlikning
     - Organisasjon
     - Tidsrom
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -872,15 +862,15 @@ attributes:
     - Klassifikasjon
     range: LangString
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/xkos-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Klassifikasjon
     domain_of:
     - Klassifikasjon

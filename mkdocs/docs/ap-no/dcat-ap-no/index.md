@@ -10,14 +10,27 @@ Aktor {
 Begrepssamling {
     uriorcurie id  
 }
+Brukartilbakemelding {
+    uriorcurie id  
+    uriorcurie er_motivert_av  
+    uri har_maal  
+    LangStringList har_merknad  
+}
 Datasett {
+    stringList annen_ansvarlig_aktor  
+    stringList begrep  
     LangStringList beskrivelse  
+    uriList ble_generert_ved  
     uriList dokumentasjon  
+    stringList eierskapshistorikk  
     date endringsdato  
     string identifikator_literal  
     uriList landingsside  
     LangStringList nokkelord  
     uriList relatert_ressurs  
+    SpraakList spraak  
+    stringList tema  
+    uriList tilgangsrettigheter  
     LangStringList tittel  
     date utgivelsesdato  
     string versjon  
@@ -27,6 +40,8 @@ Datasett {
 Datasettserie {
     LangStringList beskrivelse  
     date endringsdato  
+    string frekvens  
+    stringList tema  
     LangStringList tittel  
     date utgivelsesdato  
     uriorcurie id  
@@ -36,9 +51,14 @@ Datatjeneste {
     uriList dokumentasjon  
     uriList endepunkts_url  
     uriList endepunktsbeskrivelse  
+    string format  
     string identifikator_literal  
     uriList landingsside  
+    string lisens  
     LangStringList nokkelord  
+    stringList tema  
+    uriList tilgangsrettigheter  
+    string tilgjengelighet  
     LangStringList tittel  
     string versjon  
     LangStringList versjonsmerknad  
@@ -50,14 +70,16 @@ Distribusjon {
     uriList dokumentasjon  
     date endringsdato  
     NonNegativeInteger filstorrelse  
+    string format  
+    string lisens  
     uriList nedlastningslenke  
+    string policy  
+    SpraakList spraak  
     Duration tidsopplosning  
     uriList tilgangs_url  
+    string tilgjengelighet  
     LangStringList tittel  
     date utgivelsesdato  
-}
-Frekvens {
-    uriorcurie id  
 }
 Gebyr {
     uriorcurie id  
@@ -74,6 +96,8 @@ Katalog {
     date endringsdato  
     uriList heimeside  
     string identifikator_literal  
+    string lisens  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
     uriorcurie id  
@@ -86,6 +110,7 @@ Katalogpost {
     LangStringList beskrivelse  
     date endringsdato  
     uri kilde_post  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
 }
@@ -94,23 +119,44 @@ Konsept {
 }
 Kontaktopplysning {
     uriorcurie id  
-    uri har_epost  
-    uri har_kontaktside  
+    string har_epost  
+    string har_kontaktside  
     LangStringList navn_vcard  
 }
+Kvalitetsdeldimensjon {
+    LangStringList har_anbefalt_term  
+    LangStringList har_definisjon  
+    uriorcurie id  
+}
+Kvalitetsdimensjon {
+    uriorcurie id  
+    LangStringList har_anbefalt_term  
+    LangStringList har_definisjon  
+}
+Kvalitetsmaal {
+    uriorcurie id  
+    LangStringList har_anbefalt_term  
+    LangStringList har_definisjon  
+    uriorcurie har_forventet_datatype  
+}
+Kvalitetsmaaling {
+    uriorcurie id  
+    LangStringList har_merknad  
+    string har_verdi  
+}
+Kvalitetsmerknad {
+    uriorcurie id  
+    uriorcurie er_motivert_av  
+    uri har_maal  
+    LangStringList har_merknad  
+}
+Kvalitetssertifikat {
+    uriorcurie id  
+    uriorcurie er_motivert_av  
+    uri har_maal  
+    LangStringList har_merknad  
+}
 Mediatype {
-    uriorcurie id  
-}
-OdrlPolicy {
-    uriorcurie id  
-}
-ProvAktivitet {
-    uriorcurie id  
-}
-ProvAttributering {
-    uriorcurie id  
-}
-ProvenanceStatement {
     uriorcurie id  
 }
 RegulativRessurs {
@@ -118,10 +164,12 @@ RegulativRessurs {
     LangStringList beskrivelse  
     uriList har_referanse  
     string identifikator_literal  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Relasjon {
     uriorcurie id  
+    string har_rolle  
     uri relasjon_til  
 }
 Rettighetserklaring {
@@ -140,74 +188,68 @@ Sjekksum {
     string algoritme  
     string sjekksumverdi  
 }
-Spraak {
-    uriorcurie id  
-}
 Standard {
     uriorcurie id  
+    LangStringList har_merknad  
     uriList har_referanse  
+    string har_versjonsnummer  
     LangStringList tittel  
-    string versjon  
 }
-Tidsinstant {
+Tekstdel {
     uriorcurie id  
+    string format  
+    string har_verdi_tekstdel  
+    SpraakList spraak  
 }
 Tidsrom {
     uriorcurie id  
+    datetime begynnelse  
+    datetime slutt  
     date sluttdato  
     date startdato  
 }
 
 Aktor ||--|o Konsept : "type_concept"
+Brukartilbakemelding ||--|o Tekstdel : "har_tekstdel"
+Brukartilbakemelding ||--}o Kvalitetsdimensjon : "er_i_kvalitetsdimensjon"
 Datasett ||--|o Aktor : "produsent"
 Datasett ||--|o Konsept : "type_concept"
-Datasett ||--|o ProvAktivitet : "ble_generert_ved"
-Datasett ||--|o Rettighetserklaring : "tilgangsrettigheter"
 Datasett ||--|| Aktor : "utgiver"
 Datasett ||--}o Datasett : "kilde_datasett"
 Datasett ||--}o Datasettserie : "i_serie"
 Datasett ||--}o Distribusjon : "datasettdistribusjon, eksempeldata"
 Datasett ||--}o Identifikator : "annen_identifikator"
-Datasett ||--}o Konsept : "begrep, dekningsomrade"
-Datasett ||--}o ProvAttributering : "annen_ansvarlig_aktor"
-Datasett ||--}o ProvenanceStatement : "eierskapshistorikk"
+Datasett ||--}o Konsept : "dekningsomraade"
+Datasett ||--}o Kvalitetsmaaling : "har_kvalitetsmaaling"
+Datasett ||--}o Kvalitetsmerknad : "har_kvalitetsmerknad"
 Datasett ||--}o RegulativRessurs : "gjeldende_lovgivning"
 Datasett ||--}o Relasjon : "annen_spesifikk_relasjon"
-Datasett ||--}o Spraak : "sprak"
 Datasett ||--}o Standard : "i_samsvar_med"
 Datasett ||--}o Tidsrom : "tidsrom"
-Datasett ||--}| Konsept : "tema"
 Datasett ||--}| Kontaktopplysning : "kontaktpunkt"
 Datasettserie ||--|o Datasett : "forste, siste"
-Datasettserie ||--|o Frekvens : "frekvens"
 Datasettserie ||--|| Aktor : "utgiver"
-Datasettserie ||--}o Konsept : "dekningsomrade"
+Datasettserie ||--}o Konsept : "dekningsomraade"
 Datasettserie ||--}o RegulativRessurs : "gjeldende_lovgivning"
 Datasettserie ||--}o Tidsrom : "tidsrom"
-Datasettserie ||--}| Konsept : "tema"
 Datasettserie ||--}| Kontaktopplysning : "kontaktpunkt"
-Datatjeneste ||--|o Konsept : "lisens, status, tilgjengelighet"
-Datatjeneste ||--|o Mediatype : "format"
-Datatjeneste ||--|o Rettighetserklaring : "rettigheter, tilgangsrettigheter"
+Datatjeneste ||--|o Konsept : "status"
+Datatjeneste ||--|o Rettighetserklaring : "rettigheter"
 Datatjeneste ||--|| Aktor : "utgiver"
 Datatjeneste ||--}o Datasett : "tilgjengeliggjor_datasett"
 Datatjeneste ||--}o Gebyr : "har_gebyr"
-Datatjeneste ||--}o Konsept : "tema"
 Datatjeneste ||--}o RegulativRessurs : "gjeldende_lovgivning"
 Datatjeneste ||--}o Standard : "i_samsvar_med"
 Datatjeneste ||--}| Kontaktopplysning : "kontaktpunkt"
-Distribusjon ||--|o Konsept : "lisens, status, tilgjengelighet"
-Distribusjon ||--|o Mediatype : "format, komprimeringsformat, medietype, pakkeformat"
-Distribusjon ||--|o OdrlPolicy : "policy"
+Distribusjon ||--|o Konsept : "status"
+Distribusjon ||--|o Mediatype : "komprimeringsformat, medietype, pakkeformat"
 Distribusjon ||--|o Rettighetserklaring : "rettigheter"
 Distribusjon ||--|o Sjekksum : "sjekksum"
 Distribusjon ||--}o Datatjeneste : "tilgangstjeneste"
 Distribusjon ||--}o RegulativRessurs : "gjeldende_lovgivning"
-Distribusjon ||--}o Spraak : "sprak"
 Distribusjon ||--}o Standard : "i_samsvar_med"
 Gebyr ||--|o Konsept : "valuta"
 Katalog ||--|o Aktor : "produsent"
-Katalog ||--|o Konsept : "lisens"
 Katalog ||--|o Rettighetserklaring : "rettigheter"
 Katalog ||--|| Aktor : "utgiver"
 Katalog ||--}o Begrepssamling : "temaer"
@@ -215,20 +257,23 @@ Katalog ||--}o Datasett : "datasett"
 Katalog ||--}o Datatjeneste : "datatjeneste"
 Katalog ||--}o Katalog : "har_del, underkatalog"
 Katalog ||--}o Katalogpost : "katalogpost"
-Katalog ||--}o Konsept : "dekningsomrade"
+Katalog ||--}o Konsept : "dekningsomraade"
 Katalog ||--}o RegulativRessurs : "gjeldende_lovgivning"
-Katalog ||--}o Spraak : "sprak"
 Katalog ||--}o Tidsrom : "tidsrom"
 Katalog ||--}| Kontaktopplysning : "kontaktpunkt"
 Katalogpost ||--|o Konsept : "status"
 Katalogpost ||--|| KatalogisertRessurs : "primaertema"
-Katalogpost ||--}o Spraak : "sprak"
 Katalogpost ||--}o Standard : "i_samsvar_med"
+Kvalitetsdeldimensjon ||--|| Kvalitetsdimensjon : "er_deldimensjon_av"
+Kvalitetsmaal ||--|| Kvalitetsdeldimensjon : "er_i_kvalitetsdeldimensjon"
+Kvalitetsmaaling ||--|| Kvalitetsmaal : "er_kvalitetsmaaling_av"
+Kvalitetsmerknad ||--|o Tekstdel : "har_tekstdel"
+Kvalitetsmerknad ||--}o Kvalitetsdimensjon : "er_i_kvalitetsdimensjon"
+Kvalitetssertifikat ||--|o Tekstdel : "har_tekstdel"
+Kvalitetssertifikat ||--}o Kvalitetsdimensjon : "er_i_kvalitetsdimensjon"
 RegulativRessurs ||--|o Konsept : "type_concept"
 RegulativRessurs ||--}o RegulativRessurs : "relatert_regulativ_ressurs"
-RegulativRessurs ||--}o Spraak : "sprak"
-Relasjon ||--|| Konsept : "har_rolle"
-Tidsrom ||--|o Tidsinstant : "begynnelse, slutt"
+Standard ||--}o Kvalitetsdimensjon : "er_i_kvalitetsdimensjon"
 
 ```
 
@@ -249,7 +294,6 @@ Name: dcat-ap-no
 | [Aktor](klasser/aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |
 | [Begrepssamling](klasser/begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |
 | [Distribusjon](klasser/distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |
-| [Frekvens](klasser/frekvens.md) | Ein oppdateringsfrekvens |
 | [Gebyr](klasser/gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |
 | [Identifikator](klasser/identifikator.md) | Ein alternativ identifikator for ein ressurs |
 | [KatalogisertRessurs](klasser/katalogisertressurs.md) | Basisklasse for ressursar som kan katalogiserast |
@@ -260,18 +304,20 @@ Name: dcat-ap-no
 | [Katalogpost](klasser/katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |
 | [Konsept](klasser/konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |
 | [Kontaktopplysning](klasser/kontaktopplysning.md) | Kontaktinformasjon for ein aktør |
+| [Kvalitetsdimensjon](klasser/kvalitetsdimensjon.md) | Ein kvalitetsdimensjon som grupperer relaterte kvalitetsmål |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kvalitetsdeldimensjon](klasser/kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |
+| [Kvalitetsmaal](klasser/kvalitetsmaal.md) | Eit kvalitetsmål som operasjonaliserer ein kvalitetsdeldimensjon |
+| [Kvalitetsmaaling](klasser/kvalitetsmaaling.md) | Ei konkret måling av eit kvalitetsmål for eit datasett |
+| [Kvalitetsmerknad](klasser/kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Brukartilbakemelding](klasser/brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kvalitetssertifikat](klasser/kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |
 | [Mediatype](klasser/mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |
-| [OdrlPolicy](klasser/odrlpolicy.md) | Ein ODRL-policy |
-| [ProvAktivitet](klasser/provaktivitet.md) | Ein PROV-aktivitet |
-| [ProvAttributering](klasser/provattributering.md) | Ein kvalifisert PROV-attributering |
-| [ProvenanceStatement](klasser/provenancestatement.md) | Ein provenienserklæring |
 | [RegulativRessurs](klasser/regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |
 | [Relasjon](klasser/relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |
 | [Rettighetserklaring](klasser/rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |
 | [Sjekksum](klasser/sjekksum.md) | Ein sjekksum for ein distribusjon |
-| [Spraak](klasser/spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
-| [Standard](klasser/standard.md) | Ein standard som ein ressurs er i samsvar med |
-| [Tidsinstant](klasser/tidsinstant.md) | Eit tidspunkt (OWL Time) |
+| [Standard](klasser/standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |
+| [Tekstdel](klasser/tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |
 | [Tidsrom](klasser/tidsrom.md) | Eit tidsintervall med start- og sluttdato |
 
 
@@ -290,29 +336,43 @@ Name: dcat-ap-no
 | [begynnelse](klasser/begynnelse.md) | Starttidspunkt for eit tidsrom |
 | [belop](klasser/belop.md) | Beløp for gebyret |
 | [beskrivelse](klasser/beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
-| [ble_generert_ved](klasser/ble_generert_ved.md) | Aktiviteten som genererte datasettet |
+| [ble_generert_ved](klasser/ble_generert_ved.md) | Brukes til å referere til en aktivitet som genererte datasettet, eller som gi... |
 | [datasett](klasser/datasett.md) | Datasett som er del av katalogen |
 | [datasettdistribusjon](klasser/datasettdistribusjon.md) | Tilgjengelege distribusjonar av datasettet |
 | [datatjeneste](klasser/datatjeneste.md) | Datatjeneste som er del av katalogen |
-| [dekningsomrade](klasser/dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](klasser/dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [dokumentasjon](klasser/dokumentasjon.md) | Lenke til dokumentasjon om ressursen |
 | [eierskapshistorikk](klasser/eierskapshistorikk.md) | Opphav og eigarskapshistorikk for ressursen |
 | [eksempeldata](klasser/eksempeldata.md) | Eksempeldata som distribusjon |
 | [endepunkts_url](klasser/endepunkts_url.md) | URL til datatjenestens endepunkt |
 | [endepunktsbeskrivelse](klasser/endepunktsbeskrivelse.md) | URL til beskriving av endepunktet (t |
 | [endringsdato](klasser/endringsdato.md) | Dato for siste endring av ressursen (dct:modified) |
+| [er_deldimensjon_av](klasser/er_deldimensjon_av.md) | Overordna kvalitetsdimensjon denne deldimensjonen høyrer til |
+| [er_i_kvalitetsdeldimensjon](klasser/er_i_kvalitetsdeldimensjon.md) | Kvalitetsdeldimensjonen dette målet operasjonaliserer |
+| [er_i_kvalitetsdimensjon](klasser/er_i_kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
+| [er_kvalitetsmaaling_av](klasser/er_kvalitetsmaaling_av.md) | Kvalitetsmålet denne målinga er ei måling av |
+| [er_motivert_av](klasser/er_motivert_av.md) | Motivasjonen bak kvalitetsmerknaden (t |
 | [filstorrelse](klasser/filstorrelse.md) | Filstørrelse i bytes |
 | [format](klasser/format.md) | Filformat eller medietype (dct:format) |
 | [forste](klasser/forste.md) | Første datasett i ei datasettserie |
 | [frekvens](klasser/frekvens.md) | Oppdateringsfrekvens for datasettet |
 | [gjeldende_lovgivning](klasser/gjeldende_lovgivning.md) | Lovgjeving som gjeld for ressursen |
+| [har_anbefalt_term](klasser/har_anbefalt_term.md) | Føretrekt term/namn for dimensjonen eller målet |
+| [har_definisjon](klasser/har_definisjon.md) | Definisjon av dimensjonen eller målet |
 | [har_del](klasser/har_del.md) | Delkatalog inkludert i denne katalogen |
 | [har_epost](klasser/har_epost.md) | E-postadresse til kontaktpunktet |
+| [har_forventet_datatype](klasser/har_forventet_datatype.md) | Forventa XSD-datatype for verdien av ei kvalitetsmåling |
 | [har_gebyr](klasser/har_gebyr.md) | Gebyr knytt til bruk av datatjenesten |
 | [har_kontaktside](klasser/har_kontaktside.md) | Nettside for kontakt |
+| [har_kvalitetsmaaling](klasser/har_kvalitetsmaaling.md) | Kvalitetsmåling knytt til datasettet |
+| [har_kvalitetsmerknad](klasser/har_kvalitetsmerknad.md) | Kvalitetsmerknad knytt til datasettet |
+| [har_maal](klasser/har_maal.md) | Ressursen merknaden gjeld |
 | [har_merknad](klasser/har_merknad.md) | Fritekstmerknad (rdfs:comment) |
 | [har_referanse](klasser/har_referanse.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
 | [har_rolle](klasser/har_rolle.md) | Rolle ein aktør eller ressurs har i ein relasjon |
+| [har_tekstdel](klasser/har_tekstdel.md) | Tekstleg innhald i merknaden |
+| [har_verdi](klasser/har_verdi.md) | Målt verdi (xsd:boolean, xsd:double, xsd:nonNegativeInteger eller rdfs:Litera... |
+| [har_verdi_tekstdel](klasser/har_verdi_tekstdel.md) | Tekstinnhaldet i tekstdelen |
 | [har_versjonsnummer](klasser/har_versjonsnummer.md) | Versjonsnummer for ressursen (owl:versionInfo) |
 | [heimeside](klasser/heimeside.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
 | [i_samsvar_med](klasser/i_samsvar_med.md) | Standard ressursen er i samsvar med |
@@ -353,7 +413,7 @@ Name: dcat-ap-no
 | [sjekksumverdi](klasser/sjekksumverdi.md) | Sjekksumverdi som heksadesimal streng |
 | [slutt](klasser/slutt.md) | Sluttidspunkt for eit tidsrom |
 | [sluttdato](klasser/sluttdato.md) | Sluttdato for tidsrommet |
-| [sprak](klasser/sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](klasser/spraak.md) | Språk brukt i ressursen (dct:language) |
 | [startdato](klasser/startdato.md) | Startdato for tidsrommet |
 | [status](klasser/status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tema](klasser/tema.md) | Tema frå eit kontrollert vokabular |
@@ -361,7 +421,7 @@ Name: dcat-ap-no
 | [tidsopplosning](klasser/tidsopplosning.md) | Minste tidsoppløysing i datasettet |
 | [tidsrom](klasser/tidsrom.md) | Tidsperiode ressursen dekkar |
 | [tilgangs_url](klasser/tilgangs_url.md) | URL for tilgang til distribusjonen |
-| [tilgangsrettigheter](klasser/tilgangsrettigheter.md) | Tilgangsrettar for ressursen |
+| [tilgangsrettigheter](klasser/tilgangsrettigheter.md) | Egenskapen brukes til å angi om det er allmenn tilgang, betinget tilgang elle... |
 | [tilgangstjeneste](klasser/tilgangstjeneste.md) | Datatjeneste som gjev tilgang til distribusjonen |
 | [tilgjengeliggjor_datasett](klasser/tilgjengeliggjor_datasett.md) | Datasett som datatjenesten tilgjengeleggjer |
 | [tilgjengelighet](klasser/tilgjengelighet.md) | Planlagt tilgjengelegheit for ressursen |
@@ -405,6 +465,7 @@ Name: dcat-ap-no
 | [NonNegativeInteger](klasser/nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](klasser/objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](klasser/sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](klasser/spraak.md) | Språk |
 | [String](klasser/string.md) | A character string |
 | [Time](klasser/time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](klasser/uri.md) | a complete URI |

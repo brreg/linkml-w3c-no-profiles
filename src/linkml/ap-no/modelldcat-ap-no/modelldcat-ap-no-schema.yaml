@@ -104,7 +104,7 @@ classes:
     slots:
       - id
       - tittel
-      - sprak
+      - spraak
       - format
 
   # ---- Modelkatalog --------------------------------------------------------
@@ -125,7 +125,7 @@ classes:
       - heimeside
       - lisens
       - modell
-      - sprak
+      - spraak
       - tema
       - temaer
       - utgivelsesdato
@@ -167,7 +167,7 @@ classes:
       modell:
         in_subset:
           - Anbefalt
-      sprak:
+      spraak:
         in_subset:
           - Anbefalt
       tema:
@@ -202,7 +202,7 @@ classes:
       - kontaktpunkt
       - lisens
       - tema
-      - dekningsomrade
+      - dekningsomraade
       - endringsdato
       - er_del_av_modell
       - er_profil_av
@@ -216,7 +216,7 @@ classes:
       - status
       - nokkelord
       - skapar
-      - sprak
+      - spraak
       - type_concept
       - utgivelsesdato
       - har_versjonsnummer
@@ -254,7 +254,7 @@ classes:
       tema:
         in_subset:
           - Anbefalt
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Valgfri
       endringsdato:
@@ -296,7 +296,7 @@ classes:
       skapar:
         in_subset:
           - Valgfri
-      sprak:
+      spraak:
         in_subset:
           - Valgfri
       type_concept:

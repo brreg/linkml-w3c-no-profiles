@@ -371,7 +371,6 @@ URI: [cv:Event](http://data.europa.eu/m8g/Event)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [er_gruppert_av](er_gruppert_av.md) | range | [Hendelse](hendelse.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [er_gruppert_av](er_gruppert_av.md) | range | [Hendelse](hendelse.md) |
 | [Tjeneste](tjeneste.md) | [er_gruppert_av](er_gruppert_av.md) | range | [Hendelse](hendelse.md) |
 | [Tjenesteresultattype](tjenesteresultattype.md) | [kan_skape_hending](kan_skape_hending.md) | range | [Hendelse](hendelse.md) |
@@ -529,7 +528,6 @@ attributes:
     alias: id
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -545,7 +543,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -562,7 +559,6 @@ attributes:
     alias: tittel
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -587,7 +583,6 @@ attributes:
     alias: identifikator_literal
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -612,7 +607,6 @@ attributes:
     alias: har_kontaktpunkt
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -631,7 +625,6 @@ attributes:
     alias: beskrivelse
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -669,7 +662,6 @@ attributes:
     alias: tema
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -704,7 +696,6 @@ attributes:
     alias: type_concept
     owner: Hendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

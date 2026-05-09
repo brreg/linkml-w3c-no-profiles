@@ -1,5 +1,5 @@
 # Auto generated from cpsv-ap-no-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:23:15
+# Generation date: 2026-05-09T16:13:02
 # Schema: cpsv-ap-no
 #
 # id: https://data.norge.no/linkml/cpsv-ap-no
@@ -88,6 +88,14 @@ DEFAULT_ = CurieNamespace('', 'https://data.norge.no/linkml/cpsv-ap-no/')
 
 
 # Types
+class Spraak(str):
+    """ Språk """
+    type_class_uri = DCT["language"]
+    type_class_curie = "dct:language"
+    type_name = "Spraak"
+    type_model_uri = URIRef("https://data.norge.no/linkml/cpsv-ap-no/Spraak")
+
+
 class LangString(str):
     """ Språktagget streng (rdf:langString). """
     type_class_uri = RDF["langString"]
@@ -121,10 +129,6 @@ class GYear(str):
 
 
 # Class references
-class LovpalagtTjenesteId(URIorCURIE):
-    pass
-
-
 class OffentligTjenesteId(URIorCURIE):
     pass
 
@@ -197,10 +201,6 @@ class KatalogId(URIorCURIE):
     pass
 
 
-class SpraakId(URIorCURIE):
-    pass
-
-
 class MediatypeId(URIorCURIE):
     pass
 
@@ -211,146 +211,6 @@ class KonseptId(URIorCURIE):
 
 class BegrepssamlingId(URIorCURIE):
     pass
-
-
-@dataclass(repr=False)
-class LovpalagtTjeneste(YAMLRoot):
-    """
-    Ei lovpålagd teneste som offentlege organ er pålagde å utføre.
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = CPSVNO["StatutoryService"]
-    class_class_curie: ClassVar[str] = "cpsvno:StatutoryService"
-    class_name: ClassVar[str] = "LovpalagtTjeneste"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste")
-
-    id: Union[str, LovpalagtTjenesteId] = None
-    tittel: Union[str, list[str]] = None
-    beskrivelse: Union[str, list[str]] = None
-    identifikator_literal: str = None
-    har_kontaktpunkt: Union[Union[str, KontaktpunktId], list[Union[str, KontaktpunktId]]] = None
-    har_tenesteresultattype: Union[Union[str, TjenesteresultattypeId], list[Union[str, TjenesteresultattypeId]]] = None
-    tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    dekningsomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    har_dokumentasjonstype: Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]] = empty_list()
-    heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
-    type_concept: Optional[Union[str, KonseptId]] = None
-    temaomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    er_del_av: Optional[Union[str, URIorCURIE]] = None
-    har_del: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    er_gruppert_av: Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]] = empty_list()
-    er_klassifisert_av: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    folger: Optional[Union[Union[str, RegelId], list[Union[str, RegelId]]]] = empty_list()
-    har_gebyr: Optional[Union[Union[str, GebyrId], list[Union[str, GebyrId]]]] = empty_list()
-    har_regulativ_ressurs: Optional[Union[Union[str, RegulativRessursId], list[Union[str, RegulativRessursId]]]] = empty_list()
-    krev: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    malgruppe: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    nokkelord: Optional[Union[str, list[str]]] = empty_list()
-    sektor: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, LovpalagtTjenesteId):
-            self.id = LovpalagtTjenesteId(self.id)
-
-        if self._is_empty(self.tittel):
-            self.MissingRequiredField("tittel")
-        if not isinstance(self.tittel, list):
-            self.tittel = [self.tittel] if self.tittel is not None else []
-        self.tittel = [v if isinstance(v, str) else str(v) for v in self.tittel]
-
-        if self._is_empty(self.beskrivelse):
-            self.MissingRequiredField("beskrivelse")
-        if not isinstance(self.beskrivelse, list):
-            self.beskrivelse = [self.beskrivelse] if self.beskrivelse is not None else []
-        self.beskrivelse = [v if isinstance(v, str) else str(v) for v in self.beskrivelse]
-
-        if self._is_empty(self.identifikator_literal):
-            self.MissingRequiredField("identifikator_literal")
-        if not isinstance(self.identifikator_literal, str):
-            self.identifikator_literal = str(self.identifikator_literal)
-
-        if self._is_empty(self.har_kontaktpunkt):
-            self.MissingRequiredField("har_kontaktpunkt")
-        if not isinstance(self.har_kontaktpunkt, list):
-            self.har_kontaktpunkt = [self.har_kontaktpunkt] if self.har_kontaktpunkt is not None else []
-        self.har_kontaktpunkt = [v if isinstance(v, KontaktpunktId) else KontaktpunktId(v) for v in self.har_kontaktpunkt]
-
-        if self._is_empty(self.har_tenesteresultattype):
-            self.MissingRequiredField("har_tenesteresultattype")
-        if not isinstance(self.har_tenesteresultattype, list):
-            self.har_tenesteresultattype = [self.har_tenesteresultattype] if self.har_tenesteresultattype is not None else []
-        self.har_tenesteresultattype = [v if isinstance(v, TjenesteresultattypeId) else TjenesteresultattypeId(v) for v in self.har_tenesteresultattype]
-
-        if not isinstance(self.tema, list):
-            self.tema = [self.tema] if self.tema is not None else []
-        self.tema = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.tema]
-
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
-
-        if not isinstance(self.har_dokumentasjonstype, list):
-            self.har_dokumentasjonstype = [self.har_dokumentasjonstype] if self.har_dokumentasjonstype is not None else []
-        self.har_dokumentasjonstype = [v if isinstance(v, DokumentasjonstypeId) else DokumentasjonstypeId(v) for v in self.har_dokumentasjonstype]
-
-        if not isinstance(self.heimeside, list):
-            self.heimeside = [self.heimeside] if self.heimeside is not None else []
-        self.heimeside = [v if isinstance(v, URI) else URI(v) for v in self.heimeside]
-
-        if self.type_concept is not None and not isinstance(self.type_concept, KonseptId):
-            self.type_concept = KonseptId(self.type_concept)
-
-        if not isinstance(self.temaomrade, list):
-            self.temaomrade = [self.temaomrade] if self.temaomrade is not None else []
-        self.temaomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.temaomrade]
-
-        if self.er_del_av is not None and not isinstance(self.er_del_av, URIorCURIE):
-            self.er_del_av = URIorCURIE(self.er_del_av)
-
-        if not isinstance(self.har_del, list):
-            self.har_del = [self.har_del] if self.har_del is not None else []
-        self.har_del = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.har_del]
-
-        if not isinstance(self.er_gruppert_av, list):
-            self.er_gruppert_av = [self.er_gruppert_av] if self.er_gruppert_av is not None else []
-        self.er_gruppert_av = [v if isinstance(v, HendelseId) else HendelseId(v) for v in self.er_gruppert_av]
-
-        if not isinstance(self.er_klassifisert_av, list):
-            self.er_klassifisert_av = [self.er_klassifisert_av] if self.er_klassifisert_av is not None else []
-        self.er_klassifisert_av = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.er_klassifisert_av]
-
-        if not isinstance(self.folger, list):
-            self.folger = [self.folger] if self.folger is not None else []
-        self.folger = [v if isinstance(v, RegelId) else RegelId(v) for v in self.folger]
-
-        if not isinstance(self.har_gebyr, list):
-            self.har_gebyr = [self.har_gebyr] if self.har_gebyr is not None else []
-        self.har_gebyr = [v if isinstance(v, GebyrId) else GebyrId(v) for v in self.har_gebyr]
-
-        if not isinstance(self.har_regulativ_ressurs, list):
-            self.har_regulativ_ressurs = [self.har_regulativ_ressurs] if self.har_regulativ_ressurs is not None else []
-        self.har_regulativ_ressurs = [v if isinstance(v, RegulativRessursId) else RegulativRessursId(v) for v in self.har_regulativ_ressurs]
-
-        if not isinstance(self.krev, list):
-            self.krev = [self.krev] if self.krev is not None else []
-        self.krev = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.krev]
-
-        if not isinstance(self.malgruppe, list):
-            self.malgruppe = [self.malgruppe] if self.malgruppe is not None else []
-        self.malgruppe = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.malgruppe]
-
-        if not isinstance(self.nokkelord, list):
-            self.nokkelord = [self.nokkelord] if self.nokkelord is not None else []
-        self.nokkelord = [v if isinstance(v, str) else str(v) for v in self.nokkelord]
-
-        if not isinstance(self.sektor, list):
-            self.sektor = [self.sektor] if self.sektor is not None else []
-        self.sektor = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.sektor]
-
-        super().__post_init__(**kwargs)
 
 
 @dataclass(repr=False)
@@ -373,11 +233,10 @@ class OffentligTjeneste(YAMLRoot):
     har_tenesteresultattype: Union[Union[str, TjenesteresultattypeId], list[Union[str, TjenesteresultattypeId]]] = None
     har_ansvarleg_styremakt: Union[Union[str, OffentligOrganisasjonId], list[Union[str, OffentligOrganisasjonId]]] = None
     tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    dekningsomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
+    dekningsomraade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     har_dokumentasjonstype: Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]] = empty_list()
     heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     type_concept: Optional[Union[str, KonseptId]] = None
-    realiserer: Optional[Union[Union[str, LovpalagtTjenesteId], list[Union[str, LovpalagtTjenesteId]]]] = empty_list()
     status: Optional[Union[str, KonseptId]] = None
     temaomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     behandlingstid: Optional[str] = None
@@ -386,7 +245,7 @@ class OffentligTjeneste(YAMLRoot):
     har_del: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
     har_tenestekanal: Optional[Union[Union[str, TjenestekanalId], list[Union[str, TjenestekanalId]]]] = empty_list()
     har_deltaking: Optional[Union[Union[str, DeltagelseId], list[Union[str, DeltagelseId]]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     relatert_teneste: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
     er_gruppert_av: Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]] = empty_list()
     er_klassifisert_av: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
@@ -443,9 +302,9 @@ class OffentligTjeneste(YAMLRoot):
             self.tema = [self.tema] if self.tema is not None else []
         self.tema = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.tema]
 
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
+        if not isinstance(self.dekningsomraade, list):
+            self.dekningsomraade = [self.dekningsomraade] if self.dekningsomraade is not None else []
+        self.dekningsomraade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomraade]
 
         if not isinstance(self.har_dokumentasjonstype, list):
             self.har_dokumentasjonstype = [self.har_dokumentasjonstype] if self.har_dokumentasjonstype is not None else []
@@ -457,10 +316,6 @@ class OffentligTjeneste(YAMLRoot):
 
         if self.type_concept is not None and not isinstance(self.type_concept, KonseptId):
             self.type_concept = KonseptId(self.type_concept)
-
-        if not isinstance(self.realiserer, list):
-            self.realiserer = [self.realiserer] if self.realiserer is not None else []
-        self.realiserer = [v if isinstance(v, LovpalagtTjenesteId) else LovpalagtTjenesteId(v) for v in self.realiserer]
 
         if self.status is not None and not isinstance(self.status, KonseptId):
             self.status = KonseptId(self.status)
@@ -491,9 +346,9 @@ class OffentligTjeneste(YAMLRoot):
             self.har_deltaking = [self.har_deltaking] if self.har_deltaking is not None else []
         self.har_deltaking = [v if isinstance(v, DeltagelseId) else DeltagelseId(v) for v in self.har_deltaking]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if not isinstance(self.relatert_teneste, list):
             self.relatert_teneste = [self.relatert_teneste] if self.relatert_teneste is not None else []
@@ -558,7 +413,7 @@ class Tjeneste(YAMLRoot):
     har_tenesteresultattype: Union[Union[str, TjenesteresultattypeId], list[Union[str, TjenesteresultattypeId]]] = None
     eigd_av: Union[Union[str, AktorId], list[Union[str, AktorId]]] = None
     tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    dekningsomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
+    dekningsomraade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     har_dokumentasjonstype: Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]] = empty_list()
     heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     type_concept: Optional[Union[str, KonseptId]] = None
@@ -570,7 +425,7 @@ class Tjeneste(YAMLRoot):
     har_del: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
     har_tenestekanal: Optional[Union[Union[str, TjenestekanalId], list[Union[str, TjenestekanalId]]]] = empty_list()
     har_deltaking: Optional[Union[Union[str, DeltagelseId], list[Union[str, DeltagelseId]]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     relatert_teneste: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
     er_gruppert_av: Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]] = empty_list()
     er_klassifisert_av: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
@@ -627,9 +482,9 @@ class Tjeneste(YAMLRoot):
             self.tema = [self.tema] if self.tema is not None else []
         self.tema = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.tema]
 
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
+        if not isinstance(self.dekningsomraade, list):
+            self.dekningsomraade = [self.dekningsomraade] if self.dekningsomraade is not None else []
+        self.dekningsomraade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomraade]
 
         if not isinstance(self.har_dokumentasjonstype, list):
             self.har_dokumentasjonstype = [self.har_dokumentasjonstype] if self.har_dokumentasjonstype is not None else []
@@ -671,9 +526,9 @@ class Tjeneste(YAMLRoot):
             self.har_deltaking = [self.har_deltaking] if self.har_deltaking is not None else []
         self.har_deltaking = [v if isinstance(v, DeltagelseId) else DeltagelseId(v) for v in self.har_deltaking]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if not isinstance(self.relatert_teneste, list):
             self.relatert_teneste = [self.relatert_teneste] if self.relatert_teneste is not None else []
@@ -908,7 +763,7 @@ class OffentligOrganisasjon(Aktor):
     tittel: Union[str, list[str]] = None
     identifikator_literal: str = None
     foretrekt_namn: Union[str, list[str]] = None
-    dekningsomrade: Union[Union[str, KonseptId], list[Union[str, KonseptId]]] = None
+    dekningsomraade: Union[Union[str, KonseptId], list[Union[str, KonseptId]]] = None
     heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     type_concept: Optional[Union[str, KonseptId]] = None
     adresse_ref: Optional[Union[str, AdresseId]] = None
@@ -925,11 +780,11 @@ class OffentligOrganisasjon(Aktor):
             self.foretrekt_namn = [self.foretrekt_namn] if self.foretrekt_namn is not None else []
         self.foretrekt_namn = [v if isinstance(v, str) else str(v) for v in self.foretrekt_namn]
 
-        if self._is_empty(self.dekningsomrade):
-            self.MissingRequiredField("dekningsomrade")
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
+        if self._is_empty(self.dekningsomraade):
+            self.MissingRequiredField("dekningsomraade")
+        if not isinstance(self.dekningsomraade, list):
+            self.dekningsomraade = [self.dekningsomraade] if self.dekningsomraade is not None else []
+        self.dekningsomraade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomraade]
 
         if not isinstance(self.heimeside, list):
             self.heimeside = [self.heimeside] if self.heimeside is not None else []
@@ -961,7 +816,7 @@ class Kontaktpunkt(YAMLRoot):
     telefon: Optional[Union[str, list[str]]] = empty_list()
     kontaktside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     opningstider: Optional[Union[str, list[str]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     kategori: Optional[Union[str, list[str]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -986,9 +841,9 @@ class Kontaktpunkt(YAMLRoot):
             self.opningstider = [self.opningstider] if self.opningstider is not None else []
         self.opningstider = [v if isinstance(v, str) else str(v) for v in self.opningstider]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if not isinstance(self.kategori, list):
             self.kategori = [self.kategori] if self.kategori is not None else []
@@ -1066,7 +921,7 @@ class Dokumentasjonstype(YAMLRoot):
     beskrivelse: Union[str, list[str]] = None
     identifikator_literal: str = None
     gyldig_i: Optional[str] = None
-    godtek_sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    godtek_spraak: Optional[Union[str, list[str]]] = empty_list()
     klassifisering: Optional[Union[str, KonseptId]] = None
     er_beskrive_av: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     er_spesifisert_i: Optional[Union[str, URIorCURIE]] = None
@@ -1098,9 +953,9 @@ class Dokumentasjonstype(YAMLRoot):
         if self.gyldig_i is not None and not isinstance(self.gyldig_i, str):
             self.gyldig_i = str(self.gyldig_i)
 
-        if not isinstance(self.godtek_sprak, list):
-            self.godtek_sprak = [self.godtek_sprak] if self.godtek_sprak is not None else []
-        self.godtek_sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.godtek_sprak]
+        if not isinstance(self.godtek_spraak, list):
+            self.godtek_spraak = [self.godtek_spraak] if self.godtek_spraak is not None else []
+        self.godtek_spraak = [v if isinstance(v, str) else str(v) for v in self.godtek_spraak]
 
         if self.klassifisering is not None and not isinstance(self.klassifisering, KonseptId):
             self.klassifisering = KonseptId(self.klassifisering)
@@ -1134,7 +989,7 @@ class Tjenesteresultattype(YAMLRoot):
     tittel: Union[str, list[str]] = None
     beskrivelse: Union[str, list[str]] = None
     identifikator_literal: Optional[str] = None
-    mogleg_sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    mogleg_spraak: Optional[Union[str, list[str]]] = empty_list()
     er_beskrive_av: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     er_spesifisert_i: Optional[Union[str, URIorCURIE]] = None
     kan_skape_hending: Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]] = empty_list()
@@ -1161,9 +1016,9 @@ class Tjenesteresultattype(YAMLRoot):
         if self.identifikator_literal is not None and not isinstance(self.identifikator_literal, str):
             self.identifikator_literal = str(self.identifikator_literal)
 
-        if not isinstance(self.mogleg_sprak, list):
-            self.mogleg_sprak = [self.mogleg_sprak] if self.mogleg_sprak is not None else []
-        self.mogleg_sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.mogleg_sprak]
+        if not isinstance(self.mogleg_spraak, list):
+            self.mogleg_spraak = [self.mogleg_spraak] if self.mogleg_spraak is not None else []
+        self.mogleg_spraak = [v if isinstance(v, str) else str(v) for v in self.mogleg_spraak]
 
         if not isinstance(self.er_beskrive_av, list):
             self.er_beskrive_av = [self.er_beskrive_av] if self.er_beskrive_av is not None else []
@@ -1271,7 +1126,7 @@ class Regel(YAMLRoot):
     tittel: Optional[Union[str, list[str]]] = empty_list()
     beskrivelse: Optional[Union[str, list[str]]] = empty_list()
     identifikator_literal: Optional[str] = None
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     type_concept: Optional[Union[str, KonseptId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1291,9 +1146,9 @@ class Regel(YAMLRoot):
         if self.identifikator_literal is not None and not isinstance(self.identifikator_literal, str):
             self.identifikator_literal = str(self.identifikator_literal)
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if self.type_concept is not None and not isinstance(self.type_concept, KonseptId):
             self.type_concept = KonseptId(self.type_concept)
@@ -1428,13 +1283,13 @@ class Katalog(YAMLRoot):
     inneheld_teneste: Union[Union[str, OffentligTjenesteId], list[Union[str, OffentligTjenesteId]]] = None
     har_kontaktpunkt: Union[Union[str, KontaktpunktId], list[Union[str, KontaktpunktId]]] = None
     utgjevar: Union[str, AktorId] = None
-    dekningsomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
+    dekningsomraade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     endringsdato: Optional[Union[str, XSDDate]] = None
     oppdateringsfrekvens: Optional[Union[str, KonseptId]] = None
     heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     inneheld_hending: Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]] = empty_list()
     lisens: Optional[Union[str, URI]] = None
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1476,9 +1331,9 @@ class Katalog(YAMLRoot):
         if not isinstance(self.utgjevar, AktorId):
             self.utgjevar = AktorId(self.utgjevar)
 
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
+        if not isinstance(self.dekningsomraade, list):
+            self.dekningsomraade = [self.dekningsomraade] if self.dekningsomraade is not None else []
+        self.dekningsomraade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomraade]
 
         if self.endringsdato is not None and not isinstance(self.endringsdato, XSDDate):
             self.endringsdato = XSDDate(self.endringsdato)
@@ -1497,32 +1352,9 @@ class Katalog(YAMLRoot):
         if self.lisens is not None and not isinstance(self.lisens, URI):
             self.lisens = URI(self.lisens)
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
-class Spraak(YAMLRoot):
-    """
-    Ein språkreferanse (dct:LinguisticSystem).
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = DCT["LinguisticSystem"]
-    class_class_curie: ClassVar[str] = "dct:LinguisticSystem"
-    class_name: ClassVar[str] = "Spraak"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://data.norge.no/linkml/cpsv-ap-no/Spraak")
-
-    id: Union[str, SpraakId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SpraakId):
-            self.id = SpraakId(self.id)
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         super().__post_init__(**kwargs)
 
@@ -1611,9 +1443,6 @@ slots.har_tenesteresultattype = Slot(uri=CPSVNO.hasOutputType, name="har_teneste
 
 slots.har_ansvarleg_styremakt = Slot(uri=CV.hasCompetentAuthority, name="har_ansvarleg_styremakt", curie=CV.curie('hasCompetentAuthority'),
                    model_uri=DEFAULT_.har_ansvarleg_styremakt, domain=None, range=Optional[Union[Union[str, OffentligOrganisasjonId], list[Union[str, OffentligOrganisasjonId]]]])
-
-slots.realiserer = Slot(uri=CPSVNO.realizes, name="realiserer", curie=CPSVNO.curie('realizes'),
-                   model_uri=DEFAULT_.realiserer, domain=None, range=Optional[Union[Union[str, LovpalagtTjenesteId], list[Union[str, LovpalagtTjenesteId]]]])
 
 slots.behandlingstid = Slot(uri=CV.processingTime, name="behandlingstid", curie=CV.curie('processingTime'),
                    model_uri=DEFAULT_.behandlingstid, domain=None, range=Optional[str])
@@ -1714,8 +1543,8 @@ slots.kategori = Slot(uri=VCARD.category, name="kategori", curie=VCARD.curie('ca
 slots.gyldig_i = Slot(uri=CCCEVNO.acceptableValidityDuration, name="gyldig_i", curie=CCCEVNO.curie('acceptableValidityDuration'),
                    model_uri=DEFAULT_.gyldig_i, domain=None, range=Optional[str])
 
-slots.godtek_sprak = Slot(uri=CCCEVNO.acceptableLanguage, name="godtek_sprak", curie=CCCEVNO.curie('acceptableLanguage'),
-                   model_uri=DEFAULT_.godtek_sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.godtek_spraak = Slot(uri=CCCEVNO.acceptableLanguage, name="godtek_spraak", curie=CCCEVNO.curie('acceptableLanguage'),
+                   model_uri=DEFAULT_.godtek_spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.klassifisering = Slot(uri=CV.evidenceTypeClassification, name="klassifisering", curie=CV.curie('evidenceTypeClassification'),
                    model_uri=DEFAULT_.klassifisering, domain=None, range=Optional[Union[str, KonseptId]])
@@ -1726,8 +1555,8 @@ slots.er_spesifisert_i = Slot(uri=CV.isSpecifiedIn, name="er_spesifisert_i", cur
 slots.utstedingsstad = Slot(uri=CCCEVNO.acceptableIssuingPlace, name="utstedingsstad", curie=CCCEVNO.curie('acceptableIssuingPlace'),
                    model_uri=DEFAULT_.utstedingsstad, domain=None, range=Optional[Union[str, KonseptId]])
 
-slots.mogleg_sprak = Slot(uri=CPSVNO.possibleLanguage, name="mogleg_sprak", curie=CPSVNO.curie('possibleLanguage'),
-                   model_uri=DEFAULT_.mogleg_sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.mogleg_spraak = Slot(uri=CPSVNO.possibleLanguage, name="mogleg_spraak", curie=CPSVNO.curie('possibleLanguage'),
+                   model_uri=DEFAULT_.mogleg_spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.kan_skape_hending = Slot(uri=XKOS.causes, name="kan_skape_hending", curie=XKOS.curie('causes'),
                    model_uri=DEFAULT_.kan_skape_hending, domain=None, range=Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]])
@@ -1783,11 +1612,11 @@ slots.endringsdato = Slot(uri=DCT.modified, name="endringsdato", curie=DCT.curie
 slots.utgivelsesdato = Slot(uri=DCT.issued, name="utgivelsesdato", curie=DCT.curie('issued'),
                    model_uri=DEFAULT_.utgivelsesdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.sprak = Slot(uri=DCT.language, name="sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.spraak = Slot(uri=DCT.language, name="spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.format = Slot(uri=DCT.format, name="format", curie=DCT.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[Union[str, MediatypeId]])
+                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
 
 slots.har_referanse = Slot(uri=RDFS.seeAlso, name="har_referanse", curie=RDFS.curie('seeAlso'),
                    model_uri=DEFAULT_.har_referanse, domain=None, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
@@ -1801,8 +1630,8 @@ slots.har_versjonsnummer = Slot(uri=OWL.versionInfo, name="har_versjonsnummer", 
 slots.nokkelord = Slot(uri=DCAT.keyword, name="nokkelord", curie=DCAT.curie('keyword'),
                    model_uri=DEFAULT_.nokkelord, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.dekningsomrade = Slot(uri=DCT.spatial, name="dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.dekningsomrade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.dekningsomraade = Slot(uri=DCT.spatial, name="dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.dekningsomraade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.status = Slot(uri=ADMS.status, name="status", curie=ADMS.curie('status'),
                    model_uri=DEFAULT_.status, domain=None, range=Optional[Union[str, KonseptId]])
@@ -1818,72 +1647,6 @@ slots.anbefalt_term = Slot(uri=SKOS.prefLabel, name="anbefalt_term", curie=SKOS.
 
 slots.versjonsmerknad = Slot(uri=ADMS.versionNotes, name="versjonsmerknad", curie=ADMS.curie('versionNotes'),
                    model_uri=DEFAULT_.versjonsmerknad, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.LovpalagtTjeneste_tittel = Slot(uri=DCT.title, name="LovpalagtTjeneste_tittel", curie=DCT.curie('title'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_tittel, domain=LovpalagtTjeneste, range=Union[str, list[str]])
-
-slots.LovpalagtTjeneste_beskrivelse = Slot(uri=DCT.description, name="LovpalagtTjeneste_beskrivelse", curie=DCT.curie('description'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_beskrivelse, domain=LovpalagtTjeneste, range=Union[str, list[str]])
-
-slots.LovpalagtTjeneste_identifikator_literal = Slot(uri=DCT.identifier, name="LovpalagtTjeneste_identifikator_literal", curie=DCT.curie('identifier'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_identifikator_literal, domain=LovpalagtTjeneste, range=str)
-
-slots.LovpalagtTjeneste_har_kontaktpunkt = Slot(uri=CV.contactPoint, name="LovpalagtTjeneste_har_kontaktpunkt", curie=CV.curie('contactPoint'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_kontaktpunkt, domain=LovpalagtTjeneste, range=Union[Union[str, KontaktpunktId], list[Union[str, KontaktpunktId]]])
-
-slots.LovpalagtTjeneste_har_tenesteresultattype = Slot(uri=CPSVNO.hasOutputType, name="LovpalagtTjeneste_har_tenesteresultattype", curie=CPSVNO.curie('hasOutputType'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_tenesteresultattype, domain=LovpalagtTjeneste, range=Union[Union[str, TjenesteresultattypeId], list[Union[str, TjenesteresultattypeId]]])
-
-slots.LovpalagtTjeneste_tema = Slot(uri=DCT.subject, name="LovpalagtTjeneste_tema", curie=DCT.curie('subject'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_tema, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
-
-slots.LovpalagtTjeneste_dekningsomrade = Slot(uri=DCT.spatial, name="LovpalagtTjeneste_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_dekningsomrade, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
-
-slots.LovpalagtTjeneste_har_dokumentasjonstype = Slot(uri=CV.hasInputType, name="LovpalagtTjeneste_har_dokumentasjonstype", curie=CV.curie('hasInputType'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_dokumentasjonstype, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]])
-
-slots.LovpalagtTjeneste_heimeside = Slot(uri=FOAF.homepage, name="LovpalagtTjeneste_heimeside", curie=FOAF.curie('homepage'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_heimeside, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
-
-slots.LovpalagtTjeneste_type_concept = Slot(uri=DCT.type, name="LovpalagtTjeneste_type_concept", curie=DCT.curie('type'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_type_concept, domain=LovpalagtTjeneste, range=Optional[Union[str, KonseptId]])
-
-slots.LovpalagtTjeneste_temaomrade = Slot(uri=CV.thematicArea, name="LovpalagtTjeneste_temaomrade", curie=CV.curie('thematicArea'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_temaomrade, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
-
-slots.LovpalagtTjeneste_er_del_av = Slot(uri=DCT.isPartOf, name="LovpalagtTjeneste_er_del_av", curie=DCT.curie('isPartOf'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_er_del_av, domain=LovpalagtTjeneste, range=Optional[Union[str, URIorCURIE]])
-
-slots.LovpalagtTjeneste_har_del = Slot(uri=DCT.hasPart, name="LovpalagtTjeneste_har_del", curie=DCT.curie('hasPart'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_del, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
-
-slots.LovpalagtTjeneste_er_gruppert_av = Slot(uri=CV.isGroupedBy, name="LovpalagtTjeneste_er_gruppert_av", curie=CV.curie('isGroupedBy'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_er_gruppert_av, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, HendelseId], list[Union[str, HendelseId]]]])
-
-slots.LovpalagtTjeneste_er_klassifisert_av = Slot(uri=CV.isClassifiedBy, name="LovpalagtTjeneste_er_klassifisert_av", curie=CV.curie('isClassifiedBy'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_er_klassifisert_av, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
-
-slots.LovpalagtTjeneste_folger = Slot(uri=CPSV.follows, name="LovpalagtTjeneste_folger", curie=CPSV.curie('follows'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_folger, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, RegelId], list[Union[str, RegelId]]]])
-
-slots.LovpalagtTjeneste_har_gebyr = Slot(uri=CV.hasCost, name="LovpalagtTjeneste_har_gebyr", curie=CV.curie('hasCost'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_gebyr, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, GebyrId], list[Union[str, GebyrId]]]])
-
-slots.LovpalagtTjeneste_har_regulativ_ressurs = Slot(uri=CV.hasLegalResource, name="LovpalagtTjeneste_har_regulativ_ressurs", curie=CV.curie('hasLegalResource'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_har_regulativ_ressurs, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, RegulativRessursId], list[Union[str, RegulativRessursId]]]])
-
-slots.LovpalagtTjeneste_krev = Slot(uri=DCT.requires, name="LovpalagtTjeneste_krev", curie=DCT.curie('requires'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_krev, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
-
-slots.LovpalagtTjeneste_malgruppe = Slot(uri=DCT.audience, name="LovpalagtTjeneste_malgruppe", curie=DCT.curie('audience'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_malgruppe, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
-
-slots.LovpalagtTjeneste_nokkelord = Slot(uri=DCAT.keyword, name="LovpalagtTjeneste_nokkelord", curie=DCAT.curie('keyword'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_nokkelord, domain=LovpalagtTjeneste, range=Optional[Union[str, list[str]]])
-
-slots.LovpalagtTjeneste_sektor = Slot(uri=CV.sector, name="LovpalagtTjeneste_sektor", curie=CV.curie('sector'),
-                   model_uri=DEFAULT_.LovpalagtTjeneste_sektor, domain=LovpalagtTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.OffentligTjeneste_tittel = Slot(uri=DCT.title, name="OffentligTjeneste_tittel", curie=DCT.curie('title'),
                    model_uri=DEFAULT_.OffentligTjeneste_tittel, domain=OffentligTjeneste, range=Union[str, list[str]])
@@ -1906,8 +1669,8 @@ slots.OffentligTjeneste_har_ansvarleg_styremakt = Slot(uri=CV.hasCompetentAuthor
 slots.OffentligTjeneste_tema = Slot(uri=DCT.subject, name="OffentligTjeneste_tema", curie=DCT.curie('subject'),
                    model_uri=DEFAULT_.OffentligTjeneste_tema, domain=OffentligTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
-slots.OffentligTjeneste_dekningsomrade = Slot(uri=DCT.spatial, name="OffentligTjeneste_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.OffentligTjeneste_dekningsomrade, domain=OffentligTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.OffentligTjeneste_dekningsomraade = Slot(uri=DCT.spatial, name="OffentligTjeneste_dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.OffentligTjeneste_dekningsomraade, domain=OffentligTjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.OffentligTjeneste_har_dokumentasjonstype = Slot(uri=CV.hasInputType, name="OffentligTjeneste_har_dokumentasjonstype", curie=CV.curie('hasInputType'),
                    model_uri=DEFAULT_.OffentligTjeneste_har_dokumentasjonstype, domain=OffentligTjeneste, range=Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]])
@@ -1917,9 +1680,6 @@ slots.OffentligTjeneste_heimeside = Slot(uri=FOAF.homepage, name="OffentligTjene
 
 slots.OffentligTjeneste_type_concept = Slot(uri=DCT.type, name="OffentligTjeneste_type_concept", curie=DCT.curie('type'),
                    model_uri=DEFAULT_.OffentligTjeneste_type_concept, domain=OffentligTjeneste, range=Optional[Union[str, KonseptId]])
-
-slots.OffentligTjeneste_realiserer = Slot(uri=CPSVNO.realizes, name="OffentligTjeneste_realiserer", curie=CPSVNO.curie('realizes'),
-                   model_uri=DEFAULT_.OffentligTjeneste_realiserer, domain=OffentligTjeneste, range=Optional[Union[Union[str, LovpalagtTjenesteId], list[Union[str, LovpalagtTjenesteId]]]])
 
 slots.OffentligTjeneste_status = Slot(uri=ADMS.status, name="OffentligTjeneste_status", curie=ADMS.curie('status'),
                    model_uri=DEFAULT_.OffentligTjeneste_status, domain=OffentligTjeneste, range=Optional[Union[str, KonseptId]])
@@ -1945,8 +1705,8 @@ slots.OffentligTjeneste_har_tenestekanal = Slot(uri=CV.hasChannel, name="Offentl
 slots.OffentligTjeneste_har_deltaking = Slot(uri=CV.hasParticipation, name="OffentligTjeneste_har_deltaking", curie=CV.curie('hasParticipation'),
                    model_uri=DEFAULT_.OffentligTjeneste_har_deltaking, domain=OffentligTjeneste, range=Optional[Union[Union[str, DeltagelseId], list[Union[str, DeltagelseId]]]])
 
-slots.OffentligTjeneste_sprak = Slot(uri=DCT.language, name="OffentligTjeneste_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.OffentligTjeneste_sprak, domain=OffentligTjeneste, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.OffentligTjeneste_spraak = Slot(uri=DCT.language, name="OffentligTjeneste_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.OffentligTjeneste_spraak, domain=OffentligTjeneste, range=Optional[Union[str, list[str]]])
 
 slots.OffentligTjeneste_relatert_teneste = Slot(uri=CV.relatedService, name="OffentligTjeneste_relatert_teneste", curie=CV.curie('relatedService'),
                    model_uri=DEFAULT_.OffentligTjeneste_relatert_teneste, domain=OffentligTjeneste, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
@@ -1999,8 +1759,8 @@ slots.Tjeneste_eigd_av = Slot(uri=CV.ownedBy, name="Tjeneste_eigd_av", curie=CV.
 slots.Tjeneste_tema = Slot(uri=DCT.subject, name="Tjeneste_tema", curie=DCT.curie('subject'),
                    model_uri=DEFAULT_.Tjeneste_tema, domain=Tjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
-slots.Tjeneste_dekningsomrade = Slot(uri=DCT.spatial, name="Tjeneste_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.Tjeneste_dekningsomrade, domain=Tjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.Tjeneste_dekningsomraade = Slot(uri=DCT.spatial, name="Tjeneste_dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.Tjeneste_dekningsomraade, domain=Tjeneste, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.Tjeneste_har_dokumentasjonstype = Slot(uri=CV.hasInputType, name="Tjeneste_har_dokumentasjonstype", curie=CV.curie('hasInputType'),
                    model_uri=DEFAULT_.Tjeneste_har_dokumentasjonstype, domain=Tjeneste, range=Optional[Union[Union[str, DokumentasjonstypeId], list[Union[str, DokumentasjonstypeId]]]])
@@ -2032,8 +1792,8 @@ slots.Tjeneste_har_tenestekanal = Slot(uri=CV.hasChannel, name="Tjeneste_har_ten
 slots.Tjeneste_har_deltaking = Slot(uri=CV.hasParticipation, name="Tjeneste_har_deltaking", curie=CV.curie('hasParticipation'),
                    model_uri=DEFAULT_.Tjeneste_har_deltaking, domain=Tjeneste, range=Optional[Union[Union[str, DeltagelseId], list[Union[str, DeltagelseId]]]])
 
-slots.Tjeneste_sprak = Slot(uri=DCT.language, name="Tjeneste_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Tjeneste_sprak, domain=Tjeneste, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Tjeneste_spraak = Slot(uri=DCT.language, name="Tjeneste_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Tjeneste_spraak, domain=Tjeneste, range=Optional[Union[str, list[str]]])
 
 slots.Tjeneste_relatert_teneste = Slot(uri=CV.relatedService, name="Tjeneste_relatert_teneste", curie=CV.curie('relatedService'),
                    model_uri=DEFAULT_.Tjeneste_relatert_teneste, domain=Tjeneste, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
@@ -2107,8 +1867,8 @@ slots.Aktor_adresse_ref = Slot(uri=LOCN.address, name="Aktor_adresse_ref", curie
 slots.Aktor_deltek_i = Slot(uri=CV.participates, name="Aktor_deltek_i", curie=CV.curie('participates'),
                    model_uri=DEFAULT_.Aktor_deltek_i, domain=Aktor, range=Optional[Union[Union[str, DeltagelseId], list[Union[str, DeltagelseId]]]])
 
-slots.OffentligOrganisasjon_dekningsomrade = Slot(uri=DCT.spatial, name="OffentligOrganisasjon_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.OffentligOrganisasjon_dekningsomrade, domain=OffentligOrganisasjon, range=Union[Union[str, KonseptId], list[Union[str, KonseptId]]])
+slots.OffentligOrganisasjon_dekningsomraade = Slot(uri=DCT.spatial, name="OffentligOrganisasjon_dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.OffentligOrganisasjon_dekningsomraade, domain=OffentligOrganisasjon, range=Union[Union[str, KonseptId], list[Union[str, KonseptId]]])
 
 slots.OffentligOrganisasjon_foretrekt_namn = Slot(uri=SKOS.prefLabel, name="OffentligOrganisasjon_foretrekt_namn", curie=SKOS.curie('prefLabel'),
                    model_uri=DEFAULT_.OffentligOrganisasjon_foretrekt_namn, domain=OffentligOrganisasjon, range=Union[str, list[str]])
@@ -2134,8 +1894,8 @@ slots.Kontaktpunkt_kontaktside = Slot(uri=CV.contactPage, name="Kontaktpunkt_kon
 slots.Kontaktpunkt_opningstider = Slot(uri=CV.openingHours, name="Kontaktpunkt_opningstider", curie=CV.curie('openingHours'),
                    model_uri=DEFAULT_.Kontaktpunkt_opningstider, domain=Kontaktpunkt, range=Optional[Union[str, list[str]]])
 
-slots.Kontaktpunkt_sprak = Slot(uri=DCT.language, name="Kontaktpunkt_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Kontaktpunkt_sprak, domain=Kontaktpunkt, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Kontaktpunkt_spraak = Slot(uri=DCT.language, name="Kontaktpunkt_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Kontaktpunkt_spraak, domain=Kontaktpunkt, range=Optional[Union[str, list[str]]])
 
 slots.Kontaktpunkt_kategori = Slot(uri=VCARD.category, name="Kontaktpunkt_kategori", curie=VCARD.curie('category'),
                    model_uri=DEFAULT_.Kontaktpunkt_kategori, domain=Kontaktpunkt, range=Optional[Union[str, list[str]]])
@@ -2170,8 +1930,8 @@ slots.Dokumentasjonstype_identifikator_literal = Slot(uri=DCT.identifier, name="
 slots.Dokumentasjonstype_gyldig_i = Slot(uri=CCCEVNO.acceptableValidityDuration, name="Dokumentasjonstype_gyldig_i", curie=CCCEVNO.curie('acceptableValidityDuration'),
                    model_uri=DEFAULT_.Dokumentasjonstype_gyldig_i, domain=Dokumentasjonstype, range=Optional[str])
 
-slots.Dokumentasjonstype_godtek_sprak = Slot(uri=CCCEVNO.acceptableLanguage, name="Dokumentasjonstype_godtek_sprak", curie=CCCEVNO.curie('acceptableLanguage'),
-                   model_uri=DEFAULT_.Dokumentasjonstype_godtek_sprak, domain=Dokumentasjonstype, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Dokumentasjonstype_godtek_spraak = Slot(uri=CCCEVNO.acceptableLanguage, name="Dokumentasjonstype_godtek_spraak", curie=CCCEVNO.curie('acceptableLanguage'),
+                   model_uri=DEFAULT_.Dokumentasjonstype_godtek_spraak, domain=Dokumentasjonstype, range=Optional[Union[str, list[str]]])
 
 slots.Dokumentasjonstype_klassifisering = Slot(uri=CV.evidenceTypeClassification, name="Dokumentasjonstype_klassifisering", curie=CV.curie('evidenceTypeClassification'),
                    model_uri=DEFAULT_.Dokumentasjonstype_klassifisering, domain=Dokumentasjonstype, range=Optional[Union[str, KonseptId]])
@@ -2191,8 +1951,8 @@ slots.Tjenesteresultattype_tittel = Slot(uri=DCT.title, name="Tjenesteresultatty
 slots.Tjenesteresultattype_beskrivelse = Slot(uri=DCT.description, name="Tjenesteresultattype_beskrivelse", curie=DCT.curie('description'),
                    model_uri=DEFAULT_.Tjenesteresultattype_beskrivelse, domain=Tjenesteresultattype, range=Union[str, list[str]])
 
-slots.Tjenesteresultattype_mogleg_sprak = Slot(uri=CPSVNO.possibleLanguage, name="Tjenesteresultattype_mogleg_sprak", curie=CPSVNO.curie('possibleLanguage'),
-                   model_uri=DEFAULT_.Tjenesteresultattype_mogleg_sprak, domain=Tjenesteresultattype, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Tjenesteresultattype_mogleg_spraak = Slot(uri=CPSVNO.possibleLanguage, name="Tjenesteresultattype_mogleg_spraak", curie=CPSVNO.curie('possibleLanguage'),
+                   model_uri=DEFAULT_.Tjenesteresultattype_mogleg_spraak, domain=Tjenesteresultattype, range=Optional[Union[str, list[str]]])
 
 slots.Tjenesteresultattype_identifikator_literal = Slot(uri=DCT.identifier, name="Tjenesteresultattype_identifikator_literal", curie=DCT.curie('identifier'),
                    model_uri=DEFAULT_.Tjenesteresultattype_identifikator_literal, domain=Tjenesteresultattype, range=Optional[str])
@@ -2230,8 +1990,8 @@ slots.Regel_beskrivelse = Slot(uri=DCT.description, name="Regel_beskrivelse", cu
 slots.Regel_identifikator_literal = Slot(uri=DCT.identifier, name="Regel_identifikator_literal", curie=DCT.curie('identifier'),
                    model_uri=DEFAULT_.Regel_identifikator_literal, domain=Regel, range=Optional[str])
 
-slots.Regel_sprak = Slot(uri=DCT.language, name="Regel_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Regel_sprak, domain=Regel, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Regel_spraak = Slot(uri=DCT.language, name="Regel_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Regel_spraak, domain=Regel, range=Optional[Union[str, list[str]]])
 
 slots.Regel_type_concept = Slot(uri=DCT.type, name="Regel_type_concept", curie=DCT.curie('type'),
                    model_uri=DEFAULT_.Regel_type_concept, domain=Regel, range=Optional[Union[str, KonseptId]])
@@ -2281,8 +2041,8 @@ slots.Katalog_har_kontaktpunkt = Slot(uri=CV.contactPoint, name="Katalog_har_kon
 slots.Katalog_utgjevar = Slot(uri=DCT.publisher, name="Katalog_utgjevar", curie=DCT.curie('publisher'),
                    model_uri=DEFAULT_.Katalog_utgjevar, domain=Katalog, range=Union[str, AktorId])
 
-slots.Katalog_dekningsomrade = Slot(uri=DCT.spatial, name="Katalog_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.Katalog_dekningsomrade, domain=Katalog, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.Katalog_dekningsomraade = Slot(uri=DCT.spatial, name="Katalog_dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.Katalog_dekningsomraade, domain=Katalog, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.Katalog_endringsdato = Slot(uri=DCT.modified, name="Katalog_endringsdato", curie=DCT.curie('modified'),
                    model_uri=DEFAULT_.Katalog_endringsdato, domain=Katalog, range=Optional[Union[str, XSDDate]])
@@ -2299,6 +2059,6 @@ slots.Katalog_inneheld_hending = Slot(uri=DCATNO.containsEvent, name="Katalog_in
 slots.Katalog_lisens = Slot(uri=DCT.license, name="Katalog_lisens", curie=DCT.curie('license'),
                    model_uri=DEFAULT_.Katalog_lisens, domain=Katalog, range=Optional[Union[str, URI]])
 
-slots.Katalog_sprak = Slot(uri=DCT.language, name="Katalog_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Katalog_sprak, domain=Katalog, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Katalog_spraak = Slot(uri=DCT.language, name="Katalog_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Katalog_spraak, domain=Katalog, range=Optional[Union[str, list[str]]])
 

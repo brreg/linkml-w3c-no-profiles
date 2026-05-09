@@ -187,7 +187,6 @@ URI: [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [har_regulativ_ressurs](har_regulativ_ressurs.md) | range | [RegulativRessurs](regulativressurs.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [har_regulativ_ressurs](har_regulativ_ressurs.md) | range | [RegulativRessurs](regulativressurs.md) |
 | [Tjeneste](tjeneste.md) | [har_regulativ_ressurs](har_regulativ_ressurs.md) | range | [RegulativRessurs](regulativressurs.md) |
 
@@ -292,7 +291,6 @@ attributes:
     alias: id
     owner: RegulativRessurs
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -308,7 +306,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -325,7 +322,6 @@ attributes:
     alias: tittel
     owner: RegulativRessurs
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -349,7 +345,6 @@ attributes:
     alias: identifikator_literal
     owner: RegulativRessurs
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -373,7 +368,6 @@ attributes:
     alias: type_concept
     owner: RegulativRessurs
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

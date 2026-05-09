@@ -35,7 +35,7 @@ Alias: format
 
 | Property | Value |
 | --- | --- |
-| Range | [Mediatype](mediatype.md) |
+| Range | [String](string.md) |
 | Domain Of | [Dokument](dokument.md) |
 | Slot URI | [dct:format](http://purl.org/dc/terms/format) |
 
@@ -89,7 +89,7 @@ slot_uri: dct:format
 alias: format
 domain_of:
 - Dokument
-range: Mediatype
+range: string
 
 ```
 </details>

@@ -175,7 +175,6 @@ attributes:
     - GeneriskRelasjon
     - PartitivRelasjon
     - Samling
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling

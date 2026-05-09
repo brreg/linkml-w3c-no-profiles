@@ -6,7 +6,7 @@ Aktor {
     LangStringList navn_aktor  
 }
 Basisgruppe {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
     string trinniva  
 }
@@ -16,7 +16,8 @@ Brukartilbakemelding {
     uri har_maal  
     LangStringList har_merknad  
 }
-
+    uriorcurie id  
+}
 Datasett {
     stringList annen_ansvarlig_aktor  
     stringList begrep  
@@ -29,7 +30,7 @@ Datasett {
     uriList landingsside  
     LangStringList nokkelord  
     uriList relatert_ressurs  
-    stringList spraak  
+    SpraakList spraak  
     stringList tema  
     uriList tilgangsrettigheter  
     LangStringList tittel  
@@ -75,7 +76,7 @@ Distribusjon {
     string lisens  
     uriList nedlastningslenke  
     string policy  
-    stringList spraak  
+    SpraakList spraak  
     Duration tidsopplosning  
     uriList tilgangs_url  
     string tilgjengelighet  
@@ -83,12 +84,12 @@ Distribusjon {
     date utgivelsesdato  
 }
 Elev {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Fylke {
     string fylkesnummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Gebyr {
@@ -103,14 +104,14 @@ Identifikator {
 }
 Kommune {
     string kommunenummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Konsept {
     uriorcurie id  
 }
 Kontaktlaerer {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Kontaktopplysning {
@@ -151,7 +152,7 @@ Mediatype {
 }
 PrivatVirksomhet {
     string organisasjonsnummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 RegulativRessurs {
@@ -159,11 +160,11 @@ RegulativRessurs {
     LangStringList beskrivelse  
     uriList har_referanse  
     string identifikator_literal  
-    stringList spraak  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Rektor {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Relasjon {
@@ -188,11 +189,11 @@ Sjekksum {
     string sjekksumverdi  
 }
 Skole {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Skoleeier {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Standard {
@@ -206,7 +207,7 @@ Tekstdel {
     uriorcurie id  
     string format  
     string har_verdi_tekstdel  
-    stringList spraak  
+    SpraakList spraak  
 }
 Tidsrom {
     uriorcurie id  

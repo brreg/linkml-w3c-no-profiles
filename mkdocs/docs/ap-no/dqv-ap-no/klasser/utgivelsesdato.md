@@ -18,6 +18,19 @@ Alias: utgivelsesdato
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Datasettserie](datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
+| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [Katalogpost](katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +40,7 @@ Alias: utgivelsesdato
 | Property | Value |
 | --- | --- |
 | Range | [Date](date.md) |
+| Domain Of | [Distribusjon](distribusjon.md), [Datasett](datasett.md), [Datasettserie](datasettserie.md), [Katalogpost](katalogpost.md), [Katalog](katalog.md) |
 | Slot URI | [dct:issued](http://purl.org/dc/terms/issued) |
 
 ### Cardinality and Requirements
@@ -77,6 +91,12 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: dct:issued
 alias: utgivelsesdato
+domain_of:
+- Distribusjon
+- Datasett
+- Datasettserie
+- Katalogpost
+- Katalog
 range: date
 
 ```

@@ -22,7 +22,7 @@ URI: [samtbuskole:Kommune](https://example.no/ontology/skole#Kommune)
       Skoleeier <|-- Kommune
         click Skoleeier href "../Skoleeier/"
       
-      Kommune : identifikator
+      Kommune : id
         
       Kommune : kommunenummer
         
@@ -90,7 +90,7 @@ URI: [samtbuskole:Kommune](https://example.no/ontology/skole#Kommune)
 ### Arva
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
-| --- | --- | --- | --- || [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) | [Skoleeier](skoleeier.md) |
+| --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Skoleeier](skoleeier.md) |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen | [Skoleeier](skoleeier.md) |
 
 
@@ -188,13 +188,13 @@ attributes:
     domain_of:
     - Kommune
     range: string
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Kommune
     domain_of:
     - Containerklasse
@@ -202,6 +202,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

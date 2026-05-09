@@ -46,7 +46,7 @@ classes:
       - utgjevar
       - tema
       - nokkelord
-      - sprak
+      - spraak
       - har_versjonsnummer
       - endringsdato
       - utgivelsesdato
@@ -74,7 +74,7 @@ classes:
       nokkelord:
         in_subset:
           - Anbefalt
-      sprak:
+      spraak:
         in_subset:
           - Anbefalt
       har_versjonsnummer:

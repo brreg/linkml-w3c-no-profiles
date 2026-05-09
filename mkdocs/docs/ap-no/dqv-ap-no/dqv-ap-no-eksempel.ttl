@@ -12,6 +12,11 @@
 
 <https://example.org/datasett/aapen-adresseregister> a dcat:Dataset ;
     dct:conformsTo <https://example.org/standardar/iso-19157> ;
+    dct:description "Eit datasett med norske adresser tilgjengeleg for allmenta."^^rdf:langString ;
+    dct:publisher <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827> ;
+    dct:title "Ope adresseregister"^^rdf:langString ;
+    dcat:contactPoint <https://example.org/kontaktpunkt/1> ;
+    dcat:theme "http://publications.europa.eu/resource/authority/data-theme/REGI" ;
     dqv:hasQualityAnnotation <https://example.org/merknader/adresser-kompletheit-1> ;
     dqv:hasQualityMeasurement <https://example.org/maalingar/adresser-dekning-2024> .
 
@@ -43,7 +48,7 @@ dqvno:rateOfMissingValues a dqvno:SubDimension ;
     dqv:inDimension dqvno:completeness .
 
 <https://example.org/tekstdelar/adresser-vurdering-1> a oa:TextualBody ;
-    dct:language <http://publications.europa.eu/resource/authority/language/NOB> ;
+    dct:language "http://publications.europa.eu/resource/authority/language/NOB"^^dct:language ;
     rdfs:value "Datasettet har svært høg kompletheit basert på samanlikning mot matrikkelen." .
 
 dqvno:completeness a dqv:Dimension ;

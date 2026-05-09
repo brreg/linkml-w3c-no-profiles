@@ -35,7 +35,7 @@ Alias: policy
 
 | Property | Value |
 | --- | --- |
-| Range | [OdrlPolicy](odrlpolicy.md) |
+| Range | [String](string.md) |
 | Domain Of | [Distribusjon](distribusjon.md) |
 | Slot URI | [odrl:hasPolicy](http://www.w3.org/ns/odrl/2/hasPolicy) |
 
@@ -55,6 +55,13 @@ Alias: policy
 
 ## Identifier and Mapping Information
 
+
+
+### Annotations
+
+| property | value |
+| --- | --- |
+| gyldige_verdier | odrl:Policy |
 
 
 
@@ -82,6 +89,10 @@ Alias: policy
 <details>
 ```yaml
 name: policy
+annotations:
+  gyldige_verdier:
+    tag: gyldige_verdier
+    value: odrl:Policy
 description: ODRL-policy som regulerer bruk av ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
@@ -89,7 +100,7 @@ slot_uri: odrl:hasPolicy
 alias: policy
 domain_of:
 - Distribusjon
-range: OdrlPolicy
+range: string
 
 ```
 </details>

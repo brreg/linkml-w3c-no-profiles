@@ -1,63 +1,130 @@
 
 
-# Slot: identifikator 
+# Class: Identifikator 
 
 
-_Global identifikator (CURIE/URI)._
+_Ein alternativ identifikator for ein ressurs._
 
 
 
 
 
-URI: [samtbuskole:identifikator](https://example.no/ontology/skole#identifikator)
-Alias: identifikator
+URI: [adms:Identifier](http://www.w3.org/ns/adms#Identifier)
+
+
+
+
+
+```mermaid
+ classDiagram
+    class Identifikator
+    click Identifikator href "../Identifikator/"
+      Identifikator : id
+        
+      Identifikator : notasjon
+        
+      
+```
+
+
+
 
 <!-- no inheritance hierarchy -->
 
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Class URI | [adms:Identifier](http://www.w3.org/ns/adms#Identifier) |
+
+
+## Eigenskapar
 
 
 
 
-## Applicable Classes
 
-| Name | Description | Modifies Slot |
+
+
+  
+  
+
+  
+  
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [Containerklasse](containerklasse.md) | Containerklasse for alle klasser som kan inngå i datasettet |  no  |
-| [Kontaktlaerer](kontaktlaerer.md) | En lærer med ansvar for ei basisgruppe og er skolens kontaktpunkt for elevane... |  no  |
-| [Skole](skole.md) | En skole er en privat eller offentlig institusjon eller et lærested hvor lære... |  no  |
-| [PrivatVirksomhet](privatvirksomhet.md) | Virksomhet, eller foretak, er betegnelser for en juridisk person eller en org... |  no  |
-| [Skoleeier](skoleeier.md) | Superklasse for alle typer skoleeiere |  no  |
-| [Kommune](kommune.md) | En kommune er et geografisk avgrenset område som utgjør en egen politisk og a... |  no  |
-| [Basisgruppe](basisgruppe.md) | Skoleklasse som hovedsaklig samler elever i ulike fag |  no  |
-| [Fylke](fylke.md) | Fylke (etter norrønt fylki) er en betegnelse på et undernasjonalt, regionalt ... |  no  |
-| [Elev](elev.md) | En person som går på skole |  no  |
-| [Rektor](rektor.md) | Høgaste akademiske leder av en skole |  no  |
-| [Person](person.md) | Eit menneske individ |  no  |
+| [notasjon](notasjon.md) | 1 <br/> [String](string.md) | Notasjon/kode for identifikatoren |
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
 
 
 
 
 
 
-## Properties
+  
+  
+  
+  
+    
+  
 
-### Type and Range
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
-| Property | Value |
-| --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Containerklasse](containerklasse.md), [Skole](skole.md), [Skoleeier](skoleeier.md), [Basisgruppe](basisgruppe.md), [Person](person.md) |
 
-### Cardinality and Requirements
+### Andre
 
-| Property | Value |
-| --- | --- |
-| Required | Yes |
-### Slot Characteristics
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 
-| Property | Value |
-| --- | --- |
-| Identifier | Yes |
+
+
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Datasett](datasett.md) | [annen_identifikator](annen_identifikator.md) | range | [Identifikator](identifikator.md) |
 
 
 
@@ -88,30 +155,106 @@ Alias: identifikator
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | samtbuskole:identifikator |
-| native | samtbuskole:identifikator |
+| self | adms:Identifier |
+| native | samtbuskole:Identifikator |
+
+
 
 
 
 
 ## LinkML Source
 
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
 <details>
 ```yaml
-name: identifikator
-description: Global identifikator (CURIE/URI).
+name: Identifikator
+description: Ein alternativ identifikator for ein ressurs.
 from_schema: https://example.no/ontology/samt-bu-skole
-rank: 1000
-identifier: true
-alias: identifikator
-domain_of:
-- Containerklasse
-- Skole
-- Skoleeier
-- Basisgruppe
-- Person
-range: uriorcurie
-required: true
+slots:
+- id
+- notasjon
+slot_usage:
+  notasjon:
+    name: notasjon
+    in_subset:
+    - Obligatorisk
+    required: true
+class_uri: adms:Identifier
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: Identifikator
+description: Ein alternativ identifikator for ein ressurs.
+from_schema: https://example.no/ontology/samt-bu-skole
+slot_usage:
+  notasjon:
+    name: notasjon
+    in_subset:
+    - Obligatorisk
+    required: true
+attributes:
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
+    from_schema: https://example.no/ontology/samt-bu-skole
+    rank: 1000
+    identifier: true
+    alias: id
+    owner: Identifikator
+    domain_of:
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
+    range: uriorcurie
+    required: true
+  notasjon:
+    name: notasjon
+    description: Notasjon/kode for identifikatoren.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://example.no/ontology/samt-bu-skole
+    rank: 1000
+    slot_uri: skos:notation
+    alias: notasjon
+    owner: Identifikator
+    domain_of:
+    - Identifikator
+    range: string
+    required: true
+class_uri: adms:Identifier
 
 ```
 </details>

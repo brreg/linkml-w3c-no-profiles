@@ -12,7 +12,7 @@ katalogar:
       - https://example.org/kontaktpunkt/1
     datasett:
       - https://example.org/datasett/aapen-adresseregister
-    sprak:
+    spraak:
       - http://publications.europa.eu/resource/authority/language/NOB
     lisens: http://publications.europa.eu/resource/authority/licence/CC_BY_4_0
     utgivelsesdato: "2024-01-15"

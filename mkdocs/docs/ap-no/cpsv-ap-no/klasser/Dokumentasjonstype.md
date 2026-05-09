@@ -25,16 +25,7 @@ URI: [cv:EvidenceType](http://data.europa.eu/m8g/EvidenceType)
         
       Dokumentasjonstype : er_spesifisert_i
         
-      Dokumentasjonstype : godtek_sprak
-        
-          
-    
-        
-        
-        Dokumentasjonstype --> "*" Spraak : godtek_sprak
-        click Spraak href "../Spraak/"
-    
-
+      Dokumentasjonstype : godtek_spraak
         
       Dokumentasjonstype : gyldig_i
         
@@ -178,7 +169,7 @@ URI: [cv:EvidenceType](http://data.europa.eu/m8g/EvidenceType)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [gyldig_i](gyldig_i.md) | 0..1 <br/> [Duration](duration.md) | Kor lenge dokumentasjonen er gyldig (ISO 8601 varigheit) |
-| [godtek_sprak](godtek_sprak.md) | * <br/> [Spraak](spraak.md) | Språk dokumentasjonstypen er akseptert i |
+| [godtek_spraak](godtek_spraak.md) | * <br/> [Spraak](spraak.md) | Språk dokumentasjonstypen er akseptert i |
 
 
 
@@ -379,7 +370,6 @@ URI: [cv:EvidenceType](http://data.europa.eu/m8g/EvidenceType)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [har_dokumentasjonstype](har_dokumentasjonstype.md) | range | [Dokumentasjonstype](dokumentasjonstype.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [har_dokumentasjonstype](har_dokumentasjonstype.md) | range | [Dokumentasjonstype](dokumentasjonstype.md) |
 | [Tjeneste](tjeneste.md) | [har_dokumentasjonstype](har_dokumentasjonstype.md) | range | [Dokumentasjonstype](dokumentasjonstype.md) |
 
@@ -437,7 +427,7 @@ slots:
 - beskrivelse
 - identifikator_literal
 - gyldig_i
-- godtek_sprak
+- godtek_spraak
 - klassifisering
 - er_beskrive_av
 - er_spesifisert_i
@@ -462,8 +452,8 @@ slot_usage:
     name: gyldig_i
     in_subset:
     - Anbefalt
-  godtek_sprak:
-    name: godtek_sprak
+  godtek_spraak:
+    name: godtek_spraak
     in_subset:
     - Anbefalt
   klassifisering:
@@ -514,8 +504,8 @@ slot_usage:
     name: gyldig_i
     in_subset:
     - Anbefalt
-  godtek_sprak:
-    name: godtek_sprak
+  godtek_spraak:
+    name: godtek_spraak
     in_subset:
     - Anbefalt
   klassifisering:
@@ -544,7 +534,6 @@ attributes:
     alias: id
     owner: Dokumentasjonstype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -560,7 +549,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -577,7 +565,6 @@ attributes:
     alias: tittel
     owner: Dokumentasjonstype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -602,7 +589,6 @@ attributes:
     alias: beskrivelse
     owner: Dokumentasjonstype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -627,7 +613,6 @@ attributes:
     alias: identifikator_literal
     owner: Dokumentasjonstype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -654,15 +639,15 @@ attributes:
     domain_of:
     - Dokumentasjonstype
     range: Duration
-  godtek_sprak:
-    name: godtek_sprak
+  godtek_spraak:
+    name: godtek_spraak
     description: Språk dokumentasjonstypen er akseptert i.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: cccevno:acceptableLanguage
-    alias: godtek_sprak
+    alias: godtek_spraak
     owner: Dokumentasjonstype
     domain_of:
     - Dokumentasjonstype

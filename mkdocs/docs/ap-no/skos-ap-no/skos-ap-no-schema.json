@@ -487,7 +487,10 @@
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -613,24 +616,6 @@
                 "utgjevar"
             ],
             "title": "Samling",
-            "type": "object"
-        },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Spraak",
             "type": "object"
         },
         "VCardKontakt": {

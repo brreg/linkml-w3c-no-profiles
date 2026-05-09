@@ -97,7 +97,7 @@ URI: [oa:TextualBody](http://www.w3.org/ns/oa#TextualBody)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [format](format.md) | 0..1 <br/> [String](string.md) | Filformat eller medietype (dct:format) |
-| [spraak](spraak.md) | * <br/> [String](string.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 
 
 
@@ -292,10 +292,11 @@ attributes:
     alias: id
     owner: Tekstdel
     domain_of:
-    - Spraak
-    - Mediatype
-    - Konsept
-    - Begrepssamling
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
@@ -309,6 +310,9 @@ attributes:
     - Distribusjon
     - Datasett
     - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
@@ -363,7 +367,7 @@ attributes:
     - Katalogpost
     - Katalog
     - Tekstdel
-    range: string
+    range: Spraak
     multivalued: true
 class_uri: oa:TextualBody
 

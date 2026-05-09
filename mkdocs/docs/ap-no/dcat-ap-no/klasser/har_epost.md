@@ -35,7 +35,7 @@ Alias: har_epost
 
 | Property | Value |
 | --- | --- |
-| Range | [Uri](uri.md) |
+| Range | [String](string.md) |
 | Domain Of | [Kontaktopplysning](kontaktopplysning.md) |
 | Slot URI | [vcard:hasEmail](http://www.w3.org/2006/vcard/ns#hasEmail) |
 
@@ -89,7 +89,7 @@ slot_uri: vcard:hasEmail
 alias: har_epost
 domain_of:
 - Kontaktopplysning
-range: uri
+range: string
 
 ```
 </details>

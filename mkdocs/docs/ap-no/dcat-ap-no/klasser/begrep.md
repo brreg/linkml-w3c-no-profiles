@@ -35,7 +35,7 @@ Alias: begrep
 
 | Property | Value |
 | --- | --- |
-| Range | [Konsept](konsept.md) |
+| Range | [String](string.md) |
 | Domain Of | [Datasett](datasett.md) |
 | Slot URI | [dct:subject](http://purl.org/dc/terms/subject) |
 
@@ -90,7 +90,7 @@ slot_uri: dct:subject
 alias: begrep
 domain_of:
 - Datasett
-range: Konsept
+range: string
 multivalued: true
 
 ```

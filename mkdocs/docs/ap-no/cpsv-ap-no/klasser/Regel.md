@@ -25,16 +25,7 @@ URI: [cpsv:Rule](http://purl.org/vocab/cpsv#Rule)
         
       Regel : identifikator_literal
         
-      Regel : sprak
-        
-          
-    
-        
-        
-        Regel --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Regel : spraak
         
       Regel : tittel
         
@@ -152,7 +143,7 @@ URI: [cpsv:Rule](http://purl.org/vocab/cpsv#Rule)
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
 | [beskrivelse](beskrivelse.md) | * <br/> [LangString](langstring.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](string.md) | Tekstleg identifikator for ressursen (dct:identifier) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [type_concept](type_concept.md) | 0..1 <br/> [Konsept](konsept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
 
 
@@ -250,7 +241,6 @@ URI: [cpsv:Rule](http://purl.org/vocab/cpsv#Rule)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [folger](folger.md) | range | [Regel](regel.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [folger](folger.md) | range | [Regel](regel.md) |
 | [Tjeneste](tjeneste.md) | [folger](folger.md) | range | [Regel](regel.md) |
 
@@ -307,7 +297,7 @@ slots:
 - tittel
 - beskrivelse
 - identifikator_literal
-- sprak
+- spraak
 - type_concept
 slot_usage:
   tittel:
@@ -322,8 +312,8 @@ slot_usage:
     name: identifikator_literal
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   type_concept:
@@ -355,8 +345,8 @@ slot_usage:
     name: identifikator_literal
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   type_concept:
@@ -373,7 +363,6 @@ attributes:
     alias: id
     owner: Regel
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -389,7 +378,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -406,7 +394,6 @@ attributes:
     alias: tittel
     owner: Regel
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -430,7 +417,6 @@ attributes:
     alias: beskrivelse
     owner: Regel
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -454,7 +440,6 @@ attributes:
     alias: identifikator_literal
     owner: Regel
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -467,15 +452,15 @@ attributes:
     - RegulativRessurs
     - Katalog
     range: string
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Regel
     domain_of:
     - OffentligTjeneste
@@ -496,7 +481,6 @@ attributes:
     alias: type_concept
     owner: Regel
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

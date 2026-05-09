@@ -883,7 +883,7 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1246,7 +1246,7 @@
                         "null"
                     ]
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -1413,7 +1413,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1822,7 +1822,10 @@
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -1968,7 +1971,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -3070,24 +3073,6 @@
                 "id"
             ],
             "title": "Spesialisering",
-            "type": "object"
-        },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Spraak",
             "type": "object"
         },
         "Standard": {

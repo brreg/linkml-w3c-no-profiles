@@ -23,13 +23,13 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
         
       OffentligTjeneste : beskrivelse
         
-      OffentligTjeneste : dekningsomrade
+      OffentligTjeneste : dekningsomraade
         
           
     
         
         
-        OffentligTjeneste --> "*" Konsept : dekningsomrade
+        OffentligTjeneste --> "*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -182,17 +182,6 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
         
       OffentligTjeneste : nokkelord
         
-      OffentligTjeneste : realiserer
-        
-          
-    
-        
-        
-        OffentligTjeneste --> "*" LovpalagtTjeneste : realiserer
-        click LovpalagtTjeneste href "../LovpalagtTjeneste/"
-    
-
-        
       OffentligTjeneste : relatert_teneste
         
       OffentligTjeneste : sektor
@@ -206,16 +195,7 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
     
 
         
-      OffentligTjeneste : sprak
-        
-          
-    
-        
-        
-        OffentligTjeneste --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      OffentligTjeneste : spraak
         
       OffentligTjeneste : status
         
@@ -391,9 +371,6 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
   
   
 
-  
-  
-
 
 ### Obligatorisk
 
@@ -429,11 +406,6 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
   
 
   
-  
-
-  
-  
-    
   
 
   
@@ -528,20 +500,16 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [tema](tema.md) | * <br/> [Konsept](konsept.md) | Emne/tema tenesta handlar om |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 | [har_dokumentasjonstype](har_dokumentasjonstype.md) | * <br/> [Dokumentasjonstype](dokumentasjonstype.md) | Dokumentasjon som krevst for tenesta |
 | [heimeside](heimeside.md) | * <br/> [Uri](uri.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
 | [type_concept](type_concept.md) | 0..1 <br/> [Konsept](konsept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
-| [realiserer](realiserer.md) | * <br/> [LovpalagtTjeneste](lovpalagttjeneste.md) | Lovpålagd teneste denne offentlege tenesta realiserer |
 | [status](status.md) | 0..1 <br/> [Konsept](konsept.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [temaomrade](temaomrade.md) | * <br/> [Konsept](konsept.md) | Tematisk område for tenesta |
 
 
 
 
-
-  
-  
 
   
   
@@ -681,7 +649,7 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
 | [har_del](har_del.md) | * <br/> [Uriorcurie](uriorcurie.md) | Deltenester som inngår i denne tenesta |
 | [har_tenestekanal](har_tenestekanal.md) | * <br/> [Tjenestekanal](tjenestekanal.md) | Kanal for tilgang til tenesta |
 | [har_deltaking](har_deltaking.md) | * <br/> [Deltagelse](deltagelse.md) | Deltakarar med spesifikke roller i levering av tenesta |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [relatert_teneste](relatert_teneste.md) | * <br/> [Uriorcurie](uriorcurie.md) | Relatert teneste |
 | [er_gruppert_av](er_gruppert_av.md) | * <br/> [Hendelse](hendelse.md) | Hending(ar) som grupperer tenesta |
 | [er_klassifisert_av](er_klassifisert_av.md) | * <br/> [Konsept](konsept.md) | Omgrep tenesta er klassifisert med |
@@ -703,19 +671,6 @@ URI: [cpsv:PublicService](http://purl.org/vocab/cpsv#PublicService)
   
   
     
-  
-
-  
-  
-  
-    
-      
-    
-      
-    
-      
-    
-  
   
 
   
@@ -1188,11 +1143,10 @@ slots:
 - har_tenesteresultattype
 - har_ansvarleg_styremakt
 - tema
-- dekningsomrade
+- dekningsomraade
 - har_dokumentasjonstype
 - heimeside
 - type_concept
-- realiserer
 - status
 - temaomrade
 - behandlingstid
@@ -1201,7 +1155,7 @@ slots:
 - har_del
 - har_tenestekanal
 - har_deltaking
-- sprak
+- spraak
 - relatert_teneste
 - er_gruppert_av
 - er_klassifisert_av
@@ -1247,8 +1201,8 @@ slot_usage:
     name: tema
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   har_dokumentasjonstype:
@@ -1261,10 +1215,6 @@ slot_usage:
     - Anbefalt
   type_concept:
     name: type_concept
-    in_subset:
-    - Anbefalt
-  realiserer:
-    name: realiserer
     in_subset:
     - Anbefalt
   status:
@@ -1299,8 +1249,8 @@ slot_usage:
     name: har_deltaking
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   relatert_teneste:
@@ -1390,8 +1340,8 @@ slot_usage:
     name: tema
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   har_dokumentasjonstype:
@@ -1404,10 +1354,6 @@ slot_usage:
     - Anbefalt
   type_concept:
     name: type_concept
-    in_subset:
-    - Anbefalt
-  realiserer:
-    name: realiserer
     in_subset:
     - Anbefalt
   status:
@@ -1442,8 +1388,8 @@ slot_usage:
     name: har_deltaking
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   relatert_teneste:
@@ -1496,7 +1442,6 @@ attributes:
     alias: id
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1512,12 +1457,10 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
     range: uriorcurie
-    required: true
   tittel:
     name: tittel
     description: Namn/tittel på ressursen (dct:title).
@@ -1529,7 +1472,6 @@ attributes:
     alias: tittel
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1554,7 +1496,6 @@ attributes:
     alias: beskrivelse
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1579,7 +1520,6 @@ attributes:
     alias: identifikator_literal
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1604,7 +1544,6 @@ attributes:
     alias: har_kontaktpunkt
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1623,7 +1562,6 @@ attributes:
     alias: har_tenesteresultattype
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Tjenesteresultattype
@@ -1655,24 +1593,22 @@ attributes:
     alias: tema
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
     range: Konsept
     multivalued: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -1690,7 +1626,6 @@ attributes:
     alias: har_dokumentasjonstype
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Dokumentasjonstype
@@ -1706,7 +1641,6 @@ attributes:
     alias: heimeside
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -1724,7 +1658,6 @@ attributes:
     alias: type_concept
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -1734,20 +1667,6 @@ attributes:
     - Regel
     - RegulativRessurs
     range: Konsept
-  realiserer:
-    name: realiserer
-    description: Lovpålagd teneste denne offentlege tenesta realiserer.
-    in_subset:
-    - Anbefalt
-    from_schema: https://data.norge.no/linkml/cpsv-ap-no
-    rank: 1000
-    slot_uri: cpsvno:realizes
-    alias: realiserer
-    owner: OffentligTjeneste
-    domain_of:
-    - OffentligTjeneste
-    range: LovpalagtTjeneste
-    multivalued: true
   status:
     name: status
     description: Status for ressursen frå eit kontrollert vokabular (adms:status).
@@ -1773,7 +1692,6 @@ attributes:
     alias: temaomrade
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Konsept
@@ -1822,7 +1740,6 @@ attributes:
     alias: er_del_av
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: uriorcurie
@@ -1837,7 +1754,6 @@ attributes:
     alias: har_del
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: uriorcurie
@@ -1872,15 +1788,15 @@ attributes:
     - Tjeneste
     range: Deltagelse
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: OffentligTjeneste
     domain_of:
     - OffentligTjeneste
@@ -1916,7 +1832,6 @@ attributes:
     alias: er_gruppert_av
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Hendelse
@@ -1932,7 +1847,6 @@ attributes:
     alias: er_klassifisert_av
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Konsept
@@ -1948,7 +1862,6 @@ attributes:
     alias: folger
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Regel
@@ -1964,7 +1877,6 @@ attributes:
     alias: har_gebyr
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Gebyr
@@ -1980,7 +1892,6 @@ attributes:
     alias: har_regulativ_ressurs
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: RegulativRessurs
@@ -1996,7 +1907,6 @@ attributes:
     alias: krev
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: uriorcurie
@@ -2012,7 +1922,6 @@ attributes:
     alias: malgruppe
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Konsept
@@ -2028,7 +1937,6 @@ attributes:
     alias: nokkelord
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: LangString
@@ -2044,7 +1952,6 @@ attributes:
     alias: sektor
     owner: OffentligTjeneste
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     range: Konsept

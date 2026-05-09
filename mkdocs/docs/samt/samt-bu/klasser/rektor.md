@@ -33,7 +33,7 @@ URI: [samtbuskole:Rektor](https://example.no/ontology/skole#Rektor)
     
 
         
-      Rektor : identifikator
+      Rektor : id
         
       Rektor : navn
         
@@ -99,7 +99,7 @@ URI: [samtbuskole:Rektor](https://example.no/ontology/skole#Rektor)
 ### Arva
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
-| --- | --- | --- | --- || [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) | [Person](person.md) |
+| --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Person](person.md) |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen | [Person](person.md) |
 
 
@@ -190,13 +190,13 @@ attributes:
     domain_of:
     - Rektor
     range: Skole
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Rektor
     domain_of:
     - Containerklasse
@@ -204,6 +204,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

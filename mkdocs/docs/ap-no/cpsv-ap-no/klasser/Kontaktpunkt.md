@@ -29,16 +29,7 @@ URI: [cv:ContactPoint](http://data.europa.eu/m8g/ContactPoint)
         
       Kontaktpunkt : opningstider
         
-      Kontaktpunkt : sprak
-        
-          
-    
-        
-        
-        Kontaktpunkt --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Kontaktpunkt : spraak
         
       Kontaktpunkt : telefon
         
@@ -157,7 +148,7 @@ URI: [cv:ContactPoint](http://data.europa.eu/m8g/ContactPoint)
 | [telefon](telefon.md) | * <br/> [String](string.md) | Telefonnummer |
 | [kontaktside](kontaktside.md) | * <br/> [Uri](uri.md) | Kontaktside (nettadresse) |
 | [opningstider](opningstider.md) | * <br/> [String](string.md) | Opningstider |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [kategori](kategori.md) | * <br/> [String](string.md) | Kategori for kontaktpunktet |
 
 
@@ -268,7 +259,6 @@ URI: [cv:ContactPoint](http://data.europa.eu/m8g/ContactPoint)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [har_kontaktpunkt](har_kontaktpunkt.md) | range | [Kontaktpunkt](kontaktpunkt.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [har_kontaktpunkt](har_kontaktpunkt.md) | range | [Kontaktpunkt](kontaktpunkt.md) |
 | [Tjeneste](tjeneste.md) | [har_kontaktpunkt](har_kontaktpunkt.md) | range | [Kontaktpunkt](kontaktpunkt.md) |
 | [Hendelse](hendelse.md) | [har_kontaktpunkt](har_kontaktpunkt.md) | range | [Kontaktpunkt](kontaktpunkt.md) |
@@ -330,7 +320,7 @@ slots:
 - telefon
 - kontaktside
 - opningstider
-- sprak
+- spraak
 - kategori
 slot_usage:
   epost:
@@ -349,8 +339,8 @@ slot_usage:
     name: opningstider
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   kategori:
@@ -386,8 +376,8 @@ slot_usage:
     name: opningstider
     in_subset:
     - Valgfri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Valgfri
   kategori:
@@ -404,7 +394,6 @@ attributes:
     alias: id
     owner: Kontaktpunkt
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -420,7 +409,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -483,15 +471,15 @@ attributes:
     - Tjenestekanal
     range: string
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Kontaktpunkt
     domain_of:
     - OffentligTjeneste

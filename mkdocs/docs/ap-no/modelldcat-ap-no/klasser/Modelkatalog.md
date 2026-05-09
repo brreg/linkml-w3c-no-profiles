@@ -84,16 +84,7 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
     
 
         
-      Modelkatalog : sprak
-        
-          
-    
-        
-        
-        Modelkatalog --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Modelkatalog : spraak
         
       Modelkatalog : tema
         
@@ -302,7 +293,7 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 | [heimeside](heimeside.md) | * <br/> [Uri](uri.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
 | [lisens](lisens.md) | 0..1 <br/> [Lisensdokument](lisensdokument.md) | Lisens for bruk av ressursen (dct:license) |
 | [modell](modell.md) | * <br/> [Informasjonsmodell](informasjonsmodell.md) | Informasjonsmodellar i modelkatalogen (modelldcatno:model) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [tema](tema.md) | * <br/> [Konsept](konsept.md) | Tema frå eit kontrollert vokabular (dcat:theme) |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
 
@@ -657,7 +648,7 @@ slots:
 - heimeside
 - lisens
 - modell
-- sprak
+- spraak
 - tema
 - temaer
 - utgivelsesdato
@@ -709,8 +700,8 @@ slot_usage:
     name: modell
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   tema:
@@ -788,8 +779,8 @@ slot_usage:
     name: modell
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   tema:
@@ -832,7 +823,6 @@ attributes:
     - Eigenskap
     - Merknad
     - Kodeelement
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -1000,15 +990,15 @@ attributes:
     - Modelkatalog
     range: Informasjonsmodell
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/modelldcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Modelkatalog
     domain_of:
     - Dokument

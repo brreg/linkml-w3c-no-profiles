@@ -10,34 +10,34 @@
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     dcterms:title "SKOS-AP-NO" ;
     pav:version "2.0" ;
-    sh:declare [ sh:namespace "https://data.norge.no/vocabulary/skosno#"^^xsd:anyURI ;
-            sh:prefix "skosno" ],
+    sh:declare [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
+            sh:prefix "xkos" ],
+        [ sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
+            sh:prefix "adms" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+            sh:prefix "skos" ],
         [ sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
             sh:prefix "linkml" ],
+        [ sh:namespace "http://purl.org/umu/uneskos#"^^xsd:anyURI ;
+            sh:prefix "uneskos" ],
+        [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
+            sh:prefix "vcard" ],
+        [ sh:namespace "http://publications.europa.eu/ontology/euvoc#"^^xsd:anyURI ;
+            sh:prefix "euvoc" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "https://data.norge.no/vocabulary/skosno#"^^xsd:anyURI ;
+            sh:prefix "skosno" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
         [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;
             sh:prefix "org" ],
         [ sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
-            sh:prefix "dcat" ],
-        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
-            sh:prefix "xsd" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://purl.org/umu/uneskos#"^^xsd:anyURI ;
-            sh:prefix "uneskos" ],
-        [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
-            sh:prefix "xkos" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
-            sh:prefix "vcard" ],
-        [ sh:namespace "http://publications.europa.eu/ontology/euvoc#"^^xsd:anyURI ;
-            sh:prefix "euvoc" ],
-        [ sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
-            sh:prefix "adms" ],
-        [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
-            sh:prefix "skos" ] ;
+            sh:prefix "dcat" ] ;
     linkml:classes <https://data.norge.no/linkml/skos-ap-no/AssosiativRelasjon>,
         <https://data.norge.no/linkml/skos-ap-no/Begrep>,
         <https://data.norge.no/linkml/skos-ap-no/Begrepssamling>,
@@ -48,12 +48,11 @@
         <https://data.norge.no/linkml/skos-ap-no/Organisasjon>,
         <https://data.norge.no/linkml/skos-ap-no/PartitivRelasjon>,
         <https://data.norge.no/linkml/skos-ap-no/Samling>,
-        <https://data.norge.no/linkml/skos-ap-no/Spraak>,
         <https://data.norge.no/linkml/skos-ap-no/VCardKontakt> ;
     linkml:default_prefix "https://data.norge.no/linkml/skos-ap-no/" ;
     linkml:default_range <https://data.norge.no/linkml/skos-ap-no/string> ;
     linkml:description "Norsk applikasjonsprofil av SKOS for omgrep (begrep), modellert i LinkML med lenking framfor inlining. Basert på https://informasjonsforvaltning.github.io/skos-ap-no-begrep/" ;
-    linkml:generation_date "2026-05-05T13:24:41"^^xsd:dateTime ;
+    linkml:generation_date "2026-05-09T16:14:22"^^xsd:dateTime ;
     linkml:id "https://data.norge.no/linkml/skos-ap-no"^^xsd:anyURI ;
     linkml:imports "../common/common-ap-no-schema"^^xsd:anyURI,
         "linkml:types"^^xsd:anyURI ;
@@ -117,7 +116,7 @@
         <https://data.norge.no/linkml/skos-ap-no/beskrivelse>,
         <https://data.norge.no/linkml/skos-ap-no/datastruktur_term>,
         <https://data.norge.no/linkml/skos-ap-no/definisjon>,
-        <https://data.norge.no/linkml/skos-ap-no/dekningsomrade>,
+        <https://data.norge.no/linkml/skos-ap-no/dekningsomraade>,
         <https://data.norge.no/linkml/skos-ap-no/eksempel>,
         <https://data.norge.no/linkml/skos-ap-no/endringsdato>,
         <https://data.norge.no/linkml/skos-ap-no/er_del_av_omgrep>,
@@ -160,7 +159,7 @@
         <https://data.norge.no/linkml/skos-ap-no/relasjontype>,
         <https://data.norge.no/linkml/skos-ap-no/sja_ogsa_omgrep>,
         <https://data.norge.no/linkml/skos-ap-no/spesifiserer>,
-        <https://data.norge.no/linkml/skos-ap-no/sprak>,
+        <https://data.norge.no/linkml/skos-ap-no/spraak>,
         <https://data.norge.no/linkml/skos-ap-no/status>,
         <https://data.norge.no/linkml/skos-ap-no/tekst>,
         <https://data.norge.no/linkml/skos-ap-no/til_omgrep>,
@@ -182,6 +181,7 @@
         <https://data.norge.no/linkml/skos-ap-no/GYear>,
         <https://data.norge.no/linkml/skos-ap-no/LangString>,
         <https://data.norge.no/linkml/skos-ap-no/NonNegativeInteger>,
+        <https://data.norge.no/linkml/skos-ap-no/Spraak>,
         <https://data.norge.no/linkml/skos-ap-no/boolean>,
         <https://data.norge.no/linkml/skos-ap-no/curie>,
         <https://data.norge.no/linkml/skos-ap-no/date>,
@@ -279,10 +279,10 @@
     linkml:imported_from "linkml:types" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#decimal"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/skos-ap-no/dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/skos-ap-no/dekningsomraade> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:multivalued true ;
     linkml:range <https://data.norge.no/linkml/skos-ap-no/Konsept> ;
@@ -313,7 +313,7 @@
     skos:mappingRelation "http://purl.org/dc/terms/format"^^xsd:anyURI ;
     linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/format"^^xsd:anyURI ;
     linkml:description "Filformat eller medietype (dct:format)." ;
-    linkml:range <https://data.norge.no/linkml/skos-ap-no/Mediatype> ;
+    linkml:range <https://data.norge.no/linkml/skos-ap-no/string> ;
     linkml:slot_uri "http://purl.org/dc/terms/format"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/skos-ap-no/har_merknad> a linkml:SlotDefinition ;
@@ -426,10 +426,10 @@
     linkml:repr "str" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/skos-ap-no/sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/skos-ap-no/spraak> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:multivalued true ;
     linkml:range <https://data.norge.no/linkml/skos-ap-no/Spraak> ;
@@ -1221,6 +1221,15 @@
     linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
     linkml:usage_slot_name "inndelingskriterium" .
 
+<https://data.norge.no/linkml/skos-ap-no/Mediatype> a linkml:ClassDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
+    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/skos-ap-no/id> .
+
 <https://data.norge.no/linkml/skos-ap-no/PartitivRelasjon_har_heilskapleg_omgrep> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/skos-ap-no/Obligatorisk> ;
     skos:inScheme "https://data.norge.no/linkml/skos-ap-no"^^xsd:anyURI ;
@@ -1376,6 +1385,13 @@
     linkml:required true ;
     linkml:slot_uri "http://purl.org/dc/terms/publisher"^^xsd:anyURI ;
     linkml:usage_slot_name "utgjevar" .
+
+<https://data.norge.no/linkml/skos-ap-no/Spraak> a linkml:TypeDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    linkml:base "str" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Spraak"^^xsd:anyURI ;
+    linkml:description "Språk" ;
+    linkml:uri "http://purl.org/dc/terms/language"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/skos-ap-no/anbefalt_term> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
@@ -1880,24 +1896,6 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/skos-ap-no/id> .
 
-<https://data.norge.no/linkml/skos-ap-no/Mediatype> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
-    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/skos-ap-no/id> .
-
-<https://data.norge.no/linkml/skos-ap-no/Spraak> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:LinguisticSystem"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/LinguisticSystem"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Spraak"^^xsd:anyURI ;
-    linkml:description "Ein språkreferanse (dct:LinguisticSystem)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/skos-ap-no/id> .
-
 <https://data.norge.no/linkml/skos-ap-no/identifikator_literal> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/identifier"^^xsd:anyURI ;
@@ -1984,16 +1982,6 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/skos-ap-no/id> .
 
-<https://data.norge.no/linkml/skos-ap-no/string> a linkml:TypeDefinition ;
-    skos:editorialNote "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"." ;
-    skos:exactMatch "schema:Text"^^xsd:anyURI ;
-    skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
-    linkml:base "str" ;
-    linkml:definition_uri "https://w3id.org/linkml/String"^^xsd:anyURI ;
-    linkml:description "A character string" ;
-    linkml:imported_from "linkml:types" ;
-    linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
-
 <https://data.norge.no/linkml/skos-ap-no/date> a linkml:TypeDefinition ;
     skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\".",
         "URI is dateTime because OWL reasoners don't work with straight date or time" ;
@@ -2005,6 +1993,16 @@
     linkml:imported_from "linkml:types" ;
     linkml:repr "str" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/skos-ap-no/string> a linkml:TypeDefinition ;
+    skos:editorialNote "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"." ;
+    skos:exactMatch "schema:Text"^^xsd:anyURI ;
+    skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+    linkml:base "str" ;
+    linkml:definition_uri "https://w3id.org/linkml/String"^^xsd:anyURI ;
+    linkml:description "A character string" ;
+    linkml:imported_from "linkml:types" ;
+    linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/skos-ap-no/id> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
@@ -2020,7 +2018,6 @@
         <https://data.norge.no/linkml/skos-ap-no/Organisasjon>,
         <https://data.norge.no/linkml/skos-ap-no/PartitivRelasjon>,
         <https://data.norge.no/linkml/skos-ap-no/Samling>,
-        <https://data.norge.no/linkml/skos-ap-no/Spraak>,
         <https://data.norge.no/linkml/skos-ap-no/VCardKontakt> ;
     linkml:identifier true ;
     linkml:owner <https://data.norge.no/linkml/skos-ap-no/Begrepssamling> ;

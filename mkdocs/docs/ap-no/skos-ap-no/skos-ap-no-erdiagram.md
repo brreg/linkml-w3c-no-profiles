@@ -53,9 +53,6 @@ Samling {
     string identifikator_literal  
     LangStringList tittel  
 }
-Spraak {
-    uriorcurie id  
-}
 VCardKontakt {
     uriorcurie id  
 }

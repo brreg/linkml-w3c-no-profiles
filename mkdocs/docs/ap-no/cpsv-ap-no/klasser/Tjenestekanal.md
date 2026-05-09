@@ -413,7 +413,6 @@ attributes:
     alias: id
     owner: Tjenestekanal
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -429,7 +428,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -446,7 +444,6 @@ attributes:
     alias: identifikator_literal
     owner: Tjenestekanal
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -471,7 +468,6 @@ attributes:
     alias: type_concept
     owner: Tjenestekanal
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -522,7 +518,6 @@ attributes:
     alias: beskrivelse
     owner: Tjenestekanal
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

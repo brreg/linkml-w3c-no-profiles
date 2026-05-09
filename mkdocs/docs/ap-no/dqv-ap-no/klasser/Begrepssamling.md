@@ -87,6 +87,13 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 
 
 
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Katalog](katalog.md) | [temaer](temaer.md) | range | [Begrepssamling](begrepssamling.md) |
+
+
 
 
 
@@ -158,19 +165,28 @@ attributes:
     alias: id
     owner: Begrepssamling
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
 class_uri: skos:ConceptScheme

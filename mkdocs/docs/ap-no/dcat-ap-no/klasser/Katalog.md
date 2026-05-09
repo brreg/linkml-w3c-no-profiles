@@ -46,13 +46,13 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
     
 
         
-      Katalog : dekningsomrade
+      Katalog : dekningsomraade
         
           
     
         
         
-        Katalog --> "*" Konsept : dekningsomrade
+        Katalog --> "*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -111,15 +111,6 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
         
       Katalog : lisens
         
-          
-    
-        
-        
-        Katalog --> "0..1" Konsept : lisens
-        click Konsept href "../Konsept/"
-    
-
-        
       Katalog : produsent
         
           
@@ -142,16 +133,7 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
     
 
         
-      Katalog : sprak
-        
-          
-    
-        
-        
-        Katalog --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Katalog : spraak
         
       Katalog : temaer
         
@@ -401,11 +383,11 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 | --- | --- | --- |
 | [datasett](datasett.md) | * <br/> [Datasett](datasett.md) | Datasett som er del av katalogen |
 | [datatjeneste](datatjeneste.md) | * <br/> [Datatjeneste](datatjeneste.md) | Datatjeneste som er del av katalogen |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
 | [heimeside](heimeside.md) | * <br/> [Uri](uri.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
-| [lisens](lisens.md) | 0..1 <br/> [Konsept](konsept.md) | Lisens for bruk av ressursen |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [lisens](lisens.md) | 0..1 <br/> [String](string.md) | Lisens for bruk av ressursen |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [temaer](temaer.md) | * <br/> [Begrepssamling](begrepssamling.md) | Temavokabular som vert brukt i katalogen |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
 
@@ -796,11 +778,11 @@ slots:
 - utgiver
 - datasett
 - datatjeneste
-- dekningsomrade
+- dekningsomraade
 - endringsdato
 - heimeside
 - lisens
-- sprak
+- spraak
 - temaer
 - utgivelsesdato
 - gjeldende_lovgivning
@@ -840,8 +822,8 @@ slot_usage:
     name: datatjeneste
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   endringsdato:
@@ -856,8 +838,8 @@ slot_usage:
     name: lisens
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   temaer:
@@ -911,8 +893,8 @@ slot_usage:
     name: datatjeneste
     in_subset:
     - Anbefalt
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   endringsdato:
@@ -927,8 +909,8 @@ slot_usage:
     name: lisens
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
   temaer:
@@ -991,7 +973,6 @@ attributes:
     alias: tittel
     owner: Katalog
     domain_of:
-    - Standard
     - RegulativRessurs
     - Distribusjon
     - Datasett
@@ -999,6 +980,7 @@ attributes:
     - Datatjeneste
     - Katalogpost
     - Katalog
+    - Standard
     range: LangString
     required: true
     multivalued: true
@@ -1047,15 +1029,15 @@ attributes:
     - Katalog
     range: Datatjeneste
     multivalued: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: Katalog
     domain_of:
     - Datasett
@@ -1108,16 +1090,16 @@ attributes:
     - Distribusjon
     - Datatjeneste
     - Katalog
-    range: Konsept
-  sprak:
-    name: sprak
+    range: string
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Katalog
     domain_of:
     - RegulativRessurs
@@ -1125,6 +1107,7 @@ attributes:
     - Datasett
     - Katalogpost
     - Katalog
+    - Tekstdel
     range: Spraak
     multivalued: true
   temaer:
@@ -1273,17 +1256,10 @@ attributes:
     alias: id
     owner: Katalog
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -1291,11 +1267,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
 class_uri: dcat:Catalog

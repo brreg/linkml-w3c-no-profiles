@@ -22,9 +22,8 @@ Alias: er_klassifisert_av
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |  yes  |
 | [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  yes  |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | Ei lovpålagd teneste som offentlege organ er pålagde å utføre |  yes  |
+| [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |  yes  |
 
 
 
@@ -38,7 +37,7 @@ Alias: er_klassifisert_av
 | Property | Value |
 | --- | --- |
 | Range | [Konsept](konsept.md) |
-| Domain Of | [LovpalagtTjeneste](lovpalagttjeneste.md), [OffentligTjeneste](offentligtjeneste.md), [Tjeneste](tjeneste.md) |
+| Domain Of | [OffentligTjeneste](offentligtjeneste.md), [Tjeneste](tjeneste.md) |
 | Slot URI | [cv:isClassifiedBy](http://data.europa.eu/m8g/isClassifiedBy) |
 
 ### Cardinality and Requirements
@@ -91,7 +90,6 @@ rank: 1000
 slot_uri: cv:isClassifiedBy
 alias: er_klassifisert_av
 domain_of:
-- LovpalagtTjeneste
 - OffentligTjeneste
 - Tjeneste
 range: Konsept

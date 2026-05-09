@@ -387,7 +387,7 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
 | [heimeside](heimeside.md) | * <br/> [Uri](uri.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
 | [lisens](lisens.md) | 0..1 <br/> [String](string.md) | Lisens for bruk av ressursen |
-| [spraak](spraak.md) | * <br/> [String](string.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [temaer](temaer.md) | * <br/> [Begrepssamling](begrepssamling.md) | Temavokabular som vert brukt i katalogen |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
 
@@ -1108,7 +1108,7 @@ attributes:
     - Katalogpost
     - Katalog
     - Tekstdel
-    range: string
+    range: Spraak
     multivalued: true
   temaer:
     name: temaer
@@ -1256,10 +1256,11 @@ attributes:
     alias: id
     owner: Katalog
     domain_of:
-    - Spraak
-    - Mediatype
-    - Konsept
-    - Begrepssamling
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
@@ -1273,6 +1274,9 @@ attributes:
     - Distribusjon
     - Datasett
     - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad

@@ -8,7 +8,7 @@ Aktor {
     LangStringList navn_aktor  
 }
 Basisgruppe {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
     string trinniva  
 }
@@ -18,7 +18,7 @@ Brukartilbakemelding {
     uri har_maal  
     LangStringList har_merknad  
 }
-    uriorcurie identifikator  
+    uriorcurie id  
 }
 Datasett {
     stringList annen_ansvarlig_aktor  
@@ -32,7 +32,7 @@ Datasett {
     uriList landingsside  
     LangStringList nokkelord  
     uriList relatert_ressurs  
-    stringList spraak  
+    SpraakList spraak  
     stringList tema  
     uriList tilgangsrettigheter  
     LangStringList tittel  
@@ -78,7 +78,7 @@ Distribusjon {
     string lisens  
     uriList nedlastningslenke  
     string policy  
-    stringList spraak  
+    SpraakList spraak  
     Duration tidsopplosning  
     uriList tilgangs_url  
     string tilgjengelighet  
@@ -86,12 +86,12 @@ Distribusjon {
     date utgivelsesdato  
 }
 Elev {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Fylke {
     string fylkesnummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Gebyr {
@@ -106,14 +106,14 @@ Identifikator {
 }
 Kommune {
     string kommunenummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Konsept {
     uriorcurie id  
 }
 Kontaktlaerer {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Kontaktopplysning {
@@ -154,7 +154,7 @@ Mediatype {
 }
 PrivatVirksomhet {
     string organisasjonsnummer  
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 RegulativRessurs {
@@ -162,11 +162,11 @@ RegulativRessurs {
     LangStringList beskrivelse  
     uriList har_referanse  
     string identifikator_literal  
-    stringList spraak  
+    SpraakList spraak  
     LangStringList tittel  
 }
 Rektor {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Relasjon {
@@ -191,11 +191,11 @@ Sjekksum {
     string sjekksumverdi  
 }
 Skole {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Skoleeier {
-    uriorcurie identifikator  
+    uriorcurie id  
     string navn  
 }
 Standard {
@@ -209,7 +209,7 @@ Tekstdel {
     uriorcurie id  
     string format  
     string har_verdi_tekstdel  
-    stringList spraak  
+    SpraakList spraak  
 }
 Tidsrom {
     uriorcurie id  
@@ -327,7 +327,6 @@ Name: skole_ontologi
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Fylke](klasser/fylke.md) | Fylke (etter norrønt fylki) er en betegnelse på et undernasjonalt, regionalt ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kommune](klasser/kommune.md) | En kommune er et geografisk avgrenset område som utgjør en egen politisk og a... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PrivatVirksomhet](klasser/privatvirksomhet.md) | Virksomhet, eller foretak, er betegnelser for en juridisk person eller en org... |
-| [Spraak](klasser/spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Standard](klasser/standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |
 | [Tekstdel](klasser/tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |
 | [Tidsrom](klasser/tidsrom.md) | Eit tidsintervall med start- og sluttdato |
@@ -369,7 +368,6 @@ Name: skole_ontologi
 | [er_deldimensjon_av](klasser/er_deldimensjon_av.md) | Overordna kvalitetsdimensjon denne deldimensjonen høyrer til |
 | [er_i_kvalitetsdeldimensjon](klasser/er_i_kvalitetsdeldimensjon.md) | Kvalitetsdeldimensjonen dette målet operasjonaliserer |
 | [er_i_kvalitetsdimensjon](klasser/er_i_kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
-| [er_i_samsvar_med](klasser/er_i_samsvar_med.md) | Standard eller spesifikasjon datasettet er i samsvar med |
 | [er_kvalitetsmaaling_av](klasser/er_kvalitetsmaaling_av.md) | Kvalitetsmålet denne målinga er ei måling av |
 | [er_motivert_av](klasser/er_motivert_av.md) | Motivasjonen bak kvalitetsmerknaden (t |
 | [filstorrelse](klasser/filstorrelse.md) | Filstørrelse i bytes |
@@ -405,7 +403,6 @@ Name: skole_ontologi
 | [i_samsvar_med](klasser/i_samsvar_med.md) | Standard ressursen er i samsvar med |
 | [i_serie](klasser/i_serie.md) | Datasettserie dette datasettet er ein del av |
 | [id](klasser/id.md) | URI-identifikator for ressursen |
-| [identifikator](klasser/identifikator.md) | Global identifikator (CURIE/URI) |
 | [identifikator_literal](klasser/identifikator_literal.md) | Tekstleg identifikator for ressursen (dct:identifier) |
 | [jobber_paa_skole](klasser/jobber_paa_skole.md) | Skolen kontaktlæreren jobber på |
 | [jurisdiksjon](klasser/jurisdiksjon.md) | Jurisdiksjon for rettigheitserklæringa |
@@ -513,6 +510,7 @@ Name: skole_ontologi
 | [NonNegativeInteger](klasser/nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](klasser/objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](klasser/sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](klasser/spraak.md) | Språk |
 | [String](klasser/string.md) | A character string |
 | [Time](klasser/time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](klasser/uri.md) | a complete URI |

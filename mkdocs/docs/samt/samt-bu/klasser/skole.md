@@ -30,7 +30,7 @@ URI: [samtbuskole:Skole](https://example.no/ontology/skole#Skole)
     
 
         
-      Skole : identifikator
+      Skole : id
         
       Skole : navn
         
@@ -116,7 +116,7 @@ URI: [samtbuskole:Skole](https://example.no/ontology/skole#Skole)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen |
 | [har_skoleeier](har_skoleeier.md) | 0..1 <br/> [Skoleeier](skoleeier.md) | Skoleeier for skolen |
 
@@ -191,7 +191,7 @@ exact_mappings:
 - org:OrganizationalUnit
 - schema:EducationalOrganization
 slots:
-- identifikator
+- id
 - navn
 - har_skoleeier
 
@@ -210,13 +210,13 @@ exact_mappings:
 - org:OrganizationalUnit
 - schema:EducationalOrganization
 attributes:
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Skole
     domain_of:
     - Containerklasse
@@ -224,6 +224,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

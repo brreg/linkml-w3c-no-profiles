@@ -18,6 +18,16 @@ Alias: nokkelord
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +37,7 @@ Alias: nokkelord
 | Property | Value |
 | --- | --- |
 | Range | [LangString](langstring.md) |
+| Domain Of | [Datasett](datasett.md), [Datatjeneste](datatjeneste.md) |
 | Slot URI | [dcat:keyword](http://www.w3.org/ns/dcat#keyword) |
 
 ### Cardinality and Requirements
@@ -78,6 +89,9 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: dcat:keyword
 alias: nokkelord
+domain_of:
+- Datasett
+- Datatjeneste
 range: LangString
 multivalued: true
 

@@ -1,5 +1,5 @@
 # Auto generated from skos-ap-no-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:23:31
+# Generation date: 2026-05-09T16:13:15
 # Schema: skos-ap-no
 #
 # id: https://data.norge.no/linkml/skos-ap-no
@@ -85,6 +85,14 @@ DEFAULT_ = CurieNamespace('', 'https://data.norge.no/linkml/skos-ap-no/')
 
 
 # Types
+class Spraak(str):
+    """ Språk """
+    type_class_uri = DCT["language"]
+    type_class_curie = "dct:language"
+    type_name = "Spraak"
+    type_model_uri = URIRef("https://data.norge.no/linkml/skos-ap-no/Spraak")
+
+
 class LangString(str):
     """ Språktagget streng (rdf:langString). """
     type_class_uri = RDF["langString"]
@@ -147,10 +155,6 @@ class PartitivRelasjonId(URIorCURIE):
 
 
 class SamlingId(URIorCURIE):
-    pass
-
-
-class SpraakId(URIorCURIE):
     pass
 
 
@@ -625,29 +629,6 @@ class Samling(YAMLRoot):
 
 
 @dataclass(repr=False)
-class Spraak(YAMLRoot):
-    """
-    Ein språkreferanse (dct:LinguisticSystem).
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = DCT["LinguisticSystem"]
-    class_class_curie: ClassVar[str] = "dct:LinguisticSystem"
-    class_name: ClassVar[str] = "Spraak"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://data.norge.no/linkml/skos-ap-no/Spraak")
-
-    id: Union[str, SpraakId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SpraakId):
-            self.id = SpraakId(self.id)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
 class Mediatype(YAMLRoot):
     """
     Ein medietype eller filformat (dct:MediaTypeOrExtent).
@@ -870,11 +851,11 @@ slots.endringsdato = Slot(uri=DCT.modified, name="endringsdato", curie=DCT.curie
 slots.utgivelsesdato = Slot(uri=DCT.issued, name="utgivelsesdato", curie=DCT.curie('issued'),
                    model_uri=DEFAULT_.utgivelsesdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.sprak = Slot(uri=DCT.language, name="sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.spraak = Slot(uri=DCT.language, name="spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.format = Slot(uri=DCT.format, name="format", curie=DCT.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[Union[str, MediatypeId]])
+                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
 
 slots.har_referanse = Slot(uri=RDFS.seeAlso, name="har_referanse", curie=RDFS.curie('seeAlso'),
                    model_uri=DEFAULT_.har_referanse, domain=None, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
@@ -888,8 +869,8 @@ slots.har_versjonsnummer = Slot(uri=OWL.versionInfo, name="har_versjonsnummer", 
 slots.nokkelord = Slot(uri=DCAT.keyword, name="nokkelord", curie=DCAT.curie('keyword'),
                    model_uri=DEFAULT_.nokkelord, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.dekningsomrade = Slot(uri=DCT.spatial, name="dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.dekningsomrade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.dekningsomraade = Slot(uri=DCT.spatial, name="dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.dekningsomraade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.status = Slot(uri=ADMS.status, name="status", curie=ADMS.curie('status'),
                    model_uri=DEFAULT_.status, domain=None, range=Optional[Union[str, KonseptId]])

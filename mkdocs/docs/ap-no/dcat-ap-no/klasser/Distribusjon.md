@@ -29,15 +29,6 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
         
       Distribusjon : format
         
-          
-    
-        
-        
-        Distribusjon --> "0..1" Mediatype : format
-        click Mediatype href "../Mediatype/"
-    
-
-        
       Distribusjon : gjeldende_lovgivning
         
           
@@ -75,15 +66,6 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
         
       Distribusjon : lisens
         
-          
-    
-        
-        
-        Distribusjon --> "0..1" Konsept : lisens
-        click Konsept href "../Konsept/"
-    
-
-        
       Distribusjon : medietype
         
           
@@ -110,15 +92,6 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
         
       Distribusjon : policy
         
-          
-    
-        
-        
-        Distribusjon --> "0..1" OdrlPolicy : policy
-        click OdrlPolicy href "../OdrlPolicy/"
-    
-
-        
       Distribusjon : rettigheter
         
           
@@ -141,16 +114,7 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
     
 
         
-      Distribusjon : sprak
-        
-          
-    
-        
-        
-        Distribusjon --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Distribusjon : spraak
         
       Distribusjon : status
         
@@ -179,15 +143,6 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 
         
       Distribusjon : tilgjengelighet
-        
-          
-    
-        
-        
-        Distribusjon --> "0..1" Konsept : tilgjengelighet
-        click Konsept href "../Konsept/"
-    
-
         
       Distribusjon : tittel
         
@@ -389,10 +344,10 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [beskrivelse](beskrivelse.md) | * <br/> [LangString](langstring.md) | Fritekstbeskrivelse av ressursen (dct:description) |
-| [format](format.md) | 0..1 <br/> [Mediatype](mediatype.md) | Filformat eller medietype (dct:format) |
-| [lisens](lisens.md) | 0..1 <br/> [Konsept](konsept.md) | Lisens for bruk av ressursen |
+| [format](format.md) | 0..1 <br/> [String](string.md) | Filformat eller medietype (dct:format) |
+| [lisens](lisens.md) | 0..1 <br/> [String](string.md) | Lisens for bruk av ressursen |
 | [status](status.md) | 0..1 <br/> [Konsept](konsept.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
-| [tilgjengelighet](tilgjengelighet.md) | 0..1 <br/> [Konsept](konsept.md) | Planlagt tilgjengelegheit for ressursen |
+| [tilgjengelighet](tilgjengelighet.md) | 0..1 <br/> [String](string.md) | Planlagt tilgjengelegheit for ressursen |
 
 
 
@@ -694,10 +649,10 @@ URI: [dcat:Distribution](http://www.w3.org/ns/dcat#Distribution)
 | [medietype](medietype.md) | 0..1 <br/> [Mediatype](mediatype.md) | Medietype i samsvar med IANA-registeret |
 | [nedlastningslenke](nedlastningslenke.md) | * <br/> [Uri](uri.md) | Direkte nedlastingslenke for distribusjonsfila |
 | [pakkeformat](pakkeformat.md) | 0..1 <br/> [Mediatype](mediatype.md) | Pakkeformat brukt i distribusjonen |
-| [policy](policy.md) | 0..1 <br/> [OdrlPolicy](odrlpolicy.md) | ODRL-policy som regulerer bruk av ressursen |
+| [policy](policy.md) | 0..1 <br/> [String](string.md) | ODRL-policy som regulerer bruk av ressursen |
 | [rettigheter](rettigheter.md) | 0..1 <br/> [Rettighetserklaring](rettighetserklaring.md) | Rettar knytte til ressursen |
 | [sjekksum](sjekksum.md) | 0..1 <br/> [Sjekksum](sjekksum.md) | Sjekksum for distribusjonsfila |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [tidsopplosning](tidsopplosning.md) | 0..1 <br/> [Duration](duration.md) | Minste tidsoppløysing i datasettet |
 | [tilgangstjeneste](tilgangstjeneste.md) | * <br/> [Datatjeneste](datatjeneste.md) | Datatjeneste som gjev tilgang til distribusjonen |
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
@@ -785,7 +740,7 @@ slots:
 - policy
 - rettigheter
 - sjekksum
-- sprak
+- spraak
 - tidsopplosning
 - tilgangstjeneste
 - tittel
@@ -864,17 +819,10 @@ attributes:
     alias: id
     owner: Distribusjon
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -882,11 +830,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   tilgangs_url:
@@ -938,7 +892,8 @@ attributes:
     domain_of:
     - Distribusjon
     - Datatjeneste
-    range: Mediatype
+    - Tekstdel
+    range: string
   lisens:
     name: lisens
     description: Lisens for bruk av ressursen.
@@ -953,7 +908,7 @@ attributes:
     - Distribusjon
     - Datatjeneste
     - Katalog
-    range: Konsept
+    range: string
   status:
     name: status
     description: Status for ressursen frå eit kontrollert vokabular (adms:status).
@@ -982,7 +937,7 @@ attributes:
     domain_of:
     - Distribusjon
     - Datatjeneste
-    range: Konsept
+    range: string
   dokumentasjon:
     name: dokumentasjon
     description: Lenke til dokumentasjon om ressursen.
@@ -1102,6 +1057,10 @@ attributes:
     range: Mediatype
   policy:
     name: policy
+    annotations:
+      gyldige_verdier:
+        tag: gyldige_verdier
+        value: odrl:Policy
     description: ODRL-policy som regulerer bruk av ressursen.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
@@ -1110,7 +1069,7 @@ attributes:
     owner: Distribusjon
     domain_of:
     - Distribusjon
-    range: OdrlPolicy
+    range: string
   rettigheter:
     name: rettigheter
     description: Rettar knytte til ressursen.
@@ -1135,13 +1094,13 @@ attributes:
     domain_of:
     - Distribusjon
     range: Sjekksum
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Distribusjon
     domain_of:
     - RegulativRessurs
@@ -1149,6 +1108,7 @@ attributes:
     - Datasett
     - Katalogpost
     - Katalog
+    - Tekstdel
     range: Spraak
     multivalued: true
   tidsopplosning:
@@ -1183,7 +1143,6 @@ attributes:
     alias: tittel
     owner: Distribusjon
     domain_of:
-    - Standard
     - RegulativRessurs
     - Distribusjon
     - Datasett
@@ -1191,6 +1150,7 @@ attributes:
     - Datatjeneste
     - Katalogpost
     - Katalog
+    - Standard
     range: LangString
     multivalued: true
   utgivelsesdato:

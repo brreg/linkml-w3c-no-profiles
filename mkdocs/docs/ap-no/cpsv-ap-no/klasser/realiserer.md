@@ -35,7 +35,7 @@ Alias: realiserer
 
 | Property | Value |
 | --- | --- |
-| Range | [LovpalagtTjeneste](lovpalagttjeneste.md) |
+| Range | NONE |
 | Domain Of | [OffentligTjeneste](offentligtjeneste.md) |
 | Slot URI | [cpsvno:realizes](https://data.norge.no/vocabulary/cpsvno#realizes) |
 

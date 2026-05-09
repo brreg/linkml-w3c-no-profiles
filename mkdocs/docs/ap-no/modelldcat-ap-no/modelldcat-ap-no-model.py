@@ -1,5 +1,5 @@
 # Auto generated from modelldcat-ap-no-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:23:27
+# Generation date: 2026-05-09T16:13:12
 # Schema: modelldcat-ap-no
 #
 # id: https://data.norge.no/linkml/modelldcat-ap-no
@@ -83,6 +83,14 @@ DEFAULT_ = CurieNamespace('', 'https://data.norge.no/linkml/modelldcat-ap-no/')
 
 
 # Types
+class Spraak(str):
+    """ Språk """
+    type_class_uri = DCT["language"]
+    type_class_curie = "dct:language"
+    type_name = "Spraak"
+    type_model_uri = URIRef("https://data.norge.no/linkml/modelldcat-ap-no/Spraak")
+
+
 class LangString(str):
     """ Språktagget streng (rdf:langString). """
     type_class_uri = RDF["langString"]
@@ -261,10 +269,6 @@ class IkkeId(BetingelsesregelId):
 
 
 class KodeelementId(URIorCURIE):
-    pass
-
-
-class SpraakId(URIorCURIE):
     pass
 
 
@@ -498,8 +502,8 @@ class Dokument(YAMLRoot):
 
     id: Union[str, DokumentId] = None
     tittel: Optional[Union[str, list[str]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
-    format: Optional[Union[str, MediatypeId]] = None
+    spraak: Optional[Union[str, list[str]]] = empty_list()
+    format: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -511,12 +515,12 @@ class Dokument(YAMLRoot):
             self.tittel = [self.tittel] if self.tittel is not None else []
         self.tittel = [v if isinstance(v, str) else str(v) for v in self.tittel]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
-        if self.format is not None and not isinstance(self.format, MediatypeId):
-            self.format = MediatypeId(self.format)
+        if self.format is not None and not isinstance(self.format, str):
+            self.format = str(self.format)
 
         super().__post_init__(**kwargs)
 
@@ -544,7 +548,7 @@ class Modelkatalog(YAMLRoot):
     heimeside: Optional[Union[Union[str, URI], list[Union[str, URI]]]] = empty_list()
     lisens: Optional[Union[str, LisensdokumentId]] = None
     modell: Optional[Union[Union[str, InformasjonsmodellId], list[Union[str, InformasjonsmodellId]]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     temaer: Optional[Union[Union[str, BegrepssamlingId], list[Union[str, BegrepssamlingId]]]] = empty_list()
     utgivelsesdato: Optional[Union[str, XSDDate]] = None
@@ -604,9 +608,9 @@ class Modelkatalog(YAMLRoot):
             self.modell = [self.modell] if self.modell is not None else []
         self.modell = [v if isinstance(v, InformasjonsmodellId) else InformasjonsmodellId(v) for v in self.modell]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if not isinstance(self.tema, list):
             self.tema = [self.tema] if self.tema is not None else []
@@ -648,7 +652,7 @@ class Informasjonsmodell(YAMLRoot):
     kontaktpunkt: Optional[Union[Union[str, KontaktopplysningId], list[Union[str, KontaktopplysningId]]]] = empty_list()
     lisens: Optional[Union[str, LisensdokumentId]] = None
     tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
-    dekningsomrade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
+    dekningsomraade: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     endringsdato: Optional[Union[str, XSDDate]] = None
     er_del_av_modell: Optional[Union[Union[str, InformasjonsmodellId], list[Union[str, InformasjonsmodellId]]]] = empty_list()
     er_profil_av: Optional[Union[Union[str, StandardId], list[Union[str, StandardId]]]] = empty_list()
@@ -662,7 +666,7 @@ class Informasjonsmodell(YAMLRoot):
     status: Optional[Union[str, KonseptId]] = None
     nokkelord: Optional[Union[str, list[str]]] = empty_list()
     skapar: Optional[Union[str, AktorId]] = None
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     type_concept: Optional[Union[str, KonseptId]] = None
     utgivelsesdato: Optional[Union[str, XSDDate]] = None
     har_versjonsnummer: Optional[str] = None
@@ -714,9 +718,9 @@ class Informasjonsmodell(YAMLRoot):
             self.tema = [self.tema] if self.tema is not None else []
         self.tema = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.tema]
 
-        if not isinstance(self.dekningsomrade, list):
-            self.dekningsomrade = [self.dekningsomrade] if self.dekningsomrade is not None else []
-        self.dekningsomrade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomrade]
+        if not isinstance(self.dekningsomraade, list):
+            self.dekningsomraade = [self.dekningsomraade] if self.dekningsomraade is not None else []
+        self.dekningsomraade = [v if isinstance(v, KonseptId) else KonseptId(v) for v in self.dekningsomraade]
 
         if self.endringsdato is not None and not isinstance(self.endringsdato, XSDDate):
             self.endringsdato = XSDDate(self.endringsdato)
@@ -767,9 +771,9 @@ class Informasjonsmodell(YAMLRoot):
         if self.skapar is not None and not isinstance(self.skapar, AktorId):
             self.skapar = AktorId(self.skapar)
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if self.type_concept is not None and not isinstance(self.type_concept, KonseptId):
             self.type_concept = KonseptId(self.type_concept)
@@ -1722,29 +1726,6 @@ class Kodeelement(YAMLRoot):
 
 
 @dataclass(repr=False)
-class Spraak(YAMLRoot):
-    """
-    Ein språkreferanse (dct:LinguisticSystem).
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = DCT["LinguisticSystem"]
-    class_class_curie: ClassVar[str] = "dct:LinguisticSystem"
-    class_name: ClassVar[str] = "Spraak"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://data.norge.no/linkml/modelldcat-ap-no/Spraak")
-
-    id: Union[str, SpraakId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SpraakId):
-            self.id = SpraakId(self.id)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
 class Mediatype(YAMLRoot):
     """
     Ein medietype eller filformat (dct:MediaTypeOrExtent).
@@ -2057,11 +2038,11 @@ slots.endringsdato = Slot(uri=DCT.modified, name="endringsdato", curie=DCT.curie
 slots.utgivelsesdato = Slot(uri=DCT.issued, name="utgivelsesdato", curie=DCT.curie('issued'),
                    model_uri=DEFAULT_.utgivelsesdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.sprak = Slot(uri=DCT.language, name="sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.spraak = Slot(uri=DCT.language, name="spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.format = Slot(uri=DCT.format, name="format", curie=DCT.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[Union[str, MediatypeId]])
+                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
 
 slots.har_referanse = Slot(uri=RDFS.seeAlso, name="har_referanse", curie=RDFS.curie('seeAlso'),
                    model_uri=DEFAULT_.har_referanse, domain=None, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
@@ -2075,8 +2056,8 @@ slots.har_versjonsnummer = Slot(uri=OWL.versionInfo, name="har_versjonsnummer", 
 slots.nokkelord = Slot(uri=DCAT.keyword, name="nokkelord", curie=DCAT.curie('keyword'),
                    model_uri=DEFAULT_.nokkelord, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.dekningsomrade = Slot(uri=DCT.spatial, name="dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.dekningsomrade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.dekningsomraade = Slot(uri=DCT.spatial, name="dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.dekningsomraade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.status = Slot(uri=ADMS.status, name="status", curie=ADMS.curie('status'),
                    model_uri=DEFAULT_.status, domain=None, range=Optional[Union[str, KonseptId]])
@@ -2129,8 +2110,8 @@ slots.Modelkatalog_lisens = Slot(uri=DCT.license, name="Modelkatalog_lisens", cu
 slots.Modelkatalog_modell = Slot(uri=MODELLDCATNO.model, name="Modelkatalog_modell", curie=MODELLDCATNO.curie('model'),
                    model_uri=DEFAULT_.Modelkatalog_modell, domain=Modelkatalog, range=Optional[Union[Union[str, InformasjonsmodellId], list[Union[str, InformasjonsmodellId]]]])
 
-slots.Modelkatalog_sprak = Slot(uri=DCT.language, name="Modelkatalog_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Modelkatalog_sprak, domain=Modelkatalog, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Modelkatalog_spraak = Slot(uri=DCT.language, name="Modelkatalog_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Modelkatalog_spraak, domain=Modelkatalog, range=Optional[Union[str, list[str]]])
 
 slots.Modelkatalog_tema = Slot(uri=DCAT.theme, name="Modelkatalog_tema", curie=DCAT.curie('theme'),
                    model_uri=DEFAULT_.Modelkatalog_tema, domain=Modelkatalog, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
@@ -2174,8 +2155,8 @@ slots.Informasjonsmodell_lisens = Slot(uri=DCT.license, name="Informasjonsmodell
 slots.Informasjonsmodell_tema = Slot(uri=DCAT.theme, name="Informasjonsmodell_tema", curie=DCAT.curie('theme'),
                    model_uri=DEFAULT_.Informasjonsmodell_tema, domain=Informasjonsmodell, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
-slots.Informasjonsmodell_dekningsomrade = Slot(uri=DCT.spatial, name="Informasjonsmodell_dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.Informasjonsmodell_dekningsomrade, domain=Informasjonsmodell, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.Informasjonsmodell_dekningsomraade = Slot(uri=DCT.spatial, name="Informasjonsmodell_dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.Informasjonsmodell_dekningsomraade, domain=Informasjonsmodell, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.Informasjonsmodell_endringsdato = Slot(uri=DCT.modified, name="Informasjonsmodell_endringsdato", curie=DCT.curie('modified'),
                    model_uri=DEFAULT_.Informasjonsmodell_endringsdato, domain=Informasjonsmodell, range=Optional[Union[str, XSDDate]])
@@ -2216,8 +2197,8 @@ slots.Informasjonsmodell_nokkelord = Slot(uri=DCAT.keyword, name="Informasjonsmo
 slots.Informasjonsmodell_skapar = Slot(uri=DCT.creator, name="Informasjonsmodell_skapar", curie=DCT.curie('creator'),
                    model_uri=DEFAULT_.Informasjonsmodell_skapar, domain=Informasjonsmodell, range=Optional[Union[str, AktorId]])
 
-slots.Informasjonsmodell_sprak = Slot(uri=DCT.language, name="Informasjonsmodell_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Informasjonsmodell_sprak, domain=Informasjonsmodell, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Informasjonsmodell_spraak = Slot(uri=DCT.language, name="Informasjonsmodell_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Informasjonsmodell_spraak, domain=Informasjonsmodell, range=Optional[Union[str, list[str]]])
 
 slots.Informasjonsmodell_type_concept = Slot(uri=DCT.type, name="Informasjonsmodell_type_concept", curie=DCT.curie('type'),
                    model_uri=DEFAULT_.Informasjonsmodell_type_concept, domain=Informasjonsmodell, range=Optional[Union[str, KonseptId]])

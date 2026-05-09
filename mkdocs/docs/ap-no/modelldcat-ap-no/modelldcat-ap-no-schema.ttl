@@ -10,32 +10,32 @@
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     dcterms:title "ModelDCAT-AP-NO" ;
     pav:version "1.0" ;
-    sh:declare [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
-            sh:prefix "vcard" ],
-        [ sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
-            sh:prefix "linkml" ],
-        [ sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
-            sh:prefix "adms" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
-            sh:prefix "xsd" ],
-        [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
             sh:prefix "xkos" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
-        [ sh:namespace "https://data.norge.no/vocabulary/modelldcatno#"^^xsd:anyURI ;
-            sh:prefix "modelldcatno" ],
         [ sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
             sh:prefix "owl" ],
-        [ sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
-            sh:prefix "foaf" ],
+        [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
+            sh:prefix "vcard" ],
+        [ sh:namespace "https://data.norge.no/vocabulary/modelldcatno#"^^xsd:anyURI ;
+            sh:prefix "modelldcatno" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
         [ sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
             sh:prefix "dcat" ],
         [ sh:namespace "http://www.w3.org/ns/dx/prof/"^^xsd:anyURI ;
             sh:prefix "prof" ],
+        [ sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
+            sh:prefix "adms" ],
         [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
-            sh:prefix "skos" ] ;
+            sh:prefix "skos" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
+            sh:prefix "linkml" ],
+        [ sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+            sh:prefix "foaf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ] ;
     linkml:classes <https://data.norge.no/linkml/modelldcat-ap-no/Abstraksjon>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Aktor>,
         <https://data.norge.no/linkml/modelldcat-ap-no/AlleAv>,
@@ -72,7 +72,6 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Samling>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Sammensetning>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Spesialisering>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Standard>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Tidsperiode>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Valg>,
@@ -80,7 +79,7 @@
     linkml:default_prefix "https://data.norge.no/linkml/modelldcat-ap-no/" ;
     linkml:default_range <https://data.norge.no/linkml/modelldcat-ap-no/string> ;
     linkml:description "Norsk applikasjonsprofil for beskriving av informasjonsmodellar i DCAT-format, modellert i LinkML. Basert på https://data.norge.no/specification/modelldcat-ap-no" ;
-    linkml:generation_date "2026-05-05T13:24:36"^^xsd:dateTime ;
+    linkml:generation_date "2026-05-09T16:14:17"^^xsd:dateTime ;
     linkml:id "https://data.norge.no/linkml/modelldcat-ap-no"^^xsd:anyURI ;
     linkml:imports "../common/common-ap-no-schema"^^xsd:anyURI,
         "linkml:types"^^xsd:anyURI ;
@@ -110,7 +109,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/EnkelType_typedefinisjon_referanse>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_begrep>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_beskrivelse>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomrade>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomraade>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_endringsdato>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_er_del_av_modell>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_er_erstatta_av>,
@@ -128,7 +127,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_lisens>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_nokkelord>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_skapar>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_status>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_tema>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_tidsperiode>,
@@ -157,7 +156,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_kontaktpunkt>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_lisens>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_modell>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_tema>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_temaer>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_tittel>,
@@ -185,7 +184,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/betinger>,
         <https://data.norge.no/linkml/modelldcat-ap-no/danner_symmetri_med>,
         <https://data.norge.no/linkml/modelldcat-ap-no/definisjon>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/dekningsomrade>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/dekningsomraade>,
         <https://data.norge.no/linkml/modelldcat-ap-no/eigenskapsmerknad>,
         <https://data.norge.no/linkml/modelldcat-ap-no/eksempel_kode>,
         <https://data.norge.no/linkml/modelldcat-ap-no/eksklusjonsnotat>,
@@ -250,7 +249,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/skapar>,
         <https://data.norge.no/linkml/modelldcat-ap-no/skjult_term>,
         <https://data.norge.no/linkml/modelldcat-ap-no/sluttdato>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/startdato>,
         <https://data.norge.no/linkml/modelldcat-ap-no/status>,
         <https://data.norge.no/linkml/modelldcat-ap-no/tema>,
@@ -267,8 +266,8 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/valuta>,
         <https://data.norge.no/linkml/modelldcat-ap-no/versjonsmerknad> ;
     linkml:source_file "modelldcat-ap-no-schema.yaml" ;
-    linkml:source_file_date "2026-04-30T18:03:24"^^xsd:dateTime ;
-    linkml:source_file_size 29723 ;
+    linkml:source_file_date "2026-05-09T13:20:24"^^xsd:dateTime ;
+    linkml:source_file_size 29730 ;
     linkml:subsets <https://data.norge.no/linkml/modelldcat-ap-no/Anbefalt>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Obligatorisk>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Valgfri> ;
@@ -276,6 +275,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/GYear>,
         <https://data.norge.no/linkml/modelldcat-ap-no/LangString>,
         <https://data.norge.no/linkml/modelldcat-ap-no/NonNegativeInteger>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/boolean>,
         <https://data.norge.no/linkml/modelldcat-ap-no/curie>,
         <https://data.norge.no/linkml/modelldcat-ap-no/date>,
@@ -813,22 +813,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
     linkml:usage_slot_name "beskrivelse" .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomraade> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    skos:prefLabel "dekningsomraade" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
-    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/dekningsomrade> ;
+    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/dekningsomraade> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
     linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/Konsept> ;
     linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
+    linkml:usage_slot_name "dekningsomraade" .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_endringsdato> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Valgfri> ;
@@ -1113,22 +1113,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/creator"^^xsd:anyURI ;
     linkml:usage_slot_name "skapar" .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
-    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
     linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_status> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Valgfri> ;
@@ -1375,6 +1375,15 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/id> .
 
+<https://data.norge.no/linkml/modelldcat-ap-no/Mediatype> a linkml:ClassDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
+    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/id> .
+
 <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_beskrivelse> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Obligatorisk> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
@@ -1528,22 +1537,22 @@
     linkml:slot_uri "https://data.norge.no/vocabulary/modelldcatno#model"^^xsd:anyURI ;
     linkml:usage_slot_name "modell" .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog> ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog> ;
-    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/modelldcat-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog> ;
     linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_tema> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Anbefalt> ;
@@ -1798,10 +1807,10 @@
     linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/LangString> ;
     linkml:slot_uri "http://www.w3.org/2004/02/skos/core#definition"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/modelldcat-ap-no/dekningsomraade> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell> ;
     linkml:multivalued true ;
@@ -1924,7 +1933,7 @@
     linkml:description "Filformat eller medietype (dct:format)." ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Dokument> ;
     linkml:owner <https://data.norge.no/linkml/modelldcat-ap-no/Dokument> ;
-    linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/Mediatype> ;
+    linkml:range <https://data.norge.no/linkml/modelldcat-ap-no/string> ;
     linkml:slot_uri "http://purl.org/dc/terms/format"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/forrige> a linkml:SlotDefinition ;
@@ -2497,15 +2506,6 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Modellelement_tittel>,
         <https://data.norge.no/linkml/modelldcat-ap-no/id> .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/Mediatype> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
-    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/id> .
-
 <https://data.norge.no/linkml/modelldcat-ap-no/boolean> a linkml:TypeDefinition ;
     skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"." ;
     skos:exactMatch "schema:Boolean"^^xsd:anyURI ;
@@ -2629,6 +2629,13 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/id> .
 
+<https://data.norge.no/linkml/modelldcat-ap-no/Spraak> a linkml:TypeDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    linkml:base "str" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Spraak"^^xsd:anyURI ;
+    linkml:description "Språk" ;
+    linkml:uri "http://purl.org/dc/terms/language"^^xsd:anyURI .
+
 <https://data.norge.no/linkml/modelldcat-ap-no/Valg_har_noe> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/modelldcat-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/modelldcat-ap-no"^^xsd:anyURI ;
@@ -2646,10 +2653,10 @@
     linkml:slot_uri "https://data.norge.no/vocabulary/modelldcatno#hasSome"^^xsd:anyURI ;
     linkml:usage_slot_name "har_noe" .
 
-<https://data.norge.no/linkml/modelldcat-ap-no/sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/modelldcat-ap-no/spraak> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain_of <https://data.norge.no/linkml/modelldcat-ap-no/Dokument>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell>,
@@ -2733,15 +2740,6 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Modellelement_tilhorer_modul>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modellelement_tittel>,
         <https://data.norge.no/linkml/modelldcat-ap-no/id> .
-
-<https://data.norge.no/linkml/modelldcat-ap-no/Spraak> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:LinguisticSystem"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/LinguisticSystem"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Spraak"^^xsd:anyURI ;
-    linkml:description "Ein språkreferanse (dct:LinguisticSystem)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/id> .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/begrep> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/modelldcat-ap-no"^^xsd:anyURI ;
@@ -3083,7 +3081,7 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/format>,
         <https://data.norge.no/linkml/modelldcat-ap-no/id>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/tittel> .
 
 <https://data.norge.no/linkml/modelldcat-ap-no/Modellelement_begrep> a linkml:SlotDefinition ;
@@ -3653,7 +3651,6 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Merknad>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modellelement>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Standard>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Tidsperiode> ;
     linkml:identifier true ;
@@ -3724,7 +3721,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_kontaktpunkt>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_lisens>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_modell>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_tema>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_temaer>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Modelkatalog_tittel>,
@@ -3763,7 +3760,7 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_begrep>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_beskrivelse>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomrade>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_dekningsomraade>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_endringsdato>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_er_del_av_modell>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_er_erstatta_av>,
@@ -3781,7 +3778,7 @@
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_lisens>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_nokkelord>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_skapar>,
-        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_sprak>,
+        <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_spraak>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_status>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_tema>,
         <https://data.norge.no/linkml/modelldcat-ap-no/Informasjonsmodell_tidsperiode>,

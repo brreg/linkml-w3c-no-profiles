@@ -91,7 +91,9 @@ URI: [dct:MediaTypeOrExtent](http://purl.org/dc/terms/MediaTypeOrExtent)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Tekstdel](tekstdel.md) | [format](format.md) | range | [Mediatype](mediatype.md) |
+| [Distribusjon](distribusjon.md) | [komprimeringsformat](komprimeringsformat.md) | range | [Mediatype](mediatype.md) |
+| [Distribusjon](distribusjon.md) | [medietype](medietype.md) | range | [Mediatype](mediatype.md) |
+| [Distribusjon](distribusjon.md) | [pakkeformat](pakkeformat.md) | range | [Mediatype](mediatype.md) |
 
 
 
@@ -165,19 +167,28 @@ attributes:
     alias: id
     owner: Mediatype
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
 class_uri: dct:MediaTypeOrExtent

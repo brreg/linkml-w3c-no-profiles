@@ -33,6 +33,7 @@ default_range: string
 imports:
   - linkml:types
   - ../common/common-ap-no-schema
+  - ../dqv-ap-no/dqv-ap-no-schema
 
 # ---------------------------------------------------------------------------
 # Klasser
@@ -41,15 +42,6 @@ imports:
 classes:
 
   # ---- Hjelpeklassar for refererte vokabularressursar ----------------------
-
-
-
-
-
-
-
-
-
 
 
   # ---- Hovudklassar --------------------------------------------------------
@@ -705,6 +697,12 @@ slots:
     slot_uri: dcat:byteSize
     range: NonNegativeInteger
     description: Filstørrelse i bytes.
+
+  har_kvalitetsmerknad:
+    slot_uri: dqv:hasQualityAnnotation
+    range: Kvalitetsmerknad
+    multivalued: true
+    description: Kvalitetsmerknad knytt til datasettet.
 
   # ---- ODRS-strenger -------------------------------------------------------
 

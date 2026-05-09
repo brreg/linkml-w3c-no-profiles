@@ -40,16 +40,7 @@ URI: [cpsvno:OutputType](https://data.norge.no/vocabulary/cpsvno#OutputType)
     
 
         
-      Tjenesteresultattype : mogleg_sprak
-        
-          
-    
-        
-        
-        Tjenesteresultattype --> "*" Spraak : mogleg_sprak
-        click Spraak href "../Spraak/"
-    
-
+      Tjenesteresultattype : mogleg_spraak
         
       Tjenesteresultattype : tittel
         
@@ -164,7 +155,7 @@ URI: [cpsvno:OutputType](https://data.norge.no/vocabulary/cpsvno#OutputType)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [mogleg_sprak](mogleg_sprak.md) | * <br/> [Spraak](spraak.md) | Mogleg språk for tenesteresultatet |
+| [mogleg_spraak](mogleg_spraak.md) | * <br/> [Spraak](spraak.md) | Mogleg språk for tenesteresultatet |
 
 
 
@@ -352,7 +343,6 @@ URI: [cpsvno:OutputType](https://data.norge.no/vocabulary/cpsvno#OutputType)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [har_tenesteresultattype](har_tenesteresultattype.md) | range | [Tjenesteresultattype](tjenesteresultattype.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [har_tenesteresultattype](har_tenesteresultattype.md) | range | [Tjenesteresultattype](tjenesteresultattype.md) |
 | [Tjeneste](tjeneste.md) | [har_tenesteresultattype](har_tenesteresultattype.md) | range | [Tjenesteresultattype](tjenesteresultattype.md) |
 
@@ -409,7 +399,7 @@ slots:
 - tittel
 - beskrivelse
 - identifikator_literal
-- mogleg_sprak
+- mogleg_spraak
 - er_beskrive_av
 - er_spesifisert_i
 - kan_skape_hending
@@ -425,8 +415,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  mogleg_sprak:
-    name: mogleg_sprak
+  mogleg_spraak:
+    name: mogleg_spraak
     in_subset:
     - Anbefalt
   identifikator_literal:
@@ -472,8 +462,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  mogleg_sprak:
-    name: mogleg_sprak
+  mogleg_spraak:
+    name: mogleg_spraak
     in_subset:
     - Anbefalt
   identifikator_literal:
@@ -506,7 +496,6 @@ attributes:
     alias: id
     owner: Tjenesteresultattype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -522,7 +511,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -539,7 +527,6 @@ attributes:
     alias: tittel
     owner: Tjenesteresultattype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -564,7 +551,6 @@ attributes:
     alias: beskrivelse
     owner: Tjenesteresultattype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -589,7 +575,6 @@ attributes:
     alias: identifikator_literal
     owner: Tjenesteresultattype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -602,15 +587,15 @@ attributes:
     - RegulativRessurs
     - Katalog
     range: string
-  mogleg_sprak:
-    name: mogleg_sprak
+  mogleg_spraak:
+    name: mogleg_spraak
     description: Mogleg språk for tenesteresultatet.
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: cpsvno:possibleLanguage
-    alias: mogleg_sprak
+    alias: mogleg_spraak
     owner: Tjenesteresultattype
     domain_of:
     - Tjenesteresultattype
@@ -673,7 +658,6 @@ attributes:
     alias: type_concept
     owner: Tjenesteresultattype
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

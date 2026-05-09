@@ -396,10 +396,11 @@ attributes:
     alias: id
     owner: Kvalitetsmerknad
     domain_of:
-    - Spraak
-    - Mediatype
-    - Konsept
-    - Begrepssamling
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
@@ -413,6 +414,9 @@ attributes:
     - Distribusjon
     - Datasett
     - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad

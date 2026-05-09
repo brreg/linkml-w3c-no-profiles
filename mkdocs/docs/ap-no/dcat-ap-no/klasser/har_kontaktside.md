@@ -35,7 +35,7 @@ Alias: har_kontaktside
 
 | Property | Value |
 | --- | --- |
-| Range | [Uri](uri.md) |
+| Range | [String](string.md) |
 | Domain Of | [Kontaktopplysning](kontaktopplysning.md) |
 | Slot URI | [vcard:hasURL](http://www.w3.org/2006/vcard/ns#hasURL) |
 
@@ -89,7 +89,7 @@ slot_uri: vcard:hasURL
 alias: har_kontaktside
 domain_of:
 - Kontaktopplysning
-range: uri
+range: string
 
 ```
 </details>

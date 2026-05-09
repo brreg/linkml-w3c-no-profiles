@@ -1,5 +1,5 @@
 # Auto generated from samt-bu-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-09T08:06:00
+# Generation date: 2026-05-09T20:22:51
 # Schema: skole_ontologi
 #
 # id: https://example.no/ontology/samt-bu-skole
@@ -93,6 +93,14 @@ DEFAULT_ = SAMTBUSKOLE
 
 
 # Types
+class Spraak(str):
+    """ Språk """
+    type_class_uri = DCT["language"]
+    type_class_curie = "dct:language"
+    type_name = "Spraak"
+    type_model_uri = SAMTBUSKOLE.Spraak
+
+
 class LangString(str):
     """ Språktagget streng (rdf:langString). """
     type_class_uri = RDF["langString"]
@@ -126,47 +134,47 @@ class GYear(str):
 
 
 # Class references
-class ContainerklasseIdentifikator(URIorCURIE):
+class ContainerklasseId(URIorCURIE):
     pass
 
 
-class SkoleIdentifikator(URIorCURIE):
+class SkoleId(URIorCURIE):
     pass
 
 
-class SkoleeierIdentifikator(URIorCURIE):
+class SkoleeierId(URIorCURIE):
     pass
 
 
-class KommuneIdentifikator(SkoleeierIdentifikator):
+class KommuneId(SkoleeierId):
     pass
 
 
-class FylkeIdentifikator(SkoleeierIdentifikator):
+class FylkeId(SkoleeierId):
     pass
 
 
-class PrivatVirksomhetIdentifikator(SkoleeierIdentifikator):
+class PrivatVirksomhetId(SkoleeierId):
     pass
 
 
-class BasisgruppeIdentifikator(URIorCURIE):
+class BasisgruppeId(URIorCURIE):
     pass
 
 
-class PersonIdentifikator(URIorCURIE):
+class PersonId(URIorCURIE):
     pass
 
 
-class ElevIdentifikator(PersonIdentifikator):
+class ElevId(PersonId):
     pass
 
 
-class RektorIdentifikator(PersonIdentifikator):
+class RektorId(PersonId):
     pass
 
 
-class KontaktlaererIdentifikator(PersonIdentifikator):
+class KontaktlaererId(PersonId):
     pass
 
 
@@ -270,10 +278,6 @@ class TekstdelId(URIorCURIE):
     pass
 
 
-class SpraakId(URIorCURIE):
-    pass
-
-
 class MediatypeId(URIorCURIE):
     pass
 
@@ -298,7 +302,7 @@ class Containerklasse(YAMLRoot):
     class_name: ClassVar[str] = "Containerklasse"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Containerklasse
 
-    identifikator: Union[str, ContainerklasseIdentifikator] = None
+    id: Union[str, ContainerklasseId] = None
     kontaktpunkter: Optional[Union[dict[Union[str, KontaktopplysningId], Union[dict, "Kontaktopplysning"]], list[Union[dict, "Kontaktopplysning"]]]] = empty_dict()
     utgivere: Optional[Union[dict[Union[str, AktorId], Union[dict, "Aktor"]], list[Union[dict, "Aktor"]]]] = empty_dict()
     organisasjoner: Optional[Union[dict[Union[str, AktorId], Union[dict, "Aktor"]], list[Union[dict, "Aktor"]]]] = empty_dict()
@@ -313,20 +317,20 @@ class Containerklasse(YAMLRoot):
     kvalitetsdimensjoner: Optional[Union[dict[Union[str, KvalitetsdimensjonId], Union[dict, "Kvalitetsdimensjon"]], list[Union[dict, "Kvalitetsdimensjon"]]]] = empty_dict()
     tidsromer: Optional[Union[dict[Union[str, TidsromId], Union[dict, "Tidsrom"]], list[Union[dict, "Tidsrom"]]]] = empty_dict()
     tekstdeler: Optional[Union[dict[Union[str, TekstdelId], Union[dict, "Tekstdel"]], list[Union[dict, "Tekstdel"]]]] = empty_dict()
-    skoler: Optional[Union[dict[Union[str, SkoleIdentifikator], Union[dict, "Skole"]], list[Union[dict, "Skole"]]]] = empty_dict()
-    kommuner: Optional[Union[dict[Union[str, KommuneIdentifikator], Union[dict, "Kommune"]], list[Union[dict, "Kommune"]]]] = empty_dict()
-    fylker: Optional[Union[dict[Union[str, FylkeIdentifikator], Union[dict, "Fylke"]], list[Union[dict, "Fylke"]]]] = empty_dict()
-    private_virksomheter: Optional[Union[dict[Union[str, PrivatVirksomhetIdentifikator], Union[dict, "PrivatVirksomhet"]], list[Union[dict, "PrivatVirksomhet"]]]] = empty_dict()
-    basisgrupper: Optional[Union[dict[Union[str, BasisgruppeIdentifikator], Union[dict, "Basisgruppe"]], list[Union[dict, "Basisgruppe"]]]] = empty_dict()
-    elever: Optional[Union[dict[Union[str, ElevIdentifikator], Union[dict, "Elev"]], list[Union[dict, "Elev"]]]] = empty_dict()
-    rektorer: Optional[Union[dict[Union[str, RektorIdentifikator], Union[dict, "Rektor"]], list[Union[dict, "Rektor"]]]] = empty_dict()
-    kontaktlaerere: Optional[Union[dict[Union[str, KontaktlaererIdentifikator], Union[dict, "Kontaktlaerer"]], list[Union[dict, "Kontaktlaerer"]]]] = empty_dict()
+    skoler: Optional[Union[dict[Union[str, SkoleId], Union[dict, "Skole"]], list[Union[dict, "Skole"]]]] = empty_dict()
+    kommuner: Optional[Union[dict[Union[str, KommuneId], Union[dict, "Kommune"]], list[Union[dict, "Kommune"]]]] = empty_dict()
+    fylker: Optional[Union[dict[Union[str, FylkeId], Union[dict, "Fylke"]], list[Union[dict, "Fylke"]]]] = empty_dict()
+    private_virksomheter: Optional[Union[dict[Union[str, PrivatVirksomhetId], Union[dict, "PrivatVirksomhet"]], list[Union[dict, "PrivatVirksomhet"]]]] = empty_dict()
+    basisgrupper: Optional[Union[dict[Union[str, BasisgruppeId], Union[dict, "Basisgruppe"]], list[Union[dict, "Basisgruppe"]]]] = empty_dict()
+    elever: Optional[Union[dict[Union[str, ElevId], Union[dict, "Elev"]], list[Union[dict, "Elev"]]]] = empty_dict()
+    rektorer: Optional[Union[dict[Union[str, RektorId], Union[dict, "Rektor"]], list[Union[dict, "Rektor"]]]] = empty_dict()
+    kontaktlaerere: Optional[Union[dict[Union[str, KontaktlaererId], Union[dict, "Kontaktlaerer"]], list[Union[dict, "Kontaktlaerer"]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, ContainerklasseIdentifikator):
-            self.identifikator = ContainerklasseIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ContainerklasseId):
+            self.id = ContainerklasseId(self.id)
 
         self._normalize_inlined_as_list(slot_name="kontaktpunkter", slot_type=Kontaktopplysning, key_name="id", keyed=True)
 
@@ -356,21 +360,21 @@ class Containerklasse(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="tekstdeler", slot_type=Tekstdel, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="skoler", slot_type=Skole, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="skoler", slot_type=Skole, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="kommuner", slot_type=Kommune, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="kommuner", slot_type=Kommune, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="fylker", slot_type=Fylke, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="fylker", slot_type=Fylke, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="private_virksomheter", slot_type=PrivatVirksomhet, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="private_virksomheter", slot_type=PrivatVirksomhet, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="basisgrupper", slot_type=Basisgruppe, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="basisgrupper", slot_type=Basisgruppe, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="elever", slot_type=Elev, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="elever", slot_type=Elev, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="rektorer", slot_type=Rektor, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="rektorer", slot_type=Rektor, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="kontaktlaerere", slot_type=Kontaktlaerer, key_name="identifikator", keyed=True)
+        self._normalize_inlined_as_list(slot_name="kontaktlaerere", slot_type=Kontaktlaerer, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -388,21 +392,21 @@ class Skole(YAMLRoot):
     class_name: ClassVar[str] = "Skole"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Skole
 
-    identifikator: Union[str, SkoleIdentifikator] = None
+    id: Union[str, SkoleId] = None
     navn: Optional[str] = None
-    har_skoleeier: Optional[Union[str, SkoleeierIdentifikator]] = None
+    har_skoleeier: Optional[Union[str, SkoleeierId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, SkoleIdentifikator):
-            self.identifikator = SkoleIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, SkoleId):
+            self.id = SkoleId(self.id)
 
         if self.navn is not None and not isinstance(self.navn, str):
             self.navn = str(self.navn)
 
-        if self.har_skoleeier is not None and not isinstance(self.har_skoleeier, SkoleeierIdentifikator):
-            self.har_skoleeier = SkoleeierIdentifikator(self.har_skoleeier)
+        if self.har_skoleeier is not None and not isinstance(self.har_skoleeier, SkoleeierId):
+            self.har_skoleeier = SkoleeierId(self.har_skoleeier)
 
         super().__post_init__(**kwargs)
 
@@ -419,14 +423,14 @@ class Skoleeier(YAMLRoot):
     class_name: ClassVar[str] = "Skoleeier"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Skoleeier
 
-    identifikator: Union[str, SkoleeierIdentifikator] = None
+    id: Union[str, SkoleeierId] = None
     navn: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, SkoleeierIdentifikator):
-            self.identifikator = SkoleeierIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, SkoleeierId):
+            self.id = SkoleeierId(self.id)
 
         if self.navn is not None and not isinstance(self.navn, str):
             self.navn = str(self.navn)
@@ -447,14 +451,14 @@ class Kommune(Skoleeier):
     class_name: ClassVar[str] = "Kommune"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Kommune
 
-    identifikator: Union[str, KommuneIdentifikator] = None
+    id: Union[str, KommuneId] = None
     kommunenummer: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, KommuneIdentifikator):
-            self.identifikator = KommuneIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, KommuneId):
+            self.id = KommuneId(self.id)
 
         if self.kommunenummer is not None and not isinstance(self.kommunenummer, str):
             self.kommunenummer = str(self.kommunenummer)
@@ -475,14 +479,14 @@ class Fylke(Skoleeier):
     class_name: ClassVar[str] = "Fylke"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Fylke
 
-    identifikator: Union[str, FylkeIdentifikator] = None
+    id: Union[str, FylkeId] = None
     fylkesnummer: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, FylkeIdentifikator):
-            self.identifikator = FylkeIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, FylkeId):
+            self.id = FylkeId(self.id)
 
         if self.fylkesnummer is not None and not isinstance(self.fylkesnummer, str):
             self.fylkesnummer = str(self.fylkesnummer)
@@ -503,14 +507,14 @@ class PrivatVirksomhet(Skoleeier):
     class_name: ClassVar[str] = "PrivatVirksomhet"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.PrivatVirksomhet
 
-    identifikator: Union[str, PrivatVirksomhetIdentifikator] = None
+    id: Union[str, PrivatVirksomhetId] = None
     organisasjonsnummer: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, PrivatVirksomhetIdentifikator):
-            self.identifikator = PrivatVirksomhetIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, PrivatVirksomhetId):
+            self.id = PrivatVirksomhetId(self.id)
 
         if self.organisasjonsnummer is not None and not isinstance(self.organisasjonsnummer, str):
             self.organisasjonsnummer = str(self.organisasjonsnummer)
@@ -530,16 +534,16 @@ class Basisgruppe(YAMLRoot):
     class_name: ClassVar[str] = "Basisgruppe"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Basisgruppe
 
-    identifikator: Union[str, BasisgruppeIdentifikator] = None
+    id: Union[str, BasisgruppeId] = None
     navn: Optional[str] = None
     trinniva: Optional[str] = None
-    del_av_skole: Optional[Union[str, SkoleIdentifikator]] = None
+    del_av_skole: Optional[Union[str, SkoleId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, BasisgruppeIdentifikator):
-            self.identifikator = BasisgruppeIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, BasisgruppeId):
+            self.id = BasisgruppeId(self.id)
 
         if self.navn is not None and not isinstance(self.navn, str):
             self.navn = str(self.navn)
@@ -547,8 +551,8 @@ class Basisgruppe(YAMLRoot):
         if self.trinniva is not None and not isinstance(self.trinniva, str):
             self.trinniva = str(self.trinniva)
 
-        if self.del_av_skole is not None and not isinstance(self.del_av_skole, SkoleIdentifikator):
-            self.del_av_skole = SkoleIdentifikator(self.del_av_skole)
+        if self.del_av_skole is not None and not isinstance(self.del_av_skole, SkoleId):
+            self.del_av_skole = SkoleId(self.del_av_skole)
 
         super().__post_init__(**kwargs)
 
@@ -565,14 +569,14 @@ class Person(YAMLRoot):
     class_name: ClassVar[str] = "Person"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Person
 
-    identifikator: Union[str, PersonIdentifikator] = None
+    id: Union[str, PersonId] = None
     navn: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, PersonIdentifikator):
-            self.identifikator = PersonIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, PersonId):
+            self.id = PersonId(self.id)
 
         if self.navn is not None and not isinstance(self.navn, str):
             self.navn = str(self.navn)
@@ -592,17 +596,17 @@ class Elev(Person):
     class_name: ClassVar[str] = "Elev"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Elev
 
-    identifikator: Union[str, ElevIdentifikator] = None
-    horer_til_basisgruppe: Optional[Union[str, BasisgruppeIdentifikator]] = None
+    id: Union[str, ElevId] = None
+    horer_til_basisgruppe: Optional[Union[str, BasisgruppeId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, ElevIdentifikator):
-            self.identifikator = ElevIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ElevId):
+            self.id = ElevId(self.id)
 
-        if self.horer_til_basisgruppe is not None and not isinstance(self.horer_til_basisgruppe, BasisgruppeIdentifikator):
-            self.horer_til_basisgruppe = BasisgruppeIdentifikator(self.horer_til_basisgruppe)
+        if self.horer_til_basisgruppe is not None and not isinstance(self.horer_til_basisgruppe, BasisgruppeId):
+            self.horer_til_basisgruppe = BasisgruppeId(self.horer_til_basisgruppe)
 
         super().__post_init__(**kwargs)
 
@@ -619,17 +623,17 @@ class Rektor(Person):
     class_name: ClassVar[str] = "Rektor"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Rektor
 
-    identifikator: Union[str, RektorIdentifikator] = None
-    enhetsleder_for: Optional[Union[str, SkoleIdentifikator]] = None
+    id: Union[str, RektorId] = None
+    enhetsleder_for: Optional[Union[str, SkoleId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, RektorIdentifikator):
-            self.identifikator = RektorIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, RektorId):
+            self.id = RektorId(self.id)
 
-        if self.enhetsleder_for is not None and not isinstance(self.enhetsleder_for, SkoleIdentifikator):
-            self.enhetsleder_for = SkoleIdentifikator(self.enhetsleder_for)
+        if self.enhetsleder_for is not None and not isinstance(self.enhetsleder_for, SkoleId):
+            self.enhetsleder_for = SkoleId(self.enhetsleder_for)
 
         super().__post_init__(**kwargs)
 
@@ -646,25 +650,25 @@ class Kontaktlaerer(Person):
     class_name: ClassVar[str] = "Kontaktlaerer"
     class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Kontaktlaerer
 
-    identifikator: Union[str, KontaktlaererIdentifikator] = None
-    tilknyttet_basisgruppe: Optional[Union[str, BasisgruppeIdentifikator]] = None
-    har_saerlig_ansvar_for: Optional[Union[str, ElevIdentifikator]] = None
-    jobber_paa_skole: Optional[Union[str, SkoleIdentifikator]] = None
+    id: Union[str, KontaktlaererId] = None
+    tilknyttet_basisgruppe: Optional[Union[str, BasisgruppeId]] = None
+    har_saerlig_ansvar_for: Optional[Union[str, ElevId]] = None
+    jobber_paa_skole: Optional[Union[str, SkoleId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.identifikator):
-            self.MissingRequiredField("identifikator")
-        if not isinstance(self.identifikator, KontaktlaererIdentifikator):
-            self.identifikator = KontaktlaererIdentifikator(self.identifikator)
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, KontaktlaererId):
+            self.id = KontaktlaererId(self.id)
 
-        if self.tilknyttet_basisgruppe is not None and not isinstance(self.tilknyttet_basisgruppe, BasisgruppeIdentifikator):
-            self.tilknyttet_basisgruppe = BasisgruppeIdentifikator(self.tilknyttet_basisgruppe)
+        if self.tilknyttet_basisgruppe is not None and not isinstance(self.tilknyttet_basisgruppe, BasisgruppeId):
+            self.tilknyttet_basisgruppe = BasisgruppeId(self.tilknyttet_basisgruppe)
 
-        if self.har_saerlig_ansvar_for is not None and not isinstance(self.har_saerlig_ansvar_for, ElevIdentifikator):
-            self.har_saerlig_ansvar_for = ElevIdentifikator(self.har_saerlig_ansvar_for)
+        if self.har_saerlig_ansvar_for is not None and not isinstance(self.har_saerlig_ansvar_for, ElevId):
+            self.har_saerlig_ansvar_for = ElevId(self.har_saerlig_ansvar_for)
 
-        if self.jobber_paa_skole is not None and not isinstance(self.jobber_paa_skole, SkoleIdentifikator):
-            self.jobber_paa_skole = SkoleIdentifikator(self.jobber_paa_skole)
+        if self.jobber_paa_skole is not None and not isinstance(self.jobber_paa_skole, SkoleId):
+            self.jobber_paa_skole = SkoleId(self.jobber_paa_skole)
 
         super().__post_init__(**kwargs)
 
@@ -2142,29 +2146,6 @@ class Tekstdel(YAMLRoot):
 
 
 @dataclass(repr=False)
-class Spraak(YAMLRoot):
-    """
-    Ein språkreferanse (dct:LinguisticSystem).
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = DCT["LinguisticSystem"]
-    class_class_curie: ClassVar[str] = "dct:LinguisticSystem"
-    class_name: ClassVar[str] = "Spraak"
-    class_model_uri: ClassVar[URIRef] = SAMTBUSKOLE.Spraak
-
-    id: Union[str, SpraakId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SpraakId):
-            self.id = SpraakId(self.id)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
 class Mediatype(YAMLRoot):
     """
     Ein medietype eller filformat (dct:MediaTypeOrExtent).
@@ -2240,9 +2221,6 @@ class Begrepssamling(YAMLRoot):
 class slots:
     pass
 
-slots.identifikator = Slot(uri=SAMTBUSKOLE.identifikator, name="identifikator", curie=SAMTBUSKOLE.curie('identifikator'),
-                   model_uri=SAMTBUSKOLE.identifikator, domain=None, range=URIRef)
-
 slots.navn = Slot(uri=SAMTBUSKOLE.navn, name="navn", curie=SAMTBUSKOLE.curie('navn'),
                    model_uri=SAMTBUSKOLE.navn, domain=None, range=Optional[str])
 
@@ -2289,28 +2267,28 @@ slots.standarder = Slot(uri=SAMTBUSKOLE.standarder, name="standarder", curie=SAM
                    model_uri=SAMTBUSKOLE.standarder, domain=None, range=Optional[Union[dict[Union[str, StandardId], Union[dict, Standard]], list[Union[dict, Standard]]]])
 
 slots.skoler = Slot(uri=SAMTBUSKOLE.skoler, name="skoler", curie=SAMTBUSKOLE.curie('skoler'),
-                   model_uri=SAMTBUSKOLE.skoler, domain=None, range=Optional[Union[dict[Union[str, SkoleIdentifikator], Union[dict, Skole]], list[Union[dict, Skole]]]])
+                   model_uri=SAMTBUSKOLE.skoler, domain=None, range=Optional[Union[dict[Union[str, SkoleId], Union[dict, Skole]], list[Union[dict, Skole]]]])
 
 slots.kommuner = Slot(uri=SAMTBUSKOLE.kommuner, name="kommuner", curie=SAMTBUSKOLE.curie('kommuner'),
-                   model_uri=SAMTBUSKOLE.kommuner, domain=None, range=Optional[Union[dict[Union[str, KommuneIdentifikator], Union[dict, Kommune]], list[Union[dict, Kommune]]]])
+                   model_uri=SAMTBUSKOLE.kommuner, domain=None, range=Optional[Union[dict[Union[str, KommuneId], Union[dict, Kommune]], list[Union[dict, Kommune]]]])
 
 slots.fylker = Slot(uri=SAMTBUSKOLE.fylker, name="fylker", curie=SAMTBUSKOLE.curie('fylker'),
-                   model_uri=SAMTBUSKOLE.fylker, domain=None, range=Optional[Union[dict[Union[str, FylkeIdentifikator], Union[dict, Fylke]], list[Union[dict, Fylke]]]])
+                   model_uri=SAMTBUSKOLE.fylker, domain=None, range=Optional[Union[dict[Union[str, FylkeId], Union[dict, Fylke]], list[Union[dict, Fylke]]]])
 
 slots.private_virksomheter = Slot(uri=SAMTBUSKOLE.private_virksomheter, name="private_virksomheter", curie=SAMTBUSKOLE.curie('private_virksomheter'),
-                   model_uri=SAMTBUSKOLE.private_virksomheter, domain=None, range=Optional[Union[dict[Union[str, PrivatVirksomhetIdentifikator], Union[dict, PrivatVirksomhet]], list[Union[dict, PrivatVirksomhet]]]])
+                   model_uri=SAMTBUSKOLE.private_virksomheter, domain=None, range=Optional[Union[dict[Union[str, PrivatVirksomhetId], Union[dict, PrivatVirksomhet]], list[Union[dict, PrivatVirksomhet]]]])
 
 slots.basisgrupper = Slot(uri=SAMTBUSKOLE.basisgrupper, name="basisgrupper", curie=SAMTBUSKOLE.curie('basisgrupper'),
-                   model_uri=SAMTBUSKOLE.basisgrupper, domain=None, range=Optional[Union[dict[Union[str, BasisgruppeIdentifikator], Union[dict, Basisgruppe]], list[Union[dict, Basisgruppe]]]])
+                   model_uri=SAMTBUSKOLE.basisgrupper, domain=None, range=Optional[Union[dict[Union[str, BasisgruppeId], Union[dict, Basisgruppe]], list[Union[dict, Basisgruppe]]]])
 
 slots.rektorer = Slot(uri=SAMTBUSKOLE.rektorer, name="rektorer", curie=SAMTBUSKOLE.curie('rektorer'),
-                   model_uri=SAMTBUSKOLE.rektorer, domain=None, range=Optional[Union[dict[Union[str, RektorIdentifikator], Union[dict, Rektor]], list[Union[dict, Rektor]]]])
+                   model_uri=SAMTBUSKOLE.rektorer, domain=None, range=Optional[Union[dict[Union[str, RektorId], Union[dict, Rektor]], list[Union[dict, Rektor]]]])
 
 slots.elever = Slot(uri=SAMTBUSKOLE.elever, name="elever", curie=SAMTBUSKOLE.curie('elever'),
-                   model_uri=SAMTBUSKOLE.elever, domain=None, range=Optional[Union[dict[Union[str, ElevIdentifikator], Union[dict, Elev]], list[Union[dict, Elev]]]])
+                   model_uri=SAMTBUSKOLE.elever, domain=None, range=Optional[Union[dict[Union[str, ElevId], Union[dict, Elev]], list[Union[dict, Elev]]]])
 
 slots.kontaktlaerere = Slot(uri=SAMTBUSKOLE.kontaktlaerere, name="kontaktlaerere", curie=SAMTBUSKOLE.curie('kontaktlaerere'),
-                   model_uri=SAMTBUSKOLE.kontaktlaerere, domain=None, range=Optional[Union[dict[Union[str, KontaktlaererIdentifikator], Union[dict, Kontaktlaerer]], list[Union[dict, Kontaktlaerer]]]])
+                   model_uri=SAMTBUSKOLE.kontaktlaerere, domain=None, range=Optional[Union[dict[Union[str, KontaktlaererId], Union[dict, Kontaktlaerer]], list[Union[dict, Kontaktlaerer]]]])
 
 slots.kommunenummer = Slot(uri=DCAT.identifier, name="kommunenummer", curie=DCAT.curie('identifier'),
                    model_uri=SAMTBUSKOLE.kommunenummer, domain=None, range=Optional[str])
@@ -2325,25 +2303,25 @@ slots.trinniva = Slot(uri=SAMTBUSKOLE.trinniva, name="trinniva", curie=SAMTBUSKO
                    model_uri=SAMTBUSKOLE.trinniva, domain=None, range=Optional[str])
 
 slots.har_skoleeier = Slot(uri=SAMTBUSKOLE.har_skoleeier, name="har_skoleeier", curie=SAMTBUSKOLE.curie('har_skoleeier'),
-                   model_uri=SAMTBUSKOLE.har_skoleeier, domain=Skole, range=Optional[Union[str, SkoleeierIdentifikator]])
+                   model_uri=SAMTBUSKOLE.har_skoleeier, domain=Skole, range=Optional[Union[str, SkoleeierId]])
 
 slots.del_av_skole = Slot(uri=ORG.unitOf, name="del_av_skole", curie=ORG.curie('unitOf'),
-                   model_uri=SAMTBUSKOLE.del_av_skole, domain=Basisgruppe, range=Optional[Union[str, SkoleIdentifikator]])
+                   model_uri=SAMTBUSKOLE.del_av_skole, domain=Basisgruppe, range=Optional[Union[str, SkoleId]])
 
 slots.horer_til_basisgruppe = Slot(uri=SAMTBUSKOLE.horer_til_basisgruppe, name="horer_til_basisgruppe", curie=SAMTBUSKOLE.curie('horer_til_basisgruppe'),
-                   model_uri=SAMTBUSKOLE.horer_til_basisgruppe, domain=Elev, range=Optional[Union[str, BasisgruppeIdentifikator]])
+                   model_uri=SAMTBUSKOLE.horer_til_basisgruppe, domain=Elev, range=Optional[Union[str, BasisgruppeId]])
 
 slots.enhetsleder_for = Slot(uri=SAMTBUSKOLE.enhetsleder_for, name="enhetsleder_for", curie=SAMTBUSKOLE.curie('enhetsleder_for'),
-                   model_uri=SAMTBUSKOLE.enhetsleder_for, domain=Rektor, range=Optional[Union[str, SkoleIdentifikator]])
+                   model_uri=SAMTBUSKOLE.enhetsleder_for, domain=Rektor, range=Optional[Union[str, SkoleId]])
 
 slots.tilknyttet_basisgruppe = Slot(uri=SAMTBUSKOLE.tilknyttet_basisgruppe, name="tilknyttet_basisgruppe", curie=SAMTBUSKOLE.curie('tilknyttet_basisgruppe'),
-                   model_uri=SAMTBUSKOLE.tilknyttet_basisgruppe, domain=Kontaktlaerer, range=Optional[Union[str, BasisgruppeIdentifikator]])
+                   model_uri=SAMTBUSKOLE.tilknyttet_basisgruppe, domain=Kontaktlaerer, range=Optional[Union[str, BasisgruppeId]])
 
 slots.har_saerlig_ansvar_for = Slot(uri=SAMTBUSKOLE.har_saerlig_ansvar_for, name="har_saerlig_ansvar_for", curie=SAMTBUSKOLE.curie('har_saerlig_ansvar_for'),
-                   model_uri=SAMTBUSKOLE.har_saerlig_ansvar_for, domain=Kontaktlaerer, range=Optional[Union[str, ElevIdentifikator]])
+                   model_uri=SAMTBUSKOLE.har_saerlig_ansvar_for, domain=Kontaktlaerer, range=Optional[Union[str, ElevId]])
 
 slots.jobber_paa_skole = Slot(uri=SAMTBUSKOLE.jobber_paa_skole, name="jobber_paa_skole", curie=SAMTBUSKOLE.curie('jobber_paa_skole'),
-                   model_uri=SAMTBUSKOLE.jobber_paa_skole, domain=Kontaktlaerer, range=Optional[Union[str, SkoleIdentifikator]])
+                   model_uri=SAMTBUSKOLE.jobber_paa_skole, domain=Kontaktlaerer, range=Optional[Union[str, SkoleId]])
 
 slots.tittel_literal = Slot(uri=DCT.title, name="tittel_literal", curie=DCT.curie('title'),
                    model_uri=SAMTBUSKOLE.tittel_literal, domain=None, range=Optional[Union[str, list[str]]])
@@ -2416,6 +2394,9 @@ slots.krediteringsurl = Slot(uri=ODRS.attributionURL, name="krediteringsurl", cu
 
 slots.filstorrelse = Slot(uri=DCAT.byteSize, name="filstorrelse", curie=DCAT.curie('byteSize'),
                    model_uri=SAMTBUSKOLE.filstorrelse, domain=None, range=Optional[int])
+
+slots.har_kvalitetsmerknad = Slot(uri=DQV.hasQualityAnnotation, name="har_kvalitetsmerknad", curie=DQV.curie('hasQualityAnnotation'),
+                   model_uri=SAMTBUSKOLE.har_kvalitetsmerknad, domain=None, range=Optional[Union[Union[str, KvalitetsmerknadId], list[Union[str, KvalitetsmerknadId]]]])
 
 slots.anvendelsesretningslinjer = Slot(uri=ODRS.reuserGuidelines, name="anvendelsesretningslinjer", curie=ODRS.curie('reuserGuidelines'),
                    model_uri=SAMTBUSKOLE.anvendelsesretningslinjer, domain=None, range=Optional[str])
@@ -2569,12 +2550,6 @@ slots.begynnelse = Slot(uri=TIME.hasBeginning, name="begynnelse", curie=TIME.cur
 
 slots.slutt = Slot(uri=TIME.hasEnd, name="slutt", curie=TIME.curie('hasEnd'),
                    model_uri=SAMTBUSKOLE.slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.er_i_samsvar_med = Slot(uri=DCT.conformsTo, name="er_i_samsvar_med", curie=DCT.curie('conformsTo'),
-                   model_uri=SAMTBUSKOLE.er_i_samsvar_med, domain=None, range=Optional[Union[Union[str, StandardId], list[Union[str, StandardId]]]])
-
-slots.har_kvalitetsmerknad = Slot(uri=DQV.hasQualityAnnotation, name="har_kvalitetsmerknad", curie=DQV.curie('hasQualityAnnotation'),
-                   model_uri=SAMTBUSKOLE.har_kvalitetsmerknad, domain=None, range=Optional[Union[Union[str, KvalitetsmerknadId], list[Union[str, KvalitetsmerknadId]]]])
 
 slots.har_kvalitetsmaaling = Slot(uri=DQV.hasQualityMeasurement, name="har_kvalitetsmaaling", curie=DQV.curie('hasQualityMeasurement'),
                    model_uri=SAMTBUSKOLE.har_kvalitetsmaaling, domain=None, range=Optional[Union[Union[str, KvalitetsmaalingId], list[Union[str, KvalitetsmaalingId]]]])

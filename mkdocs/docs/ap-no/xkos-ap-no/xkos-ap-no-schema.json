@@ -231,7 +231,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -399,7 +399,10 @@
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -421,24 +424,6 @@
                 "id"
             ],
             "title": "Organisasjon",
-            "type": "object"
-        },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Spraak",
             "type": "object"
         },
         "Tidsrom": {

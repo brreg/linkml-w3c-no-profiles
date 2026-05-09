@@ -21,27 +21,9 @@ URI: [foaf:Document](http://xmlns.com/foaf/0.1/Document)
     click Dokument href "../Dokument/"
       Dokument : format
         
-          
-    
-        
-        
-        Dokument --> "0..1" Mediatype : format
-        click Mediatype href "../Mediatype/"
-    
-
-        
       Dokument : id
         
-      Dokument : sprak
-        
-          
-    
-        
-        
-        Dokument --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Dokument : spraak
         
       Dokument : tittel
         
@@ -152,8 +134,8 @@ URI: [foaf:Document](http://xmlns.com/foaf/0.1/Document)
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
-| [format](format.md) | 0..1 <br/> [Mediatype](mediatype.md) | Filformat eller medietype (dct:format) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [format](format.md) | 0..1 <br/> [String](string.md) | Filformat eller medietype (dct:format) |
 
 
 
@@ -219,7 +201,7 @@ from_schema: https://data.norge.no/linkml/modelldcat-ap-no
 slots:
 - id
 - tittel
-- sprak
+- spraak
 - format
 class_uri: foaf:Document
 
@@ -257,7 +239,6 @@ attributes:
     - Eigenskap
     - Merknad
     - Kodeelement
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -281,13 +262,13 @@ attributes:
     - Merknad
     range: LangString
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     from_schema: https://data.norge.no/linkml/modelldcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Dokument
     domain_of:
     - Dokument
@@ -305,7 +286,7 @@ attributes:
     owner: Dokument
     domain_of:
     - Dokument
-    range: Mediatype
+    range: string
 class_uri: foaf:Document
 
 ```

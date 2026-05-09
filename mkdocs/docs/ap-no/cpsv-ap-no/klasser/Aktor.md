@@ -354,7 +354,6 @@ attributes:
     alias: id
     owner: Aktor
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -370,7 +369,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -387,7 +385,6 @@ attributes:
     alias: tittel
     owner: Aktor
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -412,7 +409,6 @@ attributes:
     alias: identifikator_literal
     owner: Aktor
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

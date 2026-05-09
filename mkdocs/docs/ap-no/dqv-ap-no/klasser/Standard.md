@@ -25,7 +25,7 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
     
         
         
-        Standard --> "0..1" Kvalitetsdimensjon : er_i_kvalitetsdimensjon
+        Standard --> "*" Kvalitetsdimensjon : er_i_kvalitetsdimensjon
         click Kvalitetsdimensjon href "../Kvalitetsdimensjon/"
     
 
@@ -121,7 +121,7 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | 0..1 <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Kvalitetsdimensjonen denne merknaden eller standarden gjeld |
+| [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | * <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
 | [har_referanse](har_referanse.md) | * <br/> [Uri](uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
 
 
@@ -253,7 +253,10 @@ URI: [dct:Standard](http://purl.org/dc/terms/Standard)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Datasett](datasett.md) | [er_i_samsvar_med](er_i_samsvar_med.md) | range | [Standard](standard.md) |
+| [Distribusjon](distribusjon.md) | [i_samsvar_med](i_samsvar_med.md) | range | [Standard](standard.md) |
+| [Datasett](datasett.md) | [i_samsvar_med](i_samsvar_med.md) | range | [Standard](standard.md) |
+| [Datatjeneste](datatjeneste.md) | [i_samsvar_med](i_samsvar_med.md) | range | [Standard](standard.md) |
+| [Katalogpost](katalogpost.md) | [i_samsvar_med](i_samsvar_med.md) | range | [Standard](standard.md) |
 
 
 
@@ -376,19 +379,28 @@ attributes:
     alias: id
     owner: Standard
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
   tittel:
@@ -403,12 +415,21 @@ attributes:
     owner: Standard
     domain_of:
     - Standard
+    - RegulativRessurs
+    - Distribusjon
+    - Datasett
+    - Datasettserie
+    - Datatjeneste
+    - Katalogpost
+    - Katalog
     range: LangString
     required: true
     multivalued: true
   er_i_kvalitetsdimensjon:
     name: er_i_kvalitetsdimensjon
-    description: Kvalitetsdimensjonen denne merknaden eller standarden gjeld.
+    description: 'Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.
+
+      '
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dqv-ap-no
@@ -420,6 +441,8 @@ attributes:
     - Kvalitetsmerknad
     - Standard
     range: Kvalitetsdimensjon
+    required: false
+    multivalued: true
   har_referanse:
     name: har_referanse
     description: Referanse til ekstern ressurs (rdfs:seeAlso).
@@ -432,6 +455,7 @@ attributes:
     owner: Standard
     domain_of:
     - Standard
+    - RegulativRessurs
     range: uri
     multivalued: true
   har_merknad:

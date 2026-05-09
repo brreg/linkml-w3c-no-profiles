@@ -1,5 +1,5 @@
 # Auto generated from xkos-ap-no-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:23:34
+# Generation date: 2026-05-09T16:13:18
 # Schema: xkos-ap-no
 #
 # id: https://data.norge.no/linkml/xkos-ap-no
@@ -81,6 +81,14 @@ DEFAULT_ = CurieNamespace('', 'https://data.norge.no/linkml/xkos-ap-no/')
 
 
 # Types
+class Spraak(str):
+    """ Språk """
+    type_class_uri = DCT["language"]
+    type_class_curie = "dct:language"
+    type_name = "Spraak"
+    type_model_uri = URIRef("https://data.norge.no/linkml/xkos-ap-no/Spraak")
+
+
 class LangString(str):
     """ Språktagget streng (rdf:langString). """
     type_class_uri = RDF["langString"]
@@ -142,10 +150,6 @@ class TidsromId(URIorCURIE):
     pass
 
 
-class SpraakId(URIorCURIE):
-    pass
-
-
 class MediatypeId(URIorCURIE):
     pass
 
@@ -177,7 +181,7 @@ class Klassifikasjon(YAMLRoot):
     beskrivelse: Optional[Union[str, list[str]]] = empty_list()
     tema: Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]] = empty_list()
     nokkelord: Optional[Union[str, list[str]]] = empty_list()
-    sprak: Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]] = empty_list()
+    spraak: Optional[Union[str, list[str]]] = empty_list()
     har_versjonsnummer: Optional[str] = None
     endringsdato: Optional[Union[str, XSDDate]] = None
     utgivelsesdato: Optional[Union[str, XSDDate]] = None
@@ -221,9 +225,9 @@ class Klassifikasjon(YAMLRoot):
             self.nokkelord = [self.nokkelord] if self.nokkelord is not None else []
         self.nokkelord = [v if isinstance(v, str) else str(v) for v in self.nokkelord]
 
-        if not isinstance(self.sprak, list):
-            self.sprak = [self.sprak] if self.sprak is not None else []
-        self.sprak = [v if isinstance(v, SpraakId) else SpraakId(v) for v in self.sprak]
+        if not isinstance(self.spraak, list):
+            self.spraak = [self.spraak] if self.spraak is not None else []
+        self.spraak = [v if isinstance(v, str) else str(v) for v in self.spraak]
 
         if self.har_versjonsnummer is not None and not isinstance(self.har_versjonsnummer, str):
             self.har_versjonsnummer = str(self.har_versjonsnummer)
@@ -513,29 +517,6 @@ class Tidsrom(YAMLRoot):
 
 
 @dataclass(repr=False)
-class Spraak(YAMLRoot):
-    """
-    Ein språkreferanse (dct:LinguisticSystem).
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = DCT["LinguisticSystem"]
-    class_class_curie: ClassVar[str] = "dct:LinguisticSystem"
-    class_name: ClassVar[str] = "Spraak"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://data.norge.no/linkml/xkos-ap-no/Spraak")
-
-    id: Union[str, SpraakId] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SpraakId):
-            self.id = SpraakId(self.id)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
 class Mediatype(YAMLRoot):
     """
     Ein medietype eller filformat (dct:MediaTypeOrExtent).
@@ -701,11 +682,11 @@ slots.endringsdato = Slot(uri=DCT.modified, name="endringsdato", curie=DCT.curie
 slots.utgivelsesdato = Slot(uri=DCT.issued, name="utgivelsesdato", curie=DCT.curie('issued'),
                    model_uri=DEFAULT_.utgivelsesdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.sprak = Slot(uri=DCT.language, name="sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.sprak, domain=None, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.spraak = Slot(uri=DCT.language, name="spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.spraak, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.format = Slot(uri=DCT.format, name="format", curie=DCT.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[Union[str, MediatypeId]])
+                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
 
 slots.har_referanse = Slot(uri=RDFS.seeAlso, name="har_referanse", curie=RDFS.curie('seeAlso'),
                    model_uri=DEFAULT_.har_referanse, domain=None, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
@@ -719,8 +700,8 @@ slots.har_versjonsnummer = Slot(uri=OWL.versionInfo, name="har_versjonsnummer", 
 slots.nokkelord = Slot(uri=DCAT.keyword, name="nokkelord", curie=DCAT.curie('keyword'),
                    model_uri=DEFAULT_.nokkelord, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.dekningsomrade = Slot(uri=DCT.spatial, name="dekningsomrade", curie=DCT.curie('spatial'),
-                   model_uri=DEFAULT_.dekningsomrade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
+slots.dekningsomraade = Slot(uri=DCT.spatial, name="dekningsomraade", curie=DCT.curie('spatial'),
+                   model_uri=DEFAULT_.dekningsomraade, domain=None, range=Optional[Union[Union[str, KonseptId], list[Union[str, KonseptId]]]])
 
 slots.status = Slot(uri=ADMS.status, name="status", curie=ADMS.curie('status'),
                    model_uri=DEFAULT_.status, domain=None, range=Optional[Union[str, KonseptId]])
@@ -752,8 +733,8 @@ slots.Klassifikasjon_tema = Slot(uri=DCT.subject, name="Klassifikasjon_tema", cu
 slots.Klassifikasjon_nokkelord = Slot(uri=DCAT.keyword, name="Klassifikasjon_nokkelord", curie=DCAT.curie('keyword'),
                    model_uri=DEFAULT_.Klassifikasjon_nokkelord, domain=Klassifikasjon, range=Optional[Union[str, list[str]]])
 
-slots.Klassifikasjon_sprak = Slot(uri=DCT.language, name="Klassifikasjon_sprak", curie=DCT.curie('language'),
-                   model_uri=DEFAULT_.Klassifikasjon_sprak, domain=Klassifikasjon, range=Optional[Union[Union[str, SpraakId], list[Union[str, SpraakId]]]])
+slots.Klassifikasjon_spraak = Slot(uri=DCT.language, name="Klassifikasjon_spraak", curie=DCT.curie('language'),
+                   model_uri=DEFAULT_.Klassifikasjon_spraak, domain=Klassifikasjon, range=Optional[Union[str, list[str]]])
 
 slots.Klassifikasjon_har_versjonsnummer = Slot(uri=OWL.versionInfo, name="Klassifikasjon_har_versjonsnummer", curie=OWL.curie('versionInfo'),
                    model_uri=DEFAULT_.Klassifikasjon_har_versjonsnummer, domain=Klassifikasjon, range=Optional[str])

@@ -48,7 +48,6 @@ Name: skole_ontologi
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Fylke](fylke.md) | Fylke (etter norrønt fylki) er en betegnelse på et undernasjonalt, regionalt ... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kommune](kommune.md) | En kommune er et geografisk avgrenset område som utgjør en egen politisk og a... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PrivatVirksomhet](privatvirksomhet.md) | Virksomhet, eller foretak, er betegnelser for en juridisk person eller en org... |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |
 | [Tekstdel](tekstdel.md) | Ein tekstleg del av ein kvalitetsmerknad (Web Annotation) |
 | [Tidsrom](tidsrom.md) | Eit tidsintervall med start- og sluttdato |
@@ -90,7 +89,6 @@ Name: skole_ontologi
 | [er_deldimensjon_av](er_deldimensjon_av.md) | Overordna kvalitetsdimensjon denne deldimensjonen høyrer til |
 | [er_i_kvalitetsdeldimensjon](er_i_kvalitetsdeldimensjon.md) | Kvalitetsdeldimensjonen dette målet operasjonaliserer |
 | [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
-| [er_i_samsvar_med](er_i_samsvar_med.md) | Standard eller spesifikasjon datasettet er i samsvar med |
 | [er_kvalitetsmaaling_av](er_kvalitetsmaaling_av.md) | Kvalitetsmålet denne målinga er ei måling av |
 | [er_motivert_av](er_motivert_av.md) | Motivasjonen bak kvalitetsmerknaden (t |
 | [filstorrelse](filstorrelse.md) | Filstørrelse i bytes |
@@ -126,7 +124,6 @@ Name: skole_ontologi
 | [i_samsvar_med](i_samsvar_med.md) | Standard ressursen er i samsvar med |
 | [i_serie](i_serie.md) | Datasettserie dette datasettet er ein del av |
 | [id](id.md) | URI-identifikator for ressursen |
-| [identifikator](identifikator.md) | Global identifikator (CURIE/URI) |
 | [identifikator_literal](identifikator_literal.md) | Tekstleg identifikator for ressursen (dct:identifier) |
 | [jobber_paa_skole](jobber_paa_skole.md) | Skolen kontaktlæreren jobber på |
 | [jurisdiksjon](jurisdiksjon.md) | Jurisdiksjon for rettigheitserklæringa |
@@ -234,6 +231,7 @@ Name: skole_ontologi
 | [NonNegativeInteger](nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](spraak.md) | Språk |
 | [String](string.md) | A character string |
 | [Time](time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](uri.md) | a complete URI |

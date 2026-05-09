@@ -35,7 +35,7 @@ Alias: eierskapshistorikk
 
 | Property | Value |
 | --- | --- |
-| Range | [ProvenanceStatement](provenancestatement.md) |
+| Range | [String](string.md) |
 | Domain Of | [Datasett](datasett.md) |
 | Slot URI | [dct:provenance](http://purl.org/dc/terms/provenance) |
 
@@ -56,6 +56,13 @@ Alias: eierskapshistorikk
 
 ## Identifier and Mapping Information
 
+
+
+### Annotations
+
+| property | value |
+| --- | --- |
+| gyldige_verdier | dct:ProvenanceStatement |
 
 
 
@@ -83,6 +90,10 @@ Alias: eierskapshistorikk
 <details>
 ```yaml
 name: eierskapshistorikk
+annotations:
+  gyldige_verdier:
+    tag: gyldige_verdier
+    value: dct:ProvenanceStatement
 description: Opphav og eigarskapshistorikk for ressursen.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
@@ -90,7 +101,7 @@ slot_uri: dct:provenance
 alias: eierskapshistorikk
 domain_of:
 - Datasett
-range: ProvenanceStatement
+range: string
 multivalued: true
 
 ```

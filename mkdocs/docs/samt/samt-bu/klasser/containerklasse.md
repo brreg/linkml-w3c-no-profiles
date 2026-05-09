@@ -107,7 +107,7 @@ URI: [samtbuskole:Containerklasse](https://example.no/ontology/skole#Containerkl
     
 
         
-      Containerklasse : identifikator
+      Containerklasse : id
         
       Containerklasse : kommuner
         
@@ -686,7 +686,7 @@ URI: [samtbuskole:Containerklasse](https://example.no/ontology/skole#Containerkl
 | [kvalitetsdimensjoner](kvalitetsdimensjoner.md) | * <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Kvalitetsdimensjoner for datasettet |
 | [tidsromer](tidsromer.md) | * <br/> [Tidsrom](tidsrom.md) | Tidsrom for kvalitetsmerknad |
 | [tekstdeler](tekstdeler.md) | * <br/> [Tekstdel](tekstdel.md) | Tekstdel for kvalitetsmerknad |
-| [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 | [skoler](skoler.md) | * <br/> [Skole](skole.md) | Container slot for å legge tilrette for å kunne ha fleire instanser av skole ... |
 | [kommuner](kommuner.md) | * <br/> [Kommune](kommune.md) | Container slot for å legge tilrette for å kunne ha fleire instanser av kommun... |
 | [fylker](fylker.md) | * <br/> [Fylke](fylke.md) | Container slot for å legge tilrette for å kunne ha fleire instanser av fylke ... |
@@ -765,7 +765,7 @@ slots:
 - kvalitetsdimensjoner
 - tidsromer
 - tekstdeler
-- identifikator
+- id
 - skoler
 - kommuner
 - fylker
@@ -969,13 +969,13 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Containerklasse
     domain_of:
     - Containerklasse
@@ -983,6 +983,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
   skoler:
     name: skoler

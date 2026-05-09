@@ -35,7 +35,7 @@ Alias: har_rolle
 
 | Property | Value |
 | --- | --- |
-| Range | [Konsept](konsept.md) |
+| Range | [String](string.md) |
 | Domain Of | [Relasjon](relasjon.md) |
 | Slot URI | [dcat:hadRole](http://www.w3.org/ns/dcat#hadRole) |
 
@@ -89,7 +89,7 @@ slot_uri: dcat:hadRole
 alias: har_rolle
 domain_of:
 - Relasjon
-range: Konsept
+range: string
 
 ```
 </details>

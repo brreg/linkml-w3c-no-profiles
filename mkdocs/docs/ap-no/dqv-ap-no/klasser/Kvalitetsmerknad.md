@@ -30,7 +30,7 @@ URI: [dqv:QualityAnnotation](http://www.w3.org/ns/dqv#QualityAnnotation)
     
         
         
-        Kvalitetsmerknad --> "0..1" Kvalitetsdimensjon : er_i_kvalitetsdimensjon
+        Kvalitetsmerknad --> "*" Kvalitetsdimensjon : er_i_kvalitetsdimensjon
         click Kvalitetsdimensjon href "../Kvalitetsdimensjon/"
     
 
@@ -38,15 +38,6 @@ URI: [dqv:QualityAnnotation](http://www.w3.org/ns/dqv#QualityAnnotation)
       Kvalitetsmerknad : er_motivert_av
         
       Kvalitetsmerknad : har_maal
-        
-          
-    
-        
-        
-        Kvalitetsmerknad --> "0..1" DcatRessurs : har_maal
-        click DcatRessurs href "../DcatRessurs/"
-    
-
         
       Kvalitetsmerknad : har_merknad
         
@@ -149,7 +140,7 @@ URI: [dqv:QualityAnnotation](http://www.w3.org/ns/dqv#QualityAnnotation)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | 0..1 <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Kvalitetsdimensjonen denne merknaden eller standarden gjeld |
+| [er_i_kvalitetsdimensjon](er_i_kvalitetsdimensjon.md) | * <br/> [Kvalitetsdimensjon](kvalitetsdimensjon.md) | Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld |
 | [har_tekstdel](har_tekstdel.md) | 0..1 <br/> [Tekstdel](tekstdel.md) | Tekstleg innhald i merknaden |
 
 
@@ -184,7 +175,7 @@ URI: [dqv:QualityAnnotation](http://www.w3.org/ns/dqv#QualityAnnotation)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [har_merknad](har_merknad.md) | * <br/> [LangString](langstring.md) | Fritekstmerknad (rdfs:comment) |
-| [har_maal](har_maal.md) | 0..1 <br/> [DcatRessurs](dcatressurs.md) | Ressursen merknaden gjeld |
+| [har_maal](har_maal.md) | 0..1 <br/> [Uri](uri.md) | Ressursen merknaden gjeld |
 
 
 
@@ -404,19 +395,28 @@ attributes:
     alias: id
     owner: Kvalitetsmerknad
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
   er_motivert_av:
@@ -435,7 +435,9 @@ attributes:
     required: true
   er_i_kvalitetsdimensjon:
     name: er_i_kvalitetsdimensjon
-    description: Kvalitetsdimensjonen denne merknaden eller standarden gjeld.
+    description: 'Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.
+
+      '
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dqv-ap-no
@@ -447,6 +449,8 @@ attributes:
     - Kvalitetsmerknad
     - Standard
     range: Kvalitetsdimensjon
+    required: false
+    multivalued: true
   har_tekstdel:
     name: har_tekstdel
     description: Tekstleg innhald i merknaden.
@@ -478,6 +482,10 @@ attributes:
     multivalued: true
   har_maal:
     name: har_maal
+    annotations:
+      gyldige_verdier:
+        tag: gyldige_verdier
+        value: dcat:Resource
     description: Ressursen merknaden gjeld.
     in_subset:
     - Valgfri
@@ -488,7 +496,7 @@ attributes:
     owner: Kvalitetsmerknad
     domain_of:
     - Kvalitetsmerknad
-    range: DcatRessurs
+    range: uri
 class_uri: dqv:QualityAnnotation
 
 ```

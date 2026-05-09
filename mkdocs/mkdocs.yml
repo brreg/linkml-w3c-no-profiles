@@ -45,6 +45,14 @@ nav:
   - Heim: index.md
   - Rettleiingar:
       - Ny domenemodell: ny-domenemodell.md
+  - 'AP-NO – Applikasjonsprofiler':
+      - ap-no/index.md
+      - 'cpsv-ap-no': ap-no/cpsv-ap-no/index.md
+      - 'dcat-ap-no': ap-no/dcat-ap-no/index.md
+      - 'dqv-ap-no': ap-no/dqv-ap-no/index.md
+      - 'modelldcat-ap-no': ap-no/modelldcat-ap-no/index.md
+      - 'skos-ap-no': ap-no/skos-ap-no/index.md
+      - 'xkos-ap-no': ap-no/xkos-ap-no/index.md
   - 'SAMT – Kommunale integrasjonar':
       - samt/index.md
       - 'samt-bu': samt/samt-bu/index.md

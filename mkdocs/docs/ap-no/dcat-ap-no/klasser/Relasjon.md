@@ -21,15 +21,6 @@ URI: [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship)
     click Relasjon href "../Relasjon/"
       Relasjon : har_rolle
         
-          
-    
-        
-        
-        Relasjon --> "1" Konsept : har_rolle
-        click Konsept href "../Konsept/"
-    
-
-        
       Relasjon : id
         
       Relasjon : relasjon_til
@@ -75,7 +66,7 @@ URI: [dcat:Relationship](http://www.w3.org/ns/dcat#Relationship)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [har_rolle](har_rolle.md) | 1 <br/> [Konsept](konsept.md) | Rolle ein aktør eller ressurs har i ein relasjon |
+| [har_rolle](har_rolle.md) | 1 <br/> [String](string.md) | Rolle ein aktør eller ressurs har i ein relasjon |
 | [relasjon_til](relasjon_til.md) | 1 <br/> [Uri](uri.md) | Den relaterte ressursen i ein kvalifisert relasjon |
 
 
@@ -258,17 +249,10 @@ attributes:
     alias: id
     owner: Relasjon
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -276,11 +260,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   har_rolle:
@@ -295,7 +285,7 @@ attributes:
     owner: Relasjon
     domain_of:
     - Relasjon
-    range: Konsept
+    range: string
     required: true
   relasjon_til:
     name: relasjon_til

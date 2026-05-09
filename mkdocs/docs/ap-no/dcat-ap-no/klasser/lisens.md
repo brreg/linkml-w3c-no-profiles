@@ -22,9 +22,9 @@ Alias: lisens
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
-| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
 | [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  yes  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
 
 
 
@@ -37,7 +37,7 @@ Alias: lisens
 
 | Property | Value |
 | --- | --- |
-| Range | [Konsept](konsept.md) |
+| Range | [String](string.md) |
 | Domain Of | [Distribusjon](distribusjon.md), [Datatjeneste](datatjeneste.md), [Katalog](katalog.md) |
 | Slot URI | [dct:license](http://purl.org/dc/terms/license) |
 
@@ -93,7 +93,7 @@ domain_of:
 - Distribusjon
 - Datatjeneste
 - Katalog
-range: Konsept
+range: string
 
 ```
 </details>

@@ -18,6 +18,17 @@ Alias: status
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  yes  |
+| [Katalogpost](katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  yes  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +38,7 @@ Alias: status
 | Property | Value |
 | --- | --- |
 | Range | [Konsept](konsept.md) |
+| Domain Of | [Distribusjon](distribusjon.md), [Datatjeneste](datatjeneste.md), [Katalogpost](katalogpost.md) |
 | Slot URI | [adms:status](http://www.w3.org/ns/adms#status) |
 
 ### Cardinality and Requirements
@@ -77,6 +89,10 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: adms:status
 alias: status
+domain_of:
+- Distribusjon
+- Datatjeneste
+- Katalogpost
 range: Konsept
 
 ```

@@ -33,13 +33,13 @@ URI: [cv:PublicOrganisation](http://data.europa.eu/m8g/PublicOrganisation)
     
 
         
-      OffentligOrganisasjon : dekningsomrade
+      OffentligOrganisasjon : dekningsomraade
         
           
     
         
         
-        OffentligOrganisasjon --> "1..*" Konsept : dekningsomrade
+        OffentligOrganisasjon --> "1..*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -125,7 +125,7 @@ URI: [cv:PublicOrganisation](http://data.europa.eu/m8g/PublicOrganisation)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [foretrekt_namn](foretrekt_namn.md) | 1..* <br/> [LangString](langstring.md) | Føretrekt namn/term for organisasjonen |
-| [dekningsomrade](dekningsomrade.md) | 1..* <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | 1..* <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 
 
 
@@ -307,12 +307,12 @@ from_schema: https://data.norge.no/linkml/cpsv-ap-no
 is_a: Aktor
 slots:
 - foretrekt_namn
-- dekningsomrade
+- dekningsomraade
 - heimeside
 - type_concept
 slot_usage:
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Obligatorisk
     required: true
@@ -347,8 +347,8 @@ description: Ein offentleg organisasjon som er ansvarleg for ei teneste.
 from_schema: https://data.norge.no/linkml/cpsv-ap-no
 is_a: Aktor
 slot_usage:
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Obligatorisk
     required: true
@@ -385,18 +385,17 @@ attributes:
     range: LangString
     required: true
     multivalued: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -415,7 +414,6 @@ attributes:
     alias: heimeside
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -433,7 +431,6 @@ attributes:
     alias: type_concept
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -452,7 +449,6 @@ attributes:
     alias: id
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -468,7 +464,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -485,7 +480,6 @@ attributes:
     alias: tittel
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -510,7 +504,6 @@ attributes:
     alias: identifikator_literal
     owner: OffentligOrganisasjon
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

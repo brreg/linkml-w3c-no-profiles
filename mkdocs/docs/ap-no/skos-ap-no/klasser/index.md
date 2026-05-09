@@ -22,7 +22,6 @@ Name: skos-ap-no
 | [Organisasjon](organisasjon.md) | Ein organisasjon som er utgjevar eller ansvarleg for eit omgrep |
 | [PartitivRelasjon](partitivrelasjon.md) | Ein partitiv relasjon mellom eit heilskapleg og eit partitivt omgrep |
 | [Samling](samling.md) | Ei namngitt samling av omgrep (skos:Collection) |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [VCardKontakt](vcardkontakt.md) | Kontaktinformasjon (vCard) for omgrepseigaren |
 
 
@@ -37,7 +36,7 @@ Name: skos-ap-no
 | [beskrivelse](beskrivelse.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [datastruktur_term](datastruktur_term.md) | Term brukt i datastrukturar (skosno:dataStructureLabel) |
 | [definisjon](definisjon.md) | Direkte definisjon som fritekst (skos:definition) |
-| [dekningsomrade](dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [eksempel](eksempel.md) | Eksempel på bruk av omgrepet (skos:example) |
 | [endringsdato](endringsdato.md) | Dato for siste endring av ressursen (dct:modified) |
 | [er_del_av_omgrep](er_del_av_omgrep.md) | Omgrep dette omgrepet er ein del av (xkos:isPartOf) |
@@ -80,7 +79,7 @@ Name: skos-ap-no
 | [relasjontype](relasjontype.md) | Rolle eller type av den assosiative relasjonen (skosno:relationRole) |
 | [sja_ogsa_omgrep](sja_ogsa_omgrep.md) | Relatert omgrep (rdfs:seeAlso) |
 | [spesifiserer](spesifiserer.md) | Omgrep dette omgrepet spesifiserer (xkos:specializes) |
-| [sprak](sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [status](status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tekst](tekst.md) | Definissjonstekst (rdf:value) |
 | [til_omgrep](til_omgrep.md) | Til-omgrepet i den assosiative relasjonen (skosno:hasToConcept) |
@@ -123,6 +122,7 @@ Name: skos-ap-no
 | [NonNegativeInteger](nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](spraak.md) | Språk |
 | [String](string.md) | A character string |
 | [Time](time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](uri.md) | a complete URI |

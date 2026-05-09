@@ -6,7 +6,10 @@
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "identifikator_literal": {
                     "description": "Tekstleg identifikator for ressursen (dct:identifier).",
@@ -48,8 +51,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -68,7 +71,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Basisgruppe",
             "type": "object"
@@ -226,12 +229,9 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
                 },
                 "kommuner": {
                     "description": "Container slot for \u00e5 legge tilrette for \u00e5 kunne ha fleire instanser av kommune i ei datafil.",
@@ -375,7 +375,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Containerklasse",
             "type": "object"
@@ -1253,8 +1253,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -1266,7 +1266,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Elev",
             "type": "object"
@@ -1282,8 +1282,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -1295,7 +1295,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Fylke",
             "type": "object"
@@ -1659,8 +1659,8 @@
             "additionalProperties": false,
             "description": "En kommune er et geografisk avgrenset omr\u00e5de som utgj\u00f8r en egen politisk og administrativ enhet innen en statsdannelse.",
             "properties": {
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kommunenummer": {
@@ -1679,7 +1679,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Kommune",
             "type": "object"
@@ -1710,8 +1710,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "jobber_paa_skole": {
@@ -1737,7 +1737,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Kontaktlaerer",
             "type": "object"
@@ -2065,8 +2065,8 @@
             "additionalProperties": false,
             "description": "Virksomhet, eller foretak, er betegnelser for en juridisk person eller en organisasjon som produserer varer eller tjenester.",
             "properties": {
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -2085,7 +2085,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "PrivatVirksomhet",
             "type": "object"
@@ -2180,8 +2180,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -2193,7 +2193,7 @@
                 }
             },
             "required": [
-                "identifikator"
+                "id"
             ],
             "title": "Rektor",
             "type": "object"
@@ -2330,8 +2330,8 @@
                         "null"
                     ]
                 },
-                "identifikator": {
-                    "description": "Global identifikator (CURIE/URI).",
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "navn": {
@@ -2343,27 +2343,9 @@
                 }
             },
             "required": [
-                "identifikator"
-            ],
-            "title": "Skole",
-            "type": "object"
-        },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
                 "id"
             ],
-            "title": "Spraak",
+            "title": "Skole",
             "type": "object"
         },
         "Standard": {
@@ -2597,12 +2579,9 @@
                 "null"
             ]
         },
-        "identifikator": {
-            "description": "Global identifikator (CURIE/URI).",
-            "type": [
-                "string",
-                "null"
-            ]
+        "id": {
+            "description": "URI-identifikator for ressursen.",
+            "type": "string"
         },
         "kommuner": {
             "description": "Container slot for \u00e5 legge tilrette for \u00e5 kunne ha fleire instanser av kommune i ei datafil.",
@@ -2746,7 +2725,7 @@
         }
     },
     "required": [
-        "identifikator"
+        "id"
     ],
     "title": "skole_ontologi",
     "type": "object",

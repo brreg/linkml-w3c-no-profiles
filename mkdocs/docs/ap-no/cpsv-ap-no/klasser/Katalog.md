@@ -21,13 +21,13 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
     click Katalog href "../Katalog/"
       Katalog : beskrivelse
         
-      Katalog : dekningsomrade
+      Katalog : dekningsomraade
         
           
     
         
         
-        Katalog --> "*" Konsept : dekningsomrade
+        Katalog --> "*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -86,16 +86,7 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
     
 
         
-      Katalog : sprak
-        
-          
-    
-        
-        
-        Katalog --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      Katalog : spraak
         
       Katalog : tittel
         
@@ -264,13 +255,13 @@ URI: [dcat:Catalog](http://www.w3.org/ns/dcat#Catalog)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
 | [oppdateringsfrekvens](oppdateringsfrekvens.md) | 0..1 <br/> [Konsept](konsept.md) | Kor ofte katalogen vert oppdatert |
 | [heimeside](heimeside.md) | * <br/> [Uri](uri.md) | Heimeside for ressursen eller organisasjonen (foaf:homepage) |
 | [inneheld_hending](inneheld_hending.md) | * <br/> [Hendelse](hendelse.md) | Hendingar i katalogen |
 | [lisens](lisens.md) | 0..1 <br/> [Uri](uri.md) | Lisens for katalogen |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 
 
 
@@ -568,13 +559,13 @@ slots:
 - inneheld_teneste
 - har_kontaktpunkt
 - utgjevar
-- dekningsomrade
+- dekningsomraade
 - endringsdato
 - oppdateringsfrekvens
 - heimeside
 - inneheld_hending
 - lisens
-- sprak
+- spraak
 slot_usage:
   tittel:
     name: tittel
@@ -606,8 +597,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   endringsdato:
@@ -630,8 +621,8 @@ slot_usage:
     name: lisens
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
 class_uri: dcat:Catalog
@@ -677,8 +668,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   endringsdato:
@@ -701,8 +692,8 @@ slot_usage:
     name: lisens
     in_subset:
     - Anbefalt
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     in_subset:
     - Anbefalt
 attributes:
@@ -715,7 +706,6 @@ attributes:
     alias: id
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -731,7 +721,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -748,7 +737,6 @@ attributes:
     alias: tittel
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -773,7 +761,6 @@ attributes:
     alias: beskrivelse
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -798,7 +785,6 @@ attributes:
     alias: identifikator_literal
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -838,7 +824,6 @@ attributes:
     alias: har_kontaktpunkt
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -860,18 +845,17 @@ attributes:
     - Katalog
     range: Aktor
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -915,7 +899,6 @@ attributes:
     alias: heimeside
     owner: Katalog
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - OffentligOrganisasjon
@@ -949,15 +932,15 @@ attributes:
     domain_of:
     - Katalog
     range: uri
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/cpsv-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: Katalog
     domain_of:
     - OffentligTjeneste

@@ -20,6 +20,7 @@ Klassifikasjon {
     uriList heimeside  
     string identifikator_literal  
     LangStringList nokkelord  
+    SpraakList spraak  
     LangStringList tittel  
     date utgivelsesdato  
 }
@@ -42,9 +43,6 @@ Mediatype {
 Organisasjon {
     uriorcurie id  
 }
-Spraak {
-    uriorcurie id  
-}
 Tidsrom {
     uriorcurie id  
     date tidsrom_slutt  
@@ -60,7 +58,6 @@ Klassifikasjon ||--|| Organisasjon : "utgjevar"
 Klassifikasjon ||--}o Klassifikasjon : "er_samanlikna_med"
 Klassifikasjon ||--}o Klassifikasjonsnivaa : "forste_nivaa"
 Klassifikasjon ||--}o Konsept : "tema"
-Klassifikasjon ||--}o Spraak : "sprak"
 Klassifikasjonsnivaa ||--}o Klassifikasjonsnivaa : "underordna_klassifikasjonsnivaa"
 Klassifikasjonsnivaa ||--}| Kategori : "har_medlem"
 Klassifikasjonssamanlikning ||--|| Organisasjon : "utgjevar"

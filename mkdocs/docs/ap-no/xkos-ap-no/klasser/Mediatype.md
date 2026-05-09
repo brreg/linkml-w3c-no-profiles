@@ -165,7 +165,6 @@ attributes:
     - Kategorisamanlikning
     - Organisasjon
     - Tidsrom
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling

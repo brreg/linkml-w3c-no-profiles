@@ -226,7 +226,7 @@ URI: [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource)
 | [beskrivelse](beskrivelse.md) | * <br/> [LangString](langstring.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](string.md) | Tekstleg identifikator for ressursen (dct:identifier) |
 | [har_referanse](har_referanse.md) | * <br/> [Uri](uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
-| [spraak](spraak.md) | * <br/> [String](string.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
 | [type_concept](type_concept.md) | 0..1 <br/> [Konsept](konsept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
 | [relatert_regulativ_ressurs](relatert_regulativ_ressurs.md) | * <br/> [RegulativRessurs](regulativressurs.md) | Relatert regulativ ressurs |
@@ -329,10 +329,11 @@ attributes:
     alias: id
     owner: RegulativRessurs
     domain_of:
-    - Spraak
-    - Mediatype
-    - Konsept
-    - Begrepssamling
+    - Containerklasse
+    - Skole
+    - Skoleeier
+    - Basisgruppe
+    - Person
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
@@ -346,6 +347,9 @@ attributes:
     - Distribusjon
     - Datasett
     - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
@@ -416,7 +420,7 @@ attributes:
     - Katalogpost
     - Katalog
     - Tekstdel
-    range: string
+    range: Spraak
     multivalued: true
   tittel:
     name: tittel

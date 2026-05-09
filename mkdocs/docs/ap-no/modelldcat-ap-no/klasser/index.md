@@ -50,7 +50,6 @@ Name: modelldcat-ap-no
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Modul](modul.md) | Ein modul som grupperer modellelement i informasjonsmodellen |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Objekttype](objekttype.md) | Ein objekttype — ein klasse med eigenskapar i informasjonsmodellen |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RootObjekttype](rootobjekttype.md) | Ein rotobjekttype — toppnivå-klasse i informasjonsmodellen |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |
 | [Standard](standard.md) | Ein standard (dct:Standard) |
 | [Tidsperiode](tidsperiode.md) | Eit tidsintervall med start- og sluttdato |
 
@@ -70,7 +69,7 @@ Name: modelldcat-ap-no
 | [betinger](betinger.md) | Modellelement betingelsesregelen avgrensar (modelldcatno:constrains) |
 | [danner_symmetri_med](danner_symmetri_med.md) | Eigenskap som denne eigenskapen dannar symmetri med (modelldcatno:formsSymmet... |
 | [definisjon](definisjon.md) | Definisjon av kodeelementet (skos:definition) |
-| [dekningsomrade](dekningsomrade.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | Geografisk dekningsområde (dct:spatial) |
 | [eigenskapsmerknad](eigenskapsmerknad.md) | Fritekstmerknad om ein eigenskap (modelldcatno:propertyNote) |
 | [eksempel_kode](eksempel_kode.md) | Eksempel på bruk av kodeelementet (skos:example) |
 | [eksklusjonsnotat](eksklusjonsnotat.md) | Notat om kva som er ekskludert frå kodeelementet (xkos:exclusionNote) |
@@ -135,7 +134,7 @@ Name: modelldcat-ap-no
 | [skapar](skapar.md) | Aktøren som primært har skapt ressursen (dct:creator) |
 | [skjult_term](skjult_term.md) | Skjult term for kodeelementet (skos:hiddenLabel) |
 | [sluttdato](sluttdato.md) | Sluttdato for tidsperioden (dcat:endDate) |
-| [sprak](sprak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [startdato](startdato.md) | Startdato for tidsperioden (dcat:startDate) |
 | [status](status.md) | Status for ressursen frå eit kontrollert vokabular (adms:status) |
 | [tema](tema.md) | Tema frå eit kontrollert vokabular (dcat:theme) |
@@ -182,6 +181,7 @@ Name: modelldcat-ap-no
 | [NonNegativeInteger](nonnegativeinteger.md) | Ikkje-negativ heltalsverdi (xsd:nonNegativeInteger) |
 | [Objectidentifier](objectidentifier.md) | A URI or CURIE that represents an object in the model |
 | [Sparqlpath](sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Spraak](spraak.md) | Språk |
 | [String](string.md) | A character string |
 | [Time](time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](uri.md) | a complete URI |

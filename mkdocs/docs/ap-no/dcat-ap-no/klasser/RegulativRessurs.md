@@ -38,16 +38,7 @@ URI: [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource)
     
 
         
-      RegulativRessurs : sprak
-        
-          
-    
-        
-        
-        RegulativRessurs --> "*" Spraak : sprak
-        click Spraak href "../Spraak/"
-    
-
+      RegulativRessurs : spraak
         
       RegulativRessurs : tittel
         
@@ -235,7 +226,7 @@ URI: [eli:LegalResource](http://data.europa.eu/eli/ontology#LegalResource)
 | [beskrivelse](beskrivelse.md) | * <br/> [LangString](langstring.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [identifikator_literal](identifikator_literal.md) | 0..1 <br/> [String](string.md) | Tekstleg identifikator for ressursen (dct:identifier) |
 | [har_referanse](har_referanse.md) | * <br/> [Uri](uri.md) | Referanse til ekstern ressurs (rdfs:seeAlso) |
-| [sprak](sprak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Språk brukt i ressursen (dct:language) |
 | [tittel](tittel.md) | * <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
 | [type_concept](type_concept.md) | 0..1 <br/> [Konsept](konsept.md) | Type ressurs frå eit kontrollert vokabular (dct:type) |
 | [relatert_regulativ_ressurs](relatert_regulativ_ressurs.md) | * <br/> [RegulativRessurs](regulativressurs.md) | Relatert regulativ ressurs |
@@ -311,7 +302,7 @@ slots:
 - beskrivelse
 - identifikator_literal
 - har_referanse
-- sprak
+- spraak
 - tittel
 - type_concept
 - relatert_regulativ_ressurs
@@ -337,17 +328,10 @@ attributes:
     alias: id
     owner: RegulativRessurs
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -355,11 +339,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   beskrivelse:
@@ -405,17 +395,17 @@ attributes:
     alias: har_referanse
     owner: RegulativRessurs
     domain_of:
-    - Standard
     - RegulativRessurs
+    - Standard
     range: uri
     multivalued: true
-  sprak:
-    name: sprak
+  spraak:
+    name: spraak
     description: Språk brukt i ressursen (dct:language).
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:language
-    alias: sprak
+    alias: spraak
     owner: RegulativRessurs
     domain_of:
     - RegulativRessurs
@@ -423,6 +413,7 @@ attributes:
     - Datasett
     - Katalogpost
     - Katalog
+    - Tekstdel
     range: Spraak
     multivalued: true
   tittel:
@@ -434,7 +425,6 @@ attributes:
     alias: tittel
     owner: RegulativRessurs
     domain_of:
-    - Standard
     - RegulativRessurs
     - Distribusjon
     - Datasett
@@ -442,6 +432,7 @@ attributes:
     - Datatjeneste
     - Katalogpost
     - Katalog
+    - Standard
     range: LangString
     multivalued: true
   type_concept:

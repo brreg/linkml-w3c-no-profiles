@@ -35,7 +35,7 @@ Alias: annen_ansvarlig_aktor
 
 | Property | Value |
 | --- | --- |
-| Range | [ProvAttributering](provattributering.md) |
+| Range | [String](string.md) |
 | Domain Of | [Datasett](datasett.md) |
 | Slot URI | [prov:qualifiedAttribution](http://www.w3.org/ns/prov#qualifiedAttribution) |
 
@@ -56,6 +56,13 @@ Alias: annen_ansvarlig_aktor
 
 ## Identifier and Mapping Information
 
+
+
+### Annotations
+
+| property | value |
+| --- | --- |
+| gyldige_verdier | prov:Attribution |
 
 
 
@@ -83,6 +90,10 @@ Alias: annen_ansvarlig_aktor
 <details>
 ```yaml
 name: annen_ansvarlig_aktor
+annotations:
+  gyldige_verdier:
+    tag: gyldige_verdier
+    value: prov:Attribution
 description: Kvalifisert attributering til ansvarleg aktør.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
@@ -90,7 +101,7 @@ slot_uri: prov:qualifiedAttribution
 alias: annen_ansvarlig_aktor
 domain_of:
 - Datasett
-range: ProvAttributering
+range: string
 multivalued: true
 
 ```

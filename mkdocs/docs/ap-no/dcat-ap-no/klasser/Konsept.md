@@ -94,23 +94,13 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 | [Aktor](aktor.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [RegulativRessurs](regulativressurs.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Gebyr](gebyr.md) | [valuta](valuta.md) | range | [Konsept](konsept.md) |
-| [Relasjon](relasjon.md) | [har_rolle](har_rolle.md) | range | [Konsept](konsept.md) |
-| [Distribusjon](distribusjon.md) | [lisens](lisens.md) | range | [Konsept](konsept.md) |
 | [Distribusjon](distribusjon.md) | [status](status.md) | range | [Konsept](konsept.md) |
-| [Distribusjon](distribusjon.md) | [tilgjengelighet](tilgjengelighet.md) | range | [Konsept](konsept.md) |
-| [Datasett](datasett.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [Datasett](datasett.md) | [begrep](begrep.md) | range | [Konsept](konsept.md) |
-| [Datasett](datasett.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [Datasett](datasett.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [Datasett](datasett.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
-| [Datasettserie](datasettserie.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [Datasettserie](datasettserie.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
-| [Datatjeneste](datatjeneste.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [Datatjeneste](datatjeneste.md) | [tilgjengelighet](tilgjengelighet.md) | range | [Konsept](konsept.md) |
-| [Datatjeneste](datatjeneste.md) | [lisens](lisens.md) | range | [Konsept](konsept.md) |
+| [Datasettserie](datasettserie.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [Datatjeneste](datatjeneste.md) | [status](status.md) | range | [Konsept](konsept.md) |
 | [Katalogpost](katalogpost.md) | [status](status.md) | range | [Konsept](konsept.md) |
-| [Katalog](katalog.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
-| [Katalog](katalog.md) | [lisens](lisens.md) | range | [Konsept](konsept.md) |
+| [Katalog](katalog.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 
 
 
@@ -184,17 +174,10 @@ attributes:
     alias: id
     owner: Konsept
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -202,11 +185,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
 class_uri: skos:Concept

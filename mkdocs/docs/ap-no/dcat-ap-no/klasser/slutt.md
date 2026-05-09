@@ -35,7 +35,7 @@ Alias: slutt
 
 | Property | Value |
 | --- | --- |
-| Range | [Tidsinstant](tidsinstant.md) |
+| Range | [Datetime](datetime.md) |
 | Domain Of | [Tidsrom](tidsrom.md) |
 | Slot URI | [time:hasEnd](http://www.w3.org/6006/time#hasEnd) |
 
@@ -89,7 +89,7 @@ slot_uri: time:hasEnd
 alias: slutt
 domain_of:
 - Tidsrom
-range: Tidsinstant
+range: datetime
 
 ```
 </details>

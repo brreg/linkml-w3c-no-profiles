@@ -128,12 +128,12 @@ dqv:merknad-1 a dqv:QualityAnnotation ;
 
 dqv:tekstdel-1 a oa:TextualBody ;
     dct:format "tekstformat" ;
-    dct:language "NO" ;
+    dct:language "NO"^^dct:language ;
     rdfs:value "Bruker rapporterer at datakvaliteten er tilfredsstillende." .
 
 dqv:tekstdel-2 a oa:TextualBody ;
     dct:format "tekstformat" ;
-    dct:language "NO" ;
+    dct:language "NO"^^dct:language ;
     rdfs:value "Datasettet mangler enkelte observasjoner for 2023." .
 
 dqv:tidsrom-1 a dct:PeriodOfTime ;
@@ -183,7 +183,7 @@ samtbuskole:kontakt-tekniskkontakt a vcard:Kind ;
 
 samtbuskole:lov-2019-123 a eli:LegalResource ;
     dct:description "Lovverk som regulerer grunnskolen."^^rdf:langString ;
-    dct:language "samtbuskole:no" ;
+    dct:language "samtbuskole:no"^^dct:language ;
     dct:title "Lov om grunnskolen"^^rdf:langString ;
     dct:type samtbuskole:Lov ;
     rdfs:seeAlso "https://lovdata.no/lov/2019-123"^^xsd:anyURI .

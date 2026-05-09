@@ -24,13 +24,13 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
       
       Datasettserie : beskrivelse
         
-      Datasettserie : dekningsomrade
+      Datasettserie : dekningsomraade
         
           
     
         
         
-        Datasettserie --> "*" Konsept : dekningsomrade
+        Datasettserie --> "*" Konsept : dekningsomraade
         click Konsept href "../Konsept/"
     
 
@@ -49,15 +49,6 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 
         
       Datasettserie : frekvens
-        
-          
-    
-        
-        
-        Datasettserie --> "0..1" Frekvens : frekvens
-        click Frekvens href "../Frekvens/"
-    
-
         
       Datasettserie : gjeldende_lovgivning
         
@@ -95,15 +86,6 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 
         
       Datasettserie : tema
-        
-          
-    
-        
-        
-        Datasettserie --> "1..*" Konsept : tema
-        click Konsept href "../Konsept/"
-    
-
         
       Datasettserie : tidsrom
         
@@ -214,7 +196,7 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 | --- | --- | --- |
 | [beskrivelse](beskrivelse.md) | 1..* <br/> [LangString](langstring.md) | Fritekstbeskrivelse av ressursen (dct:description) |
 | [kontaktpunkt](kontaktpunkt.md) | 1..* <br/> [Kontaktopplysning](kontaktopplysning.md) | Kontaktinformasjon for hendvendelsar om ressursen |
-| [tema](tema.md) | 1..* <br/> [Konsept](konsept.md) | Tema frå eit kontrollert vokabular |
+| [tema](tema.md) | 1..* <br/> [String](string.md) | Tema frå eit kontrollert vokabular |
 | [tittel](tittel.md) | 1..* <br/> [LangString](langstring.md) | Namn/tittel på ressursen (dct:title) |
 | [utgiver](utgiver.md) | 1 <br/> [Aktor](aktor.md) | Aktøren som er ansvarleg for å tilgjengeleggjere ressursen |
 
@@ -274,7 +256,7 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [dekningsomrade](dekningsomrade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
+| [dekningsomraade](dekningsomraade.md) | * <br/> [Konsept](konsept.md) | Geografisk dekningsområde (dct:spatial) |
 | [gjeldende_lovgivning](gjeldende_lovgivning.md) | * <br/> [RegulativRessurs](regulativressurs.md) | Lovgjeving som gjeld for ressursen |
 | [siste](siste.md) | 0..1 <br/> [Datasett](datasett.md) | Siste datasett i ei datasettserie |
 | [tidsrom](tidsrom.md) | * <br/> [Tidsrom](tidsrom.md) | Tidsperiode ressursen dekkar |
@@ -478,7 +460,7 @@ URI: [dcat:DatasetSeries](http://www.w3.org/ns/dcat#DatasetSeries)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [endringsdato](endringsdato.md) | 0..1 <br/> [Date](date.md) | Dato for siste endring av ressursen (dct:modified) |
-| [frekvens](frekvens.md) | 0..1 <br/> [Frekvens](frekvens.md) | Oppdateringsfrekvens for datasettet |
+| [frekvens](frekvens.md) | 0..1 <br/> [String](string.md) | Oppdateringsfrekvens for datasettet |
 | [forste](forste.md) | 0..1 <br/> [Datasett](datasett.md) | Første datasett i ei datasettserie |
 | [utgivelsesdato](utgivelsesdato.md) | 0..1 <br/> [Date](date.md) | Dato ressursen vart første gong publisert (dct:issued) |
 
@@ -555,7 +537,7 @@ slots:
 - tema
 - tittel
 - utgiver
-- dekningsomrade
+- dekningsomraade
 - gjeldende_lovgivning
 - siste
 - tidsrom
@@ -589,8 +571,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   gjeldende_lovgivning:
@@ -644,8 +626,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     in_subset:
     - Anbefalt
   gjeldende_lovgivning:
@@ -715,7 +697,7 @@ attributes:
     - Datasett
     - Datasettserie
     - Datatjeneste
-    range: Konsept
+    range: string
     required: true
     multivalued: true
   tittel:
@@ -729,7 +711,6 @@ attributes:
     alias: tittel
     owner: Datasettserie
     domain_of:
-    - Standard
     - RegulativRessurs
     - Distribusjon
     - Datasett
@@ -737,6 +718,7 @@ attributes:
     - Datatjeneste
     - Katalogpost
     - Katalog
+    - Standard
     range: LangString
     required: true
     multivalued: true
@@ -757,15 +739,15 @@ attributes:
     - Katalog
     range: Aktor
     required: true
-  dekningsomrade:
-    name: dekningsomrade
+  dekningsomraade:
+    name: dekningsomraade
     description: Geografisk dekningsområde (dct:spatial).
     in_subset:
     - Anbefalt
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
     slot_uri: dct:spatial
-    alias: dekningsomrade
+    alias: dekningsomraade
     owner: Datasettserie
     domain_of:
     - Datasett
@@ -837,6 +819,10 @@ attributes:
     range: date
   frekvens:
     name: frekvens
+    annotations:
+      gyldige_verdier:
+        tag: gyldige_verdier
+        value: dct:Frequency
     description: Oppdateringsfrekvens for datasettet.
     from_schema: https://data.norge.no/linkml/dcat-ap-no
     rank: 1000
@@ -845,7 +831,7 @@ attributes:
     owner: Datasettserie
     domain_of:
     - Datasettserie
-    range: Frekvens
+    range: string
   forste:
     name: forste
     description: Første datasett i ei datasettserie.
@@ -881,17 +867,10 @@ attributes:
     alias: id
     owner: Datasettserie
     domain_of:
-    - Frekvens
-    - ProvenanceStatement
-    - OdrlPolicy
-    - ProvAktivitet
-    - ProvAttributering
-    - Tidsinstant
     - KatalogisertRessurs
     - Aktor
     - Kontaktopplysning
     - Tidsrom
-    - Standard
     - RegulativRessurs
     - Identifikator
     - Rettighetserklaring
@@ -899,11 +878,17 @@ attributes:
     - Gebyr
     - Relasjon
     - Distribusjon
+    - Datasett
     - Katalogpost
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
 class_uri: dcat:DatasetSeries

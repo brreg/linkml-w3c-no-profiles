@@ -3,7 +3,7 @@
 # Slot: tilgangsrettigheter 
 
 
-_Tilgangsrettar for ressursen._
+_Egenskapen brukes til å angi om det er allmenn tilgang, betinget tilgang eller ikke-allmenn tilgang til datasettet._
 
 
 
@@ -22,8 +22,8 @@ Alias: tilgangsrettigheter
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 | [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 
 
 
@@ -36,7 +36,7 @@ Alias: tilgangsrettigheter
 
 | Property | Value |
 | --- | --- |
-| Range | [Rettighetserklaring](rettighetserklaring.md) |
+| Range | [Uri](uri.md) |
 | Domain Of | [Datasett](datasett.md), [Datatjeneste](datatjeneste.md) |
 | Slot URI | [dct:accessRights](http://purl.org/dc/terms/accessRights) |
 
@@ -44,6 +44,7 @@ Alias: tilgangsrettigheter
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -83,7 +84,8 @@ Alias: tilgangsrettigheter
 <details>
 ```yaml
 name: tilgangsrettigheter
-description: Tilgangsrettar for ressursen.
+description: Egenskapen brukes til å angi om det er allmenn tilgang, betinget tilgang
+  eller ikke-allmenn tilgang til datasettet.
 from_schema: https://data.norge.no/linkml/dcat-ap-no
 rank: 1000
 slot_uri: dct:accessRights
@@ -91,7 +93,8 @@ alias: tilgangsrettigheter
 domain_of:
 - Datasett
 - Datatjeneste
-range: Rettighetserklaring
+range: uri
+multivalued: true
 
 ```
 </details>

@@ -28,7 +28,7 @@ URI: [samtbuskole:Person](https://example.no/ontology/skole#Person)
       Person <|-- Kontaktlaerer
         click Kontaktlaerer href "../Kontaktlaerer/"
       
-      Person : identifikator
+      Person : id
         
       Person : navn
         
@@ -104,7 +104,7 @@ URI: [samtbuskole:Person](https://example.no/ontology/skole#Person)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [identifikator](identifikator.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Global identifikator (CURIE/URI) |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
 | [navn](navn.md) | 0..1 <br/> [String](string.md) | Namn på ressursen |
 
 
@@ -166,7 +166,7 @@ exact_mappings:
 - foaf:Person
 abstract: true
 slots:
-- identifikator
+- id
 - navn
 
 ```
@@ -183,13 +183,13 @@ exact_mappings:
 - foaf:Person
 abstract: true
 attributes:
-  identifikator:
-    name: identifikator
-    description: Global identifikator (CURIE/URI).
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
     from_schema: https://example.no/ontology/samt-bu-skole
     rank: 1000
     identifier: true
-    alias: identifikator
+    alias: id
     owner: Person
     domain_of:
     - Containerklasse
@@ -197,6 +197,28 @@ attributes:
     - Skoleeier
     - Basisgruppe
     - Person
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
+    - Mediatype
+    - Konsept
+    - Begrepssamling
+    - Kvalitetsdimensjon
+    - Kvalitetsmaal
+    - Kvalitetsmerknad
+    - Kvalitetsmaaling
+    - Standard
+    - Tekstdel
     range: uriorcurie
     required: true
   navn:

@@ -166,7 +166,7 @@
                         "null"
                     ]
                 },
-                "godtek_sprak": {
+                "godtek_spraak": {
                     "description": "Spr\u00e5k dokumentasjonstypen er akseptert i.",
                     "items": {
                         "type": "string"
@@ -362,7 +362,7 @@
                     },
                     "type": "array"
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -436,7 +436,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -533,7 +533,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -653,229 +653,16 @@
             "title": "Livshendelse",
             "type": "object"
         },
-        "LovpalagtTjeneste": {
-            "additionalProperties": false,
-            "description": "Ei lovp\u00e5lagd teneste som offentlege organ er p\u00e5lagde \u00e5 utf\u00f8re.",
-            "properties": {
-                "beskrivelse": {
-                    "description": "Fritekstbeskrivelse av ressursen (dct:description).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "dekningsomrade": {
-                    "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "er_del_av": {
-                    "description": "Tenesta er del av ei anna teneste.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
-                "er_gruppert_av": {
-                    "description": "Hending(ar) som grupperer tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "er_klassifisert_av": {
-                    "description": "Omgrep tenesta er klassifisert med.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "folger": {
-                    "description": "Regelverk tenesta f\u00f8lgjer.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "har_del": {
-                    "description": "Deltenester som inng\u00e5r i denne tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "har_dokumentasjonstype": {
-                    "description": "Dokumentasjon som krevst for tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "har_gebyr": {
-                    "description": "Gebyr knytt til tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "har_kontaktpunkt": {
-                    "description": "Kontaktpunkt for tenesta eller organisasjonen.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "har_regulativ_ressurs": {
-                    "description": "Regulativ ressurs (lov, forskrift) knytt til tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "har_tenesteresultattype": {
-                    "description": "Typen resultat tenesta kan produsere.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "heimeside": {
-                    "description": "Heimeside for ressursen eller organisasjonen (foaf:homepage).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                },
-                "identifikator_literal": {
-                    "description": "Tekstleg identifikator for ressursen (dct:identifier).",
-                    "type": "string"
-                },
-                "krev": {
-                    "description": "Teneste eller ressurs denne tenesta krev.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "malgruppe": {
-                    "description": "M\u00e5lgruppe for tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "nokkelord": {
-                    "description": "N\u00f8kkelord som beskriv ressursen (dcat:keyword).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "sektor": {
-                    "description": "Industri/sektor tenesta tilh\u00f8yrer.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "tema": {
-                    "description": "Emne/tema tenesta handlar om.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "temaomrade": {
-                    "description": "Tematisk omr\u00e5de for tenesta.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
-                "tittel": {
-                    "description": "Namn/tittel p\u00e5 ressursen (dct:title).",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                "type_concept": {
-                    "description": "Type ressurs fr\u00e5 eit kontrollert vokabular (dct:type).",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id",
-                "tittel",
-                "beskrivelse",
-                "identifikator_literal",
-                "har_kontaktpunkt",
-                "har_tenesteresultattype"
-            ],
-            "title": "LovpalagtTjeneste",
-            "type": "object"
-        },
         "Mediatype": {
             "additionalProperties": false,
             "description": "Ein medietype eller filformat (dct:MediaTypeOrExtent).",
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -895,7 +682,7 @@
                         "null"
                     ]
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -954,7 +741,7 @@
             },
             "required": [
                 "foretrekt_namn",
-                "dekningsomrade",
+                "dekningsomraade",
                 "id",
                 "tittel",
                 "identifikator_literal"
@@ -980,7 +767,7 @@
                     },
                     "type": "array"
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -1166,16 +953,6 @@
                         "null"
                     ]
                 },
-                "realiserer": {
-                    "description": "Lovp\u00e5lagd teneste denne offentlege tenesta realiserer.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
-                },
                 "relatert_teneste": {
                     "description": "Relatert teneste.",
                     "items": {
@@ -1196,7 +973,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1285,7 +1062,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1358,24 +1135,6 @@
             "title": "RegulativRessurs",
             "type": "object"
         },
-        "Spraak": {
-            "additionalProperties": false,
-            "description": "Ein spr\u00e5kreferanse (dct:LinguisticSystem).",
-            "properties": {
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Spraak",
-            "type": "object"
-        },
         "Tjeneste": {
             "additionalProperties": false,
             "description": "Ei teneste levert av ein ikkje-offentleg akt\u00f8r.",
@@ -1394,7 +1153,7 @@
                     },
                     "type": "array"
                 },
-                "dekningsomrade": {
+                "dekningsomraade": {
                     "description": "Geografisk dekningsomr\u00e5de (dct:spatial).",
                     "items": {
                         "type": "string"
@@ -1600,7 +1359,7 @@
                         "null"
                     ]
                 },
-                "sprak": {
+                "spraak": {
                     "description": "Spr\u00e5k brukt i ressursen (dct:language).",
                     "items": {
                         "type": "string"
@@ -1777,7 +1536,7 @@
                         "null"
                     ]
                 },
-                "mogleg_sprak": {
+                "mogleg_spraak": {
                     "description": "Mogleg spr\u00e5k for tenesteresultatet.",
                     "items": {
                         "type": "string"

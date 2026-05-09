@@ -18,15 +18,6 @@ Alias: er_i_samsvar_med
 
 
 
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Datasett](datasett.md) | Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for kvalitetsinf... |  yes  |
-
-
-
-
 
 
 ## Properties
@@ -36,7 +27,6 @@ Alias: er_i_samsvar_med
 | Property | Value |
 | --- | --- |
 | Range | [Standard](standard.md) |
-| Domain Of | [Datasett](datasett.md) |
 | Slot URI | [dct:conformsTo](http://purl.org/dc/terms/conformsTo) |
 
 ### Cardinality and Requirements
@@ -88,8 +78,6 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: dct:conformsTo
 alias: er_i_samsvar_med
-domain_of:
-- Datasett
 range: Standard
 multivalued: true
 

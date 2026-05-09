@@ -22,18 +22,17 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Definisjon](definisjon.md) | Ein definisjon av eit omgrep via eit eige objekt (euvoc:XlNote) |  no  |
 | [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
-| [Begrep](begrep.md) | Eit omgrep med definisjon og tilhøyrande metadata (skos:Concept) |  no  |
+| [Definisjon](definisjon.md) | Ein definisjon av eit omgrep via eit eige objekt (euvoc:XlNote) |  no  |
+| [Samling](samling.md) | Ei namngitt samling av omgrep (skos:Collection) |  no  |
+| [AssosiativRelasjon](assosiativrelasjon.md) | Ein assosiativ relasjon mellom to omgrep |  no  |
 | [VCardKontakt](vcardkontakt.md) | Kontaktinformasjon (vCard) for omgrepseigaren |  no  |
+| [GeneriskRelasjon](generiskrelasjon.md) | Ein generisk relasjon mellom eit overomgrep og eit underomgrep |  no  |
 | [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
+| [Begrep](begrep.md) | Eit omgrep med definisjon og tilhøyrande metadata (skos:Concept) |  no  |
 | [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
 | [PartitivRelasjon](partitivrelasjon.md) | Ein partitiv relasjon mellom eit heilskapleg og eit partitivt omgrep |  no  |
 | [Organisasjon](organisasjon.md) | Ein organisasjon som er utgjevar eller ansvarleg for eit omgrep |  no  |
-| [AssosiativRelasjon](assosiativrelasjon.md) | Ein assosiativ relasjon mellom to omgrep |  no  |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
-| [GeneriskRelasjon](generiskrelasjon.md) | Ein generisk relasjon mellom eit overomgrep og eit underomgrep |  no  |
-| [Samling](samling.md) | Ei namngitt samling av omgrep (skos:Collection) |  no  |
 
 
 
@@ -47,7 +46,7 @@ Alias: id
 | Property | Value |
 | --- | --- |
 | Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Organisasjon](organisasjon.md), [VCardKontakt](vcardkontakt.md), [Begrep](begrep.md), [Definisjon](definisjon.md), [AssosiativRelasjon](assosiativrelasjon.md), [GeneriskRelasjon](generiskrelasjon.md), [PartitivRelasjon](partitivrelasjon.md), [Samling](samling.md), [Spraak](spraak.md), [Mediatype](mediatype.md), [Konsept](konsept.md), [Begrepssamling](begrepssamling.md) |
+| Domain Of | [Organisasjon](organisasjon.md), [VCardKontakt](vcardkontakt.md), [Begrep](begrep.md), [Definisjon](definisjon.md), [AssosiativRelasjon](assosiativrelasjon.md), [GeneriskRelasjon](generiskrelasjon.md), [PartitivRelasjon](partitivrelasjon.md), [Samling](samling.md), [Mediatype](mediatype.md), [Konsept](konsept.md), [Begrepssamling](begrepssamling.md) |
 
 ### Cardinality and Requirements
 
@@ -114,7 +113,6 @@ domain_of:
 - GeneriskRelasjon
 - PartitivRelasjon
 - Samling
-- Spraak
 - Mediatype
 - Konsept
 - Begrepssamling

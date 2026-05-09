@@ -3,7 +3,9 @@
 # Slot: er_i_kvalitetsdimensjon 
 
 
-_Kvalitetsdimensjonen denne merknaden eller standarden gjeld._
+_Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld._
+
+__
 
 
 
@@ -23,9 +25,9 @@ Alias: er_i_kvalitetsdimensjon
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Kvalitetssertifikat](kvalitetssertifikat.md) | Eit sertifikat som stadfester kvaliteten til eit datasett |  no  |
+| [Kvalitetsmerknad](kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  yes  |
 | [Brukartilbakemelding](brukartilbakemelding.md) | Tilbakemelding frå ein brukar om kvaliteten til eit datasett |  no  |
 | [Standard](standard.md) | Ein standard eller spesifikasjon som eit datasett er i samsvar med |  yes  |
-| [Kvalitetsmerknad](kvalitetsmerknad.md) | Ein merknad om kvaliteten til eit datasett |  yes  |
 
 
 
@@ -46,6 +48,7 @@ Alias: er_i_kvalitetsdimensjon
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -85,7 +88,9 @@ Alias: er_i_kvalitetsdimensjon
 <details>
 ```yaml
 name: er_i_kvalitetsdimensjon
-description: Kvalitetsdimensjonen denne merknaden eller standarden gjeld.
+description: 'Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.
+
+  '
 from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: dqv:inDimension
@@ -94,6 +99,8 @@ domain_of:
 - Kvalitetsmerknad
 - Standard
 range: Kvalitetsdimensjon
+required: false
+multivalued: true
 
 ```
 </details>

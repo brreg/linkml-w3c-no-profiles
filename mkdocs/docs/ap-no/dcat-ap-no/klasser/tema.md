@@ -22,8 +22,8 @@ Alias: tema
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 | [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  yes  |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  yes  |
 | [Datasettserie](datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  yes  |
 
 
@@ -37,7 +37,7 @@ Alias: tema
 
 | Property | Value |
 | --- | --- |
-| Range | [Konsept](konsept.md) |
+| Range | [String](string.md) |
 | Domain Of | [Datasett](datasett.md), [Datasettserie](datasettserie.md), [Datatjeneste](datatjeneste.md) |
 | Slot URI | [dcat:theme](http://www.w3.org/ns/dcat#theme) |
 
@@ -94,7 +94,7 @@ domain_of:
 - Datasett
 - Datasettserie
 - Datatjeneste
-range: Konsept
+range: string
 multivalued: true
 
 ```

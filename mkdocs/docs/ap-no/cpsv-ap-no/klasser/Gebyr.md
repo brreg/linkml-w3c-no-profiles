@@ -214,7 +214,6 @@ URI: [cv:Cost](http://data.europa.eu/m8g/Cost)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [har_gebyr](har_gebyr.md) | range | [Gebyr](gebyr.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [har_gebyr](har_gebyr.md) | range | [Gebyr](gebyr.md) |
 | [Tjeneste](tjeneste.md) | [har_gebyr](har_gebyr.md) | range | [Gebyr](gebyr.md) |
 
@@ -328,7 +327,6 @@ attributes:
     alias: id
     owner: Gebyr
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -344,7 +342,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -361,7 +358,6 @@ attributes:
     alias: beskrivelse
     owner: Gebyr
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -385,7 +381,6 @@ attributes:
     alias: identifikator_literal
     owner: Gebyr
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

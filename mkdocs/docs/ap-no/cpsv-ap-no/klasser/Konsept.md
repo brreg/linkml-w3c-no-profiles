@@ -91,15 +91,8 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [temaomrade](temaomrade.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [er_klassifisert_av](er_klassifisert_av.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [malgruppe](malgruppe.md) | range | [Konsept](konsept.md) |
-| [LovpalagtTjeneste](lovpalagttjeneste.md) | [sektor](sektor.md) | range | [Konsept](konsept.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [OffentligTjeneste](offentligtjeneste.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [OffentligTjeneste](offentligtjeneste.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [status](status.md) | range | [Konsept](konsept.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [temaomrade](temaomrade.md) | range | [Konsept](konsept.md) |
@@ -107,7 +100,7 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 | [OffentligTjeneste](offentligtjeneste.md) | [malgruppe](malgruppe.md) | range | [Konsept](konsept.md) |
 | [OffentligTjeneste](offentligtjeneste.md) | [sektor](sektor.md) | range | [Konsept](konsept.md) |
 | [Tjeneste](tjeneste.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
-| [Tjeneste](tjeneste.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [Tjeneste](tjeneste.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [Tjeneste](tjeneste.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Tjeneste](tjeneste.md) | [status](status.md) | range | [Konsept](konsept.md) |
 | [Tjeneste](tjeneste.md) | [temaomrade](temaomrade.md) | range | [Konsept](konsept.md) |
@@ -120,7 +113,7 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 | [Livshendelse](livshendelse.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Virksomhetshendelse](virksomhetshendelse.md) | [tema](tema.md) | range | [Konsept](konsept.md) |
 | [Virksomhetshendelse](virksomhetshendelse.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
-| [OffentligOrganisasjon](offentligorganisasjon.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [OffentligOrganisasjon](offentligorganisasjon.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [OffentligOrganisasjon](offentligorganisasjon.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Tjenestekanal](tjenestekanal.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Dokumentasjonstype](dokumentasjonstype.md) | [klassifisering](klassifisering.md) | range | [Konsept](konsept.md) |
@@ -130,7 +123,7 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 | [Regel](regel.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [RegulativRessurs](regulativressurs.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
 | [Deltagelse](deltagelse.md) | [har_rolle](har_rolle.md) | range | [Konsept](konsept.md) |
-| [Katalog](katalog.md) | [dekningsomrade](dekningsomrade.md) | range | [Konsept](konsept.md) |
+| [Katalog](katalog.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
 | [Katalog](katalog.md) | [oppdateringsfrekvens](oppdateringsfrekvens.md) | range | [Konsept](konsept.md) |
 
 
@@ -205,7 +198,6 @@ attributes:
     alias: id
     owner: Konsept
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -221,7 +213,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling

@@ -87,6 +87,22 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
 
 
 
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Aktor](aktor.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
+| [RegulativRessurs](regulativressurs.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
+| [Gebyr](gebyr.md) | [valuta](valuta.md) | range | [Konsept](konsept.md) |
+| [Distribusjon](distribusjon.md) | [status](status.md) | range | [Konsept](konsept.md) |
+| [Datasett](datasett.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
+| [Datasett](datasett.md) | [type_concept](type_concept.md) | range | [Konsept](konsept.md) |
+| [Datasettserie](datasettserie.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
+| [Datatjeneste](datatjeneste.md) | [status](status.md) | range | [Konsept](konsept.md) |
+| [Katalogpost](katalogpost.md) | [status](status.md) | range | [Konsept](konsept.md) |
+| [Katalog](katalog.md) | [dekningsomraade](dekningsomraade.md) | range | [Konsept](konsept.md) |
+
+
 
 
 
@@ -158,19 +174,28 @@ attributes:
     alias: id
     owner: Konsept
     domain_of:
-    - DcatRessurs
-    - Datasett
     - Kvalitetsdimensjon
     - Kvalitetsmaal
     - Kvalitetsmerknad
     - Kvalitetsmaaling
     - Standard
     - Tekstdel
-    - Motivasjon
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
+    - KatalogisertRessurs
+    - Aktor
+    - Kontaktopplysning
+    - Tidsrom
+    - RegulativRessurs
+    - Identifikator
+    - Rettighetserklaring
+    - Sjekksum
+    - Gebyr
+    - Relasjon
+    - Distribusjon
+    - Datasett
+    - Katalogpost
     range: uriorcurie
     required: true
 class_uri: skos:Concept

@@ -10,44 +10,44 @@
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
     dcterms:title "CPSV-AP-NO" ;
     pav:version "1.0" ;
-    sh:declare [ sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
-            sh:prefix "foaf" ],
-        [ sh:namespace "http://data.europa.eu/eli/ontology#"^^xsd:anyURI ;
-            sh:prefix "eli" ],
-        [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
-            sh:prefix "vcard" ],
-        [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
-            sh:prefix "xkos" ],
-        [ sh:namespace "http://purl.org/vocab/cpsv#"^^xsd:anyURI ;
-            sh:prefix "cpsv" ],
+    sh:declare [ sh:namespace "http://data.europa.eu/m8g/"^^xsd:anyURI ;
+            sh:prefix "cv" ],
         [ sh:namespace "https://data.norge.no/vocabulary/cpsvno#"^^xsd:anyURI ;
             sh:prefix "cpsvno" ],
-        [ sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
-            sh:prefix "linkml" ],
-        [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
-            sh:prefix "skos" ],
-        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
-            sh:prefix "xsd" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
-            sh:prefix "dcat" ],
-        [ sh:namespace "http://data.europa.eu/m8g/"^^xsd:anyURI ;
-            sh:prefix "cv" ],
-        [ sh:namespace "http://www.w3.org/ns/locn#"^^xsd:anyURI ;
-            sh:prefix "locn" ],
-        [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;
-            sh:prefix "org" ],
-        [ sh:namespace "https://data.norge.no/vocabulary/cccevno#"^^xsd:anyURI ;
-            sh:prefix "cccevno" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
+        [ sh:namespace "https://data.norge.no/vocabulary/cccevno#"^^xsd:anyURI ;
+            sh:prefix "cccevno" ],
+        [ sh:namespace "http://rdf-vocabulary.ddialliance.org/xkos#"^^xsd:anyURI ;
+            sh:prefix "xkos" ],
+        [ sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+            sh:prefix "foaf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ;
+            sh:prefix "org" ],
+        [ sh:namespace "http://purl.org/vocab/cpsv#"^^xsd:anyURI ;
+            sh:prefix "cpsv" ],
+        [ sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:anyURI ;
+            sh:prefix "vcard" ],
         [ sh:namespace "https://data.norge.no/vocabulary/dcatno#"^^xsd:anyURI ;
             sh:prefix "dcatno" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
+            sh:prefix "linkml" ],
+        [ sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
+            sh:prefix "dcat" ],
+        [ sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+            sh:prefix "skos" ],
+        [ sh:namespace "http://data.europa.eu/eli/ontology#"^^xsd:anyURI ;
+            sh:prefix "eli" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ;
-            sh:prefix "adms" ] ;
+            sh:prefix "adms" ],
+        [ sh:namespace "http://www.w3.org/ns/locn#"^^xsd:anyURI ;
+            sh:prefix "locn" ] ;
     linkml:classes <https://data.norge.no/linkml/cpsv-ap-no/Adresse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Aktor>,
         <https://data.norge.no/linkml/cpsv-ap-no/Begrepssamling>,
@@ -59,13 +59,11 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Konsept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt>,
         <https://data.norge.no/linkml/cpsv-ap-no/Livshendelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Mediatype>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenestekanal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype>,
@@ -74,7 +72,7 @@
     linkml:default_prefix "https://data.norge.no/linkml/cpsv-ap-no/" ;
     linkml:default_range <https://data.norge.no/linkml/cpsv-ap-no/string> ;
     linkml:description "Norsk applikasjonsprofil av CPSV (Core Public Service Vocabulary), modellert i LinkML med lenking framfor inlining. Basert på https://informasjonsforvaltning.github.io/cpsv-ap-no/" ;
-    linkml:generation_date "2026-05-05T13:24:19"^^xsd:dateTime ;
+    linkml:generation_date "2026-05-09T16:13:59"^^xsd:dateTime ;
     linkml:id "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     linkml:imports "../common/common-ap-no-schema"^^xsd:anyURI,
         "linkml:types"^^xsd:anyURI ;
@@ -92,7 +90,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_beskrivelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_er_spesifisert_i>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_gyldig_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_identifikator_literal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_klassifisering>,
@@ -111,7 +109,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_endringsdato>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_har_kontaktpunkt>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_heimeside>,
@@ -120,46 +118,24 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_inneheld_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_lisens>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_oppdateringsfrekvens>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_utgjevar>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_epost>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_kategori>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_kontaktside>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_opningstider>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_telefon>,
         <https://data.norge.no/linkml/cpsv-ap-no/Livshendelse_kan_utlose_behov_for>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_dekningsomrade>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_del_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_gruppert_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_klassifisert_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_folger>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_del>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_dokumentasjonstype>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_gebyr>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_kontaktpunkt>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_regulativ_ressurs>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_tenesteresultattype>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_heimeside>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_krev>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_malgruppe>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_nokkelord>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tema>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_temaomrade>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tittel>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_adresse_ref>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_foretrekt_namn>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_heimeside>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_behandlingstid>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_del_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_gruppert_av>,
@@ -179,10 +155,9 @@
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_krev>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_malgruppe>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_nokkelord>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_realiserer>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_relatert_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_status>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_tema>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_temaomrade>,
@@ -190,7 +165,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_beskrivelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Regel_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Regel_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs_identifikator_literal>,
@@ -198,7 +173,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_behandlingstid>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_eigd_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_er_del_av>,
@@ -220,7 +195,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_nokkelord>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_relatert_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_status>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_tema>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_temaomrade>,
@@ -236,7 +211,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_er_spesifisert_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_identifikator_literal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_kan_skape_hending>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Virksomhetshendelse_kan_utlose_behov_for>,
@@ -244,7 +219,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/anbefalt_term>,
         <https://data.norge.no/linkml/cpsv-ap-no/behandlingstid>,
         <https://data.norge.no/linkml/cpsv-ap-no/beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/deltakar>,
         <https://data.norge.no/linkml/cpsv-ap-no/deltek_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/eigd_av>,
@@ -259,7 +234,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/foretrekt_namn>,
         <https://data.norge.no/linkml/cpsv-ap-no/format>,
         <https://data.norge.no/linkml/cpsv-ap-no/full_adresse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/godtek_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/godtek_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/gyldig_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/har_ansvarleg_styremakt>,
         <https://data.norge.no/linkml/cpsv-ap-no/har_del>,
@@ -289,17 +264,16 @@
         <https://data.norge.no/linkml/cpsv-ap-no/land>,
         <https://data.norge.no/linkml/cpsv-ap-no/lisens>,
         <https://data.norge.no/linkml/cpsv-ap-no/malgruppe>,
-        <https://data.norge.no/linkml/cpsv-ap-no/mogleg_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/mogleg_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/nettside>,
         <https://data.norge.no/linkml/cpsv-ap-no/nokkelord>,
         <https://data.norge.no/linkml/cpsv-ap-no/opningstider>,
         <https://data.norge.no/linkml/cpsv-ap-no/oppdateringsfrekvens>,
         <https://data.norge.no/linkml/cpsv-ap-no/postnummer>,
         <https://data.norge.no/linkml/cpsv-ap-no/poststad>,
-        <https://data.norge.no/linkml/cpsv-ap-no/realiserer>,
         <https://data.norge.no/linkml/cpsv-ap-no/relatert_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/status>,
         <https://data.norge.no/linkml/cpsv-ap-no/telefon>,
         <https://data.norge.no/linkml/cpsv-ap-no/tema>,
@@ -313,8 +287,8 @@
         <https://data.norge.no/linkml/cpsv-ap-no/verdi>,
         <https://data.norge.no/linkml/cpsv-ap-no/versjonsmerknad> ;
     linkml:source_file "cpsv-ap-no-schema.yaml" ;
-    linkml:source_file_date "2026-05-04T11:47:51"^^xsd:dateTime ;
-    linkml:source_file_size 27091 ;
+    linkml:source_file_date "2026-05-09T13:54:31"^^xsd:dateTime ;
+    linkml:source_file_size 24708 ;
     linkml:subsets <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt>,
         <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk>,
         <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
@@ -322,6 +296,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/GYear>,
         <https://data.norge.no/linkml/cpsv-ap-no/LangString>,
         <https://data.norge.no/linkml/cpsv-ap-no/NonNegativeInteger>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/boolean>,
         <https://data.norge.no/linkml/cpsv-ap-no/curie>,
         <https://data.norge.no/linkml/cpsv-ap-no/date>,
@@ -436,7 +411,7 @@
     skos:mappingRelation "http://purl.org/dc/terms/format"^^xsd:anyURI ;
     linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/format"^^xsd:anyURI ;
     linkml:description "Filformat eller medietype (dct:format)." ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Mediatype> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/string> ;
     linkml:slot_uri "http://purl.org/dc/terms/format"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/har_merknad> a linkml:SlotDefinition ;
@@ -717,22 +692,22 @@
     linkml:slot_uri "http://data.europa.eu/m8g/isSpecifiedIn"^^xsd:anyURI ;
     linkml:usage_slot_name "er_spesifisert_i" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cccevno#acceptableLanguage"^^xsd:anyURI ;
-    skos:prefLabel "godtek_sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/godtek_sprak"^^xsd:anyURI ;
+    skos:prefLabel "godtek_spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/godtek_spraak"^^xsd:anyURI ;
     linkml:description "Språk dokumentasjonstypen er akseptert i." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/godtek_sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/godtek_spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "https://data.norge.no/vocabulary/cccevno#acceptableLanguage"^^xsd:anyURI ;
-    linkml:usage_slot_name "godtek_sprak" .
+    linkml:usage_slot_name "godtek_spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_gyldig_i> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
@@ -900,22 +875,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
     linkml:usage_slot_name "beskrivelse" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomraade> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    skos:prefLabel "dekningsomraade" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
+    linkml:usage_slot_name "dekningsomraade" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Katalog_endringsdato> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
@@ -1052,22 +1027,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/accrualPeriodicity"^^xsd:anyURI ;
     linkml:usage_slot_name "oppdateringsfrekvens" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Katalog_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Katalog_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Katalog_tittel> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
@@ -1172,22 +1147,22 @@
     linkml:slot_uri "http://data.europa.eu/m8g/openingHours"^^xsd:anyURI ;
     linkml:usage_slot_name "opningstider" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_telefon> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
@@ -1223,381 +1198,14 @@
     linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#mayTriggerNeedFor"^^xsd:anyURI ;
     linkml:usage_slot_name "kan_utlose_behov_for" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_beskrivelse> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
+<https://data.norge.no/linkml/cpsv-ap-no/Mediatype> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/description"^^xsd:anyURI ;
-    skos:prefLabel "beskrivelse" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/beskrivelse"^^xsd:anyURI ;
-    linkml:description "Fritekstbeskrivelse av ressursen (dct:description)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/beskrivelse> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
-    linkml:required true ;
-    linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
-    linkml:usage_slot_name "beskrivelse" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_dekningsomrade> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
-    linkml:description "Geografisk dekningsområde (dct:spatial)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_del_av> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI ;
-    skos:prefLabel "er_del_av" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_del_av"^^xsd:anyURI ;
-    linkml:description "Tenesta er del av ei anna teneste." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/er_del_av> ;
-    linkml:is_usage_slot true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI ;
-    linkml:usage_slot_name "er_del_av" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_gruppert_av> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI ;
-    skos:prefLabel "er_gruppert_av" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av"^^xsd:anyURI ;
-    linkml:description "Hending(ar) som grupperer tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Hendelse> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI ;
-    linkml:usage_slot_name "er_gruppert_av" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_klassifisert_av> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI ;
-    skos:prefLabel "er_klassifisert_av" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av"^^xsd:anyURI ;
-    linkml:description "Omgrep tenesta er klassifisert med." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI ;
-    linkml:usage_slot_name "er_klassifisert_av" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_folger> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI ;
-    skos:prefLabel "folger" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/folger"^^xsd:anyURI ;
-    linkml:description "Regelverk tenesta følgjer." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/folger> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
-    linkml:slot_uri "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI ;
-    linkml:usage_slot_name "folger" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_del> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/hasPart"^^xsd:anyURI ;
-    skos:prefLabel "har_del" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_del"^^xsd:anyURI ;
-    linkml:description "Deltenester som inngår i denne tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_del> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/hasPart"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_del" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_dokumentasjonstype> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI ;
-    skos:prefLabel "har_dokumentasjonstype" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype"^^xsd:anyURI ;
-    linkml:description "Dokumentasjon som krevst for tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_dokumentasjonstype" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_gebyr> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI ;
-    skos:prefLabel "har_gebyr" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_gebyr"^^xsd:anyURI ;
-    linkml:description "Gebyr knytt til tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_gebyr> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Gebyr> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_gebyr" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_kontaktpunkt> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI ;
-    skos:prefLabel "har_kontaktpunkt" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt"^^xsd:anyURI ;
-    linkml:description "Kontaktpunkt for tenesta eller organisasjonen." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
-    linkml:required true ;
-    linkml:slot_uri "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_kontaktpunkt" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_regulativ_ressurs> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI ;
-    skos:prefLabel "har_regulativ_ressurs" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs"^^xsd:anyURI ;
-    linkml:description "Regulativ ressurs (lov, forskrift) knytt til tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_regulativ_ressurs" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_tenesteresultattype> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI ;
-    skos:prefLabel "har_tenesteresultattype" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype"^^xsd:anyURI ;
-    linkml:description "Typen resultat tenesta kan produsere." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
-    linkml:required true ;
-    linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI ;
-    linkml:usage_slot_name "har_tenesteresultattype" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_heimeside> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI ;
-    skos:prefLabel "heimeside" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/heimeside"^^xsd:anyURI ;
-    linkml:description "Heimeside for ressursen eller organisasjonen (foaf:homepage)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/heimeside> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uri> ;
-    linkml:slot_uri "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI ;
-    linkml:usage_slot_name "heimeside" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_identifikator_literal> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/identifier"^^xsd:anyURI ;
-    skos:prefLabel "identifikator_literal" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/identifikator_literal"^^xsd:anyURI ;
-    linkml:description "Tekstleg identifikator for ressursen (dct:identifier)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/identifikator_literal> ;
-    linkml:is_usage_slot true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/string> ;
-    linkml:required true ;
-    linkml:slot_uri "http://purl.org/dc/terms/identifier"^^xsd:anyURI ;
-    linkml:usage_slot_name "identifikator_literal" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_krev> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/requires"^^xsd:anyURI ;
-    skos:prefLabel "krev" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/krev"^^xsd:anyURI ;
-    linkml:description "Teneste eller ressurs denne tenesta krev." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/krev> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/requires"^^xsd:anyURI ;
-    linkml:usage_slot_name "krev" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_malgruppe> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/audience"^^xsd:anyURI ;
-    skos:prefLabel "malgruppe" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/malgruppe"^^xsd:anyURI ;
-    linkml:description "Målgruppe for tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/malgruppe> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/audience"^^xsd:anyURI ;
-    linkml:usage_slot_name "malgruppe" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_nokkelord> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
-    skos:prefLabel "nokkelord" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/nokkelord"^^xsd:anyURI ;
-    linkml:description "Nøkkelord som beskriv ressursen (dcat:keyword)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/nokkelord> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
-    linkml:slot_uri "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
-    linkml:usage_slot_name "nokkelord" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_sektor> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
-    skos:prefLabel "sektor" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/sektor"^^xsd:anyURI ;
-    linkml:description "Industri/sektor tenesta tilhøyrer." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sektor> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
-    linkml:usage_slot_name "sektor" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tema> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/subject"^^xsd:anyURI ;
-    skos:prefLabel "tema" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/tema"^^xsd:anyURI ;
-    linkml:description "Emne/tema tenesta handlar om." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/tema> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/subject"^^xsd:anyURI ;
-    linkml:usage_slot_name "tema" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_temaomrade> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI ;
-    skos:prefLabel "temaomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/temaomrade"^^xsd:anyURI ;
-    linkml:description "Tematisk område for tenesta." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/temaomrade> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI ;
-    linkml:usage_slot_name "temaomrade" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tittel> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/title"^^xsd:anyURI ;
-    skos:prefLabel "tittel" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/tittel"^^xsd:anyURI ;
-    linkml:description "Namn/tittel på ressursen (dct:title)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/tittel> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
-    linkml:required true ;
-    linkml:slot_uri "http://purl.org/dc/terms/title"^^xsd:anyURI ;
-    linkml:usage_slot_name "tittel" .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_type_concept> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/type"^^xsd:anyURI ;
-    skos:prefLabel "type_concept" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/type_concept"^^xsd:anyURI ;
-    linkml:description "Type ressurs frå eit kontrollert vokabular (dct:type)." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/type_concept> ;
-    linkml:is_usage_slot true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/type"^^xsd:anyURI ;
-    linkml:usage_slot_name "type_concept" .
+    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
+    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_adresse_ref> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
@@ -1615,23 +1223,23 @@
     linkml:slot_uri "http://www.w3.org/ns/locn#address"^^xsd:anyURI ;
     linkml:usage_slot_name "adresse_ref" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomraade> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    skos:prefLabel "dekningsomraade" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:required true ;
     linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
+    linkml:usage_slot_name "dekningsomraade" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_foretrekt_namn> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
@@ -1718,22 +1326,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
     linkml:usage_slot_name "beskrivelse" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomraade> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    skos:prefLabel "dekningsomraade" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
+    linkml:usage_slot_name "dekningsomraade" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_beskrive_av> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
@@ -2060,23 +1668,6 @@
     linkml:slot_uri "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
     linkml:usage_slot_name "nokkelord" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_realiserer> a linkml:SlotDefinition ;
-    OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#realizes"^^xsd:anyURI ;
-    skos:prefLabel "realiserer" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/realiserer"^^xsd:anyURI ;
-    linkml:description "Lovpålagd teneste denne offentlege tenesta realiserer." ;
-    linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/realiserer> ;
-    linkml:is_usage_slot true ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#realizes"^^xsd:anyURI ;
-    linkml:usage_slot_name "realiserer" .
-
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_relatert_teneste> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -2111,22 +1702,22 @@
     linkml:slot_uri "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
     linkml:usage_slot_name "sektor" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_status> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
@@ -2245,22 +1836,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/identifier"^^xsd:anyURI ;
     linkml:usage_slot_name "identifikator_literal" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Regel_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Regel_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Regel_tittel> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
@@ -2378,22 +1969,22 @@
     linkml:slot_uri "http://purl.org/dc/terms/description"^^xsd:anyURI ;
     linkml:usage_slot_name "beskrivelse" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomrade> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomraade> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    skos:prefLabel "dekningsomrade" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
+    skos:prefLabel "dekningsomraade" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
     linkml:description "Geografisk dekningsområde (dct:spatial)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:usage_slot_name "dekningsomrade" .
+    linkml:usage_slot_name "dekningsomraade" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_eigd_av> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
@@ -2754,22 +2345,22 @@
     linkml:slot_uri "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
     linkml:usage_slot_name "sektor" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Valgfri> ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    skos:prefLabel "sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    skos:prefLabel "spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:usage_slot_name "sprak" .
+    linkml:usage_slot_name "spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_status> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
@@ -3023,22 +2614,22 @@
     linkml:slot_uri "http://rdf-vocabulary.ddialliance.org/xkos#causes"^^xsd:anyURI ;
     linkml:usage_slot_name "kan_skape_hending" .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_spraak> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#possibleLanguage"^^xsd:anyURI ;
-    skos:prefLabel "mogleg_sprak" ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/mogleg_sprak"^^xsd:anyURI ;
+    skos:prefLabel "mogleg_spraak" ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/mogleg_spraak"^^xsd:anyURI ;
     linkml:description "Mogleg språk for tenesteresultatet." ;
     linkml:domain <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/mogleg_sprak> ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/mogleg_spraak> ;
     linkml:is_usage_slot true ;
     linkml:multivalued true ;
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Spraak> ;
     linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#possibleLanguage"^^xsd:anyURI ;
-    linkml:usage_slot_name "mogleg_sprak" .
+    linkml:usage_slot_name "mogleg_spraak" .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_tittel> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> ;
@@ -3176,10 +2767,10 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/string> ;
     linkml:slot_uri "http://www.w3.org/ns/locn#fullAddress"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/cpsv-ap-no/godtek_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/godtek_spraak> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cccevno#acceptableLanguage"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/godtek_sprak"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/godtek_spraak"^^xsd:anyURI ;
     linkml:description "Språk dokumentasjonstypen er akseptert i." ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
     linkml:multivalued true ;
@@ -3314,10 +2905,10 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uri> ;
     linkml:slot_uri "http://purl.org/dc/terms/license"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/cpsv-ap-no/mogleg_sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/mogleg_spraak> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#possibleLanguage"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/mogleg_sprak"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/mogleg_spraak"^^xsd:anyURI ;
     linkml:description "Mogleg språk for tenesteresultatet." ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
     linkml:multivalued true ;
@@ -3366,17 +2957,6 @@
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Adresse> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
     linkml:slot_uri "http://www.w3.org/ns/locn#postName"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/realiserer> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#realizes"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/realiserer"^^xsd:anyURI ;
-    linkml:description "Lovpålagd teneste denne offentlege tenesta realiserer." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> ;
-    linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#realizes"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/telefon> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -3506,14 +3086,40 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Mediatype> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/MediaTypeOrExtent"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Mediatype"^^xsd:anyURI ;
-    linkml:description "Ein medietype eller filformat (dct:MediaTypeOrExtent)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
+<https://data.norge.no/linkml/cpsv-ap-no/er_del_av> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_del_av"^^xsd:anyURI ;
+    linkml:description "Tenesta er del av ei anna teneste." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
+    linkml:slot_uri "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av"^^xsd:anyURI ;
+    linkml:description "Hending(ar) som grupperer tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Hendelse> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av"^^xsd:anyURI ;
+    linkml:description "Omgrep tenesta er klassifisert med." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/er_spesifisert_i> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -3536,6 +3142,30 @@
     linkml:imported_from "linkml:types" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#float"^^xsd:anyURI .
 
+<https://data.norge.no/linkml/cpsv-ap-no/folger> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/folger"^^xsd:anyURI ;
+    linkml:description "Regelverk tenesta følgjer." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
+    linkml:slot_uri "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/har_del> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/dc/terms/hasPart"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_del"^^xsd:anyURI ;
+    linkml:description "Deltenester som inngår i denne tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
+    linkml:slot_uri "http://purl.org/dc/terms/hasPart"^^xsd:anyURI .
+
 <https://data.norge.no/linkml/cpsv-ap-no/har_deltaking> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://data.europa.eu/m8g/hasParticipation"^^xsd:anyURI ;
@@ -3547,6 +3177,42 @@
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Deltagelse> ;
     linkml:slot_uri "http://data.europa.eu/m8g/hasParticipation"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype"^^xsd:anyURI ;
+    linkml:description "Dokumentasjon som krevst for tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/har_gebyr> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_gebyr"^^xsd:anyURI ;
+    linkml:description "Gebyr knytt til tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Gebyr> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs"^^xsd:anyURI ;
+    linkml:description "Regulativ ressurs (lov, forskrift) knytt til tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/har_tenestekanal> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -3560,6 +3226,18 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Tjenestekanal> ;
     linkml:slot_uri "http://data.europa.eu/m8g/hasChannel"^^xsd:anyURI .
 
+<https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype"^^xsd:anyURI ;
+    linkml:description "Typen resultat tenesta kan produsere." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
+    linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI .
+
 <https://data.norge.no/linkml/cpsv-ap-no/kan_utlose_behov_for> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#mayTriggerNeedFor"^^xsd:anyURI ;
@@ -3571,6 +3249,42 @@
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Virksomhetshendelse> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
     linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#mayTriggerNeedFor"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/krev> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/dc/terms/requires"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/krev"^^xsd:anyURI ;
+    linkml:description "Teneste eller ressurs denne tenesta krev." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
+    linkml:slot_uri "http://purl.org/dc/terms/requires"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/malgruppe> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/dc/terms/audience"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/malgruppe"^^xsd:anyURI ;
+    linkml:description "Målgruppe for tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
+    linkml:slot_uri "http://purl.org/dc/terms/audience"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/nokkelord> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/nokkelord"^^xsd:anyURI ;
+    linkml:description "Nøkkelord som beskriv ressursen (dcat:keyword)." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
+    linkml:slot_uri "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/opningstider> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -3596,6 +3310,18 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
     linkml:slot_uri "http://data.europa.eu/m8g/relatedService"^^xsd:anyURI .
 
+<https://data.norge.no/linkml/cpsv-ap-no/sektor> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/sektor"^^xsd:anyURI ;
+    linkml:description "Industri/sektor tenesta tilhøyrer." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/sector"^^xsd:anyURI .
+
 <https://data.norge.no/linkml/cpsv-ap-no/status> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://www.w3.org/ns/adms#status"^^xsd:anyURI ;
@@ -3606,6 +3332,18 @@
     linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:slot_uri "http://www.w3.org/ns/adms#status"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/temaomrade> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/temaomrade"^^xsd:anyURI ;
+    linkml:description "Tematisk område for tenesta." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Hendelse_beskrivelse> a linkml:SlotDefinition ;
     OIO:inSubset <https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> ;
@@ -3779,186 +3517,18 @@
     linkml:repr "str" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/cpsv-ap-no/er_del_av> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/tema> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_del_av"^^xsd:anyURI ;
-    linkml:description "Tenesta er del av ei anna teneste." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/isPartOf"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_gruppert_av"^^xsd:anyURI ;
-    linkml:description "Hending(ar) som grupperer tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
+    skos:mappingRelation "http://purl.org/dc/terms/subject"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/tema"^^xsd:anyURI ;
+    linkml:description "Emne/tema tenesta handlar om." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Hendelse> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/isGroupedBy"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/er_klassifisert_av"^^xsd:anyURI ;
-    linkml:description "Omgrep tenesta er klassifisert med." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Hendelse> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/isClassifiedBy"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/folger> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/folger"^^xsd:anyURI ;
-    linkml:description "Regelverk tenesta følgjer." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Regel> ;
-    linkml:slot_uri "http://purl.org/vocab/cpsv#follows"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/har_del> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/hasPart"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_del"^^xsd:anyURI ;
-    linkml:description "Deltenester som inngår i denne tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/hasPart"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_dokumentasjonstype"^^xsd:anyURI ;
-    linkml:description "Dokumentasjon som krevst for tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasInputType"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/har_gebyr> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_gebyr"^^xsd:anyURI ;
-    linkml:description "Gebyr knytt til tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Gebyr> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasCost"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_regulativ_ressurs"^^xsd:anyURI ;
-    linkml:description "Regulativ ressurs (lov, forskrift) knytt til tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/hasLegalResource"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_tenesteresultattype"^^xsd:anyURI ;
-    linkml:description "Typen resultat tenesta kan produsere." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> ;
-    linkml:slot_uri "https://data.norge.no/vocabulary/cpsvno#hasOutputType"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/krev> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/requires"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/krev"^^xsd:anyURI ;
-    linkml:description "Teneste eller ressurs denne tenesta krev." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
-    linkml:slot_uri "http://purl.org/dc/terms/requires"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/malgruppe> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/audience"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/malgruppe"^^xsd:anyURI ;
-    linkml:description "Målgruppe for tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/audience"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/nokkelord> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/nokkelord"^^xsd:anyURI ;
-    linkml:description "Nøkkelord som beskriv ressursen (dcat:keyword)." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/LangString> ;
-    linkml:slot_uri "http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/sektor> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/sector"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/sektor"^^xsd:anyURI ;
-    linkml:description "Industri/sektor tenesta tilhøyrer." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/sector"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/temaomrade> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/temaomrade"^^xsd:anyURI ;
-    linkml:description "Tematisk område for tenesta." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/thematicArea"^^xsd:anyURI .
+    linkml:slot_uri "http://purl.org/dc/terms/subject"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Livshendelse> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -3979,19 +3549,47 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Livshendelse_kan_utlose_behov_for>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
-<https://data.norge.no/linkml/cpsv-ap-no/tema> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/subject"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/tema"^^xsd:anyURI ;
-    linkml:description "Emne/tema tenesta handlar om." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
+<https://data.norge.no/linkml/cpsv-ap-no/dekningsomraade> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomraade"^^xsd:anyURI ;
+    linkml:description "Geografisk dekningsområde (dct:spatial)." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
     linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Hendelse> ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/subject"^^xsd:anyURI .
+    linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt"^^xsd:anyURI ;
+    linkml:description "Kontaktpunkt for tenesta eller organisasjonen." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
+    linkml:slot_uri "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/heimeside> a linkml:SlotDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/heimeside"^^xsd:anyURI ;
+    linkml:description "Heimeside for ressursen eller organisasjonen (foaf:homepage)." ;
+    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
+    linkml:multivalued true ;
+    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
+    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uri> ;
+    linkml:slot_uri "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Virksomhetshendelse> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -4012,21 +3610,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Virksomhetshendelse_kan_utlose_behov_for>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
-<https://data.norge.no/linkml/cpsv-ap-no/dekningsomrade> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://purl.org/dc/terms/spatial"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/dekningsomrade"^^xsd:anyURI ;
-    linkml:description "Geografisk dekningsområde (dct:spatial)." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
-    linkml:slot_uri "http://purl.org/dc/terms/spatial"^^xsd:anyURI .
-
 <https://data.norge.no/linkml/cpsv-ap-no/er_beskrive_av> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "https://data.norge.no/vocabulary/cccevno#isDescribedBy"^^xsd:anyURI ;
@@ -4042,40 +3625,10 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uri> ;
     linkml:slot_uri "https://data.norge.no/vocabulary/cccevno#isDescribedBy"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/har_kontaktpunkt"^^xsd:anyURI ;
-    linkml:description "Kontaktpunkt for tenesta eller organisasjonen." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> ;
-    linkml:slot_uri "http://data.europa.eu/m8g/contactPoint"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/heimeside> a linkml:SlotDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/heimeside"^^xsd:anyURI ;
-    linkml:description "Heimeside for ressursen eller organisasjonen (foaf:homepage)." ;
-    linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste> ;
-    linkml:multivalued true ;
-    linkml:owner <https://data.norge.no/linkml/cpsv-ap-no/Katalog> ;
-    linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uri> ;
-    linkml:slot_uri "http://xmlns.com/foaf/0.1/homepage"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/sprak> a linkml:SlotDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/spraak> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "http://purl.org/dc/terms/language"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/sprak"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/spraak"^^xsd:anyURI ;
     linkml:description "Språk brukt i ressursen (dct:language)." ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt>,
@@ -4100,7 +3653,6 @@
     linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/type_concept"^^xsd:anyURI ;
     linkml:description "Type ressurs frå eit kontrollert vokabular (dct:type)." ;
     linkml:domain_of <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
@@ -4112,14 +3664,12 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/Konsept> ;
     linkml:slot_uri "http://purl.org/dc/terms/type"^^xsd:anyURI .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Spraak> a linkml:ClassDefinition ;
+<https://data.norge.no/linkml/cpsv-ap-no/Spraak> a linkml:TypeDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "dct:LinguisticSystem"^^xsd:anyURI ;
-    linkml:class_uri "http://purl.org/dc/terms/LinguisticSystem"^^xsd:anyURI ;
+    linkml:base "str" ;
     linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Spraak"^^xsd:anyURI ;
-    linkml:description "Ein språkreferanse (dct:LinguisticSystem)." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
+    linkml:description "Språk" ;
+    linkml:uri "http://purl.org/dc/terms/language"^^xsd:anyURI .
 
 <https://data.norge.no/linkml/cpsv-ap-no/beskrivelse> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
@@ -4130,7 +3680,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Gebyr>,
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste>,
@@ -4151,7 +3700,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype>,
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs>,
@@ -4173,7 +3721,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Gebyr>,
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs>,
@@ -4207,6 +3754,16 @@
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
+<https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> a linkml:TypeDefinition ;
+    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"." ;
+    skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+    linkml:base "URIorCURIE" ;
+    linkml:definition_uri "https://w3id.org/linkml/Uriorcurie"^^xsd:anyURI ;
+    linkml:description "a URI or a CURIE" ;
+    linkml:imported_from "linkml:types" ;
+    linkml:repr "str" ;
+    linkml:uri "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:anyURI .
+
 <https://data.norge.no/linkml/cpsv-ap-no/uri> a linkml:TypeDefinition ;
     dcterms:conformsTo "https://www.ietf.org/rfc/rfc3987.txt" ;
     skos:closeMatch "schema:URL"^^xsd:anyURI ;
@@ -4219,47 +3776,6 @@
     linkml:imported_from "linkml:types" ;
     linkml:repr "str" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "cv:PublicOrganisation"^^xsd:anyURI ;
-    linkml:class_uri "http://data.europa.eu/m8g/PublicOrganisation"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon"^^xsd:anyURI ;
-    linkml:description "Ein offentleg organisasjon som er ansvarleg for ei teneste." ;
-    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/Aktor> ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Aktor_deltek_i>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Aktor_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Aktor_tittel>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_adresse_ref>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomrade>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_foretrekt_namn>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_heimeside>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_type_concept>,
-        <https://data.norge.no/linkml/cpsv-ap-no/id> .
-
-<https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> a linkml:TypeDefinition ;
-    skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"." ;
-    skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
-    linkml:base "URIorCURIE" ;
-    linkml:definition_uri "https://w3id.org/linkml/Uriorcurie"^^xsd:anyURI ;
-    linkml:description "a URI or a CURIE" ;
-    linkml:imported_from "linkml:types" ;
-    linkml:repr "str" ;
-    linkml:uri "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:anyURI .
-
-<https://data.norge.no/linkml/cpsv-ap-no/Gebyr> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "cv:Cost"^^xsd:anyURI ;
-    linkml:class_uri "http://data.europa.eu/m8g/Cost"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/Gebyr"^^xsd:anyURI ;
-    linkml:description "Eit gebyr knytt til ei teneste." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_valuta>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_verdi>,
-        <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
 <https://data.norge.no/linkml/cpsv-ap-no/id> a linkml:SlotDefinition ;
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
@@ -4275,12 +3791,10 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog>,
         <https://data.norge.no/linkml/cpsv-ap-no/Konsept>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Mediatype>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel>,
         <https://data.norge.no/linkml/cpsv-ap-no/RegulativRessurs>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenestekanal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype>,
@@ -4290,6 +3804,37 @@
     linkml:range <https://data.norge.no/linkml/cpsv-ap-no/uriorcurie> ;
     linkml:required true ;
     linkml:slot_uri "https://data.norge.no/linkml/common-ap-no/id"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/Gebyr> a linkml:ClassDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "cv:Cost"^^xsd:anyURI ;
+    linkml:class_uri "http://data.europa.eu/m8g/Cost"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/Gebyr"^^xsd:anyURI ;
+    linkml:description "Eit gebyr knytt til ei teneste." ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_beskrivelse>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_identifikator_literal>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_valuta>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Gebyr_verdi>,
+        <https://data.norge.no/linkml/cpsv-ap-no/id> .
+
+<https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon> a linkml:ClassDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "cv:PublicOrganisation"^^xsd:anyURI ;
+    linkml:class_uri "http://data.europa.eu/m8g/PublicOrganisation"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon"^^xsd:anyURI ;
+    linkml:description "Ein offentleg organisasjon som er ansvarleg for ei teneste." ;
+    linkml:is_a <https://data.norge.no/linkml/cpsv-ap-no/Aktor> ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Aktor_deltek_i>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Aktor_identifikator_literal>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Aktor_tittel>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_adresse_ref>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_dekningsomraade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_foretrekt_namn>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_heimeside>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligOrganisasjon_type_concept>,
+        <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Adresse> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -4313,7 +3858,7 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Regel_beskrivelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Regel_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Regel_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Regel_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
@@ -4341,6 +3886,23 @@
     linkml:imported_from "linkml:types" ;
     linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
 
+<https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> a linkml:SubsetDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Anbefalt"^^xsd:anyURI ;
+    linkml:description "Anbefalte eigenskapar i ein AP-NO-profil." .
+
+<https://data.norge.no/linkml/cpsv-ap-no/LangString> a linkml:TypeDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    linkml:base "str" ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/LangString"^^xsd:anyURI ;
+    linkml:description "Språktagget streng (rdf:langString)." ;
+    linkml:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"^^xsd:anyURI .
+
+<https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> a linkml:SubsetDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Obligatorisk"^^xsd:anyURI ;
+    linkml:description "Obligatoriske eigenskapar i ein AP-NO-profil." .
+
 <https://data.norge.no/linkml/cpsv-ap-no/Tjenestekanal> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "cv:Channel"^^xsd:anyURI ;
@@ -4356,13 +3918,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenestekanal_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
-<https://data.norge.no/linkml/cpsv-ap-no/LangString> a linkml:TypeDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    linkml:base "str" ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/LangString"^^xsd:anyURI ;
-    linkml:description "Språktagget streng (rdf:langString)." ;
-    linkml:uri "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"^^xsd:anyURI .
-
 <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "cv:ContactPoint"^^xsd:anyURI ;
@@ -4374,19 +3929,9 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_kategori>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_kontaktside>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_opningstider>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Kontaktpunkt_telefon>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
-
-<https://data.norge.no/linkml/cpsv-ap-no/Anbefalt> a linkml:SubsetDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Anbefalt"^^xsd:anyURI ;
-    linkml:description "Anbefalte eigenskapar i ein AP-NO-profil." .
-
-<https://data.norge.no/linkml/cpsv-ap-no/Obligatorisk> a linkml:SubsetDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Obligatorisk"^^xsd:anyURI ;
-    linkml:description "Obligatoriske eigenskapar i ein AP-NO-profil." .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -4400,10 +3945,19 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_er_spesifisert_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_identifikator_literal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_kan_skape_hending>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_mogleg_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjenesteresultattype_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
+
+<https://data.norge.no/linkml/cpsv-ap-no/Konsept> a linkml:ClassDefinition ;
+    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
+    skos:mappingRelation "skos:Concept"^^xsd:anyURI ;
+    linkml:class_uri "http://www.w3.org/2004/02/skos/core#Concept"^^xsd:anyURI ;
+    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Konsept"^^xsd:anyURI ;
+    linkml:description "Referanse til eit SKOS-omgrep frå eit kontrollert vokabular." ;
+    linkml:slot_usage [ ] ;
+    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
 <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -4415,7 +3969,7 @@
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_beskrivelse>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_er_spesifisert_i>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_godtek_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_gyldig_i>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_identifikator_literal>,
         <https://data.norge.no/linkml/cpsv-ap-no/Dokumentasjonstype_klassifisering>,
@@ -4440,15 +3994,6 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Hendelse_type_concept>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
-<https://data.norge.no/linkml/cpsv-ap-no/Konsept> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "skos:Concept"^^xsd:anyURI ;
-    linkml:class_uri "http://www.w3.org/2004/02/skos/core#Concept"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Konsept"^^xsd:anyURI ;
-    linkml:description "Referanse til eit SKOS-omgrep frå eit kontrollert vokabular." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/id> .
-
 <https://data.norge.no/linkml/cpsv-ap-no/Katalog> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
     skos:mappingRelation "dcat:Catalog"^^xsd:anyURI ;
@@ -4457,7 +4002,7 @@
     linkml:description "Ein katalog over offentlege tenester og hendingar." ;
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Katalog_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_endringsdato>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_har_kontaktpunkt>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_heimeside>,
@@ -4466,7 +4011,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_inneheld_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_lisens>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_oppdateringsfrekvens>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Katalog_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_tittel>,
         <https://data.norge.no/linkml/cpsv-ap-no/Katalog_utgjevar>,
         <https://data.norge.no/linkml/cpsv-ap-no/id> .
@@ -4475,37 +4020,6 @@
     skos:inScheme "https://data.norge.no/linkml/common-ap-no"^^xsd:anyURI ;
     linkml:definition_uri "https://data.norge.no/linkml/common-ap-no/Valgfri"^^xsd:anyURI ;
     linkml:description "Valfrie eigenskapar i ein AP-NO-profil." .
-
-<https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste> a linkml:ClassDefinition ;
-    skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
-    skos:mappingRelation "cpsvno:StatutoryService"^^xsd:anyURI ;
-    linkml:class_uri "https://data.norge.no/vocabulary/cpsvno#StatutoryService"^^xsd:anyURI ;
-    linkml:definition_uri "https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste"^^xsd:anyURI ;
-    linkml:description "Ei lovpålagd teneste som offentlege organ er pålagde å utføre." ;
-    linkml:slot_usage [ ] ;
-    linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_dekningsomrade>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_del_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_gruppert_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_er_klassifisert_av>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_folger>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_del>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_dokumentasjonstype>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_gebyr>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_kontaktpunkt>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_regulativ_ressurs>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_har_tenesteresultattype>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_heimeside>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_identifikator_literal>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_krev>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_malgruppe>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_nokkelord>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tema>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_temaomrade>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_tittel>,
-        <https://data.norge.no/linkml/cpsv-ap-no/LovpalagtTjeneste_type_concept>,
-        <https://data.norge.no/linkml/cpsv-ap-no/id> .
 
 <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste> a linkml:ClassDefinition ;
     skos:inScheme "https://data.norge.no/linkml/cpsv-ap-no"^^xsd:anyURI ;
@@ -4516,7 +4030,7 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_behandlingstid>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_del_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_er_gruppert_av>,
@@ -4536,10 +4050,9 @@
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_krev>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_malgruppe>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_nokkelord>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_realiserer>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_relatert_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_status>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_tema>,
         <https://data.norge.no/linkml/cpsv-ap-no/OffentligTjeneste_temaomrade>,
@@ -4556,7 +4069,7 @@
     linkml:slot_usage [ ] ;
     linkml:slots <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_behandlingstid>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_beskrivelse>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomrade>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_dekningsomraade>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_eigd_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_er_beskrive_av>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_er_del_av>,
@@ -4578,7 +4091,7 @@
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_nokkelord>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_relatert_teneste>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_sektor>,
-        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_sprak>,
+        <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_spraak>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_status>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_tema>,
         <https://data.norge.no/linkml/cpsv-ap-no/Tjeneste_temaomrade>,

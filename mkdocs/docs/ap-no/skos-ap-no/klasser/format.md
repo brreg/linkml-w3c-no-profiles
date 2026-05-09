@@ -26,7 +26,7 @@ Alias: format
 
 | Property | Value |
 | --- | --- |
-| Range | [Mediatype](mediatype.md) |
+| Range | [String](string.md) |
 | Slot URI | [dct:format](http://purl.org/dc/terms/format) |
 
 ### Cardinality and Requirements
@@ -77,7 +77,7 @@ from_schema: https://data.norge.no/linkml/skos-ap-no
 rank: 1000
 slot_uri: dct:format
 alias: format
-range: Mediatype
+range: string
 
 ```
 </details>

@@ -12,6 +12,7 @@ prefixes:
 imports:
   - linkml:types
   - ../../src/linkml/ap-no/dqv-ap-no/dqv-ap-no-schema
+  - ../../src/linkml/ap-no/dcat-ap-no/dcat-ap-no-schema
 
 classes:
 

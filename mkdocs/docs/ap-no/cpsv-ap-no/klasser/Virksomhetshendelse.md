@@ -269,7 +269,6 @@ attributes:
     alias: id
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -285,7 +284,6 @@ attributes:
     - Deltagelse
     - Adresse
     - Katalog
-    - Spraak
     - Mediatype
     - Konsept
     - Begrepssamling
@@ -302,7 +300,6 @@ attributes:
     alias: tittel
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -327,7 +324,6 @@ attributes:
     alias: identifikator_literal
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -352,7 +348,6 @@ attributes:
     alias: har_kontaktpunkt
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -371,7 +366,6 @@ attributes:
     alias: beskrivelse
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -409,7 +403,6 @@ attributes:
     alias: tema
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse
@@ -444,7 +437,6 @@ attributes:
     alias: type_concept
     owner: Virksomhetshendelse
     domain_of:
-    - LovpalagtTjeneste
     - OffentligTjeneste
     - Tjeneste
     - Hendelse

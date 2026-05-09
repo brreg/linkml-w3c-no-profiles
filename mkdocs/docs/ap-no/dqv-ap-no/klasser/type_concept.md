@@ -18,6 +18,17 @@ Alias: type_concept
 
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [Aktor](aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
+| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+
+
+
+
 
 
 ## Properties
@@ -27,6 +38,7 @@ Alias: type_concept
 | Property | Value |
 | --- | --- |
 | Range | [Konsept](konsept.md) |
+| Domain Of | [Aktor](aktor.md), [RegulativRessurs](regulativressurs.md), [Datasett](datasett.md) |
 | Slot URI | [dct:type](http://purl.org/dc/terms/type) |
 
 ### Cardinality and Requirements
@@ -77,6 +89,10 @@ from_schema: https://data.norge.no/linkml/dqv-ap-no
 rank: 1000
 slot_uri: dct:type
 alias: type_concept
+domain_of:
+- Aktor
+- RegulativRessurs
+- Datasett
 range: Konsept
 
 ```

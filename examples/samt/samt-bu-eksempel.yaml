@@ -1,5 +1,5 @@
 # metadata
-identifikator: samtbuskole:samt-bu-skole-data
+id: samtbuskole:samt-bu-skole-data
 
 # --- eksisterende dataset_metadata ---
 dataset_metadata:
@@ -170,62 +170,62 @@ gjeldende_lovgivninger:
 
 # --- Skoler og skoleeiere ---
 skoler:
-  - identifikator: samtbuskole:skole-1
+  - id: samtbuskole:skole-1
     navn: "Solglimt skole"
     har_skoleeier: samtbuskole:kommune-0301
 
-  - identifikator: samtbuskole:skole-2
+  - id: samtbuskole:skole-2
     navn: "Fjelltoppen skole"
     har_skoleeier: samtbuskole:privat-1
 
 kommuner:
-  - identifikator: samtbuskole:kommune-0301
+  - id: samtbuskole:kommune-0301
     kommunenummer: "0301"
     navn: "Oslo kommune"
 
 fylker:
-  - identifikator: samtbuskole:fylke-30
+  - id: samtbuskole:fylke-30
     fylkesnummer: "30"
     navn: "Viken fylkeskommune"
 
 private_virksomheter:
-  - identifikator: samtbuskole:privat-1
+  - id: samtbuskole:privat-1
     organisasjonsnummer: "999888777"
     navn: "Privat Skole AS"
 
 # --- Basisgrupper ---
 basisgrupper:
-  - identifikator: samtbuskole:basisgruppe-5A
+  - id: samtbuskole:basisgruppe-5A
     navn: "5A"
     trinniva: "5"
     del_av_skole: samtbuskole:skole-1
 
-  - identifikator: samtbuskole:basisgruppe-6B
+  - id: samtbuskole:basisgruppe-6B
     navn: "6B"
     trinniva: "6"
     del_av_skole: samtbuskole:skole-2
 
 # --- Personer ---
 rektorer:
-  - identifikator: samtbuskole:rektor-1
+  - id: samtbuskole:rektor-1
     navn: "Rektor Rasmus"
     enhetsleder_for: samtbuskole:skole-1
 
 elever:
-  - identifikator: samtbuskole:elev-1
+  - id: samtbuskole:elev-1
     navn: "Ola Nordmann"
     horer_til_basisgruppe: samtbuskole:basisgruppe-5A
 
-  - identifikator: samtbuskole:elev-2
+  - id: samtbuskole:elev-2
     navn: "Kari Nordmann"
     horer_til_basisgruppe: samtbuskole:basisgruppe-6B
 
-  - identifikator: samtbuskole:elev-3
+  - id: samtbuskole:elev-3
     navn: "Nils Nordmann"
     horer_til_basisgruppe: samtbuskole:basisgruppe-5A
 
 kontaktlaerere:
-  - identifikator: samtbuskole:kontaktlaerer-1
+  - id: samtbuskole:kontaktlaerer-1
     navn: "Lærer Lars"
     tilknyttet_basisgruppe: samtbuskole:basisgruppe-5A
     har_saerlig_ansvar_for: samtbuskole:elev-1

@@ -214,7 +214,7 @@ Laerling {
 Landkode {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 OtEnhet {
@@ -467,9 +467,9 @@ Fravarsoversikt ||--|| Elevforhold : "elevforhold"
 Fravarsoversikt ||--|| Fag : "fag"
 Fravarsoversikt ||--|| Fravarsprosent : "halvaar, skoleaarFravar"
 Fravartype ||--|o Periode : "gyldighetsperiode"
+Fraversregistrering ||--|o Elevfravar : "elevfravar"
 Fraversregistrering ||--|o Faggruppe : "faggruppe"
 Fraversregistrering ||--|o Skoleressurs : "registrertAv"
-Fraversregistrering ||--|| Elevfravar : "elevfravar"
 Fraversregistrering ||--|| Fravartype : "fravartype"
 Fraversregistrering ||--|| Periode : "periode"
 Fraversregistrering ||--|| Undervisningsgruppe : "undervisningsgruppe"
@@ -592,9 +592,9 @@ Undervisningsgruppemedlemskap ||--|o Periode : "gyldighetsperiode"
 Undervisningsgruppemedlemskap ||--|o Undervisningsgruppe : "undervisningsgruppe"
 Utdanningsprogram ||--}o Programomrade : "programomrade"
 Utdanningsprogram ||--}o Skole : "skole"
-Varsel ||--|o Faggruppemedlemskap : "faggruppemedlemskap"
 Varsel ||--|o Skoleressurs : "karakteransvarlig, utsteder"
 Varsel ||--|o Varseltype : "type"
+Varsel ||--}o Faggruppemedlemskap : "faggruppemedlemskap"
 Varseltype ||--|o Periode : "gyldighetsperiode"
 Vitnemalsmerknad ||--|o Periode : "gyldighetsperiode"
 

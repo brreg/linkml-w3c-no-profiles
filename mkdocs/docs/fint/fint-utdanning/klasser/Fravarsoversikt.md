@@ -3,8 +3,13 @@
 # Slot: fravarsoversikt 
 
 
+_Alle fråværsoversikter i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:fravarsoversikt](https://schema.fintlabs.no/utdanning/:fravarsoversikt)
+
+
+
+
+URI: [utd:fravarsoversikt](https://schema.fintlabs.no/utdanning/fravarsoversikt)
 Alias: fravarsoversikt
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fravarsoversikt
 | --- | --- |
 | Range | [Fravarsoversikt](fravarsoversikt.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:fravarsoversikt](https://schema.fintlabs.no/utdanning/fravarsoversikt) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fravarsoversikt
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fravarsoversikt |
+| self | utd:fravarsoversikt |
 | native | https://schema.fintlabs.no/utdanning/:fravarsoversikt |
 
 
@@ -84,10 +83,11 @@ Alias: fravarsoversikt
 <details>
 ```yaml
 name: fravarsoversikt
+description: Alle fråværsoversikter i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:fravarsoversikt
 alias: fravarsoversikt
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Fravarsoversikt

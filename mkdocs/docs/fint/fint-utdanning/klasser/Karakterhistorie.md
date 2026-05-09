@@ -3,8 +3,13 @@
 # Slot: karakterhistorie 
 
 
+_Karakterhistorikk._
 
-URI: [https://schema.fintlabs.no/utdanning/:karakterhistorie](https://schema.fintlabs.no/utdanning/:karakterhistorie)
+
+
+
+
+URI: [utd:karakterhistorie](https://schema.fintlabs.no/utdanning/karakterhistorie)
 Alias: karakterhistorie
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: karakterhistorie
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
-| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  yes  |
 
 
 
@@ -32,13 +37,15 @@ Alias: karakterhistorie
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Karakterhistorie](karakterhistorie.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Eksamensvurdering](eksamensvurdering.md), [Sluttfagvurdering](sluttfagvurdering.md) |
+| Slot URI | [utd:karakterhistorie](https://schema.fintlabs.no/utdanning/karakterhistorie) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,12 +62,19 @@ Alias: karakterhistorie
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:karakterhistorie |
+| self | utd:karakterhistorie |
 | native | https://schema.fintlabs.no/utdanning/:karakterhistorie |
 
 
@@ -71,12 +85,17 @@ Alias: karakterhistorie
 <details>
 ```yaml
 name: karakterhistorie
+description: Karakterhistorikk.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:karakterhistorie
 alias: karakterhistorie
 domain_of:
 - UtdanningContainer
 - Eksamensvurdering
 - Sluttfagvurdering
-range: string
+range: Karakterhistorie
+multivalued: true
 
 ```
 </details>

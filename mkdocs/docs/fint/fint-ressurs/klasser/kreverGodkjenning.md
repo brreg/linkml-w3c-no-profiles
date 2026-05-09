@@ -3,9 +3,7 @@
 # Slot: kreverGodkjenning 
 
 
-_True dersom tildeling av ressursen krev godkjenning av leiar/tenestteforvaltar eller tenesteeigr._
-
-__
+_True dersom tildeling av ressursen krev godkjenning._
 
 
 
@@ -24,7 +22,7 @@ Alias: kreverGodkjenning
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
 
 
 
@@ -45,23 +43,10 @@ Alias: kreverGodkjenning
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurs](applikasjonsressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Anbefalt](anbefalt.md)
 
 
 
@@ -97,17 +82,11 @@ Alias: kreverGodkjenning
 <details>
 ```yaml
 name: kreverGodkjenning
-description: 'True dersom tildeling av ressursen krev godkjenning av leiar/tenestteforvaltar
-  eller tenesteeigr.
-
-  '
-in_subset:
-- Anbefalt
+description: True dersom tildeling av ressursen krev godkjenning.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:kreverGodkjenning
 alias: kreverGodkjenning
-owner: Applikasjonsressurs
 domain_of:
 - Applikasjonsressurs
 range: boolean

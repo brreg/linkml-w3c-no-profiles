@@ -3,7 +3,7 @@
 # Slot: applikasjon 
 
 
-_Applikasjonen denne ressursen (lisensen) er knytt til._
+_Applikasjonen ressursen (lisensen) er knytt til._
 
 
 
@@ -22,7 +22,7 @@ Alias: applikasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: applikasjon
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurs](applikasjonsressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: applikasjon
 <details>
 ```yaml
 name: applikasjon
-description: Applikasjonen denne ressursen (lisensen) er knytt til.
-in_subset:
-- Obligatorisk
+description: Applikasjonen ressursen (lisensen) er knytt til.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:applikasjon
 alias: applikasjon
-owner: Applikasjonsressurs
 domain_of:
 - Applikasjonsressurs
 range: Applikasjon
-required: true
 
 ```
 </details>

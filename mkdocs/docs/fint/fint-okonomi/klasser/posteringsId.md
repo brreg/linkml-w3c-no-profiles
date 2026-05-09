@@ -22,7 +22,7 @@ Alias: posteringsId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  no  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: posteringsId
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Postering](postering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: posteringsId
 ```yaml
 name: posteringsId
 description: Intern unik identifikator i økonomisystemet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:posteringsId
 alias: posteringsId
-owner: Postering
 domain_of:
 - Postering
 range: Identifikator
-required: true
 inlined: true
 
 ```

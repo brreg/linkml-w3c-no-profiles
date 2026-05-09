@@ -22,7 +22,7 @@ Alias: registrertAv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  no  |
+| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: registrertAv
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fraversregistrering](fraversregistrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: registrertAv
 ```yaml
 name: registrertAv
 description: Skoleressurs som registrerte fråværet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:registrertAv
 alias: registrertAv
-owner: Fraversregistrering
 domain_of:
 - Fraversregistrering
 range: Skoleressurs

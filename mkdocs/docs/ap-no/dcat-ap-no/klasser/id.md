@@ -22,33 +22,33 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
-| [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
-| [Gebyr](gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |  no  |
-| [KatalogisertRessurs](katalogisertressurs.md) | Basisklasse for ressursar som kan katalogiserast |  no  |
-| [ProvAktivitet](provaktivitet.md) | Ein PROV-aktivitet |  no  |
-| [Sjekksum](sjekksum.md) | Ein sjekksum for ein distribusjon |  no  |
-| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
-| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
-| [ProvenanceStatement](provenancestatement.md) | Ein provenienserklæring |  no  |
-| [Tidsrom](tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
+| [Tidsinstant](tidsinstant.md) | Eit tidspunkt (OWL Time) |  no  |
 | [ProvAttributering](provattributering.md) | Ein kvalifisert PROV-attributering |  no  |
 | [Rettighetserklaring](rettighetserklaring.md) | Ei erklæring om rettar til ein ressurs (ODRS) |  no  |
-| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
-| [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
-| [Tidsinstant](tidsinstant.md) | Eit tidspunkt (OWL Time) |  no  |
-| [Identifikator](identifikator.md) | Ein alternativ identifikator for ein ressurs |  no  |
-| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
-| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
-| [Frekvens](frekvens.md) | Ein oppdateringsfrekvens |  no  |
-| [Standard](standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
-| [Aktor](aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
-| [Kontaktopplysning](kontaktopplysning.md) | Kontaktinformasjon for ein aktør |  no  |
-| [Relasjon](relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  no  |
-| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
+| [Tidsrom](tidsrom.md) | Eit tidsintervall med start- og sluttdato |  no  |
 | [OdrlPolicy](odrlpolicy.md) | Ein ODRL-policy |  no  |
+| [Relasjon](relasjon.md) | Ein kvalifisert relasjon mellom to ressursar |  no  |
+| [Datasett](datasett.md) | Ei samling av data utgjeven eller kuratert av éin aktør |  no  |
+| [Sjekksum](sjekksum.md) | Ein sjekksum for ein distribusjon |  no  |
+| [Standard](standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
+| [Distribusjon](distribusjon.md) | Ein spesifikk representasjon/nedlastbar form av eit datasett |  no  |
+| [KatalogisertRessurs](katalogisertressurs.md) | Basisklasse for ressursar som kan katalogiserast |  no  |
+| [ProvAktivitet](provaktivitet.md) | Ein PROV-aktivitet |  no  |
 | [Datasettserie](datasettserie.md) | Ei serie av relaterte datasett publisert separat men med felles metadata |  no  |
+| [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
+| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
+| [Datatjeneste](datatjeneste.md) | Ei samling operasjonar tilgjengeleg via eit API-grensesnitt |  no  |
+| [Frekvens](frekvens.md) | Ein oppdateringsfrekvens |  no  |
+| [Identifikator](identifikator.md) | Ein alternativ identifikator for ein ressurs |  no  |
+| [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
+| [Aktor](aktor.md) | Ein aktør (person, organisasjon eller system) med ansvar for ein ressurs |  no  |
+| [Katalog](katalog.md) | Ei kuratert samling av metadata om datasett, datatenestar og/eller andre kata... |  no  |
 | [Katalogpost](katalogpost.md) | Ein katalogpost som beskriv ein ressurs i katalogen |  no  |
+| [ProvenanceStatement](provenancestatement.md) | Ein provenienserklæring |  no  |
+| [Kontaktopplysning](kontaktopplysning.md) | Kontaktinformasjon for ein aktør |  no  |
+| [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
+| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Gebyr](gebyr.md) | Eit gebyr knytt til bruk av ein datatjeneste |  no  |
 
 
 

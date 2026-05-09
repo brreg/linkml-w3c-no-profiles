@@ -22,7 +22,7 @@ Alias: lokasjonskode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: lokasjonskode
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidslokasjon](arbeidslokasjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: lokasjonskode
 ```yaml
 name: lokasjonskode
 description: Kode som identifiserer ein arbeidslokasjon.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:lokasjonskode
 alias: lokasjonskode
-owner: Arbeidslokasjon
 domain_of:
 - Arbeidslokasjon
 range: Identifikator
-required: true
 inlined: true
 
 ```

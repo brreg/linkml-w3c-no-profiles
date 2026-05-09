@@ -98,36 +98,52 @@ URI: [fint:Aktoer](https://schema.fintlabs.no/Aktoer)
 
   
   
-
-  
-  
-
-
-
-
-
-
-  
-  
-  
-  
     
   
 
-  
-  
   
   
     
   
 
 
-### Andre
+### Valgfri
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [kontaktinformasjon](kontaktinformasjon.md) | 0..1 <br/> [Kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [postadresse](postadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Informasjon om postadresse til ein aktør |
+
+
+
+
+
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
 
 
@@ -184,32 +200,18 @@ name: Aktoer
 description: Abstrakt base for person eller eining vi samhandlar med.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 abstract: true
-attributes:
+slots:
+- kontaktinformasjon
+- postadresse
+slot_usage:
   kontaktinformasjon:
     name: kontaktinformasjon
-    description: Den føretrekte måten å kome i kontakt med ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:kontaktinformasjon
-    domain_of:
-    - Aktoer
-    - Kontaktperson
-    range: Kontaktinformasjon
-    inlined: true
   postadresse:
     name: postadresse
-    description: Informasjon om postadresse til ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:postadresse
-    domain_of:
-    - Aktoer
-    range: Adresse
-    inlined: true
 class_uri: fint:Aktoer
 
 ```
@@ -223,13 +225,22 @@ name: Aktoer
 description: Abstrakt base for person eller eining vi samhandlar med.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 abstract: true
+slot_usage:
+  kontaktinformasjon:
+    name: kontaktinformasjon
+    in_subset:
+    - Valgfri
+  postadresse:
+    name: postadresse
+    in_subset:
+    - Valgfri
 attributes:
   kontaktinformasjon:
     name: kontaktinformasjon
     description: Den føretrekte måten å kome i kontakt med ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
     slot_uri: fint:kontaktinformasjon
     alias: kontaktinformasjon
@@ -244,7 +255,7 @@ attributes:
     description: Informasjon om postadresse til ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
     slot_uri: fint:postadresse
     alias: postadresse

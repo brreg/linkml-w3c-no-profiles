@@ -3,8 +3,13 @@
 # Slot: persongrupper 
 
 
+_Alle persongrupper i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:persongrupper](https://schema.fintlabs.no/utdanning/:persongrupper)
+
+
+
+
+URI: [utd:persongrupper](https://schema.fintlabs.no/utdanning/persongrupper)
 Alias: persongrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: persongrupper
 | --- | --- |
 | Range | [Persongruppe](persongruppe.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:persongrupper](https://schema.fintlabs.no/utdanning/persongrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: persongrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:persongrupper |
+| self | utd:persongrupper |
 | native | https://schema.fintlabs.no/utdanning/:persongrupper |
 
 
@@ -84,10 +83,11 @@ Alias: persongrupper
 <details>
 ```yaml
 name: persongrupper
+description: Alle persongrupper i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:persongrupper
 alias: persongrupper
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Persongruppe

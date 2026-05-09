@@ -22,7 +22,7 @@ Alias: kontraktstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  no  |
+| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kontraktstype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Laerling](laerling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: kontraktstype
 ```yaml
 name: kontraktstype
 description: Type kontrakt for lærlingen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:kontraktstype
 alias: kontraktstype
-owner: Laerling
 domain_of:
 - Laerling
 range: string

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:saksmappetypar](https://schema.fintlabs.no/arkiv/:saksmappetypar)
+URI: [ark:saksmappetypar](https://schema.fintlabs.no/arkiv/saksmappetypar)
 Alias: saksmappetypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: saksmappetypar
 | --- | --- |
 | Range | [Saksmappetype](saksmappetype.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:saksmappetypar](https://schema.fintlabs.no/arkiv/saksmappetypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: saksmappetypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:saksmappetypar |
+| self | ark:saksmappetypar |
 | native | https://schema.fintlabs.no/arkiv/:saksmappetypar |
 
 
@@ -86,8 +80,8 @@ Alias: saksmappetypar
 name: saksmappetypar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:saksmappetypar
 alias: saksmappetypar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Saksmappetype

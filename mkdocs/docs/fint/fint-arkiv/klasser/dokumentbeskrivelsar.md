@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:dokumentbeskrivelsar](https://schema.fintlabs.no/arkiv/:dokumentbeskrivelsar)
+URI: [ark:dokumentbeskrivelsar](https://schema.fintlabs.no/arkiv/dokumentbeskrivelsar)
 Alias: dokumentbeskrivelsar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: dokumentbeskrivelsar
 | --- | --- |
 | Range | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:dokumentbeskrivelsar](https://schema.fintlabs.no/arkiv/dokumentbeskrivelsar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: dokumentbeskrivelsar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:dokumentbeskrivelsar |
+| self | ark:dokumentbeskrivelsar |
 | native | https://schema.fintlabs.no/arkiv/:dokumentbeskrivelsar |
 
 
@@ -86,8 +80,8 @@ Alias: dokumentbeskrivelsar
 name: dokumentbeskrivelsar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:dokumentbeskrivelsar
 alias: dokumentbeskrivelsar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Dokumentbeskrivelse

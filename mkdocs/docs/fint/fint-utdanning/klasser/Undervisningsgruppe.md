@@ -3,8 +3,13 @@
 # Slot: undervisningsgruppe 
 
 
+_Undervisningsgruppe._
 
-URI: [https://schema.fintlabs.no/utdanning/:undervisningsgruppe](https://schema.fintlabs.no/utdanning/:undervisningsgruppe)
+
+
+
+
+URI: [utd:undervisningsgruppe](https://schema.fintlabs.no/utdanning/undervisningsgruppe)
 Alias: undervisningsgruppe
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: undervisningsgruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Time](time.md) | Ein time i timeplanen |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  no  |
-| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  no  |
+| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  yes  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Time](time.md) | Ein time i timeplanen |  yes  |
+| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: undervisningsgruppe
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Undervisningsgruppe](undervisningsgruppe.md) |
 | Domain Of | [Fag](fag.md), [Time](time.md), [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md), [Fraversregistrering](fraversregistrering.md) |
+| Slot URI | [utd:undervisningsgruppe](https://schema.fintlabs.no/utdanning/undervisningsgruppe) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: undervisningsgruppe
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:undervisningsgruppe |
+| self | utd:undervisningsgruppe |
 | native | https://schema.fintlabs.no/utdanning/:undervisningsgruppe |
 
 
@@ -72,13 +85,17 @@ Alias: undervisningsgruppe
 <details>
 ```yaml
 name: undervisningsgruppe
+description: Undervisningsgruppe.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:undervisningsgruppe
 alias: undervisningsgruppe
 domain_of:
 - Fag
 - Time
 - Undervisningsgruppemedlemskap
 - Fraversregistrering
-range: string
+range: Undervisningsgruppe
 
 ```
 </details>

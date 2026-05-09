@@ -22,7 +22,7 @@ Alias: fakturanummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: fakturanummer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Faktura](faktura.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: fakturanummer
 ```yaml
 name: fakturanummer
 description: Identifikator oppretta i fakturaprogrammet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:fakturanummer
 alias: fakturanummer
-owner: Faktura
 domain_of:
 - Faktura
 range: Identifikator
-required: true
 inlined: true
 
 ```

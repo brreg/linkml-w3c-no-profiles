@@ -3,8 +3,13 @@
 # Slot: spraak 
 
 
+_Alle språkverdiar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:spraak](https://schema.fintlabs.no/administrasjon/:spraak)
+
+
+
+
+URI: [adm:spraak](https://schema.fintlabs.no/administrasjon/spraak)
 Alias: spraak
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: spraak
 | --- | --- |
 | Range | [Spraak](spraak.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:spraak](https://schema.fintlabs.no/administrasjon/spraak) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: spraak
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:spraak |
+| self | adm:spraak |
 | native | https://schema.fintlabs.no/administrasjon/:spraak |
 
 
@@ -84,10 +83,11 @@ Alias: spraak
 <details>
 ```yaml
 name: spraak
+description: Alle språkverdiar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:spraak
 alias: spraak
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Spraak

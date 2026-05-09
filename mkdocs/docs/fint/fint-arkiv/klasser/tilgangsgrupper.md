@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:tilgangsgrupper](https://schema.fintlabs.no/arkiv/:tilgangsgrupper)
+URI: [ark:tilgangsgrupper](https://schema.fintlabs.no/arkiv/tilgangsgrupper)
 Alias: tilgangsgrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: tilgangsgrupper
 | --- | --- |
 | Range | [Tilgangsgruppe](tilgangsgruppe.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:tilgangsgrupper](https://schema.fintlabs.no/arkiv/tilgangsgrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: tilgangsgrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:tilgangsgrupper |
+| self | ark:tilgangsgrupper |
 | native | https://schema.fintlabs.no/arkiv/:tilgangsgrupper |
 
 
@@ -86,8 +80,8 @@ Alias: tilgangsgrupper
 name: tilgangsgrupper
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:tilgangsgrupper
 alias: tilgangsgrupper
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Tilgangsgruppe

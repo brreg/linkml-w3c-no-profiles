@@ -179,6 +179,14 @@ URI: [https://schema.fintlabs.no/personvern/:PersonvernContainer](https://schema
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -198,7 +206,7 @@ URI: [https://schema.fintlabs.no/personvern/:PersonvernContainer](https://schema
 | [behandlingar](behandlingar.md) | * <br/> [Behandling](behandling.md) |  |
 | [samtykker](samtykker.md) | * <br/> [Samtykke](samtykke.md) |  |
 | [tenester](tenester.md) | * <br/> [Tjeneste](tjeneste.md) |  |
-| [behandlingsgrunnlag](behandlingsgrunnlag.md) | * <br/> [Behandlingsgrunnlag](behandlingsgrunnlag.md) |  |
+| [behandlingsgrunnlag](behandlingsgrunnlag.md) | * <br/> [Behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysning |
 | [personopplysningar](personopplysningar.md) | * <br/> [Personopplysning](personopplysning.md) |  |
 
 
@@ -255,57 +263,16 @@ URI: [https://schema.fintlabs.no/personvern/:PersonvernContainer](https://schema
 name: PersonvernContainer
 description: Rotcontainer for FINT Personvern-instansar.
 from_schema: https://data.norge.no/linkml/fint-personvern
-attributes:
-  behandlingar:
-    name: behandlingar
-    from_schema: https://data.norge.no/linkml/fint-personvern
-    rank: 1000
-    domain_of:
-    - PersonvernContainer
-    range: Behandling
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  samtykker:
-    name: samtykker
-    from_schema: https://data.norge.no/linkml/fint-personvern
-    rank: 1000
-    domain_of:
-    - PersonvernContainer
-    range: Samtykke
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tenester:
-    name: tenester
-    from_schema: https://data.norge.no/linkml/fint-personvern
-    rank: 1000
-    domain_of:
-    - PersonvernContainer
-    range: Tjeneste
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
+slots:
+- behandlingar
+- samtykker
+- tenester
+- behandlingsgrunnlag
+- personopplysningar
+slot_usage:
   behandlingsgrunnlag:
     name: behandlingsgrunnlag
-    from_schema: https://data.norge.no/linkml/fint-personvern
-    rank: 1000
-    domain_of:
-    - PersonvernContainer
-    - Behandling
-    range: Behandlingsgrunnlag
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  personopplysningar:
-    name: personopplysningar
-    from_schema: https://data.norge.no/linkml/fint-personvern
-    rank: 1000
-    domain_of:
-    - PersonvernContainer
-    range: Personopplysning
-    multivalued: true
-    inlined: true
     inlined_as_list: true
 tree_root: true
 
@@ -319,11 +286,17 @@ tree_root: true
 name: PersonvernContainer
 description: Rotcontainer for FINT Personvern-instansar.
 from_schema: https://data.norge.no/linkml/fint-personvern
+slot_usage:
+  behandlingsgrunnlag:
+    name: behandlingsgrunnlag
+    multivalued: true
+    inlined_as_list: true
 attributes:
   behandlingar:
     name: behandlingar
     from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
+    slot_uri: pvn:behandlingar
     alias: behandlingar
     owner: PersonvernContainer
     domain_of:
@@ -335,6 +308,7 @@ attributes:
     name: samtykker
     from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
+    slot_uri: pvn:samtykker
     alias: samtykker
     owner: PersonvernContainer
     domain_of:
@@ -346,6 +320,7 @@ attributes:
     name: tenester
     from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
+    slot_uri: pvn:tenester
     alias: tenester
     owner: PersonvernContainer
     domain_of:
@@ -355,8 +330,10 @@ attributes:
     inlined_as_list: true
   behandlingsgrunnlag:
     name: behandlingsgrunnlag
+    description: Rettsleg grunnlag for behandling av personopplysning.
     from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
+    slot_uri: pvn:behandlingsgrunnlag
     alias: behandlingsgrunnlag
     owner: PersonvernContainer
     domain_of:
@@ -369,6 +346,7 @@ attributes:
     name: personopplysningar
     from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
+    slot_uri: pvn:personopplysningar
     alias: personopplysningar
     owner: PersonvernContainer
     domain_of:

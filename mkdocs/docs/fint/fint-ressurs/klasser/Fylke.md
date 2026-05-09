@@ -3,7 +3,7 @@
 # Slot: fylke 
 
 
-_Fylket kommunen høyrer til._
+_Fylke._
 
 
 
@@ -22,7 +22,7 @@ Alias: fylke
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: fylke
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kommune](kommune.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: fylke
 <details>
 ```yaml
 name: fylke
-description: Fylket kommunen høyrer til.
-in_subset:
-- Obligatorisk
+description: Fylke.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:fylke
 alias: fylke
-owner: Kommune
 domain_of:
 - Kommune
 range: Fylke
-required: true
 
 ```
 </details>

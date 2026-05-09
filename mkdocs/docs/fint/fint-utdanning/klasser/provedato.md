@@ -22,7 +22,7 @@ Alias: provedato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  no  |
+| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: provedato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AvlagtProve](avlagtprove.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: provedato
 ```yaml
 name: provedato
 description: Dato prøva vart avlagt.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:provedato
 alias: provedato
-owner: AvlagtProve
 domain_of:
 - AvlagtProve
 range: date

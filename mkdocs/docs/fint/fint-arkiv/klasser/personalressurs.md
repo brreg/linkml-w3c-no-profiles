@@ -3,8 +3,13 @@
 # Slot: personalressurs 
 
 
+_Referanse til Personalressurs i Administrasjon-domenet._
 
-URI: [https://schema.fintlabs.no/arkiv/:personalressurs](https://schema.fintlabs.no/arkiv/:personalressurs)
+
+
+
+
+URI: [ark:personalressurs](https://schema.fintlabs.no/arkiv/personalressurs)
 Alias: personalressurs
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: personalressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  no  |
 | [Person](person.md) | Fysiske private personar |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
+| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: personalressurs
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Arkivressurs](arkivressurs.md), [Personalmappe](personalmappe.md), [Person](person.md) |
+| Slot URI | [ark:personalressurs](https://schema.fintlabs.no/arkiv/personalressurs) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: personalressurs
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:personalressurs |
+| self | ark:personalressurs |
 | native | https://schema.fintlabs.no/arkiv/:personalressurs |
 
 
@@ -71,12 +84,16 @@ Alias: personalressurs
 <details>
 ```yaml
 name: personalressurs
+description: Referanse til Personalressurs i Administrasjon-domenet.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:personalressurs
 alias: personalressurs
 domain_of:
 - Arkivressurs
 - Personalmappe
 - Person
-range: string
+range: uriorcurie
 
 ```
 </details>

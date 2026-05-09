@@ -22,7 +22,7 @@ Alias: antall
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: antall
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Variabellonn](variabellonn.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: antall
 ```yaml
 name: antall
 description: Mengde som vert beskriven av tillegget, i hundredeler.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:antall
 alias: antall
-owner: Variabellonn
 domain_of:
 - Variabellonn
 range: integer
-required: true
 
 ```
 </details>

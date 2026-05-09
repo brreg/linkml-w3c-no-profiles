@@ -22,7 +22,7 @@ Alias: forersPaaVitnemaal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  no  |
+| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: forersPaaVitnemaal
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fraversregistrering](fraversregistrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: forersPaaVitnemaal
 ```yaml
 name: forersPaaVitnemaal
 description: Angir om fråværet vert ført på vitnemålet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:forersPaaVitnemaal
 alias: forersPaaVitnemaal
-owner: Fraversregistrering
 domain_of:
 - Fraversregistrering
 range: boolean
-required: true
 
 ```
 </details>

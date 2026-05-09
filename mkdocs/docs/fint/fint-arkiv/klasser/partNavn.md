@@ -22,7 +22,7 @@ Alias: partNavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: partNavn
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Part](part.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: partNavn
 ```yaml
 name: partNavn
 description: Namn på verksemd eller person som er part.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:partNavn
 alias: partNavn
-owner: Part
 domain_of:
 - Part
 range: string
-required: true
 
 ```
 </details>

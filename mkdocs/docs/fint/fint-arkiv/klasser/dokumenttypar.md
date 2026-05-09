@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:dokumenttypar](https://schema.fintlabs.no/arkiv/:dokumenttypar)
+URI: [ark:dokumenttypar](https://schema.fintlabs.no/arkiv/dokumenttypar)
 Alias: dokumenttypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: dokumenttypar
 | --- | --- |
 | Range | [DokumentType](dokumenttype.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:dokumenttypar](https://schema.fintlabs.no/arkiv/dokumenttypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: dokumenttypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:dokumenttypar |
+| self | ark:dokumenttypar |
 | native | https://schema.fintlabs.no/arkiv/:dokumenttypar |
 
 
@@ -86,8 +80,8 @@ Alias: dokumenttypar
 name: dokumenttypar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:dokumenttypar
 alias: dokumenttypar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: DokumentType

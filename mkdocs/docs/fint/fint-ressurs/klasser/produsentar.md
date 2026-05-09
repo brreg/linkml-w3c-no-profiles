@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:produsentar](https://schema.fintlabs.no/ressurs/:produsentar)
+URI: [res:produsentar](https://schema.fintlabs.no/ressurs/produsentar)
 Alias: produsentar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: produsentar
 | --- | --- |
 | Range | [Produsent](produsent.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:produsentar](https://schema.fintlabs.no/ressurs/produsentar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: produsentar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:produsentar |
+| self | res:produsentar |
 | native | https://schema.fintlabs.no/ressurs/:produsentar |
 
 
@@ -86,8 +80,8 @@ Alias: produsentar
 name: produsentar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:produsentar
 alias: produsentar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Produsent

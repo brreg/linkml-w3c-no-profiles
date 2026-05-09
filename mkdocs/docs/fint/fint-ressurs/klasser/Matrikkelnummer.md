@@ -247,62 +247,13 @@ URI: [fint:Matrikkelnummer](https://schema.fintlabs.no/Matrikkelnummer)
 name: Matrikkelnummer
 description: Eintydleg identifisering av matrikkeleining innanfor kommune.
 from_schema: https://data.norge.no/linkml/fint-ressurs
-attributes:
-  adresse:
-    name: adresse
-    description: Adresse til matrikkeleining.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:adresse
-    domain_of:
-    - Matrikkelnummer
-    range: Adresse
-    inlined: true
-  bruksnummer:
-    name: bruksnummer
-    description: Fortløpande nummerering av bruk under gårdsnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:bruksnummer
-    domain_of:
-    - Matrikkelnummer
-    range: string
-  festenummer:
-    name: festenummer
-    description: Fortløpande nummerering av festar under gårdsnummer/bruksnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:festenummer
-    domain_of:
-    - Matrikkelnummer
-    range: string
-  gaardsnummer:
-    name: gaardsnummer
-    description: Nummerering av gårdseiging i matrikkelen, unik innanfor kommune.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:gaardsnummer
-    domain_of:
-    - Matrikkelnummer
-    range: string
-  seksjonsnummer:
-    name: seksjonsnummer
-    description: Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:seksjonsnummer
-    domain_of:
-    - Matrikkelnummer
-    range: string
-  kommunenummer:
-    name: kommunenummer
-    description: Nummerering av kommunen i høve til SSB si offisielle liste.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:kommunenummer
-    domain_of:
-    - Matrikkelnummer
-    range: Kommune
+slots:
+- adresse
+- bruksnummer
+- festenummer
+- gaardsnummer
+- seksjonsnummer
+- kommunenummer
 class_uri: fint:Matrikkelnummer
 
 ```
@@ -319,7 +270,7 @@ attributes:
   adresse:
     name: adresse
     description: Adresse til matrikkeleining.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:adresse
     alias: adresse
@@ -331,7 +282,7 @@ attributes:
   bruksnummer:
     name: bruksnummer
     description: Fortløpande nummerering av bruk under gårdsnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:bruksnummer
     alias: bruksnummer
@@ -342,7 +293,7 @@ attributes:
   festenummer:
     name: festenummer
     description: Fortløpande nummerering av festar under gårdsnummer/bruksnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:festenummer
     alias: festenummer
@@ -353,7 +304,7 @@ attributes:
   gaardsnummer:
     name: gaardsnummer
     description: Nummerering av gårdseiging i matrikkelen, unik innanfor kommune.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:gaardsnummer
     alias: gaardsnummer
@@ -364,7 +315,7 @@ attributes:
   seksjonsnummer:
     name: seksjonsnummer
     description: Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:seksjonsnummer
     alias: seksjonsnummer
@@ -375,7 +326,7 @@ attributes:
   kommunenummer:
     name: kommunenummer
     description: Nummerering av kommunen i høve til SSB si offisielle liste.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:kommunenummer
     alias: kommunenummer

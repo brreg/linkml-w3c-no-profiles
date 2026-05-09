@@ -3,7 +3,7 @@
 # Slot: karakterverdi 
 
 
-_Ny karakterverdi etter endringa._
+_Karakterverdi._
 
 
 
@@ -22,7 +22,7 @@ Alias: karakterverdi
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  no  |
+| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: karakterverdi
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterhistorie](karakterhistorie.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: karakterverdi
 <details>
 ```yaml
 name: karakterverdi
-description: Ny karakterverdi etter endringa.
-in_subset:
-- Valgfri
+description: Karakterverdi.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:karakterverdi
 alias: karakterverdi
-owner: Karakterhistorie
 domain_of:
 - Karakterhistorie
 range: Karakterverdi

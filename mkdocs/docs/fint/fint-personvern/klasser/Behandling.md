@@ -3,8 +3,13 @@
 # Slot: behandling 
 
 
+_Behandlingsaktivitet._
 
-URI: [https://schema.fintlabs.no/personvern/:behandling](https://schema.fintlabs.no/personvern/:behandling)
+
+
+
+
+URI: [pvn:behandling](https://schema.fintlabs.no/personvern/behandling)
 Alias: behandling
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: behandling
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tjeneste](tjeneste.md) | Teneste eller system som behandlar personopplysningar |  no  |
-| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  no  |
+| [Tjeneste](tjeneste.md) | Teneste eller system som behandlar personopplysningar |  yes  |
+| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: behandling
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Behandling](behandling.md) |
 | Domain Of | [Samtykke](samtykke.md), [Tjeneste](tjeneste.md) |
+| Slot URI | [pvn:behandling](https://schema.fintlabs.no/personvern/behandling) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: behandling
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-personvern
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:behandling |
+| self | pvn:behandling |
 | native | https://schema.fintlabs.no/personvern/:behandling |
 
 
@@ -70,11 +83,15 @@ Alias: behandling
 <details>
 ```yaml
 name: behandling
+description: Behandlingsaktivitet.
+from_schema: https://data.norge.no/linkml/fint-personvern
+rank: 1000
+slot_uri: pvn:behandling
 alias: behandling
 domain_of:
 - Samtykke
 - Tjeneste
-range: string
+range: Behandling
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: ansvarlig 
 
 
-_Referanse til Personalressurs (Administrasjon) som er ansvarleg for å godkjenne transaksjonen._
+_Referanse til Personalressurs (Administrasjon) som er ansvarleg._
 
 
 
@@ -22,7 +22,7 @@ Alias: ansvarlig
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: ansvarlig
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Transaksjon](transaksjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,15 +82,11 @@ Alias: ansvarlig
 <details>
 ```yaml
 name: ansvarlig
-description: Referanse til Personalressurs (Administrasjon) som er ansvarleg for å
-  godkjenne transaksjonen.
-in_subset:
-- Valgfri
+description: Referanse til Personalressurs (Administrasjon) som er ansvarleg.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:ansvarlig
 alias: ansvarlig
-owner: Transaksjon
 domain_of:
 - Transaksjon
 range: uriorcurie

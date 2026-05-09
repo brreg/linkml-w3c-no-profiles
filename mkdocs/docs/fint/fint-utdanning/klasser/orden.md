@@ -3,8 +3,13 @@
 # Slot: orden 
 
 
+_Ordenskarakter._
 
-URI: [https://schema.fintlabs.no/utdanning/:orden](https://schema.fintlabs.no/utdanning/:orden)
+
+
+
+
+URI: [utd:orden](https://schema.fintlabs.no/utdanning/orden)
 Alias: orden
 
 <!-- no inheritance hierarchy -->
@@ -18,10 +23,10 @@ Alias: orden
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurdering for ein elev |  no  |
-| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  no  |
-| [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md) | Abstrakt basisklasse for ordensvurderingar |  no  |
-| [Anmerkninger](anmerkninger.md) | Åtferds- og ordensanmerkningar for ein elev i eit skoleår |  no  |
+| [Anmerkninger](anmerkninger.md) | Åtferds- og ordensanmerkningar for ein elev i eit skoleår |  yes  |
+| [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md) | Abstrakt basisklasse for ordensvurderingar |  yes  |
 | [Underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurdering for ein elev |  no  |
+| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  no  |
 
 
 
@@ -34,8 +39,9 @@ Alias: orden
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Karakterverdi](karakterverdi.md) |
 | Domain Of | [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md), [Anmerkninger](anmerkninger.md) |
+| Slot URI | [utd:orden](https://schema.fintlabs.no/utdanning/orden) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: orden
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:orden |
+| self | utd:orden |
 | native | https://schema.fintlabs.no/utdanning/:orden |
 
 
@@ -73,11 +86,15 @@ Alias: orden
 <details>
 ```yaml
 name: orden
+description: Ordenskarakter.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:orden
 alias: orden
 domain_of:
 - OrdensvurderingAbstrakt
 - Anmerkninger
-range: string
+range: Karakterverdi
 
 ```
 </details>

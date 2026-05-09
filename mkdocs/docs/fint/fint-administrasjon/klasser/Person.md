@@ -22,7 +22,7 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalressurs](personalressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: person
 ```yaml
 name: person
 description: Person som er ein personalressurs.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:person
 alias: person
-owner: Personalressurs
 domain_of:
 - Personalressurs
 range: Person
-required: true
 
 ```
 </details>

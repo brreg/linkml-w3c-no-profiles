@@ -43,13 +43,6 @@ Alias: epostadresse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontaktinformasjon](kontaktinformasjon.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: fint:epostadresse
 alias: epostadresse
-owner: Kontaktinformasjon
 domain_of:
 - Kontaktinformasjon
 range: string

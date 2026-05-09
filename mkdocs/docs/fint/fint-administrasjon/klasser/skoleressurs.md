@@ -22,7 +22,7 @@ Alias: skoleressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: skoleressurs
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalressurs](personalressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: skoleressurs
 ```yaml
 name: skoleressurs
 description: Referanse til Skoleressurs (Utdanning).
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:skoleressurs
 alias: skoleressurs
-owner: Personalressurs
 domain_of:
 - Personalressurs
 range: uriorcurie

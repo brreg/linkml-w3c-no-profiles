@@ -22,7 +22,7 @@ Alias: fullmektig
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: fullmektig
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fullmakt](fullmakt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: fullmektig
 ```yaml
 name: fullmektig
 description: Personalressurs som har fått fullmakt til ei gjeven rolle.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:fullmektig
 alias: fullmektig
-owner: Fullmakt
 domain_of:
 - Fullmakt
 range: Personalressurs

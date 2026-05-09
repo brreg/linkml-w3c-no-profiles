@@ -3,8 +3,13 @@
 # Slot: timar 
 
 
+_Alle timar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:timar](https://schema.fintlabs.no/utdanning/:timar)
+
+
+
+
+URI: [utd:timar](https://schema.fintlabs.no/utdanning/timar)
 Alias: timar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: timar
 | --- | --- |
 | Range | [Time](time.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:timar](https://schema.fintlabs.no/utdanning/timar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: timar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:timar |
+| self | utd:timar |
 | native | https://schema.fintlabs.no/utdanning/:timar |
 
 
@@ -84,10 +83,11 @@ Alias: timar
 <details>
 ```yaml
 name: timar
+description: Alle timar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:timar
 alias: timar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Time

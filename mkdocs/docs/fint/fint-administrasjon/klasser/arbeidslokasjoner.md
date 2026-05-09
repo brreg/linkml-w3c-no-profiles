@@ -3,8 +3,13 @@
 # Slot: arbeidslokasjoner 
 
 
+_Alle arbeidslokasjoner i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:arbeidslokasjoner](https://schema.fintlabs.no/administrasjon/:arbeidslokasjoner)
+
+
+
+
+URI: [adm:arbeidslokasjoner](https://schema.fintlabs.no/administrasjon/arbeidslokasjoner)
 Alias: arbeidslokasjoner
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: arbeidslokasjoner
 | --- | --- |
 | Range | [Arbeidslokasjon](arbeidslokasjon.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:arbeidslokasjoner](https://schema.fintlabs.no/administrasjon/arbeidslokasjoner) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: arbeidslokasjoner
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:arbeidslokasjoner |
+| self | adm:arbeidslokasjoner |
 | native | https://schema.fintlabs.no/administrasjon/:arbeidslokasjoner |
 
 
@@ -84,10 +83,11 @@ Alias: arbeidslokasjoner
 <details>
 ```yaml
 name: arbeidslokasjoner
+description: Alle arbeidslokasjoner i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:arbeidslokasjoner
 alias: arbeidslokasjoner
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Arbeidslokasjon

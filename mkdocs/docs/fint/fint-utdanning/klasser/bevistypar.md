@@ -3,8 +3,13 @@
 # Slot: bevistypar 
 
 
+_Alle bevistypar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:bevistypar](https://schema.fintlabs.no/utdanning/:bevistypar)
+
+
+
+
+URI: [utd:bevistypar](https://schema.fintlabs.no/utdanning/bevistypar)
 Alias: bevistypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: bevistypar
 | --- | --- |
 | Range | [Bevistype](bevistype.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:bevistypar](https://schema.fintlabs.no/utdanning/bevistypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: bevistypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:bevistypar |
+| self | utd:bevistypar |
 | native | https://schema.fintlabs.no/utdanning/:bevistypar |
 
 
@@ -84,10 +83,11 @@ Alias: bevistypar
 <details>
 ```yaml
 name: bevistypar
+description: Alle bevistypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:bevistypar
 alias: bevistypar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Bevistype

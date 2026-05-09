@@ -3,8 +3,13 @@
 # Slot: stedfortreder 
 
 
+_Stedfortredar i fullmaktssamanheng._
 
-URI: [https://schema.fintlabs.no/administrasjon/:stedfortreder](https://schema.fintlabs.no/administrasjon/:stedfortreder)
+
+
+
+
+URI: [adm:stedfortreder](https://schema.fintlabs.no/administrasjon/stedfortreder)
 Alias: stedfortreder
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: stedfortreder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 
 
 
@@ -33,6 +38,7 @@ Alias: stedfortreder
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Fullmakt](fullmakt.md), [Personalressurs](personalressurs.md) |
+| Slot URI | [adm:stedfortreder](https://schema.fintlabs.no/administrasjon/stedfortreder) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: stedfortreder
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:stedfortreder |
+| self | adm:stedfortreder |
 | native | https://schema.fintlabs.no/administrasjon/:stedfortreder |
 
 
@@ -70,6 +83,10 @@ Alias: stedfortreder
 <details>
 ```yaml
 name: stedfortreder
+description: Stedfortredar i fullmaktssamanheng.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:stedfortreder
 alias: stedfortreder
 domain_of:
 - Fullmakt

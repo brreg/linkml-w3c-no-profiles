@@ -3,8 +3,13 @@
 # Slot: lisensantall 
 
 
+_Totalt tal på lisensar._
 
-URI: [https://schema.fintlabs.no/ressurs/:lisensantall](https://schema.fintlabs.no/ressurs/:lisensantall)
+
+
+
+
+URI: [res:lisensantall](https://schema.fintlabs.no/ressurs/lisensantall)
 Alias: lisensantall
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: lisensantall
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
-| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
+| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: lisensantall
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Integer](integer.md) |
 | Domain Of | [Applikasjonsressurs](applikasjonsressurs.md), [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) |
+| Slot URI | [res:lisensantall](https://schema.fintlabs.no/ressurs/lisensantall) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: lisensantall
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:lisensantall |
+| self | res:lisensantall |
 | native | https://schema.fintlabs.no/ressurs/:lisensantall |
 
 
@@ -70,11 +83,15 @@ Alias: lisensantall
 <details>
 ```yaml
 name: lisensantall
+description: Totalt tal på lisensar.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:lisensantall
 alias: lisensantall
 domain_of:
 - Applikasjonsressurs
 - Applikasjonsressurstilgjengelighet
-range: string
+range: integer
 
 ```
 </details>

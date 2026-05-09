@@ -3,8 +3,13 @@
 # Slot: organisasjonselement 
 
 
+_Organisasjonselement ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/administrasjon/:organisasjonselement](https://schema.fintlabs.no/administrasjon/:organisasjonselement)
+
+
+
+
+URI: [adm:organisasjonselement](https://schema.fintlabs.no/administrasjon/organisasjonselement)
 Alias: organisasjonselement
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: organisasjonselement
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: organisasjonselement
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Organisasjonselement](organisasjonselement.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Ansvar](ansvar.md), [Fullmakt](fullmakt.md) |
+| Slot URI | [adm:organisasjonselement](https://schema.fintlabs.no/administrasjon/organisasjonselement) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: organisasjonselement
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:organisasjonselement |
+| self | adm:organisasjonselement |
 | native | https://schema.fintlabs.no/administrasjon/:organisasjonselement |
 
 
@@ -71,12 +84,16 @@ Alias: organisasjonselement
 <details>
 ```yaml
 name: organisasjonselement
+description: Organisasjonselement ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:organisasjonselement
 alias: organisasjonselement
 domain_of:
 - AdministrasjonContainer
 - Ansvar
 - Fullmakt
-range: string
+range: Organisasjonselement
 
 ```
 </details>

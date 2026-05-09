@@ -22,7 +22,7 @@ Alias: flerbrukerenhet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: flerbrukerenhet
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DigitalEnhet](digitalenhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: flerbrukerenhet
 ```yaml
 name: flerbrukerenhet
 description: Kvifor eininga er ein- eller flerbrukarenheit.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:flerbrukerenhet
 alias: flerbrukerenhet
-owner: DigitalEnhet
 domain_of:
 - DigitalEnhet
 range: boolean

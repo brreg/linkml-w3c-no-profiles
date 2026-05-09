@@ -22,7 +22,7 @@ Alias: kortnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kortnavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Organisasjonselement](organisasjonselement.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: kortnavn
 ```yaml
 name: kortnavn
 description: Forkorta namn som beskriv organisasjonselementet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:kortnavn
 alias: kortnavn
-owner: Organisasjonselement
 domain_of:
 - Organisasjonselement
 range: string

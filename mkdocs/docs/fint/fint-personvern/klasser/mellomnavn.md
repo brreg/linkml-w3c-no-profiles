@@ -43,13 +43,6 @@ Alias: mellomnavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personnavn](personnavn.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:mellomnavn
 alias: mellomnavn
-owner: Personnavn
 domain_of:
 - Personnavn
 range: string

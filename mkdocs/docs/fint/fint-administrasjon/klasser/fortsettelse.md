@@ -22,7 +22,7 @@ Alias: fortsettelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: fortsettelse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravaer](fravaer.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: fortsettelse
 ```yaml
 name: fortsettelse
 description: Fortsetjande fråvær.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:fortsettelse
 alias: fortsettelse
-owner: Fravaer
 domain_of:
 - Fravaer
 range: Fravaer

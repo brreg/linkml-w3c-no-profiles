@@ -22,7 +22,7 @@ Alias: journalDato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: journalDato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Journalpost](journalpost.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: journalDato
 ```yaml
 name: journalDato
 description: Datoen journalposten er oppretta/arkivert.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:journalDato
 alias: journalDato
-owner: Journalpost
 domain_of:
 - Journalpost
 range: datetime

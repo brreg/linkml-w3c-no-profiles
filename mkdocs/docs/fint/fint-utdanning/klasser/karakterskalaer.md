@@ -3,8 +3,13 @@
 # Slot: karakterskalaer 
 
 
+_Alle karakterskalaer i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:karakterskalaer](https://schema.fintlabs.no/utdanning/:karakterskalaer)
+
+
+
+
+URI: [utd:karakterskalaer](https://schema.fintlabs.no/utdanning/karakterskalaer)
 Alias: karakterskalaer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: karakterskalaer
 | --- | --- |
 | Range | [Karakterskala](karakterskala.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:karakterskalaer](https://schema.fintlabs.no/utdanning/karakterskalaer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: karakterskalaer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:karakterskalaer |
+| self | utd:karakterskalaer |
 | native | https://schema.fintlabs.no/utdanning/:karakterskalaer |
 
 
@@ -84,10 +83,11 @@ Alias: karakterskalaer
 <details>
 ```yaml
 name: karakterskalaer
+description: Alle karakterskalaer i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:karakterskalaer
 alias: karakterskalaer
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Karakterskala

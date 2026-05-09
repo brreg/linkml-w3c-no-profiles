@@ -886,6 +886,249 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -928,26 +1171,13 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
   
   
   
-  
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
+      
+    
   
   
     
@@ -956,26 +1186,13 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
   
   
   
-  
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
+      
+    
   
   
     
@@ -998,110 +1215,13 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
   
   
   
-  
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
-  
-  
+      
     
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
   
   
     
@@ -1140,46 +1260,46 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [personar](personar.md) | * <br/> [Person](person.md) |  |
-| [kontaktpersonar](kontaktpersonar.md) | * <br/> [Kontaktperson](kontaktperson.md) |  |
-| [virksomhetar](virksomhetar.md) | * <br/> [Virksomhet](virksomhet.md) |  |
-| [landkodar](landkodar.md) | * <br/> [Landkode](landkode.md) |  |
-| [kjonn](kjonn.md) | * <br/> [Kjonn](kjonn.md) |  |
-| [fylke](fylke.md) | * <br/> [Fylke](fylke.md) |  |
-| [kommunar](kommunar.md) | * <br/> [Kommune](kommune.md) |  |
-| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) |  |
-| [valuta](valuta.md) | * <br/> [Valuta](valuta.md) |  |
-| [personalressursar](personalressursar.md) | * <br/> [Personalressurs](personalressurs.md) |  |
-| [arbeidsforhold](arbeidsforhold.md) | * <br/> [Arbeidsforhold](arbeidsforhold.md) |  |
-| [arbeidslokasjoner](arbeidslokasjoner.md) | * <br/> [Arbeidslokasjon](arbeidslokasjon.md) |  |
-| [fastlonn](fastlonn.md) | * <br/> [Fastlonn](fastlonn.md) |  |
-| [fasttillegg](fasttillegg.md) | * <br/> [Fasttillegg](fasttillegg.md) |  |
-| [fravaer](fravaer.md) | * <br/> [Fravaer](fravaer.md) |  |
-| [fullmakter](fullmakter.md) | * <br/> [Fullmakt](fullmakt.md) |  |
-| [organisasjonselement](organisasjonselement.md) | * <br/> [Organisasjonselement](organisasjonselement.md) |  |
-| [rollar](rollar.md) | * <br/> [Rolle](rolle.md) |  |
-| [variabellonn](variabellonn.md) | * <br/> [Variabellonn](variabellonn.md) |  |
-| [aktivitetar](aktivitetar.md) | * <br/> [Aktivitet](aktivitet.md) |  |
-| [anlegg](anlegg.md) | * <br/> [Anlegg](anlegg.md) |  |
-| [ansvar](ansvar.md) | * <br/> [Ansvar](ansvar.md) |  |
-| [artar](artar.md) | * <br/> [Art](art.md) |  |
-| [arbeidsforholdstypar](arbeidsforholdstypar.md) | * <br/> [Arbeidsforholdstype](arbeidsforholdstype.md) |  |
-| [diverse](diverse.md) | * <br/> [Diverse](diverse.md) |  |
-| [formaal](formaal.md) | * <br/> [Formaal](formaal.md) |  |
-| [fravaersgrunnar](fravaersgrunnar.md) | * <br/> [Fravaersgrunn](fravaersgrunn.md) |  |
-| [fravaerstypar](fravaerstypar.md) | * <br/> [Fravaerstype](fravaerstype.md) |  |
-| [funksjonar](funksjonar.md) | * <br/> [Funksjon](funksjon.md) |  |
-| [kontrakter](kontrakter.md) | * <br/> [Kontrakt](kontrakt.md) |  |
-| [lonsartar](lonsartar.md) | * <br/> [Lonsart](lonsart.md) |  |
-| [lopenummer](lopenummer.md) | * <br/> [Lopenummer](lopenummer.md) |  |
-| [objekt](objekt.md) | * <br/> [Objekt](objekt.md) |  |
-| [organisasjonstypar](organisasjonstypar.md) | * <br/> [Organisasjonstype](organisasjonstype.md) |  |
-| [personalressurskategoriar](personalressurskategoriar.md) | * <br/> [Personalressurskategori](personalressurskategori.md) |  |
-| [prosjekt](prosjekt.md) | * <br/> [Prosjekt](prosjekt.md) |  |
-| [prosjektartar](prosjektartar.md) | * <br/> [Prosjektart](prosjektart.md) |  |
-| [rammer](rammer.md) | * <br/> [Ramme](ramme.md) |  |
-| [stillingskoder](stillingskoder.md) | * <br/> [Stillingskode](stillingskode.md) |  |
-| [uketimetall](uketimetall.md) | * <br/> [Uketimetall](uketimetall.md) |  |
+| [personar](personar.md) | * <br/> [Person](person.md) | Alle personar i containeren |
+| [kontaktpersonar](kontaktpersonar.md) | * <br/> [Kontaktperson](kontaktperson.md) | Alle kontaktpersonar i containeren |
+| [virksomhetar](virksomhetar.md) | * <br/> [Virksomhet](virksomhet.md) | Alle verksemder i containeren |
+| [landkodar](landkodar.md) | * <br/> [Landkode](landkode.md) | Alle landkodar i containeren |
+| [kjonn](kjonn.md) | * <br/> [Kjonn](kjonn.md) | Kjønn |
+| [fylke](fylke.md) | * <br/> [Fylke](fylke.md) | Fylke |
+| [kommunar](kommunar.md) | * <br/> [Kommune](kommune.md) | Alle kommuneverdiar i containeren |
+| [spraak](spraak.md) | * <br/> [Spraak](spraak.md) | Alle språkverdiar i containeren |
+| [valuta](valuta.md) | * <br/> [Valuta](valuta.md) | Alle valutaverdiar i containeren |
+| [personalressursar](personalressursar.md) | * <br/> [Personalressurs](personalressurs.md) | Alle personalressursar i containeren |
+| [arbeidsforhold](arbeidsforhold.md) | * <br/> [Arbeidsforhold](arbeidsforhold.md) | Arbeidsforhold ressursen er knytt til |
+| [arbeidslokasjoner](arbeidslokasjoner.md) | * <br/> [Arbeidslokasjon](arbeidslokasjon.md) | Alle arbeidslokasjoner i containeren |
+| [fastlonn](fastlonn.md) | * <br/> [Fastlonn](fastlonn.md) | Fastlønn for arbeidsforholdet |
+| [fasttillegg](fasttillegg.md) | * <br/> [Fasttillegg](fasttillegg.md) | Faste tillegg for arbeidsforholdet |
+| [fravaer](fravaer.md) | * <br/> [Fravaer](fravaer.md) | Fråvær knytt til ressursen |
+| [fullmakter](fullmakter.md) | * <br/> [Fullmakt](fullmakt.md) | Alle fullmakter i containeren |
+| [organisasjonselement](organisasjonselement.md) | * <br/> [Organisasjonselement](organisasjonselement.md) | Organisasjonselement ressursen er knytt til |
+| [rollar](rollar.md) | * <br/> [Rolle](rolle.md) | Alle rollar i containeren |
+| [variabellonn](variabellonn.md) | * <br/> [Variabellonn](variabellonn.md) | Variabel lønn for arbeidsforholdet |
+| [aktivitetar](aktivitetar.md) | * <br/> [Aktivitet](aktivitet.md) | Alle aktivitetar i containeren |
+| [anlegg](anlegg.md) | * <br/> [Anlegg](anlegg.md) | Objekt som skal aktiverast eller avskrivast |
+| [ansvar](ansvar.md) | * <br/> [Ansvar](ansvar.md) | Ansvarleg for ei utgift eller inntekt |
+| [artar](artar.md) | * <br/> [Art](art.md) | Alle artar i containeren |
+| [arbeidsforholdstypar](arbeidsforholdstypar.md) | * <br/> [Arbeidsforholdstype](arbeidsforholdstype.md) | Alle arbeidsforholdstypar i containeren |
+| [diverse](diverse.md) | * <br/> [Diverse](diverse.md) | Spesifikasjon som ikkje kjem fram i øvrige dimensjonar |
+| [formaal](formaal.md) | * <br/> [Formaal](formaal.md) | Formål viser aktivitet og tenesteproduksjon |
+| [fravaersgrunnar](fravaersgrunnar.md) | * <br/> [Fravaersgrunn](fravaersgrunn.md) | Alle fråværsgrunnar i containeren |
+| [fravaerstypar](fravaerstypar.md) | * <br/> [Fravaerstype](fravaerstype.md) | Alle fråværstypar i containeren |
+| [funksjonar](funksjonar.md) | * <br/> [Funksjon](funksjon.md) | Alle funksjonar i containeren |
+| [kontrakter](kontrakter.md) | * <br/> [Kontrakt](kontrakt.md) | Alle kontrakter i containeren |
+| [lonsartar](lonsartar.md) | * <br/> [Lonsart](lonsart.md) | Alle lønnsartar i containeren |
+| [lopenummer](lopenummer.md) | * <br/> [Lopenummer](lopenummer.md) | Løpenummer i ei nummerserie |
+| [objekt](objekt.md) | * <br/> [Objekt](objekt.md) | Objekt ressursen er knytt til |
+| [organisasjonstypar](organisasjonstypar.md) | * <br/> [Organisasjonstype](organisasjonstype.md) | Alle organisasjonstypar i containeren |
+| [personalressurskategoriar](personalressurskategoriar.md) | * <br/> [Personalressurskategori](personalressurskategori.md) | Alle personalressurskategoriar i containeren |
+| [prosjekt](prosjekt.md) | * <br/> [Prosjekt](prosjekt.md) | Prosjekt ressursen er knytt til |
+| [prosjektartar](prosjektartar.md) | * <br/> [Prosjektart](prosjektart.md) | Alle prosjektartar i containeren |
+| [rammer](rammer.md) | * <br/> [Ramme](ramme.md) | Alle rammer i containeren |
+| [stillingskoder](stillingskoder.md) | * <br/> [Stillingskode](stillingskode.md) | Alle stillingskoder i containeren |
+| [uketimetall](uketimetall.md) | * <br/> [Uketimetall](uketimetall.md) | Alle uketimetallverdiar i containeren |
 
 
 
@@ -1235,444 +1355,107 @@ URI: [https://schema.fintlabs.no/administrasjon/:AdministrasjonContainer](https:
 name: AdministrasjonContainer
 description: Rotcontainer for FINT Administrasjon-instansar.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
-attributes:
-  personar:
-    name: personar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Person
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  kontaktpersonar:
-    name: kontaktpersonar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Kontaktperson
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  virksomhetar:
-    name: virksomhetar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Virksomhet
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  landkodar:
-    name: landkodar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Landkode
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  kjonn:
-    name: kjonn
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Person
-    range: Kjonn
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  fylke:
-    name: fylke
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kommune
-    range: Fylke
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  kommunar:
-    name: kommunar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Kommune
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  spraak:
-    name: spraak
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Spraak
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  valuta:
-    name: valuta
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Valuta
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  personalressursar:
-    name: personalressursar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Personalressurs
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
+slots:
+- personar
+- kontaktpersonar
+- virksomhetar
+- landkodar
+- kjonn
+- fylke
+- kommunar
+- spraak
+- valuta
+- personalressursar
+- arbeidsforhold
+- arbeidslokasjoner
+- fastlonn
+- fasttillegg
+- fravaer
+- fullmakter
+- organisasjonselement
+- rollar
+- variabellonn
+- aktivitetar
+- anlegg
+- ansvar
+- artar
+- arbeidsforholdstypar
+- diverse
+- formaal
+- fravaersgrunnar
+- fravaerstypar
+- funksjonar
+- kontrakter
+- lonsartar
+- lopenummer
+- objekt
+- organisasjonstypar
+- personalressurskategoriar
+- prosjekt
+- prosjektartar
+- rammer
+- stillingskoder
+- uketimetall
+slot_usage:
   arbeidsforhold:
     name: arbeidsforhold
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Fastlonn
-    - Fasttillegg
-    - Variabellonn
-    - Fravaer
-    - Arbeidslokasjon
-    - Organisasjonselement
-    - Personalressurs
-    range: Arbeidsforhold
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  arbeidslokasjoner:
-    name: arbeidslokasjoner
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Arbeidslokasjon
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   fastlonn:
     name: fastlonn
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Arbeidsforhold
-    range: Fastlonn
     multivalued: true
-    inlined: true
     inlined_as_list: true
   fasttillegg:
     name: fasttillegg
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Arbeidsforhold
-    range: Fasttillegg
     multivalued: true
-    inlined: true
     inlined_as_list: true
   fravaer:
     name: fravaer
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Arbeidsforhold
-    range: Fravaer
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  fullmakter:
-    name: fullmakter
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Fullmakt
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   organisasjonselement:
     name: organisasjonselement
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Ansvar
-    - Fullmakt
-    range: Organisasjonselement
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  rollar:
-    name: rollar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Rolle
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   variabellonn:
     name: variabellonn
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Arbeidsforhold
-    range: Variabellonn
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  aktivitetar:
-    name: aktivitetar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Aktivitet
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   anlegg:
     name: anlegg
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Arbeidsforhold
-    range: Anlegg
     multivalued: true
-    inlined: true
     inlined_as_list: true
   ansvar:
     name: ansvar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Organisasjonselement
-    - Arbeidsforhold
-    range: Ansvar
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  artar:
-    name: artar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Art
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  arbeidsforholdstypar:
-    name: arbeidsforholdstypar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Arbeidsforholdstype
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   diverse:
     name: diverse
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Arbeidsforhold
-    range: Diverse
     multivalued: true
-    inlined: true
     inlined_as_list: true
   formaal:
     name: formaal
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Arbeidsforhold
-    range: Formaal
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  fravaersgrunnar:
-    name: fravaersgrunnar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Fravaersgrunn
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  fravaerstypar:
-    name: fravaerstypar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Fravaerstype
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  funksjonar:
-    name: funksjonar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Funksjon
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  kontrakter:
-    name: kontrakter
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Kontrakt
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  lonsartar:
-    name: lonsartar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Lonsart
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   lopenummer:
     name: lopenummer
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Arbeidsforhold
-    range: Lopenummer
     multivalued: true
-    inlined: true
     inlined_as_list: true
   objekt:
     name: objekt
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Fullmakt
-    - Arbeidsforhold
-    range: Objekt
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  organisasjonstypar:
-    name: organisasjonstypar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Organisasjonstype
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  personalressurskategoriar:
-    name: personalressurskategoriar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Personalressurskategori
-    multivalued: true
-    inlined: true
     inlined_as_list: true
   prosjekt:
     name: prosjekt
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    - Kontostreng
-    - Prosjektart
-    - Fullmakt
-    - Arbeidsforhold
-    range: Prosjekt
     multivalued: true
-    inlined: true
     inlined_as_list: true
-  prosjektartar:
-    name: prosjektartar
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Prosjektart
+  kjonn:
+    name: kjonn
     multivalued: true
-    inlined: true
     inlined_as_list: true
-  rammer:
-    name: rammer
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Ramme
+  fylke:
+    name: fylke
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  stillingskoder:
-    name: stillingskoder
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Stillingskode
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  uketimetall:
-    name: uketimetall
-    from_schema: https://data.norge.no/linkml/fint-administrasjon
-    rank: 1000
-    domain_of:
-    - AdministrasjonContainer
-    range: Uketimetall
-    multivalued: true
-    inlined: true
     inlined_as_list: true
 tree_root: true
 
@@ -1686,11 +1469,74 @@ tree_root: true
 name: AdministrasjonContainer
 description: Rotcontainer for FINT Administrasjon-instansar.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
+slot_usage:
+  arbeidsforhold:
+    name: arbeidsforhold
+    multivalued: true
+    inlined_as_list: true
+  fastlonn:
+    name: fastlonn
+    multivalued: true
+    inlined_as_list: true
+  fasttillegg:
+    name: fasttillegg
+    multivalued: true
+    inlined_as_list: true
+  fravaer:
+    name: fravaer
+    multivalued: true
+    inlined_as_list: true
+  organisasjonselement:
+    name: organisasjonselement
+    multivalued: true
+    inlined_as_list: true
+  variabellonn:
+    name: variabellonn
+    multivalued: true
+    inlined_as_list: true
+  anlegg:
+    name: anlegg
+    multivalued: true
+    inlined_as_list: true
+  ansvar:
+    name: ansvar
+    multivalued: true
+    inlined_as_list: true
+  diverse:
+    name: diverse
+    multivalued: true
+    inlined_as_list: true
+  formaal:
+    name: formaal
+    multivalued: true
+    inlined_as_list: true
+  lopenummer:
+    name: lopenummer
+    multivalued: true
+    inlined_as_list: true
+  objekt:
+    name: objekt
+    multivalued: true
+    inlined_as_list: true
+  prosjekt:
+    name: prosjekt
+    multivalued: true
+    inlined_as_list: true
+  kjonn:
+    name: kjonn
+    multivalued: true
+    inlined_as_list: true
+  fylke:
+    name: fylke
+    multivalued: true
+    inlined_as_list: true
 attributes:
   personar:
     name: personar
+    description: Alle personar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:personar
     alias: personar
     owner: AdministrasjonContainer
     domain_of:
@@ -1700,8 +1546,10 @@ attributes:
     inlined_as_list: true
   kontaktpersonar:
     name: kontaktpersonar
+    description: Alle kontaktpersonar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:kontaktpersonar
     alias: kontaktpersonar
     owner: AdministrasjonContainer
     domain_of:
@@ -1711,8 +1559,10 @@ attributes:
     inlined_as_list: true
   virksomhetar:
     name: virksomhetar
+    description: Alle verksemder i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:virksomhetar
     alias: virksomhetar
     owner: AdministrasjonContainer
     domain_of:
@@ -1722,8 +1572,10 @@ attributes:
     inlined_as_list: true
   landkodar:
     name: landkodar
+    description: Alle landkodar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:landkodar
     alias: landkodar
     owner: AdministrasjonContainer
     domain_of:
@@ -1733,8 +1585,10 @@ attributes:
     inlined_as_list: true
   kjonn:
     name: kjonn
+    description: Kjønn.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: fint:kjonn
     alias: kjonn
     owner: AdministrasjonContainer
     domain_of:
@@ -1745,8 +1599,10 @@ attributes:
     inlined_as_list: true
   fylke:
     name: fylke
+    description: Fylke.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: fint:fylke
     alias: fylke
     owner: AdministrasjonContainer
     domain_of:
@@ -1757,8 +1613,10 @@ attributes:
     inlined_as_list: true
   kommunar:
     name: kommunar
+    description: Alle kommuneverdiar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:kommunar
     alias: kommunar
     owner: AdministrasjonContainer
     domain_of:
@@ -1768,8 +1626,10 @@ attributes:
     inlined_as_list: true
   spraak:
     name: spraak
+    description: Alle språkverdiar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:spraak
     alias: spraak
     owner: AdministrasjonContainer
     domain_of:
@@ -1779,8 +1639,10 @@ attributes:
     inlined_as_list: true
   valuta:
     name: valuta
+    description: Alle valutaverdiar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:valuta
     alias: valuta
     owner: AdministrasjonContainer
     domain_of:
@@ -1790,8 +1652,10 @@ attributes:
     inlined_as_list: true
   personalressursar:
     name: personalressursar
+    description: Alle personalressursar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:personalressursar
     alias: personalressursar
     owner: AdministrasjonContainer
     domain_of:
@@ -1801,8 +1665,10 @@ attributes:
     inlined_as_list: true
   arbeidsforhold:
     name: arbeidsforhold
+    description: Arbeidsforhold ressursen er knytt til.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:arbeidsforhold
     alias: arbeidsforhold
     owner: AdministrasjonContainer
     domain_of:
@@ -1819,8 +1685,10 @@ attributes:
     inlined_as_list: true
   arbeidslokasjoner:
     name: arbeidslokasjoner
+    description: Alle arbeidslokasjoner i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:arbeidslokasjoner
     alias: arbeidslokasjoner
     owner: AdministrasjonContainer
     domain_of:
@@ -1830,8 +1698,10 @@ attributes:
     inlined_as_list: true
   fastlonn:
     name: fastlonn
+    description: Fastlønn for arbeidsforholdet.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fastlonn
     alias: fastlonn
     owner: AdministrasjonContainer
     domain_of:
@@ -1842,8 +1712,10 @@ attributes:
     inlined_as_list: true
   fasttillegg:
     name: fasttillegg
+    description: Faste tillegg for arbeidsforholdet.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fasttillegg
     alias: fasttillegg
     owner: AdministrasjonContainer
     domain_of:
@@ -1854,8 +1726,10 @@ attributes:
     inlined_as_list: true
   fravaer:
     name: fravaer
+    description: Fråvær knytt til ressursen.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fravaer
     alias: fravaer
     owner: AdministrasjonContainer
     domain_of:
@@ -1866,8 +1740,10 @@ attributes:
     inlined_as_list: true
   fullmakter:
     name: fullmakter
+    description: Alle fullmakter i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fullmakter
     alias: fullmakter
     owner: AdministrasjonContainer
     domain_of:
@@ -1877,8 +1753,10 @@ attributes:
     inlined_as_list: true
   organisasjonselement:
     name: organisasjonselement
+    description: Organisasjonselement ressursen er knytt til.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:organisasjonselement
     alias: organisasjonselement
     owner: AdministrasjonContainer
     domain_of:
@@ -1890,8 +1768,10 @@ attributes:
     inlined_as_list: true
   rollar:
     name: rollar
+    description: Alle rollar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:rollar
     alias: rollar
     owner: AdministrasjonContainer
     domain_of:
@@ -1901,8 +1781,10 @@ attributes:
     inlined_as_list: true
   variabellonn:
     name: variabellonn
+    description: Variabel lønn for arbeidsforholdet.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:variabellonn
     alias: variabellonn
     owner: AdministrasjonContainer
     domain_of:
@@ -1913,8 +1795,10 @@ attributes:
     inlined_as_list: true
   aktivitetar:
     name: aktivitetar
+    description: Alle aktivitetar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:aktivitetar
     alias: aktivitetar
     owner: AdministrasjonContainer
     domain_of:
@@ -1924,8 +1808,10 @@ attributes:
     inlined_as_list: true
   anlegg:
     name: anlegg
+    description: Objekt som skal aktiverast eller avskrivast.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:anlegg
     alias: anlegg
     owner: AdministrasjonContainer
     domain_of:
@@ -1938,8 +1824,10 @@ attributes:
     inlined_as_list: true
   ansvar:
     name: ansvar
+    description: Ansvarleg for ei utgift eller inntekt.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:ansvar
     alias: ansvar
     owner: AdministrasjonContainer
     domain_of:
@@ -1953,8 +1841,10 @@ attributes:
     inlined_as_list: true
   artar:
     name: artar
+    description: Alle artar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:artar
     alias: artar
     owner: AdministrasjonContainer
     domain_of:
@@ -1964,8 +1854,10 @@ attributes:
     inlined_as_list: true
   arbeidsforholdstypar:
     name: arbeidsforholdstypar
+    description: Alle arbeidsforholdstypar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:arbeidsforholdstypar
     alias: arbeidsforholdstypar
     owner: AdministrasjonContainer
     domain_of:
@@ -1975,8 +1867,10 @@ attributes:
     inlined_as_list: true
   diverse:
     name: diverse
+    description: Spesifikasjon som ikkje kjem fram i øvrige dimensjonar.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:diverse
     alias: diverse
     owner: AdministrasjonContainer
     domain_of:
@@ -1989,8 +1883,10 @@ attributes:
     inlined_as_list: true
   formaal:
     name: formaal
+    description: Formål viser aktivitet og tenesteproduksjon.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:formaal
     alias: formaal
     owner: AdministrasjonContainer
     domain_of:
@@ -2003,8 +1899,10 @@ attributes:
     inlined_as_list: true
   fravaersgrunnar:
     name: fravaersgrunnar
+    description: Alle fråværsgrunnar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fravaersgrunnar
     alias: fravaersgrunnar
     owner: AdministrasjonContainer
     domain_of:
@@ -2014,8 +1912,10 @@ attributes:
     inlined_as_list: true
   fravaerstypar:
     name: fravaerstypar
+    description: Alle fråværstypar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:fravaerstypar
     alias: fravaerstypar
     owner: AdministrasjonContainer
     domain_of:
@@ -2025,8 +1925,10 @@ attributes:
     inlined_as_list: true
   funksjonar:
     name: funksjonar
+    description: Alle funksjonar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:funksjonar
     alias: funksjonar
     owner: AdministrasjonContainer
     domain_of:
@@ -2036,8 +1938,10 @@ attributes:
     inlined_as_list: true
   kontrakter:
     name: kontrakter
+    description: Alle kontrakter i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:kontrakter
     alias: kontrakter
     owner: AdministrasjonContainer
     domain_of:
@@ -2047,8 +1951,10 @@ attributes:
     inlined_as_list: true
   lonsartar:
     name: lonsartar
+    description: Alle lønnsartar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:lonsartar
     alias: lonsartar
     owner: AdministrasjonContainer
     domain_of:
@@ -2058,8 +1964,10 @@ attributes:
     inlined_as_list: true
   lopenummer:
     name: lopenummer
+    description: Løpenummer i ei nummerserie.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:lopenummer
     alias: lopenummer
     owner: AdministrasjonContainer
     domain_of:
@@ -2072,8 +1980,10 @@ attributes:
     inlined_as_list: true
   objekt:
     name: objekt
+    description: Objekt ressursen er knytt til.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:objekt
     alias: objekt
     owner: AdministrasjonContainer
     domain_of:
@@ -2086,8 +1996,10 @@ attributes:
     inlined_as_list: true
   organisasjonstypar:
     name: organisasjonstypar
+    description: Alle organisasjonstypar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:organisasjonstypar
     alias: organisasjonstypar
     owner: AdministrasjonContainer
     domain_of:
@@ -2097,8 +2009,10 @@ attributes:
     inlined_as_list: true
   personalressurskategoriar:
     name: personalressurskategoriar
+    description: Alle personalressurskategoriar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:personalressurskategoriar
     alias: personalressurskategoriar
     owner: AdministrasjonContainer
     domain_of:
@@ -2108,8 +2022,10 @@ attributes:
     inlined_as_list: true
   prosjekt:
     name: prosjekt
+    description: Prosjekt ressursen er knytt til.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:prosjekt
     alias: prosjekt
     owner: AdministrasjonContainer
     domain_of:
@@ -2123,8 +2039,10 @@ attributes:
     inlined_as_list: true
   prosjektartar:
     name: prosjektartar
+    description: Alle prosjektartar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:prosjektartar
     alias: prosjektartar
     owner: AdministrasjonContainer
     domain_of:
@@ -2134,8 +2052,10 @@ attributes:
     inlined_as_list: true
   rammer:
     name: rammer
+    description: Alle rammer i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:rammer
     alias: rammer
     owner: AdministrasjonContainer
     domain_of:
@@ -2145,8 +2065,10 @@ attributes:
     inlined_as_list: true
   stillingskoder:
     name: stillingskoder
+    description: Alle stillingskoder i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:stillingskoder
     alias: stillingskoder
     owner: AdministrasjonContainer
     domain_of:
@@ -2156,8 +2078,10 @@ attributes:
     inlined_as_list: true
   uketimetall:
     name: uketimetall
+    description: Alle uketimetallverdiar i containeren.
     from_schema: https://data.norge.no/linkml/fint-administrasjon
     rank: 1000
+    slot_uri: adm:uketimetall
     alias: uketimetall
     owner: AdministrasjonContainer
     domain_of:

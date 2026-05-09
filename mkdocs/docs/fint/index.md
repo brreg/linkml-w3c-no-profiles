@@ -1,6 +1,6 @@
 # FINT – Fylkeskommunale integrasjonar
 
-| Modell | Tilgjengelege artefaktar |
+| Modell | Tilgjengelege artefakter |
 |--------|--------------------------|
 | [fint-administrasjon](fint-administrasjon/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · Python-klasser · ER-diagram (Mermaid) · Eksempeldata (Turtle) |
 | [fint-arkiv](fint-arkiv/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · Python-klasser · ER-diagram (Mermaid) · Eksempeldata (Turtle) |

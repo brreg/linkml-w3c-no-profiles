@@ -43,13 +43,6 @@ Alias: postnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Adresse](adresse.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:postnummer
 alias: postnummer
-owner: Adresse
 domain_of:
 - Adresse
 range: string

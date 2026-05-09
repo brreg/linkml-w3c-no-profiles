@@ -3,7 +3,7 @@
 # Slot: avlagtprove 
 
 
-_Avlagde prøver for lærlingen._
+_Avlagde prøver._
 
 
 
@@ -22,7 +22,7 @@ Alias: avlagtprove
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  no  |
+| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: avlagtprove
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Laerling](laerling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,14 +83,11 @@ Alias: avlagtprove
 <details>
 ```yaml
 name: avlagtprove
-description: Avlagde prøver for lærlingen.
-in_subset:
-- Valgfri
+description: Avlagde prøver.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:avlagtprove
 alias: avlagtprove
-owner: Laerling
 domain_of:
 - Laerling
 range: AvlagtProve

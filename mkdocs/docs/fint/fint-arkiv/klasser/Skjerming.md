@@ -3,8 +3,13 @@
 # Slot: skjerming 
 
 
+_Skjerming av arkivenhet._
 
-URI: [https://schema.fintlabs.no/arkiv/:skjerming](https://schema.fintlabs.no/arkiv/:skjerming)
+
+
+
+
+URI: [ark:skjerming](https://schema.fintlabs.no/arkiv/skjerming)
 Alias: skjerming
 
 <!-- no inheritance hierarchy -->
@@ -17,19 +22,19 @@ Alias: skjerming
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
 | [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
+| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
 | [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
+| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  yes  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 
 
 
@@ -42,8 +47,9 @@ Alias: skjerming
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Skjerming](skjerming.md) |
 | Domain Of | [Mappe](mappe.md), [Registrering](registrering.md), [Dokumentbeskrivelse](dokumentbeskrivelse.md), [Klasse](klasse.md), [Korrespondansepart](korrespondansepart.md) |
+| Slot URI | [ark:skjerming](https://schema.fintlabs.no/arkiv/skjerming) |
 
 ### Cardinality and Requirements
 
@@ -65,12 +71,19 @@ Alias: skjerming
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:skjerming |
+| self | ark:skjerming |
 | native | https://schema.fintlabs.no/arkiv/:skjerming |
 
 
@@ -81,6 +94,10 @@ Alias: skjerming
 <details>
 ```yaml
 name: skjerming
+description: Skjerming av arkivenhet.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:skjerming
 alias: skjerming
 domain_of:
 - Mappe
@@ -88,7 +105,8 @@ domain_of:
 - Dokumentbeskrivelse
 - Klasse
 - Korrespondansepart
-range: string
+range: Skjerming
+inlined: true
 
 ```
 </details>

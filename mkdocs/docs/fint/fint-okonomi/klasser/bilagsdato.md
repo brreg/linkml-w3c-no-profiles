@@ -22,7 +22,7 @@ Alias: bilagsdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Bilag](bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |  no  |
+| [Bilag](bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: bilagsdato
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Bilag](bilag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: bilagsdato
 ```yaml
 name: bilagsdato
 description: Dato bilaget er registrert.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:bilagsdato
 alias: bilagsdato
-owner: Bilag
 domain_of:
 - Bilag
 range: date
-required: true
 
 ```
 </details>

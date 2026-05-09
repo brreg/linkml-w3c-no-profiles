@@ -79,27 +79,12 @@ URI: [utd:Karakterskala](https://schema.fintlabs.no/utdanning/Karakterskala)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-  
-  
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
@@ -114,11 +99,13 @@ URI: [utd:Karakterskala](https://schema.fintlabs.no/utdanning/Karakterskala)
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Kode |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Namn |
 
 
 
@@ -144,6 +131,49 @@ URI: [utd:Karakterskala](https://schema.fintlabs.no/utdanning/Karakterskala)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Gyldigheitsperiode |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir om oppføringen er passiv/inaktiv |
+| [verdi](verdi.md) | * <br/> [Karakterverdi](karakterverdi.md) | Karakterverdiar i skalaen |
+| [vigoreferanse](vigoreferanse.md) | 0..1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Vigo-systemet |
 
 
 
@@ -160,43 +190,79 @@ URI: [utd:Karakterskala](https://schema.fintlabs.no/utdanning/Karakterskala)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -205,12 +271,6 @@ URI: [utd:Karakterskala](https://schema.fintlabs.no/utdanning/Karakterskala)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [kode](kode.md) | 1 <br/> [String](string.md) |  |
-| [navn](navn.md) | 1 <br/> [String](string.md) |  |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) |  |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) |  |
-| [verdi](verdi.md) | * <br/> [Karakterverdi](karakterverdi.md) | Karakterverdiar i denne skalaen |
-| [vigoreferanse](vigoreferanse.md) | 0..1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Vigo-systemet |
 
 
 
@@ -276,171 +336,39 @@ description: Skala for karaktersetjing (t.d. 1-6, Bestått/Ikkje bestått).
 from_schema: https://data.norge.no/linkml/fint-utdanning
 slots:
 - id
-attributes:
+- kode
+- navn
+- gyldighetsperiode
+- passiv
+- verdi
+- vigoreferanse
+slot_usage:
   kode:
     name: kode
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:kode
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: string
     required: true
   navn:
     name: navn
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:navn
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:gyldighetsperiode
-    domain_of:
-    - Gruppemedlemskap
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:passiv
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: boolean
   verdi:
     name: verdi
-    description: Karakterverdiar i denne skalaen.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:verdi
-    domain_of:
-    - Karakterskala
-    range: Karakterverdi
-    multivalued: true
   vigoreferanse:
     name: vigoreferanse
-    description: Referanse til Vigo-systemet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:vigoreferanse
-    domain_of:
-    - Skole
-    - Arstrinn
-    - Programomrade
-    - Utdanningsprogram
-    - Fag
-    - Karakterskala
-    range: uriorcurie
 class_uri: utd:Karakterskala
 
 ```
@@ -453,183 +381,34 @@ class_uri: utd:Karakterskala
 name: Karakterskala
 description: Skala for karaktersetjing (t.d. 1-6, Bestått/Ikkje bestått).
 from_schema: https://data.norge.no/linkml/fint-utdanning
-attributes:
+slot_usage:
   kode:
     name: kode
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:kode
-    alias: kode
-    owner: Karakterskala
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: string
     required: true
   navn:
     name: navn
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:navn
-    alias: navn
-    owner: Karakterskala
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:gyldighetsperiode
-    alias: gyldighetsperiode
-    owner: Karakterskala
-    domain_of:
-    - Gruppemedlemskap
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:passiv
-    alias: passiv
-    owner: Karakterskala
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: boolean
   verdi:
     name: verdi
-    description: Karakterverdiar i denne skalaen.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:verdi
-    alias: verdi
-    owner: Karakterskala
-    domain_of:
-    - Karakterskala
-    range: Karakterverdi
-    multivalued: true
   vigoreferanse:
     name: vigoreferanse
-    description: Referanse til Vigo-systemet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:vigoreferanse
-    alias: vigoreferanse
-    owner: Karakterskala
-    domain_of:
-    - Skole
-    - Arstrinn
-    - Programomrade
-    - Utdanningsprogram
-    - Fag
-    - Karakterskala
-    range: uriorcurie
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -692,6 +471,187 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  kode:
+    name: kode
+    description: Kode.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:kode
+    alias: kode
+    owner: Karakterskala
+    domain_of:
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    range: string
+    required: true
+  navn:
+    name: navn
+    description: Namn.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:navn
+    alias: navn
+    owner: Karakterskala
+    domain_of:
+    - Gruppe
+    - Skole
+    - Eksamen
+    - Rom
+    - Time
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    range: string
+    required: true
+  gyldighetsperiode:
+    name: gyldighetsperiode
+    description: Gyldigheitsperiode.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:gyldighetsperiode
+    alias: gyldighetsperiode
+    owner: Karakterskala
+    domain_of:
+    - Gruppemedlemskap
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    - Identifikator
+    range: Periode
+    inlined: true
+  passiv:
+    name: passiv
+    description: Angir om oppføringen er passiv/inaktiv.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:passiv
+    alias: passiv
+    owner: Karakterskala
+    domain_of:
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    range: boolean
+  verdi:
+    name: verdi
+    description: Karakterverdiar i skalaen.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:verdi
+    alias: verdi
+    owner: Karakterskala
+    domain_of:
+    - Karakterskala
+    range: Karakterverdi
+    multivalued: true
+  vigoreferanse:
+    name: vigoreferanse
+    description: Referanse til Vigo-systemet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:vigoreferanse
+    alias: vigoreferanse
+    owner: Karakterskala
+    domain_of:
+    - Skole
+    - Arstrinn
+    - Programomrade
+    - Utdanningsprogram
+    - Fag
+    - Karakterskala
+    range: uriorcurie
 class_uri: utd:Karakterskala
 
 ```

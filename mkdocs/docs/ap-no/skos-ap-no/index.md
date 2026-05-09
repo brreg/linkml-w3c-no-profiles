@@ -1,20 +1,5 @@
 # skos-ap-no
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [skos-ap-no-shapes.ttl](skos-ap-no-shapes.ttl) |
-| JSON-LD kontekst | [skos-ap-no-context.jsonld](skos-ap-no-context.jsonld) |
-| JSON Schema | [skos-ap-no-schema.json](skos-ap-no-schema.json) |
-| OWL ontologi | [skos-ap-no-ontology.ttl](skos-ap-no-ontology.ttl) |
-| RDF/Turtle skjema | [skos-ap-no-schema.ttl](skos-ap-no-schema.ttl) |
-| Python-klasser | [skos-ap-no-model.py](skos-ap-no-model.py) |
-| ER-diagram (Mermaid) | [skos-ap-no-erdiagram.md](skos-ap-no-erdiagram.md) |
-| Eksempeldata (Turtle) | [skos-ap-no-eksempel.ttl](skos-ap-no-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 AssosiativRelasjon {
@@ -235,3 +220,17 @@ Name: skos-ap-no
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i ein AP-NO-profil |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i ein AP-NO-profil |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i ein AP-NO-profil |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [skos-ap-no-shapes.ttl](skos-ap-no-shapes.ttl) |
+| JSON-LD kontekst | [skos-ap-no-context.jsonld](skos-ap-no-context.jsonld) |
+| JSON Schema | [skos-ap-no-schema.json](skos-ap-no-schema.json) |
+| OWL ontologi | [skos-ap-no-ontology.ttl](skos-ap-no-ontology.ttl) |
+| RDF/Turtle skjema | [skos-ap-no-schema.ttl](skos-ap-no-schema.ttl) |
+| Python-klasser | [skos-ap-no-model.py](skos-ap-no-model.py) |
+| ER-diagram (Mermaid) | [skos-ap-no-erdiagram.md](skos-ap-no-erdiagram.md) |
+| Eksempeldata (Turtle) | [skos-ap-no-eksempel.ttl](skos-ap-no-eksempel.ttl) |

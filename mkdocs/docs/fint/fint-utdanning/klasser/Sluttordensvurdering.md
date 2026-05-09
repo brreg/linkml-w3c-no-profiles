@@ -3,8 +3,13 @@
 # Slot: sluttordensvurdering 
 
 
+_Sluttordensvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:sluttordensvurdering](https://schema.fintlabs.no/utdanning/:sluttordensvurdering)
+
+
+
+
+URI: [utd:sluttordensvurdering](https://schema.fintlabs.no/utdanning/sluttordensvurdering)
 Alias: sluttordensvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: sluttordensvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: sluttordensvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Sluttordensvurdering](sluttordensvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:sluttordensvurdering](https://schema.fintlabs.no/utdanning/sluttordensvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: sluttordensvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:sluttordensvurdering |
+| self | utd:sluttordensvurdering |
 | native | https://schema.fintlabs.no/utdanning/:sluttordensvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: sluttordensvurdering
 <details>
 ```yaml
 name: sluttordensvurdering
+description: Sluttordensvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:sluttordensvurdering
 alias: sluttordensvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Sluttordensvurdering
+multivalued: true
 
 ```
 </details>

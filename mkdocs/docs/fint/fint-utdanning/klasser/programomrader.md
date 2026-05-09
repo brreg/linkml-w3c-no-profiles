@@ -3,8 +3,13 @@
 # Slot: programomrader 
 
 
+_Alle programområde i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:programomrader](https://schema.fintlabs.no/utdanning/:programomrader)
+
+
+
+
+URI: [utd:programomrader](https://schema.fintlabs.no/utdanning/programomrader)
 Alias: programomrader
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: programomrader
 | --- | --- |
 | Range | [Programomrade](programomrade.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:programomrader](https://schema.fintlabs.no/utdanning/programomrader) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: programomrader
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:programomrader |
+| self | utd:programomrader |
 | native | https://schema.fintlabs.no/utdanning/:programomrader |
 
 
@@ -84,10 +83,11 @@ Alias: programomrader
 <details>
 ```yaml
 name: programomrader
+description: Alle programområde i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:programomrader
 alias: programomrader
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Programomrade

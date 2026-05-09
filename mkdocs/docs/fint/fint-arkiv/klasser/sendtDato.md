@@ -22,7 +22,7 @@ Alias: sendtDato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: sendtDato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Journalpost](journalpost.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: sendtDato
 ```yaml
 name: sendtDato
 description: Dato eit internt produsert dokument vart sendt/ekspedert.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:sendtDato
 alias: sendtDato
-owner: Journalpost
 domain_of:
 - Journalpost
 range: datetime

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:valutaer](https://schema.fintlabs.no/okonomi/:valutaer)
+URI: [okn:valutaer](https://schema.fintlabs.no/okonomi/valutaer)
 Alias: valutaer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: valutaer
 | --- | --- |
 | Range | [OkonomiValuta](okonomivaluta.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:valutaer](https://schema.fintlabs.no/okonomi/valutaer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: valutaer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:valutaer |
+| self | okn:valutaer |
 | native | https://schema.fintlabs.no/okonomi/:valutaer |
 
 
@@ -86,8 +80,8 @@ Alias: valutaer
 name: valutaer
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:valutaer
 alias: valutaer
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: OkonomiValuta

@@ -3,8 +3,13 @@
 # Slot: elev 
 
 
+_Referanse til Elev (Utdanning)._
 
-URI: [https://schema.fintlabs.no/ressurs/:elev](https://schema.fintlabs.no/ressurs/:elev)
+
+
+
+
+URI: [fint:elev](https://schema.fintlabs.no/elev)
 Alias: elev
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: elev
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: elev
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [DigitalEnhet](digitalenhet.md), [Person](person.md) |
+| Slot URI | [fint:elev](https://schema.fintlabs.no/elev) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: elev
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:elev |
+| self | fint:elev |
 | native | https://schema.fintlabs.no/ressurs/:elev |
 
 
@@ -70,11 +83,15 @@ Alias: elev
 <details>
 ```yaml
 name: elev
+description: Referanse til Elev (Utdanning).
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: fint:elev
 alias: elev
 domain_of:
 - DigitalEnhet
 - Person
-range: string
+range: uriorcurie
 
 ```
 </details>

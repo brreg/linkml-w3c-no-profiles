@@ -3,8 +3,13 @@
 # Slot: funksjonar 
 
 
+_Alle funksjonar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:funksjonar](https://schema.fintlabs.no/administrasjon/:funksjonar)
+
+
+
+
+URI: [adm:funksjonar](https://schema.fintlabs.no/administrasjon/funksjonar)
 Alias: funksjonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: funksjonar
 | --- | --- |
 | Range | [Funksjon](funksjon.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:funksjonar](https://schema.fintlabs.no/administrasjon/funksjonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: funksjonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:funksjonar |
+| self | adm:funksjonar |
 | native | https://schema.fintlabs.no/administrasjon/:funksjonar |
 
 
@@ -84,10 +83,11 @@ Alias: funksjonar
 <details>
 ```yaml
 name: funksjonar
+description: Alle funksjonar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:funksjonar
 alias: funksjonar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Funksjon

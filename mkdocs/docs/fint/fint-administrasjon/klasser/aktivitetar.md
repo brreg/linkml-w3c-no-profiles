@@ -3,8 +3,13 @@
 # Slot: aktivitetar 
 
 
+_Alle aktivitetar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:aktivitetar](https://schema.fintlabs.no/administrasjon/:aktivitetar)
+
+
+
+
+URI: [adm:aktivitetar](https://schema.fintlabs.no/administrasjon/aktivitetar)
 Alias: aktivitetar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: aktivitetar
 | --- | --- |
 | Range | [Aktivitet](aktivitet.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:aktivitetar](https://schema.fintlabs.no/administrasjon/aktivitetar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: aktivitetar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:aktivitetar |
+| self | adm:aktivitetar |
 | native | https://schema.fintlabs.no/administrasjon/:aktivitetar |
 
 
@@ -84,10 +83,11 @@ Alias: aktivitetar
 <details>
 ```yaml
 name: aktivitetar
+description: Alle aktivitetar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:aktivitetar
 alias: aktivitetar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Aktivitet

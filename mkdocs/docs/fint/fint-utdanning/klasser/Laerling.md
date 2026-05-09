@@ -3,8 +3,13 @@
 # Slot: laerling 
 
 
+_Lærling._
 
-URI: [https://schema.fintlabs.no/utdanning/:laerling](https://schema.fintlabs.no/utdanning/:laerling)
+
+
+
+
+URI: [utd:laerling](https://schema.fintlabs.no/utdanning/laerling)
 Alias: laerling
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: laerling
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  yes  |
+| [Person](person.md) | Fysiske private personar |  yes  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: laerling
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Laerling](laerling.md) |
 | Domain Of | [AvlagtProve](avlagtprove.md), [Person](person.md), [Virksomhet](virksomhet.md) |
+| Slot URI | [utd:laerling](https://schema.fintlabs.no/utdanning/laerling) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: laerling
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:laerling |
+| self | utd:laerling |
 | native | https://schema.fintlabs.no/utdanning/:laerling |
 
 
@@ -71,12 +84,16 @@ Alias: laerling
 <details>
 ```yaml
 name: laerling
+description: Lærling.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:laerling
 alias: laerling
 domain_of:
 - AvlagtProve
 - Person
 - Virksomhet
-range: string
+range: Laerling
 
 ```
 </details>

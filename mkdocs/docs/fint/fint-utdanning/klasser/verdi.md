@@ -3,7 +3,7 @@
 # Slot: verdi 
 
 
-_Karakterverdiar i denne skalaen._
+_Karakterverdiar i skalaen._
 
 
 
@@ -22,7 +22,7 @@ Alias: verdi
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  no  |
+| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: verdi
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterskala](karakterskala.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,14 +83,11 @@ Alias: verdi
 <details>
 ```yaml
 name: verdi
-description: Karakterverdiar i denne skalaen.
-in_subset:
-- Valgfri
+description: Karakterverdiar i skalaen.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:verdi
 alias: verdi
-owner: Karakterskala
 domain_of:
 - Karakterskala
 range: Karakterverdi

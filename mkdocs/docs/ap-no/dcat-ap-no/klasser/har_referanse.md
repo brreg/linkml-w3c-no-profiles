@@ -22,8 +22,8 @@ Alias: har_referanse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Standard](standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
 | [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Standard](standard.md) | Ein standard som ein ressurs er i samsvar med |  no  |
 
 
 

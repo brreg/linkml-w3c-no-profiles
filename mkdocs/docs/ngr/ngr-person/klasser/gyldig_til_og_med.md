@@ -22,11 +22,11 @@ Alias: gyldig_til_og_med
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Statsborgerskap](statsborgerskap.md) | Statsborgerskap registrert på ein person i Folkeregisteret |  yes  |
-| [Bostedsadresse](bostedsadresse.md) | Adressa personen er registrert busett på i Folkeregisteret |  yes  |
-| [Postadresse](postadresse.md) | Adressa der personen mottar post |  yes  |
 | [Opphold](opphold.md) | Lovleg opphaldsgrunnlag for utanlandske statsborgarar registrert i Folkeregis... |  yes  |
+| [Postadresse](postadresse.md) | Adressa der personen mottar post |  yes  |
+| [Bostedsadresse](bostedsadresse.md) | Adressa personen er registrert busett på i Folkeregisteret |  yes  |
 | [Oppholdsadresse](oppholdsadresse.md) | Adressa der personen faktisk oppheld seg (ikkje nødvendigvis bustadsadressa) |  yes  |
+| [Statsborgerskap](statsborgerskap.md) | Statsborgerskap registrert på ein person i Folkeregisteret |  yes  |
 
 
 

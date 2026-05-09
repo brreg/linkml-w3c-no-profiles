@@ -3,8 +3,13 @@
 # Slot: betalingsstatus 
 
 
+_Betalingsstatus._
 
-URI: [https://schema.fintlabs.no/utdanning/:betalingsstatus](https://schema.fintlabs.no/utdanning/:betalingsstatus)
+
+
+
+
+URI: [utd:betalingsstatus](https://schema.fintlabs.no/utdanning/betalingsstatus)
 Alias: betalingsstatus
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: betalingsstatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: betalingsstatus
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Betalingsstatus](betalingsstatus.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
+| Slot URI | [utd:betalingsstatus](https://schema.fintlabs.no/utdanning/betalingsstatus) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: betalingsstatus
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:betalingsstatus |
+| self | utd:betalingsstatus |
 | native | https://schema.fintlabs.no/utdanning/:betalingsstatus |
 
 
@@ -70,11 +83,15 @@ Alias: betalingsstatus
 <details>
 ```yaml
 name: betalingsstatus
+description: Betalingsstatus.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:betalingsstatus
 alias: betalingsstatus
 domain_of:
 - UtdanningContainer
 - Eksamensgruppemedlemskap
-range: string
+range: Betalingsstatus
 
 ```
 </details>

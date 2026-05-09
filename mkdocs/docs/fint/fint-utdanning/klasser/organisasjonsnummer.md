@@ -3,8 +3,13 @@
 # Slot: organisasjonsnummer 
 
 
+_Organisasjonsnummer-identifikator._
 
-URI: [https://schema.fintlabs.no/utdanning/:organisasjonsnummer](https://schema.fintlabs.no/utdanning/:organisasjonsnummer)
+
+
+
+
+URI: [utd:organisasjonsnummer](https://schema.fintlabs.no/utdanning/organisasjonsnummer)
 Alias: organisasjonsnummer
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: organisasjonsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: organisasjonsnummer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Identifikator](identifikator.md) |
 | Domain Of | [Skole](skole.md), [Enhet](enhet.md) |
+| Slot URI | [utd:organisasjonsnummer](https://schema.fintlabs.no/utdanning/organisasjonsnummer) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: organisasjonsnummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:organisasjonsnummer |
+| self | utd:organisasjonsnummer |
 | native | https://schema.fintlabs.no/utdanning/:organisasjonsnummer |
 
 
@@ -71,11 +84,16 @@ Alias: organisasjonsnummer
 <details>
 ```yaml
 name: organisasjonsnummer
+description: Organisasjonsnummer-identifikator.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:organisasjonsnummer
 alias: organisasjonsnummer
 domain_of:
 - Skole
 - Enhet
-range: string
+range: Identifikator
+inlined: true
 
 ```
 </details>

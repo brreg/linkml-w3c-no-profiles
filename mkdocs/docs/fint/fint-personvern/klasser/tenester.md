@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/personvern/:tenester](https://schema.fintlabs.no/personvern/:tenester)
+URI: [pvn:tenester](https://schema.fintlabs.no/personvern/tenester)
 Alias: tenester
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: tenester
 | --- | --- |
 | Range | [Tjeneste](tjeneste.md) |
 | Domain Of | [PersonvernContainer](personverncontainer.md) |
+| Slot URI | [pvn:tenester](https://schema.fintlabs.no/personvern/tenester) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [PersonvernContainer](personverncontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: tenester
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:tenester |
+| self | pvn:tenester |
 | native | https://schema.fintlabs.no/personvern/:tenester |
 
 
@@ -86,8 +80,8 @@ Alias: tenester
 name: tenester
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
+slot_uri: pvn:tenester
 alias: tenester
-owner: PersonvernContainer
 domain_of:
 - PersonvernContainer
 range: Tjeneste

@@ -3,8 +3,13 @@
 # Slot: vigoreferanse 
 
 
+_Referanse til Vigo-systemet._
 
-URI: [https://schema.fintlabs.no/utdanning/:vigoreferanse](https://schema.fintlabs.no/utdanning/:vigoreferanse)
+
+
+
+
+URI: [utd:vigoreferanse](https://schema.fintlabs.no/utdanning/vigoreferanse)
 Alias: vigoreferanse
 
 <!-- no inheritance hierarchy -->
@@ -17,12 +22,12 @@ Alias: vigoreferanse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  no  |
-| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  no  |
-| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  no  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
+| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
+| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  yes  |
+| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  yes  |
 
 
 
@@ -35,8 +40,9 @@ Alias: vigoreferanse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Skole](skole.md), [Arstrinn](arstrinn.md), [Programomrade](programomrade.md), [Utdanningsprogram](utdanningsprogram.md), [Fag](fag.md), [Karakterskala](karakterskala.md) |
+| Slot URI | [utd:vigoreferanse](https://schema.fintlabs.no/utdanning/vigoreferanse) |
 
 ### Cardinality and Requirements
 
@@ -58,12 +64,19 @@ Alias: vigoreferanse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:vigoreferanse |
+| self | utd:vigoreferanse |
 | native | https://schema.fintlabs.no/utdanning/:vigoreferanse |
 
 
@@ -74,6 +87,10 @@ Alias: vigoreferanse
 <details>
 ```yaml
 name: vigoreferanse
+description: Referanse til Vigo-systemet.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:vigoreferanse
 alias: vigoreferanse
 domain_of:
 - Skole
@@ -82,7 +99,7 @@ domain_of:
 - Utdanningsprogram
 - Fag
 - Karakterskala
-range: string
+range: uriorcurie
 
 ```
 </details>

@@ -89,7 +89,7 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
         
       Begrep : kode
         
-      Begrep : navn
+      Begrep : naam
         
       Begrep : passiv
         
@@ -150,21 +150,12 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-
-
-
-
-  
+    
   
 
   
@@ -173,11 +164,13 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
+| [naam](naam.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen |
 
 
 
@@ -197,6 +190,37 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast |
 
 
 
@@ -213,29 +237,53 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -244,10 +292,6 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for omgrepet |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Angir gyldighetsperioden for eit omgrep/kode |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast |
 
 
 
@@ -306,60 +350,29 @@ from_schema: https://data.norge.no/linkml/fint-administrasjon
 abstract: true
 slots:
 - id
-attributes:
+- kode
+- naam
+- gyldighetsperiode
+- passiv
+slot_usage:
   kode:
     name: kode
-    description: Verdi som identifiserer omgrepet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:kode
-    domain_of:
-    - Begrep
-    range: string
     required: true
-  navn:
-    name: navn
-    description: Hovudnamn for omgrepet.
+  naam:
+    name: naam
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:navn
-    domain_of:
-    - Organisasjonselement
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Angir gyldighetsperioden for eit omgrep/kode.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:gyldighetsperiode
-    domain_of:
-    - Fullmakt
-    - Organisasjonselement
-    - Arbeidsforhold
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
-    description: Angir at koden er passiv og ikkje kan veljast.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:passiv
-    domain_of:
-    - Begrep
-    range: boolean
 class_uri: fint:Begrep
 
 ```
@@ -373,68 +386,26 @@ name: Begrep
 description: Abstrakt fellesbase for alle FINT-kodeverk.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 abstract: true
-attributes:
+slot_usage:
   kode:
     name: kode
-    description: Verdi som identifiserer omgrepet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:kode
-    alias: kode
-    owner: Begrep
-    domain_of:
-    - Begrep
-    range: string
     required: true
-  navn:
-    name: navn
-    description: Hovudnamn for omgrepet.
+  naam:
+    name: naam
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:navn
-    alias: navn
-    owner: Begrep
-    domain_of:
-    - Organisasjonselement
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Angir gyldighetsperioden for eit omgrep/kode.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:gyldighetsperiode
-    alias: gyldighetsperiode
-    owner: Begrep
-    domain_of:
-    - Fullmakt
-    - Organisasjonselement
-    - Arbeidsforhold
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
-    description: Angir at koden er passiv og ikkje kan veljast.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:passiv
-    alias: passiv
-    owner: Begrep
-    domain_of:
-    - Begrep
-    range: boolean
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -459,6 +430,65 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  kode:
+    name: kode
+    description: Verdi som identifiserer omgrepet.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:kode
+    alias: kode
+    owner: Begrep
+    domain_of:
+    - Begrep
+    range: string
+    required: true
+  naam:
+    name: naam
+    description: Hovudnamn for ressursen.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:naam
+    alias: naam
+    owner: Begrep
+    domain_of:
+    - Begrep
+    range: string
+    required: true
+  gyldighetsperiode:
+    name: gyldighetsperiode
+    description: Periode ressursen er gyldig for.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:gyldighetsperiode
+    alias: gyldighetsperiode
+    owner: Begrep
+    domain_of:
+    - Fullmakt
+    - Organisasjonselement
+    - Arbeidsforhold
+    - Begrep
+    - Identifikator
+    range: Periode
+    inlined: true
+  passiv:
+    name: passiv
+    description: Angir at koden er passiv og ikkje kan veljast.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:passiv
+    alias: passiv
+    owner: Begrep
+    domain_of:
+    - Begrep
+    range: boolean
 class_uri: fint:Begrep
 
 ```

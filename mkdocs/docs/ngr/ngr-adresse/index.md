@@ -1,20 +1,5 @@
 # ngr-adresse
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [ngr-adresse-shapes.ttl](ngr-adresse-shapes.ttl) |
-| JSON-LD kontekst | [ngr-adresse-context.jsonld](ngr-adresse-context.jsonld) |
-| JSON Schema | [ngr-adresse-schema.json](ngr-adresse-schema.json) |
-| OWL ontologi | [ngr-adresse-ontology.ttl](ngr-adresse-ontology.ttl) |
-| RDF/Turtle skjema | [ngr-adresse-schema.ttl](ngr-adresse-schema.ttl) |
-| Python-klasser | [ngr-adresse-model.py](ngr-adresse-model.py) |
-| ER-diagram (Mermaid) | [ngr-adresse-erdiagram.md](ngr-adresse-erdiagram.md) |
-| Eksempeldata (Turtle) | [ngr-adresse-eksempel.ttl](ngr-adresse-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Adressekode {
@@ -275,3 +260,17 @@ Name: ngr-adresse
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i domenemodellen |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i domenemodellen |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i domenemodellen |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [ngr-adresse-shapes.ttl](ngr-adresse-shapes.ttl) |
+| JSON-LD kontekst | [ngr-adresse-context.jsonld](ngr-adresse-context.jsonld) |
+| JSON Schema | [ngr-adresse-schema.json](ngr-adresse-schema.json) |
+| OWL ontologi | [ngr-adresse-ontology.ttl](ngr-adresse-ontology.ttl) |
+| RDF/Turtle skjema | [ngr-adresse-schema.ttl](ngr-adresse-schema.ttl) |
+| Python-klasser | [ngr-adresse-model.py](ngr-adresse-model.py) |
+| ER-diagram (Mermaid) | [ngr-adresse-erdiagram.md](ngr-adresse-erdiagram.md) |
+| Eksempeldata (Turtle) | [ngr-adresse-eksempel.ttl](ngr-adresse-eksempel.ttl) |

@@ -22,7 +22,7 @@ Alias: leveringsdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: leveringsdato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: leveringsdato
 ```yaml
 name: leveringsdato
 description: Dato varer eller tenester vart leverte.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:leveringsdato
 alias: leveringsdato
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: date

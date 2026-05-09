@@ -3,8 +3,13 @@
 # Slot: laerling 
 
 
+_Referanse til Laerling (Utdanning)._
 
-URI: [https://schema.fintlabs.no/ressurs/:laerling](https://schema.fintlabs.no/ressurs/:laerling)
+
+
+
+
+URI: [fint:laerling](https://schema.fintlabs.no/laerling)
 Alias: laerling
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: laerling
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: laerling
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Person](person.md), [Virksomhet](virksomhet.md) |
+| Slot URI | [fint:laerling](https://schema.fintlabs.no/laerling) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: laerling
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:laerling |
+| self | fint:laerling |
 | native | https://schema.fintlabs.no/ressurs/:laerling |
 
 
@@ -70,11 +84,16 @@ Alias: laerling
 <details>
 ```yaml
 name: laerling
+description: Referanse til Laerling (Utdanning).
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: fint:laerling
 alias: laerling
 domain_of:
 - Person
 - Virksomhet
-range: string
+range: uriorcurie
+multivalued: true
 
 ```
 </details>

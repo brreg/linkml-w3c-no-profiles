@@ -1,99 +1,48 @@
 
 
-# Class: Fakturamottaker 
+# Slot: fakturamottaker 
 
 
-_Aktør som skal betale faktura (kompleks datatype)._
-
-
-
-
-
-URI: [okn:Fakturamottaker](https://schema.fintlabs.no/okonomi/Fakturamottaker)
+_Mottakar som skal betale faktura._
 
 
 
 
 
-```mermaid
- classDiagram
-    class Fakturamottaker
-    click Fakturamottaker href "../Fakturamottaker/"
-      Fakturamottaker : person
-        
-      
-```
-
-
-
+URI: [okn:fakturamottaker](https://schema.fintlabs.no/okonomi/fakturamottaker)
+Alias: fakturamottaker
 
 <!-- no inheritance hierarchy -->
 
-## Class Properties
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
 
 | Property | Value |
 | --- | --- |
-| Class URI | [okn:Fakturamottaker](https://schema.fintlabs.no/okonomi/Fakturamottaker) |
+| Range | [Fakturamottaker](fakturamottaker.md) |
+| Domain Of | [Fakturagrunnlag](fakturagrunnlag.md) |
+| Slot URI | [okn:fakturamottaker](https://schema.fintlabs.no/okonomi/fakturamottaker) |
 
+### Cardinality and Requirements
 
-## Eigenskapar
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-  
-  
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-  
-  
-  
-  
-    
-  
-
-
-### Andre
-
-| Namn | Kardinalitet og domene | Beskriving |
-| --- | --- | --- |
-| [person](person.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Person (Administrasjon) som skal betale faktura |
-
-
-
-
-
-
-
-
-## Usages
-
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | [mottaker](mottaker.md) | range | [Fakturamottaker](fakturamottaker.md) |
-
-
+| Property | Value |
+| --- | --- |
 
 
 
@@ -122,68 +71,26 @@ URI: [okn:Fakturamottaker](https://schema.fintlabs.no/okonomi/Fakturamottaker)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | okn:Fakturamottaker |
-| native | https://schema.fintlabs.no/okonomi/:Fakturamottaker |
-
-
+| self | okn:fakturamottaker |
+| native | https://schema.fintlabs.no/okonomi/:fakturamottaker |
 
 
 
 
 ## LinkML Source
 
-<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
-
-### Direct
-
 <details>
 ```yaml
-name: Fakturamottaker
-description: Aktør som skal betale faktura (kompleks datatype).
+name: fakturamottaker
+description: Mottakar som skal betale faktura.
 from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
-  person:
-    name: person
-    description: Referanse til Person (Administrasjon) som skal betale faktura.
-    in_subset:
-    - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:person
-    domain_of:
-    - Fakturamottaker
-    - Leverandor
-    range: uriorcurie
-    required: true
-class_uri: okn:Fakturamottaker
-
-```
-</details>
-
-### Induced
-
-<details>
-```yaml
-name: Fakturamottaker
-description: Aktør som skal betale faktura (kompleks datatype).
-from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
-  person:
-    name: person
-    description: Referanse til Person (Administrasjon) som skal betale faktura.
-    in_subset:
-    - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:person
-    alias: person
-    owner: Fakturamottaker
-    domain_of:
-    - Fakturamottaker
-    - Leverandor
-    range: uriorcurie
-    required: true
-class_uri: okn:Fakturamottaker
+rank: 1000
+slot_uri: okn:fakturamottaker
+alias: fakturamottaker
+domain_of:
+- Fakturagrunnlag
+range: Fakturamottaker
+inlined: true
 
 ```
 </details>

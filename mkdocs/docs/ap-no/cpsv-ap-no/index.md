@@ -1,20 +1,5 @@
 # cpsv-ap-no
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [cpsv-ap-no-shapes.ttl](cpsv-ap-no-shapes.ttl) |
-| JSON-LD kontekst | [cpsv-ap-no-context.jsonld](cpsv-ap-no-context.jsonld) |
-| JSON Schema | [cpsv-ap-no-schema.json](cpsv-ap-no-schema.json) |
-| OWL ontologi | [cpsv-ap-no-ontology.ttl](cpsv-ap-no-ontology.ttl) |
-| RDF/Turtle skjema | [cpsv-ap-no-schema.ttl](cpsv-ap-no-schema.ttl) |
-| Python-klasser | [cpsv-ap-no-model.py](cpsv-ap-no-model.py) |
-| ER-diagram (Mermaid) | [cpsv-ap-no-erdiagram.md](cpsv-ap-no-erdiagram.md) |
-| Eksempeldata (Turtle) | [cpsv-ap-no-eksempel.ttl](cpsv-ap-no-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Adresse {
@@ -415,3 +400,17 @@ Name: cpsv-ap-no
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i ein AP-NO-profil |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i ein AP-NO-profil |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i ein AP-NO-profil |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [cpsv-ap-no-shapes.ttl](cpsv-ap-no-shapes.ttl) |
+| JSON-LD kontekst | [cpsv-ap-no-context.jsonld](cpsv-ap-no-context.jsonld) |
+| JSON Schema | [cpsv-ap-no-schema.json](cpsv-ap-no-schema.json) |
+| OWL ontologi | [cpsv-ap-no-ontology.ttl](cpsv-ap-no-ontology.ttl) |
+| RDF/Turtle skjema | [cpsv-ap-no-schema.ttl](cpsv-ap-no-schema.ttl) |
+| Python-klasser | [cpsv-ap-no-model.py](cpsv-ap-no-model.py) |
+| ER-diagram (Mermaid) | [cpsv-ap-no-erdiagram.md](cpsv-ap-no-erdiagram.md) |
+| Eksempeldata (Turtle) | [cpsv-ap-no-eksempel.ttl](cpsv-ap-no-eksempel.ttl) |

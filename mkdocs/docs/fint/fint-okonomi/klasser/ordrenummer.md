@@ -22,7 +22,7 @@ Alias: ordrenummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: ordrenummer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: ordrenummer
 ```yaml
 name: ordrenummer
 description: Unik identifikator for ordren det skal utferdigast faktura på.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:ordrenummer
 alias: ordrenummer
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: Identifikator
-required: true
 inlined: true
 
 ```

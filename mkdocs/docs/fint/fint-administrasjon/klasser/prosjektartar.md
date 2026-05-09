@@ -3,8 +3,13 @@
 # Slot: prosjektartar 
 
 
+_Alle prosjektartar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:prosjektartar](https://schema.fintlabs.no/administrasjon/:prosjektartar)
+
+
+
+
+URI: [adm:prosjektartar](https://schema.fintlabs.no/administrasjon/prosjektartar)
 Alias: prosjektartar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: prosjektartar
 | --- | --- |
 | Range | [Prosjektart](prosjektart.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:prosjektartar](https://schema.fintlabs.no/administrasjon/prosjektartar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: prosjektartar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:prosjektartar |
+| self | adm:prosjektartar |
 | native | https://schema.fintlabs.no/administrasjon/:prosjektartar |
 
 
@@ -84,10 +83,11 @@ Alias: prosjektartar
 <details>
 ```yaml
 name: prosjektartar
+description: Alle prosjektartar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:prosjektartar
 alias: prosjektartar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Prosjektart

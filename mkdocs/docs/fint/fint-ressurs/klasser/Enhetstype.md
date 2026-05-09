@@ -3,8 +3,13 @@
 # Slot: enhetstype 
 
 
+_Type digital eining._
 
-URI: [https://schema.fintlabs.no/ressurs/:enhetstype](https://schema.fintlabs.no/ressurs/:enhetstype)
+
+
+
+
+URI: [res:enhetstype](https://schema.fintlabs.no/ressurs/enhetstype)
 Alias: enhetstype
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: enhetstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |  no  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: enhetstype
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Enhetstype](enhetstype.md) |
 | Domain Of | [DigitalEnhet](digitalenhet.md), [Enhetsgruppe](enhetsgruppe.md) |
+| Slot URI | [res:enhetstype](https://schema.fintlabs.no/ressurs/enhetstype) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: enhetstype
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:enhetstype |
+| self | res:enhetstype |
 | native | https://schema.fintlabs.no/ressurs/:enhetstype |
 
 
@@ -70,11 +83,15 @@ Alias: enhetstype
 <details>
 ```yaml
 name: enhetstype
+description: Type digital eining.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:enhetstype
 alias: enhetstype
 domain_of:
 - DigitalEnhet
 - Enhetsgruppe
-range: string
+range: Enhetstype
 
 ```
 </details>

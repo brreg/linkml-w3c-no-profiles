@@ -3,8 +3,13 @@
 # Slot: arbeidsforholdstypar 
 
 
+_Alle arbeidsforholdstypar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:arbeidsforholdstypar](https://schema.fintlabs.no/administrasjon/:arbeidsforholdstypar)
+
+
+
+
+URI: [adm:arbeidsforholdstypar](https://schema.fintlabs.no/administrasjon/arbeidsforholdstypar)
 Alias: arbeidsforholdstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: arbeidsforholdstypar
 | --- | --- |
 | Range | [Arbeidsforholdstype](arbeidsforholdstype.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:arbeidsforholdstypar](https://schema.fintlabs.no/administrasjon/arbeidsforholdstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: arbeidsforholdstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:arbeidsforholdstypar |
+| self | adm:arbeidsforholdstypar |
 | native | https://schema.fintlabs.no/administrasjon/:arbeidsforholdstypar |
 
 
@@ -84,10 +83,11 @@ Alias: arbeidsforholdstypar
 <details>
 ```yaml
 name: arbeidsforholdstypar
+description: Alle arbeidsforholdstypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:arbeidsforholdstypar
 alias: arbeidsforholdstypar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Arbeidsforholdstype

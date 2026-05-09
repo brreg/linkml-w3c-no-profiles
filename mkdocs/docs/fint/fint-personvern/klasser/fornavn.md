@@ -22,7 +22,7 @@ Alias: fornavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personnavn](personnavn.md) | Namn på ein person |  no  |
+| [Personnavn](personnavn.md) | Namn på ein person |  yes  |
 
 
 
@@ -43,14 +43,6 @@ Alias: fornavn
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personnavn](personnavn.md) |
-
-
 
 
 
@@ -95,11 +87,9 @@ from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:fornavn
 alias: fornavn
-owner: Personnavn
 domain_of:
 - Personnavn
 range: string
-required: true
 
 ```
 </details>

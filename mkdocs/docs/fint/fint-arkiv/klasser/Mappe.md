@@ -197,6 +197,15 @@ URI: [ark:Mappe](https://schema.fintlabs.no/arkiv/Mappe)
 
   
   
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [opprettetAv](opprettetav.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som oppretta/registrerte arkivenheten |
 
 
 
@@ -256,45 +265,90 @@ URI: [ark:Mappe](https://schema.fintlabs.no/arkiv/Mappe)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
+    
+  
 
   
   
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [avsluttetDato](avsluttetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett når arkivenheten vart avslutta/lukka |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale |
+| [klasse](klasse.md) | * <br/> [Klasse](klasse.md) | Klassifisering av arkivenhet |
+| [mappeId](mappeid.md) | 0..1 <br/> [Identifikator](identifikator.md) | Eintydig identifikasjon av mappa innanfor arkivet |
+| [merknad](merknad.md) | * <br/> [Merknad](merknad.md) | Merknader knytt til arkivenhet |
+| [noekkelord](noekkelord.md) | * <br/> [String](string.md) | Nøkkelord som skildrar innhaldet (Mappe) |
+| [offentligTittel](offentligtittel.md) | 0..1 <br/> [String](string.md) | Offentleg tittel der skjerma ord er fjerna |
+| [opprettetDato](opprettetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett arkivenheten vart oppretta/registrert |
+| [part](part.md) | * <br/> [Part](part.md) | Partar til arkivenhet |
+| [skjerming](skjerming.md) | 0..1 <br/> [Skjerming](skjerming.md) | Skjerming av arkivenhet |
+| [tittel](tittel.md) | 0..1 <br/> [String](string.md) | Tittel eller namn på arkivenheten |
+| [arkivdel](arkivdel.md) | 0..1 <br/> [Arkivdel](arkivdel.md) | Arkivdel arkivenheten tilhøyrer |
+| [avsluttetAv](avsluttetav.md) | 0..1 <br/> [Arkivressurs](arkivressurs.md) | Person som avslutta/lukka arkivenheten |
 
 
 
@@ -311,99 +365,183 @@ URI: [ark:Mappe](https://schema.fintlabs.no/arkiv/Mappe)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -412,20 +550,6 @@ URI: [ark:Mappe](https://schema.fintlabs.no/arkiv/Mappe)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [avsluttetDato](avsluttetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett når arkivenheten vart avslutta/lukka |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Tekstleg skildring av arkivenheten |
-| [klasse](klasse.md) | * <br/> [Klasse](klasse.md) | Klassifisering av mappe |
-| [mappeId](mappeid.md) | 0..1 <br/> [Identifikator](identifikator.md) | Eintydig identifikasjon av mappa innanfor arkivet |
-| [merknad](merknad.md) | * <br/> [Merknad](merknad.md) | Merknader knytt til mappe |
-| [noekkelord](noekkelord.md) | * <br/> [String](string.md) | Nøkkelord som skildrar innhaldet |
-| [offentligTittel](offentligtittel.md) | 0..1 <br/> [String](string.md) | Offentleg tittel der skjerma ord er fjerna |
-| [opprettetDato](opprettetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett arkivenheten vart oppretta/registrert |
-| [part](part.md) | * <br/> [Part](part.md) | Partar til mappe |
-| [skjerming](skjerming.md) | 0..1 <br/> [Skjerming](skjerming.md) | Skjerming av mappe |
-| [tittel](tittel.md) | 0..1 <br/> [String](string.md) | Tittel eller namn på arkivenheten |
-| [arkivdel](arkivdel.md) | 0..1 <br/> [Arkivdel](arkivdel.md) | Arkivdel mappa tilhøyrer |
-| [avsluttetAv](avsluttetav.md) | 0..1 <br/> [Arkivressurs](arkivressurs.md) | Person som avslutta/lukka arkivenheten |
-| [opprettetAv](opprettetav.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som oppretta/registrerte arkivenheten |
 
 
 
@@ -485,205 +609,79 @@ from_schema: https://data.norge.no/linkml/fint-arkiv
 abstract: true
 slots:
 - id
-attributes:
+- avsluttetDato
+- beskrivelse
+- klasse
+- mappeId
+- merknad
+- noekkelord
+- offentligTittel
+- opprettetDato
+- part
+- skjerming
+- tittel
+- arkivdel
+- avsluttetAv
+- opprettetAv
+slot_usage:
   avsluttetDato:
     name: avsluttetDato
-    description: Dato og klokkeslett når arkivenheten vart avslutta/lukka.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:avsluttetDato
-    domain_of:
-    - Mappe
-    - Klassifikasjonssystem
-    range: datetime
   beskrivelse:
     name: beskrivelse
-    description: Tekstleg skildring av arkivenheten.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:beskrivelse
-    domain_of:
-    - Mappe
-    - Registrering
-    - Klassifikasjonssystem
-    - Dokumentbeskrivelse
-    - Periode
-    range: string
   klasse:
     name: klasse
-    description: Klassifisering av mappe.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:klasse
-    domain_of:
-    - Mappe
-    - Registrering
-    - Klassifikasjonssystem
-    range: Klasse
     multivalued: true
-    inlined: true
     inlined_as_list: true
   mappeId:
     name: mappeId
-    description: Eintydig identifikasjon av mappa innanfor arkivet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:mappeId
-    domain_of:
-    - Mappe
-    range: Identifikator
-    inlined: true
   merknad:
     name: merknad
-    description: Merknader knytt til mappe.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:merknad
-    domain_of:
-    - Mappe
-    - Registrering
-    range: Merknad
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
   noekkelord:
     name: noekkelord
-    description: Nøkkelord som skildrar innhaldet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:noekkelord
-    domain_of:
-    - Mappe
-    range: string
-    multivalued: true
   offentligTittel:
     name: offentligTittel
-    description: Offentleg tittel der skjerma ord er fjerna.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:offentligTittel
-    domain_of:
-    - Mappe
-    - Registrering
-    range: string
   opprettetDato:
     name: opprettetDato
-    description: Dato og klokkeslett arkivenheten vart oppretta/registrert.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:opprettetDato
-    domain_of:
-    - Mappe
-    - Registrering
-    - Klassifikasjonssystem
-    - Dokumentbeskrivelse
-    range: datetime
   part:
     name: part
-    description: Partar til mappe.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:part
-    domain_of:
-    - Mappe
-    - Registrering
-    - Dokumentbeskrivelse
-    range: Part
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
   skjerming:
     name: skjerming
-    description: Skjerming av mappe.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:skjerming
-    domain_of:
-    - Mappe
-    - Registrering
-    - Dokumentbeskrivelse
-    - Klasse
-    - Korrespondansepart
-    range: Skjerming
-    inlined: true
   tittel:
     name: tittel
-    description: Tittel eller namn på arkivenheten.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:tittel
-    domain_of:
-    - Mappe
-    - Registrering
-    - Arkivdel
-    - Klassifikasjonssystem
-    - Tilgang
-    - Dokumentbeskrivelse
-    - Klasse
-    range: string
   arkivdel:
     name: arkivdel
-    description: Arkivdel mappa tilhøyrer.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:arkivdel
-    domain_of:
-    - Mappe
-    - Registrering
-    - Klassifikasjonssystem
-    - Tilgang
-    range: Arkivdel
   avsluttetAv:
     name: avsluttetAv
-    description: Person som avslutta/lukka arkivenheten.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:avsluttetAv
-    domain_of:
-    - Mappe
-    - Klassifikasjonssystem
-    range: Arkivressurs
   opprettetAv:
     name: opprettetAv
-    description: Person som oppretta/registrerte arkivenheten.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:opprettetAv
-    domain_of:
-    - Mappe
-    - Registrering
-    - Klassifikasjonssystem
-    - Dokumentbeskrivelse
-    - Dokumentobjekt
-    range: Arkivressurs
     required: true
 class_uri: ark:Mappe
 
@@ -699,7 +697,110 @@ description: Abstrakt basisklasse for alle mappetypar. Grupperer dokument som h�
   saman.
 from_schema: https://data.norge.no/linkml/fint-arkiv
 abstract: true
+slot_usage:
+  avsluttetDato:
+    name: avsluttetDato
+    in_subset:
+    - Valgfri
+  beskrivelse:
+    name: beskrivelse
+    in_subset:
+    - Valgfri
+  klasse:
+    name: klasse
+    in_subset:
+    - Valgfri
+    multivalued: true
+    inlined_as_list: true
+  mappeId:
+    name: mappeId
+    in_subset:
+    - Valgfri
+  merknad:
+    name: merknad
+    in_subset:
+    - Valgfri
+  noekkelord:
+    name: noekkelord
+    in_subset:
+    - Valgfri
+  offentligTittel:
+    name: offentligTittel
+    in_subset:
+    - Valgfri
+  opprettetDato:
+    name: opprettetDato
+    in_subset:
+    - Valgfri
+  part:
+    name: part
+    in_subset:
+    - Valgfri
+  skjerming:
+    name: skjerming
+    in_subset:
+    - Valgfri
+  tittel:
+    name: tittel
+    in_subset:
+    - Valgfri
+  arkivdel:
+    name: arkivdel
+    in_subset:
+    - Valgfri
+  avsluttetAv:
+    name: avsluttetAv
+    in_subset:
+    - Valgfri
+  opprettetAv:
+    name: opprettetAv
+    in_subset:
+    - Obligatorisk
+    required: true
 attributes:
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    identifier: true
+    alias: id
+    owner: Mappe
+    domain_of:
+    - Mappe
+    - Registrering
+    - AdministrativEnhet
+    - Arkivdel
+    - Arkivressurs
+    - Autorisasjon
+    - Dokumentfil
+    - Klassifikasjonssystem
+    - Tilgang
+    - Dokumentbeskrivelse
+    - DokumentStatus
+    - DokumentType
+    - Format
+    - JournalpostType
+    - JournalStatus
+    - Klassifikasjonstype
+    - KorrespondansepartType
+    - Merknadstype
+    - PartRolle
+    - Rolle
+    - Saksmappetype
+    - Saksstatus
+    - Skjermingshjemmel
+    - Tilgangsgruppe
+    - Tilgangsrestriksjon
+    - TilknyttetRegistreringSom
+    - Variantformat
+    - Begrep
+    - Valuta
+    - Person
+    - Kontaktperson
+    - Virksomhet
+    range: uriorcurie
+    required: true
   avsluttetDato:
     name: avsluttetDato
     description: Dato og klokkeslett når arkivenheten vart avslutta/lukka.
@@ -716,12 +817,12 @@ attributes:
     range: datetime
   beskrivelse:
     name: beskrivelse
-    description: Tekstleg skildring av arkivenheten.
+    description: Beskriven namn eller omtale.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    slot_uri: ark:beskrivelse
+    slot_uri: fint:beskrivelse
     alias: beskrivelse
     owner: Mappe
     domain_of:
@@ -733,7 +834,7 @@ attributes:
     range: string
   klasse:
     name: klasse
-    description: Klassifisering av mappe.
+    description: Klassifisering av arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -747,7 +848,6 @@ attributes:
     - Klassifikasjonssystem
     range: Klasse
     multivalued: true
-    inlined: true
     inlined_as_list: true
   mappeId:
     name: mappeId
@@ -765,7 +865,7 @@ attributes:
     inlined: true
   merknad:
     name: merknad
-    description: Merknader knytt til mappe.
+    description: Merknader knytt til arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -782,7 +882,7 @@ attributes:
     inlined_as_list: true
   noekkelord:
     name: noekkelord
-    description: Nøkkelord som skildrar innhaldet.
+    description: Nøkkelord som skildrar innhaldet (Mappe).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -826,7 +926,7 @@ attributes:
     range: datetime
   part:
     name: part
-    description: Partar til mappe.
+    description: Partar til arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -844,7 +944,7 @@ attributes:
     inlined_as_list: true
   skjerming:
     name: skjerming
-    description: Skjerming av mappe.
+    description: Skjerming av arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -881,7 +981,7 @@ attributes:
     range: string
   arkivdel:
     name: arkivdel
-    description: Arkivdel mappa tilhøyrer.
+    description: Arkivdel arkivenheten tilhøyrer.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -907,7 +1007,6 @@ attributes:
     owner: Mappe
     domain_of:
     - Mappe
-    - Klassifikasjonssystem
     range: Arkivressurs
   opprettetAv:
     name: opprettetAv
@@ -922,53 +1021,9 @@ attributes:
     domain_of:
     - Mappe
     - Registrering
-    - Klassifikasjonssystem
     - Dokumentbeskrivelse
     - Dokumentobjekt
     range: Arkivressurs
-    required: true
-  id:
-    name: id
-    description: URI-identifikator for ressursen.
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    identifier: true
-    alias: id
-    owner: Mappe
-    domain_of:
-    - Mappe
-    - Registrering
-    - AdministrativEnhet
-    - Arkivdel
-    - Arkivressurs
-    - Autorisasjon
-    - Dokumentfil
-    - Klassifikasjonssystem
-    - Tilgang
-    - Dokumentbeskrivelse
-    - DokumentStatus
-    - DokumentType
-    - Format
-    - JournalpostType
-    - JournalStatus
-    - Klassifikasjonstype
-    - KorrespondansepartType
-    - Merknadstype
-    - PartRolle
-    - Rolle
-    - Saksmappetype
-    - Saksstatus
-    - Skjermingshjemmel
-    - Tilgangsgruppe
-    - Tilgangsrestriksjon
-    - TilknyttetRegistreringSom
-    - Variantformat
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    - Virksomhet
-    range: uriorcurie
     required: true
 class_uri: ark:Mappe
 

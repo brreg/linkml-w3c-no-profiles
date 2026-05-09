@@ -28,12 +28,12 @@ Name: fint-ressurs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Kommune](kommune.md) | Liste over Norges kommunar |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |
-| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen (t |
+| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |
 | [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |
 | [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |
-| [Enhetstype](enhetstype.md) | Type digital eining (t |
-| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast (Håndhevingstype) |
+| [Enhetstype](enhetstype.md) | Type digital eining |
+| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |
 | [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |
 | [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |
 | [Kontaktinformasjon](kontaktinformasjon.md) | Informasjon som kan brukast for å oppnå kontakt |
@@ -42,7 +42,7 @@ Name: fint-ressurs
 | [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |
 | [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |
 | [Personnavn](personnavn.md) | Namn på ein person |
-| [Plattform](plattform.md) | Plattforma tenesta kan leverast på (t |
+| [Plattform](plattform.md) | Plattforma tenesta kan leverast på |
 | [Produsent](produsent.md) | Produsent av ei digital eining |
 | [RessursContainer](ressurscontainer.md) | Rotcontainer for FINT Ressurs-instansar |
 | [Rettighet](rettighet.md) | Ei namngitt rettighet |
@@ -58,31 +58,32 @@ Name: fint-ressurs
 | [administrator](administrator.md) | Referanse til Organisasjonselement som administrerer eininga |
 | [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
-| [applikasjon](applikasjon.md) | Applikasjonen denne ressursen (lisensen) er knytt til |
+| [applikasjon](applikasjon.md) | Applikasjonen ressursen (lisensen) er knytt til |
 | [applikasjonar](applikasjonar.md) |  |
 | [applikasjonskategori](applikasjonskategori.md) | Kategoriar av applikasjonar |
 | [applikasjonskategoriar](applikasjonskategoriar.md) |  |
+| [applikasjonsressurs](applikasjonsressurs.md) | Ulike ressursar (lisensar) knytt til ein applikasjon |
 | [applikasjonsressursar](applikasjonsressursar.md) |  |
 | [applikasjonsressurstilgjengelegheit](applikasjonsressurstilgjengelegheit.md) |  |
-| [beskrivelse](beskrivelse.md) |  |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [brukertypar](brukertypar.md) |  |
-| [brukertype](brukertype.md) | For kva brukertypar denne lisensen er gyldig |
+| [brukertype](brukertype.md) | For kva brukertypar lisensen er gyldig |
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
-| [dataobjektId](dataobjektid.md) | Einingsens ID i datakatalogen (t |
+| [dataobjektId](dataobjektid.md) | Einingsens ID i datakatalogen |
 | [digitaleEiningar](digitaleeiningar.md) |  |
 | [digitalEnhet](digitalenhet.md) | Den digitale eininga dette medlemskapet tilhøyrer |
-| [eier](eier.md) | Referanse til Organisasjonselement som har eigarskap til lisensen |
+| [eier](eier.md) | Referanse til Organisasjonselement som har eigarskap |
 | [einingsgruppedmedlemskap](einingsgruppedmedlemskap.md) |  |
 | [einingsgrupper](einingsgrupper.md) |  |
 | [einingstypar](einingstypar.md) |  |
-| [elev](elev.md) | Referanse til Elev (Utdanning) som nyttar eininga |
+| [elev](elev.md) | Referanse til Elev (Utdanning) |
 | [enhetsgruppe](enhetsgruppe.md) | Einingsgruppen dette medlemskapet tilhøyrer |
-| [enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Einingsgruppene eininga er medlem av |
+| [enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Einingsgruppemelemskap |
 | [enhetskostnad](enhetskostnad.md) | Kostnad per ressurs |
-| [enhetstype](enhetstype.md) | Type digital eining: Mobiltelefon, datamaskin, nettbrett |
+| [enhetstype](enhetstype.md) | Type digital eining |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
 | [festenummer](festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
@@ -92,34 +93,35 @@ Name: fint-ressurs
 | [foreldre](foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](foreldreansvar.md) | Personar denne personen har foreldreansvar for |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](gyldighetsperiode.md) | Start- og sluttdato for gyldighetsperioden til applikasjonen |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [handhaevingstypar](handhaevingstypar.md) |  |
-| [handhevingstype](handhevingstype.md) | Korleis det skal handhevast når lisensantall vert overskredet (Håndhevingstyp... |
+| [handhevingstype](handhevingstype.md) | Korleis lisensmodellen skal handhevast |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
 | [identitet](identitet.md) | Identitetar knytt til rettigheta |
 | [identitetar](identitetar.md) |  |
-| [kjonn](kjonn.md) | Kjønn for personen |
+| [kjonn](kjonn.md) | Kjønn |
 | [kode](kode.md) | Verdi som identifiserer omgrepet |
-| [kommune](kommune.md) | Alle kommunar som inngår i fylket |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
-| [konsument](konsument.md) | Referanse til Organisasjonselement som har tilgang til denne ressursen |
+| [konsument](konsument.md) | Referanse til Organisasjonselement som har tilgang til ressursen |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kreverGodkjenning](krevergodkjenning.md) | True dersom tildeling av ressursen krev godkjenning av leiar/tenestteforvalta... |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kreverGodkjenning](krevergodkjenning.md) | True dersom tildeling av ressursen krev godkjenning |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
 | [lisensantall](lisensantall.md) | Totalt tal på lisensar |
-| [lisensmodell](lisensmodell.md) | Kva lisensmodell applikasjonsressursen har |
+| [lisensmodell](lisensmodell.md) | Lisensmodellen applikasjonsressursen har |
 | [lisensmodellar](lisensmodellar.md) |  |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [navn](navn.md) |  |
+| [naam](naam.md) | Namn på ressursen eller kodeverk-elementet |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [organisasjonsenhet](organisasjonsenhet.md) | Referanse til Organisasjonselement grupperinga er tilknytt |
@@ -128,8 +130,9 @@ Name: fint-ressurs
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) som nyttar eininga |
-| [plattform](plattform.md) | Den eller dei plattformane applikasjonen kan køyre på |
+| [person_naam](person_naam.md) | Namn på personen |
+| [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
+| [plattform](plattform.md) | Plattforma ressursen er knytt til |
 | [plattformar](plattformar.md) |  |
 | [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](postnummer.md) | Postnummer |
@@ -137,7 +140,7 @@ Name: fint-ressurs
 | [privateid](privateid.md) | Angir om eininga er eigd av organisasjonen eller privatperson |
 | [produsent](produsent.md) | Namn på produsenten av eininga |
 | [produsentar](produsentar.md) |  |
-| [ressurs](ressurs.md) | Ulike ressursar (lisensar) knytt til denne applikasjonen |
+| [ressursRef](ressursref.md) | Ressursen organisasjonselementet har tilgang til |
 | [ressurstilgjengelighet](ressurstilgjengelighet.md) | Angir kva organisasjonseining og kor mange ressursar som skal tilordnast |
 | [rettigheiter](rettigheiter.md) |  |
 | [rettighet](rettighet.md) | Rettigheiter knytt til identiteten |
@@ -150,7 +153,8 @@ Name: fint-ressurs
 | [status](status.md) | Status på eininga i fagsystemet |
 | [statusar](statusar.md) |  |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
-| [type](type.md) | Beskriv kva slags type kontaktperson |
+| [type](type.md) | Beskriv kva slags type |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 

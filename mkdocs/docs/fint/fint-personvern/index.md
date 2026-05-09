@@ -1,19 +1,5 @@
 # fint-personvern
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [fint-personvern-shapes.ttl](fint-personvern-shapes.ttl) |
-| JSON-LD kontekst | [fint-personvern-context.jsonld](fint-personvern-context.jsonld) |
-| JSON Schema | [fint-personvern-schema.json](fint-personvern-schema.json) |
-| OWL ontologi | [fint-personvern-ontology.ttl](fint-personvern-ontology.ttl) |
-| Python-klasser | [fint-personvern-model.py](fint-personvern-model.py) |
-| ER-diagram (Mermaid) | [fint-personvern-erdiagram.md](fint-personvern-erdiagram.md) |
-| Eksempeldata (Turtle) | [fint-personvern-eksempel.ttl](fint-personvern-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Behandling {
@@ -25,7 +11,7 @@ Behandling {
 Behandlingsgrunnlag {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -36,7 +22,7 @@ Periode {
 Personopplysning {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Samtykke {
@@ -47,7 +33,7 @@ Samtykke {
 }
 Tjeneste {
     uriorcurie id  
-    string navn  
+    string naam  
     datetime slettet  
 }
 
@@ -112,10 +98,10 @@ Name: fint-personvern
 | [adresse](klasser/adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](klasser/adresselinje.md) | Adresseinformasjon |
 | [aktiv](klasser/aktiv.md) | Status på behandling |
-| [behandling](klasser/behandling.md) | Behandling som vert omfatta av samtykket |
+| [behandling](klasser/behandling.md) | Behandlingsaktivitet |
 | [behandlingar](klasser/behandlingar.md) |  |
-| [behandlingsgrunnlag](klasser/behandlingsgrunnlag.md) |  |
-| [beskrivelse](klasser/beskrivelse.md) | Beskriven namn på perioden |
+| [behandlingsgrunnlag](klasser/behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysning |
+| [beskrivelse](klasser/beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](klasser/bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](klasser/bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](klasser/bostedsadresse.md) | Folkeregistrert adresse til personen |
@@ -130,35 +116,37 @@ Name: fint-personvern
 | [foreldreansvar](klasser/foreldreansvar.md) | Personar denne personen har foreldreansvar for |
 | [formal](klasser/formal.md) | Grunngjeving for behandling av personopplysning |
 | [fornavn](klasser/fornavn.md) | Fornamn til personen |
-| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
-| [fylke](klasser/fylke.md) | Fylket kommunen høyrer til |
+| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
+| [fylke](klasser/fylke.md) | Fylke |
 | [gaardsnummer](klasser/gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Tidsrom samtykket er gyldig |
+| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [id](klasser/id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](klasser/identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [kjonn](klasser/kjonn.md) | Kjønn for personen |
+| [kjonn](klasser/kjonn.md) | Kjønn |
 | [kode](klasser/kode.md) | Verdi som identifiserer omgrepet |
-| [kommune](klasser/kommune.md) | Alle kommunar som inngår i fylket |
+| [kommune](klasser/kommune.md) | Kommune |
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
+| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
 | [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](klasser/land.md) | Land der adressa befinn seg |
 | [maalform](klasser/maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
-| [navn](klasser/navn.md) | Tittel på tenesta |
+| [naam](klasser/naam.md) | Namn på ressursen |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
 | [opprettet](klasser/opprettet.md) | Dato då samtykket vart oppretta |
-| [organisasjonselement](klasser/organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) tilknytt samtykket |
+| [organisasjonselement](klasser/organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) |
 | [organisasjonsnavn](klasser/organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](klasser/organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](klasser/person.md) | Referanse til Person (Administrasjon) som har gjeve samtykke |
+| [person](klasser/person.md) | Referanse til Person (Administrasjon) |
+| [person_naam](klasser/person_naam.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [personopplysning](klasser/personopplysning.md) | Opplysning eller vurdering som kan knytast til ein enkeltperson |
 | [personopplysningar](klasser/personopplysningar.md) |  |
@@ -169,14 +157,15 @@ Name: fint-personvern
 | [samtykker](klasser/samtykker.md) |  |
 | [seksjonsnummer](klasser/seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
 | [sip](klasser/sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
-| [slettet](klasser/slettet.md) | Tidspunkt behandlinga er sletta |
+| [slettet](klasser/slettet.md) | Tidspunkt ressursen er sletta |
 | [slutt](klasser/slutt.md) | Til tidspunkt |
 | [start](klasser/start.md) | Frå tidspunkt |
 | [statsborgerskap](klasser/statsborgerskap.md) | Alle statsborgarskap personen har |
 | [telefonnummer](klasser/telefonnummer.md) | Telefonnummer |
 | [tenester](klasser/tenester.md) |  |
 | [tjeneste](klasser/tjeneste.md) | Tenesta som behandlinga tilhøyrer |
-| [type](klasser/type.md) | Beskriv kva slags type kontaktperson |
+| [type](klasser/type.md) | Beskriv kva slags type |
+| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
 | [virksomhetsId](klasser/virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 
@@ -218,3 +207,16 @@ Name: fint-personvern
 | [Anbefalt](klasser/anbefalt.md) | Anbefalt eigensskap |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatorisk eigensskap |
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [fint-personvern-shapes.ttl](fint-personvern-shapes.ttl) |
+| JSON-LD kontekst | [fint-personvern-context.jsonld](fint-personvern-context.jsonld) |
+| JSON Schema | [fint-personvern-schema.json](fint-personvern-schema.json) |
+| OWL ontologi | [fint-personvern-ontology.ttl](fint-personvern-ontology.ttl) |
+| Python-klasser | [fint-personvern-model.py](fint-personvern-model.py) |
+| ER-diagram (Mermaid) | [fint-personvern-erdiagram.md](fint-personvern-erdiagram.md) |
+| Eksempeldata (Turtle) | [fint-personvern-eksempel.ttl](fint-personvern-eksempel.ttl) |

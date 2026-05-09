@@ -3,8 +3,13 @@
 # Slot: arstrinn 
 
 
+_Alle årstrinns-objekt i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:arstrinn](https://schema.fintlabs.no/utdanning/:arstrinn)
+
+
+
+
+URI: [utd:arstrinn](https://schema.fintlabs.no/utdanning/arstrinn)
 Alias: arstrinn
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: arstrinn
 | --- | --- |
 | Range | [Arstrinn](arstrinn.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:arstrinn](https://schema.fintlabs.no/utdanning/arstrinn) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: arstrinn
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:arstrinn |
+| self | utd:arstrinn |
 | native | https://schema.fintlabs.no/utdanning/:arstrinn |
 
 
@@ -84,10 +83,11 @@ Alias: arstrinn
 <details>
 ```yaml
 name: arstrinn
+description: Alle årstrinns-objekt i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:arstrinn
 alias: arstrinn
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Arstrinn

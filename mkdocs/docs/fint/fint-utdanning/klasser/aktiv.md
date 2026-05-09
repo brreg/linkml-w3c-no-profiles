@@ -22,7 +22,7 @@ Alias: aktiv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sensor](sensor.md) | Ein sensor for ein eksamen |  no  |
+| [Sensor](sensor.md) | Ein sensor for ein eksamen |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: aktiv
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Sensor](sensor.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: aktiv
 ```yaml
 name: aktiv
 description: Angir om sensoren er aktiv.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:aktiv
 alias: aktiv
-owner: Sensor
 domain_of:
 - Sensor
 range: boolean
-required: true
 
 ```
 </details>

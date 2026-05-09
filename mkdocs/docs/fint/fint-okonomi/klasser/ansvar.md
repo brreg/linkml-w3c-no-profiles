@@ -22,7 +22,7 @@ Alias: ansvar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  no  |
+| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: ansvar
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontostreng](kontostreng.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: ansvar
 ```yaml
 name: ansvar
 description: Ansvarsomrade.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:ansvar
 alias: ansvar
-owner: Kontostreng
 domain_of:
 - Kontostreng
 range: string

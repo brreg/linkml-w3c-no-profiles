@@ -3,8 +3,13 @@
 # Slot: undervisningsgrupper 
 
 
+_Alle undervisningsgrupper i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:undervisningsgrupper](https://schema.fintlabs.no/utdanning/:undervisningsgrupper)
+
+
+
+
+URI: [utd:undervisningsgrupper](https://schema.fintlabs.no/utdanning/undervisningsgrupper)
 Alias: undervisningsgrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: undervisningsgrupper
 | --- | --- |
 | Range | [Undervisningsgruppe](undervisningsgruppe.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:undervisningsgrupper](https://schema.fintlabs.no/utdanning/undervisningsgrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: undervisningsgrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:undervisningsgrupper |
+| self | utd:undervisningsgrupper |
 | native | https://schema.fintlabs.no/utdanning/:undervisningsgrupper |
 
 
@@ -84,10 +83,11 @@ Alias: undervisningsgrupper
 <details>
 ```yaml
 name: undervisningsgrupper
+description: Alle undervisningsgrupper i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:undervisningsgrupper
 alias: undervisningsgrupper
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Undervisningsgruppe

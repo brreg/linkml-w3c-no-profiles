@@ -3,7 +3,7 @@
 # Slot: fravarsprosent 
 
 
-_Fråværsprosent ved utsending av varselet._
+_Fråværsprosent._
 
 
 
@@ -22,7 +22,7 @@ Alias: fravarsprosent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  no  |
+| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: fravarsprosent
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Varsel](varsel.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: fravarsprosent
 <details>
 ```yaml
 name: fravarsprosent
-description: Fråværsprosent ved utsending av varselet.
-in_subset:
-- Valgfri
+description: Fråværsprosent.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:fravarsprosent
 alias: fravarsprosent
-owner: Varsel
 domain_of:
 - Varsel
 range: integer

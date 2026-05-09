@@ -43,13 +43,6 @@ Alias: adresse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Matrikkelnummer](matrikkelnummer.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: fint:adresse
 alias: adresse
-owner: Matrikkelnummer
 domain_of:
 - Matrikkelnummer
 range: Adresse

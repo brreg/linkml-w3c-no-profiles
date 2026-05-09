@@ -3,8 +3,13 @@
 # Slot: ansvar 
 
 
+_Ansvarleg for ei utgift eller inntekt._
 
-URI: [https://schema.fintlabs.no/administrasjon/:ansvar](https://schema.fintlabs.no/administrasjon/:ansvar)
+
+
+
+
+URI: [adm:ansvar](https://schema.fintlabs.no/administrasjon/ansvar)
 Alias: ansvar
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: ansvar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: ansvar
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Ansvar](ansvar.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Organisasjonselement](organisasjonselement.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:ansvar](https://schema.fintlabs.no/administrasjon/ansvar) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: ansvar
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:ansvar |
+| self | adm:ansvar |
 | native | https://schema.fintlabs.no/administrasjon/:ansvar |
 
 
@@ -73,6 +86,10 @@ Alias: ansvar
 <details>
 ```yaml
 name: ansvar
+description: Ansvarleg for ei utgift eller inntekt.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:ansvar
 alias: ansvar
 domain_of:
 - AdministrasjonContainer
@@ -80,7 +97,7 @@ domain_of:
 - Fullmakt
 - Organisasjonselement
 - Arbeidsforhold
-range: string
+range: Ansvar
 
 ```
 </details>

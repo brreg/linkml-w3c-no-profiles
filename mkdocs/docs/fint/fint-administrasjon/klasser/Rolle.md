@@ -22,7 +22,7 @@ Alias: rolle
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: rolle
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fullmakt](fullmakt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: rolle
 ```yaml
 name: rolle
 description: Kva type fullmakt.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:rolle
 alias: rolle
-owner: Fullmakt
 domain_of:
 - Fullmakt
 range: Rolle
-required: true
 
 ```
 </details>

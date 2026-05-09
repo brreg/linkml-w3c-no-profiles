@@ -3,8 +3,13 @@
 # Slot: offentligTittel 
 
 
+_Offentleg tittel der skjerma ord er fjerna._
 
-URI: [https://schema.fintlabs.no/arkiv/:offentligTittel](https://schema.fintlabs.no/arkiv/:offentligTittel)
+
+
+
+
+URI: [ark:offentligTittel](https://schema.fintlabs.no/arkiv/offentligTittel)
 Alias: offentligTittel
 
 <!-- no inheritance hierarchy -->
@@ -17,16 +22,16 @@ Alias: offentligTittel
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
 | [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
 | [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 
 
 
@@ -41,6 +46,7 @@ Alias: offentligTittel
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Mappe](mappe.md), [Registrering](registrering.md) |
+| Slot URI | [ark:offentligTittel](https://schema.fintlabs.no/arkiv/offentligTittel) |
 
 ### Cardinality and Requirements
 
@@ -62,12 +68,19 @@ Alias: offentligTittel
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:offentligTittel |
+| self | ark:offentligTittel |
 | native | https://schema.fintlabs.no/arkiv/:offentligTittel |
 
 
@@ -78,6 +91,10 @@ Alias: offentligTittel
 <details>
 ```yaml
 name: offentligTittel
+description: Offentleg tittel der skjerma ord er fjerna.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:offentligTittel
 alias: offentligTittel
 domain_of:
 - Mappe

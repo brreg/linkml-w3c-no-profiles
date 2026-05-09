@@ -22,7 +22,7 @@ Alias: variantFormat
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentobjekt](dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |  no  |
+| [Dokumentobjekt](dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: variantFormat
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentobjekt](dokumentobjekt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: variantFormat
 ```yaml
 name: variantFormat
 description: Kva variant dokumentet førekjem i.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:variantFormat
 alias: variantFormat
-owner: Dokumentobjekt
 domain_of:
 - Dokumentobjekt
 range: Variantformat
-required: true
 
 ```
 </details>

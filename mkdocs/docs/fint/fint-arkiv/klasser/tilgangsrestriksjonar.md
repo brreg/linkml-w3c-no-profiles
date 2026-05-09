@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:tilgangsrestriksjonar](https://schema.fintlabs.no/arkiv/:tilgangsrestriksjonar)
+URI: [ark:tilgangsrestriksjonar](https://schema.fintlabs.no/arkiv/tilgangsrestriksjonar)
 Alias: tilgangsrestriksjonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: tilgangsrestriksjonar
 | --- | --- |
 | Range | [Tilgangsrestriksjon](tilgangsrestriksjon.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:tilgangsrestriksjonar](https://schema.fintlabs.no/arkiv/tilgangsrestriksjonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: tilgangsrestriksjonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:tilgangsrestriksjonar |
+| self | ark:tilgangsrestriksjonar |
 | native | https://schema.fintlabs.no/arkiv/:tilgangsrestriksjonar |
 
 
@@ -86,8 +80,8 @@ Alias: tilgangsrestriksjonar
 name: tilgangsrestriksjonar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:tilgangsrestriksjonar
 alias: tilgangsrestriksjonar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Tilgangsrestriksjon

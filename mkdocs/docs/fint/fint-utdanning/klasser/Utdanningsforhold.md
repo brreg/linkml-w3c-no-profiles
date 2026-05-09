@@ -80,6 +80,15 @@ URI: [utd:Utdanningsforhold](https://schema.fintlabs.no/utdanning/Utdanningsforh
 
   
   
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring |
 
 
 
@@ -96,8 +105,14 @@ URI: [utd:Utdanningsforhold](https://schema.fintlabs.no/utdanning/Utdanningsforh
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -106,7 +121,6 @@ URI: [utd:Utdanningsforhold](https://schema.fintlabs.no/utdanning/Utdanningsforh
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring av utdanningsforholdet |
 
 
 
@@ -165,23 +179,12 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
 slots:
 - id
-attributes:
+- beskrivelse
+slot_usage:
   beskrivelse:
     name: beskrivelse
-    description: Skildring av utdanningsforholdet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:beskrivelse
-    domain_of:
-    - Gruppe
-    - Utdanningsforhold
-    - Elevforhold
-    - Eksamen
-    - Time
-    - OtStatus
-    - Periode
-    range: string
 class_uri: utd:Utdanningsforhold
 
 ```
@@ -195,25 +198,12 @@ name: Utdanningsforhold
 description: Abstrakt basisklasse for undervisningsforhold i utdanning.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
-attributes:
+slot_usage:
   beskrivelse:
     name: beskrivelse
-    description: Skildring av utdanningsforholdet.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:beskrivelse
-    alias: beskrivelse
-    owner: Utdanningsforhold
-    domain_of:
-    - Gruppe
-    - Utdanningsforhold
-    - Elevforhold
-    - Eksamen
-    - Time
-    - OtStatus
-    - Periode
-    range: string
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -276,6 +266,25 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  beskrivelse:
+    name: beskrivelse
+    description: Skildring.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:beskrivelse
+    alias: beskrivelse
+    owner: Utdanningsforhold
+    domain_of:
+    - Gruppe
+    - Utdanningsforhold
+    - Elevforhold
+    - Eksamen
+    - Time
+    - OtStatus
+    - Periode
+    range: string
 class_uri: utd:Utdanningsforhold
 
 ```

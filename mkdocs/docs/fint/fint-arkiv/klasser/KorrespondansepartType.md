@@ -22,7 +22,7 @@ Alias: korrespondanseparttype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
+| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: korrespondanseparttype
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Korrespondansepart](korrespondansepart.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: korrespondanseparttype
 ```yaml
 name: korrespondanseparttype
 description: Type korrespondansepart.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:korrespondanseparttype
 alias: korrespondanseparttype
-owner: Korrespondansepart
 domain_of:
 - Korrespondansepart
 range: KorrespondansepartType
-required: true
 
 ```
 </details>

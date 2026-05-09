@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:lisensmodellar](https://schema.fintlabs.no/ressurs/:lisensmodellar)
+URI: [res:lisensmodellar](https://schema.fintlabs.no/ressurs/lisensmodellar)
 Alias: lisensmodellar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: lisensmodellar
 | --- | --- |
 | Range | [Lisensmodell](lisensmodell.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:lisensmodellar](https://schema.fintlabs.no/ressurs/lisensmodellar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: lisensmodellar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:lisensmodellar |
+| self | res:lisensmodellar |
 | native | https://schema.fintlabs.no/ressurs/:lisensmodellar |
 
 
@@ -86,8 +80,8 @@ Alias: lisensmodellar
 name: lisensmodellar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:lisensmodellar
 alias: lisensmodellar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Lisensmodell

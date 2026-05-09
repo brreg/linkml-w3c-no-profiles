@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:arkivdelar](https://schema.fintlabs.no/arkiv/:arkivdelar)
+URI: [ark:arkivdelar](https://schema.fintlabs.no/arkiv/arkivdelar)
 Alias: arkivdelar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: arkivdelar
 | --- | --- |
 | Range | [Arkivdel](arkivdel.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:arkivdelar](https://schema.fintlabs.no/arkiv/arkivdelar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: arkivdelar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:arkivdelar |
+| self | ark:arkivdelar |
 | native | https://schema.fintlabs.no/arkiv/:arkivdelar |
 
 
@@ -86,8 +80,8 @@ Alias: arkivdelar
 name: arkivdelar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:arkivdelar
 alias: arkivdelar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Arkivdel

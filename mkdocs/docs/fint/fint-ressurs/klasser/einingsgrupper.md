@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:einingsgrupper](https://schema.fintlabs.no/ressurs/:einingsgrupper)
+URI: [res:einingsgrupper](https://schema.fintlabs.no/ressurs/einingsgrupper)
 Alias: einingsgrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: einingsgrupper
 | --- | --- |
 | Range | [Enhetsgruppe](enhetsgruppe.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:einingsgrupper](https://schema.fintlabs.no/ressurs/einingsgrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: einingsgrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:einingsgrupper |
+| self | res:einingsgrupper |
 | native | https://schema.fintlabs.no/ressurs/:einingsgrupper |
 
 
@@ -86,8 +80,8 @@ Alias: einingsgrupper
 name: einingsgrupper
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:einingsgrupper
 alias: einingsgrupper
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Enhetsgruppe

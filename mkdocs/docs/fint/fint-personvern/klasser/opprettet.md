@@ -22,7 +22,7 @@ Alias: opprettet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  no  |
+| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: opprettet
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Samtykke](samtykke.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: opprettet
 ```yaml
 name: opprettet
 description: Dato då samtykket vart oppretta.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:opprettet
 alias: opprettet
-owner: Samtykke
 domain_of:
 - Samtykke
 range: datetime
-required: true
 
 ```
 </details>

@@ -22,7 +22,7 @@ Alias: delegert
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: delegert
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: delegert
 ```yaml
 name: delegert
 description: Angir om deltakinga er delegert.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:delegert
 alias: delegert
-owner: Eksamensgruppemedlemskap
 domain_of:
 - Eksamensgruppemedlemskap
 range: boolean

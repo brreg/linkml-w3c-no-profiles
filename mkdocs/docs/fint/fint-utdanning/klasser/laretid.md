@@ -22,7 +22,7 @@ Alias: laretid
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  no  |
+| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: laretid
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Laerling](laerling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: laretid
 ```yaml
 name: laretid
 description: Læringstidsperiode for lærlingen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:laretid
 alias: laretid
-owner: Laerling
 domain_of:
 - Laerling
 range: Periode

@@ -3,8 +3,13 @@
 # Slot: uketimetall 
 
 
+_Alle uketimetallverdiar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:uketimetall](https://schema.fintlabs.no/administrasjon/:uketimetall)
+
+
+
+
+URI: [adm:uketimetall](https://schema.fintlabs.no/administrasjon/uketimetall)
 Alias: uketimetall
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: uketimetall
 | --- | --- |
 | Range | [Uketimetall](uketimetall.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:uketimetall](https://schema.fintlabs.no/administrasjon/uketimetall) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: uketimetall
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:uketimetall |
+| self | adm:uketimetall |
 | native | https://schema.fintlabs.no/administrasjon/:uketimetall |
 
 
@@ -84,10 +83,11 @@ Alias: uketimetall
 <details>
 ```yaml
 name: uketimetall
+description: Alle uketimetallverdiar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:uketimetall
 alias: uketimetall
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Uketimetall

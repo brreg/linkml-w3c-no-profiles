@@ -279,11 +279,7 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
@@ -292,87 +288,6 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
   
   
 
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-
-  
-  
   
   
     
@@ -380,6 +295,59 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
+    
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [saksstatus](saksstatus.md) | 1 <br/> [Saksstatus](saksstatus.md) | Status til saksmappa |
+| [administrativEnhet](administrativenhet.md) | 1 <br/> [AdministrativEnhet](administrativenhet.md) | Administrativ eining som har ansvar for saksbehandlinga |
+| [saksansvarlig](saksansvarlig.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som er saksansvarleg |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
   
   
     
@@ -387,6 +355,9 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
+    
+  
+
   
   
     
@@ -394,6 +365,9 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
+    
+  
+
   
   
     
@@ -401,6 +375,12 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
+    
+  
+
+  
+  
+
   
   
     
@@ -408,48 +388,17 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 
   
   
-  
-  
     
   
 
   
   
-  
-  
-    
-  
 
   
   
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
 
 
-### Andre
+### Valgfri
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
@@ -459,11 +408,156 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 | [sakssekvensnummer](sakssekvensnummer.md) | 0..1 <br/> [String](string.md) | Inngår i M003 mappeID — viser rekkjefølgja saksmappene vart oppretta |
 | [utlaantDato](utlaantdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato ein fysisk saksmappe eller journalpost vart utlånt |
 | [saksmappetype](saksmappetype.md) | 0..1 <br/> [Saksmappetype](saksmappetype.md) | Type saksmappe |
-| [saksstatus](saksstatus.md) | 1 <br/> [Saksstatus](saksstatus.md) | Status til saksmappa |
-| [tilgangsgruppe](tilgangsgruppe.md) | 0..1 <br/> [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe som har tilgang til saksmappa |
-| [journalenhet](journalenhet.md) | 0..1 <br/> [AdministrativEnhet](administrativenhet.md) | Eining med arkivmessig ansvar for saksmappa |
-| [administrativEnhet](administrativenhet.md) | 1 <br/> [AdministrativEnhet](administrativenhet.md) | Administrativ eining som har ansvar for saksbehandlinga |
-| [saksansvarlig](saksansvarlig.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som er saksansvarleg |
+| [tilgangsgruppe](tilgangsgruppe.md) | 0..1 <br/> [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe som har tilgang til arkivenheten |
+| [journalenhet](journalenhet.md) | 0..1 <br/> [AdministrativEnhet](administrativenhet.md) | Eining med arkivmessig ansvar |
+
+
+
+
+
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
 
 
@@ -473,17 +567,17 @@ URI: [ark:Saksmappe](https://schema.fintlabs.no/arkiv/Saksmappe)
 | Namn | Kardinalitet og domene | Beskriving | Frå |
 | --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Mappe](mappe.md) |
 | [avsluttetDato](avsluttetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett når arkivenheten vart avslutta/lukka | [Mappe](mappe.md) |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Tekstleg skildring av arkivenheten | [Mappe](mappe.md) |
-| [klasse](klasse.md) | * <br/> [Klasse](klasse.md) | Klassifisering av mappe | [Mappe](mappe.md) |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale | [Mappe](mappe.md) |
+| [klasse](klasse.md) | * <br/> [Klasse](klasse.md) | Klassifisering av arkivenhet | [Mappe](mappe.md) |
 | [mappeId](mappeid.md) | 0..1 <br/> [Identifikator](identifikator.md) | Eintydig identifikasjon av mappa innanfor arkivet | [Mappe](mappe.md) |
-| [merknad](merknad.md) | * <br/> [Merknad](merknad.md) | Merknader knytt til mappe | [Mappe](mappe.md) |
-| [noekkelord](noekkelord.md) | * <br/> [String](string.md) | Nøkkelord som skildrar innhaldet | [Mappe](mappe.md) |
+| [merknad](merknad.md) | * <br/> [Merknad](merknad.md) | Merknader knytt til arkivenhet | [Mappe](mappe.md) |
+| [noekkelord](noekkelord.md) | * <br/> [String](string.md) | Nøkkelord som skildrar innhaldet (Mappe) | [Mappe](mappe.md) |
 | [offentligTittel](offentligtittel.md) | 0..1 <br/> [String](string.md) | Offentleg tittel der skjerma ord er fjerna | [Mappe](mappe.md) |
 | [opprettetDato](opprettetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett arkivenheten vart oppretta/registrert | [Mappe](mappe.md) |
-| [part](part.md) | * <br/> [Part](part.md) | Partar til mappe | [Mappe](mappe.md) |
-| [skjerming](skjerming.md) | 0..1 <br/> [Skjerming](skjerming.md) | Skjerming av mappe | [Mappe](mappe.md) |
+| [part](part.md) | * <br/> [Part](part.md) | Partar til arkivenhet | [Mappe](mappe.md) |
+| [skjerming](skjerming.md) | 0..1 <br/> [Skjerming](skjerming.md) | Skjerming av arkivenhet | [Mappe](mappe.md) |
 | [tittel](tittel.md) | 0..1 <br/> [String](string.md) | Tittel eller namn på arkivenheten | [Mappe](mappe.md) |
-| [arkivdel](arkivdel.md) | 0..1 <br/> [Arkivdel](arkivdel.md) | Arkivdel mappa tilhøyrer | [Mappe](mappe.md) |
+| [arkivdel](arkivdel.md) | 0..1 <br/> [Arkivdel](arkivdel.md) | Arkivdel arkivenheten tilhøyrer | [Mappe](mappe.md) |
 | [avsluttetAv](avsluttetav.md) | 0..1 <br/> [Arkivressurs](arkivressurs.md) | Person som avslutta/lukka arkivenheten | [Mappe](mappe.md) |
 | [opprettetAv](opprettetav.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som oppretta/registrerte arkivenheten | [Mappe](mappe.md) |
 
@@ -540,135 +634,65 @@ description: Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark.
 from_schema: https://data.norge.no/linkml/fint-arkiv
 is_a: Mappe
 abstract: true
-attributes:
+slots:
+- journalpost
+- saksaar
+- saksdato
+- sakssekvensnummer
+- utlaantDato
+- saksmappetype
+- saksstatus
+- tilgangsgruppe
+- journalenhet
+- administrativEnhet
+- saksansvarlig
+slot_usage:
   journalpost:
     name: journalpost
-    description: Journalpostar knytt til saksmappa.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:journalpost
-    domain_of:
-    - Saksmappe
-    range: Journalpost
-    multivalued: true
   saksaar:
     name: saksaar
-    description: Inngår i M003 mappeID — viser året saksmappa vart oppretta.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:saksaar
-    domain_of:
-    - Saksmappe
-    range: string
   saksdato:
     name: saksdato
-    description: Datoen saka er oppretta.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:saksdato
-    domain_of:
-    - Saksmappe
-    range: datetime
   sakssekvensnummer:
     name: sakssekvensnummer
-    description: Inngår i M003 mappeID — viser rekkjefølgja saksmappene vart oppretta.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:sakssekvensnummer
-    domain_of:
-    - Saksmappe
-    range: string
   utlaantDato:
     name: utlaantDato
-    description: Dato ein fysisk saksmappe eller journalpost vart utlånt.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:utlaantDato
-    domain_of:
-    - Saksmappe
-    range: datetime
   saksmappetype:
     name: saksmappetype
-    description: Type saksmappe.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:saksmappetype
-    domain_of:
-    - Saksmappe
-    range: Saksmappetype
   saksstatus:
     name: saksstatus
-    description: Status til saksmappa.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:saksstatus
-    domain_of:
-    - Saksmappe
-    range: Saksstatus
     required: true
   tilgangsgruppe:
     name: tilgangsgruppe
-    description: Tilgangsgruppe som har tilgang til saksmappa.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:tilgangsgruppe
-    domain_of:
-    - Saksmappe
-    - Registrering
-    range: Tilgangsgruppe
   journalenhet:
     name: journalenhet
-    description: Eining med arkivmessig ansvar for saksmappa.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:journalenhet
-    domain_of:
-    - Saksmappe
-    - Journalpost
-    range: AdministrativEnhet
   administrativEnhet:
     name: administrativEnhet
-    description: Administrativ eining som har ansvar for saksbehandlinga.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:administrativEnhet
-    domain_of:
-    - Saksmappe
-    - Registrering
-    - Tilgang
-    range: AdministrativEnhet
     required: true
   saksansvarlig:
     name: saksansvarlig
-    description: Person som er saksansvarleg.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    slot_uri: ark:saksansvarlig
-    domain_of:
-    - Saksmappe
-    range: Arkivressurs
     required: true
 class_uri: ark:Saksmappe
 
@@ -684,6 +708,54 @@ description: Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark.
 from_schema: https://data.norge.no/linkml/fint-arkiv
 is_a: Mappe
 abstract: true
+slot_usage:
+  journalpost:
+    name: journalpost
+    in_subset:
+    - Valgfri
+  saksaar:
+    name: saksaar
+    in_subset:
+    - Valgfri
+  saksdato:
+    name: saksdato
+    in_subset:
+    - Valgfri
+  sakssekvensnummer:
+    name: sakssekvensnummer
+    in_subset:
+    - Valgfri
+  utlaantDato:
+    name: utlaantDato
+    in_subset:
+    - Valgfri
+  saksmappetype:
+    name: saksmappetype
+    in_subset:
+    - Valgfri
+  saksstatus:
+    name: saksstatus
+    in_subset:
+    - Obligatorisk
+    required: true
+  tilgangsgruppe:
+    name: tilgangsgruppe
+    in_subset:
+    - Valgfri
+  journalenhet:
+    name: journalenhet
+    in_subset:
+    - Valgfri
+  administrativEnhet:
+    name: administrativEnhet
+    in_subset:
+    - Obligatorisk
+    required: true
+  saksansvarlig:
+    name: saksansvarlig
+    in_subset:
+    - Obligatorisk
+    required: true
 attributes:
   journalpost:
     name: journalpost
@@ -780,7 +852,7 @@ attributes:
     required: true
   tilgangsgruppe:
     name: tilgangsgruppe
-    description: Tilgangsgruppe som har tilgang til saksmappa.
+    description: Tilgangsgruppe som har tilgang til arkivenheten.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -794,7 +866,7 @@ attributes:
     range: Tilgangsgruppe
   journalenhet:
     name: journalenhet
-    description: Eining med arkivmessig ansvar for saksmappa.
+    description: Eining med arkivmessig ansvar.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -895,12 +967,12 @@ attributes:
     range: datetime
   beskrivelse:
     name: beskrivelse
-    description: Tekstleg skildring av arkivenheten.
+    description: Beskriven namn eller omtale.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    slot_uri: ark:beskrivelse
+    slot_uri: fint:beskrivelse
     alias: beskrivelse
     owner: Saksmappe
     domain_of:
@@ -912,7 +984,7 @@ attributes:
     range: string
   klasse:
     name: klasse
-    description: Klassifisering av mappe.
+    description: Klassifisering av arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -926,7 +998,6 @@ attributes:
     - Klassifikasjonssystem
     range: Klasse
     multivalued: true
-    inlined: true
     inlined_as_list: true
   mappeId:
     name: mappeId
@@ -944,7 +1015,7 @@ attributes:
     inlined: true
   merknad:
     name: merknad
-    description: Merknader knytt til mappe.
+    description: Merknader knytt til arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -961,7 +1032,7 @@ attributes:
     inlined_as_list: true
   noekkelord:
     name: noekkelord
-    description: Nøkkelord som skildrar innhaldet.
+    description: Nøkkelord som skildrar innhaldet (Mappe).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -1005,7 +1076,7 @@ attributes:
     range: datetime
   part:
     name: part
-    description: Partar til mappe.
+    description: Partar til arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -1023,7 +1094,7 @@ attributes:
     inlined_as_list: true
   skjerming:
     name: skjerming
-    description: Skjerming av mappe.
+    description: Skjerming av arkivenhet.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -1060,7 +1131,7 @@ attributes:
     range: string
   arkivdel:
     name: arkivdel
-    description: Arkivdel mappa tilhøyrer.
+    description: Arkivdel arkivenheten tilhøyrer.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-arkiv
@@ -1086,7 +1157,6 @@ attributes:
     owner: Saksmappe
     domain_of:
     - Mappe
-    - Klassifikasjonssystem
     range: Arkivressurs
   opprettetAv:
     name: opprettetAv
@@ -1101,7 +1171,6 @@ attributes:
     domain_of:
     - Mappe
     - Registrering
-    - Klassifikasjonssystem
     - Dokumentbeskrivelse
     - Dokumentobjekt
     range: Arkivressurs

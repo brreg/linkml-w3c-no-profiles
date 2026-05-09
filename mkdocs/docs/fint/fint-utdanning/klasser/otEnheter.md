@@ -3,8 +3,13 @@
 # Slot: otEnheter 
 
 
+_Alle OT-einingar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:otEnheter](https://schema.fintlabs.no/utdanning/:otEnheter)
+
+
+
+
+URI: [utd:otEnheter](https://schema.fintlabs.no/utdanning/otEnheter)
 Alias: otEnheter
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: otEnheter
 | --- | --- |
 | Range | [OtEnhet](otenhet.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:otEnheter](https://schema.fintlabs.no/utdanning/otEnheter) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: otEnheter
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:otEnheter |
+| self | utd:otEnheter |
 | native | https://schema.fintlabs.no/utdanning/:otEnheter |
 
 
@@ -84,10 +83,11 @@ Alias: otEnheter
 <details>
 ```yaml
 name: otEnheter
+description: Alle OT-einingar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:otEnheter
 alias: otEnheter
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: OtEnhet

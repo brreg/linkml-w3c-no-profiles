@@ -22,29 +22,29 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Regel](regel.md) | Eit regelverk eller retningsliner som styrer levering av ei teneste |  no  |
-| [Gebyr](gebyr.md) | Eit gebyr knytt til ei teneste |  no  |
 | [Spraak](spraak.md) | Ein språkreferanse (dct:LinguisticSystem) |  no  |
-| [Tjenesteresultattype](tjenesteresultattype.md) | Typen resultat som ei teneste produserer |  no  |
+| [Dokumentasjonstype](dokumentasjonstype.md) | Ein type dokumentasjon som krevst for å levere ei teneste |  no  |
+| [Regel](regel.md) | Eit regelverk eller retningsliner som styrer levering av ei teneste |  no  |
 | [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |  no  |
-| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
 | [Katalog](katalog.md) | Ein katalog over offentlege tenester og hendingar |  no  |
 | [Virksomhetshendelse](virksomhetshendelse.md) | Ei verksemdhending som kan utløyse behov for tenester (t |  no  |
-| [Adresse](adresse.md) | Ei postadresse knytt til ein aktør, organisasjon eller kontaktpunkt |  no  |
-| [Deltagelse](deltagelse.md) | Ei rolle ein aktør har i leveringa av ei teneste |  no  |
-| [OffentligOrganisasjon](offentligorganisasjon.md) | Ein offentleg organisasjon som er ansvarleg for ei teneste |  no  |
 | [Mediatype](mediatype.md) | Ein medietype eller filformat (dct:MediaTypeOrExtent) |  no  |
 | [Tjenestekanal](tjenestekanal.md) | Ein kanal for å få tilgang til ei teneste (t |  no  |
-| [Dokumentasjonstype](dokumentasjonstype.md) | Ein type dokumentasjon som krevst for å levere ei teneste |  no  |
-| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
+| [Deltagelse](deltagelse.md) | Ei rolle ein aktør har i leveringa av ei teneste |  no  |
 | [Livshendelse](livshendelse.md) | Ei livshending som kan utløyse behov for tenester (t |  no  |
-| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  no  |
-| [Kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for ei teneste eller ein organisasjon |  no  |
+| [Tjenesteresultattype](tjenesteresultattype.md) | Typen resultat som ei teneste produserer |  no  |
+| [Konsept](konsept.md) | Referanse til eit SKOS-omgrep frå eit kontrollert vokabular |  no  |
+| [Gebyr](gebyr.md) | Eit gebyr knytt til ei teneste |  no  |
+| [OffentligOrganisasjon](offentligorganisasjon.md) | Ein offentleg organisasjon som er ansvarleg for ei teneste |  no  |
+| [RegulativRessurs](regulativressurs.md) | Ein regulativ ressurs (lov, forskrift o |  no  |
 | [Hendelse](hendelse.md) | Ei hending som kan utløyse behov for ei offentleg teneste |  no  |
-| [Aktor](aktor.md) | Ein aktør (person eller organisasjon) relatert til ei teneste |  no  |
+| [Tjenesteresultattypeliste](tjenesteresultattypeliste.md) | Ei liste over moglege tjenesteresultattypar |  no  |
 | [LovpalagtTjeneste](lovpalagttjeneste.md) | Ei lovpålagd teneste som offentlege organ er pålagde å utføre |  no  |
 | [Begrepssamling](begrepssamling.md) | Ei SKOS-omgrepssamling (temavokabular) |  no  |
-| [Tjenesteresultattypeliste](tjenesteresultattypeliste.md) | Ei liste over moglege tjenesteresultattypar |  no  |
+| [Kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for ei teneste eller ein organisasjon |  no  |
+| [Adresse](adresse.md) | Ei postadresse knytt til ein aktør, organisasjon eller kontaktpunkt |  no  |
+| [Aktor](aktor.md) | Ein aktør (person eller organisasjon) relatert til ei teneste |  no  |
+| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  no  |
 
 
 

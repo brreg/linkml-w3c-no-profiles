@@ -22,7 +22,7 @@ Alias: eksamensdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: eksamensdato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamensgruppe](eksamensgruppe.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: eksamensdato
 ```yaml
 name: eksamensdato
 description: Dato for eksamenen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:eksamensdato
 alias: eksamensdato
-owner: Eksamensgruppe
 domain_of:
 - Eksamensgruppe
 range: datetime

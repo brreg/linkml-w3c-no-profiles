@@ -3,8 +3,13 @@
 # Slot: eksamensformer 
 
 
+_Alle eksamensformer i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamensformer](https://schema.fintlabs.no/utdanning/:eksamensformer)
+
+
+
+
+URI: [utd:eksamensformer](https://schema.fintlabs.no/utdanning/eksamensformer)
 Alias: eksamensformer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: eksamensformer
 | --- | --- |
 | Range | [Eksamensform](eksamensform.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:eksamensformer](https://schema.fintlabs.no/utdanning/eksamensformer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: eksamensformer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamensformer |
+| self | utd:eksamensformer |
 | native | https://schema.fintlabs.no/utdanning/:eksamensformer |
 
 
@@ -84,10 +83,11 @@ Alias: eksamensformer
 <details>
 ```yaml
 name: eksamensformer
+description: Alle eksamensformer i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:eksamensformer
 alias: eksamensformer
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Eksamensform

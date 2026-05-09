@@ -22,7 +22,7 @@ Alias: morsmaal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: morsmaal
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: morsmaal
 ```yaml
 name: morsmaal
 description: Morsmål til personen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:morsmaal
 alias: morsmaal
-owner: Person
 domain_of:
 - Person
 range: Spraak

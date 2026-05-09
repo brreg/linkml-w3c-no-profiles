@@ -3,8 +3,13 @@
 # Slot: virksomhetar 
 
 
+_Alle verksemder i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:virksomhetar](https://schema.fintlabs.no/administrasjon/:virksomhetar)
+
+
+
+
+URI: [adm:virksomhetar](https://schema.fintlabs.no/administrasjon/virksomhetar)
 Alias: virksomhetar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: virksomhetar
 | --- | --- |
 | Range | [Virksomhet](virksomhet.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:virksomhetar](https://schema.fintlabs.no/administrasjon/virksomhetar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: virksomhetar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:virksomhetar |
+| self | adm:virksomhetar |
 | native | https://schema.fintlabs.no/administrasjon/:virksomhetar |
 
 
@@ -84,10 +83,11 @@ Alias: virksomhetar
 <details>
 ```yaml
 name: virksomhetar
+description: Alle verksemder i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:virksomhetar
 alias: virksomhetar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Virksomhet

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:applikasjonar](https://schema.fintlabs.no/ressurs/:applikasjonar)
+URI: [res:applikasjonar](https://schema.fintlabs.no/ressurs/applikasjonar)
 Alias: applikasjonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: applikasjonar
 | --- | --- |
 | Range | [Applikasjon](applikasjon.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:applikasjonar](https://schema.fintlabs.no/ressurs/applikasjonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: applikasjonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:applikasjonar |
+| self | res:applikasjonar |
 | native | https://schema.fintlabs.no/ressurs/:applikasjonar |
 
 
@@ -86,8 +80,8 @@ Alias: applikasjonar
 name: applikasjonar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:applikasjonar
 alias: applikasjonar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Applikasjon

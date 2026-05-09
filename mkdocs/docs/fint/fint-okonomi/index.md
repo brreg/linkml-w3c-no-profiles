@@ -1,19 +1,5 @@
 # fint-okonomi
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [fint-okonomi-shapes.ttl](fint-okonomi-shapes.ttl) |
-| JSON-LD kontekst | [fint-okonomi-context.jsonld](fint-okonomi-context.jsonld) |
-| JSON Schema | [fint-okonomi-schema.json](fint-okonomi-schema.json) |
-| OWL ontologi | [fint-okonomi-ontology.ttl](fint-okonomi-ontology.ttl) |
-| Python-klasser | [fint-okonomi-model.py](fint-okonomi-model.py) |
-| ER-diagram (Mermaid) | [fint-okonomi-erdiagram.md](fint-okonomi-erdiagram.md) |
-| Eksempeldata (Turtle) | [fint-okonomi-eksempel.ttl](fint-okonomi-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Adresse {
@@ -57,7 +43,7 @@ Fakturamottaker {
 }
 Fakturautsteder {
     uriorcurie id  
-    string navn  
+    string naam  
     uriorcurie organisasjonselement  
 }
 Identifikator {
@@ -72,7 +58,7 @@ Kontostreng {
 Landkode {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Leverandor {
@@ -83,19 +69,19 @@ Leverandor {
 }
 Leverandorgruppe {
     uriorcurie id  
-    string navn  
+    string naam  
 }
 Merverdiavgift {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
     integer sats  
 }
 OkonomiValuta {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -121,7 +107,7 @@ Vare {
     uriorcurie id  
     string enhet  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
     integer pris  
 }
@@ -130,7 +116,7 @@ Adresse ||--|o Landkode : "land"
 Faktura ||--|o Adresse : "adresse"
 Faktura ||--|| Fakturagrunnlag : "fakturagrunnlag"
 Faktura ||--|| Identifikator : "fakturanummer"
-Fakturagrunnlag ||--|| Fakturamottaker : "mottaker"
+Fakturagrunnlag ||--|| Fakturamottaker : "fakturamottaker"
 Fakturagrunnlag ||--|| Fakturautsteder : "fakturautsteder"
 Fakturagrunnlag ||--|| Identifikator : "ordrenummer"
 Fakturagrunnlag ||--}o Faktura : "faktura"
@@ -196,8 +182,8 @@ Name: fint-okonomi
 | [Kontaktinformasjon](klasser/kontaktinformasjon.md) | Informasjon som kan brukast for å oppnå kontakt |
 | [Kontaktperson](klasser/kontaktperson.md) | Kontaktperson (pårørande) til ein person |
 | [Kontostreng](klasser/kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |
-| [Leverandor](klasser/leverandor.md) | Person eller verksemd som leverer produkt eller tenester (Leverandør) |
-| [Leverandorgruppe](klasser/leverandorgruppe.md) | Gruppering av leverandørar (Leverandørgruppe) |
+| [Leverandor](klasser/leverandor.md) | Person eller verksemd som leverer produkt eller tenester |
+| [Leverandorgruppe](klasser/leverandorgruppe.md) | Gruppering av leverandørar |
 | [Matrikkelnummer](klasser/matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |
 | [Merverdiavgift](klasser/merverdiavgift.md) | Kodeverk for merverdiavgifter |
 | [OkonomiContainer](klasser/okonomicontainer.md) | Rotcontainer for FINT Økonomi-instansar |
@@ -215,15 +201,15 @@ Name: fint-okonomi
 
 | Slot | Description |
 | --- | --- |
-| [adresse](klasser/adresse.md) | Adresse til mottakar |
+| [adresse](klasser/adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](klasser/adresselinje.md) | Adresseinformasjon |
 | [ansvar](klasser/ansvar.md) | Ansvarsomrade |
-| [ansvarlig](klasser/ansvarlig.md) | Referanse til Personalressurs (Administrasjon) som er ansvarleg for å godkjen... |
+| [ansvarlig](klasser/ansvarlig.md) | Referanse til Personalressurs (Administrasjon) som er ansvarleg |
 | [antall](klasser/antall.md) | Mengd av varen levert |
 | [art](klasser/art.md) | Artskonto (type utgift/inntekt) |
-| [avgiftsbelop](klasser/avgiftsbelop.md) | Del av totalbeløp som er avgifter, i øre (avgiftsbeløp) |
-| [belop](klasser/belop.md) | Beløp mottakar skal betale, i øre (beløp) |
-| [beskrivelse](klasser/beskrivelse.md) | Skildring av transaksjonen |
+| [avgiftsbelop](klasser/avgiftsbelop.md) | Del av totalbeløp som er avgifter, i øre |
+| [belop](klasser/belop.md) | Beløp, i øre |
+| [beskrivelse](klasser/beskrivelse.md) | Beskriven namn eller omtale |
 | [betalt](klasser/betalt.md) | Status på betaling |
 | [bilag](klasser/bilag.md) | Bilag til transaksjonen |
 | [bilagsdato](klasser/bilagsdato.md) | Dato bilaget er registrert |
@@ -241,8 +227,9 @@ Name: fint-okonomi
 | [etternavn](klasser/etternavn.md) | Etternamn til personen |
 | [faktura](klasser/faktura.md) | Utferdigde fakturaer for fakturagrunnlaget |
 | [fakturaer](klasser/fakturaer.md) |  |
-| [fakturagrunnlag](klasser/fakturagrunnlag.md) |  |
+| [fakturagrunnlag](klasser/fakturagrunnlag.md) | Grunnlag for fakturering |
 | [fakturalinjer](klasser/fakturalinjer.md) | Linjer av varer eller tenester som skal fakturerast |
+| [fakturamottaker](klasser/fakturamottaker.md) | Mottakar som skal betale faktura |
 | [fakturanummer](klasser/fakturanummer.md) | Identifikator oppretta i fakturaprogrammet |
 | [fakturautsteder](klasser/fakturautsteder.md) | Utstedar av faktura og mottakar av betaling |
 | [fakturautstederear](klasser/fakturautstederear.md) |  |
@@ -253,32 +240,33 @@ Name: fint-okonomi
 | [fodselsnummer](klasser/fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
 | [foreldre](klasser/foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](klasser/foreldreansvar.md) | Personar denne personen har foreldreansvar for |
-| [forfallsdato](klasser/forfallsdato.md) | Frist for betaling |
+| [forfallsdato](klasser/forfallsdato.md) | Frist for betaling eller forfallsdato for transaksjon |
 | [fornavn](klasser/fornavn.md) | Fornamn til personen |
-| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
+| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fritekst](klasser/fritekst.md) | Fritekst som skildrar varen slik han er levert |
 | [funksjon](klasser/funksjon.md) | Funksjonskode (KOSTRA) |
-| [fylke](klasser/fylke.md) | Fylket kommunen høyrer til |
+| [fylke](klasser/fylke.md) | Fylke |
 | [gaardsnummer](klasser/gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Angir gyldighetsperioden for omgrepet/koden |
+| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [id](klasser/id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](klasser/identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [kjonn](klasser/kjonn.md) | Kjønn for personen |
+| [kjonn](klasser/kjonn.md) | Kjønn |
 | [kode](klasser/kode.md) | Verdi som identifiserer omgrepet |
-| [kommune](klasser/kommune.md) | Alle kommunar som inngår i fylket |
+| [kommune](klasser/kommune.md) | Kommune |
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontering](klasser/kontering.md) | Kontodimensjonar for posteringa |
+| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontering](klasser/kontering.md) | Kontodimensjonar |
 | [kontonummer](klasser/kontonummer.md) | Kontonummer til leverandøren |
 | [kreditert](klasser/kreditert.md) | Status på kreditering |
 | [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](klasser/land.md) | Land der adressa befinn seg |
-| [leverandor](klasser/leverandor.md) | Leverandør knytt til transaksjonen (leverandor) |
+| [leverandor](klasser/leverandor.md) | Leverandør |
 | [leverandorar](klasser/leverandorar.md) |  |
-| [leverandorgruppe](klasser/leverandorgruppe.md) | Gruppe av leverandørar leverandøren tilhøyrer (leverandørgruppe) |
+| [leverandorgruppe](klasser/leverandorgruppe.md) | Gruppe av leverandørar leverandøren tilhøyrer |
 | [leverandorgrupper](klasser/leverandorgrupper.md) |  |
-| [leverandornummer](klasser/leverandornummer.md) | Nummer som identifiserer ein leverandør (leverandørnummer) |
+| [leverandornummer](klasser/leverandornummer.md) | Nummer som identifiserer ein leverandør |
 | [leveringsdato](klasser/leveringsdato.md) | Dato varer eller tenester vart leverte |
 | [maalform](klasser/maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
@@ -287,19 +275,20 @@ Name: fint-okonomi
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
 | [mottaker](klasser/mottaker.md) | Namn på mottakar |
-| [navn](klasser/navn.md) | Juridisk namn på fakturutstedar |
-| [nettobelop](klasser/nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre (nettobeløp) |
+| [naam](klasser/naam.md) | Namn på eining eller kodeverk-element |
+| [nettobelop](klasser/nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
 | [oppdateringstidspunkt](klasser/oppdateringstidspunkt.md) | Tidspunkt for siste endring i transaksjonen |
 | [ordrenummer](klasser/ordrenummer.md) | Unik identifikator for ordren det skal utferdigast faktura på |
-| [organisasjonselement](klasser/organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura |
+| [organisasjonselement](klasser/organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) |
 | [organisasjonsnavn](klasser/organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](klasser/organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](klasser/person.md) | Referanse til Person (Administrasjon) som skal betale faktura |
+| [person](klasser/person.md) | Referanse til Person (Administrasjon) |
+| [person_naam](klasser/person_naam.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [postadresse](klasser/postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postering](klasser/postering.md) | Posteringar tilhøyrande transaksjonen |
@@ -307,10 +296,10 @@ Name: fint-okonomi
 | [posteringsId](klasser/posteringsid.md) | Intern unik identifikator i økonomisystemet |
 | [postnummer](klasser/postnummer.md) | Postnummer |
 | [poststed](klasser/poststed.md) | Poststad |
-| [pris](klasser/pris.md) | Pris per eining levert, i øre |
+| [pris](klasser/pris.md) | Pris per eining, i øre |
 | [prosjekt](klasser/prosjekt.md) | Prosjektkode |
 | [referanse](klasser/referanse.md) | Ekstern referanse, t |
-| [restbelop](klasser/restbelop.md) | Gjenståande beløp å betale, i øre (restbeløp) |
+| [restbelop](klasser/restbelop.md) | Gjenståande beløp å betale, i øre |
 | [sats](klasser/sats.md) | Sats for merverdiavgift |
 | [seksjonsnummer](klasser/seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
 | [sip](klasser/sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
@@ -323,11 +312,12 @@ Name: fint-okonomi
 | [transaksjonar](klasser/transaksjonar.md) |  |
 | [transaksjonsId](klasser/transaksjonsid.md) | Intern unik identifikator i økonomisystemet |
 | [transaksjonstidspunkt](klasser/transaksjonstidspunkt.md) | Tidspunkt for registrering av transaksjonen |
-| [type](klasser/type.md) | Beskriv kva slags type kontaktperson |
+| [type](klasser/type.md) | Beskriv kva slags type |
 | [url](klasser/url.md) | URL til eksternt dokument |
 | [valuta](klasser/valuta.md) | Valuta for oppgjeve beløp |
+| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
 | [valutaer](klasser/valutaer.md) |  |
-| [vare](klasser/vare.md) | Alle varer i vareregisteret til fakturutstedaren |
+| [vare](klasser/vare.md) | Vare i vareregisteret |
 | [varer](klasser/varer.md) |  |
 | [virksomhet](klasser/virksomhet.md) | Referanse til Virksomhet som er leverandør |
 | [virksomhetsId](klasser/virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
@@ -371,3 +361,16 @@ Name: fint-okonomi
 | [Anbefalt](klasser/anbefalt.md) | Anbefalt eigensskap |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatorisk eigensskap |
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [fint-okonomi-shapes.ttl](fint-okonomi-shapes.ttl) |
+| JSON-LD kontekst | [fint-okonomi-context.jsonld](fint-okonomi-context.jsonld) |
+| JSON Schema | [fint-okonomi-schema.json](fint-okonomi-schema.json) |
+| OWL ontologi | [fint-okonomi-ontology.ttl](fint-okonomi-ontology.ttl) |
+| Python-klasser | [fint-okonomi-model.py](fint-okonomi-model.py) |
+| ER-diagram (Mermaid) | [fint-okonomi-erdiagram.md](fint-okonomi-erdiagram.md) |
+| Eksempeldata (Turtle) | [fint-okonomi-eksempel.ttl](fint-okonomi-eksempel.ttl) |

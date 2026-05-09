@@ -22,7 +22,7 @@ Alias: status
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  no  |
+| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: status
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OtUngdom](otungdom.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: status
 ```yaml
 name: status
 description: OT-status for ungdommen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:status
 alias: status
-owner: OtUngdom
 domain_of:
 - OtUngdom
 range: OtStatus

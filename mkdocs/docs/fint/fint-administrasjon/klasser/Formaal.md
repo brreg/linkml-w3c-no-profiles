@@ -3,8 +3,13 @@
 # Slot: formaal 
 
 
+_Formål viser aktivitet og tenesteproduksjon._
 
-URI: [https://schema.fintlabs.no/administrasjon/:formaal](https://schema.fintlabs.no/administrasjon/:formaal)
+
+
+
+
+URI: [adm:formaal](https://schema.fintlabs.no/administrasjon/formaal)
 Alias: formaal
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: formaal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: formaal
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Formaal](formaal.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:formaal](https://schema.fintlabs.no/administrasjon/formaal) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: formaal
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:formaal |
+| self | adm:formaal |
 | native | https://schema.fintlabs.no/administrasjon/:formaal |
 
 
@@ -72,13 +85,17 @@ Alias: formaal
 <details>
 ```yaml
 name: formaal
+description: Formål viser aktivitet og tenesteproduksjon.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:formaal
 alias: formaal
 domain_of:
 - AdministrasjonContainer
 - Kontostreng
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Formaal
 
 ```
 </details>

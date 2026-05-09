@@ -22,7 +22,7 @@ Alias: leder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: leder
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalmappe](personalmappe.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: leder
 ```yaml
 name: leder
 description: Referanse til Personalressurs som er arbeidstakarens leiar.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:leder
 alias: leder
-owner: Personalmappe
 domain_of:
 - Personalmappe
 range: uriorcurie
-required: true
 
 ```
 </details>

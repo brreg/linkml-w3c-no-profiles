@@ -1,20 +1,5 @@
 # fair-metadata
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [fair-metadata-shapes.ttl](fair-metadata-shapes.ttl) |
-| JSON-LD kontekst | [fair-metadata-context.jsonld](fair-metadata-context.jsonld) |
-| JSON Schema | [fair-metadata-schema.json](fair-metadata-schema.json) |
-| OWL ontologi | [fair-metadata-ontology.ttl](fair-metadata-ontology.ttl) |
-| RDF/Turtle skjema | [fair-metadata-schema.ttl](fair-metadata-schema.ttl) |
-| Python-klasser | [fair-metadata-model.py](fair-metadata-model.py) |
-| ER-diagram (Mermaid) | [fair-metadata-erdiagram.md](fair-metadata-erdiagram.md) |
-| Eksempeldata (Turtle) | [fair-metadata-eksempel.ttl](fair-metadata-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 FAIRMetadata {
@@ -147,3 +132,17 @@ Name: fair-metadata
 | [Findable](klasser/findable.md) | Eigenskapar knytt til FAIR F-prinsippa (Findable) |
 | [Interoperable](klasser/interoperable.md) | Eigenskapar knytt til FAIR I-prinsippa (Interoperable) |
 | [Reusable](klasser/reusable.md) | Eigenskapar knytt til FAIR R-prinsippa (Reusable) |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [fair-metadata-shapes.ttl](fair-metadata-shapes.ttl) |
+| JSON-LD kontekst | [fair-metadata-context.jsonld](fair-metadata-context.jsonld) |
+| JSON Schema | [fair-metadata-schema.json](fair-metadata-schema.json) |
+| OWL ontologi | [fair-metadata-ontology.ttl](fair-metadata-ontology.ttl) |
+| RDF/Turtle skjema | [fair-metadata-schema.ttl](fair-metadata-schema.ttl) |
+| Python-klasser | [fair-metadata-model.py](fair-metadata-model.py) |
+| ER-diagram (Mermaid) | [fair-metadata-erdiagram.md](fair-metadata-erdiagram.md) |
+| Eksempeldata (Turtle) | [fair-metadata-eksempel.ttl](fair-metadata-eksempel.ttl) |

@@ -17,6 +17,7 @@ domain_label() {
         ap-no) echo "AP-NO – Applikasjonsprofiler" ;;
         ngr)   echo "NGR – Nasjonale Grunndata" ;;
         fint)  echo "FINT – Fylkeskommunale integrasjonar" ;;
+        samt)  echo "SAMT – Kommunale integrasjonar" ;;
         fair)  echo "FAIR – Metadataoverbygning" ;;
         oreg)  echo "OREG – Offentlege registre" ;;
         *)     echo "$1" | awk '{print toupper($0)}' ;;
@@ -101,33 +102,14 @@ for domain_dir in $(find "$GEN" -mindepth 1 -maxdepth 1 -type d | sort); do
         # ----------------------------------------------------------------
         {
             echo "# $schema"
-            echo ""
-
-            # Artefaktabell
-            has_artifact=false
-            artifact_rows=""
-            for suffix in $ARTIFACT_ORDER; do
-                f="$out/${schema}-${suffix}"
-                if [ -f "$f" ]; then
-                    has_artifact=true
-                    artifact_rows+="| $(artifact_label "$suffix") | [${schema}-${suffix}](${schema}-${suffix}) |"$'\n'
-                fi
-            done
-
-            if $has_artifact; then
-                echo "## Artifacts"
-                echo ""
-                echo "| Artefakt | Fil |"
-                echo "|----------|-----|"
-                printf '%s' "$artifact_rows"
-            fi
+            echo ""   
 
             # Embed oversiktsdiagram frå gen-erdiagram
             erdiagram_file="$out/${schema}-erdiagram.md"
             if [ -f "$erdiagram_file" ]; then
-                echo ""
-                echo "## Oversiktsdiagram"
-                echo ""
+                #echo ""
+                #echo "## Oversiktsdiagram"
+                #echo ""
                 # Hopp over H1 i erdiagram.md (skriv berre diagramblokka)
                 awk 'NR==1 && /^# / { next } 1' "$erdiagram_file"
             fi
@@ -144,6 +126,28 @@ for domain_dir in $(find "$GEN" -mindepth 1 -maxdepth 1 -type d | sort); do
                 awk 'NR==1 && /^# / { next } 1' "$klasse_src" \
                     | sed 's/](\([^)]*\.md\))/](klasser\/\1)/g'
             fi
+
+            # Artefaktabell
+            has_artifact=false
+            artifact_rows=""
+            for suffix in $ARTIFACT_ORDER; do
+                f="$out/${schema}-${suffix}"
+                if [ -f "$f" ]; then
+                    has_artifact=true
+                    artifact_rows+="| $(artifact_label "$suffix") | [${schema}-${suffix}](${schema}-${suffix}) |"$'\n'
+                fi
+            done
+
+            if $has_artifact; then
+                echo ""
+                echo ""
+                echo "## Artifacts"
+                echo ""
+                echo "| Artefakt | Fil |"
+                echo "|----------|-----|"
+                printf '%s' "$artifact_rows"
+            fi
+
         } > "$out/index.md"
 
         echo "  $domain/$schema"
@@ -157,7 +161,7 @@ for domain_dir in $(find "$GEN" -mindepth 1 -maxdepth 1 -type d | sort); do
     {
         echo "# $(domain_label "$domain")"
         echo ""
-        echo "| Modell | Tilgjengelege artefaktar |"
+        echo "| Modell | Tilgjengelege artefakter |"
         echo "|--------|--------------------------|"
 
         for schema in "${schemas[@]}"; do

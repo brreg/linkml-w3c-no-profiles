@@ -22,7 +22,7 @@ Alias: bygningsnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
+| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: bygningsnavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: bygningsnavn
 ```yaml
 name: bygningsnavn
 description: Bygningens namn.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:bygningsnavn
 alias: bygningsnavn
-owner: TilskuddFredaBygningPrivatEie
 domain_of:
 - TilskuddFredaBygningPrivatEie
 range: string

@@ -3,7 +3,7 @@
 # Slot: person 
 
 
-_Referanse til Person (Administrasjon) som har gjeve samtykke._
+_Referanse til Person (Administrasjon)._
 
 
 
@@ -22,7 +22,7 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  no  |
+| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Samtykke](samtykke.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: person
 <details>
 ```yaml
 name: person
-description: Referanse til Person (Administrasjon) som har gjeve samtykke.
-in_subset:
-- Obligatorisk
+description: Referanse til Person (Administrasjon).
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:person
 alias: person
-owner: Samtykke
 domain_of:
 - Samtykke
 range: uriorcurie
-required: true
 
 ```
 </details>

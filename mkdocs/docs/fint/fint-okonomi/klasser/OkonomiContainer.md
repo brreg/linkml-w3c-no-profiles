@@ -265,6 +265,14 @@ URI: [https://schema.fintlabs.no/okonomi/:OkonomiContainer](https://schema.fintl
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -331,7 +339,7 @@ URI: [https://schema.fintlabs.no/okonomi/:OkonomiContainer](https://schema.fintl
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [fakturaer](fakturaer.md) | * <br/> [Faktura](faktura.md) |  |
-| [fakturagrunnlag](fakturagrunnlag.md) | * <br/> [Fakturagrunnlag](fakturagrunnlag.md) |  |
+| [fakturagrunnlag](fakturagrunnlag.md) | * <br/> [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |
 | [fakturautstederear](fakturautstederear.md) | * <br/> [Fakturautsteder](fakturautsteder.md) |  |
 | [transaksjonar](transaksjonar.md) | * <br/> [Transaksjon](transaksjon.md) |  |
 | [posteringar](posteringar.md) | * <br/> [Postering](postering.md) |  |
@@ -395,108 +403,21 @@ URI: [https://schema.fintlabs.no/okonomi/:OkonomiContainer](https://schema.fintl
 name: OkonomiContainer
 description: Rotcontainer for FINT Økonomi-instansar.
 from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
-  fakturaer:
-    name: fakturaer
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Faktura
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
+slots:
+- fakturaer
+- fakturagrunnlag
+- fakturautstederear
+- transaksjonar
+- posteringar
+- leverandorar
+- leverandorgrupper
+- varer
+- merverdiavgifter
+- valutaer
+slot_usage:
   fakturagrunnlag:
     name: fakturagrunnlag
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    - Faktura
-    - Fakturautsteder
-    range: Fakturagrunnlag
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  fakturautstederear:
-    name: fakturautstederear
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Fakturautsteder
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  transaksjonar:
-    name: transaksjonar
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Transaksjon
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  posteringar:
-    name: posteringar
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Postering
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  leverandorar:
-    name: leverandorar
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Leverandor
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  leverandorgrupper:
-    name: leverandorgrupper
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Leverandorgruppe
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  varer:
-    name: varer
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Vare
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  merverdiavgifter:
-    name: merverdiavgifter
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: Merverdiavgift
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  valutaer:
-    name: valutaer
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    domain_of:
-    - OkonomiContainer
-    range: OkonomiValuta
-    multivalued: true
-    inlined: true
     inlined_as_list: true
 tree_root: true
 
@@ -510,11 +431,17 @@ tree_root: true
 name: OkonomiContainer
 description: Rotcontainer for FINT Økonomi-instansar.
 from_schema: https://data.norge.no/linkml/fint-okonomi
+slot_usage:
+  fakturagrunnlag:
+    name: fakturagrunnlag
+    multivalued: true
+    inlined_as_list: true
 attributes:
   fakturaer:
     name: fakturaer
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:fakturaer
     alias: fakturaer
     owner: OkonomiContainer
     domain_of:
@@ -524,8 +451,10 @@ attributes:
     inlined_as_list: true
   fakturagrunnlag:
     name: fakturagrunnlag
+    description: Grunnlag for fakturering.
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:fakturagrunnlag
     alias: fakturagrunnlag
     owner: OkonomiContainer
     domain_of:
@@ -539,6 +468,7 @@ attributes:
     name: fakturautstederear
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:fakturautstederear
     alias: fakturautstederear
     owner: OkonomiContainer
     domain_of:
@@ -550,6 +480,7 @@ attributes:
     name: transaksjonar
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:transaksjonar
     alias: transaksjonar
     owner: OkonomiContainer
     domain_of:
@@ -561,6 +492,7 @@ attributes:
     name: posteringar
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:posteringar
     alias: posteringar
     owner: OkonomiContainer
     domain_of:
@@ -572,6 +504,7 @@ attributes:
     name: leverandorar
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:leverandorar
     alias: leverandorar
     owner: OkonomiContainer
     domain_of:
@@ -583,6 +516,7 @@ attributes:
     name: leverandorgrupper
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:leverandorgrupper
     alias: leverandorgrupper
     owner: OkonomiContainer
     domain_of:
@@ -594,6 +528,7 @@ attributes:
     name: varer
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:varer
     alias: varer
     owner: OkonomiContainer
     domain_of:
@@ -605,6 +540,7 @@ attributes:
     name: merverdiavgifter
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:merverdiavgifter
     alias: merverdiavgifter
     owner: OkonomiContainer
     domain_of:
@@ -616,6 +552,7 @@ attributes:
     name: valutaer
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
+    slot_uri: okn:valutaer
     alias: valutaer
     owner: OkonomiContainer
     domain_of:

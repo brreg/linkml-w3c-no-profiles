@@ -22,7 +22,7 @@ Alias: ansettelsesprosent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: ansettelsesprosent
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidsforhold](arbeidsforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: ansettelsesprosent
 ```yaml
 name: ansettelsesprosent
 description: Prosenten personalressursen eig i høve til arbeidsavtalen.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:ansettelsesprosent
 alias: ansettelsesprosent
-owner: Arbeidsforhold
 domain_of:
 - Arbeidsforhold
 range: integer
-required: true
 
 ```
 </details>

@@ -1,20 +1,5 @@
 # ngr-person
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [ngr-person-shapes.ttl](ngr-person-shapes.ttl) |
-| JSON-LD kontekst | [ngr-person-context.jsonld](ngr-person-context.jsonld) |
-| JSON Schema | [ngr-person-schema.json](ngr-person-schema.json) |
-| OWL ontologi | [ngr-person-ontology.ttl](ngr-person-ontology.ttl) |
-| RDF/Turtle skjema | [ngr-person-schema.ttl](ngr-person-schema.ttl) |
-| Python-klasser | [ngr-person-model.py](ngr-person-model.py) |
-| ER-diagram (Mermaid) | [ngr-person-erdiagram.md](ngr-person-erdiagram.md) |
-| Eksempeldata (Turtle) | [ngr-person-eksempel.ttl](ngr-person-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Adressebeskyttelse {
@@ -438,3 +423,17 @@ Name: ngr-person
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i domenemodellen |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i domenemodellen |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i domenemodellen |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [ngr-person-shapes.ttl](ngr-person-shapes.ttl) |
+| JSON-LD kontekst | [ngr-person-context.jsonld](ngr-person-context.jsonld) |
+| JSON Schema | [ngr-person-schema.json](ngr-person-schema.json) |
+| OWL ontologi | [ngr-person-ontology.ttl](ngr-person-ontology.ttl) |
+| RDF/Turtle skjema | [ngr-person-schema.ttl](ngr-person-schema.ttl) |
+| Python-klasser | [ngr-person-model.py](ngr-person-model.py) |
+| ER-diagram (Mermaid) | [ngr-person-erdiagram.md](ngr-person-erdiagram.md) |
+| Eksempeldata (Turtle) | [ngr-person-eksempel.ttl](ngr-person-eksempel.ttl) |

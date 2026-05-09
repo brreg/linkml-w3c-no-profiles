@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:administrativeEiningar](https://schema.fintlabs.no/arkiv/:administrativeEiningar)
+URI: [ark:administrativeEiningar](https://schema.fintlabs.no/arkiv/administrativeEiningar)
 Alias: administrativeEiningar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: administrativeEiningar
 | --- | --- |
 | Range | [AdministrativEnhet](administrativenhet.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:administrativeEiningar](https://schema.fintlabs.no/arkiv/administrativeEiningar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: administrativeEiningar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:administrativeEiningar |
+| self | ark:administrativeEiningar |
 | native | https://schema.fintlabs.no/arkiv/:administrativeEiningar |
 
 
@@ -86,8 +80,8 @@ Alias: administrativeEiningar
 name: administrativeEiningar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:administrativeEiningar
 alias: administrativeEiningar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: AdministrativEnhet

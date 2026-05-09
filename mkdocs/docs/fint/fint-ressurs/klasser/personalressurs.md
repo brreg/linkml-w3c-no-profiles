@@ -3,8 +3,13 @@
 # Slot: personalressurs 
 
 
+_Referanse til Personalressurs (Administrasjon)._
 
-URI: [https://schema.fintlabs.no/ressurs/:personalressurs](https://schema.fintlabs.no/ressurs/:personalressurs)
+
+
+
+
+URI: [res:personalressurs](https://schema.fintlabs.no/ressurs/personalressurs)
 Alias: personalressurs
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: personalressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
 | [Person](person.md) | Fysiske private personar |  no  |
-| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  no  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
+| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: personalressurs
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [DigitalEnhet](digitalenhet.md), [Identitet](identitet.md), [Person](person.md) |
+| Slot URI | [res:personalressurs](https://schema.fintlabs.no/ressurs/personalressurs) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: personalressurs
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:personalressurs |
+| self | res:personalressurs |
 | native | https://schema.fintlabs.no/ressurs/:personalressurs |
 
 
@@ -71,12 +84,16 @@ Alias: personalressurs
 <details>
 ```yaml
 name: personalressurs
+description: Referanse til Personalressurs (Administrasjon).
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:personalressurs
 alias: personalressurs
 domain_of:
 - DigitalEnhet
 - Identitet
 - Person
-range: string
+range: uriorcurie
 
 ```
 </details>

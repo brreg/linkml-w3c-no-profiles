@@ -1,48 +1,435 @@
 
 
-# Slot: tilskuddFredaBygningPrivatEie 
+# Class: TilskuddFredaBygningPrivatEie 
 
 
-
-URI: [https://schema.fintlabs.no/arkiv/:tilskuddFredaBygningPrivatEie](https://schema.fintlabs.no/arkiv/:tilskuddFredaBygningPrivatEie)
-Alias: tilskuddFredaBygningPrivatEie
-
-<!-- no inheritance hierarchy -->
+_Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP)._
 
 
 
 
 
-## Applicable Classes
+URI: [ark:TilskuddFredaBygningPrivatEie](https://schema.fintlabs.no/arkiv/TilskuddFredaBygningPrivatEie)
 
-| Name | Description | Modifies Slot |
+
+
+
+
+```mermaid
+ classDiagram
+    class TilskuddFredaBygningPrivatEie
+    click TilskuddFredaBygningPrivatEie href "../TilskuddFredaBygningPrivatEie/"
+      Saksmappe <|-- TilskuddFredaBygningPrivatEie
+        click Saksmappe href "../Saksmappe/"
+      
+      TilskuddFredaBygningPrivatEie : administrativEnhet
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "1" AdministrativEnhet : administrativEnhet
+        click AdministrativEnhet href "../AdministrativEnhet/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : arkivdel
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Arkivdel : arkivdel
+        click Arkivdel href "../Arkivdel/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : avsluttetAv
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Arkivressurs : avsluttetAv
+        click Arkivressurs href "../Arkivressurs/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : avsluttetDato
+        
+      TilskuddFredaBygningPrivatEie : beskrivelse
+        
+      TilskuddFredaBygningPrivatEie : bygningsnavn
+        
+      TilskuddFredaBygningPrivatEie : id
+        
+      TilskuddFredaBygningPrivatEie : journalenhet
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" AdministrativEnhet : journalenhet
+        click AdministrativEnhet href "../AdministrativEnhet/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : journalpost
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "*" Journalpost : journalpost
+        click Journalpost href "../Journalpost/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : klasse
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "*" Klasse : klasse
+        click Klasse href "../Klasse/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : kulturminneId
+        
+      TilskuddFredaBygningPrivatEie : mappeId
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Identifikator : mappeId
+        click Identifikator href "../Identifikator/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : matrikkelnummer
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Matrikkelnummer : matrikkelnummer
+        click Matrikkelnummer href "../Matrikkelnummer/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : merknad
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "*" Merknad : merknad
+        click Merknad href "../Merknad/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : noekkelord
+        
+      TilskuddFredaBygningPrivatEie : offentligTittel
+        
+      TilskuddFredaBygningPrivatEie : opprettetAv
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "1" Arkivressurs : opprettetAv
+        click Arkivressurs href "../Arkivressurs/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : opprettetDato
+        
+      TilskuddFredaBygningPrivatEie : part
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "*" Part : part
+        click Part href "../Part/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : saksaar
+        
+      TilskuddFredaBygningPrivatEie : saksansvarlig
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "1" Arkivressurs : saksansvarlig
+        click Arkivressurs href "../Arkivressurs/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : saksdato
+        
+      TilskuddFredaBygningPrivatEie : saksmappetype
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Saksmappetype : saksmappetype
+        click Saksmappetype href "../Saksmappetype/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : sakssekvensnummer
+        
+      TilskuddFredaBygningPrivatEie : saksstatus
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "1" Saksstatus : saksstatus
+        click Saksstatus href "../Saksstatus/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : skjerming
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Skjerming : skjerming
+        click Skjerming href "../Skjerming/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : soeknadsnummer
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Identifikator : soeknadsnummer
+        click Identifikator href "../Identifikator/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : tilgangsgruppe
+        
+          
+    
+        
+        
+        TilskuddFredaBygningPrivatEie --> "0..1" Tilgangsgruppe : tilgangsgruppe
+        click Tilgangsgruppe href "../Tilgangsgruppe/"
+    
+
+        
+      TilskuddFredaBygningPrivatEie : tittel
+        
+      TilskuddFredaBygningPrivatEie : utlaantDato
+        
+      
+```
+
+
+
+
+
+## Inheritance
+* [Mappe](mappe.md)
+    * [Saksmappe](saksmappe.md)
+        * **TilskuddFredaBygningPrivatEie**
+
+
+## Class Properties
+
+| Property | Value |
+| --- | --- |
+| Class URI | [ark:TilskuddFredaBygningPrivatEie](https://schema.fintlabs.no/arkiv/TilskuddFredaBygningPrivatEie) |
+
+
+## Eigenskapar
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [ArkivContainer](arkivcontainer.md) | Rotcontainer for FINT Arkiv-instansar |  no  |
+| [kulturminneId](kulturminneid.md) | 1 <br/> [String](string.md) | Kulturminnets ID i Askeladden |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [bygningsnavn](bygningsnavn.md) | 0..1 <br/> [String](string.md) | Bygningens namn |
+| [matrikkelnummer](matrikkelnummer.md) | 0..1 <br/> [Matrikkelnummer](matrikkelnummer.md) | Kulturminnets/bygningens identifikator i Matrikkelen |
+| [soeknadsnummer](soeknadsnummer.md) | 0..1 <br/> [Identifikator](identifikator.md) | Søknadsnummer frå Digisak |
 
 
 
 
 
 
-## Properties
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
-### Type and Range
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
-| Property | Value |
-| --- | --- |
-| Range | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |
-| Domain Of | [ArkivContainer](arkivcontainer.md) |
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
-### Cardinality and Requirements
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
-| Property | Value |
-| --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
 
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
+
+
+### Arva
+
+| Namn | Kardinalitet og domene | Beskriving | Frå |
+| --- | --- | --- | --- || [journalpost](journalpost.md) | * <br/> [Journalpost](journalpost.md) | Journalpostar knytt til saksmappa | [Saksmappe](saksmappe.md) |
+| [saksaar](saksaar.md) | 0..1 <br/> [String](string.md) | Inngår i M003 mappeID — viser året saksmappa vart oppretta | [Saksmappe](saksmappe.md) |
+| [saksdato](saksdato.md) | 0..1 <br/> [Datetime](datetime.md) | Datoen saka er oppretta | [Saksmappe](saksmappe.md) |
+| [sakssekvensnummer](sakssekvensnummer.md) | 0..1 <br/> [String](string.md) | Inngår i M003 mappeID — viser rekkjefølgja saksmappene vart oppretta | [Saksmappe](saksmappe.md) |
+| [utlaantDato](utlaantdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato ein fysisk saksmappe eller journalpost vart utlånt | [Saksmappe](saksmappe.md) |
+| [saksmappetype](saksmappetype.md) | 0..1 <br/> [Saksmappetype](saksmappetype.md) | Type saksmappe | [Saksmappe](saksmappe.md) |
+| [saksstatus](saksstatus.md) | 1 <br/> [Saksstatus](saksstatus.md) | Status til saksmappa | [Saksmappe](saksmappe.md) |
+| [tilgangsgruppe](tilgangsgruppe.md) | 0..1 <br/> [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe som har tilgang til arkivenheten | [Saksmappe](saksmappe.md) |
+| [journalenhet](journalenhet.md) | 0..1 <br/> [AdministrativEnhet](administrativenhet.md) | Eining med arkivmessig ansvar | [Saksmappe](saksmappe.md) |
+| [administrativEnhet](administrativenhet.md) | 1 <br/> [AdministrativEnhet](administrativenhet.md) | Administrativ eining som har ansvar for saksbehandlinga | [Saksmappe](saksmappe.md) |
+| [saksansvarlig](saksansvarlig.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som er saksansvarleg | [Saksmappe](saksmappe.md) |
+| [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Mappe](mappe.md) |
+| [avsluttetDato](avsluttetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett når arkivenheten vart avslutta/lukka | [Mappe](mappe.md) |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale | [Mappe](mappe.md) |
+| [klasse](klasse.md) | * <br/> [Klasse](klasse.md) | Klassifisering av arkivenhet | [Mappe](mappe.md) |
+| [mappeId](mappeid.md) | 0..1 <br/> [Identifikator](identifikator.md) | Eintydig identifikasjon av mappa innanfor arkivet | [Mappe](mappe.md) |
+| [merknad](merknad.md) | * <br/> [Merknad](merknad.md) | Merknader knytt til arkivenhet | [Mappe](mappe.md) |
+| [noekkelord](noekkelord.md) | * <br/> [String](string.md) | Nøkkelord som skildrar innhaldet (Mappe) | [Mappe](mappe.md) |
+| [offentligTittel](offentligtittel.md) | 0..1 <br/> [String](string.md) | Offentleg tittel der skjerma ord er fjerna | [Mappe](mappe.md) |
+| [opprettetDato](opprettetdato.md) | 0..1 <br/> [Datetime](datetime.md) | Dato og klokkeslett arkivenheten vart oppretta/registrert | [Mappe](mappe.md) |
+| [part](part.md) | * <br/> [Part](part.md) | Partar til arkivenhet | [Mappe](mappe.md) |
+| [skjerming](skjerming.md) | 0..1 <br/> [Skjerming](skjerming.md) | Skjerming av arkivenhet | [Mappe](mappe.md) |
+| [tittel](tittel.md) | 0..1 <br/> [String](string.md) | Tittel eller namn på arkivenheten | [Mappe](mappe.md) |
+| [arkivdel](arkivdel.md) | 0..1 <br/> [Arkivdel](arkivdel.md) | Arkivdel arkivenheten tilhøyrer | [Mappe](mappe.md) |
+| [avsluttetAv](avsluttetav.md) | 0..1 <br/> [Arkivressurs](arkivressurs.md) | Person som avslutta/lukka arkivenheten | [Mappe](mappe.md) |
+| [opprettetAv](opprettetav.md) | 1 <br/> [Arkivressurs](arkivressurs.md) | Person som oppretta/registrerte arkivenheten | [Mappe](mappe.md) |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [ArkivContainer](arkivcontainer.md) | [tilskuddFredaBygningPrivatEie_liste](tilskuddfredabygningprivateie_liste.md) | range | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |
 
 
 
@@ -73,27 +460,560 @@ Alias: tilskuddFredaBygningPrivatEie
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:tilskuddFredaBygningPrivatEie |
-| native | https://schema.fintlabs.no/arkiv/:tilskuddFredaBygningPrivatEie |
+| self | ark:TilskuddFredaBygningPrivatEie |
+| native | https://schema.fintlabs.no/arkiv/:TilskuddFredaBygningPrivatEie |
+
+
 
 
 
 
 ## LinkML Source
 
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
 <details>
 ```yaml
-name: tilskuddFredaBygningPrivatEie
+name: TilskuddFredaBygningPrivatEie
+description: Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP).
 from_schema: https://data.norge.no/linkml/fint-arkiv
-rank: 1000
-alias: tilskuddFredaBygningPrivatEie
-owner: ArkivContainer
-domain_of:
-- ArkivContainer
-range: TilskuddFredaBygningPrivatEie
-multivalued: true
-inlined: true
-inlined_as_list: true
+is_a: Saksmappe
+slots:
+- bygningsnavn
+- kulturminneId
+- matrikkelnummer
+- soeknadsnummer
+slot_usage:
+  bygningsnavn:
+    name: bygningsnavn
+    in_subset:
+    - Valgfri
+  kulturminneId:
+    name: kulturminneId
+    in_subset:
+    - Obligatorisk
+    required: true
+  matrikkelnummer:
+    name: matrikkelnummer
+    in_subset:
+    - Valgfri
+  soeknadsnummer:
+    name: soeknadsnummer
+    in_subset:
+    - Valgfri
+class_uri: ark:TilskuddFredaBygningPrivatEie
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: TilskuddFredaBygningPrivatEie
+description: Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP).
+from_schema: https://data.norge.no/linkml/fint-arkiv
+is_a: Saksmappe
+slot_usage:
+  bygningsnavn:
+    name: bygningsnavn
+    in_subset:
+    - Valgfri
+  kulturminneId:
+    name: kulturminneId
+    in_subset:
+    - Obligatorisk
+    required: true
+  matrikkelnummer:
+    name: matrikkelnummer
+    in_subset:
+    - Valgfri
+  soeknadsnummer:
+    name: soeknadsnummer
+    in_subset:
+    - Valgfri
+attributes:
+  bygningsnavn:
+    name: bygningsnavn
+    description: Bygningens namn.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:bygningsnavn
+    alias: bygningsnavn
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - TilskuddFredaBygningPrivatEie
+    range: string
+  kulturminneId:
+    name: kulturminneId
+    description: Kulturminnets ID i Askeladden.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:kulturminneId
+    alias: kulturminneId
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - DispensasjonAutomatiskFredaKulturminne
+    - TilskuddFartoy
+    - TilskuddFredaBygningPrivatEie
+    range: string
+    required: true
+  matrikkelnummer:
+    name: matrikkelnummer
+    description: Kulturminnets/bygningens identifikator i Matrikkelen.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:matrikkelnummer
+    alias: matrikkelnummer
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - DispensasjonAutomatiskFredaKulturminne
+    - TilskuddFredaBygningPrivatEie
+    range: Matrikkelnummer
+    inlined: true
+  soeknadsnummer:
+    name: soeknadsnummer
+    description: Søknadsnummer frå Digisak.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:soeknadsnummer
+    alias: soeknadsnummer
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - DispensasjonAutomatiskFredaKulturminne
+    - TilskuddFartoy
+    - TilskuddFredaBygningPrivatEie
+    range: Identifikator
+    inlined: true
+  journalpost:
+    name: journalpost
+    description: Journalpostar knytt til saksmappa.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:journalpost
+    alias: journalpost
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: Journalpost
+    multivalued: true
+  saksaar:
+    name: saksaar
+    description: Inngår i M003 mappeID — viser året saksmappa vart oppretta.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:saksaar
+    alias: saksaar
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: string
+  saksdato:
+    name: saksdato
+    description: Datoen saka er oppretta.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:saksdato
+    alias: saksdato
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: datetime
+  sakssekvensnummer:
+    name: sakssekvensnummer
+    description: Inngår i M003 mappeID — viser rekkjefølgja saksmappene vart oppretta.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:sakssekvensnummer
+    alias: sakssekvensnummer
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: string
+  utlaantDato:
+    name: utlaantDato
+    description: Dato ein fysisk saksmappe eller journalpost vart utlånt.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:utlaantDato
+    alias: utlaantDato
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: datetime
+  saksmappetype:
+    name: saksmappetype
+    description: Type saksmappe.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:saksmappetype
+    alias: saksmappetype
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: Saksmappetype
+  saksstatus:
+    name: saksstatus
+    description: Status til saksmappa.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:saksstatus
+    alias: saksstatus
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: Saksstatus
+    required: true
+  tilgangsgruppe:
+    name: tilgangsgruppe
+    description: Tilgangsgruppe som har tilgang til arkivenheten.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:tilgangsgruppe
+    alias: tilgangsgruppe
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    - Registrering
+    range: Tilgangsgruppe
+  journalenhet:
+    name: journalenhet
+    description: Eining med arkivmessig ansvar.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:journalenhet
+    alias: journalenhet
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    - Journalpost
+    range: AdministrativEnhet
+  administrativEnhet:
+    name: administrativEnhet
+    description: Administrativ eining som har ansvar for saksbehandlinga.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:administrativEnhet
+    alias: administrativEnhet
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    - Registrering
+    - Tilgang
+    range: AdministrativEnhet
+    required: true
+  saksansvarlig:
+    name: saksansvarlig
+    description: Person som er saksansvarleg.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:saksansvarlig
+    alias: saksansvarlig
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Saksmappe
+    range: Arkivressurs
+    required: true
+  id:
+    name: id
+    description: URI-identifikator for ressursen.
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    identifier: true
+    alias: id
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - AdministrativEnhet
+    - Arkivdel
+    - Arkivressurs
+    - Autorisasjon
+    - Dokumentfil
+    - Klassifikasjonssystem
+    - Tilgang
+    - Dokumentbeskrivelse
+    - DokumentStatus
+    - DokumentType
+    - Format
+    - JournalpostType
+    - JournalStatus
+    - Klassifikasjonstype
+    - KorrespondansepartType
+    - Merknadstype
+    - PartRolle
+    - Rolle
+    - Saksmappetype
+    - Saksstatus
+    - Skjermingshjemmel
+    - Tilgangsgruppe
+    - Tilgangsrestriksjon
+    - TilknyttetRegistreringSom
+    - Variantformat
+    - Begrep
+    - Valuta
+    - Person
+    - Kontaktperson
+    - Virksomhet
+    range: uriorcurie
+    required: true
+  avsluttetDato:
+    name: avsluttetDato
+    description: Dato og klokkeslett når arkivenheten vart avslutta/lukka.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:avsluttetDato
+    alias: avsluttetDato
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Klassifikasjonssystem
+    range: datetime
+  beskrivelse:
+    name: beskrivelse
+    description: Beskriven namn eller omtale.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: fint:beskrivelse
+    alias: beskrivelse
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Klassifikasjonssystem
+    - Dokumentbeskrivelse
+    - Periode
+    range: string
+  klasse:
+    name: klasse
+    description: Klassifisering av arkivenhet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:klasse
+    alias: klasse
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Klassifikasjonssystem
+    range: Klasse
+    multivalued: true
+    inlined_as_list: true
+  mappeId:
+    name: mappeId
+    description: Eintydig identifikasjon av mappa innanfor arkivet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:mappeId
+    alias: mappeId
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    range: Identifikator
+    inlined: true
+  merknad:
+    name: merknad
+    description: Merknader knytt til arkivenhet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:merknad
+    alias: merknad
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    range: Merknad
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  noekkelord:
+    name: noekkelord
+    description: Nøkkelord som skildrar innhaldet (Mappe).
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:noekkelord
+    alias: noekkelord
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    range: string
+    multivalued: true
+  offentligTittel:
+    name: offentligTittel
+    description: Offentleg tittel der skjerma ord er fjerna.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:offentligTittel
+    alias: offentligTittel
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    range: string
+  opprettetDato:
+    name: opprettetDato
+    description: Dato og klokkeslett arkivenheten vart oppretta/registrert.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:opprettetDato
+    alias: opprettetDato
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Klassifikasjonssystem
+    - Dokumentbeskrivelse
+    range: datetime
+  part:
+    name: part
+    description: Partar til arkivenhet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:part
+    alias: part
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Dokumentbeskrivelse
+    range: Part
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  skjerming:
+    name: skjerming
+    description: Skjerming av arkivenhet.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:skjerming
+    alias: skjerming
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Dokumentbeskrivelse
+    - Klasse
+    - Korrespondansepart
+    range: Skjerming
+    inlined: true
+  tittel:
+    name: tittel
+    description: Tittel eller namn på arkivenheten.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:tittel
+    alias: tittel
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Arkivdel
+    - Klassifikasjonssystem
+    - Tilgang
+    - Dokumentbeskrivelse
+    - Klasse
+    range: string
+  arkivdel:
+    name: arkivdel
+    description: Arkivdel arkivenheten tilhøyrer.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:arkivdel
+    alias: arkivdel
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Klassifikasjonssystem
+    - Tilgang
+    range: Arkivdel
+  avsluttetAv:
+    name: avsluttetAv
+    description: Person som avslutta/lukka arkivenheten.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:avsluttetAv
+    alias: avsluttetAv
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    range: Arkivressurs
+  opprettetAv:
+    name: opprettetAv
+    description: Person som oppretta/registrerte arkivenheten.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-arkiv
+    rank: 1000
+    slot_uri: ark:opprettetAv
+    alias: opprettetAv
+    owner: TilskuddFredaBygningPrivatEie
+    domain_of:
+    - Mappe
+    - Registrering
+    - Dokumentbeskrivelse
+    - Dokumentobjekt
+    range: Arkivressurs
+    required: true
+class_uri: ark:TilskuddFredaBygningPrivatEie
 
 ```
 </details>

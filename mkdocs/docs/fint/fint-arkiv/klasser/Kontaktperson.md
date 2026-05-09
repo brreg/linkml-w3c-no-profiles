@@ -3,8 +3,13 @@
 # Slot: kontaktperson 
 
 
+_Personar kontaktpersonen er pårørande for._
 
-URI: [https://schema.fintlabs.no/arkiv/:kontaktperson](https://schema.fintlabs.no/arkiv/:kontaktperson)
+
+
+
+
+URI: [fint:kontaktpersonFor](https://schema.fintlabs.no/kontaktpersonFor)
 Alias: kontaktperson
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,7 @@ Alias: kontaktperson
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
 
 
 
@@ -32,13 +35,15 @@ Alias: kontaktperson
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
-| Domain Of | [Korrespondansepart](korrespondansepart.md), [Part](part.md), [Kontaktperson](kontaktperson.md) |
+| Range | [Person](person.md) |
+| Domain Of | [Kontaktperson](kontaktperson.md) |
+| Slot URI | [fint:kontaktpersonFor](https://schema.fintlabs.no/kontaktpersonFor) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,12 +60,19 @@ Alias: kontaktperson
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:kontaktperson |
+| self | fint:kontaktpersonFor |
 | native | https://schema.fintlabs.no/arkiv/:kontaktperson |
 
 
@@ -71,12 +83,15 @@ Alias: kontaktperson
 <details>
 ```yaml
 name: kontaktperson
+description: Personar kontaktpersonen er pårørande for.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: fint:kontaktpersonFor
 alias: kontaktperson
 domain_of:
-- Korrespondansepart
-- Part
 - Kontaktperson
-range: string
+range: Person
+multivalued: true
 
 ```
 </details>

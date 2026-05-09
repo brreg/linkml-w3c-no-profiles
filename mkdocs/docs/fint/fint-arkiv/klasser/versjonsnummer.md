@@ -22,7 +22,7 @@ Alias: versjonsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentobjekt](dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |  no  |
+| [Dokumentobjekt](dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: versjonsnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentobjekt](dokumentobjekt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: versjonsnummer
 ```yaml
 name: versjonsnummer
 description: Identifikasjon av versjonar innanfor same dokument.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:versjonsnummer
 alias: versjonsnummer
-owner: Dokumentobjekt
 domain_of:
 - Dokumentobjekt
 range: integer

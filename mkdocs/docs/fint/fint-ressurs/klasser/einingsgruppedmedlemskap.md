@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:einingsgruppedmedlemskap](https://schema.fintlabs.no/ressurs/:einingsgruppedmedlemskap)
+URI: [res:einingsgruppedmedlemskap](https://schema.fintlabs.no/ressurs/einingsgruppedmedlemskap)
 Alias: einingsgruppedmedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: einingsgruppedmedlemskap
 | --- | --- |
 | Range | [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:einingsgruppedmedlemskap](https://schema.fintlabs.no/ressurs/einingsgruppedmedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: einingsgruppedmedlemskap
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:einingsgruppedmedlemskap |
+| self | res:einingsgruppedmedlemskap |
 | native | https://schema.fintlabs.no/ressurs/:einingsgruppedmedlemskap |
 
 
@@ -86,8 +80,8 @@ Alias: einingsgruppedmedlemskap
 name: einingsgruppedmedlemskap
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:einingsgruppedmedlemskap
 alias: einingsgruppedmedlemskap
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Enhetsgruppemedlemskap

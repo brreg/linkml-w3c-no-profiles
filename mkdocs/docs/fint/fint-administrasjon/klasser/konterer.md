@@ -22,10 +22,10 @@ Alias: konterer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  no  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 | [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
 
 
 
@@ -46,23 +46,10 @@ Alias: konterer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Lonn](lonn.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -99,13 +86,10 @@ Alias: konterer
 ```yaml
 name: konterer
 description: Personalressurs som har kontert lønsmeldinga etter fullmakt.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:konterer
 alias: konterer
-owner: Lonn
 domain_of:
 - Lonn
 range: Personalressurs

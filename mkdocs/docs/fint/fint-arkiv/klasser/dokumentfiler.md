@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:dokumentfiler](https://schema.fintlabs.no/arkiv/:dokumentfiler)
+URI: [ark:dokumentfiler](https://schema.fintlabs.no/arkiv/dokumentfiler)
 Alias: dokumentfiler
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: dokumentfiler
 | --- | --- |
 | Range | [Dokumentfil](dokumentfil.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:dokumentfiler](https://schema.fintlabs.no/arkiv/dokumentfiler) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: dokumentfiler
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:dokumentfiler |
+| self | ark:dokumentfiler |
 | native | https://schema.fintlabs.no/arkiv/:dokumentfiler |
 
 
@@ -86,8 +80,8 @@ Alias: dokumentfiler
 name: dokumentfiler
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:dokumentfiler
 alias: dokumentfiler
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Dokumentfil

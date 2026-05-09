@@ -3,8 +3,13 @@
 # Slot: undervisningsforhold 
 
 
+_Undervisningsforhold._
 
-URI: [https://schema.fintlabs.no/utdanning/:undervisningsforhold](https://schema.fintlabs.no/utdanning/:undervisningsforhold)
+
+
+
+
+URI: [utd:undervisningsforhold](https://schema.fintlabs.no/utdanning/undervisningsforhold)
 Alias: undervisningsforhold
 
 <!-- no inheritance hierarchy -->
@@ -17,13 +22,13 @@ Alias: undervisningsforhold
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
-| [Time](time.md) | Ein time i timeplanen |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Time](time.md) | Ein time i timeplanen |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
 
 
 
@@ -36,13 +41,15 @@ Alias: undervisningsforhold
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Undervisningsforhold](undervisningsforhold.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Klasse](klasse.md), [Kontaktlaerergruppe](kontaktlaerergruppe.md), [Persongruppe](persongruppe.md), [Time](time.md), [Undervisningsgruppe](undervisningsgruppe.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:undervisningsforhold](https://schema.fintlabs.no/utdanning/undervisningsforhold) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -59,12 +66,19 @@ Alias: undervisningsforhold
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:undervisningsforhold |
+| self | utd:undervisningsforhold |
 | native | https://schema.fintlabs.no/utdanning/:undervisningsforhold |
 
 
@@ -75,6 +89,10 @@ Alias: undervisningsforhold
 <details>
 ```yaml
 name: undervisningsforhold
+description: Undervisningsforhold.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:undervisningsforhold
 alias: undervisningsforhold
 domain_of:
 - UtdanningContainer
@@ -84,7 +102,8 @@ domain_of:
 - Time
 - Undervisningsgruppe
 - Eksamensgruppe
-range: string
+range: Undervisningsforhold
+multivalued: true
 
 ```
 </details>

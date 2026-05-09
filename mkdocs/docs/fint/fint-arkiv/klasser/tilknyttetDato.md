@@ -22,7 +22,7 @@ Alias: tilknyttetDato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: tilknyttetDato
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: tilknyttetDato
 ```yaml
 name: tilknyttetDato
 description: Datoen eit dokument vart knytt til ei registrering.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:tilknyttetDato
 alias: tilknyttetDato
-owner: Dokumentbeskrivelse
 domain_of:
 - Dokumentbeskrivelse
 range: datetime

@@ -22,7 +22,7 @@ Alias: organisasjonsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
 
 
@@ -44,23 +44,10 @@ Alias: organisasjonsnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Enhet](enhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: organisasjonsnummer
 ```yaml
 name: organisasjonsnummer
 description: Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:organisasjonsnummer
 alias: organisasjonsnummer
-owner: Enhet
 domain_of:
 - Enhet
 range: Identifikator

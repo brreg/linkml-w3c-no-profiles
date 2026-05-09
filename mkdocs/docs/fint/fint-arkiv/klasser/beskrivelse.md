@@ -3,8 +3,13 @@
 # Slot: beskrivelse 
 
 
+_Beskriven namn eller omtale._
 
-URI: [https://schema.fintlabs.no/arkiv/:beskrivelse](https://schema.fintlabs.no/arkiv/:beskrivelse)
+
+
+
+
+URI: [fint:beskrivelse](https://schema.fintlabs.no/beskrivelse)
 Alias: beskrivelse
 
 <!-- no inheritance hierarchy -->
@@ -17,19 +22,19 @@ Alias: beskrivelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
 | [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
+| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  yes  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
 | [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 
 
 
@@ -44,6 +49,7 @@ Alias: beskrivelse
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Mappe](mappe.md), [Registrering](registrering.md), [Klassifikasjonssystem](klassifikasjonssystem.md), [Dokumentbeskrivelse](dokumentbeskrivelse.md), [Periode](periode.md) |
+| Slot URI | [fint:beskrivelse](https://schema.fintlabs.no/beskrivelse) |
 
 ### Cardinality and Requirements
 
@@ -65,12 +71,19 @@ Alias: beskrivelse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:beskrivelse |
+| self | fint:beskrivelse |
 | native | https://schema.fintlabs.no/arkiv/:beskrivelse |
 
 
@@ -81,6 +94,10 @@ Alias: beskrivelse
 <details>
 ```yaml
 name: beskrivelse
+description: Beskriven namn eller omtale.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: fint:beskrivelse
 alias: beskrivelse
 domain_of:
 - Mappe

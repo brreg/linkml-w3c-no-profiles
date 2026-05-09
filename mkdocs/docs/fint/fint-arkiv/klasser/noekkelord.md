@@ -3,7 +3,7 @@
 # Slot: noekkelord 
 
 
-_Nøkkelord som skildrar innhaldet._
+_Nøkkelord som skildrar innhaldet (Mappe)._
 
 
 
@@ -22,14 +22,14 @@ Alias: noekkelord
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
 | [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
 | [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
+| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
 | [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
 
 
 
@@ -51,23 +51,10 @@ Alias: noekkelord
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Mappe](mappe.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -103,14 +90,11 @@ Alias: noekkelord
 <details>
 ```yaml
 name: noekkelord
-description: Nøkkelord som skildrar innhaldet.
-in_subset:
-- Valgfri
+description: Nøkkelord som skildrar innhaldet (Mappe).
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:noekkelord
 alias: noekkelord
-owner: Mappe
 domain_of:
 - Mappe
 range: string

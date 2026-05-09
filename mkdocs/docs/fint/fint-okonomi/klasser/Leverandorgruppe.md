@@ -3,7 +3,7 @@
 # Slot: leverandorgruppe 
 
 
-_Gruppe av leverandørar leverandøren tilhøyrer (leverandørgruppe)._
+_Gruppe av leverandørar leverandøren tilhøyrer._
 
 
 
@@ -22,7 +22,7 @@ Alias: leverandorgruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester (Leverandør) |  no  |
+| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: leverandorgruppe
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Leverandor](leverandor.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: leverandorgruppe
 <details>
 ```yaml
 name: leverandorgruppe
-description: Gruppe av leverandørar leverandøren tilhøyrer (leverandørgruppe).
-in_subset:
-- Valgfri
+description: Gruppe av leverandørar leverandøren tilhøyrer.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:leverandorgruppe
 alias: leverandorgruppe
-owner: Leverandor
 domain_of:
 - Leverandor
 range: Leverandorgruppe

@@ -3,8 +3,13 @@
 # Slot: kildesystemId 
 
 
+_Kjeldesystemets unike identifikator._
 
-URI: [https://schema.fintlabs.no/administrasjon/:kildesystemId](https://schema.fintlabs.no/administrasjon/:kildesystemId)
+
+
+
+
+URI: [adm:kildesystemId](https://schema.fintlabs.no/administrasjon/kildesystemId)
 Alias: kildesystemId
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: kildesystemId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  no  |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: kildesystemId
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Identifikator](identifikator.md) |
 | Domain Of | [Lonn](lonn.md), [Fravaer](fravaer.md) |
+| Slot URI | [adm:kildesystemId](https://schema.fintlabs.no/administrasjon/kildesystemId) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: kildesystemId
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:kildesystemId |
+| self | adm:kildesystemId |
 | native | https://schema.fintlabs.no/administrasjon/:kildesystemId |
 
 
@@ -73,11 +86,16 @@ Alias: kildesystemId
 <details>
 ```yaml
 name: kildesystemId
+description: Kjeldesystemets unike identifikator.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:kildesystemId
 alias: kildesystemId
 domain_of:
 - Lonn
 - Fravaer
-range: string
+range: Identifikator
+inlined: true
 
 ```
 </details>

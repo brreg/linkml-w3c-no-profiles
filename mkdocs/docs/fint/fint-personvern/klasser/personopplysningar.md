@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/personvern/:personopplysningar](https://schema.fintlabs.no/personvern/:personopplysningar)
+URI: [pvn:personopplysningar](https://schema.fintlabs.no/personvern/personopplysningar)
 Alias: personopplysningar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: personopplysningar
 | --- | --- |
 | Range | [Personopplysning](personopplysning.md) |
 | Domain Of | [PersonvernContainer](personverncontainer.md) |
+| Slot URI | [pvn:personopplysningar](https://schema.fintlabs.no/personvern/personopplysningar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [PersonvernContainer](personverncontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: personopplysningar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:personopplysningar |
+| self | pvn:personopplysningar |
 | native | https://schema.fintlabs.no/personvern/:personopplysningar |
 
 
@@ -86,8 +80,8 @@ Alias: personopplysningar
 name: personopplysningar
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
+slot_uri: pvn:personopplysningar
 alias: personopplysningar
-owner: PersonvernContainer
 domain_of:
 - PersonvernContainer
 range: Personopplysning

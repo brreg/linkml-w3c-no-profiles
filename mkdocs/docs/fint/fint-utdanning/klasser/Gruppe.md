@@ -89,22 +89,18 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
 
   
   
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
   
 
-  
-  
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Namn |
 
 
 
@@ -118,6 +114,28 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring |
 
 
 
@@ -134,15 +152,27 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -151,8 +181,6 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Namn på gruppa |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring av gruppa |
 
 
 
@@ -211,66 +239,18 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
 slots:
 - id
-attributes:
+- navn
+- beskrivelse
+slot_usage:
   navn:
     name: navn
-    description: Namn på gruppa.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:navn
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   beskrivelse:
     name: beskrivelse
-    description: Skildring av gruppa.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:beskrivelse
-    domain_of:
-    - Gruppe
-    - Utdanningsforhold
-    - Elevforhold
-    - Eksamen
-    - Time
-    - OtStatus
-    - Periode
-    range: string
 class_uri: utd:Gruppe
 
 ```
@@ -284,70 +264,17 @@ name: Gruppe
 description: Abstrakt basisklasse for alle gruppetypar i utdanning.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
-attributes:
+slot_usage:
   navn:
     name: navn
-    description: Namn på gruppa.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:navn
-    alias: navn
-    owner: Gruppe
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   beskrivelse:
     name: beskrivelse
-    description: Skildring av gruppa.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:beskrivelse
-    alias: beskrivelse
-    owner: Gruppe
-    domain_of:
-    - Gruppe
-    - Utdanningsforhold
-    - Elevforhold
-    - Eksamen
-    - Time
-    - OtStatus
-    - Periode
-    range: string
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -410,6 +337,65 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  navn:
+    name: navn
+    description: Namn.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:navn
+    alias: navn
+    owner: Gruppe
+    domain_of:
+    - Gruppe
+    - Skole
+    - Eksamen
+    - Rom
+    - Time
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    range: string
+    required: true
+  beskrivelse:
+    name: beskrivelse
+    description: Skildring.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:beskrivelse
+    alias: beskrivelse
+    owner: Gruppe
+    domain_of:
+    - Gruppe
+    - Utdanningsforhold
+    - Elevforhold
+    - Eksamen
+    - Time
+    - OtStatus
+    - Periode
+    range: string
 class_uri: utd:Gruppe
 
 ```

@@ -3,8 +3,13 @@
 # Slot: elevkategoriar 
 
 
+_Alle elevkategoriar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:elevkategoriar](https://schema.fintlabs.no/utdanning/:elevkategoriar)
+
+
+
+
+URI: [utd:elevkategoriar](https://schema.fintlabs.no/utdanning/elevkategoriar)
 Alias: elevkategoriar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: elevkategoriar
 | --- | --- |
 | Range | [Elevkategori](elevkategori.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:elevkategoriar](https://schema.fintlabs.no/utdanning/elevkategoriar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: elevkategoriar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elevkategoriar |
+| self | utd:elevkategoriar |
 | native | https://schema.fintlabs.no/utdanning/:elevkategoriar |
 
 
@@ -84,10 +83,11 @@ Alias: elevkategoriar
 <details>
 ```yaml
 name: elevkategoriar
+description: Alle elevkategoriar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:elevkategoriar
 alias: elevkategoriar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Elevkategori

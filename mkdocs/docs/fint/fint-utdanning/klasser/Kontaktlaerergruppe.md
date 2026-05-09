@@ -3,8 +3,13 @@
 # Slot: kontaktlaerergruppe 
 
 
+_Kontaktlærargruppe._
 
-URI: [https://schema.fintlabs.no/utdanning/:kontaktlaerergruppe](https://schema.fintlabs.no/utdanning/:kontaktlaerergruppe)
+
+
+
+
+URI: [utd:kontaktlaerergruppe](https://schema.fintlabs.no/utdanning/kontaktlaerergruppe)
 Alias: kontaktlaerergruppe
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: kontaktlaerergruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
-| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  no  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
+| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: kontaktlaerergruppe
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Kontaktlaerergruppe](kontaktlaerergruppe.md) |
 | Domain Of | [Klasse](klasse.md), [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md), [Skole](skole.md), [Undervisningsforhold](undervisningsforhold.md) |
+| Slot URI | [utd:kontaktlaerergruppe](https://schema.fintlabs.no/utdanning/kontaktlaerergruppe) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: kontaktlaerergruppe
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:kontaktlaerergruppe |
+| self | utd:kontaktlaerergruppe |
 | native | https://schema.fintlabs.no/utdanning/:kontaktlaerergruppe |
 
 
@@ -72,13 +85,17 @@ Alias: kontaktlaerergruppe
 <details>
 ```yaml
 name: kontaktlaerergruppe
+description: Kontaktlærargruppe.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:kontaktlaerergruppe
 alias: kontaktlaerergruppe
 domain_of:
 - Klasse
 - Kontaktlaerergruppemedlemskap
 - Skole
 - Undervisningsforhold
-range: string
+range: Kontaktlaerergruppe
 
 ```
 </details>

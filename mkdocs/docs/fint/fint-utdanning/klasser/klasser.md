@@ -3,8 +3,13 @@
 # Slot: klasser 
 
 
+_Alle klassar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:klasser](https://schema.fintlabs.no/utdanning/:klasser)
+
+
+
+
+URI: [utd:klasser](https://schema.fintlabs.no/utdanning/klasser)
 Alias: klasser
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: klasser
 | --- | --- |
 | Range | [Klasse](klasse.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:klasser](https://schema.fintlabs.no/utdanning/klasser) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: klasser
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:klasser |
+| self | utd:klasser |
 | native | https://schema.fintlabs.no/utdanning/:klasser |
 
 
@@ -84,10 +83,11 @@ Alias: klasser
 <details>
 ```yaml
 name: klasser
+description: Alle klassar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:klasser
 alias: klasser
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Klasse

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:brukertypar](https://schema.fintlabs.no/ressurs/:brukertypar)
+URI: [res:brukertypar](https://schema.fintlabs.no/ressurs/brukertypar)
 Alias: brukertypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: brukertypar
 | --- | --- |
 | Range | [Brukertype](brukertype.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:brukertypar](https://schema.fintlabs.no/ressurs/brukertypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: brukertypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:brukertypar |
+| self | res:brukertypar |
 | native | https://schema.fintlabs.no/ressurs/:brukertypar |
 
 
@@ -86,8 +80,8 @@ Alias: brukertypar
 name: brukertypar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:brukertypar
 alias: brukertypar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Brukertype

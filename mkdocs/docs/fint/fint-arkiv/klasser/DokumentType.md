@@ -22,7 +22,7 @@ Alias: dokumentType
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: dokumentType
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: dokumentType
 ```yaml
 name: dokumentType
 description: Namn på type dokument.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:dokumentType
 alias: dokumentType
-owner: Dokumentbeskrivelse
 domain_of:
 - Dokumentbeskrivelse
 range: DokumentType
-required: true
 
 ```
 </details>

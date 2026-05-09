@@ -22,7 +22,7 @@ Alias: bokstavkode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
+| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: bokstavkode
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Valuta](valuta.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: bokstavkode
 ```yaml
 name: bokstavkode
 description: Bokstavkode for aktuell valuta.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:bokstavkode
 alias: bokstavkode
-owner: Valuta
 domain_of:
 - Valuta
 range: Identifikator
-required: true
 inlined: true
 
 ```

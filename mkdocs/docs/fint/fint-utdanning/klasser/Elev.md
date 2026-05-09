@@ -3,8 +3,13 @@
 # Slot: elev 
 
 
+_Eleven dette gjeld._
 
-URI: [https://schema.fintlabs.no/utdanning/:elev](https://schema.fintlabs.no/utdanning/:elev)
+
+
+
+
+URI: [utd:elev](https://schema.fintlabs.no/utdanning/elev)
 Alias: elev
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: elev
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Elevtilrettelegging](elevtilrettelegging.md) | Tilrettelegging for ein elev i eit elevforhold |  no  |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
+| [Person](person.md) | Fysiske private personar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [Elevtilrettelegging](elevtilrettelegging.md) | Tilrettelegging for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: elev
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Elev](elev.md) |
 | Domain Of | [Elevforhold](elevforhold.md), [Elevtilrettelegging](elevtilrettelegging.md), [Persongruppe](persongruppe.md), [Person](person.md) |
+| Slot URI | [utd:elev](https://schema.fintlabs.no/utdanning/elev) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: elev
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elev |
+| self | utd:elev |
 | native | https://schema.fintlabs.no/utdanning/:elev |
 
 
@@ -72,13 +85,17 @@ Alias: elev
 <details>
 ```yaml
 name: elev
+description: Eleven dette gjeld.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:elev
 alias: elev
 domain_of:
 - Elevforhold
 - Elevtilrettelegging
 - Persongruppe
 - Person
-range: string
+range: Elev
 
 ```
 </details>

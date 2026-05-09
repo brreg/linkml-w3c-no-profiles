@@ -22,7 +22,7 @@ Alias: halvaar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  no  |
+| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: halvaar
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravarsoversikt](fravarsoversikt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: halvaar
 ```yaml
 name: halvaar
 description: Fråværsprosent for halvåret.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:halvaar
 alias: halvaar
-owner: Fravarsoversikt
 domain_of:
 - Fravarsoversikt
 range: Fravarsprosent
-required: true
 inlined: true
 
 ```

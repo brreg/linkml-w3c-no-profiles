@@ -35,34 +35,30 @@ classes:
 
   # ---- Hjelpeklassar -------------------------------------------------------
 
-  DcatRessurs:
-    class_uri: dcat:Resource
-    description: Ein katalogisert ressurs (brukt som målklasse for oa:hasTarget).
-    slots:
-      - id
+
 
   # ---- Hovudklassar --------------------------------------------------------
 
-  Datasett:
-    class_uri: dcat:Dataset
-    description: >-
-      Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for
-      kvalitetsinformasjon.
-    slots:
-      - id
-      - er_i_samsvar_med
-      - har_kvalitetsmerknad
-      - har_kvalitetsmaaling
-    slot_usage:
-      er_i_samsvar_med:
-        in_subset:
-          - Anbefalt
-      har_kvalitetsmerknad:
-        in_subset:
-          - Anbefalt
-      har_kvalitetsmaaling:
-        in_subset:
-          - Anbefalt
+  # Datasett:
+  #   class_uri: dcat:Dataset
+  #   description: >-
+  #     Eit datasett (dcat:Dataset) utvida med DQV-AP-NO-eigenskapar for
+  #     kvalitetsinformasjon.
+  #   slots:
+  #     - id
+  #     - er_i_samsvar_med
+  #     - har_kvalitetsmerknad
+  #     - har_kvalitetsmaaling
+  #   slot_usage:
+  #     er_i_samsvar_med:
+  #       in_subset:
+  #         - Anbefalt
+  #     har_kvalitetsmerknad:
+  #       in_subset:
+  #         - Anbefalt
+  #     har_kvalitetsmaaling:
+  #       in_subset:
+  #         - Anbefalt
 
   Kvalitetsdimensjon:
     class_uri: dqv:Dimension
@@ -214,7 +210,7 @@ classes:
       - id
       - har_verdi_tekstdel
       - format
-      - sprak
+      - spraak
     slot_usage:
       har_verdi_tekstdel:
         required: true
@@ -223,15 +219,9 @@ classes:
       format:
         in_subset:
           - Anbefalt
-      sprak:
+      spraak:
         in_subset:
           - Anbefalt
-
-  Motivasjon:
-    class_uri: oa:Motivation
-    description: Motivasjonen bak ein kvalitetsmerknad (Web Annotation).
-    slots:
-      - id
 
 # ---------------------------------------------------------------------------
 # Slots (berre DQV-AP-NO-spesifikke)
@@ -292,7 +282,10 @@ slots:
   er_i_kvalitetsdimensjon:
     slot_uri: dqv:inDimension
     range: Kvalitetsdimensjon
-    description: Kvalitetsdimensjonen denne merknaden eller standarden gjeld.
+    multivalued: true
+    required: false
+    description: >
+      Refererer til kvalitetsdimensjon(ar) som kvalitetsmerknaden gjeld.
 
   har_tekstdel:
     slot_uri: oa:hasBody
@@ -301,8 +294,10 @@ slots:
 
   har_maal:
     slot_uri: oa:hasTarget
-    range: DcatRessurs
+    range: uri
     description: Ressursen merknaden gjeld.
+    annotations:
+      gyldige_verdier: dcat:Resource
 
   er_kvalitetsmaaling_av:
     slot_uri: dqv:isMeasurementOf

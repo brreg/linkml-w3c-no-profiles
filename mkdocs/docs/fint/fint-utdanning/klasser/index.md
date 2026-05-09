@@ -114,57 +114,57 @@ Name: fint-utdanning
 | [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
 | [aktiv](aktiv.md) | Angir om sensoren er aktiv |
-| [anmerkningar](anmerkningar.md) |  |
+| [anmerkningar](anmerkningar.md) | Alle anmerkningar i containeren |
 | [arbeidsforhold](arbeidsforhold.md) | Referanse til Arbeidsforhold i Administrasjon-domenet |
-| [arstrinn](arstrinn.md) |  |
-| [atferd](atferd.md) | Karakterverdi for åtferd |
-| [avbruddsaarsaker](avbruddsaarsaker.md) |  |
+| [arstrinn](arstrinn.md) | Alle årstrinns-objekt i containeren |
+| [atferd](atferd.md) | Åtferdskarakter |
+| [avbruddsaarsaker](avbruddsaarsaker.md) | Alle avbruddsårsakar i containeren |
 | [avbruddsarsak](avbruddsarsak.md) | Årsak til avbrot frå opplæring |
 | [avbruddsdato](avbruddsdato.md) | Dato for avbrot frå opplæring |
-| [avlagteprover](avlagteprover.md) |  |
-| [avlagtprove](avlagtprove.md) | Avlagde prøver for lærlingen |
+| [avlagteprover](avlagteprover.md) | Alle avlagde prøver i containeren |
+| [avlagtprove](avlagtprove.md) | Avlagde prøver |
 | [bedrift](bedrift.md) | Referanse til bedrifta lærlingen er i |
-| [beskrivelse](beskrivelse.md) | Skildring av gruppa |
-| [betalingsstatus](betalingsstatus.md) |  |
-| [bevistypar](bevistypar.md) |  |
+| [beskrivelse](beskrivelse.md) | Skildring |
+| [betalingsstatus](betalingsstatus.md) | Betalingsstatus |
+| [bevistypar](bevistypar.md) | Alle bevistypar i containeren |
 | [bevistype](bevistype.md) | Type kompetansebevis |
 | [bilde](bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
-| [brevtypar](brevtypar.md) |  |
-| [brevtype](brevtype.md) | Type brev knytt til prøva |
+| [brevtypar](brevtypar.md) | Alle brevtypar i containeren |
+| [brevtype](brevtype.md) | Type brev |
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
 | [delegert](delegert.md) | Angir om deltakinga er delegert |
 | [delegertTil](delegerttil.md) | Referanse til den deltakinga er delegert til |
 | [domenenavn](domenenavn.md) | Domenenamn for skulen |
-| [eksamen](eksamen.md) |  |
+| [eksamen](eksamen.md) | Eksamen |
 | [eksamensdato](eksamensdato.md) | Dato for eksamenen |
-| [eksamensform](eksamensform.md) | Eksamensform knytt til tilrettelegginga |
-| [eksamensformer](eksamensformer.md) |  |
-| [eksamensgruppe](eksamensgruppe.md) | Eksamensgrupper ved skulen |
-| [eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |  |
-| [eksamensgrupper](eksamensgrupper.md) |  |
-| [eksamensvurdering](eksamensvurdering.md) |  |
-| [elev](elev.md) | Eleven dette forholdet gjeld |
-| [elevar](elevar.md) |  |
-| [elevforhold](elevforhold.md) |  |
-| [elevfravar](elevfravar.md) |  |
-| [elevkategoriar](elevkategoriar.md) |  |
+| [eksamensform](eksamensform.md) | Eksamensform |
+| [eksamensformer](eksamensformer.md) | Alle eksamensformer i containeren |
+| [eksamensgruppe](eksamensgruppe.md) | Eksamensgruppe |
+| [eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eksamensgruppemedlemskap |
+| [eksamensgrupper](eksamensgrupper.md) | Alle eksamensgrupper i containeren |
+| [eksamensvurdering](eksamensvurdering.md) | Eksamensvurderingar |
+| [elev](elev.md) | Eleven dette gjeld |
+| [elevar](elevar.md) | Alle elevar i containeren |
+| [elevforhold](elevforhold.md) | Elevforholdet dette gjeld |
+| [elevfravar](elevfravar.md) | Fråværsobjekt for elev |
+| [elevkategoriar](elevkategoriar.md) | Alle elevkategoriar i containeren |
 | [elevnummer](elevnummer.md) | Skulens interne elevnummer |
-| [elevtilrettelegging](elevtilrettelegging.md) |  |
-| [elevvurdering](elevvurdering.md) |  |
+| [elevtilrettelegging](elevtilrettelegging.md) | Alle elevtilretteleggingar i containeren |
+| [elevvurdering](elevvurdering.md) | Elevvurderingsobjekt |
 | [endretDato](endretdato.md) | Dato og tidspunkt for endringa |
-| [enhet](enhet.md) | OT-eining knytt til ungdommen |
+| [enhet](enhet.md) | OT-eining |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
-| [fag](fag.md) |  |
-| [faggruppe](faggruppe.md) | Faggrupper ved skulen |
-| [faggruppemedlemskap](faggruppemedlemskap.md) |  |
-| [faggrupper](faggrupper.md) |  |
-| [fagmerknad](fagmerknad.md) | Merknad til faget for dette medlemskapet |
-| [fagmerknader](fagmerknader.md) |  |
-| [fagstatus](fagstatus.md) |  |
-| [feidenavn](feidenavn.md) | Feide-identifikator for skoleressursen |
+| [fag](fag.md) | Fag |
+| [faggruppe](faggruppe.md) | Faggruppe |
+| [faggruppemedlemskap](faggruppemedlemskap.md) | Faggruppemedlemskap |
+| [faggrupper](faggrupper.md) | Alle faggrupper i containeren |
+| [fagmerknad](fagmerknad.md) | Merknad til faget |
+| [fagmerknader](fagmerknader.md) | Alle fagmerknadar i containeren |
+| [fagstatus](fagstatus.md) | Fagstatus |
+| [feidenavn](feidenavn.md) | Feide-identifikator |
 | [festenummer](festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
 | [fodselsdato](fodselsdato.md) | Dato for fødsel |
 | [fodselsnummer](fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
@@ -174,141 +174,145 @@ Name: fint-utdanning
 | [foretrukketSensor](foretrukketsensor.md) | Angir om sensor er føretrekt |
 | [foretrukketSkole](foretrukketskole.md) | Angir om skulen er føretrekt for eksamenen |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Forretningsadresse til skulen |
+| [forretningsadresse](forretningsadresse.md) | Forretningsadresse |
 | [fravaerstimer](fravaerstimer.md) | Antal fråværstimar |
-| [fravarsoversikt](fravarsoversikt.md) |  |
-| [fravarsprosent](fravarsprosent.md) | Fråværsprosent ved utsending av varselet |
-| [fravartypar](fravartypar.md) |  |
+| [fravarsoversikt](fravarsoversikt.md) | Alle fråværsoversikter i containeren |
+| [fravarsprosent](fravarsprosent.md) | Fråværsprosent |
+| [fravartypar](fravartypar.md) | Alle fråværstypar i containeren |
 | [fravartype](fravartype.md) | Type fråvær |
-| [fraversregistrering](fraversregistrering.md) |  |
+| [fraversregistrering](fraversregistrering.md) | Fråversregistreringar |
 | [fraversregistreringer](fraversregistreringer.md) | Fråværsregistreringar knytt til elevforholdet |
 | [fullfortkode](fullfortkode.md) | Kode for fullførtresultatet |
-| [fullfortkoder](fullfortkoder.md) |  |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
+| [fullfortkoder](fullfortkoder.md) | Alle fullfortkoder i containeren |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
 | [grepreferanse](grepreferanse.md) | Referanse til GREP-registeret |
-| [gruppemedlemskap](gruppemedlemskap.md) | Medlemskapar i denne kontaktlærergruppa |
-| [gyldighetsperiode](gyldighetsperiode.md) | Perioden medlemskapet er gyldig |
+| [gruppemedlemskap](gruppemedlemskap.md) | Gruppemedlemskap |
+| [gyldighetsperiode](gyldighetsperiode.md) | Gyldigheitsperiode |
 | [halvaar](halvaar.md) | Fråværsprosent for halvåret |
-| [halvaarsfagvurdering](halvaarsfagvurdering.md) |  |
-| [halvaarsordensvurdering](halvaarsordensvurdering.md) |  |
+| [halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsfagvurderingar |
+| [halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurderingar |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
 | [juridiskNavn](juridisknavn.md) | Juridisk namn på skulen |
-| [kandidatnummer](kandidatnummer.md) | Kandidatnummer for eksamenen |
-| [karakter](karakter.md) | Karakterverdien gjeve i vurderinga |
+| [kandidatnummer](kandidatnummer.md) | Kandidatnummer |
+| [karakter](karakter.md) | Karakterverdi |
 | [karakteransvarlig](karakteransvarlig.md) | Skoleressurs som er ansvarleg for karakteren |
-| [karakterhistorie](karakterhistorie.md) |  |
-| [karakterskalaer](karakterskalaer.md) |  |
-| [karakterstatus](karakterstatus.md) |  |
-| [karakterverdi](karakterverdi.md) | Ny karakterverdi etter endringa |
-| [karakterverdiar](karakterverdiar.md) |  |
+| [karakterhistorie](karakterhistorie.md) | Karakterhistorikk |
+| [karakterskalaer](karakterskalaer.md) | Alle karakterskalaer i containeren |
+| [karakterstatus](karakterstatus.md) | Karakterstatus |
+| [karakterverdi](karakterverdi.md) | Karakterverdi |
+| [karakterverdiar](karakterverdiar.md) | Alle karakterverdiar i containeren |
 | [kategori](kategori.md) | Kategori for elevforholdet |
-| [kjonn](kjonn.md) | Kjønn for personen |
-| [klasse](klasse.md) | Klassen dette medlemskapet er i |
-| [klassemedlemskap](klassemedlemskap.md) |  |
-| [klasser](klasser.md) |  |
-| [kode](kode.md) |  |
-| [kommentar](kommentar.md) | Kommentar til vurderinga |
+| [kjonn](kjonn.md) | Kjønn |
+| [klasse](klasse.md) | Klasse |
+| [klassemedlemskap](klassemedlemskap.md) | Klassemedlemskap |
+| [klasser](klasser.md) | Alle klassar i containeren |
+| [kode](kode.md) | Kode |
+| [kommentar](kommentar.md) | Kommentar |
 | [kommune](kommune.md) | Referanse til kommunen OT-eininga dekker |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
-| [kontaktlaerergruppe](kontaktlaerergruppe.md) | Kontaktlærergrupper knytt til klassen |
-| [kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) |  |
-| [kontaktlaerergrupper](kontaktlaerergrupper.md) |  |
+| [kontaktlaerergruppe](kontaktlaerergruppe.md) | Kontaktlærargruppe |
+| [kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Kontaktlærergruppemedlemskap |
+| [kontaktlaerergrupper](kontaktlaerergrupper.md) | Alle kontaktlærargrupper i containeren |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
 | [kontraktstype](kontraktstype.md) | Type kontrakt for lærlingen |
-| [laerling](laerling.md) | Lærlingen som avla prøva |
-| [laerlingar](laerlingar.md) |  |
+| [laerling](laerling.md) | Lærling |
+| [laerlingar](laerlingar.md) | Alle lærlingar i containeren |
 | [land](land.md) | Land der adressa befinn seg |
 | [laretid](laretid.md) | Læringstidsperiode for lærlingen |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [navn](navn.md) | Namn på gruppa |
+| [naam](naam.md) | Hovudnamn for ressursen |
+| [navn](navn.md) | Namn |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
-| [nus](nus.md) | NUS-kode knytt til eksamensgruppemedlemskapet |
+| [nus](nus.md) | NUS-kode |
 | [oppdatertAv](oppdatertav.md) | Skoleressurs som oppdaterte karakteren |
-| [oppmoetetidspunkt](oppmoetetidspunkt.md) | Tidspunkt for oppmøte til eksamenen |
-| [opprinneligKarakterstatus](opprinneligkarakterstatus.md) | Opphavleg karakterstatus før endringa |
-| [opprinneligKarakterverdi](opprinneligkarakterverdi.md) | Opphavleg karakterverdi før endringa |
-| [orden](orden.md) | Karakterverdi for orden |
+| [oppmoetetidspunkt](oppmoetetidspunkt.md) | Tidspunkt for oppmøte |
+| [opprinneligKarakterstatus](opprinneligkarakterstatus.md) | Opphavleg karakterstatus |
+| [opprinneligKarakterverdi](opprinneligkarakterverdi.md) | Opphavleg karakterverdi |
+| [orden](orden.md) | Ordenskarakter |
 | [organisasjon](organisasjon.md) | Referanse til Organisasjonselement i Administrasjon-domenet |
-| [organisasjonsnavn](organisasjonsnavn.md) | Organisasjonsnamn for skulen |
+| [organisasjonsnavn](organisasjonsnavn.md) | Organisasjonsnamn |
 | [organisasjonsnummer](organisasjonsnummer.md) | Organisasjonsnummer-identifikator |
-| [otEnheter](otenheter.md) |  |
-| [otStatus](otstatus.md) |  |
-| [otUngdom](otungdom.md) |  |
+| [otEnheter](otenheter.md) | Alle OT-einingar i containeren |
+| [otStatus](otstatus.md) | Alle OT-statuser i containeren |
+| [otUngdom](otungdom.md) | Alle OT-ungdom i containeren |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
-| [passiv](passiv.md) |  |
-| [periode](periode.md) | Perioden fråværet varte |
+| [passiv](passiv.md) | Angir om oppføringen er passiv/inaktiv |
+| [periode](periode.md) | Periode |
 | [person](person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_naam](person_naam.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
-| [persongruppe](persongruppe.md) | Persongruppa dette medlemskapet er i |
-| [persongruppemedlemskap](persongruppemedlemskap.md) |  |
-| [persongrupper](persongrupper.md) |  |
-| [postadresse](postadresse.md) | Postadresse til skulen |
+| [persongruppe](persongruppe.md) | Persongruppe |
+| [persongruppemedlemskap](persongruppemedlemskap.md) | Persongruppemedlemskap |
+| [persongrupper](persongrupper.md) | Alle persongrupper i containeren |
+| [postadresse](postadresse.md) | Postadresse |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststed](poststed.md) | Poststad |
-| [programomrade](programomrade.md) | Programområde knytt til årstrinnet |
-| [programomrademedlemskap](programomrademedlemskap.md) |  |
-| [programomrader](programomrader.md) |  |
+| [programomrade](programomrade.md) | Programområde |
+| [programomrademedlemskap](programomrademedlemskap.md) | Programområdemedlemskap |
+| [programomrader](programomrader.md) | Alle programområde i containeren |
 | [prosent](prosent.md) | Fråværsprosent (heiltal) |
 | [provedato](provedato.md) | Dato prøva vart avlagt |
 | [provestatus](provestatus.md) | Status for prøva |
-| [provestatuser](provestatuser.md) |  |
+| [provestatuser](provestatuser.md) | Alle prøvestatuser i containeren |
 | [registrertAv](registrertav.md) | Skoleressurs som registrerte fråværet |
-| [rom](rom.md) |  |
+| [rom](rom.md) | Rom |
 | [seksjonsnummer](seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
 | [sendt](sendt.md) | Dato varselet vart sendt |
-| [sensor](sensor.md) |  |
+| [sensor](sensor.md) | Sensor |
 | [sensornummer](sensornummer.md) | Sensornummer |
 | [sip](sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
 | [skala](skala.md) | Karakterskalaen denne verdien tilhøyrer |
-| [skolar](skolar.md) |  |
-| [skole](skole.md) | Skulen eleven er tilknytt |
-| [skoleaar](skoleaar.md) |  |
+| [skolar](skolar.md) | Alle skular i containeren |
+| [skole](skole.md) | Skulen dette gjeld |
+| [skoleaar](skoleaar.md) | Skoleåret |
 | [skoleaarFravar](skoleaarfravar.md) | Fråværsprosent for heile skoleåret |
 | [skoleeierType](skoleeiertype.md) | Kategori for skuleeigartilknyting |
-| [skoleeijartypar](skoleeijartypar.md) |  |
+| [skoleeijartypar](skoleeijartypar.md) | Alle skuleeigarstypar i containeren |
 | [skolenummer](skolenummer.md) | Nasjonal skulenummer-identifikator |
-| [skoleressurs](skoleressurs.md) | Skoleressursar knytt til gruppa |
-| [skoleressursar](skoleressursar.md) |  |
+| [skoleressurs](skoleressurs.md) | Skoleressurs |
+| [skoleressursar](skoleressursar.md) | Alle skoleressursar i containeren |
 | [slutt](slutt.md) | Til tidspunkt |
-| [sluttfagvurdering](sluttfagvurdering.md) |  |
-| [sluttordensvurdering](sluttordensvurdering.md) |  |
+| [sluttfagvurdering](sluttfagvurdering.md) | Sluttfagvurderingar |
+| [sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurderingar |
 | [start](start.md) | Frå tidspunkt |
 | [statsborgerskap](statsborgerskap.md) | Alle statsborgarskap personen har |
 | [status](status.md) | OT-status for ungdommen |
 | [tekst](tekst.md) | Innhald i varselet |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
-| [termin](termin.md) | Terminar klassen er aktiv i |
-| [terminar](terminar.md) |  |
-| [tidsrom](tidsrom.md) | Tidsrom for eksamenen |
-| [tilrettelegging](tilrettelegging.md) |  |
-| [timar](timar.md) |  |
-| [time](time.md) | Timar haldne i dette rommet |
+| [termin](termin.md) | Termin |
+| [terminar](terminar.md) | Alle terminar i containeren |
+| [tidsrom](tidsrom.md) | Tidsrom |
+| [tilrettelegging](tilrettelegging.md) | Tilretteleggingstype |
+| [timar](timar.md) | Alle timar i containeren |
+| [time](time.md) | Time |
 | [tosprakligFagopplaering](tosprakligfagopplaering.md) | Indikerer om eleven har tospråkleg fagopplæring |
-| [trinn](trinn.md) | Årstrinnet klassen tilhøyrer |
-| [type](type.md) | Type varsel |
-| [underveisfagvurdering](underveisfagvurdering.md) |  |
-| [underveisordensvurdering](underveisordensvurdering.md) |  |
-| [undervisningsforhold](undervisningsforhold.md) |  |
-| [undervisningsgruppe](undervisningsgruppe.md) | Undervisningsgrupper som underviser i faget |
-| [undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) |  |
-| [undervisningsgrupper](undervisningsgrupper.md) |  |
+| [trinn](trinn.md) | Årstrinnet |
+| [type](type.md) | Type |
+| [underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurderingar |
+| [underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurderingar |
+| [undervisningsforhold](undervisningsforhold.md) | Undervisningsforhold |
+| [undervisningsgruppe](undervisningsgruppe.md) | Undervisningsgruppe |
+| [undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Undervisningsgruppemedlemskap |
+| [undervisningsgrupper](undervisningsgrupper.md) | Alle undervisningsgrupper i containeren |
 | [undervisningstimer](undervisningstimer.md) | Totalt antal undervisningstimar |
-| [utdanningsprogram](utdanningsprogram.md) |  |
+| [utdanningsprogram](utdanningsprogram.md) | Utdanningsprogram |
 | [utsteder](utsteder.md) | Skoleressurs som sende varselet |
-| [varsel](varsel.md) |  |
-| [varseltypar](varseltypar.md) |  |
-| [verdi](verdi.md) | Karakterverdiar i denne skalaen |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [varsel](varsel.md) | Varsel |
+| [varseltypar](varseltypar.md) | Alle varseltypar i containeren |
+| [verdi](verdi.md) | Karakterverdiar i skalaen |
 | [vigoreferanse](vigoreferanse.md) | Referanse til Vigo-systemet |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
-| [vitnemalsmerknad](vitnemalsmerknad.md) |  |
+| [vitnemalsmerknad](vitnemalsmerknad.md) | Vitnemålsmerknad |
 | [vurderingsdato](vurderingsdato.md) | Dato og tidspunkt for vurderinga |
 
 

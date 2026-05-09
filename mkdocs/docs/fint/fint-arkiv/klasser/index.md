@@ -84,15 +84,15 @@ Name: fint-arkiv
 | [administrativeEiningar](administrativeeiningar.md) |  |
 | [administrativEnhet](administrativenhet.md) | Administrativ eining som har ansvar for saksbehandlinga |
 | [administrativenhet](administrativenhet.md) | Administrative einingar autorisasjonen er gyldig for |
-| [adresse](adresse.md) | Adressen til korrespondanseparten |
+| [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
 | [antallVedlegg](antallvedlegg.md) | Antal fysiske vedlegg til eit fysisk hoveddokument |
 | [arbeidssted](arbeidssted.md) | Referanse til Organisasjonselement som er arbeidstakarens arbeidsstad |
-| [arkivdel](arkivdel.md) | Arkivdel mappa tilhøyrer |
+| [arkivdel](arkivdel.md) | Arkivdel arkivenheten tilhøyrer |
 | [arkivdelar](arkivdelar.md) |  |
 | [arkivertAv](arkivertav.md) | Person som arkiverte arkivenheten |
 | [arkivertDato](arkivertdato.md) | Dato og klokkeslett alle dokument knytt til registreringa vart arkivert |
-| [arkivressurs](arkivressurs.md) | Arkivressursar som har fått autorisasjonen |
+| [arkivressurs](arkivressurs.md) | Arkivressursar |
 | [arkivressursar](arkivressursar.md) |  |
 | [autorisasjon](autorisasjon.md) | Autorisasjonar gjevne til arkivressursen |
 | [autorisasjonar](autorisasjonar.md) |  |
@@ -101,15 +101,16 @@ Name: fint-arkiv
 | [avskrivningsdato](avskrivningsdato.md) | Dato og klokkeslett for avskrivinga |
 | [avskrivningsmate](avskrivningsmate.md) | Korleis journalposten er avskriven |
 | [avsluttetAv](avsluttetav.md) | Person som avslutta/lukka arkivenheten |
+| [avsluttetAvNavn](avsluttetavnavn.md) | Namn på person som avslutta/lukka arkivenheten |
 | [avsluttetDato](avsluttetdato.md) | Dato og klokkeslett når arkivenheten vart avslutta/lukka |
-| [beskrivelse](beskrivelse.md) | Tekstleg skildring av arkivenheten |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
 | [bygningsnavn](bygningsnavn.md) | Bygningens namn |
 | [data](data.md) | Dokumentfilens data, koda som Base64 |
-| [dispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) |  |
+| [dispensasjonAutomatiskFredaKulturminne_liste](dispensasjonautomatiskfredakulturminne_liste.md) |  |
 | [dokumentbeskrivelsar](dokumentbeskrivelsar.md) |  |
 | [dokumentbeskrivelse](dokumentbeskrivelse.md) | Dokumentbeskrivelsar til ei registrering |
 | [dokumentetsDato](dokumentetsdato.md) | Dato påført sjølve dokumentet |
@@ -130,7 +131,7 @@ Name: fint-arkiv
 | [filstorrelse](filstorrelse.md) | Storleiken på fila i antal bytes |
 | [fodselsdato](fodselsdato.md) | Dato for fødsel |
 | [fodselsnummer](fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
-| [foedselsnummer](foedselsnummer.md) | Fødselsnummer til korrespondanseparten |
+| [foedselsnummer](foedselsnummer.md) | Fødselsnummer |
 | [foreldre](foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](foreldreansvar.md) | Personar denne personen har foreldreansvar for |
 | [forfallsDato](forfallsdato.md) | Frist for å svare på eit inngåande dokument |
@@ -139,15 +140,15 @@ Name: fint-arkiv
 | [formatar](formatar.md) |  |
 | [formatDetaljer](formatdetaljer.md) | Nærare spesifikasjon av dokumentets format |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](gyldighetsperiode.md) | Periode der den administrative eininga er gyldig |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
 | [journalAr](journalar.md) | Året journalposten vart oppretta |
 | [journalDato](journaldato.md) | Datoen journalposten er oppretta/arkivert |
-| [journalenhet](journalenhet.md) | Eining med arkivmessig ansvar for saksmappa |
+| [journalenhet](journalenhet.md) | Eining med arkivmessig ansvar |
 | [journalpost](journalpost.md) | Journalpostar knytt til saksmappa |
 | [journalpostar](journalpostar.md) |  |
 | [journalPostnummer](journalpostnummer.md) | Rekkjefølgja journalpostane vart oppretta innanfor saksmappa |
@@ -158,17 +159,19 @@ Name: fint-arkiv
 | [journalstatuskodar](journalstatuskodar.md) |  |
 | [kallesignal](kallesignal.md) | Fartøyets kallesignal |
 | [kildesystemId](kildesystemid.md) | Kildesystemets identifikator for arkivressursen |
-| [kjonn](kjonn.md) | Kjønn for personen |
-| [klasse](klasse.md) | Klassifisering av mappe |
+| [kjonn](kjonn.md) | Kjønn |
+| [klasse](klasse.md) | Klassifisering av arkivenhet |
 | [klasseId](klasseid.md) | Eintydig identifikasjon av klassen innanfor klassifikasjonssystemet |
-| [klassifikasjonssystem](klassifikasjonssystem.md) |  |
+| [klassifikasjonssystem](klassifikasjonssystem.md) | Klassifikasjonssystem |
 | [klassifikasjonstypar](klassifikasjonstypar.md) |  |
 | [klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |
-| [kode](kode.md) |  |
-| [kommune](kommune.md) | Alle kommunar som inngår i fylket |
+| [kode](kode.md) | Verdi som identifiserer omgrepet |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
-| [kontaktinformasjon](kontaktinformasjon.md) | Kontaktinformasjon til korrespondanseparten |
-| [kontaktperson](kontaktperson.md) | Kontaktperson hos ein organisasjon som er avsender eller mottakar |
+| [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
+| [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_str](kontaktperson_str.md) | Kontaktperson hos ein organisasjon som er avsender, mottakar eller sakspart |
 | [korrespondansepart](korrespondansepart.md) | Mottakar eller sendar av arkivdokument |
 | [korrespondansepartNavn](korrespondansepartnavn.md) | Namn på person eller organisasjon som er avsender eller mottakar |
 | [korrespondanseparttypar](korrespondanseparttypar.md) |  |
@@ -179,9 +182,9 @@ Name: fint-arkiv
 | [leder](leder.md) | Referanse til Personalressurs som er arbeidstakarens leiar |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mappeId](mappeid.md) | Eintydig identifikasjon av mappa innanfor arkivet |
-| [matrikkelnummer](matrikkelnummer.md) | Kulturminnets identifikator i Matrikkelen |
+| [matrikkelnummer](matrikkelnummer.md) | Kulturminnets/bygningens identifikator i Matrikkelen |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
-| [merknad](merknad.md) | Merknader knytt til mappe |
+| [merknad](merknad.md) | Merknader knytt til arkivenhet |
 | [merknadRegistrertAv](merknadregistrertav.md) | Person som registrerte merknaden |
 | [merknadsdato](merknadsdato.md) | Dato og klokkeslett merknaden vart registrert |
 | [merknadstekst](merknadstekst.md) | Merknad frå saksbehandlar, leiar eller arkivpersonale |
@@ -190,28 +193,32 @@ Name: fint-arkiv
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
 | [mottattDato](mottattdato.md) | Dato eit eksternt dokument vart motteke |
-| [navn](navn.md) | Namn på administrativ eining |
+| [naam](naam.md) | Namn på arkivenhet eller kodeverk-element |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
-| [noekkelord](noekkelord.md) | Nøkkelord som skildrar innhaldet |
-| [nokkelord](nokkelord.md) | Nøkkelord som skildrar innhaldet |
+| [noekkelord](noekkelord.md) | Nøkkelord som skildrar innhaldet (Mappe) |
+| [nokkelord](nokkelord.md) | Nøkkelord som skildrar innhaldet (Registrering) |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [offentlighetsvurdertDato](offentlighetsvurdertdato.md) | Datoen offentlegheitsvurdering vart gjennomført |
 | [offentligTittel](offentligtittel.md) | Offentleg tittel der skjerma ord er fjerna |
 | [opprettetAv](opprettetav.md) | Person som oppretta/registrerte arkivenheten |
+| [opprettetAvNavn](opprettetavnavn.md) | Namn på person som oppretta/registrerte arkivenheten |
 | [opprettetDato](opprettetdato.md) | Dato og klokkeslett arkivenheten vart oppretta/registrert |
 | [organisasjonselement](organisasjonselement.md) | Referanse til Organisasjonselement i Administrasjon-domenet |
-| [organisasjonsnavn](organisasjonsnavn.md) | Organisasjonsnamn til føretaket som søkte om drosjeløyve |
-| [organisasjonsnummer](organisasjonsnummer.md) | Organisasjonsnummer til føretaket som søkte om drosjeløyve |
+| [organisasjonsnavn](organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
+| [organisasjonsnummer](organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
+| [orgnummer](orgnummer.md) | Organisasjonsnummer |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
-| [part](part.md) | Partar til mappe |
+| [part](part.md) | Partar til arkivenhet |
 | [partNavn](partnavn.md) | Namn på verksemd eller person som er part |
 | [partRollar](partrollar.md) |  |
 | [partRolle](partrolle.md) | Rolla til parten |
-| [passiv](passiv.md) |  |
+| [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [person](person.md) | Referanse til Person i Administrasjon-domenet |
-| [personalmappe](personalmappe.md) |  |
+| [person_naam](person_naam.md) | Namn på personen |
+| [personalmappe_liste](personalmappe_liste.md) |  |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
+| [personnavn](personnavn.md) | Namn på person (Personnavn-objekt) |
 | [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststed](poststed.md) | Poststad |
@@ -237,31 +244,32 @@ Name: fint-arkiv
 | [sip](sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
 | [sjekksum](sjekksum.md) | Verdi som gir integritetssikring til dokumentets innhald |
 | [sjekksumAlgoritme](sjekksumalgoritme.md) | Algoritme nytta for å berekne sjekksummen |
-| [skjerming](skjerming.md) | Skjerming av mappe |
+| [skjerming](skjerming.md) | Skjerming av arkivenhet |
 | [skjermingsheimlar](skjermingsheimlar.md) |  |
 | [skjermingshjemmel](skjermingshjemmel.md) | Skjermingsheimelen |
 | [slutt](slutt.md) | Til tidspunkt |
-| [soeknadDrosjeloeyve](soeknaddrosjeloeyve.md) |  |
+| [soeknadDrosjeloeyve_liste](soeknaddrosjeloeyve_liste.md) |  |
 | [soeknadsnummer](soeknadsnummer.md) | Søknadsnummer frå Digisak |
 | [start](start.md) | Frå tidspunkt |
 | [statsborgerskap](statsborgerskap.md) | Alle statsborgarskap personen har |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
 | [tilgang](tilgang.md) | Tilgangar gjevne til arkivressursen |
 | [tilgangar](tilgangar.md) |  |
-| [tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe som har tilgang til saksmappa |
+| [tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe som har tilgang til arkivenheten |
 | [tilgangsgrupper](tilgangsgrupper.md) |  |
-| [tilgangsrestriksjon](tilgangsrestriksjon.md) | Tilgangsrestriksjonar autorisasjonen er gjeven for |
+| [tilgangsrestriksjon](tilgangsrestriksjon.md) | Tilgangsrestriksjon |
 | [tilgangsrestriksjonar](tilgangsrestriksjonar.md) |  |
 | [tilknyttetAv](tilknyttetav.md) | Person som knytte dokumentet til registreringa |
 | [tilknyttetDato](tilknyttetdato.md) | Datoen eit dokument vart knytt til ei registrering |
 | [tilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Rolle dokumentet har i høve registreringa |
 | [tilknyttetRegistreringSomKodar](tilknyttetregistreringsomkodar.md) |  |
-| [tilskuddFartoy](tilskuddfartoy.md) |  |
-| [tilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |  |
+| [tilskuddFartoy_liste](tilskuddfartoy_liste.md) |  |
+| [tilskuddFredaBygningPrivatEie_liste](tilskuddfredabygningprivateie_liste.md) |  |
 | [tiltak](tiltak.md) | Skildrar kva tiltak som skal utførast på eigedommen |
 | [tittel](tittel.md) | Tittel eller namn på arkivenheten |
-| [type](type.md) | Beskriv kva slags type kontaktperson |
+| [type](type.md) | Beskriv kva slags type |
 | [utlaantDato](utlaantdato.md) | Dato ein fysisk saksmappe eller journalpost vart utlånt |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
 | [variantFormat](variantformat.md) | Kva variant dokumentet førekjem i |
 | [variantformatar](variantformatar.md) |  |
 | [versjonsnummer](versjonsnummer.md) | Identifikasjon av versjonar innanfor same dokument |

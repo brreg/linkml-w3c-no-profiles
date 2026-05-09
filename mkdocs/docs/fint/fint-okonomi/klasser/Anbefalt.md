@@ -76,12 +76,10 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-        
 
 
 
 
-        
 
 
 
@@ -104,7 +102,6 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-        
 
 
 
@@ -116,7 +113,6 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-        
 
 
 
@@ -131,7 +127,6 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-        
 
 
 
@@ -198,14 +193,8 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-## Slots in subset
 
-| Slot | Description |
-| --- | --- |
-| [art](art.md) | Artskonto (type utgift/inntekt) |
-| [betalt](betalt.md) | Status på betaling |
-| [fakturert](fakturert.md) | Status på utsending |
-| [funksjon](funksjon.md) | Funksjonskode (KOSTRA) |
-| [kreditert](kreditert.md) | Status på kreditering |
+
+
 
 

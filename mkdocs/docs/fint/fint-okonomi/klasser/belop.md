@@ -3,8 +3,13 @@
 # Slot: belop 
 
 
+_Beløp, i øre._
 
-URI: [https://schema.fintlabs.no/okonomi/:belop](https://schema.fintlabs.no/okonomi/:belop)
+
+
+
+
+URI: [okn:belop](https://schema.fintlabs.no/okonomi/belop)
 Alias: belop
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: belop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: belop
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Integer](integer.md) |
 | Domain Of | [Faktura](faktura.md), [Transaksjon](transaksjon.md), [Postering](postering.md) |
+| Slot URI | [okn:belop](https://schema.fintlabs.no/okonomi/belop) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: belop
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:belop |
+| self | okn:belop |
 | native | https://schema.fintlabs.no/okonomi/:belop |
 
 
@@ -71,12 +84,16 @@ Alias: belop
 <details>
 ```yaml
 name: belop
+description: Beløp, i øre.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:belop
 alias: belop
 domain_of:
 - Faktura
 - Transaksjon
 - Postering
-range: string
+range: integer
 
 ```
 </details>

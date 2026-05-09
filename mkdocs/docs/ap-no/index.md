@@ -1,6 +1,6 @@
 # AP-NO – Applikasjonsprofiler
 
-| Modell | Tilgjengelege artefaktar |
+| Modell | Tilgjengelege artefakter |
 |--------|--------------------------|
 | [cpsv-ap-no](cpsv-ap-no/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · RDF/Turtle skjema · Python-klasser · ER-diagram (Mermaid) · Eksempeldata (Turtle) |
 | [dcat-ap-no](dcat-ap-no/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · RDF/Turtle skjema · Python-klasser · ER-diagram (Mermaid) · Eksempeldata (Turtle) |

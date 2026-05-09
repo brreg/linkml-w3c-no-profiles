@@ -21,6 +21,19 @@ for schema in "$SCHEMA_DIR"/ap-no/*/*-schema.yaml; do
   fi
 done
 
+# Lint samt-domenemodellskjema (src/linkml/samt/<modell>/)
+for schema in "$SCHEMA_DIR"/samt/*/*-schema.yaml; do
+  echo -n "Lint $schema ... "
+  if eval "$PODMAN linkml lint --ignore-warnings $schema" > /dev/null 2>&1; then
+    echo "OK"
+    PASS=$((PASS + 1))
+  else
+    echo "FEIL"
+    eval "$PODMAN linkml lint --ignore-warnings $schema" || true
+    FAIL=$((FAIL + 1))
+  fi
+done
+
 # Lint NGR-domenemodellskjema (src/linkml/ngr/<modell>/)
 for schema in "$SCHEMA_DIR"/ngr/*/*-schema.yaml; do
   echo -n "Lint $schema ... "

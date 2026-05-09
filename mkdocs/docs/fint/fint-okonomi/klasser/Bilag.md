@@ -22,7 +22,7 @@ Alias: bilag
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: bilag
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Transaksjon](transaksjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: bilag
 ```yaml
 name: bilag
 description: Bilag til transaksjonen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:bilag
 alias: bilag
-owner: Transaksjon
 domain_of:
 - Transaksjon
 range: Bilag

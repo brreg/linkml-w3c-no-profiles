@@ -3,8 +3,13 @@
 # Slot: kontaktinformasjon 
 
 
+_Den føretrekte måten å kome i kontakt med ein aktør._
 
-URI: [https://schema.fintlabs.no/personvern/:kontaktinformasjon](https://schema.fintlabs.no/personvern/:kontaktinformasjon)
+
+
+
+
+URI: [fint:kontaktinformasjon](https://schema.fintlabs.no/kontaktinformasjon)
 Alias: kontaktinformasjon
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: kontaktinformasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
+| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
 | [Person](person.md) | Fysiske private personar |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
 
 
 
@@ -34,8 +39,9 @@ Alias: kontaktinformasjon
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Kontaktinformasjon](kontaktinformasjon.md) |
 | Domain Of | [Aktoer](aktoer.md), [Kontaktperson](kontaktperson.md) |
+| Slot URI | [fint:kontaktinformasjon](https://schema.fintlabs.no/kontaktinformasjon) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: kontaktinformasjon
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-personvern
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:kontaktinformasjon |
+| self | fint:kontaktinformasjon |
 | native | https://schema.fintlabs.no/personvern/:kontaktinformasjon |
 
 
@@ -73,11 +86,16 @@ Alias: kontaktinformasjon
 <details>
 ```yaml
 name: kontaktinformasjon
+description: Den føretrekte måten å kome i kontakt med ein aktør.
+from_schema: https://data.norge.no/linkml/fint-personvern
+rank: 1000
+slot_uri: fint:kontaktinformasjon
 alias: kontaktinformasjon
 domain_of:
 - Aktoer
 - Kontaktperson
-range: string
+range: Kontaktinformasjon
+inlined: true
 
 ```
 </details>

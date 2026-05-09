@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:klassifikasjonstypar](https://schema.fintlabs.no/arkiv/:klassifikasjonstypar)
+URI: [ark:klassifikasjonstypar](https://schema.fintlabs.no/arkiv/klassifikasjonstypar)
 Alias: klassifikasjonstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: klassifikasjonstypar
 | --- | --- |
 | Range | [Klassifikasjonstype](klassifikasjonstype.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:klassifikasjonstypar](https://schema.fintlabs.no/arkiv/klassifikasjonstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: klassifikasjonstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:klassifikasjonstypar |
+| self | ark:klassifikasjonstypar |
 | native | https://schema.fintlabs.no/arkiv/:klassifikasjonstypar |
 
 
@@ -86,8 +80,8 @@ Alias: klassifikasjonstypar
 name: klassifikasjonstypar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:klassifikasjonstypar
 alias: klassifikasjonstypar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Klassifikasjonstype

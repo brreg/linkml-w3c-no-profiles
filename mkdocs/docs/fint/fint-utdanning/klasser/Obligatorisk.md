@@ -131,10 +131,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
-        
 
 
 
@@ -149,7 +147,6 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
@@ -166,17 +163,14 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
 
 
-        
 
 
 
-        
 
 
 
@@ -191,34 +185,28 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
-        
 
 
 
 
 
-        
 
 
 
 
-        
 
 
 
 
 
-        
 
 
 
 
 
-        
 
 
 
@@ -238,11 +226,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
-        
 
-        
 
 
 
@@ -251,7 +236,6 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
@@ -260,10 +244,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
-        
 
 
 
@@ -280,11 +262,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
-        
 
-        
 
 
 
@@ -295,7 +274,6 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
@@ -307,17 +285,13 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
-        
 
 
-        
 
 
 
-        
 
 
 
@@ -344,7 +318,6 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
 
@@ -352,10 +325,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-        
 
 
-        
 
 
 
@@ -363,38 +334,8 @@ URI: [Obligatorisk](obligatorisk.md)
 
 
 
-## Slots in subset
 
-| Slot | Description |
-| --- | --- |
-| [aktiv](aktiv.md) | Angir om sensoren er aktiv |
-| [arbeidsforhold](arbeidsforhold.md) | Referanse til Arbeidsforhold i Administrasjon-domenet |
-| [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
-| [elev](elev.md) | Eleven dette forholdet gjeld |
-| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
-| [endretDato](endretdato.md) | Dato og tidspunkt for endringa |
-| [fodselsnummer](fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
-| [forersPaaVitnemaal](forerspaavitnemaal.md) | Angir om fråværet vert ført på vitnemålet |
-| [fravaerstimer](fravaerstimer.md) | Antal fråværstimar |
-| [fravartype](fravartype.md) | Type fråvær |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
-| [halvaar](halvaar.md) | Fråværsprosent for halvåret |
-| [kode](kode.md) |  |
-| [kommentar](kommentar.md) | Kommentar til vurderinga |
-| [kommune](kommune.md) | Referanse til kommunen OT-eininga dekker |
-| [laerling](laerling.md) | Lærlingen som avla prøva |
-| [navn](navn.md) | Namn på gruppa |
-| [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
-| [periode](periode.md) | Perioden fråværet varte |
-| [person](person.md) | Referanse til Person i Administrasjon-domenet |
-| [personalressurs](personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
-| [prosent](prosent.md) | Fråværsprosent (heiltal) |
-| [skala](skala.md) | Karakterskalaen denne verdien tilhøyrer |
-| [skole](skole.md) | Skulen eleven er tilknytt |
-| [skoleaarFravar](skoleaarfravar.md) | Fråværsprosent for heile skoleåret |
-| [skolenummer](skolenummer.md) | Nasjonal skulenummer-identifikator |
-| [undervisningstimer](undervisningstimer.md) | Totalt antal undervisningstimar |
-| [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
-| [vurderingsdato](vurderingsdato.md) | Dato og tidspunkt for vurderinga |
+
+
 
 

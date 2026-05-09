@@ -3,8 +3,13 @@
 # Slot: fullmakter 
 
 
+_Alle fullmakter i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fullmakter](https://schema.fintlabs.no/administrasjon/:fullmakter)
+
+
+
+
+URI: [adm:fullmakter](https://schema.fintlabs.no/administrasjon/fullmakter)
 Alias: fullmakter
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fullmakter
 | --- | --- |
 | Range | [Fullmakt](fullmakt.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:fullmakter](https://schema.fintlabs.no/administrasjon/fullmakter) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fullmakter
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fullmakter |
+| self | adm:fullmakter |
 | native | https://schema.fintlabs.no/administrasjon/:fullmakter |
 
 
@@ -84,10 +83,11 @@ Alias: fullmakter
 <details>
 ```yaml
 name: fullmakter
+description: Alle fullmakter i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:fullmakter
 alias: fullmakter
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Fullmakt

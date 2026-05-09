@@ -3,8 +3,13 @@
 # Slot: avbruddsaarsaker 
 
 
+_Alle avbruddsårsakar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:avbruddsaarsaker](https://schema.fintlabs.no/utdanning/:avbruddsaarsaker)
+
+
+
+
+URI: [utd:avbruddsaarsaker](https://schema.fintlabs.no/utdanning/avbruddsaarsaker)
 Alias: avbruddsaarsaker
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: avbruddsaarsaker
 | --- | --- |
 | Range | [Avbruddsaarsak](avbruddsaarsak.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:avbruddsaarsaker](https://schema.fintlabs.no/utdanning/avbruddsaarsaker) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: avbruddsaarsaker
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:avbruddsaarsaker |
+| self | utd:avbruddsaarsaker |
 | native | https://schema.fintlabs.no/utdanning/:avbruddsaarsaker |
 
 
@@ -84,10 +83,11 @@ Alias: avbruddsaarsaker
 <details>
 ```yaml
 name: avbruddsaarsaker
+description: Alle avbruddsårsakar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:avbruddsaarsaker
 alias: avbruddsaarsaker
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Avbruddsaarsak

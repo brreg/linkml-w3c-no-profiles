@@ -3,8 +3,13 @@
 # Slot: organisasjonsnummer 
 
 
+_Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret._
 
-URI: [https://schema.fintlabs.no/administrasjon/:organisasjonsnummer](https://schema.fintlabs.no/administrasjon/:organisasjonsnummer)
+
+
+
+
+URI: [fint:organisasjonsnummer](https://schema.fintlabs.no/organisasjonsnummer)
 Alias: organisasjonsnummer
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: organisasjonsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: organisasjonsnummer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Identifikator](identifikator.md) |
 | Domain Of | [Arbeidslokasjon](arbeidslokasjon.md), [Organisasjonselement](organisasjonselement.md), [Enhet](enhet.md) |
+| Slot URI | [fint:organisasjonsnummer](https://schema.fintlabs.no/organisasjonsnummer) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: organisasjonsnummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:organisasjonsnummer |
+| self | fint:organisasjonsnummer |
 | native | https://schema.fintlabs.no/administrasjon/:organisasjonsnummer |
 
 
@@ -72,12 +85,17 @@ Alias: organisasjonsnummer
 <details>
 ```yaml
 name: organisasjonsnummer
+description: Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: fint:organisasjonsnummer
 alias: organisasjonsnummer
 domain_of:
 - Arbeidslokasjon
 - Organisasjonselement
 - Enhet
-range: string
+range: Identifikator
+inlined: true
 
 ```
 </details>

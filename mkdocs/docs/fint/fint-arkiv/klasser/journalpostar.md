@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:journalpostar](https://schema.fintlabs.no/arkiv/:journalpostar)
+URI: [ark:journalpostar](https://schema.fintlabs.no/arkiv/journalpostar)
 Alias: journalpostar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: journalpostar
 | --- | --- |
 | Range | [Journalpost](journalpost.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:journalpostar](https://schema.fintlabs.no/arkiv/journalpostar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: journalpostar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:journalpostar |
+| self | ark:journalpostar |
 | native | https://schema.fintlabs.no/arkiv/:journalpostar |
 
 
@@ -86,8 +80,8 @@ Alias: journalpostar
 name: journalpostar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:journalpostar
 alias: journalpostar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Journalpost

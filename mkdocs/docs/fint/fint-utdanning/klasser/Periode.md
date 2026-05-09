@@ -3,7 +3,7 @@
 # Slot: periode 
 
 
-_Perioden fråværet varte._
+_Periode._
 
 
 
@@ -22,7 +22,7 @@ Alias: periode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  no  |
+| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: periode
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fraversregistrering](fraversregistrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: periode
 <details>
 ```yaml
 name: periode
-description: Perioden fråværet varte.
-in_subset:
-- Obligatorisk
+description: Periode.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:periode
 alias: periode
-owner: Fraversregistrering
 domain_of:
 - Fraversregistrering
 range: Periode
-required: true
 inlined: true
 
 ```

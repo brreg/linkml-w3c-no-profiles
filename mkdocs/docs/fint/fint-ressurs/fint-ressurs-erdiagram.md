@@ -3,12 +3,12 @@ erDiagram
 Applikasjon {
     uriorcurie id  
     string beskrivelse  
-    string navn  
+    string naam  
 }
 Applikasjonskategori {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Applikasjonsressurs {
@@ -18,7 +18,7 @@ Applikasjonsressurs {
     integer enhetskostnad  
     boolean kreverGodkjenning  
     integer lisensantall  
-    string navn  
+    string naam  
 }
 Applikasjonsressurstilgjengelighet {
     uriorcurie id  
@@ -28,7 +28,7 @@ Applikasjonsressurstilgjengelighet {
 Brukertype {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 DigitalEnhet {
@@ -37,14 +37,14 @@ DigitalEnhet {
     uriorcurie eier  
     uriorcurie elev  
     boolean flerbrukerenhet  
-    string navn  
+    string naam  
     uriorcurie personalressurs  
     boolean privateid  
     string serienummer  
 }
 Enhetsgruppe {
     uriorcurie id  
-    string navn  
+    string naam  
     uriorcurie organisasjonsenhet  
 }
 Enhetsgruppemedlemskap {
@@ -53,13 +53,13 @@ Enhetsgruppemedlemskap {
 Enhetstype {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Handhevingstype {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Identifikator {
@@ -72,7 +72,7 @@ Identitet {
 Lisensmodell {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -83,32 +83,32 @@ Periode {
 Plattform {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Produsent {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Rettighet {
     uriorcurie id  
     string beskrivelse  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Status {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 
 Applikasjon ||--|| Periode : "gyldighetsperiode"
 Applikasjon ||--}o Applikasjonskategori : "applikasjonskategori"
-Applikasjon ||--}o Applikasjonsressurs : "ressurs"
+Applikasjon ||--}o Applikasjonsressurs : "applikasjonsressurs"
 Applikasjon ||--}o Plattform : "plattform"
 Applikasjonskategori ||--|o Periode : "gyldighetsperiode"
 Applikasjonsressurs ||--|o Handhevingstype : "handhevingstype"
@@ -117,7 +117,7 @@ Applikasjonsressurs ||--|| Applikasjon : "applikasjon"
 Applikasjonsressurs ||--|| Periode : "gyldighetsperiode"
 Applikasjonsressurs ||--}o Applikasjonsressurstilgjengelighet : "ressurstilgjengelighet"
 Applikasjonsressurs ||--}| Brukertype : "brukertype"
-Applikasjonsressurstilgjengelighet ||--|| Applikasjonsressurs : "ressurs"
+Applikasjonsressurstilgjengelighet ||--|| Applikasjonsressurs : "ressursRef"
 Applikasjonsressurstilgjengelighet ||--|| Periode : "gyldighetsperiode"
 Brukertype ||--|o Periode : "gyldighetsperiode"
 DigitalEnhet ||--|o Identifikator : "dataobjektId"

@@ -22,7 +22,7 @@ Alias: start
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
+| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  yes  |
 
 
 
@@ -43,14 +43,6 @@ Alias: start
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Periode](periode.md) |
-
-
 
 
 
@@ -95,11 +87,9 @@ from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:start
 alias: start
-owner: Periode
 domain_of:
 - Periode
 range: datetime
-required: true
 
 ```
 </details>

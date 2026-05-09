@@ -3,7 +3,7 @@
 # Slot: type 
 
 
-_Beskriv kva slags type kontaktperson._
+_Beskriv kva slags type._
 
 
 
@@ -22,7 +22,7 @@ Alias: type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: type
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontaktperson](kontaktperson.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: type
 <details>
 ```yaml
 name: type
-description: Beskriv kva slags type kontaktperson.
-in_subset:
-- Obligatorisk
+description: Beskriv kva slags type.
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:type
 alias: type
-owner: Kontaktperson
 domain_of:
 - Kontaktperson
 range: string
-required: true
 
 ```
 </details>

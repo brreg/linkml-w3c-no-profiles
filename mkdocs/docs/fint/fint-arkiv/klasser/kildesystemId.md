@@ -22,7 +22,7 @@ Alias: kildesystemId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  no  |
+| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kildesystemId
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arkivressurs](arkivressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: kildesystemId
 ```yaml
 name: kildesystemId
 description: Kildesystemets identifikator for arkivressursen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:kildesystemId
 alias: kildesystemId
-owner: Arkivressurs
 domain_of:
 - Arkivressurs
 range: Identifikator

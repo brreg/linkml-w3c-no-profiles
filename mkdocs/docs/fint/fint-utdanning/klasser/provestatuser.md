@@ -3,8 +3,13 @@
 # Slot: provestatuser 
 
 
+_Alle prøvestatuser i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:provestatuser](https://schema.fintlabs.no/utdanning/:provestatuser)
+
+
+
+
+URI: [utd:provestatuser](https://schema.fintlabs.no/utdanning/provestatuser)
 Alias: provestatuser
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: provestatuser
 | --- | --- |
 | Range | [Provestatus](provestatus.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:provestatuser](https://schema.fintlabs.no/utdanning/provestatuser) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: provestatuser
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:provestatuser |
+| self | utd:provestatuser |
 | native | https://schema.fintlabs.no/utdanning/:provestatuser |
 
 
@@ -84,10 +83,11 @@ Alias: provestatuser
 <details>
 ```yaml
 name: provestatuser
+description: Alle prøvestatuser i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:provestatuser
 alias: provestatuser
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Provestatus

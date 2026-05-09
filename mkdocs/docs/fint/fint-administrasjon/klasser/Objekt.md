@@ -3,8 +3,13 @@
 # Slot: objekt 
 
 
+_Objekt ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/administrasjon/:objekt](https://schema.fintlabs.no/administrasjon/:objekt)
+
+
+
+
+URI: [adm:objekt](https://schema.fintlabs.no/administrasjon/objekt)
 Alias: objekt
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: objekt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: objekt
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Objekt](objekt.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:objekt](https://schema.fintlabs.no/administrasjon/objekt) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: objekt
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:objekt |
+| self | adm:objekt |
 | native | https://schema.fintlabs.no/administrasjon/:objekt |
 
 
@@ -72,13 +85,17 @@ Alias: objekt
 <details>
 ```yaml
 name: objekt
+description: Objekt ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:objekt
 alias: objekt
 domain_of:
 - AdministrasjonContainer
 - Kontostreng
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Objekt
 
 ```
 </details>

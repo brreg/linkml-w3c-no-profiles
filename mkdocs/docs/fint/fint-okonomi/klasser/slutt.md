@@ -43,13 +43,6 @@ Alias: slutt
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Periode](periode.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:slutt
 alias: slutt
-owner: Periode
 domain_of:
 - Periode
 range: datetime

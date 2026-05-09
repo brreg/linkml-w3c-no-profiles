@@ -3,7 +3,7 @@
 # Slot: fagmerknad 
 
 
-_Merknad til faget for dette medlemskapet._
+_Merknad til faget._
 
 
 
@@ -22,7 +22,7 @@ Alias: fagmerknad
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: fagmerknad
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Faggruppemedlemskap](faggruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: fagmerknad
 <details>
 ```yaml
 name: fagmerknad
-description: Merknad til faget for dette medlemskapet.
-in_subset:
-- Valgfri
+description: Merknad til faget.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:fagmerknad
 alias: fagmerknad
-owner: Faggruppemedlemskap
 domain_of:
 - Faggruppemedlemskap
 range: Fagmerknad

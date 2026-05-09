@@ -3,8 +3,13 @@
 # Slot: forretningsadresse 
 
 
+_Besøksadresse til ein organisasjonseining._
 
-URI: [https://schema.fintlabs.no/administrasjon/:forretningsadresse](https://schema.fintlabs.no/administrasjon/:forretningsadresse)
+
+
+
+
+URI: [fint:forretningsadresse](https://schema.fintlabs.no/forretningsadresse)
 Alias: forretningsadresse
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: forretningsadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: forretningsadresse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Adresse](adresse.md) |
 | Domain Of | [Arbeidslokasjon](arbeidslokasjon.md), [Organisasjonselement](organisasjonselement.md), [Enhet](enhet.md) |
+| Slot URI | [fint:forretningsadresse](https://schema.fintlabs.no/forretningsadresse) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: forretningsadresse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:forretningsadresse |
+| self | fint:forretningsadresse |
 | native | https://schema.fintlabs.no/administrasjon/:forretningsadresse |
 
 
@@ -72,12 +85,17 @@ Alias: forretningsadresse
 <details>
 ```yaml
 name: forretningsadresse
+description: Besøksadresse til ein organisasjonseining.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: fint:forretningsadresse
 alias: forretningsadresse
 domain_of:
 - Arbeidslokasjon
 - Organisasjonselement
 - Enhet
-range: string
+range: Adresse
+inlined: true
 
 ```
 </details>

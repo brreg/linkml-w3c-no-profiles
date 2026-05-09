@@ -3,8 +3,13 @@
 # Slot: prosjektart 
 
 
+_Deloppgåve eller delprosjekt._
 
-URI: [https://schema.fintlabs.no/administrasjon/:prosjektart](https://schema.fintlabs.no/administrasjon/:prosjektart)
+
+
+
+
+URI: [adm:prosjektart](https://schema.fintlabs.no/administrasjon/prosjektart)
 Alias: prosjektart
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: prosjektart
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Prosjekt](prosjekt.md) | Del av kontostrengen som peikar på løpande prosjekt |  no  |
+| [Prosjekt](prosjekt.md) | Del av kontostrengen som peikar på løpande prosjekt |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: prosjektart
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Prosjektart](prosjektart.md) |
 | Domain Of | [Kontostreng](kontostreng.md), [Prosjekt](prosjekt.md) |
+| Slot URI | [adm:prosjektart](https://schema.fintlabs.no/administrasjon/prosjektart) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: prosjektart
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:prosjektart |
+| self | adm:prosjektart |
 | native | https://schema.fintlabs.no/administrasjon/:prosjektart |
 
 
@@ -70,11 +83,15 @@ Alias: prosjektart
 <details>
 ```yaml
 name: prosjektart
+description: Deloppgåve eller delprosjekt.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:prosjektart
 alias: prosjektart
 domain_of:
 - Kontostreng
 - Prosjekt
-range: string
+range: Prosjektart
 
 ```
 </details>

@@ -3,8 +3,13 @@
 # Slot: gruppemedlemskap 
 
 
+_Gruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:gruppemedlemskap](https://schema.fintlabs.no/utdanning/:gruppemedlemskap)
+
+
+
+
+URI: [utd:gruppemedlemskap](https://schema.fintlabs.no/utdanning/gruppemedlemskap)
 Alias: gruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: gruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
-| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
+| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
 
 
 
@@ -33,13 +38,15 @@ Alias: gruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Gruppemedlemskap](gruppemedlemskap.md) |
 | Domain Of | [Kontaktlaerergruppe](kontaktlaerergruppe.md), [Programomrade](programomrade.md), [Undervisningsgruppe](undervisningsgruppe.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:gruppemedlemskap](https://schema.fintlabs.no/utdanning/gruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -56,12 +63,19 @@ Alias: gruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:gruppemedlemskap |
+| self | utd:gruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:gruppemedlemskap |
 
 
@@ -72,13 +86,18 @@ Alias: gruppemedlemskap
 <details>
 ```yaml
 name: gruppemedlemskap
+description: Gruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:gruppemedlemskap
 alias: gruppemedlemskap
 domain_of:
 - Kontaktlaerergruppe
 - Programomrade
 - Undervisningsgruppe
 - Eksamensgruppe
-range: string
+range: Gruppemedlemskap
+multivalued: true
 
 ```
 </details>

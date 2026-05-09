@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:varer](https://schema.fintlabs.no/okonomi/:varer)
+URI: [okn:varer](https://schema.fintlabs.no/okonomi/varer)
 Alias: varer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: varer
 | --- | --- |
 | Range | [Vare](vare.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:varer](https://schema.fintlabs.no/okonomi/varer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: varer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:varer |
+| self | okn:varer |
 | native | https://schema.fintlabs.no/okonomi/:varer |
 
 
@@ -86,8 +80,8 @@ Alias: varer
 name: varer
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:varer
 alias: varer
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Vare

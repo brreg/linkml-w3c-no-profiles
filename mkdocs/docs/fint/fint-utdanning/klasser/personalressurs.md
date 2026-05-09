@@ -3,8 +3,13 @@
 # Slot: personalressurs 
 
 
+_Referanse til Personalressurs i Administrasjon-domenet._
 
-URI: [https://schema.fintlabs.no/utdanning/:personalressurs](https://schema.fintlabs.no/utdanning/:personalressurs)
+
+
+
+
+URI: [utd:personalressurs](https://schema.fintlabs.no/utdanning/personalressurs)
 Alias: personalressurs
 
 <!-- no inheritance hierarchy -->
@@ -18,7 +23,7 @@ Alias: personalressurs
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Person](person.md) | Fysiske private personar |  no  |
-| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  no  |
+| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: personalressurs
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Skoleressurs](skoleressurs.md), [Person](person.md) |
+| Slot URI | [utd:personalressurs](https://schema.fintlabs.no/utdanning/personalressurs) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: personalressurs
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:personalressurs |
+| self | utd:personalressurs |
 | native | https://schema.fintlabs.no/utdanning/:personalressurs |
 
 
@@ -70,11 +83,15 @@ Alias: personalressurs
 <details>
 ```yaml
 name: personalressurs
+description: Referanse til Personalressurs i Administrasjon-domenet.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:personalressurs
 alias: personalressurs
 domain_of:
 - Skoleressurs
 - Person
-range: string
+range: uriorcurie
 
 ```
 </details>

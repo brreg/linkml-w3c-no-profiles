@@ -22,7 +22,7 @@ Alias: kontaktperson
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: kontaktperson
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontaktperson](kontaktperson.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: kontaktperson
 ```yaml
 name: kontaktperson
 description: Personar kontaktpersonen er pårørande for.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:kontaktpersonFor
 alias: kontaktperson
-owner: Kontaktperson
 domain_of:
 - Kontaktperson
 range: Person

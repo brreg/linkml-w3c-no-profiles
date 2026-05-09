@@ -22,7 +22,7 @@ Alias: personalressurskategori
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: personalressurskategori
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalressurs](personalressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: personalressurskategori
 ```yaml
 name: personalressurskategori
 description: Kategori for personalressursen.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:personalressurskategori
 alias: personalressurskategori
-owner: Personalressurs
 domain_of:
 - Personalressurs
 range: Personalressurskategori
-required: true
 
 ```
 </details>

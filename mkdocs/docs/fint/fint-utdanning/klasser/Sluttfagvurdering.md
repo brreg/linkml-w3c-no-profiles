@@ -3,8 +3,13 @@
 # Slot: sluttfagvurdering 
 
 
+_Sluttfagvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:sluttfagvurdering](https://schema.fintlabs.no/utdanning/:sluttfagvurdering)
+
+
+
+
+URI: [utd:sluttfagvurdering](https://schema.fintlabs.no/utdanning/sluttfagvurdering)
 Alias: sluttfagvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: sluttfagvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: sluttfagvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Sluttfagvurdering](sluttfagvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:sluttfagvurdering](https://schema.fintlabs.no/utdanning/sluttfagvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: sluttfagvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:sluttfagvurdering |
+| self | utd:sluttfagvurdering |
 | native | https://schema.fintlabs.no/utdanning/:sluttfagvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: sluttfagvurdering
 <details>
 ```yaml
 name: sluttfagvurdering
+description: Sluttfagvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:sluttfagvurdering
 alias: sluttfagvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Sluttfagvurdering
+multivalued: true
 
 ```
 </details>

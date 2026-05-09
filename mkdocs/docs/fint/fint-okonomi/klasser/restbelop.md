@@ -3,7 +3,7 @@
 # Slot: restbelop 
 
 
-_Gjenståande beløp å betale, i øre (restbeløp)._
+_Gjenståande beløp å betale, i øre._
 
 
 
@@ -22,7 +22,7 @@ Alias: restbelop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: restbelop
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Faktura](faktura.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: restbelop
 <details>
 ```yaml
 name: restbelop
-description: Gjenståande beløp å betale, i øre (restbeløp).
-in_subset:
-- Valgfri
+description: Gjenståande beløp å betale, i øre.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:restbelop
 alias: restbelop
-owner: Faktura
 domain_of:
 - Faktura
 range: integer

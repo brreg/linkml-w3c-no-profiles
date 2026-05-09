@@ -3,8 +3,13 @@
 # Slot: fravaerstypar 
 
 
+_Alle fråværstypar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fravaerstypar](https://schema.fintlabs.no/administrasjon/:fravaerstypar)
+
+
+
+
+URI: [adm:fravaerstypar](https://schema.fintlabs.no/administrasjon/fravaerstypar)
 Alias: fravaerstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fravaerstypar
 | --- | --- |
 | Range | [Fravaerstype](fravaerstype.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:fravaerstypar](https://schema.fintlabs.no/administrasjon/fravaerstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fravaerstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fravaerstypar |
+| self | adm:fravaerstypar |
 | native | https://schema.fintlabs.no/administrasjon/:fravaerstypar |
 
 
@@ -84,10 +83,11 @@ Alias: fravaerstypar
 <details>
 ```yaml
 name: fravaerstypar
+description: Alle fråværstypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:fravaerstypar
 alias: fravaerstypar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Fravaerstype

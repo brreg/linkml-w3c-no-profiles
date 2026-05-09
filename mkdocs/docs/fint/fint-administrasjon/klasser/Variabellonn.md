@@ -3,8 +3,13 @@
 # Slot: variabellonn 
 
 
+_Variabel lønn for arbeidsforholdet._
 
-URI: [https://schema.fintlabs.no/administrasjon/:variabellonn](https://schema.fintlabs.no/administrasjon/:variabellonn)
+
+
+
+
+URI: [adm:variabellonn](https://schema.fintlabs.no/administrasjon/variabellonn)
 Alias: variabellonn
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: variabellonn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: variabellonn
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Variabellonn](variabellonn.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:variabellonn](https://schema.fintlabs.no/administrasjon/variabellonn) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: variabellonn
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:variabellonn |
+| self | adm:variabellonn |
 | native | https://schema.fintlabs.no/administrasjon/:variabellonn |
 
 
@@ -70,11 +83,15 @@ Alias: variabellonn
 <details>
 ```yaml
 name: variabellonn
+description: Variabel lønn for arbeidsforholdet.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:variabellonn
 alias: variabellonn
 domain_of:
 - AdministrasjonContainer
 - Arbeidsforhold
-range: string
+range: Variabellonn
 
 ```
 </details>

@@ -22,7 +22,7 @@ Alias: tilknyttetRegistreringSom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
 
 
 
@@ -43,25 +43,11 @@ Alias: tilknyttetRegistreringSom
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -98,17 +84,13 @@ Alias: tilknyttetRegistreringSom
 ```yaml
 name: tilknyttetRegistreringSom
 description: Rolle dokumentet har i høve registreringa.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:tilknyttetRegistreringSom
 alias: tilknyttetRegistreringSom
-owner: Dokumentbeskrivelse
 domain_of:
 - Dokumentbeskrivelse
 range: TilknyttetRegistreringSom
-required: true
 multivalued: true
 
 ```

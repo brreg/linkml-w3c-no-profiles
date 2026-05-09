@@ -3,7 +3,7 @@
 # Slot: feidenavn 
 
 
-_Feide-identifikator for skoleressursen._
+_Feide-identifikator._
 
 
 
@@ -22,7 +22,7 @@ Alias: feidenavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  no  |
+| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: feidenavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skoleressurs](skoleressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: feidenavn
 <details>
 ```yaml
 name: feidenavn
-description: Feide-identifikator for skoleressursen.
-in_subset:
-- Valgfri
+description: Feide-identifikator.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:feidenavn
 alias: feidenavn
-owner: Skoleressurs
 domain_of:
 - Skoleressurs
 range: Identifikator

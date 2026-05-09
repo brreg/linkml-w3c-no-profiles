@@ -22,7 +22,7 @@ Alias: avskrevetAv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Avskrivning](avskrivning.md) | Avskriving av ein journalpost (markering som ferdigbehandla) |  no  |
+| [Avskrivning](avskrivning.md) | Avskriving av ein journalpost (markering som ferdigbehandla) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: avskrevetAv
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Avskrivning](avskrivning.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: avskrevetAv
 ```yaml
 name: avskrevetAv
 description: Person som avskriva journalposten.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:avskrevetAv
 alias: avskrevetAv
-owner: Avskrivning
 domain_of:
 - Avskrivning
 range: string
-required: true
 
 ```
 </details>

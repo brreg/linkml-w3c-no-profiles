@@ -22,7 +22,7 @@ Alias: administrativenhet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  no  |
+| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: administrativenhet
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Autorisasjon](autorisasjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: administrativenhet
 ```yaml
 name: administrativenhet
 description: Administrative einingar autorisasjonen er gyldig for.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:administrativenhet
 alias: administrativenhet
-owner: Autorisasjon
 domain_of:
 - Autorisasjon
 range: AdministrativEnhet

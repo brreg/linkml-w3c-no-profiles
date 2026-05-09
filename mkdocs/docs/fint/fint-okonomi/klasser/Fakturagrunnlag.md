@@ -3,8 +3,13 @@
 # Slot: fakturagrunnlag 
 
 
+_Grunnlag for fakturering._
 
-URI: [https://schema.fintlabs.no/okonomi/:fakturagrunnlag](https://schema.fintlabs.no/okonomi/:fakturagrunnlag)
+
+
+
+
+URI: [okn:fakturagrunnlag](https://schema.fintlabs.no/okonomi/fakturagrunnlag)
 Alias: fakturagrunnlag
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: fakturagrunnlag
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturautsteder](fakturautsteder.md) | Eining som utformar og oversender faktura og mottar betaling |  no  |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
-| [OkonomiContainer](okonomicontainer.md) | Rotcontainer for FINT Økonomi-instansar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
+| [Fakturautsteder](fakturautsteder.md) | Eining som utformar og oversender faktura og mottar betaling |  yes  |
+| [OkonomiContainer](okonomicontainer.md) | Rotcontainer for FINT Økonomi-instansar |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: fakturagrunnlag
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fakturagrunnlag](fakturagrunnlag.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md), [Faktura](faktura.md), [Fakturautsteder](fakturautsteder.md) |
+| Slot URI | [okn:fakturagrunnlag](https://schema.fintlabs.no/okonomi/fakturagrunnlag) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: fakturagrunnlag
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:fakturagrunnlag |
+| self | okn:fakturagrunnlag |
 | native | https://schema.fintlabs.no/okonomi/:fakturagrunnlag |
 
 
@@ -71,12 +84,16 @@ Alias: fakturagrunnlag
 <details>
 ```yaml
 name: fakturagrunnlag
+description: Grunnlag for fakturering.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:fakturagrunnlag
 alias: fakturagrunnlag
 domain_of:
 - OkonomiContainer
 - Faktura
 - Fakturautsteder
-range: string
+range: Fakturagrunnlag
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: organisasjonselement 
 
 
-_Referanse til Organisasjonselement (Administrasjon) tilknytt samtykket._
+_Referanse til Organisasjonselement (Administrasjon)._
 
 
 
@@ -22,7 +22,7 @@ Alias: organisasjonselement
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  no  |
+| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: organisasjonselement
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Samtykke](samtykke.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: organisasjonselement
 <details>
 ```yaml
 name: organisasjonselement
-description: Referanse til Organisasjonselement (Administrasjon) tilknytt samtykket.
-in_subset:
-- Valgfri
+description: Referanse til Organisasjonselement (Administrasjon).
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:organisasjonselement
 alias: organisasjonselement
-owner: Samtykke
 domain_of:
 - Samtykke
 range: uriorcurie

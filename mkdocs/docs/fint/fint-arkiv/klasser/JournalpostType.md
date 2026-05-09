@@ -22,7 +22,7 @@ Alias: journalposttype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: journalposttype
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Journalpost](journalpost.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: journalposttype
 ```yaml
 name: journalposttype
 description: Namn på type journalpost.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:journalposttype
 alias: journalposttype
-owner: Journalpost
 domain_of:
 - Journalpost
 range: JournalpostType
-required: true
 
 ```
 </details>

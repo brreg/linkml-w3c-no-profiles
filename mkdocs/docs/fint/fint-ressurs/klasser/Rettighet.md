@@ -22,7 +22,7 @@ Alias: rettighet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  no  |
+| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: rettighet
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Identitet](identitet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: rettighet
 ```yaml
 name: rettighet
 description: Rettigheiter knytt til identiteten.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:rettighet
 alias: rettighet
-owner: Identitet
 domain_of:
 - Identitet
 range: Rettighet

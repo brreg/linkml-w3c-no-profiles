@@ -3,8 +3,13 @@
 # Slot: programomrademedlemskap 
 
 
+_Programområdemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:programomrademedlemskap](https://schema.fintlabs.no/utdanning/:programomrademedlemskap)
+
+
+
+
+URI: [utd:programomrademedlemskap](https://schema.fintlabs.no/utdanning/programomrademedlemskap)
 Alias: programomrademedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: programomrademedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: programomrademedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Programomrademedlemskap](programomrademedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md) |
+| Slot URI | [utd:programomrademedlemskap](https://schema.fintlabs.no/utdanning/programomrademedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: programomrademedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:programomrademedlemskap |
+| self | utd:programomrademedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:programomrademedlemskap |
 
 
@@ -70,11 +84,16 @@ Alias: programomrademedlemskap
 <details>
 ```yaml
 name: programomrademedlemskap
+description: Programområdemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:programomrademedlemskap
 alias: programomrademedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
-range: string
+range: Programomrademedlemskap
+multivalued: true
 
 ```
 </details>

@@ -44,13 +44,6 @@ Alias: adresselinje
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Adresse](adresse.md) |
-
-
 
 
 
@@ -95,7 +88,6 @@ from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:adresselinje
 alias: adresselinje
-owner: Adresse
 domain_of:
 - Adresse
 range: string

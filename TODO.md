@@ -1,16 +1,22 @@
-remodellere fint modellar til å benytte slots istadenfor atributter
+ikkje inkludere importerte klasser og attributter når vi genererer dokumentasjon og diagram
+
+erstatte æøå med ae oe aa i alle klasse og slotnavn.
+forfine ap-no validatoren
+oreg og samt oversiktsdiagram rendrer ikkje
+forbere nav menyen med markering av alle nivå som inngår i gjeldande sidehierarki og ikkje kollapse menyen når du trykker på ei klasse for å vise detaljsida om den
+
+
 
 remodellere ngr modellar til å benytte slots istadenfor atributter
 Modellere opp BR modell fra MagicDraw
-erstatte æøå med ae oe aa i alle klasse og slotnavn.
 
-forbere nav menyen med markering av alle nivå som inngår i gjeldande sidehierarki og ikkje kollapse menyen når du trykker på ei klasse for å vise detaljsida om den
+
 
 fjærne container klasse fra gen-docs generert dokumentajson
 fjærne container klasse fra ER-oversiktsdiagram
 
-forfine ap-no validatoren
-oreg og samt oversiktsdiagram rendrer ikkje
+
+
 
 
 

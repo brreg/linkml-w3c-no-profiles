@@ -22,7 +22,7 @@ Alias: klassifikasjonstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
+| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: klassifikasjonstype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Klassifikasjonssystem](klassifikasjonssystem.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: klassifikasjonstype
 ```yaml
 name: klassifikasjonstype
 description: Type klassifikasjonssystem.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:klassifikasjonstype
 alias: klassifikasjonstype
-owner: Klassifikasjonssystem
 domain_of:
 - Klassifikasjonssystem
 range: Klassifikasjonstype

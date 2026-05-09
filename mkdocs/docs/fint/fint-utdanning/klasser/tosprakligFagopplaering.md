@@ -22,7 +22,7 @@ Alias: tosprakligFagopplaering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: tosprakligFagopplaering
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Elevforhold](elevforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: tosprakligFagopplaering
 ```yaml
 name: tosprakligFagopplaering
 description: Indikerer om eleven har tospråkleg fagopplæring.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:tosprakligFagopplaering
 alias: tosprakligFagopplaering
-owner: Elevforhold
 domain_of:
 - Elevforhold
 range: boolean

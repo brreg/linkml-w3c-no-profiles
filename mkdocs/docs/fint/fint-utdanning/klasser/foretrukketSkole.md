@@ -22,7 +22,7 @@ Alias: foretrukketSkole
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: foretrukketSkole
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: foretrukketSkole
 ```yaml
 name: foretrukketSkole
 description: Angir om skulen er føretrekt for eksamenen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:foretrukketSkole
 alias: foretrukketSkole
-owner: Eksamensgruppemedlemskap
 domain_of:
 - Eksamensgruppemedlemskap
 range: boolean

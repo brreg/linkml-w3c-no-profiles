@@ -3,8 +3,13 @@
 # Slot: type 
 
 
+_Type._
 
-URI: [https://schema.fintlabs.no/utdanning/:type](https://schema.fintlabs.no/utdanning/:type)
+
+
+
+
+URI: [utd:type](https://schema.fintlabs.no/utdanning/type)
 Alias: type
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  no  |
-| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
+| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  yes  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
+| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
 
 
 
@@ -34,6 +39,7 @@ Alias: type
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Varsel](varsel.md), [OtStatus](otstatus.md), [Kontaktperson](kontaktperson.md) |
+| Slot URI | [utd:type](https://schema.fintlabs.no/utdanning/type) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: type
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:type |
+| self | utd:type |
 | native | https://schema.fintlabs.no/utdanning/:type |
 
 
@@ -71,6 +84,10 @@ Alias: type
 <details>
 ```yaml
 name: type
+description: Type.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:type
 alias: type
 domain_of:
 - Varsel

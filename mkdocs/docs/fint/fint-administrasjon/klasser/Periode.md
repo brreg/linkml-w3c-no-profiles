@@ -3,8 +3,13 @@
 # Slot: periode 
 
 
+_Periode for ressursen._
 
-URI: [https://schema.fintlabs.no/administrasjon/:periode](https://schema.fintlabs.no/administrasjon/:periode)
+
+
+
+
+URI: [adm:periode](https://schema.fintlabs.no/administrasjon/periode)
 Alias: periode
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: periode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  no  |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: periode
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Periode](periode.md) |
 | Domain Of | [Lonn](lonn.md), [Fravaer](fravaer.md) |
+| Slot URI | [adm:periode](https://schema.fintlabs.no/administrasjon/periode) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: periode
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:periode |
+| self | adm:periode |
 | native | https://schema.fintlabs.no/administrasjon/:periode |
 
 
@@ -73,11 +86,16 @@ Alias: periode
 <details>
 ```yaml
 name: periode
+description: Periode for ressursen.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:periode
 alias: periode
 domain_of:
 - Lonn
 - Fravaer
-range: string
+range: Periode
+inlined: true
 
 ```
 </details>

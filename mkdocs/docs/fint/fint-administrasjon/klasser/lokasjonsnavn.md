@@ -22,7 +22,7 @@ Alias: lokasjonsnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: lokasjonsnavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidslokasjon](arbeidslokasjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: lokasjonsnavn
 ```yaml
 name: lokasjonsnavn
 description: Namn som beskriv ein arbeidslokasjon.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:lokasjonsnavn
 alias: lokasjonsnavn
-owner: Arbeidslokasjon
 domain_of:
 - Arbeidslokasjon
 range: string

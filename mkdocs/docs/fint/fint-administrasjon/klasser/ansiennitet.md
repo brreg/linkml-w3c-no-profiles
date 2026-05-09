@@ -22,7 +22,7 @@ Alias: ansiennitet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: ansiennitet
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalressurs](personalressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: ansiennitet
 ```yaml
 name: ansiennitet
 description: Ansiennitet for personalressurs hos arbeidsgjevar.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:ansiennitet
 alias: ansiennitet
-owner: Personalressurs
 domain_of:
 - Personalressurs
 range: date

@@ -3,8 +3,13 @@
 # Slot: arbeidsforhold 
 
 
+_Arbeidsforhold ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/administrasjon/:arbeidsforhold](https://schema.fintlabs.no/administrasjon/:arbeidsforhold)
+
+
+
+
+URI: [adm:arbeidsforhold](https://schema.fintlabs.no/administrasjon/arbeidsforhold)
 Alias: arbeidsforhold
 
 <!-- no inheritance hierarchy -->
@@ -17,14 +22,14 @@ Alias: arbeidsforhold
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  yes  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -37,8 +42,9 @@ Alias: arbeidsforhold
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Arbeidsforhold](arbeidsforhold.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Fastlonn](fastlonn.md), [Fasttillegg](fasttillegg.md), [Variabellonn](variabellonn.md), [Fravaer](fravaer.md), [Arbeidslokasjon](arbeidslokasjon.md), [Organisasjonselement](organisasjonselement.md), [Personalressurs](personalressurs.md) |
+| Slot URI | [adm:arbeidsforhold](https://schema.fintlabs.no/administrasjon/arbeidsforhold) |
 
 ### Cardinality and Requirements
 
@@ -60,12 +66,19 @@ Alias: arbeidsforhold
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:arbeidsforhold |
+| self | adm:arbeidsforhold |
 | native | https://schema.fintlabs.no/administrasjon/:arbeidsforhold |
 
 
@@ -76,6 +89,10 @@ Alias: arbeidsforhold
 <details>
 ```yaml
 name: arbeidsforhold
+description: Arbeidsforhold ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:arbeidsforhold
 alias: arbeidsforhold
 domain_of:
 - AdministrasjonContainer
@@ -86,7 +103,7 @@ domain_of:
 - Arbeidslokasjon
 - Organisasjonselement
 - Personalressurs
-range: string
+range: Arbeidsforhold
 
 ```
 </details>

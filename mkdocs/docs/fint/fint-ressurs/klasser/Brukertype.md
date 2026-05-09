@@ -3,7 +3,7 @@
 # Slot: brukertype 
 
 
-_For kva brukertypar denne lisensen er gyldig._
+_For kva brukertypar lisensen er gyldig._
 
 
 
@@ -22,7 +22,7 @@ Alias: brukertype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
 
 
 
@@ -43,25 +43,11 @@ Alias: brukertype
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurs](applikasjonsressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,18 +83,14 @@ Alias: brukertype
 <details>
 ```yaml
 name: brukertype
-description: For kva brukertypar denne lisensen er gyldig.
-in_subset:
-- Obligatorisk
+description: For kva brukertypar lisensen er gyldig.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:brukertype
 alias: brukertype
-owner: Applikasjonsressurs
 domain_of:
 - Applikasjonsressurs
 range: Brukertype
-required: true
 multivalued: true
 
 ```

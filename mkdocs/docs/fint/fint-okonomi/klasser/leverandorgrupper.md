@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:leverandorgrupper](https://schema.fintlabs.no/okonomi/:leverandorgrupper)
+URI: [okn:leverandorgrupper](https://schema.fintlabs.no/okonomi/leverandorgrupper)
 Alias: leverandorgrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: leverandorgrupper
 | --- | --- |
 | Range | [Leverandorgruppe](leverandorgruppe.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:leverandorgrupper](https://schema.fintlabs.no/okonomi/leverandorgrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: leverandorgrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:leverandorgrupper |
+| self | okn:leverandorgrupper |
 | native | https://schema.fintlabs.no/okonomi/:leverandorgrupper |
 
 
@@ -86,8 +80,8 @@ Alias: leverandorgrupper
 name: leverandorgrupper
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:leverandorgrupper
 alias: leverandorgrupper
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Leverandorgruppe

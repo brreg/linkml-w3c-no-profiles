@@ -3,8 +3,13 @@
 # Slot: anmerkningar 
 
 
+_Alle anmerkningar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:anmerkningar](https://schema.fintlabs.no/utdanning/:anmerkningar)
+
+
+
+
+URI: [utd:anmerkningar](https://schema.fintlabs.no/utdanning/anmerkningar)
 Alias: anmerkningar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: anmerkningar
 | --- | --- |
 | Range | [Anmerkninger](anmerkninger.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:anmerkningar](https://schema.fintlabs.no/utdanning/anmerkningar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: anmerkningar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:anmerkningar |
+| self | utd:anmerkningar |
 | native | https://schema.fintlabs.no/utdanning/:anmerkningar |
 
 
@@ -84,10 +83,11 @@ Alias: anmerkningar
 <details>
 ```yaml
 name: anmerkningar
+description: Alle anmerkningar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:anmerkningar
 alias: anmerkningar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Anmerkninger

@@ -3,8 +3,13 @@
 # Slot: enhetsgruppemedlemskap 
 
 
+_Einingsgruppemelemskap._
 
-URI: [https://schema.fintlabs.no/ressurs/:enhetsgruppemedlemskap](https://schema.fintlabs.no/ressurs/:enhetsgruppemedlemskap)
+
+
+
+
+URI: [res:enhetsgruppemedlemskap](https://schema.fintlabs.no/ressurs/enhetsgruppemedlemskap)
 Alias: enhetsgruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: enhetsgruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |  no  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: enhetsgruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) |
 | Domain Of | [DigitalEnhet](digitalenhet.md), [Enhetsgruppe](enhetsgruppe.md) |
+| Slot URI | [res:enhetsgruppemedlemskap](https://schema.fintlabs.no/ressurs/enhetsgruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: enhetsgruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:enhetsgruppemedlemskap |
+| self | res:enhetsgruppemedlemskap |
 | native | https://schema.fintlabs.no/ressurs/:enhetsgruppemedlemskap |
 
 
@@ -70,11 +84,16 @@ Alias: enhetsgruppemedlemskap
 <details>
 ```yaml
 name: enhetsgruppemedlemskap
+description: Einingsgruppemelemskap.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:enhetsgruppemedlemskap
 alias: enhetsgruppemedlemskap
 domain_of:
 - DigitalEnhet
 - Enhetsgruppe
-range: string
+range: Enhetsgruppemedlemskap
+multivalued: true
 
 ```
 </details>

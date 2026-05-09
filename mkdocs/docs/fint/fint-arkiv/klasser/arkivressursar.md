@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:arkivressursar](https://schema.fintlabs.no/arkiv/:arkivressursar)
+URI: [ark:arkivressursar](https://schema.fintlabs.no/arkiv/arkivressursar)
 Alias: arkivressursar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: arkivressursar
 | --- | --- |
 | Range | [Arkivressurs](arkivressurs.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:arkivressursar](https://schema.fintlabs.no/arkiv/arkivressursar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: arkivressursar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:arkivressursar |
+| self | ark:arkivressursar |
 | native | https://schema.fintlabs.no/arkiv/:arkivressursar |
 
 
@@ -86,8 +80,8 @@ Alias: arkivressursar
 name: arkivressursar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:arkivressursar
 alias: arkivressursar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Arkivressurs

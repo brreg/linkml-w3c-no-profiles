@@ -22,7 +22,7 @@ Alias: bostedsadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: bostedsadresse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: bostedsadresse
 ```yaml
 name: bostedsadresse
 description: Folkeregistrert adresse til personen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:bostedsadresse
 alias: bostedsadresse
-owner: Person
 domain_of:
 - Person
 range: Adresse

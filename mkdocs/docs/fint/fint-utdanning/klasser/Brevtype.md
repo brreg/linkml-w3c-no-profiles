@@ -3,7 +3,7 @@
 # Slot: brevtype 
 
 
-_Type brev knytt til prøva._
+_Type brev._
 
 
 
@@ -22,7 +22,7 @@ Alias: brevtype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  no  |
+| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: brevtype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AvlagtProve](avlagtprove.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: brevtype
 <details>
 ```yaml
 name: brevtype
-description: Type brev knytt til prøva.
-in_subset:
-- Valgfri
+description: Type brev.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:brevtype
 alias: brevtype
-owner: AvlagtProve
 domain_of:
 - AvlagtProve
 range: Brevtype

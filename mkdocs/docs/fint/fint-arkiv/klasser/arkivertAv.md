@@ -23,7 +23,7 @@ Alias: arkivertAv
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 
 
 
@@ -44,24 +44,10 @@ Alias: arkivertAv
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Registrering](registrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -98,17 +84,13 @@ Alias: arkivertAv
 ```yaml
 name: arkivertAv
 description: Person som arkiverte arkivenheten.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:arkivertAv
 alias: arkivertAv
-owner: Registrering
 domain_of:
 - Registrering
 range: Arkivressurs
-required: true
 
 ```
 </details>

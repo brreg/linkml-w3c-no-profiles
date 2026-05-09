@@ -76,137 +76,140 @@ Name: fint-administrasjon
 | [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
 | [aktivitet](aktivitet.md) | Detaljering av funksjon |
-| [aktivitetar](aktivitetar.md) |  |
-| [anlegg](anlegg.md) |  |
+| [aktivitetar](aktivitetar.md) | Alle aktivitetar i containeren |
+| [anlegg](anlegg.md) | Objekt som skal aktiverast eller avskrivast |
 | [ansattnummer](ansattnummer.md) | Unik identifikator for den tilsette i HR-systemet |
 | [ansettelsesperiode](ansettelsesperiode.md) | Perioden personalressursen er i eit tilhøve til organisasjonen |
 | [ansettelsesprosent](ansettelsesprosent.md) | Prosenten personalressursen eig i høve til arbeidsavtalen |
 | [ansiennitet](ansiennitet.md) | Ansiennitet for personalressurs hos arbeidsgjevar |
-| [ansvar](ansvar.md) |  |
+| [ansvar](ansvar.md) | Ansvarleg for ei utgift eller inntekt |
 | [antall](antall.md) | Mengde som vert beskriven av tillegget, i hundredeler |
 | [anviser](anviser.md) | Personalressurs som har anvist lønsmeldinga etter fullmakt |
 | [anvist](anvist.md) | Tidspunkt då lønn vart anvist |
-| [arbeidsforhold](arbeidsforhold.md) |  |
+| [arbeidsforhold](arbeidsforhold.md) | Arbeidsforhold ressursen er knytt til |
 | [arbeidsforholdsperiode](arbeidsforholdsperiode.md) | Periode for ei gjeven stilling |
-| [arbeidsforholdstypar](arbeidsforholdstypar.md) |  |
+| [arbeidsforholdstypar](arbeidsforholdstypar.md) | Alle arbeidsforholdstypar i containeren |
 | [arbeidsforholdstype](arbeidsforholdstype.md) | Beskriven kode som kategoriserer kva funksjon stillinga er gruppert til |
 | [arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der den tilsette har sitt arbeidsstad |
-| [arbeidslokasjoner](arbeidslokasjoner.md) |  |
+| [arbeidslokasjoner](arbeidslokasjoner.md) | Alle arbeidslokasjoner i containeren |
 | [arbeidssted](arbeidssted.md) | Tilhøyrsle til organisasjonsstrukturen |
 | [art](art.md) | Type inntekt eller utgift |
-| [artar](artar.md) |  |
+| [artar](artar.md) | Alle artar i containeren |
 | [attestant](attestant.md) | Personalressurs som har attestert lønsmeldinga etter fullmakt |
 | [attestert](attestert.md) | Tidspunkt då lønn vart attestert |
 | [belop](belop.md) | Beløp i øre |
-| [beskrivelse](beskrivelse.md) | Beskriving av lønn til føring på lønnslipp |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [brukernavn](brukernavn.md) | Brukarnamn til den tilsette |
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
-| [diverse](diverse.md) |  |
+| [diverse](diverse.md) | Spesifikasjon som ikkje kjem fram i øvrige dimensjonar |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
-| [fastlonn](fastlonn.md) |  |
-| [fasttillegg](fasttillegg.md) |  |
+| [fastlonn](fastlonn.md) | Fastlønn for arbeidsforholdet |
+| [fasttillegg](fasttillegg.md) | Faste tillegg for arbeidsforholdet |
 | [festenummer](festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
 | [fodselsdato](fodselsdato.md) | Dato for fødsel |
 | [fodselsnummer](fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
-| [forelder](forelder.md) | For å byggje hierarki av Arbeidsforholdstype |
+| [forelder](forelder.md) | Foreldreelement i hierarki |
 | [foreldre](foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](foreldreansvar.md) | Personar denne personen har foreldreansvar for |
-| [formaal](formaal.md) |  |
+| [formaal](formaal.md) | Formål viser aktivitet og tenesteproduksjon |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Besøksadresse til organisasjonseininga |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fortsettelse](fortsettelse.md) | Fortsetjande fråvær |
 | [fortsetter](fortsetter.md) | Fråværet dette fråværet er fortsetjing av |
-| [fravaer](fravaer.md) |  |
+| [fravaer](fravaer.md) | Fråvær knytt til ressursen |
 | [fravaersgrunn](fravaersgrunn.md) | Grunn til fråværet |
-| [fravaersgrunnar](fravaersgrunnar.md) |  |
-| [fravaerstypar](fravaerstypar.md) |  |
+| [fravaersgrunnar](fravaersgrunnar.md) | Alle fråværsgrunnar i containeren |
+| [fravaerstypar](fravaerstypar.md) | Alle fråværstypar i containeren |
 | [fravaerstype](fravaerstype.md) | Type fråvær |
-| [fullmakt](fullmakt.md) | Alle fullmakter av denne typen |
-| [fullmakter](fullmakter.md) |  |
+| [fullmakt](fullmakt.md) | Fullmakt ressursen er knytt til |
+| [fullmakter](fullmakter.md) | Alle fullmakter i containeren |
 | [fullmektig](fullmektig.md) | Personalressurs som har fått fullmakt til ei gjeven rolle |
 | [funksjon](funksjon.md) | Det som vert produsert eller tenesta som vert levert |
-| [funksjonar](funksjonar.md) |  |
-| [fylke](fylke.md) |  |
+| [funksjonar](funksjonar.md) | Alle funksjonar i containeren |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
 | [godkjenner](godkjenner.md) | Personalressurs som har godkjent fråværsmeldinga |
 | [godkjent](godkjent.md) | Tidspunkt då fråværet vart godkjent |
-| [gyldighetsperiode](gyldighetsperiode.md) | Periode fullmakta er gyldig for |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [hovedstilling](hovedstilling.md) | Angir kva arbeidsforhold som er hovudarbeidsforhold |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
 | [jobbtittel](jobbtittel.md) | Namn som beskriv jobben eller stillinga |
 | [kategori](kategori.md) | Kategori lønnsart |
-| [kildesystemId](kildesystemid.md) | Kjeldesystemets unike identifikator for lønn |
-| [kjonn](kjonn.md) |  |
+| [kildesystemId](kildesystemid.md) | Kjeldesystemets unike identifikator |
+| [kjonn](kjonn.md) | Kjønn |
 | [kode](kode.md) | Verdi som identifiserer omgrepet |
-| [kommunar](kommunar.md) |  |
-| [kommune](kommune.md) | Alle kommunar som inngår i fylket |
+| [kommunar](kommunar.md) | Alle kommuneverdiar i containeren |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
-| [kontaktinformasjon](kontaktinformasjon.md) | Kontaktinformasjon til arbeidslokasjonen |
+| [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktpersonar](kontaktpersonar.md) |  |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktpersonar](kontaktpersonar.md) | Alle kontaktpersonar i containeren |
 | [konterer](konterer.md) | Personalressurs som har kontert lønsmeldinga etter fullmakt |
 | [kontert](kontert.md) | Tidspunkt då lønn vart kontert |
 | [kontostreng](kontostreng.md) | Kontering av lønn |
-| [kontrakt](kontrakt.md) | Kontostrengens kontraktsegment |
-| [kontrakter](kontrakter.md) |  |
+| [kontrakt](kontrakt.md) | Kontrakt ressursen er knytt til |
+| [kontrakter](kontrakter.md) | Alle kontrakter i containeren |
 | [kortnavn](kortnavn.md) | Forkorta namn som beskriv organisasjonselementet |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
-| [landkodar](landkodar.md) |  |
+| [landkodar](landkodar.md) | Alle landkodar i containeren |
 | [leder](leder.md) | Ansvarleg leiar for organisasjonselementet |
 | [lederFor](lederfor.md) | Organisasjonselement personalressursen er leiar for |
 | [lokasjonskode](lokasjonskode.md) | Kode som identifiserer ein arbeidslokasjon |
 | [lokasjonsnavn](lokasjonsnavn.md) | Namn som beskriv ein arbeidslokasjon |
 | [lonnsprosent](lonnsprosent.md) | Prosent av årslønn den tilsette skal ha utbetalt |
-| [lonsart](lonsart.md) | Lønnsart fråværstypen vert ført på |
-| [lonsartar](lonsartar.md) |  |
-| [lopenummer](lopenummer.md) |  |
+| [lonsart](lonsart.md) | Lønnsart |
+| [lonsartar](lonsartar.md) | Alle lønnsartar i containeren |
+| [lopenummer](lopenummer.md) | Løpenummer i ei nummerserie |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
+| [naam](naam.md) | Hovudnamn for ressursen |
 | [navn](navn.md) | Namn på organisasjonselementet |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
-| [objekt](objekt.md) |  |
+| [objekt](objekt.md) | Objekt ressursen er knytt til |
 | [opptjent](opptjent.md) | Periode der lønn vart opptent |
-| [organisasjonselement](organisasjonselement.md) |  |
+| [organisasjonselement](organisasjonselement.md) | Organisasjonselement ressursen er knytt til |
 | [organisasjonsId](organisasjonsid.md) | Unikt internnummer for organisasjonselementet |
 | [organisasjonsKode](organisasjonskode.md) | Beskriven kode for organisasjonselementet |
 | [organisasjonsnavn](organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
-| [organisasjonstypar](organisasjonstypar.md) |  |
+| [organisasjonstypar](organisasjonstypar.md) | Alle organisasjonstypar i containeren |
 | [organisasjonstype](organisasjonstype.md) | Kva type organisasjonselement dette er |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [overfores](overfores.md) | Angir om fråvær av denne typen skal overførast til HR |
-| [overordnet](overordnet.md) | Overordna ansvar |
+| [overordnet](overordnet.md) | Overordna element i hierarkiet |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [periode](periode.md) | Periode lønn vert utbetalt |
+| [periode](periode.md) | Periode for ressursen |
 | [person](person.md) | Person som er ein personalressurs |
+| [person_naam](person_naam.md) | Namn på personen |
 | [personalansvar](personalansvar.md) | Arbeidsforhold der personalressursen har personalansvar |
 | [personalleder](personalleder.md) | Personalleiar til arbeidsforholdet |
 | [personalressurs](personalressurs.md) | Personalressurs til arbeidsforholdet |
-| [personalressursar](personalressursar.md) |  |
+| [personalressursar](personalressursar.md) | Alle personalressursar i containeren |
 | [personalressurskategori](personalressurskategori.md) | Kategori for personalressursen |
-| [personalressurskategoriar](personalressurskategoriar.md) |  |
-| [personar](personar.md) |  |
-| [postadresse](postadresse.md) | Postadresse til arbeidslokasjonen |
+| [personalressurskategoriar](personalressurskategoriar.md) | Alle personalressurskategoriar i containeren |
+| [personar](personar.md) | Alle personar i containeren |
+| [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststed](poststed.md) | Poststad |
-| [prosent](prosent.md) | Andel av lønnsprosent som vert beslaglagt |
-| [prosjekt](prosjekt.md) |  |
+| [prosent](prosent.md) | Prosent |
+| [prosjekt](prosjekt.md) | Prosjekt ressursen er knytt til |
 | [prosjektart](prosjektart.md) | Deloppgåve eller delprosjekt |
-| [prosjektartar](prosjektartar.md) |  |
+| [prosjektartar](prosjektartar.md) | Alle prosjektartar i containeren |
 | [ramme](ramme.md) | Budsjettramme som skal bere kostnadane |
-| [rammer](rammer.md) |  |
-| [rollar](rollar.md) |  |
+| [rammer](rammer.md) | Alle rammer i containeren |
+| [rollar](rollar.md) | Alle rollar i containeren |
 | [rolle](rolle.md) | Kva type fullmakt |
 | [rolleNavn](rollenavn.md) | Namn på rolla; unik identifikator |
 | [seksjonsnummer](seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
@@ -214,24 +217,25 @@ Name: fint-administrasjon
 | [skole](skole.md) | Referanse til Skole (Utdanning) |
 | [skoleressurs](skoleressurs.md) | Referanse til Skoleressurs (Utdanning) |
 | [slutt](slutt.md) | Til tidspunkt |
-| [spraak](spraak.md) |  |
+| [spraak](spraak.md) | Alle språkverdiar i containeren |
 | [start](start.md) | Frå tidspunkt |
 | [statsborgerskap](statsborgerskap.md) | Alle statsborgarskap personen har |
-| [stedfortreder](stedfortreder.md) | Personalressurs som er stedfortredar for den fullmektige |
+| [stedfortreder](stedfortreder.md) | Stedfortredar i fullmaktssamanheng |
 | [stillingskode](stillingskode.md) | Firesifra stillingskode frå KS, eventuelt utvida med to siffer |
-| [stillingskoder](stillingskoder.md) |  |
+| [stillingskoder](stillingskoder.md) | Alle stillingskoder i containeren |
 | [stillingsnummer](stillingsnummer.md) | Løpenummer for stillinga |
 | [stillingstittel](stillingstittel.md) | Arbeidstakarens stillingstittel i gjeldande stilling |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
 | [tilstedeprosent](tilstedeprosent.md) | Det personalressursen faktisk jobbar |
 | [timerPerUke](timerperuke.md) | Timer per veke i 100 % stilling |
-| [type](type.md) | Beskriv kva slags type kontaktperson |
-| [uketimetall](uketimetall.md) |  |
-| [underordnet](underordnet.md) | Alle underansvar |
+| [type](type.md) | Beskriv kva slags type |
+| [uketimetall](uketimetall.md) | Alle uketimetallverdiar i containeren |
+| [underordnet](underordnet.md) | Underordna element i hierarkiet |
 | [undervisningsforhold](undervisningsforhold.md) | Referanse til Undervisningsforhold (Utdanning) |
-| [valuta](valuta.md) |  |
-| [variabellonn](variabellonn.md) |  |
-| [virksomhetar](virksomhetar.md) |  |
+| [valuta](valuta.md) | Alle valutaverdiar i containeren |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [variabellonn](variabellonn.md) | Variabel lønn for arbeidsforholdet |
+| [virksomhetar](virksomhetar.md) | Alle verksemder i containeren |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 

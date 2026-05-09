@@ -23,7 +23,7 @@ Alias: saksbehandler
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: saksbehandler
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Registrering](registrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: saksbehandler
 ```yaml
 name: saksbehandler
 description: Person som er saksbehandlar.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:saksbehandler
 alias: saksbehandler
-owner: Registrering
 domain_of:
 - Registrering
 range: Arkivressurs

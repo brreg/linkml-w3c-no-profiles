@@ -22,7 +22,7 @@ Alias: skolenummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: skolenummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skole](skole.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: skolenummer
 ```yaml
 name: skolenummer
 description: Nasjonal skulenummer-identifikator.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:skolenummer
 alias: skolenummer
-owner: Skole
 domain_of:
 - Skole
 range: Identifikator

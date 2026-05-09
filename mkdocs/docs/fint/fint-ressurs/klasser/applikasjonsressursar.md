@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:applikasjonsressursar](https://schema.fintlabs.no/ressurs/:applikasjonsressursar)
+URI: [res:applikasjonsressursar](https://schema.fintlabs.no/ressurs/applikasjonsressursar)
 Alias: applikasjonsressursar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: applikasjonsressursar
 | --- | --- |
 | Range | [Applikasjonsressurs](applikasjonsressurs.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:applikasjonsressursar](https://schema.fintlabs.no/ressurs/applikasjonsressursar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: applikasjonsressursar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:applikasjonsressursar |
+| self | res:applikasjonsressursar |
 | native | https://schema.fintlabs.no/ressurs/:applikasjonsressursar |
 
 
@@ -86,8 +80,8 @@ Alias: applikasjonsressursar
 name: applikasjonsressursar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:applikasjonsressursar
 alias: applikasjonsressursar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Applikasjonsressurs

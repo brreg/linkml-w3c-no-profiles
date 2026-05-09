@@ -22,7 +22,7 @@ Alias: merknadstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Merknad](merknad.md) | Merknad knytt til mappe, registrering eller dokumentbeskrivelse |  no  |
+| [Merknad](merknad.md) | Merknad knytt til mappe, registrering eller dokumentbeskrivelse |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: merknadstype
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Merknad](merknad.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: merknadstype
 ```yaml
 name: merknadstype
 description: Type merknad.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:merknadstype
 alias: merknadstype
-owner: Merknad
 domain_of:
 - Merknad
 range: Merknadstype
-required: true
 
 ```
 </details>

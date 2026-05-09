@@ -3,7 +3,7 @@
 # Slot: avgiftsbelop 
 
 
-_Del av totalbeløp som er avgifter, i øre (avgiftsbeløp)._
+_Del av totalbeløp som er avgifter, i øre._
 
 
 
@@ -22,7 +22,7 @@ Alias: avgiftsbelop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: avgiftsbelop
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: avgiftsbelop
 <details>
 ```yaml
 name: avgiftsbelop
-description: Del av totalbeløp som er avgifter, i øre (avgiftsbeløp).
-in_subset:
-- Valgfri
+description: Del av totalbeløp som er avgifter, i øre.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:avgiftsbelop
 alias: avgiftsbelop
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: integer

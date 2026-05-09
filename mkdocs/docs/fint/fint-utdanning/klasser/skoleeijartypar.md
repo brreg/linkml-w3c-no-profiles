@@ -3,8 +3,13 @@
 # Slot: skoleeijartypar 
 
 
+_Alle skuleeigarstypar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:skoleeijartypar](https://schema.fintlabs.no/utdanning/:skoleeijartypar)
+
+
+
+
+URI: [utd:skoleeijartypar](https://schema.fintlabs.no/utdanning/skoleeijartypar)
 Alias: skoleeijartypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: skoleeijartypar
 | --- | --- |
 | Range | [Skoleeiertype](skoleeiertype.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:skoleeijartypar](https://schema.fintlabs.no/utdanning/skoleeijartypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: skoleeijartypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:skoleeijartypar |
+| self | utd:skoleeijartypar |
 | native | https://schema.fintlabs.no/utdanning/:skoleeijartypar |
 
 
@@ -84,10 +83,11 @@ Alias: skoleeijartypar
 <details>
 ```yaml
 name: skoleeijartypar
+description: Alle skuleeigarstypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:skoleeijartypar
 alias: skoleeijartypar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Skoleeiertype

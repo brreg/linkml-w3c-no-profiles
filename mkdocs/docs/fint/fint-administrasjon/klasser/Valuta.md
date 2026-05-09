@@ -3,8 +3,13 @@
 # Slot: valuta 
 
 
+_Alle valutaverdiar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:valuta](https://schema.fintlabs.no/administrasjon/:valuta)
+
+
+
+
+URI: [adm:valuta](https://schema.fintlabs.no/administrasjon/valuta)
 Alias: valuta
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: valuta
 | --- | --- |
 | Range | [Valuta](valuta.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:valuta](https://schema.fintlabs.no/administrasjon/valuta) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: valuta
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:valuta |
+| self | adm:valuta |
 | native | https://schema.fintlabs.no/administrasjon/:valuta |
 
 
@@ -84,10 +83,11 @@ Alias: valuta
 <details>
 ```yaml
 name: valuta
+description: Alle valutaverdiar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:valuta
 alias: valuta
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Valuta

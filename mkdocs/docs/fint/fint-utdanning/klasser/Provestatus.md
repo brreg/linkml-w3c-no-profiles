@@ -22,7 +22,7 @@ Alias: provestatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  no  |
+| [AvlagtProve](avlagtprove.md) | Ei avlagt prøve for ein lærling |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: provestatus
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AvlagtProve](avlagtprove.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: provestatus
 ```yaml
 name: provestatus
 description: Status for prøva.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:provestatus
 alias: provestatus
-owner: AvlagtProve
 domain_of:
 - AvlagtProve
 range: Provestatus

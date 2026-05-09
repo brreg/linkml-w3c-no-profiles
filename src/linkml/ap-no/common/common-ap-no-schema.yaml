@@ -140,15 +140,15 @@ slots:
     range: date
     description: Dato ressursen vart første gong publisert (dct:issued).
 
-  sprak:
+  spraak:
     slot_uri: dct:language
-    range: Spraak
+    range: string
     multivalued: true
     description: Språk brukt i ressursen (dct:language).
 
   format:
     slot_uri: dct:format
-    range: Mediatype
+    range: string
     description: Filformat eller medietype (dct:format).
 
   har_referanse:
@@ -174,7 +174,7 @@ slots:
     multivalued: true
     description: Nøkkelord som beskriv ressursen (dcat:keyword).
 
-  dekningsomrade:
+  dekningsomraade:
     slot_uri: dct:spatial
     range: Konsept
     multivalued: true

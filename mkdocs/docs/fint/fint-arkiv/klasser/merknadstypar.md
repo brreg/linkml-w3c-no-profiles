@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:merknadstypar](https://schema.fintlabs.no/arkiv/:merknadstypar)
+URI: [ark:merknadstypar](https://schema.fintlabs.no/arkiv/merknadstypar)
 Alias: merknadstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: merknadstypar
 | --- | --- |
 | Range | [Merknadstype](merknadstype.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:merknadstypar](https://schema.fintlabs.no/arkiv/merknadstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: merknadstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:merknadstypar |
+| self | ark:merknadstypar |
 | native | https://schema.fintlabs.no/arkiv/:merknadstypar |
 
 
@@ -86,8 +80,8 @@ Alias: merknadstypar
 name: merknadstypar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:merknadstypar
 alias: merknadstypar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Merknadstype

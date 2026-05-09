@@ -68,39 +68,9 @@ URI: [okn:Kontostreng](https://schema.fintlabs.no/okonomi/Kontostreng)
 
   
   
-
-  
-  
-
-  
+    
   
 
-  
-  
-
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-
-  
-  
   
   
     
@@ -108,34 +78,102 @@ URI: [okn:Kontostreng](https://schema.fintlabs.no/okonomi/Kontostreng)
 
   
   
-  
-  
-    
-  
 
   
   
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
 
 
-### Andre
+### Anbefalt
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [art](art.md) | 0..1 <br/> [String](string.md) | Artskonto (type utgift/inntekt) |
 | [funksjon](funksjon.md) | 0..1 <br/> [String](string.md) | Funksjonskode (KOSTRA) |
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
 | [ansvar](ansvar.md) | 0..1 <br/> [String](string.md) | Ansvarsomrade |
 | [prosjekt](prosjekt.md) | 0..1 <br/> [String](string.md) | Prosjektkode |
+
+
+
+
+
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
+
+  
+  
+  
+    
+      
+    
+      
+    
+      
+    
+  
+  
 
 
 
@@ -199,51 +237,28 @@ URI: [okn:Kontostreng](https://schema.fintlabs.no/okonomi/Kontostreng)
 name: Kontostreng
 description: Kontodimensjonar for ei postering (kompleks datatype).
 from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
+slots:
+- art
+- funksjon
+- ansvar
+- prosjekt
+slot_usage:
   art:
     name: art
-    description: Artskonto (type utgift/inntekt).
     in_subset:
     - Anbefalt
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:art
-    domain_of:
-    - Kontostreng
-    range: string
   funksjon:
     name: funksjon
-    description: Funksjonskode (KOSTRA).
     in_subset:
     - Anbefalt
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:funksjon
-    domain_of:
-    - Kontostreng
-    range: string
   ansvar:
     name: ansvar
-    description: Ansvarsomrade.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:ansvar
-    domain_of:
-    - Kontostreng
-    range: string
   prosjekt:
     name: prosjekt
-    description: Prosjektkode.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    rank: 1000
-    slot_uri: okn:prosjekt
-    domain_of:
-    - Kontostreng
-    range: string
 class_uri: okn:Kontostreng
 
 ```
@@ -256,6 +271,23 @@ class_uri: okn:Kontostreng
 name: Kontostreng
 description: Kontodimensjonar for ei postering (kompleks datatype).
 from_schema: https://data.norge.no/linkml/fint-okonomi
+slot_usage:
+  art:
+    name: art
+    in_subset:
+    - Anbefalt
+  funksjon:
+    name: funksjon
+    in_subset:
+    - Anbefalt
+  ansvar:
+    name: ansvar
+    in_subset:
+    - Valgfri
+  prosjekt:
+    name: prosjekt
+    in_subset:
+    - Valgfri
 attributes:
   art:
     name: art

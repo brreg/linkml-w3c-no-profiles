@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:sakar](https://schema.fintlabs.no/arkiv/:sakar)
+URI: [ark:sakar](https://schema.fintlabs.no/arkiv/sakar)
 Alias: sakar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: sakar
 | --- | --- |
 | Range | [Sak](sak.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:sakar](https://schema.fintlabs.no/arkiv/sakar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: sakar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:sakar |
+| self | ark:sakar |
 | native | https://schema.fintlabs.no/arkiv/:sakar |
 
 
@@ -86,8 +80,8 @@ Alias: sakar
 name: sakar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:sakar
 alias: sakar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Sak

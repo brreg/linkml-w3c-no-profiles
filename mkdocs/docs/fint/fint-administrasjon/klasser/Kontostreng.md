@@ -22,10 +22,10 @@ Alias: kontostreng
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  no  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 | [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
 
 
 
@@ -46,24 +46,10 @@ Alias: kontostreng
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Lonn](lonn.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -100,17 +86,13 @@ Alias: kontostreng
 ```yaml
 name: kontostreng
 description: Kontering av lønn.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:kontostreng
 alias: kontostreng
-owner: Lonn
 domain_of:
 - Lonn
 range: Kontostreng
-required: true
 inlined: true
 
 ```

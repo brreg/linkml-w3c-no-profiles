@@ -22,7 +22,7 @@ Alias: applikasjonskategori
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: applikasjonskategori
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjon](applikasjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: applikasjonskategori
 ```yaml
 name: applikasjonskategori
 description: Kategoriar av applikasjonar.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:applikasjonskategori
 alias: applikasjonskategori
-owner: Applikasjon
 domain_of:
 - Applikasjon
 range: Applikasjonskategori

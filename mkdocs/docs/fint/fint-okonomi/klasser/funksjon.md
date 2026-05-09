@@ -22,7 +22,7 @@ Alias: funksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  no  |
+| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: funksjon
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontostreng](kontostreng.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Anbefalt](anbefalt.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: funksjon
 ```yaml
 name: funksjon
 description: Funksjonskode (KOSTRA).
-in_subset:
-- Anbefalt
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:funksjon
 alias: funksjon
-owner: Kontostreng
 domain_of:
 - Kontostreng
 range: string

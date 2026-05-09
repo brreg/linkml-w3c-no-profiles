@@ -3,8 +3,13 @@
 # Slot: klassemedlemskap 
 
 
+_Klassemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:klassemedlemskap](https://schema.fintlabs.no/utdanning/:klassemedlemskap)
+
+
+
+
+URI: [utd:klassemedlemskap](https://schema.fintlabs.no/utdanning/klassemedlemskap)
 Alias: klassemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: klassemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -32,13 +37,15 @@ Alias: klassemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Klassemedlemskap](klassemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md), [Klasse](klasse.md) |
+| Slot URI | [utd:klassemedlemskap](https://schema.fintlabs.no/utdanning/klassemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,12 +62,19 @@ Alias: klassemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:klassemedlemskap |
+| self | utd:klassemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:klassemedlemskap |
 
 
@@ -71,12 +85,17 @@ Alias: klassemedlemskap
 <details>
 ```yaml
 name: klassemedlemskap
+description: Klassemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:klassemedlemskap
 alias: klassemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
 - Klasse
-range: string
+range: Klassemedlemskap
+multivalued: true
 
 ```
 </details>

@@ -22,7 +22,7 @@ Alias: kallesignal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: kallesignal
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [TilskuddFartoy](tilskuddfartoy.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: kallesignal
 ```yaml
 name: kallesignal
 description: Fartøyets kallesignal.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:kallesignal
 alias: kallesignal
-owner: TilskuddFartoy
 domain_of:
 - TilskuddFartoy
 range: string
-required: true
 
 ```
 </details>

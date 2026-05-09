@@ -3,8 +3,13 @@
 # Slot: otStatus 
 
 
+_Alle OT-statuser i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:otStatus](https://schema.fintlabs.no/utdanning/:otStatus)
+
+
+
+
+URI: [utd:otStatus](https://schema.fintlabs.no/utdanning/otStatus)
 Alias: otStatus
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: otStatus
 | --- | --- |
 | Range | [OtStatus](otstatus.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:otStatus](https://schema.fintlabs.no/utdanning/otStatus) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: otStatus
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:otStatus |
+| self | utd:otStatus |
 | native | https://schema.fintlabs.no/utdanning/:otStatus |
 
 
@@ -84,10 +83,11 @@ Alias: otStatus
 <details>
 ```yaml
 name: otStatus
+description: Alle OT-statuser i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:otStatus
 alias: otStatus
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: OtStatus

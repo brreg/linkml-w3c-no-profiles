@@ -3,8 +3,13 @@
 # Slot: merknad 
 
 
+_Merknader knytt til arkivenhet._
 
-URI: [https://schema.fintlabs.no/arkiv/:merknad](https://schema.fintlabs.no/arkiv/:merknad)
+
+
+
+
+URI: [ark:merknad](https://schema.fintlabs.no/arkiv/merknad)
 Alias: merknad
 
 <!-- no inheritance hierarchy -->
@@ -17,16 +22,16 @@ Alias: merknad
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
 | [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
 | [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 
 
 
@@ -39,13 +44,15 @@ Alias: merknad
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Merknad](merknad.md) |
 | Domain Of | [Mappe](mappe.md), [Registrering](registrering.md) |
+| Slot URI | [ark:merknad](https://schema.fintlabs.no/arkiv/merknad) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -62,12 +69,19 @@ Alias: merknad
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:merknad |
+| self | ark:merknad |
 | native | https://schema.fintlabs.no/arkiv/:merknad |
 
 
@@ -78,11 +92,18 @@ Alias: merknad
 <details>
 ```yaml
 name: merknad
+description: Merknader knytt til arkivenhet.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:merknad
 alias: merknad
 domain_of:
 - Mappe
 - Registrering
-range: string
+range: Merknad
+multivalued: true
+inlined: true
+inlined_as_list: true
 
 ```
 </details>

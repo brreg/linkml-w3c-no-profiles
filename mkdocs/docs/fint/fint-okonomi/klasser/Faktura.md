@@ -22,7 +22,7 @@ Alias: faktura
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: faktura
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: faktura
 ```yaml
 name: faktura
 description: Utferdigde fakturaer for fakturagrunnlaget.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:faktura
 alias: faktura
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: Faktura

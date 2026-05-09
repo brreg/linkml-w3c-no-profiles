@@ -22,7 +22,7 @@ Alias: prosjekt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  no  |
+| [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: prosjekt
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontostreng](kontostreng.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: prosjekt
 ```yaml
 name: prosjekt
 description: Prosjektkode.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:prosjekt
 alias: prosjekt
-owner: Kontostreng
 domain_of:
 - Kontostreng
 range: string

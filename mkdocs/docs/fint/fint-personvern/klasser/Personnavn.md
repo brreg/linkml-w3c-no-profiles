@@ -91,6 +91,14 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -104,6 +112,14 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
 
   
   
+  
+    
+      
+    
+      
+    
+      
+    
   
   
     
@@ -129,8 +145,8 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Person](person.md) | [navn](navn.md) | range | [Personnavn](personnavn.md) |
-| [Kontaktperson](kontaktperson.md) | [navn](navn.md) | range | [Personnavn](personnavn.md) |
+| [Person](person.md) | [person_naam](person_naam.md) | range | [Personnavn](personnavn.md) |
+| [Kontaktperson](kontaktperson.md) | [kontaktperson_naam](kontaktperson_naam.md) | range | [Personnavn](personnavn.md) |
 
 
 
@@ -180,35 +196,16 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
 name: Personnavn
 description: Namn på ein person.
 from_schema: https://data.norge.no/linkml/fint-personvern
-attributes:
+slots:
+- fornavn
+- mellomnavn
+- etternavn
+slot_usage:
   fornavn:
     name: fornavn
-    description: Fornamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:fornavn
-    domain_of:
-    - Personnavn
-    range: string
     required: true
-  mellomnavn:
-    name: mellomnavn
-    description: Mellomnamn.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:mellomnavn
-    domain_of:
-    - Personnavn
-    range: string
   etternavn:
     name: etternavn
-    description: Etternamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:etternavn
-    domain_of:
-    - Personnavn
-    range: string
     required: true
 class_uri: fint:Personnavn
 
@@ -222,11 +219,18 @@ class_uri: fint:Personnavn
 name: Personnavn
 description: Namn på ein person.
 from_schema: https://data.norge.no/linkml/fint-personvern
+slot_usage:
+  fornavn:
+    name: fornavn
+    required: true
+  etternavn:
+    name: etternavn
+    required: true
 attributes:
   fornavn:
     name: fornavn
     description: Fornamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
     slot_uri: fint:fornavn
     alias: fornavn
@@ -238,7 +242,7 @@ attributes:
   mellomnavn:
     name: mellomnavn
     description: Mellomnamn.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
     slot_uri: fint:mellomnavn
     alias: mellomnavn
@@ -249,7 +253,7 @@ attributes:
   etternavn:
     name: etternavn
     description: Etternamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-personvern
     rank: 1000
     slot_uri: fint:etternavn
     alias: etternavn

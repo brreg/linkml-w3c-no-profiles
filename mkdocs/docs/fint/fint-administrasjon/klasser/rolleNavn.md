@@ -22,7 +22,7 @@ Alias: rolleNavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rolle](rolle.md) | Rettighet eller type fullmakt |  no  |
+| [Rolle](rolle.md) | Rettighet eller type fullmakt |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: rolleNavn
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Rolle](rolle.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: rolleNavn
 ```yaml
 name: rolleNavn
 description: Namn på rolla; unik identifikator.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:rolleNavn
 alias: rolleNavn
-owner: Rolle
 domain_of:
 - Rolle
 range: Identifikator
-required: true
 inlined: true
 
 ```

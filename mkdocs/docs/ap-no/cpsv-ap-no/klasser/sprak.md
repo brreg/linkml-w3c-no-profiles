@@ -23,10 +23,10 @@ Alias: sprak
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Kontaktpunkt](kontaktpunkt.md) | Kontaktinformasjon for ei teneste eller ein organisasjon |  yes  |
-| [Katalog](katalog.md) | Ein katalog over offentlege tenester og hendingar |  yes  |
 | [Regel](regel.md) | Eit regelverk eller retningsliner som styrer levering av ei teneste |  yes  |
-| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  yes  |
 | [Tjeneste](tjeneste.md) | Ei teneste levert av ein ikkje-offentleg aktør |  yes  |
+| [Katalog](katalog.md) | Ein katalog over offentlege tenester og hendingar |  yes  |
+| [OffentligTjeneste](offentligtjeneste.md) | Ei konkret offentleg teneste levert av ein offentleg organisasjon |  yes  |
 
 
 

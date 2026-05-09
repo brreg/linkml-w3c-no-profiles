@@ -3,8 +3,13 @@
 # Slot: soeknadsnummer 
 
 
+_Søknadsnummer frå Digisak._
 
-URI: [https://schema.fintlabs.no/arkiv/:soeknadsnummer](https://schema.fintlabs.no/arkiv/:soeknadsnummer)
+
+
+
+
+URI: [ark:soeknadsnummer](https://schema.fintlabs.no/arkiv/soeknadsnummer)
 Alias: soeknadsnummer
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: soeknadsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  yes  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  yes  |
+| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: soeknadsnummer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Identifikator](identifikator.md) |
 | Domain Of | [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md), [TilskuddFartoy](tilskuddfartoy.md), [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |
+| Slot URI | [ark:soeknadsnummer](https://schema.fintlabs.no/arkiv/soeknadsnummer) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: soeknadsnummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:soeknadsnummer |
+| self | ark:soeknadsnummer |
 | native | https://schema.fintlabs.no/arkiv/:soeknadsnummer |
 
 
@@ -71,12 +84,17 @@ Alias: soeknadsnummer
 <details>
 ```yaml
 name: soeknadsnummer
+description: Søknadsnummer frå Digisak.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:soeknadsnummer
 alias: soeknadsnummer
 domain_of:
 - DispensasjonAutomatiskFredaKulturminne
 - TilskuddFartoy
 - TilskuddFredaBygningPrivatEie
-range: string
+range: Identifikator
+inlined: true
 
 ```
 </details>

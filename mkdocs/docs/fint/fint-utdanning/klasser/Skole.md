@@ -3,8 +3,13 @@
 # Slot: skole 
 
 
+_Skulen dette gjeld._
 
-URI: [https://schema.fintlabs.no/utdanning/:skole](https://schema.fintlabs.no/utdanning/:skole)
+
+
+
+
+URI: [utd:skole](https://schema.fintlabs.no/utdanning/skole)
 Alias: skole
 
 <!-- no inheritance hierarchy -->
@@ -17,16 +22,16 @@ Alias: skole
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
-| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
-| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  yes  |
+| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
+| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  yes  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
 
 
 
@@ -39,8 +44,9 @@ Alias: skole
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Skole](skole.md) |
 | Domain Of | [Elevforhold](elevforhold.md), [Klasse](klasse.md), [Kontaktlaerergruppe](kontaktlaerergruppe.md), [Persongruppe](persongruppe.md), [Skoleressurs](skoleressurs.md), [Utdanningsprogram](utdanningsprogram.md), [Fag](fag.md), [Faggruppe](faggruppe.md), [Undervisningsgruppe](undervisningsgruppe.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:skole](https://schema.fintlabs.no/utdanning/skole) |
 
 ### Cardinality and Requirements
 
@@ -62,12 +68,19 @@ Alias: skole
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:skole |
+| self | utd:skole |
 | native | https://schema.fintlabs.no/utdanning/:skole |
 
 
@@ -78,6 +91,10 @@ Alias: skole
 <details>
 ```yaml
 name: skole
+description: Skulen dette gjeld.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:skole
 alias: skole
 domain_of:
 - Elevforhold
@@ -90,7 +107,7 @@ domain_of:
 - Faggruppe
 - Undervisningsgruppe
 - Eksamensgruppe
-range: string
+range: Skole
 
 ```
 </details>

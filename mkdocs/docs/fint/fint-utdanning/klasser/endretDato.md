@@ -22,7 +22,7 @@ Alias: endretDato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  no  |
+| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: endretDato
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterhistorie](karakterhistorie.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: endretDato
 ```yaml
 name: endretDato
 description: Dato og tidspunkt for endringa.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:endretDato
 alias: endretDato
-owner: Karakterhistorie
 domain_of:
 - Karakterhistorie
 range: datetime
-required: true
 
 ```
 </details>

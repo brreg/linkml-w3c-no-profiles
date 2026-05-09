@@ -22,7 +22,7 @@ Alias: arbeidsforhold
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  no  |
+| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: arbeidsforhold
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Undervisningsforhold](undervisningsforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: arbeidsforhold
 ```yaml
 name: arbeidsforhold
 description: Referanse til Arbeidsforhold i Administrasjon-domenet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:arbeidsforhold
 alias: arbeidsforhold
-owner: Undervisningsforhold
 domain_of:
 - Undervisningsforhold
 range: uriorcurie
-required: true
 
 ```
 </details>

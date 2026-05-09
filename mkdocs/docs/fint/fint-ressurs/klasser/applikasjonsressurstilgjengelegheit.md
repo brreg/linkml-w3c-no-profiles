@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:applikasjonsressurstilgjengelegheit](https://schema.fintlabs.no/ressurs/:applikasjonsressurstilgjengelegheit)
+URI: [res:applikasjonsressurstilgjengelegheit](https://schema.fintlabs.no/ressurs/applikasjonsressurstilgjengelegheit)
 Alias: applikasjonsressurstilgjengelegheit
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: applikasjonsressurstilgjengelegheit
 | --- | --- |
 | Range | [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:applikasjonsressurstilgjengelegheit](https://schema.fintlabs.no/ressurs/applikasjonsressurstilgjengelegheit) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: applikasjonsressurstilgjengelegheit
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:applikasjonsressurstilgjengelegheit |
+| self | res:applikasjonsressurstilgjengelegheit |
 | native | https://schema.fintlabs.no/ressurs/:applikasjonsressurstilgjengelegheit |
 
 
@@ -86,8 +80,8 @@ Alias: applikasjonsressurstilgjengelegheit
 name: applikasjonsressurstilgjengelegheit
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:applikasjonsressurstilgjengelegheit
 alias: applikasjonsressurstilgjengelegheit
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Applikasjonsressurstilgjengelighet

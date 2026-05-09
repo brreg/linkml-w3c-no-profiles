@@ -3,8 +3,13 @@
 # Slot: rammer 
 
 
+_Alle rammer i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:rammer](https://schema.fintlabs.no/administrasjon/:rammer)
+
+
+
+
+URI: [adm:rammer](https://schema.fintlabs.no/administrasjon/rammer)
 Alias: rammer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: rammer
 | --- | --- |
 | Range | [Ramme](ramme.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:rammer](https://schema.fintlabs.no/administrasjon/rammer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: rammer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:rammer |
+| self | adm:rammer |
 | native | https://schema.fintlabs.no/administrasjon/:rammer |
 
 
@@ -84,10 +83,11 @@ Alias: rammer
 <details>
 ```yaml
 name: rammer
+description: Alle rammer i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:rammer
 alias: rammer
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Ramme

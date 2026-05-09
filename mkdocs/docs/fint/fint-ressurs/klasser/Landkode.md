@@ -37,7 +37,7 @@ URI: [fint:Landkode](https://schema.fintlabs.no/Landkode)
         
       Landkode : kode
         
-      Landkode : navn
+      Landkode : naam
         
       Landkode : passiv
         
@@ -89,8 +89,8 @@ URI: [fint:Landkode](https://schema.fintlabs.no/Landkode)
 | Namn | Kardinalitet og domene | Beskriving | Frå |
 | --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Begrep](begrep.md) |
 | [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet | [Begrep](begrep.md) |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for omgrepet | [Begrep](begrep.md) |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Angir gyldighetsperioden for eit omgrep/kode | [Begrep](begrep.md) |
+| [naam](naam.md) | 1 <br/> [String](string.md) | Namn på ressursen eller kodeverk-elementet | [Begrep](begrep.md) |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for | [Begrep](begrep.md) |
 | [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast | [Begrep](begrep.md) |
 
 
@@ -204,7 +204,8 @@ attributes:
     description: Verdi som identifiserer omgrepet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
     slot_uri: fint:kode
     alias: kode
     owner: Landkode
@@ -221,14 +222,15 @@ attributes:
     - Begrep
     range: string
     required: true
-  navn:
-    name: navn
-    description: Hovudnamn for omgrepet.
+  naam:
+    name: naam
+    description: Namn på ressursen eller kodeverk-elementet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:navn
-    alias: navn
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
+    slot_uri: res:naam
+    alias: naam
     owner: Landkode
     domain_of:
     - Applikasjon
@@ -245,17 +247,15 @@ attributes:
     - Produsent
     - Status
     - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
     range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Angir gyldighetsperioden for eit omgrep/kode.
+    description: Periode ressursen er gyldig for.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
     slot_uri: fint:gyldighetsperiode
     alias: gyldighetsperiode
     owner: Landkode
@@ -281,7 +281,8 @@ attributes:
     description: Angir at koden er passiv og ikkje kan veljast.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
     slot_uri: fint:passiv
     alias: passiv
     owner: Landkode

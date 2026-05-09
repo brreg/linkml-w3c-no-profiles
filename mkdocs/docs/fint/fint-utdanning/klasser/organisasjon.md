@@ -22,7 +22,7 @@ Alias: organisasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: organisasjon
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skole](skole.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: organisasjon
 ```yaml
 name: organisasjon
 description: Referanse til Organisasjonselement i Administrasjon-domenet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:organisasjon
 alias: organisasjon
-owner: Skole
 domain_of:
 - Skole
 range: uriorcurie

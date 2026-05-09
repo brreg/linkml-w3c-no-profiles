@@ -3,7 +3,7 @@
 # Slot: totalbelop 
 
 
-_Totalt beløp på faktura inkl. avgifter, i øre (totalbeløp)._
+_Totalt beløp på faktura inkl. avgifter, i øre._
 
 
 
@@ -22,7 +22,7 @@ Alias: totalbelop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: totalbelop
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: totalbelop
 <details>
 ```yaml
 name: totalbelop
-description: Totalt beløp på faktura inkl. avgifter, i øre (totalbeløp).
-in_subset:
-- Valgfri
+description: Totalt beløp på faktura inkl. avgifter, i øre.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:totalbelop
 alias: totalbelop
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: integer

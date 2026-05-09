@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:sakstatuskodar](https://schema.fintlabs.no/arkiv/:sakstatuskodar)
+URI: [ark:sakstatuskodar](https://schema.fintlabs.no/arkiv/sakstatuskodar)
 Alias: sakstatuskodar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: sakstatuskodar
 | --- | --- |
 | Range | [Saksstatus](saksstatus.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:sakstatuskodar](https://schema.fintlabs.no/arkiv/sakstatuskodar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: sakstatuskodar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:sakstatuskodar |
+| self | ark:sakstatuskodar |
 | native | https://schema.fintlabs.no/arkiv/:sakstatuskodar |
 
 
@@ -86,8 +80,8 @@ Alias: sakstatuskodar
 name: sakstatuskodar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:sakstatuskodar
 alias: sakstatuskodar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Saksstatus

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:handhaevingstypar](https://schema.fintlabs.no/ressurs/:handhaevingstypar)
+URI: [res:handhaevingstypar](https://schema.fintlabs.no/ressurs/handhaevingstypar)
 Alias: handhaevingstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: handhaevingstypar
 | --- | --- |
 | Range | [Handhevingstype](handhevingstype.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:handhaevingstypar](https://schema.fintlabs.no/ressurs/handhaevingstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: handhaevingstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:handhaevingstypar |
+| self | res:handhaevingstypar |
 | native | https://schema.fintlabs.no/ressurs/:handhaevingstypar |
 
 
@@ -86,8 +80,8 @@ Alias: handhaevingstypar
 name: handhaevingstypar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:handhaevingstypar
 alias: handhaevingstypar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Handhevingstype

@@ -3,8 +3,13 @@
 # Slot: arkivressurs 
 
 
+_Arkivressursar._
 
-URI: [https://schema.fintlabs.no/arkiv/:arkivressurs](https://schema.fintlabs.no/arkiv/:arkivressurs)
+
+
+
+
+URI: [ark:arkivressurs](https://schema.fintlabs.no/arkiv/arkivressurs)
 Alias: arkivressurs
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: arkivressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  no  |
-| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  no  |
+| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  yes  |
+| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: arkivressurs
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Arkivressurs](arkivressurs.md) |
 | Domain Of | [Autorisasjon](autorisasjon.md), [Tilgang](tilgang.md) |
+| Slot URI | [ark:arkivressurs](https://schema.fintlabs.no/arkiv/arkivressurs) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: arkivressurs
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:arkivressurs |
+| self | ark:arkivressurs |
 | native | https://schema.fintlabs.no/arkiv/:arkivressurs |
 
 
@@ -70,11 +84,16 @@ Alias: arkivressurs
 <details>
 ```yaml
 name: arkivressurs
+description: Arkivressursar.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:arkivressurs
 alias: arkivressurs
 domain_of:
 - Autorisasjon
 - Tilgang
-range: string
+range: Arkivressurs
+multivalued: true
 
 ```
 </details>

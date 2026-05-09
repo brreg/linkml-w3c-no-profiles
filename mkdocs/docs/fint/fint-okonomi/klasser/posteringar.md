@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:posteringar](https://schema.fintlabs.no/okonomi/:posteringar)
+URI: [okn:posteringar](https://schema.fintlabs.no/okonomi/posteringar)
 Alias: posteringar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: posteringar
 | --- | --- |
 | Range | [Postering](postering.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:posteringar](https://schema.fintlabs.no/okonomi/posteringar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: posteringar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:posteringar |
+| self | okn:posteringar |
 | native | https://schema.fintlabs.no/okonomi/:posteringar |
 
 
@@ -86,8 +80,8 @@ Alias: posteringar
 name: posteringar
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:posteringar
 alias: posteringar
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Postering

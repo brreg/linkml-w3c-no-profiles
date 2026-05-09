@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:plattformar](https://schema.fintlabs.no/ressurs/:plattformar)
+URI: [res:plattformar](https://schema.fintlabs.no/ressurs/plattformar)
 Alias: plattformar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: plattformar
 | --- | --- |
 | Range | [Plattform](plattform.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:plattformar](https://schema.fintlabs.no/ressurs/plattformar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: plattformar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:plattformar |
+| self | res:plattformar |
 | native | https://schema.fintlabs.no/ressurs/:plattformar |
 
 
@@ -86,8 +80,8 @@ Alias: plattformar
 name: plattformar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:plattformar
 alias: plattformar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Plattform

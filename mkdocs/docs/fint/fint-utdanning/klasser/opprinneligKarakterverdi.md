@@ -3,7 +3,7 @@
 # Slot: opprinneligKarakterverdi 
 
 
-_Opphavleg karakterverdi før endringa._
+_Opphavleg karakterverdi._
 
 
 
@@ -22,7 +22,7 @@ Alias: opprinneligKarakterverdi
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  no  |
+| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: opprinneligKarakterverdi
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterhistorie](karakterhistorie.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: opprinneligKarakterverdi
 <details>
 ```yaml
 name: opprinneligKarakterverdi
-description: Opphavleg karakterverdi før endringa.
-in_subset:
-- Valgfri
+description: Opphavleg karakterverdi.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:opprinneligKarakterverdi
 alias: opprinneligKarakterverdi
-owner: Karakterhistorie
 domain_of:
 - Karakterhistorie
 range: Karakterverdi

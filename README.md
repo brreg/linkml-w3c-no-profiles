@@ -26,7 +26,7 @@ Nye skjema under `src/linkml/<domene>/<namn>/<namn>-schema.yaml` vert oppdaga au
 
 ## Kommandoar
 
-### Skjema og testar
+### Artefakt og testar
 
 | Kommando | Beskriving |
 |---|---|
@@ -42,6 +42,14 @@ Nye skjema under `src/linkml/<domene>/<namn>/<namn>-schema.yaml` vert oppdaga au
 | `make docs` | Generer HTML-klassereferanse til `generated/` for alle skjema |
 | `make clean` | Slett `generated/` |
 
+### Teste enkeltskjema/eksempel
+
+## Linte enkeltskjema
+./tests/validate_schema.bash ./src/linkml/samt/samt-bu/samt-bu-schema.yaml 
+
+## Validere eksempel mot skjema
+
+
 ### Domain-spesifikke targets
 
 Kvart domene har eit eige target som køyrer alle generatorar berre for det domenet:
@@ -49,9 +57,10 @@ Kvart domene har eit eige target som køyrer alle generatorar berre for det dome
 | Kommando | Beskriving |
 |---|---|
 | `make ap-no` | Valider + generer alle artefaktar for alle AP-NO-profiler |
+| `make fair` | Valider + generer alle artefaktar for FAIR-metadata |
 | `make ngr` | Valider + generer alle artefaktar for NGR-modellane |
 | `make fint` | Valider + generer alle artefaktar for FINT-modellane |
-| `make fair` | Valider + generer alle artefaktar for FAIR-metadata |
+| `make samt` | Valider + generer alle artefaktar for SAMT-modellane |
 | `make oreg` | Valider + generer alle artefaktar for OREG-registera |
 
 Nye domene vert oppdaga automatisk frå `src/linkml/` — ingen endringar i Makefile.

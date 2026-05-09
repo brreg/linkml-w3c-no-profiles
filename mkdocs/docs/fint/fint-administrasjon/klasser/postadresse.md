@@ -3,8 +3,13 @@
 # Slot: postadresse 
 
 
+_Informasjon om postadresse til ein aktør._
 
-URI: [https://schema.fintlabs.no/administrasjon/:postadresse](https://schema.fintlabs.no/administrasjon/:postadresse)
+
+
+
+
+URI: [fint:postadresse](https://schema.fintlabs.no/postadresse)
 Alias: postadresse
 
 <!-- no inheritance hierarchy -->
@@ -17,12 +22,12 @@ Alias: postadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
 | [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Person](person.md) | Fysiske private personar |  no  |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -35,8 +40,9 @@ Alias: postadresse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Adresse](adresse.md) |
 | Domain Of | [Arbeidslokasjon](arbeidslokasjon.md), [Organisasjonselement](organisasjonselement.md), [Aktoer](aktoer.md) |
+| Slot URI | [fint:postadresse](https://schema.fintlabs.no/postadresse) |
 
 ### Cardinality and Requirements
 
@@ -58,12 +64,19 @@ Alias: postadresse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:postadresse |
+| self | fint:postadresse |
 | native | https://schema.fintlabs.no/administrasjon/:postadresse |
 
 
@@ -74,12 +87,17 @@ Alias: postadresse
 <details>
 ```yaml
 name: postadresse
+description: Informasjon om postadresse til ein aktør.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: fint:postadresse
 alias: postadresse
 domain_of:
 - Arbeidslokasjon
 - Organisasjonselement
 - Aktoer
-range: string
+range: Adresse
+inlined: true
 
 ```
 </details>

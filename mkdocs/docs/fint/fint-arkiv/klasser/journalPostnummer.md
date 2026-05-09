@@ -22,7 +22,7 @@ Alias: journalPostnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: journalPostnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Journalpost](journalpost.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: journalPostnummer
 ```yaml
 name: journalPostnummer
 description: Rekkjefølgja journalpostane vart oppretta innanfor saksmappa.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:journalPostnummer
 alias: journalPostnummer
-owner: Journalpost
 domain_of:
 - Journalpost
 range: integer

@@ -3,8 +3,13 @@
 # Slot: artar 
 
 
+_Alle artar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:artar](https://schema.fintlabs.no/administrasjon/:artar)
+
+
+
+
+URI: [adm:artar](https://schema.fintlabs.no/administrasjon/artar)
 Alias: artar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: artar
 | --- | --- |
 | Range | [Art](art.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:artar](https://schema.fintlabs.no/administrasjon/artar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: artar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:artar |
+| self | adm:artar |
 | native | https://schema.fintlabs.no/administrasjon/:artar |
 
 
@@ -84,10 +83,11 @@ Alias: artar
 <details>
 ```yaml
 name: artar
+description: Alle artar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:artar
 alias: artar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Art

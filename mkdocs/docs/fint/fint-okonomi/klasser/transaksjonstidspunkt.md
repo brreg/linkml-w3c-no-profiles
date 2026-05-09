@@ -22,7 +22,7 @@ Alias: transaksjonstidspunkt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: transaksjonstidspunkt
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Transaksjon](transaksjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: transaksjonstidspunkt
 ```yaml
 name: transaksjonstidspunkt
 description: Tidspunkt for registrering av transaksjonen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:transaksjonstidspunkt
 alias: transaksjonstidspunkt
-owner: Transaksjon
 domain_of:
 - Transaksjon
 range: datetime

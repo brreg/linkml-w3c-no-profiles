@@ -22,7 +22,7 @@ Alias: samtykke
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  no  |
+| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: samtykke
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Behandling](behandling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: samtykke
 ```yaml
 name: samtykke
 description: Samtykker tilknytt ei behandling.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:samtykke
 alias: samtykke
-owner: Behandling
 domain_of:
 - Behandling
 range: Samtykke

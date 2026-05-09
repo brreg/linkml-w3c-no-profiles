@@ -3,7 +3,7 @@
 # Slot: kandidatnummer 
 
 
-_Kandidatnummer for eksamenen._
+_Kandidatnummer._
 
 
 
@@ -22,7 +22,7 @@ Alias: kandidatnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kandidatnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: kandidatnummer
 <details>
 ```yaml
 name: kandidatnummer
-description: Kandidatnummer for eksamenen.
-in_subset:
-- Valgfri
+description: Kandidatnummer.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:kandidatnummer
 alias: kandidatnummer
-owner: Eksamensgruppemedlemskap
 domain_of:
 - Eksamensgruppemedlemskap
 range: string

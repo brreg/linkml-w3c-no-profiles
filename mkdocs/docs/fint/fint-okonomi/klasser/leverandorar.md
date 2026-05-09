@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:leverandorar](https://schema.fintlabs.no/okonomi/:leverandorar)
+URI: [okn:leverandorar](https://schema.fintlabs.no/okonomi/leverandorar)
 Alias: leverandorar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: leverandorar
 | --- | --- |
 | Range | [Leverandor](leverandor.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:leverandorar](https://schema.fintlabs.no/okonomi/leverandorar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: leverandorar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:leverandorar |
+| self | okn:leverandorar |
 | native | https://schema.fintlabs.no/okonomi/:leverandorar |
 
 
@@ -86,8 +80,8 @@ Alias: leverandorar
 name: leverandorar
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:leverandorar
 alias: leverandorar
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Leverandor

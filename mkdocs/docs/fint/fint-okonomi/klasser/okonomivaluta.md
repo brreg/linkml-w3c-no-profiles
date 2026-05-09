@@ -34,7 +34,7 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
         
       OkonomiValuta : kode
         
-      OkonomiValuta : navn
+      OkonomiValuta : naam
         
       OkonomiValuta : passiv
         
@@ -66,21 +66,12 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-
-
-
-
-  
+    
   
 
   
@@ -89,11 +80,13 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
+| [naam](naam.md) | 1 <br/> [String](string.md) | Namn på eining eller kodeverk-element |
 
 
 
@@ -113,6 +106,37 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast |
 
 
 
@@ -129,29 +153,53 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -160,10 +208,6 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [kode](kode.md) | 1 <br/> [String](string.md) | Valutakode (t |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Namn på valutaen |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) |  |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) |  |
 
 
 
@@ -229,66 +273,29 @@ description: Valuta for transaksjonsbeløp.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 slots:
 - id
-attributes:
+- kode
+- naam
+- gyldighetsperiode
+- passiv
+slot_usage:
   kode:
     name: kode
-    description: Valutakode (t.d. NOK, EUR, USD).
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:kode
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    range: string
     required: true
-  navn:
-    name: navn
-    description: Namn på valutaen.
+  naam:
+    name: naam
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:namn
-    domain_of:
-    - Fakturautsteder
-    - Leverandorgruppe
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:gyldighetsperiode
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:passiv
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    range: boolean
 class_uri: okn:Valuta
 
 ```
@@ -301,74 +308,26 @@ class_uri: okn:Valuta
 name: OkonomiValuta
 description: Valuta for transaksjonsbeløp.
 from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
+slot_usage:
   kode:
     name: kode
-    description: Valutakode (t.d. NOK, EUR, USD).
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:kode
-    alias: kode
-    owner: OkonomiValuta
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    range: string
     required: true
-  navn:
-    name: navn
-    description: Namn på valutaen.
+  naam:
+    name: naam
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:namn
-    alias: navn
-    owner: OkonomiValuta
-    domain_of:
-    - Fakturautsteder
-    - Leverandorgruppe
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:gyldighetsperiode
-    alias: gyldighetsperiode
-    owner: OkonomiValuta
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-okonomi
-    slot_uri: okn:passiv
-    alias: passiv
-    owner: OkonomiValuta
-    domain_of:
-    - Vare
-    - Merverdiavgift
-    - OkonomiValuta
-    - Begrep
-    range: boolean
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -395,6 +354,76 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  kode:
+    name: kode
+    description: Verdi som identifiserer omgrepet.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-okonomi
+    rank: 1000
+    slot_uri: fint:kode
+    alias: kode
+    owner: OkonomiValuta
+    domain_of:
+    - Vare
+    - Merverdiavgift
+    - OkonomiValuta
+    - Begrep
+    range: string
+    required: true
+  naam:
+    name: naam
+    description: Namn på eining eller kodeverk-element.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-okonomi
+    rank: 1000
+    slot_uri: okn:naam
+    alias: naam
+    owner: OkonomiValuta
+    domain_of:
+    - Fakturautsteder
+    - Leverandorgruppe
+    - Vare
+    - Merverdiavgift
+    - OkonomiValuta
+    - Begrep
+    range: string
+    required: true
+  gyldighetsperiode:
+    name: gyldighetsperiode
+    description: Periode ressursen er gyldig for.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-okonomi
+    rank: 1000
+    slot_uri: fint:gyldighetsperiode
+    alias: gyldighetsperiode
+    owner: OkonomiValuta
+    domain_of:
+    - Vare
+    - Merverdiavgift
+    - OkonomiValuta
+    - Begrep
+    - Identifikator
+    range: Periode
+    inlined: true
+  passiv:
+    name: passiv
+    description: Angir at koden er passiv og ikkje kan veljast.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-okonomi
+    rank: 1000
+    slot_uri: fint:passiv
+    alias: passiv
+    owner: OkonomiValuta
+    domain_of:
+    - Vare
+    - Merverdiavgift
+    - OkonomiValuta
+    - Begrep
+    range: boolean
 class_uri: okn:Valuta
 
 ```

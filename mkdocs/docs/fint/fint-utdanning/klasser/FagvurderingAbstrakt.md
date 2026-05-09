@@ -104,24 +104,12 @@ URI: [utd:FagvurderingAbstrakt](https://schema.fintlabs.no/utdanning/Fagvurderin
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
@@ -133,11 +121,13 @@ URI: [utd:FagvurderingAbstrakt](https://schema.fintlabs.no/utdanning/Fagvurderin
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [kommentar](kommentar.md) | 1 <br/> [String](string.md) | Kommentar |
+| [vurderingsdato](vurderingsdato.md) | 1 <br/> [Datetime](datetime.md) | Dato og tidspunkt for vurderinga |
 
 
 
@@ -160,6 +150,43 @@ URI: [utd:FagvurderingAbstrakt](https://schema.fintlabs.no/utdanning/Fagvurderin
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [fag](fag.md) | 0..1 <br/> [Fag](fag.md) | Fag |
+| [skoleaar](skoleaar.md) | 0..1 <br/> [Skoleaar](skoleaar.md) | Skoleåret |
+| [karakter](karakter.md) | 0..1 <br/> [Karakterverdi](karakterverdi.md) | Karakterverdi |
 
 
 
@@ -176,36 +203,66 @@ URI: [utd:FagvurderingAbstrakt](https://schema.fintlabs.no/utdanning/Fagvurderin
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -214,11 +271,6 @@ URI: [utd:FagvurderingAbstrakt](https://schema.fintlabs.no/utdanning/Fagvurderin
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [kommentar](kommentar.md) | 1 <br/> [String](string.md) | Kommentar til vurderinga |
-| [vurderingsdato](vurderingsdato.md) | 1 <br/> [Datetime](datetime.md) | Dato og tidspunkt for vurderinga |
-| [fag](fag.md) | 0..1 <br/> [Fag](fag.md) | Faget vurderinga gjeld |
-| [skoleaar](skoleaar.md) | 0..1 <br/> [Skoleaar](skoleaar.md) | Skoleåret vurderinga tilhøyrer |
-| [karakter](karakter.md) | 0..1 <br/> [Karakterverdi](karakterverdi.md) | Karakterverdien gjeve i vurderinga |
 
 
 
@@ -277,81 +329,34 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
 slots:
 - id
-attributes:
+- kommentar
+- vurderingsdato
+- fag
+- skoleaar
+- karakter
+slot_usage:
   kommentar:
     name: kommentar
-    description: Kommentar til vurderinga.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:kommentar
-    domain_of:
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Fraversregistrering
-    range: string
     required: true
   vurderingsdato:
     name: vurderingsdato
-    description: Dato og tidspunkt for vurderinga.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:vurderingsdato
-    domain_of:
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    range: datetime
     required: true
   fag:
     name: fag
-    description: Faget vurderinga gjeld.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:fag
-    domain_of:
-    - UtdanningContainer
-    - Skole
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - Eksamensgruppe
-    - Fravarsoversikt
-    range: Fag
   skoleaar:
     name: skoleaar
-    description: Skoleåret vurderinga tilhøyrer.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:skoleaar
-    domain_of:
-    - UtdanningContainer
-    - Elevforhold
-    - Klasse
-    - Kontaktlaerergruppe
-    - Persongruppe
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
-    - Eksamensgruppe
-    range: Skoleaar
   karakter:
     name: karakter
-    description: Karakterverdien gjeve i vurderinga.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:karakter
-    domain_of:
-    - FagvurderingAbstrakt
-    range: Karakterverdi
 class_uri: utd:FagvurderingAbstrakt
 
 ```
@@ -365,91 +370,30 @@ name: FagvurderingAbstrakt
 description: Abstrakt basisklasse for fagvurderingar.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 abstract: true
-attributes:
+slot_usage:
   kommentar:
     name: kommentar
-    description: Kommentar til vurderinga.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:kommentar
-    alias: kommentar
-    owner: FagvurderingAbstrakt
-    domain_of:
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Fraversregistrering
-    range: string
     required: true
   vurderingsdato:
     name: vurderingsdato
-    description: Dato og tidspunkt for vurderinga.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:vurderingsdato
-    alias: vurderingsdato
-    owner: FagvurderingAbstrakt
-    domain_of:
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    range: datetime
     required: true
   fag:
     name: fag
-    description: Faget vurderinga gjeld.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:fag
-    alias: fag
-    owner: FagvurderingAbstrakt
-    domain_of:
-    - UtdanningContainer
-    - Skole
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - Eksamensgruppe
-    - Fravarsoversikt
-    range: Fag
   skoleaar:
     name: skoleaar
-    description: Skoleåret vurderinga tilhøyrer.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:skoleaar
-    alias: skoleaar
-    owner: FagvurderingAbstrakt
-    domain_of:
-    - UtdanningContainer
-    - Elevforhold
-    - Klasse
-    - Kontaktlaerergruppe
-    - Persongruppe
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
-    - Eksamensgruppe
-    range: Skoleaar
   karakter:
     name: karakter
-    description: Karakterverdien gjeve i vurderinga.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    rank: 1000
-    slot_uri: utd:karakter
-    alias: karakter
-    owner: FagvurderingAbstrakt
-    domain_of:
-    - FagvurderingAbstrakt
-    range: Karakterverdi
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -512,6 +456,92 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  kommentar:
+    name: kommentar
+    description: Kommentar.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:kommentar
+    alias: kommentar
+    owner: FagvurderingAbstrakt
+    domain_of:
+    - FagvurderingAbstrakt
+    - OrdensvurderingAbstrakt
+    - Fraversregistrering
+    range: string
+    required: true
+  vurderingsdato:
+    name: vurderingsdato
+    description: Dato og tidspunkt for vurderinga.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:vurderingsdato
+    alias: vurderingsdato
+    owner: FagvurderingAbstrakt
+    domain_of:
+    - FagvurderingAbstrakt
+    - OrdensvurderingAbstrakt
+    range: datetime
+    required: true
+  fag:
+    name: fag
+    description: Fag.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:fag
+    alias: fag
+    owner: FagvurderingAbstrakt
+    domain_of:
+    - UtdanningContainer
+    - Skole
+    - Faggruppe
+    - Undervisningsgruppe
+    - FagvurderingAbstrakt
+    - Eksamensgruppe
+    - Fravarsoversikt
+    range: Fag
+  skoleaar:
+    name: skoleaar
+    description: Skoleåret.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:skoleaar
+    alias: skoleaar
+    owner: FagvurderingAbstrakt
+    domain_of:
+    - UtdanningContainer
+    - Elevforhold
+    - Klasse
+    - Kontaktlaerergruppe
+    - Persongruppe
+    - Faggruppe
+    - Undervisningsgruppe
+    - FagvurderingAbstrakt
+    - OrdensvurderingAbstrakt
+    - Anmerkninger
+    - Eksamensgruppe
+    range: Skoleaar
+  karakter:
+    name: karakter
+    description: Karakterverdi.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:karakter
+    alias: karakter
+    owner: FagvurderingAbstrakt
+    domain_of:
+    - FagvurderingAbstrakt
+    range: Karakterverdi
 class_uri: utd:FagvurderingAbstrakt
 
 ```

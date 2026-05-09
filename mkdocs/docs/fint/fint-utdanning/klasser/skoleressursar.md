@@ -3,8 +3,13 @@
 # Slot: skoleressursar 
 
 
+_Alle skoleressursar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:skoleressursar](https://schema.fintlabs.no/utdanning/:skoleressursar)
+
+
+
+
+URI: [utd:skoleressursar](https://schema.fintlabs.no/utdanning/skoleressursar)
 Alias: skoleressursar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: skoleressursar
 | --- | --- |
 | Range | [Skoleressurs](skoleressurs.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:skoleressursar](https://schema.fintlabs.no/utdanning/skoleressursar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: skoleressursar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:skoleressursar |
+| self | utd:skoleressursar |
 | native | https://schema.fintlabs.no/utdanning/:skoleressursar |
 
 
@@ -84,10 +83,11 @@ Alias: skoleressursar
 <details>
 ```yaml
 name: skoleressursar
+description: Alle skoleressursar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:skoleressursar
 alias: skoleressursar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Skoleressurs

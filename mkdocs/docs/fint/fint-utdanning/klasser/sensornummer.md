@@ -22,7 +22,7 @@ Alias: sensornummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sensor](sensor.md) | Ein sensor for ein eksamen |  no  |
+| [Sensor](sensor.md) | Ein sensor for ein eksamen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: sensornummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Sensor](sensor.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: sensornummer
 ```yaml
 name: sensornummer
 description: Sensornummer.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:sensornummer
 alias: sensornummer
-owner: Sensor
 domain_of:
 - Sensor
 range: integer

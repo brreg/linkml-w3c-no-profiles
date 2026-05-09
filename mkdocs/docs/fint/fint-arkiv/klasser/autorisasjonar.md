@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:autorisasjonar](https://schema.fintlabs.no/arkiv/:autorisasjonar)
+URI: [ark:autorisasjonar](https://schema.fintlabs.no/arkiv/autorisasjonar)
 Alias: autorisasjonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: autorisasjonar
 | --- | --- |
 | Range | [Autorisasjon](autorisasjon.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:autorisasjonar](https://schema.fintlabs.no/arkiv/autorisasjonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: autorisasjonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:autorisasjonar |
+| self | ark:autorisasjonar |
 | native | https://schema.fintlabs.no/arkiv/:autorisasjonar |
 
 
@@ -86,8 +80,8 @@ Alias: autorisasjonar
 name: autorisasjonar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:autorisasjonar
 alias: autorisasjonar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Autorisasjon

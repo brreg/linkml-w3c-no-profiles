@@ -3,8 +3,13 @@
 # Slot: adresse 
 
 
+_Adresse til matrikkeleining._
 
-URI: [https://schema.fintlabs.no/okonomi/:adresse](https://schema.fintlabs.no/okonomi/:adresse)
+
+
+
+
+URI: [fint:adresse](https://schema.fintlabs.no/adresse)
 Alias: adresse
 
 <!-- no inheritance hierarchy -->
@@ -18,7 +23,7 @@ Alias: adresse
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |  no  |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: adresse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Adresse](adresse.md) |
 | Domain Of | [Faktura](faktura.md), [Matrikkelnummer](matrikkelnummer.md) |
+| Slot URI | [fint:adresse](https://schema.fintlabs.no/adresse) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: adresse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:adresse |
+| self | fint:adresse |
 | native | https://schema.fintlabs.no/okonomi/:adresse |
 
 
@@ -70,11 +83,16 @@ Alias: adresse
 <details>
 ```yaml
 name: adresse
+description: Adresse til matrikkeleining.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: fint:adresse
 alias: adresse
 domain_of:
 - Faktura
 - Matrikkelnummer
-range: string
+range: Adresse
+inlined: true
 
 ```
 </details>

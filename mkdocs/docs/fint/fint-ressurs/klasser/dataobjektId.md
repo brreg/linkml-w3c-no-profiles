@@ -3,7 +3,7 @@
 # Slot: dataobjektId 
 
 
-_Einingsens ID i datakatalogen (t.d. ObjectId i Azure AD)._
+_Einingsens ID i datakatalogen._
 
 
 
@@ -22,7 +22,7 @@ Alias: dataobjektId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: dataobjektId
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DigitalEnhet](digitalenhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: dataobjektId
 <details>
 ```yaml
 name: dataobjektId
-description: Einingsens ID i datakatalogen (t.d. ObjectId i Azure AD).
-in_subset:
-- Valgfri
+description: Einingsens ID i datakatalogen.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:dataobjektId
 alias: dataobjektId
-owner: DigitalEnhet
 domain_of:
 - DigitalEnhet
 range: Identifikator

@@ -43,13 +43,6 @@ Alias: poststed
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Adresse](adresse.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:poststed
 alias: poststed
-owner: Adresse
 domain_of:
 - Adresse
 range: string

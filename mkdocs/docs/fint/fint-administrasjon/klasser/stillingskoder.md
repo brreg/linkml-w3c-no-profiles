@@ -3,8 +3,13 @@
 # Slot: stillingskoder 
 
 
+_Alle stillingskoder i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:stillingskoder](https://schema.fintlabs.no/administrasjon/:stillingskoder)
+
+
+
+
+URI: [adm:stillingskoder](https://schema.fintlabs.no/administrasjon/stillingskoder)
 Alias: stillingskoder
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: stillingskoder
 | --- | --- |
 | Range | [Stillingskode](stillingskode.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:stillingskoder](https://schema.fintlabs.no/administrasjon/stillingskoder) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: stillingskoder
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:stillingskoder |
+| self | adm:stillingskoder |
 | native | https://schema.fintlabs.no/administrasjon/:stillingskoder |
 
 
@@ -84,10 +83,11 @@ Alias: stillingskoder
 <details>
 ```yaml
 name: stillingskoder
+description: Alle stillingskoder i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:stillingskoder
 alias: stillingskoder
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Stillingskode

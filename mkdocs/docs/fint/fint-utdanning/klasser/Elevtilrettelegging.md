@@ -3,8 +3,13 @@
 # Slot: elevtilrettelegging 
 
 
+_Alle elevtilretteleggingar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:elevtilrettelegging](https://schema.fintlabs.no/utdanning/:elevtilrettelegging)
+
+
+
+
+URI: [utd:elevtilrettelegging](https://schema.fintlabs.no/utdanning/elevtilrettelegging)
 Alias: elevtilrettelegging
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: elevtilrettelegging
 | --- | --- |
 | Range | [Elevtilrettelegging](elevtilrettelegging.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:elevtilrettelegging](https://schema.fintlabs.no/utdanning/elevtilrettelegging) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: elevtilrettelegging
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elevtilrettelegging |
+| self | utd:elevtilrettelegging |
 | native | https://schema.fintlabs.no/utdanning/:elevtilrettelegging |
 
 
@@ -84,10 +83,11 @@ Alias: elevtilrettelegging
 <details>
 ```yaml
 name: elevtilrettelegging
+description: Alle elevtilretteleggingar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:elevtilrettelegging
 alias: elevtilrettelegging
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Elevtilrettelegging

@@ -3,8 +3,13 @@
 # Slot: mottaker 
 
 
+_Namn på mottakar._
 
-URI: [https://schema.fintlabs.no/okonomi/:mottaker](https://schema.fintlabs.no/okonomi/:mottaker)
+
+
+
+
+URI: [okn:mottaker](https://schema.fintlabs.no/okonomi/mottaker)
 Alias: mottaker
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,7 @@ Alias: mottaker
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -32,7 +36,8 @@ Alias: mottaker
 | Property | Value |
 | --- | --- |
 | Range | [String](string.md) |
-| Domain Of | [Faktura](faktura.md), [Fakturagrunnlag](fakturagrunnlag.md) |
+| Domain Of | [Faktura](faktura.md) |
+| Slot URI | [okn:mottaker](https://schema.fintlabs.no/okonomi/mottaker) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +59,19 @@ Alias: mottaker
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:mottaker |
+| self | okn:mottaker |
 | native | https://schema.fintlabs.no/okonomi/:mottaker |
 
 
@@ -70,10 +82,13 @@ Alias: mottaker
 <details>
 ```yaml
 name: mottaker
+description: Namn på mottakar.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:mottaker
 alias: mottaker
 domain_of:
 - Faktura
-- Fakturagrunnlag
 range: string
 
 ```

@@ -3,8 +3,13 @@
 # Slot: faggruppemedlemskap 
 
 
+_Faggruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:faggruppemedlemskap](https://schema.fintlabs.no/utdanning/:faggruppemedlemskap)
+
+
+
+
+URI: [utd:faggruppemedlemskap](https://schema.fintlabs.no/utdanning/faggruppemedlemskap)
 Alias: faggruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: faggruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  no  |
-| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
 
 
 
@@ -33,13 +38,15 @@ Alias: faggruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Faggruppemedlemskap](faggruppemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md), [Varsel](varsel.md), [Faggruppe](faggruppe.md) |
+| Slot URI | [utd:faggruppemedlemskap](https://schema.fintlabs.no/utdanning/faggruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -56,12 +63,19 @@ Alias: faggruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:faggruppemedlemskap |
+| self | utd:faggruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:faggruppemedlemskap |
 
 
@@ -72,13 +86,18 @@ Alias: faggruppemedlemskap
 <details>
 ```yaml
 name: faggruppemedlemskap
+description: Faggruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:faggruppemedlemskap
 alias: faggruppemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
 - Varsel
 - Faggruppe
-range: string
+range: Faggruppemedlemskap
+multivalued: true
 
 ```
 </details>

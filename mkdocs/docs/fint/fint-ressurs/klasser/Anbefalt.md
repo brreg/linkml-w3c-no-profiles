@@ -127,11 +127,6 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-        
-
-
-
-        
 
 
 
@@ -178,11 +173,11 @@ URI: [Anbefalt](anbefalt.md)
 
 
 
-## Slots in subset
 
-| Slot | Description |
-| --- | --- |
-| [kreverGodkjenning](krevergodkjenning.md) | True dersom tildeling av ressursen krev godkjenning av leiar/tenestteforvalta... |
-| [lisensantall](lisensantall.md) | Totalt tal på lisensar |
+
+
+
+
+
 
 

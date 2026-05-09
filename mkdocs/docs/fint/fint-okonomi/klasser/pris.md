@@ -3,8 +3,13 @@
 # Slot: pris 
 
 
+_Pris per eining, i øre._
 
-URI: [https://schema.fintlabs.no/okonomi/:pris](https://schema.fintlabs.no/okonomi/:pris)
+
+
+
+
+URI: [okn:pris](https://schema.fintlabs.no/okonomi/pris)
 Alias: pris
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: pris
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturalinje](fakturalinje.md) | Del av Fakturagrunnlag som skildrar ei enkelt vare (kompleks datatype) |  no  |
-| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  no  |
+| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
+| [Fakturalinje](fakturalinje.md) | Del av Fakturagrunnlag som skildrar ei enkelt vare (kompleks datatype) |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: pris
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Integer](integer.md) |
 | Domain Of | [Fakturalinje](fakturalinje.md), [Vare](vare.md) |
+| Slot URI | [okn:pris](https://schema.fintlabs.no/okonomi/pris) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: pris
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:pris |
+| self | okn:pris |
 | native | https://schema.fintlabs.no/okonomi/:pris |
 
 
@@ -70,11 +83,15 @@ Alias: pris
 <details>
 ```yaml
 name: pris
+description: Pris per eining, i øre.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:pris
 alias: pris
 domain_of:
 - Fakturalinje
 - Vare
-range: string
+range: integer
 
 ```
 </details>

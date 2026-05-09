@@ -3,8 +3,13 @@
 # Slot: elevforhold 
 
 
+_Elevforholdet dette gjeld._
 
-URI: [https://schema.fintlabs.no/utdanning/:elevforhold](https://schema.fintlabs.no/utdanning/:elevforhold)
+
+
+
+
+URI: [utd:elevforhold](https://schema.fintlabs.no/utdanning/elevforhold)
 Alias: elevforhold
 
 <!-- no inheritance hierarchy -->
@@ -17,17 +22,17 @@ Alias: elevforhold
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
-| [Elevfravar](elevfravar.md) | Fråværsregistreringar for ein elev knytt til eit elevforhold |  no  |
-| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  no  |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  no  |
-| [Persongruppemedlemskap](persongruppemedlemskap.md) | Eit elevs medlemskap i ei persongruppe |  no  |
-| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  no  |
-| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  no  |
-| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  no  |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
+| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Persongruppemedlemskap](persongruppemedlemskap.md) | Eit elevs medlemskap i ei persongruppe |  yes  |
+| [Elevfravar](elevfravar.md) | Fråværsregistreringar for ein elev knytt til eit elevforhold |  yes  |
+| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  yes  |
+| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  yes  |
+| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  yes  |
+| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  yes  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  yes  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -40,8 +45,9 @@ Alias: elevforhold
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Elevforhold](elevforhold.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Klassemedlemskap](klassemedlemskap.md), [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md), [Persongruppemedlemskap](persongruppemedlemskap.md), [Programomrademedlemskap](programomrademedlemskap.md), [Faggruppemedlemskap](faggruppemedlemskap.md), [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md), [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md), [Elevfravar](elevfravar.md), [Elevvurdering](elevvurdering.md), [Fravarsoversikt](fravarsoversikt.md) |
+| Slot URI | [utd:elevforhold](https://schema.fintlabs.no/utdanning/elevforhold) |
 
 ### Cardinality and Requirements
 
@@ -63,12 +69,19 @@ Alias: elevforhold
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elevforhold |
+| self | utd:elevforhold |
 | native | https://schema.fintlabs.no/utdanning/:elevforhold |
 
 
@@ -79,6 +92,10 @@ Alias: elevforhold
 <details>
 ```yaml
 name: elevforhold
+description: Elevforholdet dette gjeld.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:elevforhold
 alias: elevforhold
 domain_of:
 - UtdanningContainer
@@ -92,7 +109,7 @@ domain_of:
 - Elevfravar
 - Elevvurdering
 - Fravarsoversikt
-range: string
+range: Elevforhold
 
 ```
 </details>

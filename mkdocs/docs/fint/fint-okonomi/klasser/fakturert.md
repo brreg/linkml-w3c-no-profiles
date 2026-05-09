@@ -22,7 +22,7 @@ Alias: fakturert
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: fakturert
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Faktura](faktura.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Anbefalt](anbefalt.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: fakturert
 ```yaml
 name: fakturert
 description: Status på utsending.
-in_subset:
-- Anbefalt
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:fakturert
 alias: fakturert
-owner: Faktura
 domain_of:
 - Faktura
 range: boolean

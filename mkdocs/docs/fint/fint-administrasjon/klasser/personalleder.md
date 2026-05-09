@@ -22,7 +22,7 @@ Alias: personalleder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: personalleder
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidsforhold](arbeidsforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: personalleder
 ```yaml
 name: personalleder
 description: Personalleiar til arbeidsforholdet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:personalleder
 alias: personalleder
-owner: Arbeidsforhold
 domain_of:
 - Arbeidsforhold
 range: Personalressurs

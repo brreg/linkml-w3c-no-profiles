@@ -89,6 +89,14 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -106,7 +114,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [identifikatorverdi](identifikatorverdi.md) | 1 <br/> [String](string.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Perioden ein gjeven identifikator er gyldig |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
 
 
 
@@ -175,40 +183,13 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 name: Identifikator
 description: Unik identifikasjon til eit objekt.
 from_schema: https://data.norge.no/linkml/fint-ressurs
-attributes:
+slots:
+- identifikatorverdi
+- gyldighetsperiode
+slot_usage:
   identifikatorverdi:
     name: identifikatorverdi
-    description: Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein
-      bestemt identifikator.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:identifikatorverdi
-    domain_of:
-    - Identifikator
-    range: string
     required: true
-  gyldighetsperiode:
-    name: gyldighetsperiode
-    description: Perioden ein gjeven identifikator er gyldig.
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:gyldighetsperiode
-    domain_of:
-    - Applikasjon
-    - Applikasjonsressurs
-    - Applikasjonsressurstilgjengelighet
-    - Rettighet
-    - Applikasjonskategori
-    - Brukertype
-    - Enhetstype
-    - Handhevingstype
-    - Lisensmodell
-    - Plattform
-    - Produsent
-    - Status
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
 class_uri: fint:Identifikator
 
 ```
@@ -221,12 +202,16 @@ class_uri: fint:Identifikator
 name: Identifikator
 description: Unik identifikasjon til eit objekt.
 from_schema: https://data.norge.no/linkml/fint-ressurs
+slot_usage:
+  identifikatorverdi:
+    name: identifikatorverdi
+    required: true
 attributes:
   identifikatorverdi:
     name: identifikatorverdi
     description: Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein
       bestemt identifikator.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-ressurs
     rank: 1000
     slot_uri: fint:identifikatorverdi
     alias: identifikatorverdi
@@ -237,8 +222,9 @@ attributes:
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Perioden ein gjeven identifikator er gyldig.
-    from_schema: https://data.norge.no/linkml/fint-common
+    description: Periode ressursen er gyldig for.
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
     slot_uri: fint:gyldighetsperiode
     alias: gyldighetsperiode
     owner: Identifikator

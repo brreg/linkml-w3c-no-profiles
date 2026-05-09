@@ -41,7 +41,7 @@ Fakturamottaker {
 }
 Fakturautsteder {
     uriorcurie id  
-    string navn  
+    string naam  
     uriorcurie organisasjonselement  
 }
 Identifikator {
@@ -56,7 +56,7 @@ Kontostreng {
 Landkode {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Leverandor {
@@ -67,19 +67,19 @@ Leverandor {
 }
 Leverandorgruppe {
     uriorcurie id  
-    string navn  
+    string naam  
 }
 Merverdiavgift {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
     integer sats  
 }
 OkonomiValuta {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -105,7 +105,7 @@ Vare {
     uriorcurie id  
     string enhet  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
     integer pris  
 }
@@ -114,7 +114,7 @@ Adresse ||--|o Landkode : "land"
 Faktura ||--|o Adresse : "adresse"
 Faktura ||--|| Fakturagrunnlag : "fakturagrunnlag"
 Faktura ||--|| Identifikator : "fakturanummer"
-Fakturagrunnlag ||--|| Fakturamottaker : "mottaker"
+Fakturagrunnlag ||--|| Fakturamottaker : "fakturamottaker"
 Fakturagrunnlag ||--|| Fakturautsteder : "fakturautsteder"
 Fakturagrunnlag ||--|| Identifikator : "ordrenummer"
 Fakturagrunnlag ||--}o Faktura : "faktura"

@@ -22,7 +22,7 @@ Alias: utsteder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  no  |
+| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: utsteder
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Varsel](varsel.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: utsteder
 ```yaml
 name: utsteder
 description: Skoleressurs som sende varselet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:utsteder
 alias: utsteder
-owner: Varsel
 domain_of:
 - Varsel
 range: Skoleressurs

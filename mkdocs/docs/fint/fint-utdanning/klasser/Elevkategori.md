@@ -66,21 +66,12 @@ URI: [utd:Elevkategori](https://schema.fintlabs.no/utdanning/Elevkategori)
 
   
   
-
-  
-  
-
-  
+    
   
 
   
   
-
-
-
-
-
-  
+    
   
 
   
@@ -89,11 +80,13 @@ URI: [utd:Elevkategori](https://schema.fintlabs.no/utdanning/Elevkategori)
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Kode |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Namn |
 
 
 
@@ -113,6 +106,37 @@ URI: [utd:Elevkategori](https://schema.fintlabs.no/utdanning/Elevkategori)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Gyldigheitsperiode |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir om oppføringen er passiv/inaktiv |
 
 
 
@@ -129,29 +153,53 @@ URI: [utd:Elevkategori](https://schema.fintlabs.no/utdanning/Elevkategori)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -160,10 +208,6 @@ URI: [utd:Elevkategori](https://schema.fintlabs.no/utdanning/Elevkategori)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [kode](kode.md) | 1 <br/> [String](string.md) |  |
-| [navn](navn.md) | 1 <br/> [String](string.md) |  |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) |  |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) |  |
 
 
 
@@ -229,144 +273,29 @@ description: Kategori for eit elevforhold (t.d. Ordinær, Privatist, Voksen).
 from_schema: https://data.norge.no/linkml/fint-utdanning
 slots:
 - id
-attributes:
+- kode
+- navn
+- gyldighetsperiode
+- passiv
+slot_usage:
   kode:
     name: kode
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:kode
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: string
     required: true
   navn:
     name: navn
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:navn
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:gyldighetsperiode
-    domain_of:
-    - Gruppemedlemskap
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:passiv
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: boolean
 class_uri: utd:Elevkategori
 
 ```
@@ -379,152 +308,26 @@ class_uri: utd:Elevkategori
 name: Elevkategori
 description: Kategori for eit elevforhold (t.d. Ordinær, Privatist, Voksen).
 from_schema: https://data.norge.no/linkml/fint-utdanning
-attributes:
+slot_usage:
   kode:
     name: kode
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:kode
-    alias: kode
-    owner: Elevkategori
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: string
     required: true
   navn:
     name: navn
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:navn
-    alias: navn
-    owner: Elevkategori
-    domain_of:
-    - Gruppe
-    - Skole
-    - Eksamen
-    - Rom
-    - Time
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Valuta
-    - Person
-    - Kontaktperson
-    range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:gyldighetsperiode
-    alias: gyldighetsperiode
-    owner: Elevkategori
-    domain_of:
-    - Gruppemedlemskap
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    - Identifikator
-    range: Periode
-    inlined: true
   passiv:
     name: passiv
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:passiv
-    alias: passiv
-    owner: Elevkategori
-    domain_of:
-    - Avbruddsaarsak
-    - Betalingsstatus
-    - Bevistype
-    - Brevtype
-    - Eksamensform
-    - Elevkategori
-    - Fagmerknad
-    - Fagstatus
-    - Fravartype
-    - Fullfortkode
-    - Karakterskala
-    - Karakterstatus
-    - Karakterverdi
-    - OtEnhet
-    - OtStatus
-    - Provestatus
-    - Skoleaar
-    - Skoleeiertype
-    - Termin
-    - Tilrettelegging
-    - Varseltype
-    - Vitnemalsmerknad
-    - Begrep
-    range: boolean
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -587,6 +390,155 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  kode:
+    name: kode
+    description: Kode.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:kode
+    alias: kode
+    owner: Elevkategori
+    domain_of:
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    range: string
+    required: true
+  navn:
+    name: navn
+    description: Namn.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:navn
+    alias: navn
+    owner: Elevkategori
+    domain_of:
+    - Gruppe
+    - Skole
+    - Eksamen
+    - Rom
+    - Time
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    range: string
+    required: true
+  gyldighetsperiode:
+    name: gyldighetsperiode
+    description: Gyldigheitsperiode.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:gyldighetsperiode
+    alias: gyldighetsperiode
+    owner: Elevkategori
+    domain_of:
+    - Gruppemedlemskap
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    - Identifikator
+    range: Periode
+    inlined: true
+  passiv:
+    name: passiv
+    description: Angir om oppføringen er passiv/inaktiv.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:passiv
+    alias: passiv
+    owner: Elevkategori
+    domain_of:
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
+    - Begrep
+    range: boolean
 class_uri: utd:Elevkategori
 
 ```

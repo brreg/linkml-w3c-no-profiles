@@ -22,7 +22,7 @@ Alias: filnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  no  |
+| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: filnavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentfil](dokumentfil.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: filnavn
 ```yaml
 name: filnavn
 description: Dokumentfilens namn.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:filnavn
 alias: filnavn
-owner: Dokumentfil
 domain_of:
 - Dokumentfil
 range: string

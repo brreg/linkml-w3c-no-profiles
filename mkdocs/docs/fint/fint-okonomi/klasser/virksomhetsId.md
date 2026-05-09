@@ -22,7 +22,7 @@ Alias: virksomhetsId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: virksomhetsId
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Virksomhet](virksomhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: virksomhetsId
 ```yaml
 name: virksomhetsId
 description: Intern unik identifikator i økonomisystemet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:virksomhetsId
 alias: virksomhetsId
-owner: Virksomhet
 domain_of:
 - Virksomhet
 range: Identifikator
-required: true
 inlined: true
 
 ```

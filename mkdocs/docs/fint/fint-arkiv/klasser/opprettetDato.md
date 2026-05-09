@@ -3,8 +3,13 @@
 # Slot: opprettetDato 
 
 
+_Dato og klokkeslett arkivenheten vart oppretta/registrert._
 
-URI: [https://schema.fintlabs.no/arkiv/:opprettetDato](https://schema.fintlabs.no/arkiv/:opprettetDato)
+
+
+
+
+URI: [ark:opprettetDato](https://schema.fintlabs.no/arkiv/opprettetDato)
 Alias: opprettetDato
 
 <!-- no inheritance hierarchy -->
@@ -17,18 +22,18 @@ Alias: opprettetDato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
 | [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
+| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  yes  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
 | [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 
 
 
@@ -41,8 +46,9 @@ Alias: opprettetDato
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Datetime](datetime.md) |
 | Domain Of | [Mappe](mappe.md), [Registrering](registrering.md), [Klassifikasjonssystem](klassifikasjonssystem.md), [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
+| Slot URI | [ark:opprettetDato](https://schema.fintlabs.no/arkiv/opprettetDato) |
 
 ### Cardinality and Requirements
 
@@ -64,12 +70,19 @@ Alias: opprettetDato
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:opprettetDato |
+| self | ark:opprettetDato |
 | native | https://schema.fintlabs.no/arkiv/:opprettetDato |
 
 
@@ -80,13 +93,17 @@ Alias: opprettetDato
 <details>
 ```yaml
 name: opprettetDato
+description: Dato og klokkeslett arkivenheten vart oppretta/registrert.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:opprettetDato
 alias: opprettetDato
 domain_of:
 - Mappe
 - Registrering
 - Klassifikasjonssystem
 - Dokumentbeskrivelse
-range: string
+range: datetime
 
 ```
 </details>

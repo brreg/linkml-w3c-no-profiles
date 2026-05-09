@@ -3,8 +3,13 @@
 # Slot: personar 
 
 
+_Alle personar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:personar](https://schema.fintlabs.no/administrasjon/:personar)
+
+
+
+
+URI: [adm:personar](https://schema.fintlabs.no/administrasjon/personar)
 Alias: personar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: personar
 | --- | --- |
 | Range | [Person](person.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:personar](https://schema.fintlabs.no/administrasjon/personar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: personar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:personar |
+| self | adm:personar |
 | native | https://schema.fintlabs.no/administrasjon/:personar |
 
 
@@ -84,10 +83,11 @@ Alias: personar
 <details>
 ```yaml
 name: personar
+description: Alle personar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:personar
 alias: personar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Person

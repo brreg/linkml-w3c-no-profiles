@@ -64,28 +64,24 @@ URI: [utd:Anmerkninger](https://schema.fintlabs.no/utdanning/Anmerkninger)
 
   
   
+    
+  
 
   
   
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
   
 
-  
-  
 
-  
-  
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [atferd](atferd.md) | 1 <br/> [Integer](integer.md) | Åtferdskarakter |
+| [orden](orden.md) | 1 <br/> [Integer](integer.md) | Ordenskarakter |
 
 
 
@@ -102,6 +98,31 @@ URI: [utd:Anmerkninger](https://schema.fintlabs.no/utdanning/Anmerkninger)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [skoleaar](skoleaar.md) | 0..1 <br/> [Skoleaar](skoleaar.md) | Skoleåret |
 
 
 
@@ -118,22 +139,40 @@ URI: [utd:Anmerkninger](https://schema.fintlabs.no/utdanning/Anmerkninger)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -142,9 +181,6 @@ URI: [utd:Anmerkninger](https://schema.fintlabs.no/utdanning/Anmerkninger)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [atferd](atferd.md) | 1 <br/> [Integer](integer.md) | Antal åtferdsanmerkningar |
-| [orden](orden.md) | 1 <br/> [Integer](integer.md) | Antal ordensanmerkningar |
-| [skoleaar](skoleaar.md) | 0..1 <br/> [Skoleaar](skoleaar.md) | Skoleåret anmerkningane gjeld |
 
 
 
@@ -209,51 +245,26 @@ description: Åtferds- og ordensanmerkningar for ein elev i eit skoleår.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 slots:
 - id
-attributes:
+- atferd
+- orden
+- skoleaar
+slot_usage:
   atferd:
     name: atferd
-    description: Antal åtferdsanmerkningar.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:atferd
-    domain_of:
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
     range: integer
     required: true
   orden:
     name: orden
-    description: Antal ordensanmerkningar.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:orden
-    domain_of:
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
     range: integer
     required: true
   skoleaar:
     name: skoleaar
-    description: Skoleåret anmerkningane gjeld.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:skoleaar
-    domain_of:
-    - UtdanningContainer
-    - Elevforhold
-    - Klasse
-    - Kontaktlaerergruppe
-    - Persongruppe
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
-    - Eksamensgruppe
-    range: Skoleaar
 class_uri: utd:Anmerkninger
 
 ```
@@ -266,57 +277,24 @@ class_uri: utd:Anmerkninger
 name: Anmerkninger
 description: Åtferds- og ordensanmerkningar for ein elev i eit skoleår.
 from_schema: https://data.norge.no/linkml/fint-utdanning
-attributes:
+slot_usage:
   atferd:
     name: atferd
-    description: Antal åtferdsanmerkningar.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:atferd
-    alias: atferd
-    owner: Anmerkninger
-    domain_of:
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
     range: integer
     required: true
   orden:
     name: orden
-    description: Antal ordensanmerkningar.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:orden
-    alias: orden
-    owner: Anmerkninger
-    domain_of:
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
     range: integer
     required: true
   skoleaar:
     name: skoleaar
-    description: Skoleåret anmerkningane gjeld.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-utdanning
-    slot_uri: utd:skoleaar
-    alias: skoleaar
-    owner: Anmerkninger
-    domain_of:
-    - UtdanningContainer
-    - Elevforhold
-    - Klasse
-    - Kontaktlaerergruppe
-    - Persongruppe
-    - Faggruppe
-    - Undervisningsgruppe
-    - FagvurderingAbstrakt
-    - OrdensvurderingAbstrakt
-    - Anmerkninger
-    - Eksamensgruppe
-    range: Skoleaar
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -379,6 +357,59 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
+  atferd:
+    name: atferd
+    description: Åtferdskarakter.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:atferd
+    alias: atferd
+    owner: Anmerkninger
+    domain_of:
+    - OrdensvurderingAbstrakt
+    - Anmerkninger
+    range: integer
+    required: true
+  orden:
+    name: orden
+    description: Ordenskarakter.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:orden
+    alias: orden
+    owner: Anmerkninger
+    domain_of:
+    - OrdensvurderingAbstrakt
+    - Anmerkninger
+    range: integer
+    required: true
+  skoleaar:
+    name: skoleaar
+    description: Skoleåret.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-utdanning
+    rank: 1000
+    slot_uri: utd:skoleaar
+    alias: skoleaar
+    owner: Anmerkninger
+    domain_of:
+    - UtdanningContainer
+    - Elevforhold
+    - Klasse
+    - Kontaktlaerergruppe
+    - Persongruppe
+    - Faggruppe
+    - Undervisningsgruppe
+    - FagvurderingAbstrakt
+    - OrdensvurderingAbstrakt
+    - Anmerkninger
+    - Eksamensgruppe
+    range: Skoleaar
 class_uri: utd:Anmerkninger
 
 ```

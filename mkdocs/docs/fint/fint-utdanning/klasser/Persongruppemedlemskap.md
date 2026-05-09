@@ -3,8 +3,13 @@
 # Slot: persongruppemedlemskap 
 
 
+_Persongruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:persongruppemedlemskap](https://schema.fintlabs.no/utdanning/:persongruppemedlemskap)
+
+
+
+
+URI: [utd:persongruppemedlemskap](https://schema.fintlabs.no/utdanning/persongruppemedlemskap)
 Alias: persongruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: persongruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -32,13 +37,15 @@ Alias: persongruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Persongruppemedlemskap](persongruppemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md), [Persongruppe](persongruppe.md) |
+| Slot URI | [utd:persongruppemedlemskap](https://schema.fintlabs.no/utdanning/persongruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,12 +62,19 @@ Alias: persongruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:persongruppemedlemskap |
+| self | utd:persongruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:persongruppemedlemskap |
 
 
@@ -71,12 +85,17 @@ Alias: persongruppemedlemskap
 <details>
 ```yaml
 name: persongruppemedlemskap
+description: Persongruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:persongruppemedlemskap
 alias: persongruppemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
 - Persongruppe
-range: string
+range: Persongruppemedlemskap
+multivalued: true
 
 ```
 </details>

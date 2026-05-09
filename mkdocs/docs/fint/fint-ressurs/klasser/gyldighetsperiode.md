@@ -3,8 +3,13 @@
 # Slot: gyldighetsperiode 
 
 
+_Periode ressursen er gyldig for._
 
-URI: [https://schema.fintlabs.no/ressurs/:gyldighetsperiode](https://schema.fintlabs.no/ressurs/:gyldighetsperiode)
+
+
+
+
+URI: [fint:gyldighetsperiode](https://schema.fintlabs.no/gyldighetsperiode)
 Alias: gyldighetsperiode
 
 <!-- no inheritance hierarchy -->
@@ -17,25 +22,25 @@ Alias: gyldighetsperiode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  yes  |
+| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  yes  |
+| [Status](status.md) | Status på ei digital eining i fagsystemet |  yes  |
 | [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Status](status.md) | Status på ei digital eining i fagsystemet |  no  |
-| [Enhetstype](enhetstype.md) | Type digital eining (t |  no  |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  no  |
-| [Plattform](plattform.md) | Plattforma tenesta kan leverast på (t |  no  |
-| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
-| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  no  |
-| [Produsent](produsent.md) | Produsent av ei digital eining |  no  |
+| [Produsent](produsent.md) | Produsent av ei digital eining |  yes  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
+| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  yes  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  yes  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen (t |  no  |
-| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast (Håndhevingstype) |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
-| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  no  |
+| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
 | [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  no  |
+| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  yes  |
+| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
+| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
 
 
 
@@ -48,8 +53,9 @@ Alias: gyldighetsperiode
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Periode](periode.md) |
 | Domain Of | [Applikasjon](applikasjon.md), [Applikasjonsressurs](applikasjonsressurs.md), [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md), [Rettighet](rettighet.md), [Applikasjonskategori](applikasjonskategori.md), [Brukertype](brukertype.md), [Enhetstype](enhetstype.md), [Handhevingstype](handhevingstype.md), [Lisensmodell](lisensmodell.md), [Plattform](plattform.md), [Produsent](produsent.md), [Status](status.md), [Begrep](begrep.md), [Identifikator](identifikator.md) |
+| Slot URI | [fint:gyldighetsperiode](https://schema.fintlabs.no/gyldighetsperiode) |
 
 ### Cardinality and Requirements
 
@@ -71,12 +77,19 @@ Alias: gyldighetsperiode
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:gyldighetsperiode |
+| self | fint:gyldighetsperiode |
 | native | https://schema.fintlabs.no/ressurs/:gyldighetsperiode |
 
 
@@ -87,6 +100,10 @@ Alias: gyldighetsperiode
 <details>
 ```yaml
 name: gyldighetsperiode
+description: Periode ressursen er gyldig for.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: fint:gyldighetsperiode
 alias: gyldighetsperiode
 domain_of:
 - Applikasjon
@@ -103,7 +120,8 @@ domain_of:
 - Status
 - Begrep
 - Identifikator
-range: string
+range: Periode
+inlined: true
 
 ```
 </details>

@@ -22,7 +22,7 @@ Alias: rekkefølge
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  no  |
+| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: rekkefølge
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Klasse](klasse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: rekkefølge
 ```yaml
 name: rekkefølge
 description: Rekkjefølgje for klassifiseringar.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:rekkefolge
 alias: rekkefølge
-owner: Klasse
 domain_of:
 - Klasse
 range: integer

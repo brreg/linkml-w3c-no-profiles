@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:formatar](https://schema.fintlabs.no/arkiv/:formatar)
+URI: [ark:formatar](https://schema.fintlabs.no/arkiv/formatar)
 Alias: formatar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: formatar
 | --- | --- |
 | Range | [Format](format.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:formatar](https://schema.fintlabs.no/arkiv/formatar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: formatar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:formatar |
+| self | ark:formatar |
 | native | https://schema.fintlabs.no/arkiv/:formatar |
 
 
@@ -86,8 +80,8 @@ Alias: formatar
 name: formatar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:formatar
 alias: formatar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Format

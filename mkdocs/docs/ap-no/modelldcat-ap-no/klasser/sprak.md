@@ -22,8 +22,8 @@ Alias: sprak
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokument](dokument.md) | Eit dokument (foaf:Document) |  no  |
 | [Modelkatalog](modelkatalog.md) | Ei kuratert samling av metadata om informasjonsmodellar (dcat:Catalog) |  yes  |
+| [Dokument](dokument.md) | Eit dokument (foaf:Document) |  no  |
 | [Informasjonsmodell](informasjonsmodell.md) | Ein informasjonsmodell som er katalogisert i ein modelkatalog (modelldcatno:I... |  yes  |
 
 

@@ -22,7 +22,7 @@ Alias: rolle
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  no  |
+| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: rolle
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Tilgang](tilgang.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: rolle
 ```yaml
 name: rolle
 description: Rolle tilknytt tilgangen.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:rolle
 alias: rolle
-owner: Tilgang
 domain_of:
 - Tilgang
 range: Rolle
-required: true
 
 ```
 </details>

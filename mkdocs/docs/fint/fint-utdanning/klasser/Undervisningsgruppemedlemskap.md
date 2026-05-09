@@ -3,8 +3,13 @@
 # Slot: undervisningsgruppemedlemskap 
 
 
+_Undervisningsgruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:undervisningsgruppemedlemskap](https://schema.fintlabs.no/utdanning/:undervisningsgruppemedlemskap)
+
+
+
+
+URI: [utd:undervisningsgruppemedlemskap](https://schema.fintlabs.no/utdanning/undervisningsgruppemedlemskap)
 Alias: undervisningsgruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: undervisningsgruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: undervisningsgruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md) |
+| Slot URI | [utd:undervisningsgruppemedlemskap](https://schema.fintlabs.no/utdanning/undervisningsgruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: undervisningsgruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:undervisningsgruppemedlemskap |
+| self | utd:undervisningsgruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:undervisningsgruppemedlemskap |
 
 
@@ -70,11 +84,16 @@ Alias: undervisningsgruppemedlemskap
 <details>
 ```yaml
 name: undervisningsgruppemedlemskap
+description: Undervisningsgruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:undervisningsgruppemedlemskap
 alias: undervisningsgruppemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
-range: string
+range: Undervisningsgruppemedlemskap
+multivalued: true
 
 ```
 </details>

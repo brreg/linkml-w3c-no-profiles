@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:tilknyttetRegistreringSomKodar](https://schema.fintlabs.no/arkiv/:tilknyttetRegistreringSomKodar)
+URI: [ark:tilknyttetRegistreringSomKodar](https://schema.fintlabs.no/arkiv/tilknyttetRegistreringSomKodar)
 Alias: tilknyttetRegistreringSomKodar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: tilknyttetRegistreringSomKodar
 | --- | --- |
 | Range | [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:tilknyttetRegistreringSomKodar](https://schema.fintlabs.no/arkiv/tilknyttetRegistreringSomKodar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: tilknyttetRegistreringSomKodar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:tilknyttetRegistreringSomKodar |
+| self | ark:tilknyttetRegistreringSomKodar |
 | native | https://schema.fintlabs.no/arkiv/:tilknyttetRegistreringSomKodar |
 
 
@@ -86,8 +80,8 @@ Alias: tilknyttetRegistreringSomKodar
 name: tilknyttetRegistreringSomKodar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:tilknyttetRegistreringSomKodar
 alias: tilknyttetRegistreringSomKodar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: TilknyttetRegistreringSom

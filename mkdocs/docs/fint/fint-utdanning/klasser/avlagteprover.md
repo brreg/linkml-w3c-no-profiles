@@ -3,8 +3,13 @@
 # Slot: avlagteprover 
 
 
+_Alle avlagde prøver i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:avlagteprover](https://schema.fintlabs.no/utdanning/:avlagteprover)
+
+
+
+
+URI: [utd:avlagteprover](https://schema.fintlabs.no/utdanning/avlagteprover)
 Alias: avlagteprover
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: avlagteprover
 | --- | --- |
 | Range | [AvlagtProve](avlagtprove.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:avlagteprover](https://schema.fintlabs.no/utdanning/avlagteprover) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: avlagteprover
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:avlagteprover |
+| self | utd:avlagteprover |
 | native | https://schema.fintlabs.no/utdanning/:avlagteprover |
 
 
@@ -84,10 +83,11 @@ Alias: avlagteprover
 <details>
 ```yaml
 name: avlagteprover
+description: Alle avlagde prøver i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:avlagteprover
 alias: avlagteprover
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: AvlagtProve

@@ -22,7 +22,7 @@ Alias: kontonummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester (Leverandør) |  no  |
+| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kontonummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Leverandor](leverandor.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: kontonummer
 ```yaml
 name: kontonummer
 description: Kontonummer til leverandøren.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:kontonummer
 alias: kontonummer
-owner: Leverandor
 domain_of:
 - Leverandor
 range: string

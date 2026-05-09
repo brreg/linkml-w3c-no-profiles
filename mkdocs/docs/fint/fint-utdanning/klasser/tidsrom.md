@@ -3,8 +3,13 @@
 # Slot: tidsrom 
 
 
+_Tidsrom._
 
-URI: [https://schema.fintlabs.no/utdanning/:tidsrom](https://schema.fintlabs.no/utdanning/:tidsrom)
+
+
+
+
+URI: [utd:tidsrom](https://schema.fintlabs.no/utdanning/tidsrom)
 Alias: tidsrom
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: tidsrom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  no  |
-| [Time](time.md) | Ein time i timeplanen |  no  |
+| [Time](time.md) | Ein time i timeplanen |  yes  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: tidsrom
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Periode](periode.md) |
 | Domain Of | [Eksamen](eksamen.md), [Time](time.md) |
+| Slot URI | [utd:tidsrom](https://schema.fintlabs.no/utdanning/tidsrom) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: tidsrom
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:tidsrom |
+| self | utd:tidsrom |
 | native | https://schema.fintlabs.no/utdanning/:tidsrom |
 
 
@@ -70,11 +83,16 @@ Alias: tidsrom
 <details>
 ```yaml
 name: tidsrom
+description: Tidsrom.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:tidsrom
 alias: tidsrom
 domain_of:
 - Eksamen
 - Time
-range: string
+range: Periode
+inlined: true
 
 ```
 </details>

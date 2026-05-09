@@ -3,8 +3,13 @@
 # Slot: fravaersgrunnar 
 
 
+_Alle fråværsgrunnar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fravaersgrunnar](https://schema.fintlabs.no/administrasjon/:fravaersgrunnar)
+
+
+
+
+URI: [adm:fravaersgrunnar](https://schema.fintlabs.no/administrasjon/fravaersgrunnar)
 Alias: fravaersgrunnar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fravaersgrunnar
 | --- | --- |
 | Range | [Fravaersgrunn](fravaersgrunn.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:fravaersgrunnar](https://schema.fintlabs.no/administrasjon/fravaersgrunnar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fravaersgrunnar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fravaersgrunnar |
+| self | adm:fravaersgrunnar |
 | native | https://schema.fintlabs.no/administrasjon/:fravaersgrunnar |
 
 
@@ -84,10 +83,11 @@ Alias: fravaersgrunnar
 <details>
 ```yaml
 name: fravaersgrunnar
+description: Alle fråværsgrunnar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:fravaersgrunnar
 alias: fravaersgrunnar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Fravaersgrunn

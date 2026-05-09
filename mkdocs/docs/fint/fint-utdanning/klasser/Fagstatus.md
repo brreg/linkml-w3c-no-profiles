@@ -3,8 +3,13 @@
 # Slot: fagstatus 
 
 
+_Fagstatus._
 
-URI: [https://schema.fintlabs.no/utdanning/:fagstatus](https://schema.fintlabs.no/utdanning/:fagstatus)
+
+
+
+
+URI: [utd:fagstatus](https://schema.fintlabs.no/utdanning/fagstatus)
 Alias: fagstatus
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: fagstatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: fagstatus
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fagstatus](fagstatus.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Faggruppemedlemskap](faggruppemedlemskap.md) |
+| Slot URI | [utd:fagstatus](https://schema.fintlabs.no/utdanning/fagstatus) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: fagstatus
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fagstatus |
+| self | utd:fagstatus |
 | native | https://schema.fintlabs.no/utdanning/:fagstatus |
 
 
@@ -70,11 +83,15 @@ Alias: fagstatus
 <details>
 ```yaml
 name: fagstatus
+description: Fagstatus.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:fagstatus
 alias: fagstatus
 domain_of:
 - UtdanningContainer
 - Faggruppemedlemskap
-range: string
+range: Fagstatus
 
 ```
 </details>

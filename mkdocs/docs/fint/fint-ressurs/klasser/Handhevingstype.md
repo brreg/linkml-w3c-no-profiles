@@ -3,7 +3,7 @@
 # Slot: handhevingstype 
 
 
-_Korleis det skal handhevast når lisensantall vert overskredet (Håndhevingstype)._
+_Korleis lisensmodellen skal handhevast._
 
 
 
@@ -22,7 +22,7 @@ Alias: handhevingstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: handhevingstype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurs](applikasjonsressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: handhevingstype
 <details>
 ```yaml
 name: handhevingstype
-description: Korleis det skal handhevast når lisensantall vert overskredet (Håndhevingstype).
-in_subset:
-- Valgfri
+description: Korleis lisensmodellen skal handhevast.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:handhevingstype
 alias: handhevingstype
-owner: Applikasjonsressurs
 domain_of:
 - Applikasjonsressurs
 range: Handhevingstype

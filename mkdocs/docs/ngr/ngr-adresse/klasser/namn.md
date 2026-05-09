@@ -22,17 +22,17 @@ Alias: namn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Grunnkrets](grunnkrets.md) | Ei grunnkrets – minste geografiske eining i statistisk inndeling |  no  |
+| [Stemmekrets](stemmekrets.md) | Ei stemmekrets brukt ved val |  no  |
+| [Tettsted](tettsted.md) | Eit tettbygd område definert av SSB |  no  |
+| [KommunalKrets](kommunalkrets.md) | Ein kommunal krets (administrativ inndeling definert av kommunen) |  no  |
 | [Kommune](kommune.md) | Ein norsk kommune |  no  |
 | [GeografiskOmrade](geografiskomrade.md) | Abstrakt klasse for geografiske inndelingar som offisielle adressar refererer... |  no  |
-| [Fylke](fylke.md) | Eit norsk fylke |  no  |
-| [Tettsted](tettsted.md) | Eit tettbygd område definert av SSB |  no  |
 | [Svalbard](svalbard.md) | Svalbard som særskild geografisk område |  no  |
-| [Grunnkrets](grunnkrets.md) | Ei grunnkrets – minste geografiske eining i statistisk inndeling |  no  |
 | [Adresseomrade](adresseomrade.md) | Geografisk område eit adressenavn høyrer til, t |  no  |
-| [KommunalKrets](kommunalkrets.md) | Ein kommunal krets (administrativ inndeling definert av kommunen) |  no  |
 | [Poststed](poststed.md) | Eit poststed identifisert med postnummer, forvalta av Postnummerregisteret |  no  |
-| [Stemmekrets](stemmekrets.md) | Ei stemmekrets brukt ved val |  no  |
 | [Kirkesokn](kirkesokn.md) | Eit kyrkjesokn |  no  |
+| [Fylke](fylke.md) | Eit norsk fylke |  no  |
 
 
 

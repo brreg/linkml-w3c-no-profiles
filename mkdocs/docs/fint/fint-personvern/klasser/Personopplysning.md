@@ -22,7 +22,7 @@ Alias: personopplysning
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  no  |
+| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: personopplysning
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Behandling](behandling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: personopplysning
 ```yaml
 name: personopplysning
 description: Opplysning eller vurdering som kan knytast til ein enkeltperson.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:personopplysning
 alias: personopplysning
-owner: Behandling
 domain_of:
 - Behandling
 range: Personopplysning
-required: true
 
 ```
 </details>

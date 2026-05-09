@@ -146,7 +146,7 @@ OWL_FLAGS_fint := --log_level ERROR
 # ../fint-common/fint-common-schema.context.jsonld context reference, which
 # rdflib resolves against the schema base URL (https://schema.fintlabs.no/...)
 # and fetches over HTTP → 404. Set GEN_RDF_SKIP_<domain> := true to skip.
-GEN_RDF_SKIP_fint := true
+#GEN_RDF_SKIP_fint := true
 
 # gen-rdf fails for samt schemas: same HTTP-fetch issue as fint (imports dcat-ap-no-schema
 # whose JSON-LD context reference is resolved against the schema base URL → 404).

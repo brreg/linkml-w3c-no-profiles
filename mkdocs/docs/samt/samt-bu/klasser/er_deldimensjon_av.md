@@ -1,0 +1,95 @@
+
+
+# Slot: er_deldimensjon_av 
+
+
+_Overordna kvalitetsdimensjon denne deldimensjonen høyrer til._
+
+
+
+
+
+URI: [skos:broader](http://www.w3.org/2004/02/skos/core#broader)
+Alias: er_deldimensjon_av
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Kvalitetsdeldimensjon](kvalitetsdeldimensjon.md) | Ein deldimensjon av ein kvalitetsdimensjon |  yes  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Kvalitetsdimensjon](kvalitetsdimensjon.md) |
+| Domain Of | [Kvalitetsdeldimensjon](kvalitetsdeldimensjon.md) |
+| Slot URI | [skos:broader](http://www.w3.org/2004/02/skos/core#broader) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://example.no/ontology/samt-bu-skole
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | skos:broader |
+| native | samtbuskole:er_deldimensjon_av |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: er_deldimensjon_av
+description: Overordna kvalitetsdimensjon denne deldimensjonen høyrer til.
+from_schema: https://example.no/ontology/samt-bu-skole
+rank: 1000
+slot_uri: skos:broader
+alias: er_deldimensjon_av
+domain_of:
+- Kvalitetsdeldimensjon
+range: Kvalitetsdimensjon
+
+```
+</details>

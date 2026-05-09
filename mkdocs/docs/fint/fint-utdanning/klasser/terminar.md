@@ -3,8 +3,13 @@
 # Slot: terminar 
 
 
+_Alle terminar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:terminar](https://schema.fintlabs.no/utdanning/:terminar)
+
+
+
+
+URI: [utd:terminar](https://schema.fintlabs.no/utdanning/terminar)
 Alias: terminar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: terminar
 | --- | --- |
 | Range | [Termin](termin.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:terminar](https://schema.fintlabs.no/utdanning/terminar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: terminar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:terminar |
+| self | utd:terminar |
 | native | https://schema.fintlabs.no/utdanning/:terminar |
 
 
@@ -84,10 +83,11 @@ Alias: terminar
 <details>
 ```yaml
 name: terminar
+description: Alle terminar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:terminar
 alias: terminar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Termin

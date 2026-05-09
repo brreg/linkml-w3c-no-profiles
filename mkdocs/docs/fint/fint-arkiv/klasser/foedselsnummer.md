@@ -3,8 +3,13 @@
 # Slot: foedselsnummer 
 
 
+_Fødselsnummer._
 
-URI: [https://schema.fintlabs.no/arkiv/:foedselsnummer](https://schema.fintlabs.no/arkiv/:foedselsnummer)
+
+
+
+
+URI: [ark:foedselsnummer](https://schema.fintlabs.no/arkiv/foedselsnummer)
 Alias: foedselsnummer
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: foedselsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
+| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
 
 
 
@@ -33,6 +38,7 @@ Alias: foedselsnummer
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Korrespondansepart](korrespondansepart.md), [Part](part.md) |
+| Slot URI | [ark:foedselsnummer](https://schema.fintlabs.no/arkiv/foedselsnummer) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: foedselsnummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:foedselsnummer |
+| self | ark:foedselsnummer |
 | native | https://schema.fintlabs.no/arkiv/:foedselsnummer |
 
 
@@ -70,6 +83,10 @@ Alias: foedselsnummer
 <details>
 ```yaml
 name: foedselsnummer
+description: Fødselsnummer.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:foedselsnummer
 alias: foedselsnummer
 domain_of:
 - Korrespondansepart

@@ -22,7 +22,7 @@ Alias: skjermingshjemmel
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skjerming](skjerming.md) | Skjerming av mappe, registrering eller dokument etter offentleglova |  no  |
+| [Skjerming](skjerming.md) | Skjerming av mappe, registrering eller dokument etter offentleglova |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: skjermingshjemmel
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skjerming](skjerming.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: skjermingshjemmel
 ```yaml
 name: skjermingshjemmel
 description: Skjermingsheimelen.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:skjermingshjemmel
 alias: skjermingshjemmel
-owner: Skjerming
 domain_of:
 - Skjerming
 range: Skjermingshjemmel
-required: true
 
 ```
 </details>

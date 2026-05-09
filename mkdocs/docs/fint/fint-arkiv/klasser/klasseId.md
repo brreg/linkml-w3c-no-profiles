@@ -22,7 +22,7 @@ Alias: klasseId
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  no  |
+| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: klasseId
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Klasse](klasse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: klasseId
 ```yaml
 name: klasseId
 description: Eintydig identifikasjon av klassen innanfor klassifikasjonssystemet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:klasseId
 alias: klasseId
-owner: Klasse
 domain_of:
 - Klasse
 range: string
-required: true
 
 ```
 </details>

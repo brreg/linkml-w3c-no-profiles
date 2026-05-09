@@ -3,8 +3,13 @@
 # Slot: fagmerknader 
 
 
+_Alle fagmerknadar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:fagmerknader](https://schema.fintlabs.no/utdanning/:fagmerknader)
+
+
+
+
+URI: [utd:fagmerknader](https://schema.fintlabs.no/utdanning/fagmerknader)
 Alias: fagmerknader
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fagmerknader
 | --- | --- |
 | Range | [Fagmerknad](fagmerknad.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:fagmerknader](https://schema.fintlabs.no/utdanning/fagmerknader) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fagmerknader
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fagmerknader |
+| self | utd:fagmerknader |
 | native | https://schema.fintlabs.no/utdanning/:fagmerknader |
 
 
@@ -84,10 +83,11 @@ Alias: fagmerknader
 <details>
 ```yaml
 name: fagmerknader
+description: Alle fagmerknadar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:fagmerknader
 alias: fagmerknader
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Fagmerknad

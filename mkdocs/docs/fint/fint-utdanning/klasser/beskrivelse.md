@@ -3,8 +3,13 @@
 # Slot: beskrivelse 
 
 
+_Skildring._
 
-URI: [https://schema.fintlabs.no/utdanning/:beskrivelse](https://schema.fintlabs.no/utdanning/:beskrivelse)
+
+
+
+
+URI: [utd:beskrivelse](https://schema.fintlabs.no/utdanning/beskrivelse)
 Alias: beskrivelse
 
 <!-- no inheritance hierarchy -->
@@ -18,23 +23,23 @@ Alias: beskrivelse
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  no  |
-| [Gruppe](gruppe.md) | Abstrakt basisklasse for alle gruppetypar i utdanning |  no  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
+| [Time](time.md) | Ein time i timeplanen |  yes  |
+| [Gruppe](gruppe.md) | Abstrakt basisklasse for alle gruppetypar i utdanning |  yes  |
+| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  no  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
+| [Fag](fag.md) | Eit skulefag |  no  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [Utdanningsforhold](utdanningsforhold.md) | Abstrakt basisklasse for undervisningsforhold i utdanning |  yes  |
 | [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
 | [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  no  |
-| [Time](time.md) | Ein time i timeplanen |  no  |
 | [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  no  |
-| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
-| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
-| [Utdanningsforhold](utdanningsforhold.md) | Abstrakt basisklasse for undervisningsforhold i utdanning |  no  |
-| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
 | [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  no  |
+| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  yes  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
+| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 
@@ -49,6 +54,7 @@ Alias: beskrivelse
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Gruppe](gruppe.md), [Utdanningsforhold](utdanningsforhold.md), [Elevforhold](elevforhold.md), [Eksamen](eksamen.md), [Time](time.md), [OtStatus](otstatus.md), [Periode](periode.md) |
+| Slot URI | [utd:beskrivelse](https://schema.fintlabs.no/utdanning/beskrivelse) |
 
 ### Cardinality and Requirements
 
@@ -70,12 +76,19 @@ Alias: beskrivelse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:beskrivelse |
+| self | utd:beskrivelse |
 | native | https://schema.fintlabs.no/utdanning/:beskrivelse |
 
 
@@ -86,6 +99,10 @@ Alias: beskrivelse
 <details>
 ```yaml
 name: beskrivelse
+description: Skildring.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:beskrivelse
 alias: beskrivelse
 domain_of:
 - Gruppe

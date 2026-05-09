@@ -22,7 +22,7 @@ Alias: merverdiavgift
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  no  |
+| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: merverdiavgift
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Vare](vare.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: merverdiavgift
 ```yaml
 name: merverdiavgift
 description: Varens avgiftsklasse og -sats.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:merverdiavgift
 alias: merverdiavgift
-owner: Vare
 domain_of:
 - Vare
 range: Merverdiavgift
-required: true
 
 ```
 </details>

@@ -3,8 +3,13 @@
 # Slot: eksamensform 
 
 
+_Eksamensform._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamensform](https://schema.fintlabs.no/utdanning/:eksamensform)
+
+
+
+
+URI: [utd:eksamensform](https://schema.fintlabs.no/utdanning/eksamensform)
 Alias: eksamensform
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: eksamensform
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevtilrettelegging](elevtilrettelegging.md) | Tilrettelegging for ein elev i eit elevforhold |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Elevtilrettelegging](elevtilrettelegging.md) | Tilrettelegging for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: eksamensform
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Eksamensform](eksamensform.md) |
 | Domain Of | [Elevtilrettelegging](elevtilrettelegging.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:eksamensform](https://schema.fintlabs.no/utdanning/eksamensform) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: eksamensform
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamensform |
+| self | utd:eksamensform |
 | native | https://schema.fintlabs.no/utdanning/:eksamensform |
 
 
@@ -70,11 +83,15 @@ Alias: eksamensform
 <details>
 ```yaml
 name: eksamensform
+description: Eksamensform.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:eksamensform
 alias: eksamensform
 domain_of:
 - Elevtilrettelegging
 - Eksamensgruppe
-range: string
+range: Eksamensform
 
 ```
 </details>

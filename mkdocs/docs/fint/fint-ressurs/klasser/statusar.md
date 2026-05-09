@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:statusar](https://schema.fintlabs.no/ressurs/:statusar)
+URI: [res:statusar](https://schema.fintlabs.no/ressurs/statusar)
 Alias: statusar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: statusar
 | --- | --- |
 | Range | [Status](status.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:statusar](https://schema.fintlabs.no/ressurs/statusar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: statusar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:statusar |
+| self | res:statusar |
 | native | https://schema.fintlabs.no/ressurs/:statusar |
 
 
@@ -86,8 +80,8 @@ Alias: statusar
 name: statusar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:statusar
 alias: statusar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Status

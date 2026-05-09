@@ -3,8 +3,13 @@
 # Slot: avsluttetAv 
 
 
+_Person som avslutta/lukka arkivenheten._
 
-URI: [https://schema.fintlabs.no/arkiv/:avsluttetAv](https://schema.fintlabs.no/arkiv/:avsluttetAv)
+
+
+
+
+URI: [ark:avsluttetAv](https://schema.fintlabs.no/arkiv/avsluttetAv)
 Alias: avsluttetAv
 
 <!-- no inheritance hierarchy -->
@@ -17,15 +22,14 @@ Alias: avsluttetAv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  yes  |
 | [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
 | [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
+| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
 | [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
 
 
 
@@ -38,8 +42,9 @@ Alias: avsluttetAv
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
-| Domain Of | [Mappe](mappe.md), [Klassifikasjonssystem](klassifikasjonssystem.md) |
+| Range | [Arkivressurs](arkivressurs.md) |
+| Domain Of | [Mappe](mappe.md) |
+| Slot URI | [ark:avsluttetAv](https://schema.fintlabs.no/arkiv/avsluttetAv) |
 
 ### Cardinality and Requirements
 
@@ -61,12 +66,19 @@ Alias: avsluttetAv
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:avsluttetAv |
+| self | ark:avsluttetAv |
 | native | https://schema.fintlabs.no/arkiv/:avsluttetAv |
 
 
@@ -77,11 +89,14 @@ Alias: avsluttetAv
 <details>
 ```yaml
 name: avsluttetAv
+description: Person som avslutta/lukka arkivenheten.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:avsluttetAv
 alias: avsluttetAv
 domain_of:
 - Mappe
-- Klassifikasjonssystem
-range: string
+range: Arkivressurs
 
 ```
 </details>

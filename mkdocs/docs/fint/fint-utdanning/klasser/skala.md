@@ -22,7 +22,7 @@ Alias: skala
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterverdi](karakterverdi.md) | Ein konkret karakterverdi i ei karakterskala |  no  |
+| [Karakterverdi](karakterverdi.md) | Ein konkret karakterverdi i ei karakterskala |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: skala
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterverdi](karakterverdi.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: skala
 ```yaml
 name: skala
 description: Karakterskalaen denne verdien tilhøyrer.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:skala
 alias: skala
-owner: Karakterverdi
 domain_of:
 - Karakterverdi
 range: Karakterskala
-required: true
 
 ```
 </details>

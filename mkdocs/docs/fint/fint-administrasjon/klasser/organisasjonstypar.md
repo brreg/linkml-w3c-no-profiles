@@ -3,8 +3,13 @@
 # Slot: organisasjonstypar 
 
 
+_Alle organisasjonstypar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:organisasjonstypar](https://schema.fintlabs.no/administrasjon/:organisasjonstypar)
+
+
+
+
+URI: [adm:organisasjonstypar](https://schema.fintlabs.no/administrasjon/organisasjonstypar)
 Alias: organisasjonstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: organisasjonstypar
 | --- | --- |
 | Range | [Organisasjonstype](organisasjonstype.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:organisasjonstypar](https://schema.fintlabs.no/administrasjon/organisasjonstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: organisasjonstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:organisasjonstypar |
+| self | adm:organisasjonstypar |
 | native | https://schema.fintlabs.no/administrasjon/:organisasjonstypar |
 
 
@@ -84,10 +83,11 @@ Alias: organisasjonstypar
 <details>
 ```yaml
 name: organisasjonstypar
+description: Alle organisasjonstypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:organisasjonstypar
 alias: organisasjonstypar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Organisasjonstype

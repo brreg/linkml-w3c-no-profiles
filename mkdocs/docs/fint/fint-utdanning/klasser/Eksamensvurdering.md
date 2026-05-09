@@ -3,8 +3,13 @@
 # Slot: eksamensvurdering 
 
 
+_Eksamensvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamensvurdering](https://schema.fintlabs.no/utdanning/:eksamensvurdering)
+
+
+
+
+URI: [utd:eksamensvurdering](https://schema.fintlabs.no/utdanning/eksamensvurdering)
 Alias: eksamensvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: eksamensvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: eksamensvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Eksamensvurdering](eksamensvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:eksamensvurdering](https://schema.fintlabs.no/utdanning/eksamensvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: eksamensvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamensvurdering |
+| self | utd:eksamensvurdering |
 | native | https://schema.fintlabs.no/utdanning/:eksamensvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: eksamensvurdering
 <details>
 ```yaml
 name: eksamensvurdering
+description: Eksamensvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:eksamensvurdering
 alias: eksamensvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Eksamensvurdering
+multivalued: true
 
 ```
 </details>

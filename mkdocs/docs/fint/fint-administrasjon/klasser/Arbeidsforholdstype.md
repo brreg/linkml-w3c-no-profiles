@@ -22,7 +22,7 @@ Alias: arbeidsforholdstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: arbeidsforholdstype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidsforhold](arbeidsforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: arbeidsforholdstype
 ```yaml
 name: arbeidsforholdstype
 description: Beskriven kode som kategoriserer kva funksjon stillinga er gruppert til.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:arbeidsforholdstype
 alias: arbeidsforholdstype
-owner: Arbeidsforhold
 domain_of:
 - Arbeidsforhold
 range: Arbeidsforholdstype

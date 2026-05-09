@@ -116,22 +116,18 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 
   
   
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
   
 
-  
-  
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [virksomhetsId](virksomhetsid.md) | 1 <br/> [Identifikator](identifikator.md) | Intern unik identifikator i økonomisystemet |
 
 
 
@@ -145,6 +141,28 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [laerling](laerling.md) | * <br/> [Uriorcurie](uriorcurie.md) | Referanse til Laerling (Utdanning) |
 
 
 
@@ -161,15 +179,27 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -178,8 +208,6 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [virksomhetsId](virksomhetsid.md) | 1 <br/> [Identifikator](identifikator.md) | Intern unik identifikator i økonomisystemet |
-| [laerling](laerling.md) | * <br/> [Uriorcurie](uriorcurie.md) | Referanse til Laerling (Utdanning) i verksemda |
 
 
 
@@ -187,7 +215,7 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 ### Arva
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
-| --- | --- | --- | --- || [forretningsadresse](forretningsadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret | [Enhet](enhet.md) |
+| --- | --- | --- | --- || [forretningsadresse](forretningsadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Besøksadresse til ein organisasjonseining | [Enhet](enhet.md) |
 | [organisasjonsnavn](organisasjonsnavn.md) | 0..1 <br/> [String](string.md) | Namn på eining registrert i Einingsregisteret | [Enhet](enhet.md) |
 | [organisasjonsnummer](organisasjonsnummer.md) | 0..1 <br/> [Identifikator](identifikator.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret | [Enhet](enhet.md) |
 | [kontaktinformasjon](kontaktinformasjon.md) | 0..1 <br/> [Kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør | [Aktoer](aktoer.md) |
@@ -254,32 +282,18 @@ from_schema: https://data.norge.no/linkml/fint-administrasjon
 is_a: Enhet
 slots:
 - id
-attributes:
+- virksomhetsId
+- laerling
+slot_usage:
   virksomhetsId:
     name: virksomhetsId
-    description: Intern unik identifikator i økonomisystemet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:virksomhetsId
-    domain_of:
-    - Virksomhet
-    range: Identifikator
     required: true
-    inlined: true
   laerling:
     name: laerling
-    description: Referanse til Laerling (Utdanning) i verksemda.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:laerling
-    domain_of:
-    - Person
-    - Virksomhet
-    range: uriorcurie
-    multivalued: true
 class_uri: fint:Virksomhet
 
 ```
@@ -293,36 +307,17 @@ name: Virksomhet
 description: Ein juridisk organisasjon som produserer varer eller tenester.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 is_a: Enhet
-attributes:
+slot_usage:
   virksomhetsId:
     name: virksomhetsId
-    description: Intern unik identifikator i økonomisystemet.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:virksomhetsId
-    alias: virksomhetsId
-    owner: Virksomhet
-    domain_of:
-    - Virksomhet
-    range: Identifikator
     required: true
-    inlined: true
   laerling:
     name: laerling
-    description: Referanse til Laerling (Utdanning) i verksemda.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:laerling
-    alias: laerling
-    owner: Virksomhet
-    domain_of:
-    - Person
-    - Virksomhet
-    range: uriorcurie
-    multivalued: true
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -347,12 +342,43 @@ attributes:
     - Virksomhet
     range: uriorcurie
     required: true
-  forretningsadresse:
-    name: forretningsadresse
-    description: Besøksadresse til ein organisasjonseining i einingsregisteret.
+  virksomhetsId:
+    name: virksomhetsId
+    description: Intern unik identifikator i økonomisystemet.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:virksomhetsId
+    alias: virksomhetsId
+    owner: Virksomhet
+    domain_of:
+    - Virksomhet
+    range: Identifikator
+    required: true
+    inlined: true
+  laerling:
+    name: laerling
+    description: Referanse til Laerling (Utdanning).
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
+    slot_uri: fint:laerling
+    alias: laerling
+    owner: Virksomhet
+    domain_of:
+    - Person
+    - Virksomhet
+    range: uriorcurie
+    multivalued: true
+  forretningsadresse:
+    name: forretningsadresse
+    description: Besøksadresse til ein organisasjonseining.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
     slot_uri: fint:forretningsadresse
     alias: forretningsadresse
     owner: Virksomhet
@@ -367,7 +393,8 @@ attributes:
     description: Namn på eining registrert i Einingsregisteret.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
     slot_uri: fint:organisasjonsnavn
     alias: organisasjonsnavn
     owner: Virksomhet
@@ -381,7 +408,8 @@ attributes:
     description: Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
     slot_uri: fint:organisasjonsnummer
     alias: organisasjonsnummer
     owner: Virksomhet
@@ -396,7 +424,8 @@ attributes:
     description: Den føretrekte måten å kome i kontakt med ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
     slot_uri: fint:kontaktinformasjon
     alias: kontaktinformasjon
     owner: Virksomhet
@@ -413,7 +442,8 @@ attributes:
     description: Informasjon om postadresse til ein aktør.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-administrasjon
+    rank: 1000
     slot_uri: fint:postadresse
     alias: postadresse
     owner: Virksomhet

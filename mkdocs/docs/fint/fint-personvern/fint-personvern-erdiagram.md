@@ -9,7 +9,7 @@ Behandling {
 Behandlingsgrunnlag {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -20,7 +20,7 @@ Periode {
 Personopplysning {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Samtykke {
@@ -31,7 +31,7 @@ Samtykke {
 }
 Tjeneste {
     uriorcurie id  
-    string navn  
+    string naam  
     datetime slettet  
 }
 

@@ -3,7 +3,7 @@
 # Slot: enhet 
 
 
-_OT-eining knytt til ungdommen._
+_OT-eining._
 
 
 
@@ -22,7 +22,7 @@ Alias: enhet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  no  |
+| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: enhet
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OtUngdom](otungdom.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: enhet
 <details>
 ```yaml
 name: enhet
-description: OT-eining knytt til ungdommen.
-in_subset:
-- Valgfri
+description: OT-eining.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:enhet
 alias: enhet
-owner: OtUngdom
 domain_of:
 - OtUngdom
 range: OtEnhet

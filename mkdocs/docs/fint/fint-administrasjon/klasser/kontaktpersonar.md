@@ -3,8 +3,13 @@
 # Slot: kontaktpersonar 
 
 
+_Alle kontaktpersonar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:kontaktpersonar](https://schema.fintlabs.no/administrasjon/:kontaktpersonar)
+
+
+
+
+URI: [adm:kontaktpersonar](https://schema.fintlabs.no/administrasjon/kontaktpersonar)
 Alias: kontaktpersonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: kontaktpersonar
 | --- | --- |
 | Range | [Kontaktperson](kontaktperson.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:kontaktpersonar](https://schema.fintlabs.no/administrasjon/kontaktpersonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: kontaktpersonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:kontaktpersonar |
+| self | adm:kontaktpersonar |
 | native | https://schema.fintlabs.no/administrasjon/:kontaktpersonar |
 
 
@@ -84,10 +83,11 @@ Alias: kontaktpersonar
 <details>
 ```yaml
 name: kontaktpersonar
+description: Alle kontaktpersonar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:kontaktpersonar
 alias: kontaktpersonar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Kontaktperson

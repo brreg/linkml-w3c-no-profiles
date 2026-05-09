@@ -63,13 +63,13 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
     
 
         
-      ArkivContainer : dispensasjonAutomatiskFredaKulturminne
+      ArkivContainer : dispensasjonAutomatiskFredaKulturminne_liste
         
           
     
         
         
-        ArkivContainer --> "*" DispensasjonAutomatiskFredaKulturminne : dispensasjonAutomatiskFredaKulturminne
+        ArkivContainer --> "*" DispensasjonAutomatiskFredaKulturminne : dispensasjonAutomatiskFredaKulturminne_liste
         click DispensasjonAutomatiskFredaKulturminne href "../DispensasjonAutomatiskFredaKulturminne/"
     
 
@@ -217,13 +217,13 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
     
 
         
-      ArkivContainer : personalmappe
+      ArkivContainer : personalmappe_liste
         
           
     
         
         
-        ArkivContainer --> "*" Personalmappe : personalmappe
+        ArkivContainer --> "*" Personalmappe : personalmappe_liste
         click Personalmappe href "../Personalmappe/"
     
 
@@ -283,13 +283,13 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
     
 
         
-      ArkivContainer : soeknadDrosjeloeyve
+      ArkivContainer : soeknadDrosjeloeyve_liste
         
           
     
         
         
-        ArkivContainer --> "*" SoeknadDrosjeloeyve : soeknadDrosjeloeyve
+        ArkivContainer --> "*" SoeknadDrosjeloeyve : soeknadDrosjeloeyve_liste
         click SoeknadDrosjeloeyve href "../SoeknadDrosjeloeyve/"
     
 
@@ -338,24 +338,24 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
     
 
         
-      ArkivContainer : tilskuddFartoy
+      ArkivContainer : tilskuddFartoy_liste
         
           
     
         
         
-        ArkivContainer --> "*" TilskuddFartoy : tilskuddFartoy
+        ArkivContainer --> "*" TilskuddFartoy : tilskuddFartoy_liste
         click TilskuddFartoy href "../TilskuddFartoy/"
     
 
         
-      ArkivContainer : tilskuddFredaBygningPrivatEie
+      ArkivContainer : tilskuddFredaBygningPrivatEie_liste
         
           
     
         
         
-        ArkivContainer --> "*" TilskuddFredaBygningPrivatEie : tilskuddFredaBygningPrivatEie
+        ArkivContainer --> "*" TilskuddFredaBygningPrivatEie : tilskuddFredaBygningPrivatEie_liste
         click TilskuddFredaBygningPrivatEie href "../TilskuddFredaBygningPrivatEie/"
     
 
@@ -747,6 +747,14 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -931,14 +939,14 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
 | [dokumentfiler](dokumentfiler.md) | * <br/> [Dokumentfil](dokumentfil.md) |  |
 | [dokumentbeskrivelsar](dokumentbeskrivelsar.md) | * <br/> [Dokumentbeskrivelse](dokumentbeskrivelse.md) |  |
 | [journalpostar](journalpostar.md) | * <br/> [Journalpost](journalpost.md) |  |
-| [klassifikasjonssystem](klassifikasjonssystem.md) | * <br/> [Klassifikasjonssystem](klassifikasjonssystem.md) |  |
+| [klassifikasjonssystem](klassifikasjonssystem.md) | * <br/> [Klassifikasjonssystem](klassifikasjonssystem.md) | Klassifikasjonssystem |
 | [tilgangar](tilgangar.md) | * <br/> [Tilgang](tilgang.md) |  |
 | [sakar](sakar.md) | * <br/> [Sak](sak.md) |  |
-| [personalmappe](personalmappe.md) | * <br/> [Personalmappe](personalmappe.md) |  |
-| [dispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | * <br/> [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) |  |
-| [tilskuddFartoy](tilskuddfartoy.md) | * <br/> [TilskuddFartoy](tilskuddfartoy.md) |  |
-| [tilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | * <br/> [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |  |
-| [soeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | * <br/> [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) |  |
+| [personalmappe_liste](personalmappe_liste.md) | * <br/> [Personalmappe](personalmappe.md) |  |
+| [dispensasjonAutomatiskFredaKulturminne_liste](dispensasjonautomatiskfredakulturminne_liste.md) | * <br/> [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) |  |
+| [tilskuddFartoy_liste](tilskuddfartoy_liste.md) | * <br/> [TilskuddFartoy](tilskuddfartoy.md) |  |
+| [tilskuddFredaBygningPrivatEie_liste](tilskuddfredabygningprivateie_liste.md) | * <br/> [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) |  |
+| [soeknadDrosjeloeyve_liste](soeknaddrosjeloeyve_liste.md) | * <br/> [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) |  |
 | [dokumentstatuskodar](dokumentstatuskodar.md) | * <br/> [DokumentStatus](dokumentstatus.md) |  |
 | [dokumenttypar](dokumenttypar.md) | * <br/> [DokumentType](dokumenttype.md) |  |
 | [formatar](formatar.md) | * <br/> [Format](format.md) |  |
@@ -1011,328 +1019,43 @@ URI: [https://schema.fintlabs.no/arkiv/:ArkivContainer](https://schema.fintlabs.
 name: ArkivContainer
 description: Rotcontainer for FINT Arkiv-instansar.
 from_schema: https://data.norge.no/linkml/fint-arkiv
-attributes:
-  arkivdelar:
-    name: arkivdelar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Arkivdel
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  arkivressursar:
-    name: arkivressursar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Arkivressurs
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  autorisasjonar:
-    name: autorisasjonar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Autorisasjon
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  administrativeEiningar:
-    name: administrativeEiningar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: AdministrativEnhet
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  dokumentfiler:
-    name: dokumentfiler
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Dokumentfil
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  dokumentbeskrivelsar:
-    name: dokumentbeskrivelsar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Dokumentbeskrivelse
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  journalpostar:
-    name: journalpostar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Journalpost
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
+slots:
+- arkivdelar
+- arkivressursar
+- autorisasjonar
+- administrativeEiningar
+- dokumentfiler
+- dokumentbeskrivelsar
+- journalpostar
+- klassifikasjonssystem
+- tilgangar
+- sakar
+- personalmappe_liste
+- dispensasjonAutomatiskFredaKulturminne_liste
+- tilskuddFartoy_liste
+- tilskuddFredaBygningPrivatEie_liste
+- soeknadDrosjeloeyve_liste
+- dokumentstatuskodar
+- dokumenttypar
+- formatar
+- journalposttypar
+- journalstatuskodar
+- klassifikasjonstypar
+- korrespondanseparttypar
+- merknadstypar
+- partRollar
+- rollar
+- saksmappetypar
+- sakstatuskodar
+- skjermingsheimlar
+- tilgangsgrupper
+- tilgangsrestriksjonar
+- tilknyttetRegistreringSomKodar
+- variantformatar
+slot_usage:
   klassifikasjonssystem:
     name: klassifikasjonssystem
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    - Arkivdel
-    - Klasse
-    range: Klassifikasjonssystem
     multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilgangar:
-    name: tilgangar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Tilgang
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  sakar:
-    name: sakar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Sak
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  personalmappe:
-    name: personalmappe
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Personalmappe
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  dispensasjonAutomatiskFredaKulturminne:
-    name: dispensasjonAutomatiskFredaKulturminne
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: DispensasjonAutomatiskFredaKulturminne
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilskuddFartoy:
-    name: tilskuddFartoy
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: TilskuddFartoy
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilskuddFredaBygningPrivatEie:
-    name: tilskuddFredaBygningPrivatEie
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: TilskuddFredaBygningPrivatEie
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  soeknadDrosjeloeyve:
-    name: soeknadDrosjeloeyve
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: SoeknadDrosjeloeyve
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  dokumentstatuskodar:
-    name: dokumentstatuskodar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: DokumentStatus
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  dokumenttypar:
-    name: dokumenttypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: DokumentType
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  formatar:
-    name: formatar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Format
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  journalposttypar:
-    name: journalposttypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: JournalpostType
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  journalstatuskodar:
-    name: journalstatuskodar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: JournalStatus
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  klassifikasjonstypar:
-    name: klassifikasjonstypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Klassifikasjonstype
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  korrespondanseparttypar:
-    name: korrespondanseparttypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: KorrespondansepartType
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  merknadstypar:
-    name: merknadstypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Merknadstype
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  partRollar:
-    name: partRollar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: PartRolle
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  rollar:
-    name: rollar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Rolle
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  saksmappetypar:
-    name: saksmappetypar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Saksmappetype
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  sakstatuskodar:
-    name: sakstatuskodar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Saksstatus
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  skjermingsheimlar:
-    name: skjermingsheimlar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Skjermingshjemmel
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilgangsgrupper:
-    name: tilgangsgrupper
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Tilgangsgruppe
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilgangsrestriksjonar:
-    name: tilgangsrestriksjonar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Tilgangsrestriksjon
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  tilknyttetRegistreringSomKodar:
-    name: tilknyttetRegistreringSomKodar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: TilknyttetRegistreringSom
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  variantformatar:
-    name: variantformatar
-    from_schema: https://data.norge.no/linkml/fint-arkiv
-    rank: 1000
-    domain_of:
-    - ArkivContainer
-    range: Variantformat
-    multivalued: true
-    inlined: true
     inlined_as_list: true
 tree_root: true
 
@@ -1346,11 +1069,17 @@ tree_root: true
 name: ArkivContainer
 description: Rotcontainer for FINT Arkiv-instansar.
 from_schema: https://data.norge.no/linkml/fint-arkiv
+slot_usage:
+  klassifikasjonssystem:
+    name: klassifikasjonssystem
+    multivalued: true
+    inlined_as_list: true
 attributes:
   arkivdelar:
     name: arkivdelar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:arkivdelar
     alias: arkivdelar
     owner: ArkivContainer
     domain_of:
@@ -1362,6 +1091,7 @@ attributes:
     name: arkivressursar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:arkivressursar
     alias: arkivressursar
     owner: ArkivContainer
     domain_of:
@@ -1373,6 +1103,7 @@ attributes:
     name: autorisasjonar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:autorisasjonar
     alias: autorisasjonar
     owner: ArkivContainer
     domain_of:
@@ -1384,6 +1115,7 @@ attributes:
     name: administrativeEiningar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:administrativeEiningar
     alias: administrativeEiningar
     owner: ArkivContainer
     domain_of:
@@ -1395,6 +1127,7 @@ attributes:
     name: dokumentfiler
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:dokumentfiler
     alias: dokumentfiler
     owner: ArkivContainer
     domain_of:
@@ -1406,6 +1139,7 @@ attributes:
     name: dokumentbeskrivelsar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:dokumentbeskrivelsar
     alias: dokumentbeskrivelsar
     owner: ArkivContainer
     domain_of:
@@ -1417,6 +1151,7 @@ attributes:
     name: journalpostar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:journalpostar
     alias: journalpostar
     owner: ArkivContainer
     domain_of:
@@ -1426,8 +1161,10 @@ attributes:
     inlined_as_list: true
   klassifikasjonssystem:
     name: klassifikasjonssystem
+    description: Klassifikasjonssystem.
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:klassifikasjonssystem
     alias: klassifikasjonssystem
     owner: ArkivContainer
     domain_of:
@@ -1441,6 +1178,7 @@ attributes:
     name: tilgangar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:tilgangar
     alias: tilgangar
     owner: ArkivContainer
     domain_of:
@@ -1452,6 +1190,7 @@ attributes:
     name: sakar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:sakar
     alias: sakar
     owner: ArkivContainer
     domain_of:
@@ -1459,55 +1198,60 @@ attributes:
     range: Sak
     multivalued: true
     inlined_as_list: true
-  personalmappe:
-    name: personalmappe
+  personalmappe_liste:
+    name: personalmappe_liste
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    alias: personalmappe
+    slot_uri: ark:personalmappe
+    alias: personalmappe_liste
     owner: ArkivContainer
     domain_of:
     - ArkivContainer
     range: Personalmappe
     multivalued: true
     inlined_as_list: true
-  dispensasjonAutomatiskFredaKulturminne:
-    name: dispensasjonAutomatiskFredaKulturminne
+  dispensasjonAutomatiskFredaKulturminne_liste:
+    name: dispensasjonAutomatiskFredaKulturminne_liste
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    alias: dispensasjonAutomatiskFredaKulturminne
+    slot_uri: ark:dispensasjonAutomatiskFredaKulturminne
+    alias: dispensasjonAutomatiskFredaKulturminne_liste
     owner: ArkivContainer
     domain_of:
     - ArkivContainer
     range: DispensasjonAutomatiskFredaKulturminne
     multivalued: true
     inlined_as_list: true
-  tilskuddFartoy:
-    name: tilskuddFartoy
+  tilskuddFartoy_liste:
+    name: tilskuddFartoy_liste
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    alias: tilskuddFartoy
+    slot_uri: ark:tilskuddFartoy
+    alias: tilskuddFartoy_liste
     owner: ArkivContainer
     domain_of:
     - ArkivContainer
     range: TilskuddFartoy
     multivalued: true
     inlined_as_list: true
-  tilskuddFredaBygningPrivatEie:
-    name: tilskuddFredaBygningPrivatEie
+  tilskuddFredaBygningPrivatEie_liste:
+    name: tilskuddFredaBygningPrivatEie_liste
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    alias: tilskuddFredaBygningPrivatEie
+    slot_uri: ark:tilskuddFredaBygningPrivatEie
+    alias: tilskuddFredaBygningPrivatEie_liste
     owner: ArkivContainer
     domain_of:
     - ArkivContainer
     range: TilskuddFredaBygningPrivatEie
     multivalued: true
     inlined_as_list: true
-  soeknadDrosjeloeyve:
-    name: soeknadDrosjeloeyve
+  soeknadDrosjeloeyve_liste:
+    name: soeknadDrosjeloeyve_liste
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    alias: soeknadDrosjeloeyve
+    slot_uri: ark:soeknadDrosjeloeyve
+    alias: soeknadDrosjeloeyve_liste
     owner: ArkivContainer
     domain_of:
     - ArkivContainer
@@ -1518,6 +1262,7 @@ attributes:
     name: dokumentstatuskodar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:dokumentstatuskodar
     alias: dokumentstatuskodar
     owner: ArkivContainer
     domain_of:
@@ -1529,6 +1274,7 @@ attributes:
     name: dokumenttypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:dokumenttypar
     alias: dokumenttypar
     owner: ArkivContainer
     domain_of:
@@ -1540,6 +1286,7 @@ attributes:
     name: formatar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:formatar
     alias: formatar
     owner: ArkivContainer
     domain_of:
@@ -1551,6 +1298,7 @@ attributes:
     name: journalposttypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:journalposttypar
     alias: journalposttypar
     owner: ArkivContainer
     domain_of:
@@ -1562,6 +1310,7 @@ attributes:
     name: journalstatuskodar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:journalstatuskodar
     alias: journalstatuskodar
     owner: ArkivContainer
     domain_of:
@@ -1573,6 +1322,7 @@ attributes:
     name: klassifikasjonstypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:klassifikasjonstypar
     alias: klassifikasjonstypar
     owner: ArkivContainer
     domain_of:
@@ -1584,6 +1334,7 @@ attributes:
     name: korrespondanseparttypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:korrespondanseparttypar
     alias: korrespondanseparttypar
     owner: ArkivContainer
     domain_of:
@@ -1595,6 +1346,7 @@ attributes:
     name: merknadstypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:merknadstypar
     alias: merknadstypar
     owner: ArkivContainer
     domain_of:
@@ -1606,6 +1358,7 @@ attributes:
     name: partRollar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:partRollar
     alias: partRollar
     owner: ArkivContainer
     domain_of:
@@ -1617,6 +1370,7 @@ attributes:
     name: rollar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:rollar
     alias: rollar
     owner: ArkivContainer
     domain_of:
@@ -1628,6 +1382,7 @@ attributes:
     name: saksmappetypar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:saksmappetypar
     alias: saksmappetypar
     owner: ArkivContainer
     domain_of:
@@ -1639,6 +1394,7 @@ attributes:
     name: sakstatuskodar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:sakstatuskodar
     alias: sakstatuskodar
     owner: ArkivContainer
     domain_of:
@@ -1650,6 +1406,7 @@ attributes:
     name: skjermingsheimlar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:skjermingsheimlar
     alias: skjermingsheimlar
     owner: ArkivContainer
     domain_of:
@@ -1661,6 +1418,7 @@ attributes:
     name: tilgangsgrupper
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:tilgangsgrupper
     alias: tilgangsgrupper
     owner: ArkivContainer
     domain_of:
@@ -1672,6 +1430,7 @@ attributes:
     name: tilgangsrestriksjonar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:tilgangsrestriksjonar
     alias: tilgangsrestriksjonar
     owner: ArkivContainer
     domain_of:
@@ -1683,6 +1442,7 @@ attributes:
     name: tilknyttetRegistreringSomKodar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:tilknyttetRegistreringSomKodar
     alias: tilknyttetRegistreringSomKodar
     owner: ArkivContainer
     domain_of:
@@ -1694,6 +1454,7 @@ attributes:
     name: variantformatar
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
+    slot_uri: ark:variantformatar
     alias: variantformatar
     owner: ArkivContainer
     domain_of:

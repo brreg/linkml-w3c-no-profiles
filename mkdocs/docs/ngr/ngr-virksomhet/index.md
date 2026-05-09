@@ -1,20 +1,5 @@
 # ngr-virksomhet
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [ngr-virksomhet-shapes.ttl](ngr-virksomhet-shapes.ttl) |
-| JSON-LD kontekst | [ngr-virksomhet-context.jsonld](ngr-virksomhet-context.jsonld) |
-| JSON Schema | [ngr-virksomhet-schema.json](ngr-virksomhet-schema.json) |
-| OWL ontologi | [ngr-virksomhet-ontology.ttl](ngr-virksomhet-ontology.ttl) |
-| RDF/Turtle skjema | [ngr-virksomhet-schema.ttl](ngr-virksomhet-schema.ttl) |
-| Python-klasser | [ngr-virksomhet-model.py](ngr-virksomhet-model.py) |
-| ER-diagram (Mermaid) | [ngr-virksomhet-erdiagram.md](ngr-virksomhet-erdiagram.md) |
-| Eksempeldata (Turtle) | [ngr-virksomhet-eksempel.ttl](ngr-virksomhet-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Aktivitet {
@@ -268,3 +253,17 @@ Name: ngr-virksomhet
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i domenemodellen |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i domenemodellen |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i domenemodellen |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [ngr-virksomhet-shapes.ttl](ngr-virksomhet-shapes.ttl) |
+| JSON-LD kontekst | [ngr-virksomhet-context.jsonld](ngr-virksomhet-context.jsonld) |
+| JSON Schema | [ngr-virksomhet-schema.json](ngr-virksomhet-schema.json) |
+| OWL ontologi | [ngr-virksomhet-ontology.ttl](ngr-virksomhet-ontology.ttl) |
+| RDF/Turtle skjema | [ngr-virksomhet-schema.ttl](ngr-virksomhet-schema.ttl) |
+| Python-klasser | [ngr-virksomhet-model.py](ngr-virksomhet-model.py) |
+| ER-diagram (Mermaid) | [ngr-virksomhet-erdiagram.md](ngr-virksomhet-erdiagram.md) |
+| Eksempeldata (Turtle) | [ngr-virksomhet-eksempel.ttl](ngr-virksomhet-eksempel.ttl) |

@@ -34,8 +34,8 @@ Name: fint-okonomi
 | [Kontaktinformasjon](kontaktinformasjon.md) | Informasjon som kan brukast for å oppnå kontakt |
 | [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |
 | [Kontostreng](kontostreng.md) | Kontodimensjonar for ei postering (kompleks datatype) |
-| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester (Leverandør) |
-| [Leverandorgruppe](leverandorgruppe.md) | Gruppering av leverandørar (Leverandørgruppe) |
+| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |
+| [Leverandorgruppe](leverandorgruppe.md) | Gruppering av leverandørar |
 | [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |
 | [Merverdiavgift](merverdiavgift.md) | Kodeverk for merverdiavgifter |
 | [OkonomiContainer](okonomicontainer.md) | Rotcontainer for FINT Økonomi-instansar |
@@ -53,15 +53,15 @@ Name: fint-okonomi
 
 | Slot | Description |
 | --- | --- |
-| [adresse](adresse.md) | Adresse til mottakar |
+| [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
 | [ansvar](ansvar.md) | Ansvarsomrade |
-| [ansvarlig](ansvarlig.md) | Referanse til Personalressurs (Administrasjon) som er ansvarleg for å godkjen... |
+| [ansvarlig](ansvarlig.md) | Referanse til Personalressurs (Administrasjon) som er ansvarleg |
 | [antall](antall.md) | Mengd av varen levert |
 | [art](art.md) | Artskonto (type utgift/inntekt) |
-| [avgiftsbelop](avgiftsbelop.md) | Del av totalbeløp som er avgifter, i øre (avgiftsbeløp) |
-| [belop](belop.md) | Beløp mottakar skal betale, i øre (beløp) |
-| [beskrivelse](beskrivelse.md) | Skildring av transaksjonen |
+| [avgiftsbelop](avgiftsbelop.md) | Del av totalbeløp som er avgifter, i øre |
+| [belop](belop.md) | Beløp, i øre |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [betalt](betalt.md) | Status på betaling |
 | [bilag](bilag.md) | Bilag til transaksjonen |
 | [bilagsdato](bilagsdato.md) | Dato bilaget er registrert |
@@ -79,8 +79,9 @@ Name: fint-okonomi
 | [etternavn](etternavn.md) | Etternamn til personen |
 | [faktura](faktura.md) | Utferdigde fakturaer for fakturagrunnlaget |
 | [fakturaer](fakturaer.md) |  |
-| [fakturagrunnlag](fakturagrunnlag.md) |  |
+| [fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |
 | [fakturalinjer](fakturalinjer.md) | Linjer av varer eller tenester som skal fakturerast |
+| [fakturamottaker](fakturamottaker.md) | Mottakar som skal betale faktura |
 | [fakturanummer](fakturanummer.md) | Identifikator oppretta i fakturaprogrammet |
 | [fakturautsteder](fakturautsteder.md) | Utstedar av faktura og mottakar av betaling |
 | [fakturautstederear](fakturautstederear.md) |  |
@@ -91,32 +92,33 @@ Name: fint-okonomi
 | [fodselsnummer](fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
 | [foreldre](foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](foreldreansvar.md) | Personar denne personen har foreldreansvar for |
-| [forfallsdato](forfallsdato.md) | Frist for betaling |
+| [forfallsdato](forfallsdato.md) | Frist for betaling eller forfallsdato for transaksjon |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fritekst](fritekst.md) | Fritekst som skildrar varen slik han er levert |
 | [funksjon](funksjon.md) | Funksjonskode (KOSTRA) |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](gyldighetsperiode.md) | Angir gyldighetsperioden for omgrepet/koden |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [kjonn](kjonn.md) | Kjønn for personen |
+| [kjonn](kjonn.md) | Kjønn |
 | [kode](kode.md) | Verdi som identifiserer omgrepet |
-| [kommune](kommune.md) | Alle kommunar som inngår i fylket |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontering](kontering.md) | Kontodimensjonar for posteringa |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontering](kontering.md) | Kontodimensjonar |
 | [kontonummer](kontonummer.md) | Kontonummer til leverandøren |
 | [kreditert](kreditert.md) | Status på kreditering |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
-| [leverandor](leverandor.md) | Leverandør knytt til transaksjonen (leverandor) |
+| [leverandor](leverandor.md) | Leverandør |
 | [leverandorar](leverandorar.md) |  |
-| [leverandorgruppe](leverandorgruppe.md) | Gruppe av leverandørar leverandøren tilhøyrer (leverandørgruppe) |
+| [leverandorgruppe](leverandorgruppe.md) | Gruppe av leverandørar leverandøren tilhøyrer |
 | [leverandorgrupper](leverandorgrupper.md) |  |
-| [leverandornummer](leverandornummer.md) | Nummer som identifiserer ein leverandør (leverandørnummer) |
+| [leverandornummer](leverandornummer.md) | Nummer som identifiserer ein leverandør |
 | [leveringsdato](leveringsdato.md) | Dato varer eller tenester vart leverte |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
@@ -125,19 +127,20 @@ Name: fint-okonomi
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
 | [mottaker](mottaker.md) | Namn på mottakar |
-| [navn](navn.md) | Juridisk namn på fakturutstedar |
-| [nettobelop](nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre (nettobeløp) |
+| [naam](naam.md) | Namn på eining eller kodeverk-element |
+| [nettobelop](nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [oppdateringstidspunkt](oppdateringstidspunkt.md) | Tidspunkt for siste endring i transaksjonen |
 | [ordrenummer](ordrenummer.md) | Unik identifikator for ordren det skal utferdigast faktura på |
-| [organisasjonselement](organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura |
+| [organisasjonselement](organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) |
 | [organisasjonsnavn](organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](person.md) | Referanse til Person (Administrasjon) som skal betale faktura |
+| [person](person.md) | Referanse til Person (Administrasjon) |
+| [person_naam](person_naam.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postering](postering.md) | Posteringar tilhøyrande transaksjonen |
@@ -145,10 +148,10 @@ Name: fint-okonomi
 | [posteringsId](posteringsid.md) | Intern unik identifikator i økonomisystemet |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststed](poststed.md) | Poststad |
-| [pris](pris.md) | Pris per eining levert, i øre |
+| [pris](pris.md) | Pris per eining, i øre |
 | [prosjekt](prosjekt.md) | Prosjektkode |
 | [referanse](referanse.md) | Ekstern referanse, t |
-| [restbelop](restbelop.md) | Gjenståande beløp å betale, i øre (restbeløp) |
+| [restbelop](restbelop.md) | Gjenståande beløp å betale, i øre |
 | [sats](sats.md) | Sats for merverdiavgift |
 | [seksjonsnummer](seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
 | [sip](sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
@@ -161,11 +164,12 @@ Name: fint-okonomi
 | [transaksjonar](transaksjonar.md) |  |
 | [transaksjonsId](transaksjonsid.md) | Intern unik identifikator i økonomisystemet |
 | [transaksjonstidspunkt](transaksjonstidspunkt.md) | Tidspunkt for registrering av transaksjonen |
-| [type](type.md) | Beskriv kva slags type kontaktperson |
+| [type](type.md) | Beskriv kva slags type |
 | [url](url.md) | URL til eksternt dokument |
 | [valuta](valuta.md) | Valuta for oppgjeve beløp |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
 | [valutaer](valutaer.md) |  |
-| [vare](vare.md) | Alle varer i vareregisteret til fakturutstedaren |
+| [vare](vare.md) | Vare i vareregisteret |
 | [varer](varer.md) |  |
 | [virksomhet](virksomhet.md) | Referanse til Virksomhet som er leverandør |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |

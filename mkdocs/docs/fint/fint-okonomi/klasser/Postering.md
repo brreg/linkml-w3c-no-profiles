@@ -22,7 +22,7 @@ Alias: postering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
 
 
 
@@ -43,25 +43,11 @@ Alias: postering
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Transaksjon](transaksjon.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -98,17 +84,13 @@ Alias: postering
 ```yaml
 name: postering
 description: Posteringar tilhøyrande transaksjonen.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:postering
 alias: postering
-owner: Transaksjon
 domain_of:
 - Transaksjon
 range: Postering
-required: true
 multivalued: true
 
 ```

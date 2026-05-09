@@ -22,7 +22,7 @@ Alias: arbeidssted
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: arbeidssted
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalmappe](personalmappe.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: arbeidssted
 ```yaml
 name: arbeidssted
 description: Referanse til Organisasjonselement som er arbeidstakarens arbeidsstad.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:arbeidssted
 alias: arbeidssted
-owner: Personalmappe
 domain_of:
 - Personalmappe
 range: uriorcurie
-required: true
 
 ```
 </details>

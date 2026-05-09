@@ -22,40 +22,40 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Folkeregisteridentifikator](folkeregisteridentifikator.md) | Abstrakt overklasse for unik identifikator i Folkeregisteret |  no  |
-| [Personstatus](personstatus.md) | Status for ein person i Folkeregisteret (t |  no  |
-| [Bostedsadresse](bostedsadresse.md) | Adressa personen er registrert busett på i Folkeregisteret |  no  |
-| [ForeldreansvarForelder](foreldreansvarforelder.md) | Relasjonsklasse som registrerer kven som har det juridiske foreldreansvaret f... |  no  |
-| [Foedselsnummer](foedselsnummer.md) | Elleve-sifra fødselsnummer tildelt norske statsborgarar og personar med fast ... |  no  |
-| [Kjoenn](kjoenn.md) | Kjønn registrert på ein person i Folkeregisteret |  no  |
-| [KontaktinformasjonDoedsbo](kontaktinformasjondoedsbo.md) | Kontaktinformasjon for eit dødsbu |  no  |
-| [Oppholdsadresse](oppholdsadresse.md) | Adressa der personen faktisk oppheld seg (ikkje nødvendigvis bustadsadressa) |  no  |
-| [Adressebeskyttelse](adressebeskyttelse.md) | Gradering av adressebeskyttelse for innflyttede personar til Noreg |  no  |
-| [ForeldreansvarBarn](foreldreansvarbarn.md) | Relasjonsklasse som registrerer at eit barn er under foreldreansvaret til ein... |  no  |
-| [Postadresse](postadresse.md) | Adressa der personen mottar post |  no  |
-| [Dodsfall](dodsfall.md) | Dødsfallsinformasjon om ein person registrert i Folkeregisteret |  no  |
-| [Opphold](opphold.md) | Lovleg opphaldsgrunnlag for utanlandske statsborgarar registrert i Folkeregis... |  no  |
-| [Identifikasjonsdokument](identifikasjonsdokument.md) | Utanlandsk identifikasjonsdokument som pass, førekort eller nasjonalt ID-kort... |  no  |
-| [FamilierelasjonEktefelle](familierelasjonektefelle.md) | Familierelasjon der den relaterte personen er ektefelle eller registrert part... |  no  |
-| [Foedsel](foedsel.md) | Fødselsinformasjon om ein person registrert i Folkeregisteret |  no  |
-| [RettsligHandleevne](rettslighandleevne.md) | Registrering av avgrensing i rettsleg handleevne for ein person, t |  no  |
-| [ReservasjonMotKommunikasjonPaaNett](reservasjonmotkommunikasjonpaanett.md) | Registrering av at ein person har reservert seg mot digital kommunikasjon frå... |  no  |
-| [Personidentifikasjon](personidentifikasjon.md) | Utanlandsk eller alternativ identifikasjon av ein person, t |  no  |
-| [FalskIdentitet](falskidentitet.md) | Registrering av at ein person har opptrådt med falsk identitet |  no  |
-| [SpraakForElektroniskKommunikasjon](spraakforelektroniskkommunikasjon.md) | Føretrekt språk for elektronisk kommunikasjon med offentlege styresmakter, va... |  no  |
-| [DNummer](dnummer.md) | Elleve-sifra D-nummer tildelt utanlandske personar med mellombels opphald i N... |  no  |
-| [Identitetsgrunnlag](identitetsgrunnlag.md) | Grunnlaget som er brukt for å fastsetje identiteten til ein person ved regist... |  no  |
-| [GeografiskAdresse](geografiskadresse.md) | Abstrakt klasse for geografiske adresser |  no  |
-| [Verge](verge.md) | Ein verje (anten person eller institusjon) som er oppnemnd for å ivareta inte... |  no  |
 | [Personnavn](personnavn.md) | Offisielt registrert namn på ein person i Folkeregisteret |  no  |
-| [Statsborgerskap](statsborgerskap.md) | Statsborgerskap registrert på ein person i Folkeregisteret |  no  |
-| [FamilierelasjonBarn](familierelasjonbarn.md) | Familierelasjon der den relaterte personen er barn |  no  |
-| [Sivilstand](sivilstand.md) | Sivilstand registrert på ein person i Folkeregisteret |  no  |
-| [InnflyttingTilNorge](innflyttingtilnorge.md) | Registrering av innflytting til Noreg i Folkeregisteret |  no  |
+| [KontaktinformasjonDoedsbo](kontaktinformasjondoedsbo.md) | Kontaktinformasjon for eit dødsbu |  no  |
+| [Bostedsadresse](bostedsadresse.md) | Adressa personen er registrert busett på i Folkeregisteret |  no  |
+| [Postadresse](postadresse.md) | Adressa der personen mottar post |  no  |
+| [Personstatus](personstatus.md) | Status for ein person i Folkeregisteret (t |  no  |
 | [UtflyttingFraNorge](utflyttingfranorge.md) | Registrering av utflytting frå Noreg i Folkeregisteret |  no  |
-| [Person](person.md) | Ein fysisk person registrert i Folkeregisteret |  no  |
+| [Personidentifikasjon](personidentifikasjon.md) | Utanlandsk eller alternativ identifikasjon av ein person, t |  no  |
+| [Adressebeskyttelse](adressebeskyttelse.md) | Gradering av adressebeskyttelse for innflyttede personar til Noreg |  no  |
+| [Kjoenn](kjoenn.md) | Kjønn registrert på ein person i Folkeregisteret |  no  |
+| [Identitetsgrunnlag](identitetsgrunnlag.md) | Grunnlaget som er brukt for å fastsetje identiteten til ein person ved regist... |  no  |
+| [Identifikasjonsdokument](identifikasjonsdokument.md) | Utanlandsk identifikasjonsdokument som pass, førekort eller nasjonalt ID-kort... |  no  |
+| [Opphold](opphold.md) | Lovleg opphaldsgrunnlag for utanlandske statsborgarar registrert i Folkeregis... |  no  |
+| [FamilierelasjonEktefelle](familierelasjonektefelle.md) | Familierelasjon der den relaterte personen er ektefelle eller registrert part... |  no  |
+| [FalskIdentitet](falskidentitet.md) | Registrering av at ein person har opptrådt med falsk identitet |  no  |
+| [RettsligHandleevne](rettslighandleevne.md) | Registrering av avgrensing i rettsleg handleevne for ein person, t |  no  |
 | [FamilierelasjonForelder](familierelasjonforelder.md) | Familierelasjon der den relaterte personen er forelder |  no  |
+| [Foedsel](foedsel.md) | Fødselsinformasjon om ein person registrert i Folkeregisteret |  no  |
+| [Foedselsnummer](foedselsnummer.md) | Elleve-sifra fødselsnummer tildelt norske statsborgarar og personar med fast ... |  no  |
+| [Statsborgerskap](statsborgerskap.md) | Statsborgerskap registrert på ein person i Folkeregisteret |  no  |
 | [Kontaktopplysninger](kontaktopplysninger.md) | Kontaktopplysningar (e-post og mobilnummer) for digital kommunikasjon med det... |  no  |
+| [Dodsfall](dodsfall.md) | Dødsfallsinformasjon om ein person registrert i Folkeregisteret |  no  |
+| [Oppholdsadresse](oppholdsadresse.md) | Adressa der personen faktisk oppheld seg (ikkje nødvendigvis bustadsadressa) |  no  |
+| [GeografiskAdresse](geografiskadresse.md) | Abstrakt klasse for geografiske adresser |  no  |
+| [SpraakForElektroniskKommunikasjon](spraakforelektroniskkommunikasjon.md) | Føretrekt språk for elektronisk kommunikasjon med offentlege styresmakter, va... |  no  |
+| [ForeldreansvarForelder](foreldreansvarforelder.md) | Relasjonsklasse som registrerer kven som har det juridiske foreldreansvaret f... |  no  |
+| [ReservasjonMotKommunikasjonPaaNett](reservasjonmotkommunikasjonpaanett.md) | Registrering av at ein person har reservert seg mot digital kommunikasjon frå... |  no  |
+| [ForeldreansvarBarn](foreldreansvarbarn.md) | Relasjonsklasse som registrerer at eit barn er under foreldreansvaret til ein... |  no  |
+| [Person](person.md) | Ein fysisk person registrert i Folkeregisteret |  no  |
+| [DNummer](dnummer.md) | Elleve-sifra D-nummer tildelt utanlandske personar med mellombels opphald i N... |  no  |
+| [Verge](verge.md) | Ein verje (anten person eller institusjon) som er oppnemnd for å ivareta inte... |  no  |
+| [FamilierelasjonBarn](familierelasjonbarn.md) | Familierelasjon der den relaterte personen er barn |  no  |
+| [Folkeregisteridentifikator](folkeregisteridentifikator.md) | Abstrakt overklasse for unik identifikator i Folkeregisteret |  no  |
+| [InnflyttingTilNorge](innflyttingtilnorge.md) | Registrering av innflytting til Noreg i Folkeregisteret |  no  |
+| [Sivilstand](sivilstand.md) | Sivilstand registrert på ein person i Folkeregisteret |  no  |
 
 
 

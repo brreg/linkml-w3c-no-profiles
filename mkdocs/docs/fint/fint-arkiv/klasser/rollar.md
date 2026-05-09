@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:rollar](https://schema.fintlabs.no/arkiv/:rollar)
+URI: [ark:rollar](https://schema.fintlabs.no/arkiv/rollar)
 Alias: rollar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: rollar
 | --- | --- |
 | Range | [Rolle](rolle.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:rollar](https://schema.fintlabs.no/arkiv/rollar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: rollar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:rollar |
+| self | ark:rollar |
 | native | https://schema.fintlabs.no/arkiv/:rollar |
 
 
@@ -86,8 +80,8 @@ Alias: rollar
 name: rollar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:rollar
 alias: rollar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Rolle

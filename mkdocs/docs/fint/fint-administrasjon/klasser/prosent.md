@@ -3,8 +3,13 @@
 # Slot: prosent 
 
 
+_Prosent._
 
-URI: [https://schema.fintlabs.no/administrasjon/:prosent](https://schema.fintlabs.no/administrasjon/:prosent)
+
+
+
+
+URI: [adm:prosent](https://schema.fintlabs.no/administrasjon/prosent)
 Alias: prosent
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: prosent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: prosent
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Integer](integer.md) |
 | Domain Of | [Fastlonn](fastlonn.md), [Fravaer](fravaer.md) |
+| Slot URI | [adm:prosent](https://schema.fintlabs.no/administrasjon/prosent) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: prosent
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:prosent |
+| self | adm:prosent |
 | native | https://schema.fintlabs.no/administrasjon/:prosent |
 
 
@@ -70,11 +83,15 @@ Alias: prosent
 <details>
 ```yaml
 name: prosent
+description: Prosent.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:prosent
 alias: prosent
 domain_of:
 - Fastlonn
 - Fravaer
-range: string
+range: integer
 
 ```
 </details>

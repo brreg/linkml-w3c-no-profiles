@@ -22,7 +22,7 @@ Alias: url
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Bilag](bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |  no  |
+| [Bilag](bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: url
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Bilag](bilag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: url
 ```yaml
 name: url
 description: URL til eksternt dokument.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:url
 alias: url
-owner: Bilag
 domain_of:
 - Bilag
 range: string

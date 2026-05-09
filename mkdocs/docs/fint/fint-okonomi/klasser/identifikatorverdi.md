@@ -22,7 +22,7 @@ Alias: identifikatorverdi
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
+| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  yes  |
 
 
 
@@ -43,14 +43,6 @@ Alias: identifikatorverdi
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Identifikator](identifikator.md) |
-
-
 
 
 
@@ -96,11 +88,9 @@ from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:identifikatorverdi
 alias: identifikatorverdi
-owner: Identifikator
 domain_of:
 - Identifikator
 range: string
-required: true
 
 ```
 </details>

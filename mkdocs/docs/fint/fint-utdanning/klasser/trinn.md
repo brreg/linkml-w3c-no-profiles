@@ -3,8 +3,13 @@
 # Slot: trinn 
 
 
+_Årstrinnet._
 
-URI: [https://schema.fintlabs.no/utdanning/:trinn](https://schema.fintlabs.no/utdanning/:trinn)
+
+
+
+
+URI: [utd:trinn](https://schema.fintlabs.no/utdanning/trinn)
 Alias: trinn
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: trinn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
-| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  no  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: trinn
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Arstrinn](arstrinn.md) |
 | Domain Of | [Klasse](klasse.md), [Programomrade](programomrade.md) |
+| Slot URI | [utd:trinn](https://schema.fintlabs.no/utdanning/trinn) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: trinn
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:trinn |
+| self | utd:trinn |
 | native | https://schema.fintlabs.no/utdanning/:trinn |
 
 
@@ -70,11 +84,16 @@ Alias: trinn
 <details>
 ```yaml
 name: trinn
+description: Årstrinnet.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:trinn
 alias: trinn
 domain_of:
 - Klasse
 - Programomrade
-range: string
+range: Arstrinn
+multivalued: true
 
 ```
 </details>

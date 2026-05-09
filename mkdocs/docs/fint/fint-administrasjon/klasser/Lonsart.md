@@ -3,8 +3,13 @@
 # Slot: lonsart 
 
 
+_Lønnsart._
 
-URI: [https://schema.fintlabs.no/administrasjon/:lonsart](https://schema.fintlabs.no/administrasjon/:lonsart)
+
+
+
+
+URI: [adm:lonsart](https://schema.fintlabs.no/administrasjon/lonsart)
 Alias: lonsart
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: lonsart
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
-| [Fravaerstype](fravaerstype.md) | Type fråvær |  no  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  yes  |
+| [Fravaerstype](fravaerstype.md) | Type fråvær |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: lonsart
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Lonsart](lonsart.md) |
 | Domain Of | [Fravaerstype](fravaerstype.md), [Fastlonn](fastlonn.md), [Fasttillegg](fasttillegg.md), [Variabellonn](variabellonn.md) |
+| Slot URI | [adm:lonsart](https://schema.fintlabs.no/administrasjon/lonsart) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: lonsart
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:lonsart |
+| self | adm:lonsart |
 | native | https://schema.fintlabs.no/administrasjon/:lonsart |
 
 
@@ -72,13 +85,17 @@ Alias: lonsart
 <details>
 ```yaml
 name: lonsart
+description: Lønnsart.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:lonsart
 alias: lonsart
 domain_of:
 - Fravaerstype
 - Fastlonn
 - Fasttillegg
 - Variabellonn
-range: string
+range: Lonsart
 
 ```
 </details>

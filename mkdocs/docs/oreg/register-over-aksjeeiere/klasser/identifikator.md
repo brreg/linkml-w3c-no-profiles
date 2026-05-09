@@ -22,22 +22,22 @@ Alias: identifikator
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Selskapshendelse](selskapshendelse.md) | Hending som påverkar selskapet sitt eigarskap eller kapital |  no  |
+| [Aksjeeierrettighet](aksjeeierrettighet.md) | Rettigheiter knytt til aksjar, til dømes stemmerett |  no  |
+| [Aksjeeier](aksjeeier.md) | Person eller organisasjon som eig aksjar |  no  |
+| [Aksjeinnskudd](aksjeinnskudd.md) | Innskot knytt til aksjar i samband med selskapshending |  no  |
+| [Eierskapstransaksjon](eierskapstransaksjon.md) | Transaksjon som påverkar eigarskap i selskapet |  no  |
+| [Vederlag](vederlag.md) | Vederlag knytt til ei aksjeoverdraging |  no  |
+| [Aksjeklasse](aksjeklasse.md) | Klasse aksjar høyrer til, med eigne rettigheiter |  no  |
 | [Containerklasse](containerklasse.md) | Containerklasse for alle forretningsobjekt i modellen |  no  |
 | [Aksjeselskap](aksjeselskap.md) | Selskap som utsteder aksjar og har aksjekapital |  no  |
-| [Utbytte](utbytte.md) | Utbytte knytt til ein eigarposisjon |  no  |
 | [Aksjepost](aksjepost.md) | Samling aksjar eigd av ein aksjeeigar |  no  |
-| [Utdeling](utdeling.md) | Konkret utdeling av verdiar til aksjeeigarar |  no  |
-| [Selskapshendelse](selskapshendelse.md) | Hending som påverkar selskapet sitt eigarskap eller kapital |  no  |
+| [Utbytte](utbytte.md) | Utbytte knytt til ein eigarposisjon |  no  |
 | [Aksjeoverdragelse](aksjeoverdragelse.md) | Overdraging av aksjar mellom partar |  no  |
-| [Aksjeeierrettighet](aksjeeierrettighet.md) | Rettigheiter knytt til aksjar, til dømes stemmerett |  no  |
-| [Aksjekapital](aksjekapital.md) | Den registrerte aksjekapitalen i eit aksjeselskap |  no  |
-| [Aksjeklasse](aksjeklasse.md) | Klasse aksjar høyrer til, med eigne rettigheiter |  no  |
-| [Aksjeeier](aksjeeier.md) | Person eller organisasjon som eig aksjar |  no  |
-| [Eierskapstransaksjon](eierskapstransaksjon.md) | Transaksjon som påverkar eigarskap i selskapet |  no  |
-| [Aksjeinnskudd](aksjeinnskudd.md) | Innskot knytt til aksjar i samband med selskapshending |  no  |
-| [Vederlag](vederlag.md) | Vederlag knytt til ei aksjeoverdraging |  no  |
 | [Aksje](aksje.md) | Ei enkelt aksje utstedt av eit aksjeselskap |  no  |
+| [Utdeling](utdeling.md) | Konkret utdeling av verdiar til aksjeeigarar |  no  |
 | [Eierposisjon](eierposisjon.md) | Eierens samla posisjon i eit selskap |  no  |
+| [Aksjekapital](aksjekapital.md) | Den registrerte aksjekapitalen i eit aksjeselskap |  no  |
 
 
 

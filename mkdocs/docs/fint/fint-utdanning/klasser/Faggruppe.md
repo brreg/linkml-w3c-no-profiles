@@ -3,8 +3,13 @@
 # Slot: faggruppe 
 
 
+_Faggruppe._
 
-URI: [https://schema.fintlabs.no/utdanning/:faggruppe](https://schema.fintlabs.no/utdanning/:faggruppe)
+
+
+
+
+URI: [utd:faggruppe](https://schema.fintlabs.no/utdanning/faggruppe)
 Alias: faggruppe
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: faggruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  yes  |
+| [Fraversregistrering](fraversregistrering.md) | Ei enkelt fråversregistrering for ein elev |  yes  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: faggruppe
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Faggruppe](faggruppe.md) |
 | Domain Of | [Skole](skole.md), [Fag](fag.md), [Faggruppemedlemskap](faggruppemedlemskap.md), [Fraversregistrering](fraversregistrering.md) |
+| Slot URI | [utd:faggruppe](https://schema.fintlabs.no/utdanning/faggruppe) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: faggruppe
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:faggruppe |
+| self | utd:faggruppe |
 | native | https://schema.fintlabs.no/utdanning/:faggruppe |
 
 
@@ -72,13 +85,17 @@ Alias: faggruppe
 <details>
 ```yaml
 name: faggruppe
+description: Faggruppe.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:faggruppe
 alias: faggruppe
 domain_of:
 - Skole
 - Fag
 - Faggruppemedlemskap
 - Fraversregistrering
-range: string
+range: Faggruppe
 
 ```
 </details>

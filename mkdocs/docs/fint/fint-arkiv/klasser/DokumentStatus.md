@@ -22,7 +22,7 @@ Alias: dokumentstatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: dokumentstatus
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: dokumentstatus
 ```yaml
 name: dokumentstatus
 description: Status til dokumentet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:dokumentstatus
 alias: dokumentstatus
-owner: Dokumentbeskrivelse
 domain_of:
 - Dokumentbeskrivelse
 range: DokumentStatus
-required: true
 
 ```
 </details>

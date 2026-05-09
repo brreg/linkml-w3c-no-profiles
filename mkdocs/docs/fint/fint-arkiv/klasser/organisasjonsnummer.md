@@ -3,8 +3,13 @@
 # Slot: organisasjonsnummer 
 
 
+_Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret._
 
-URI: [https://schema.fintlabs.no/arkiv/:organisasjonsnummer](https://schema.fintlabs.no/arkiv/:organisasjonsnummer)
+
+
+
+
+URI: [fint:organisasjonsnummer](https://schema.fintlabs.no/organisasjonsnummer)
 Alias: organisasjonsnummer
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,8 @@ Alias: organisasjonsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 
 
 
@@ -34,8 +36,9 @@ Alias: organisasjonsnummer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
-| Domain Of | [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md), [Korrespondansepart](korrespondansepart.md), [Part](part.md), [Enhet](enhet.md) |
+| Range | [Identifikator](identifikator.md) |
+| Domain Of | [Enhet](enhet.md) |
+| Slot URI | [fint:organisasjonsnummer](https://schema.fintlabs.no/organisasjonsnummer) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +60,19 @@ Alias: organisasjonsnummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:organisasjonsnummer |
+| self | fint:organisasjonsnummer |
 | native | https://schema.fintlabs.no/arkiv/:organisasjonsnummer |
 
 
@@ -73,13 +83,15 @@ Alias: organisasjonsnummer
 <details>
 ```yaml
 name: organisasjonsnummer
+description: Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: fint:organisasjonsnummer
 alias: organisasjonsnummer
 domain_of:
-- SoeknadDrosjeloeyve
-- Korrespondansepart
-- Part
 - Enhet
-range: string
+range: Identifikator
+inlined: true
 
 ```
 </details>

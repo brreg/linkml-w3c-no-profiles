@@ -22,7 +22,7 @@ Alias: personalansvar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: personalansvar
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Personalressurs](personalressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: personalansvar
 ```yaml
 name: personalansvar
 description: Arbeidsforhold der personalressursen har personalansvar.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:personalansvar
 alias: personalansvar
-owner: Personalressurs
 domain_of:
 - Personalressurs
 range: Arbeidsforhold

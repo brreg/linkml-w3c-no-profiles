@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:fakturaer](https://schema.fintlabs.no/okonomi/:fakturaer)
+URI: [okn:fakturaer](https://schema.fintlabs.no/okonomi/fakturaer)
 Alias: fakturaer
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: fakturaer
 | --- | --- |
 | Range | [Faktura](faktura.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:fakturaer](https://schema.fintlabs.no/okonomi/fakturaer) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: fakturaer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:fakturaer |
+| self | okn:fakturaer |
 | native | https://schema.fintlabs.no/okonomi/:fakturaer |
 
 
@@ -86,8 +80,8 @@ Alias: fakturaer
 name: fakturaer
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:fakturaer
 alias: fakturaer
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Faktura

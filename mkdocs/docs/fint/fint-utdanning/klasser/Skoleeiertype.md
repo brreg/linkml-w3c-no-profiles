@@ -22,7 +22,7 @@ Alias: skoleeierType
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: skoleeierType
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skole](skole.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: skoleeierType
 ```yaml
 name: skoleeierType
 description: Kategori for skuleeigartilknyting.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:skoleeierType
 alias: skoleeierType
-owner: Skole
 domain_of:
 - Skole
 range: Skoleeiertype

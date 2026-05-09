@@ -22,7 +22,7 @@ Alias: organisasjonsenhet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |  no  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: organisasjonsenhet
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Enhetsgruppe](enhetsgruppe.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: organisasjonsenhet
 ```yaml
 name: organisasjonsenhet
 description: Referanse til Organisasjonselement grupperinga er tilknytt.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:organisasjonsenhet
 alias: organisasjonsenhet
-owner: Enhetsgruppe
 domain_of:
 - Enhetsgruppe
 range: uriorcurie
-required: true
 
 ```
 </details>

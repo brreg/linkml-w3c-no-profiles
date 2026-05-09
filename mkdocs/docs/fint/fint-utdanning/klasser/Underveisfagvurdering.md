@@ -3,8 +3,13 @@
 # Slot: underveisfagvurdering 
 
 
+_Underveisfagvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:underveisfagvurdering](https://schema.fintlabs.no/utdanning/:underveisfagvurdering)
+
+
+
+
+URI: [utd:underveisfagvurdering](https://schema.fintlabs.no/utdanning/underveisfagvurdering)
 Alias: underveisfagvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: underveisfagvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: underveisfagvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Underveisfagvurdering](underveisfagvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:underveisfagvurdering](https://schema.fintlabs.no/utdanning/underveisfagvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: underveisfagvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:underveisfagvurdering |
+| self | utd:underveisfagvurdering |
 | native | https://schema.fintlabs.no/utdanning/:underveisfagvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: underveisfagvurdering
 <details>
 ```yaml
 name: underveisfagvurdering
+description: Underveisfagvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:underveisfagvurdering
 alias: underveisfagvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Underveisfagvurdering
+multivalued: true
 
 ```
 </details>

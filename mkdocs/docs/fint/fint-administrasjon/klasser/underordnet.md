@@ -3,8 +3,13 @@
 # Slot: underordnet 
 
 
+_Underordna element i hierarkiet._
 
-URI: [https://schema.fintlabs.no/administrasjon/:underordnet](https://schema.fintlabs.no/administrasjon/:underordnet)
+
+
+
+
+URI: [adm:underordnet](https://schema.fintlabs.no/administrasjon/underordnet)
 Alias: underordnet
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: underordnet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  no  |
-| [Funksjon](funksjon.md) | Del av kontostrengen som beskriv kva som vert produsert |  no  |
-| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
+| [Funksjon](funksjon.md) | Del av kontostrengen som beskriv kva som vert produsert |  yes  |
+| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  yes  |
 
 
 
@@ -35,11 +40,13 @@ Alias: underordnet
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Ansvar](ansvar.md), [Funksjon](funksjon.md), [Prosjektart](prosjektart.md), [Organisasjonselement](organisasjonselement.md) |
+| Slot URI | [adm:underordnet](https://schema.fintlabs.no/administrasjon/underordnet) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -56,12 +63,19 @@ Alias: underordnet
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:underordnet |
+| self | adm:underordnet |
 | native | https://schema.fintlabs.no/administrasjon/:underordnet |
 
 
@@ -72,6 +86,10 @@ Alias: underordnet
 <details>
 ```yaml
 name: underordnet
+description: Underordna element i hierarkiet.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:underordnet
 alias: underordnet
 domain_of:
 - Ansvar
@@ -79,6 +97,7 @@ domain_of:
 - Prosjektart
 - Organisasjonselement
 range: string
+multivalued: true
 
 ```
 </details>

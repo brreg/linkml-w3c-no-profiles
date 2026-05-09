@@ -3,8 +3,13 @@
 # Slot: kontering 
 
 
+_Kontodimensjonar._
 
-URI: [https://schema.fintlabs.no/okonomi/:kontering](https://schema.fintlabs.no/okonomi/:kontering)
+
+
+
+
+URI: [okn:kontering](https://schema.fintlabs.no/okonomi/kontering)
 Alias: kontering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: kontering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  no  |
-| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  no  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
+| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: kontering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Kontostreng](kontostreng.md) |
 | Domain Of | [Postering](postering.md), [Vare](vare.md) |
+| Slot URI | [okn:kontering](https://schema.fintlabs.no/okonomi/kontering) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: kontering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:kontering |
+| self | okn:kontering |
 | native | https://schema.fintlabs.no/okonomi/:kontering |
 
 
@@ -70,11 +83,16 @@ Alias: kontering
 <details>
 ```yaml
 name: kontering
+description: Kontodimensjonar.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:kontering
 alias: kontering
 domain_of:
 - Postering
 - Vare
-range: string
+range: Kontostreng
+inlined: true
 
 ```
 </details>

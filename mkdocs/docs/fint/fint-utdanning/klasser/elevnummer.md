@@ -22,7 +22,7 @@ Alias: elevnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elev](elev.md) | Ein elev registrert i skulesystemet |  no  |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: elevnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Elev](elev.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: elevnummer
 ```yaml
 name: elevnummer
 description: Skulens interne elevnummer.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:elevnummer
 alias: elevnummer
-owner: Elev
 domain_of:
 - Elev
 range: Identifikator

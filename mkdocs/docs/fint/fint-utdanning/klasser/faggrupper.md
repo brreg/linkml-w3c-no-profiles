@@ -3,8 +3,13 @@
 # Slot: faggrupper 
 
 
+_Alle faggrupper i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:faggrupper](https://schema.fintlabs.no/utdanning/:faggrupper)
+
+
+
+
+URI: [utd:faggrupper](https://schema.fintlabs.no/utdanning/faggrupper)
 Alias: faggrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: faggrupper
 | --- | --- |
 | Range | [Faggruppe](faggruppe.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:faggrupper](https://schema.fintlabs.no/utdanning/faggrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: faggrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:faggrupper |
+| self | utd:faggrupper |
 | native | https://schema.fintlabs.no/utdanning/:faggrupper |
 
 
@@ -84,10 +83,11 @@ Alias: faggrupper
 <details>
 ```yaml
 name: faggrupper
+description: Alle faggrupper i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:faggrupper
 alias: faggrupper
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Faggruppe

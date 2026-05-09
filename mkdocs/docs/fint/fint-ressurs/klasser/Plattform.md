@@ -3,8 +3,13 @@
 # Slot: plattform 
 
 
+_Plattforma ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/ressurs/:plattform](https://schema.fintlabs.no/ressurs/:plattform)
+
+
+
+
+URI: [res:plattform](https://schema.fintlabs.no/ressurs/plattform)
 Alias: plattform
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: plattform
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |  no  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  yes  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: plattform
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Plattform](plattform.md) |
 | Domain Of | [Applikasjon](applikasjon.md), [DigitalEnhet](digitalenhet.md), [Enhetsgruppe](enhetsgruppe.md) |
+| Slot URI | [res:plattform](https://schema.fintlabs.no/ressurs/plattform) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: plattform
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:plattform |
+| self | res:plattform |
 | native | https://schema.fintlabs.no/ressurs/:plattform |
 
 
@@ -71,12 +84,16 @@ Alias: plattform
 <details>
 ```yaml
 name: plattform
+description: Plattforma ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:plattform
 alias: plattform
 domain_of:
 - Applikasjon
 - DigitalEnhet
 - Enhetsgruppe
-range: string
+range: Plattform
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: persongruppe 
 
 
-_Persongruppa dette medlemskapet er i._
+_Persongruppe._
 
 
 
@@ -22,7 +22,7 @@ Alias: persongruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Persongruppemedlemskap](persongruppemedlemskap.md) | Eit elevs medlemskap i ei persongruppe |  no  |
+| [Persongruppemedlemskap](persongruppemedlemskap.md) | Eit elevs medlemskap i ei persongruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: persongruppe
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Persongruppemedlemskap](persongruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: persongruppe
 <details>
 ```yaml
 name: persongruppe
-description: Persongruppa dette medlemskapet er i.
-in_subset:
-- Valgfri
+description: Persongruppe.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:persongruppe
 alias: persongruppe
-owner: Persongruppemedlemskap
 domain_of:
 - Persongruppemedlemskap
 range: Persongruppe

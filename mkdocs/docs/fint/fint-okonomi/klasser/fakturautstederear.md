@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:fakturautstederear](https://schema.fintlabs.no/okonomi/:fakturautstederear)
+URI: [okn:fakturautstederear](https://schema.fintlabs.no/okonomi/fakturautstederear)
 Alias: fakturautstederear
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: fakturautstederear
 | --- | --- |
 | Range | [Fakturautsteder](fakturautsteder.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:fakturautstederear](https://schema.fintlabs.no/okonomi/fakturautstederear) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: fakturautstederear
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:fakturautstederear |
+| self | okn:fakturautstederear |
 | native | https://schema.fintlabs.no/okonomi/:fakturautstederear |
 
 
@@ -86,8 +80,8 @@ Alias: fakturautstederear
 name: fakturautstederear
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:fakturautstederear
 alias: fakturautstederear
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Fakturautsteder

@@ -22,7 +22,7 @@ Alias: prosent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravarsprosent](fravarsprosent.md) | Kompleks type som representerer fråværsprosent for ein periode |  no  |
+| [Fravarsprosent](fravarsprosent.md) | Kompleks type som representerer fråværsprosent for ein periode |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: prosent
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravarsprosent](fravarsprosent.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: prosent
 ```yaml
 name: prosent
 description: Fråværsprosent (heiltal).
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:prosent
 alias: prosent
-owner: Fravarsprosent
 domain_of:
 - Fravarsprosent
 range: integer
-required: true
 
 ```
 </details>

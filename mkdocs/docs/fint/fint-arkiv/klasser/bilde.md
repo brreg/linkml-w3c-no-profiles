@@ -22,7 +22,7 @@ Alias: bilde
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: bilde
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: bilde
 ```yaml
 name: bilde
 description: HTTP(S)-lenkje til eit bilete av personen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:bilde
 alias: bilde
-owner: Person
 domain_of:
 - Person
 range: string

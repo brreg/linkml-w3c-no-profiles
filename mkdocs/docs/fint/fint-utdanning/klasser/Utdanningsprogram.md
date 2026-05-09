@@ -3,8 +3,13 @@
 # Slot: utdanningsprogram 
 
 
+_Utdanningsprogram._
 
-URI: [https://schema.fintlabs.no/utdanning/:utdanningsprogram](https://schema.fintlabs.no/utdanning/:utdanningsprogram)
+
+
+
+
+URI: [utd:utdanningsprogram](https://schema.fintlabs.no/utdanning/utdanningsprogram)
 Alias: utdanningsprogram
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: utdanningsprogram
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: utdanningsprogram
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Utdanningsprogram](utdanningsprogram.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Skole](skole.md) |
+| Slot URI | [utd:utdanningsprogram](https://schema.fintlabs.no/utdanning/utdanningsprogram) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: utdanningsprogram
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:utdanningsprogram |
+| self | utd:utdanningsprogram |
 | native | https://schema.fintlabs.no/utdanning/:utdanningsprogram |
 
 
@@ -70,11 +84,16 @@ Alias: utdanningsprogram
 <details>
 ```yaml
 name: utdanningsprogram
+description: Utdanningsprogram.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:utdanningsprogram
 alias: utdanningsprogram
 domain_of:
 - UtdanningContainer
 - Skole
-range: string
+range: Utdanningsprogram
+multivalued: true
 
 ```
 </details>

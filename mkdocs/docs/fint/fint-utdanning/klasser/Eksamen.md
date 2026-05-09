@@ -3,8 +3,13 @@
 # Slot: eksamen 
 
 
+_Eksamen._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamen](https://schema.fintlabs.no/utdanning/:eksamen)
+
+
+
+
+URI: [utd:eksamen](https://schema.fintlabs.no/utdanning/eksamen)
 Alias: eksamen
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: eksamen
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Rom](rom.md) | Eit rom eller lokale ved ein skule |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Rom](rom.md) | Eit rom eller lokale ved ein skule |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: eksamen
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Eksamen](eksamen.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Rom](rom.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:eksamen](https://schema.fintlabs.no/utdanning/eksamen) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: eksamen
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamen |
+| self | utd:eksamen |
 | native | https://schema.fintlabs.no/utdanning/:eksamen |
 
 
@@ -71,12 +84,16 @@ Alias: eksamen
 <details>
 ```yaml
 name: eksamen
+description: Eksamen.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:eksamen
 alias: eksamen
 domain_of:
 - UtdanningContainer
 - Rom
 - Eksamensgruppe
-range: string
+range: Eksamen
 
 ```
 </details>

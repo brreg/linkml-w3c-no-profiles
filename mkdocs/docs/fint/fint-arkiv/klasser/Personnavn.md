@@ -1,139 +1,48 @@
 
 
-# Class: Personnavn 
+# Slot: personnavn 
 
 
-_Namn på ein person._
-
-
-
-
-
-URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
+_Namn på person (Personnavn-objekt)._
 
 
 
 
 
-```mermaid
- classDiagram
-    class Personnavn
-    click Personnavn href "../Personnavn/"
-      Personnavn : etternavn
-        
-      Personnavn : fornavn
-        
-      Personnavn : mellomnavn
-        
-      
-```
-
-
-
+URI: [ark:personnavn](https://schema.fintlabs.no/arkiv/personnavn)
+Alias: personnavn
 
 <!-- no inheritance hierarchy -->
 
-## Class Properties
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
 
 | Property | Value |
 | --- | --- |
-| Class URI | [fint:Personnavn](https://schema.fintlabs.no/Personnavn) |
+| Range | [Personnavn](personnavn.md) |
+| Domain Of | [Personalmappe](personalmappe.md) |
+| Slot URI | [ark:personnavn](https://schema.fintlabs.no/arkiv/personnavn) |
 
+### Cardinality and Requirements
 
-## Eigenskapar
-
-
-
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-  
-  
-  
-  
-    
-  
-
-
-### Andre
-
-| Namn | Kardinalitet og domene | Beskriving |
-| --- | --- | --- |
-| [fornavn](fornavn.md) | 1 <br/> [String](string.md) | Fornamn til personen |
-| [mellomnavn](mellomnavn.md) | 0..1 <br/> [String](string.md) | Mellomnamn |
-| [etternavn](etternavn.md) | 1 <br/> [String](string.md) | Etternamn til personen |
-
-
-
-
-
-
-
-
-## Usages
-
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Personalmappe](personalmappe.md) | [navn](navn.md) | range | [Personnavn](personnavn.md) |
-| [Person](person.md) | [navn](navn.md) | range | [Personnavn](personnavn.md) |
-| [Kontaktperson](kontaktperson.md) | [navn](navn.md) | range | [Personnavn](personnavn.md) |
-
-
+| Property | Value |
+| --- | --- |
 
 
 
@@ -162,104 +71,26 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | fint:Personnavn |
-| native | https://schema.fintlabs.no/arkiv/:Personnavn |
-
-
+| self | ark:personnavn |
+| native | https://schema.fintlabs.no/arkiv/:personnavn |
 
 
 
 
 ## LinkML Source
 
-<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
-
-### Direct
-
 <details>
 ```yaml
-name: Personnavn
-description: Namn på ein person.
+name: personnavn
+description: Namn på person (Personnavn-objekt).
 from_schema: https://data.norge.no/linkml/fint-arkiv
-attributes:
-  fornavn:
-    name: fornavn
-    description: Fornamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:fornavn
-    domain_of:
-    - Personnavn
-    range: string
-    required: true
-  mellomnavn:
-    name: mellomnavn
-    description: Mellomnamn.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:mellomnavn
-    domain_of:
-    - Personnavn
-    range: string
-  etternavn:
-    name: etternavn
-    description: Etternamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:etternavn
-    domain_of:
-    - Personnavn
-    range: string
-    required: true
-class_uri: fint:Personnavn
-
-```
-</details>
-
-### Induced
-
-<details>
-```yaml
-name: Personnavn
-description: Namn på ein person.
-from_schema: https://data.norge.no/linkml/fint-arkiv
-attributes:
-  fornavn:
-    name: fornavn
-    description: Fornamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:fornavn
-    alias: fornavn
-    owner: Personnavn
-    domain_of:
-    - Personnavn
-    range: string
-    required: true
-  mellomnavn:
-    name: mellomnavn
-    description: Mellomnamn.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:mellomnavn
-    alias: mellomnavn
-    owner: Personnavn
-    domain_of:
-    - Personnavn
-    range: string
-  etternavn:
-    name: etternavn
-    description: Etternamn til personen.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:etternavn
-    alias: etternavn
-    owner: Personnavn
-    domain_of:
-    - Personnavn
-    range: string
-    required: true
-class_uri: fint:Personnavn
+rank: 1000
+slot_uri: ark:personnavn
+alias: personnavn
+domain_of:
+- Personalmappe
+range: Personnavn
+inlined: true
 
 ```
 </details>

@@ -3,8 +3,13 @@
 # Slot: kommune 
 
 
+_Kommune._
 
-URI: [https://schema.fintlabs.no/arkiv/:kommune](https://schema.fintlabs.no/arkiv/:kommune)
+
+
+
+
+URI: [fint:kommune](https://schema.fintlabs.no/kommune)
 Alias: kommune
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: kommune
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  yes  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: kommune
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Kommune](kommune.md) |
 | Domain Of | [Fylke](fylke.md), [Person](person.md) |
+| Slot URI | [fint:kommune](https://schema.fintlabs.no/kommune) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: kommune
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:kommune |
+| self | fint:kommune |
 | native | https://schema.fintlabs.no/arkiv/:kommune |
 
 
@@ -70,11 +83,15 @@ Alias: kommune
 <details>
 ```yaml
 name: kommune
+description: Kommune.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: fint:kommune
 alias: kommune
 domain_of:
 - Fylke
 - Person
-range: string
+range: Kommune
 
 ```
 </details>

@@ -3,8 +3,13 @@
 # Slot: aktivitet 
 
 
+_Detaljering av funksjon._
 
-URI: [https://schema.fintlabs.no/administrasjon/:aktivitet](https://schema.fintlabs.no/administrasjon/:aktivitet)
+
+
+
+
+URI: [adm:aktivitet](https://schema.fintlabs.no/administrasjon/aktivitet)
 Alias: aktivitet
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: aktivitet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: aktivitet
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Aktivitet](aktivitet.md) |
 | Domain Of | [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:aktivitet](https://schema.fintlabs.no/administrasjon/aktivitet) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: aktivitet
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:aktivitet |
+| self | adm:aktivitet |
 | native | https://schema.fintlabs.no/administrasjon/:aktivitet |
 
 
@@ -71,12 +84,16 @@ Alias: aktivitet
 <details>
 ```yaml
 name: aktivitet
+description: Detaljering av funksjon.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:aktivitet
 alias: aktivitet
 domain_of:
 - Kontostreng
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Aktivitet
 
 ```
 </details>

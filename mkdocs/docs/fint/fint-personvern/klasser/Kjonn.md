@@ -3,7 +3,7 @@
 # Slot: kjonn 
 
 
-_Kjønn for personen._
+_Kjønn._
 
 
 
@@ -22,7 +22,7 @@ Alias: kjonn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kjonn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: kjonn
 <details>
 ```yaml
 name: kjonn
-description: Kjønn for personen.
-in_subset:
-- Valgfri
+description: Kjønn.
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:kjonn
 alias: kjonn
-owner: Person
 domain_of:
 - Person
 range: Kjonn

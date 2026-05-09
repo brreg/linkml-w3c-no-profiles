@@ -3,8 +3,13 @@
 # Slot: elevar 
 
 
+_Alle elevar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:elevar](https://schema.fintlabs.no/utdanning/:elevar)
+
+
+
+
+URI: [utd:elevar](https://schema.fintlabs.no/utdanning/elevar)
 Alias: elevar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: elevar
 | --- | --- |
 | Range | [Elev](elev.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:elevar](https://schema.fintlabs.no/utdanning/elevar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: elevar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elevar |
+| self | utd:elevar |
 | native | https://schema.fintlabs.no/utdanning/:elevar |
 
 
@@ -84,10 +83,11 @@ Alias: elevar
 <details>
 ```yaml
 name: elevar
+description: Alle elevar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:elevar
 alias: elevar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Elev

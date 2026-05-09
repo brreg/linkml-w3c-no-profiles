@@ -3,8 +3,13 @@
 # Slot: funksjon 
 
 
+_Det som vert produsert eller tenesta som vert levert._
 
-URI: [https://schema.fintlabs.no/administrasjon/:funksjon](https://schema.fintlabs.no/administrasjon/:funksjon)
+
+
+
+
+URI: [adm:funksjon](https://schema.fintlabs.no/administrasjon/funksjon)
 Alias: funksjon
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: funksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: funksjon
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Funksjon](funksjon.md) |
 | Domain Of | [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:funksjon](https://schema.fintlabs.no/administrasjon/funksjon) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: funksjon
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:funksjon |
+| self | adm:funksjon |
 | native | https://schema.fintlabs.no/administrasjon/:funksjon |
 
 
@@ -71,12 +84,16 @@ Alias: funksjon
 <details>
 ```yaml
 name: funksjon
+description: Det som vert produsert eller tenesta som vert levert.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:funksjon
 alias: funksjon
 domain_of:
 - Kontostreng
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Funksjon
 
 ```
 </details>

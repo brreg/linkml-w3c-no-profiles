@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:identitetar](https://schema.fintlabs.no/ressurs/:identitetar)
+URI: [res:identitetar](https://schema.fintlabs.no/ressurs/identitetar)
 Alias: identitetar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: identitetar
 | --- | --- |
 | Range | [Identitet](identitet.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:identitetar](https://schema.fintlabs.no/ressurs/identitetar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: identitetar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:identitetar |
+| self | res:identitetar |
 | native | https://schema.fintlabs.no/ressurs/:identitetar |
 
 
@@ -86,8 +80,8 @@ Alias: identitetar
 name: identitetar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:identitetar
 alias: identitetar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Identitet

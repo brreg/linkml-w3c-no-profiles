@@ -22,7 +22,7 @@ Alias: timerPerUke
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: timerPerUke
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arbeidsforhold](arbeidsforhold.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: timerPerUke
 ```yaml
 name: timerPerUke
 description: Timer per veke i 100 % stilling.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:timerPerUke
 alias: timerPerUke
-owner: Arbeidsforhold
 domain_of:
 - Arbeidsforhold
 range: Uketimetall

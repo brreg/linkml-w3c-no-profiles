@@ -1,19 +1,5 @@
 # fint-administrasjon
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [fint-administrasjon-shapes.ttl](fint-administrasjon-shapes.ttl) |
-| JSON-LD kontekst | [fint-administrasjon-context.jsonld](fint-administrasjon-context.jsonld) |
-| JSON Schema | [fint-administrasjon-schema.json](fint-administrasjon-schema.json) |
-| OWL ontologi | [fint-administrasjon-ontology.ttl](fint-administrasjon-ontology.ttl) |
-| Python-klasser | [fint-administrasjon-model.py](fint-administrasjon-model.py) |
-| ER-diagram (Mermaid) | [fint-administrasjon-erdiagram.md](fint-administrasjon-erdiagram.md) |
-| Eksempeldata (Turtle) | [fint-administrasjon-eksempel.ttl](fint-administrasjon-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Adresse {
@@ -24,19 +10,19 @@ Adresse {
 Aktivitet {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Anlegg {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Ansvar {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Arbeidsforhold {
@@ -53,7 +39,7 @@ Arbeidsforhold {
 Arbeidsforholdstype {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Arbeidslokasjon {
@@ -64,13 +50,13 @@ Arbeidslokasjon {
 Art {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Diverse {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Fastlonn {
@@ -92,7 +78,7 @@ Fasttillegg {
 Formaal {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Fravaer {
@@ -103,14 +89,14 @@ Fravaer {
 Fravaersgrunn {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Fravaerstype {
     boolean overfores  
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Fullmakt {
@@ -119,13 +105,13 @@ Fullmakt {
 Funksjon {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Fylke {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Identifikator {
@@ -134,13 +120,13 @@ Identifikator {
 Kjonn {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Kommune {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Kontaktinformasjon {
@@ -160,32 +146,32 @@ Kontostreng {
 Kontrakt {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Landkode {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Lonsart {
     string kategori  
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Lopenummer {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Objekt {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Organisasjonselement {
@@ -198,7 +184,7 @@ Organisasjonselement {
 Organisasjonstype {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Periode {
@@ -224,7 +210,7 @@ Personalressurs {
 Personalressurskategori {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Personnavn {
@@ -235,19 +221,19 @@ Personnavn {
 Prosjekt {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Prosjektart {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Ramme {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Rolle {
@@ -257,24 +243,24 @@ Rolle {
 Spraak {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Stillingskode {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Uketimetall {
     uriorcurie id  
     string kode  
-    string navn  
+    string naam  
     boolean passiv  
 }
 Valuta {
     uriorcurie id  
-    string navn  
+    string valuta_naam  
 }
 Variabellonn {
     integer antall  
@@ -383,7 +369,7 @@ Kjonn ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|| Fylke : "fylke"
 Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
-Kontaktperson ||--|o Personnavn : "navn"
+Kontaktperson ||--|o Personnavn : "kontaktperson_naam"
 Kontaktperson ||--}o Person : "kontaktperson"
 Kontostreng ||--|o Aktivitet : "aktivitet"
 Kontostreng ||--|o Anlegg : "anlegg"
@@ -422,7 +408,7 @@ Person ||--|o Kommune : "kommune"
 Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
 Person ||--|o Spraak : "maalform, morsmaal"
 Person ||--|| Identifikator : "fodselsnummer"
-Person ||--|| Personnavn : "navn"
+Person ||--|| Personnavn : "person_naam"
 Person ||--}o Kontaktperson : "parorende"
 Person ||--}o Landkode : "statsborgerskap"
 Person ||--}o Person : "foreldre, foreldreansvar"
@@ -542,137 +528,140 @@ Name: fint-administrasjon
 | [adresse](klasser/adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](klasser/adresselinje.md) | Adresseinformasjon |
 | [aktivitet](klasser/aktivitet.md) | Detaljering av funksjon |
-| [aktivitetar](klasser/aktivitetar.md) |  |
-| [anlegg](klasser/anlegg.md) |  |
+| [aktivitetar](klasser/aktivitetar.md) | Alle aktivitetar i containeren |
+| [anlegg](klasser/anlegg.md) | Objekt som skal aktiverast eller avskrivast |
 | [ansattnummer](klasser/ansattnummer.md) | Unik identifikator for den tilsette i HR-systemet |
 | [ansettelsesperiode](klasser/ansettelsesperiode.md) | Perioden personalressursen er i eit tilhøve til organisasjonen |
 | [ansettelsesprosent](klasser/ansettelsesprosent.md) | Prosenten personalressursen eig i høve til arbeidsavtalen |
 | [ansiennitet](klasser/ansiennitet.md) | Ansiennitet for personalressurs hos arbeidsgjevar |
-| [ansvar](klasser/ansvar.md) |  |
+| [ansvar](klasser/ansvar.md) | Ansvarleg for ei utgift eller inntekt |
 | [antall](klasser/antall.md) | Mengde som vert beskriven av tillegget, i hundredeler |
 | [anviser](klasser/anviser.md) | Personalressurs som har anvist lønsmeldinga etter fullmakt |
 | [anvist](klasser/anvist.md) | Tidspunkt då lønn vart anvist |
-| [arbeidsforhold](klasser/arbeidsforhold.md) |  |
+| [arbeidsforhold](klasser/arbeidsforhold.md) | Arbeidsforhold ressursen er knytt til |
 | [arbeidsforholdsperiode](klasser/arbeidsforholdsperiode.md) | Periode for ei gjeven stilling |
-| [arbeidsforholdstypar](klasser/arbeidsforholdstypar.md) |  |
+| [arbeidsforholdstypar](klasser/arbeidsforholdstypar.md) | Alle arbeidsforholdstypar i containeren |
 | [arbeidsforholdstype](klasser/arbeidsforholdstype.md) | Beskriven kode som kategoriserer kva funksjon stillinga er gruppert til |
 | [arbeidslokasjon](klasser/arbeidslokasjon.md) | Fysisk lokasjon der den tilsette har sitt arbeidsstad |
-| [arbeidslokasjoner](klasser/arbeidslokasjoner.md) |  |
+| [arbeidslokasjoner](klasser/arbeidslokasjoner.md) | Alle arbeidslokasjoner i containeren |
 | [arbeidssted](klasser/arbeidssted.md) | Tilhøyrsle til organisasjonsstrukturen |
 | [art](klasser/art.md) | Type inntekt eller utgift |
-| [artar](klasser/artar.md) |  |
+| [artar](klasser/artar.md) | Alle artar i containeren |
 | [attestant](klasser/attestant.md) | Personalressurs som har attestert lønsmeldinga etter fullmakt |
 | [attestert](klasser/attestert.md) | Tidspunkt då lønn vart attestert |
 | [belop](klasser/belop.md) | Beløp i øre |
-| [beskrivelse](klasser/beskrivelse.md) | Beskriving av lønn til føring på lønnslipp |
+| [beskrivelse](klasser/beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](klasser/bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](klasser/bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](klasser/bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [brukernavn](klasser/brukernavn.md) | Brukarnamn til den tilsette |
 | [bruksnummer](klasser/bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
-| [diverse](klasser/diverse.md) |  |
+| [diverse](klasser/diverse.md) | Spesifikasjon som ikkje kjem fram i øvrige dimensjonar |
 | [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
 | [epostadresse](klasser/epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](klasser/etternavn.md) | Etternamn til personen |
-| [fastlonn](klasser/fastlonn.md) |  |
-| [fasttillegg](klasser/fasttillegg.md) |  |
+| [fastlonn](klasser/fastlonn.md) | Fastlønn for arbeidsforholdet |
+| [fasttillegg](klasser/fasttillegg.md) | Faste tillegg for arbeidsforholdet |
 | [festenummer](klasser/festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
 | [fodselsdato](klasser/fodselsdato.md) | Dato for fødsel |
 | [fodselsnummer](klasser/fodselsnummer.md) | Fødselsnummer eller ein av dei fiktive variantane |
-| [forelder](klasser/forelder.md) | For å byggje hierarki av Arbeidsforholdstype |
+| [forelder](klasser/forelder.md) | Foreldreelement i hierarki |
 | [foreldre](klasser/foreldre.md) | Den/dei som har foreldreansvar til personen |
 | [foreldreansvar](klasser/foreldreansvar.md) | Personar denne personen har foreldreansvar for |
-| [formaal](klasser/formaal.md) |  |
+| [formaal](klasser/formaal.md) | Formål viser aktivitet og tenesteproduksjon |
 | [fornavn](klasser/fornavn.md) | Fornamn til personen |
-| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til organisasjonseininga |
+| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fortsettelse](klasser/fortsettelse.md) | Fortsetjande fråvær |
 | [fortsetter](klasser/fortsetter.md) | Fråværet dette fråværet er fortsetjing av |
-| [fravaer](klasser/fravaer.md) |  |
+| [fravaer](klasser/fravaer.md) | Fråvær knytt til ressursen |
 | [fravaersgrunn](klasser/fravaersgrunn.md) | Grunn til fråværet |
-| [fravaersgrunnar](klasser/fravaersgrunnar.md) |  |
-| [fravaerstypar](klasser/fravaerstypar.md) |  |
+| [fravaersgrunnar](klasser/fravaersgrunnar.md) | Alle fråværsgrunnar i containeren |
+| [fravaerstypar](klasser/fravaerstypar.md) | Alle fråværstypar i containeren |
 | [fravaerstype](klasser/fravaerstype.md) | Type fråvær |
-| [fullmakt](klasser/fullmakt.md) | Alle fullmakter av denne typen |
-| [fullmakter](klasser/fullmakter.md) |  |
+| [fullmakt](klasser/fullmakt.md) | Fullmakt ressursen er knytt til |
+| [fullmakter](klasser/fullmakter.md) | Alle fullmakter i containeren |
 | [fullmektig](klasser/fullmektig.md) | Personalressurs som har fått fullmakt til ei gjeven rolle |
 | [funksjon](klasser/funksjon.md) | Det som vert produsert eller tenesta som vert levert |
-| [funksjonar](klasser/funksjonar.md) |  |
-| [fylke](klasser/fylke.md) |  |
+| [funksjonar](klasser/funksjonar.md) | Alle funksjonar i containeren |
+| [fylke](klasser/fylke.md) | Fylke |
 | [gaardsnummer](klasser/gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
 | [godkjenner](klasser/godkjenner.md) | Personalressurs som har godkjent fråværsmeldinga |
 | [godkjent](klasser/godkjent.md) | Tidspunkt då fråværet vart godkjent |
-| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Periode fullmakta er gyldig for |
+| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [hovedstilling](klasser/hovedstilling.md) | Angir kva arbeidsforhold som er hovudarbeidsforhold |
 | [id](klasser/id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](klasser/identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
 | [jobbtittel](klasser/jobbtittel.md) | Namn som beskriv jobben eller stillinga |
 | [kategori](klasser/kategori.md) | Kategori lønnsart |
-| [kildesystemId](klasser/kildesystemid.md) | Kjeldesystemets unike identifikator for lønn |
-| [kjonn](klasser/kjonn.md) |  |
+| [kildesystemId](klasser/kildesystemid.md) | Kjeldesystemets unike identifikator |
+| [kjonn](klasser/kjonn.md) | Kjønn |
 | [kode](klasser/kode.md) | Verdi som identifiserer omgrepet |
-| [kommunar](klasser/kommunar.md) |  |
-| [kommune](klasser/kommune.md) | Alle kommunar som inngår i fylket |
+| [kommunar](klasser/kommunar.md) | Alle kommuneverdiar i containeren |
+| [kommune](klasser/kommune.md) | Kommune |
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
-| [kontaktinformasjon](klasser/kontaktinformasjon.md) | Kontaktinformasjon til arbeidslokasjonen |
+| [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktpersonar](klasser/kontaktpersonar.md) |  |
+| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktpersonar](klasser/kontaktpersonar.md) | Alle kontaktpersonar i containeren |
 | [konterer](klasser/konterer.md) | Personalressurs som har kontert lønsmeldinga etter fullmakt |
 | [kontert](klasser/kontert.md) | Tidspunkt då lønn vart kontert |
 | [kontostreng](klasser/kontostreng.md) | Kontering av lønn |
-| [kontrakt](klasser/kontrakt.md) | Kontostrengens kontraktsegment |
-| [kontrakter](klasser/kontrakter.md) |  |
+| [kontrakt](klasser/kontrakt.md) | Kontrakt ressursen er knytt til |
+| [kontrakter](klasser/kontrakter.md) | Alle kontrakter i containeren |
 | [kortnavn](klasser/kortnavn.md) | Forkorta namn som beskriv organisasjonselementet |
 | [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](klasser/land.md) | Land der adressa befinn seg |
-| [landkodar](klasser/landkodar.md) |  |
+| [landkodar](klasser/landkodar.md) | Alle landkodar i containeren |
 | [leder](klasser/leder.md) | Ansvarleg leiar for organisasjonselementet |
 | [lederFor](klasser/lederfor.md) | Organisasjonselement personalressursen er leiar for |
 | [lokasjonskode](klasser/lokasjonskode.md) | Kode som identifiserer ein arbeidslokasjon |
 | [lokasjonsnavn](klasser/lokasjonsnavn.md) | Namn som beskriv ein arbeidslokasjon |
 | [lonnsprosent](klasser/lonnsprosent.md) | Prosent av årslønn den tilsette skal ha utbetalt |
-| [lonsart](klasser/lonsart.md) | Lønnsart fråværstypen vert ført på |
-| [lonsartar](klasser/lonsartar.md) |  |
-| [lopenummer](klasser/lopenummer.md) |  |
+| [lonsart](klasser/lonsart.md) | Lønnsart |
+| [lonsartar](klasser/lonsartar.md) | Alle lønnsartar i containeren |
+| [lopenummer](klasser/lopenummer.md) | Løpenummer i ei nummerserie |
 | [maalform](klasser/maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
+| [naam](klasser/naam.md) | Hovudnamn for ressursen |
 | [navn](klasser/navn.md) | Namn på organisasjonselementet |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
-| [objekt](klasser/objekt.md) |  |
+| [objekt](klasser/objekt.md) | Objekt ressursen er knytt til |
 | [opptjent](klasser/opptjent.md) | Periode der lønn vart opptent |
-| [organisasjonselement](klasser/organisasjonselement.md) |  |
+| [organisasjonselement](klasser/organisasjonselement.md) | Organisasjonselement ressursen er knytt til |
 | [organisasjonsId](klasser/organisasjonsid.md) | Unikt internnummer for organisasjonselementet |
 | [organisasjonsKode](klasser/organisasjonskode.md) | Beskriven kode for organisasjonselementet |
 | [organisasjonsnavn](klasser/organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](klasser/organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
-| [organisasjonstypar](klasser/organisasjonstypar.md) |  |
+| [organisasjonstypar](klasser/organisasjonstypar.md) | Alle organisasjonstypar i containeren |
 | [organisasjonstype](klasser/organisasjonstype.md) | Kva type organisasjonselement dette er |
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [overfores](klasser/overfores.md) | Angir om fråvær av denne typen skal overførast til HR |
-| [overordnet](klasser/overordnet.md) | Overordna ansvar |
+| [overordnet](klasser/overordnet.md) | Overordna element i hierarkiet |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [periode](klasser/periode.md) | Periode lønn vert utbetalt |
+| [periode](klasser/periode.md) | Periode for ressursen |
 | [person](klasser/person.md) | Person som er ein personalressurs |
+| [person_naam](klasser/person_naam.md) | Namn på personen |
 | [personalansvar](klasser/personalansvar.md) | Arbeidsforhold der personalressursen har personalansvar |
 | [personalleder](klasser/personalleder.md) | Personalleiar til arbeidsforholdet |
 | [personalressurs](klasser/personalressurs.md) | Personalressurs til arbeidsforholdet |
-| [personalressursar](klasser/personalressursar.md) |  |
+| [personalressursar](klasser/personalressursar.md) | Alle personalressursar i containeren |
 | [personalressurskategori](klasser/personalressurskategori.md) | Kategori for personalressursen |
-| [personalressurskategoriar](klasser/personalressurskategoriar.md) |  |
-| [personar](klasser/personar.md) |  |
-| [postadresse](klasser/postadresse.md) | Postadresse til arbeidslokasjonen |
+| [personalressurskategoriar](klasser/personalressurskategoriar.md) | Alle personalressurskategoriar i containeren |
+| [personar](klasser/personar.md) | Alle personar i containeren |
+| [postadresse](klasser/postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](klasser/postnummer.md) | Postnummer |
 | [poststed](klasser/poststed.md) | Poststad |
-| [prosent](klasser/prosent.md) | Andel av lønnsprosent som vert beslaglagt |
-| [prosjekt](klasser/prosjekt.md) |  |
+| [prosent](klasser/prosent.md) | Prosent |
+| [prosjekt](klasser/prosjekt.md) | Prosjekt ressursen er knytt til |
 | [prosjektart](klasser/prosjektart.md) | Deloppgåve eller delprosjekt |
-| [prosjektartar](klasser/prosjektartar.md) |  |
+| [prosjektartar](klasser/prosjektartar.md) | Alle prosjektartar i containeren |
 | [ramme](klasser/ramme.md) | Budsjettramme som skal bere kostnadane |
-| [rammer](klasser/rammer.md) |  |
-| [rollar](klasser/rollar.md) |  |
+| [rammer](klasser/rammer.md) | Alle rammer i containeren |
+| [rollar](klasser/rollar.md) | Alle rollar i containeren |
 | [rolle](klasser/rolle.md) | Kva type fullmakt |
 | [rolleNavn](klasser/rollenavn.md) | Namn på rolla; unik identifikator |
 | [seksjonsnummer](klasser/seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
@@ -680,24 +669,25 @@ Name: fint-administrasjon
 | [skole](klasser/skole.md) | Referanse til Skole (Utdanning) |
 | [skoleressurs](klasser/skoleressurs.md) | Referanse til Skoleressurs (Utdanning) |
 | [slutt](klasser/slutt.md) | Til tidspunkt |
-| [spraak](klasser/spraak.md) |  |
+| [spraak](klasser/spraak.md) | Alle språkverdiar i containeren |
 | [start](klasser/start.md) | Frå tidspunkt |
 | [statsborgerskap](klasser/statsborgerskap.md) | Alle statsborgarskap personen har |
-| [stedfortreder](klasser/stedfortreder.md) | Personalressurs som er stedfortredar for den fullmektige |
+| [stedfortreder](klasser/stedfortreder.md) | Stedfortredar i fullmaktssamanheng |
 | [stillingskode](klasser/stillingskode.md) | Firesifra stillingskode frå KS, eventuelt utvida med to siffer |
-| [stillingskoder](klasser/stillingskoder.md) |  |
+| [stillingskoder](klasser/stillingskoder.md) | Alle stillingskoder i containeren |
 | [stillingsnummer](klasser/stillingsnummer.md) | Løpenummer for stillinga |
 | [stillingstittel](klasser/stillingstittel.md) | Arbeidstakarens stillingstittel i gjeldande stilling |
 | [telefonnummer](klasser/telefonnummer.md) | Telefonnummer |
 | [tilstedeprosent](klasser/tilstedeprosent.md) | Det personalressursen faktisk jobbar |
 | [timerPerUke](klasser/timerperuke.md) | Timer per veke i 100 % stilling |
-| [type](klasser/type.md) | Beskriv kva slags type kontaktperson |
-| [uketimetall](klasser/uketimetall.md) |  |
-| [underordnet](klasser/underordnet.md) | Alle underansvar |
+| [type](klasser/type.md) | Beskriv kva slags type |
+| [uketimetall](klasser/uketimetall.md) | Alle uketimetallverdiar i containeren |
+| [underordnet](klasser/underordnet.md) | Underordna element i hierarkiet |
 | [undervisningsforhold](klasser/undervisningsforhold.md) | Referanse til Undervisningsforhold (Utdanning) |
-| [valuta](klasser/valuta.md) |  |
-| [variabellonn](klasser/variabellonn.md) |  |
-| [virksomhetar](klasser/virksomhetar.md) |  |
+| [valuta](klasser/valuta.md) | Alle valutaverdiar i containeren |
+| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [variabellonn](klasser/variabellonn.md) | Variabel lønn for arbeidsforholdet |
+| [virksomhetar](klasser/virksomhetar.md) | Alle verksemder i containeren |
 | [virksomhetsId](klasser/virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 
@@ -739,3 +729,16 @@ Name: fint-administrasjon
 | [Anbefalt](klasser/anbefalt.md) | Anbefalt eigensskap |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatorisk eigensskap |
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [fint-administrasjon-shapes.ttl](fint-administrasjon-shapes.ttl) |
+| JSON-LD kontekst | [fint-administrasjon-context.jsonld](fint-administrasjon-context.jsonld) |
+| JSON Schema | [fint-administrasjon-schema.json](fint-administrasjon-schema.json) |
+| OWL ontologi | [fint-administrasjon-ontology.ttl](fint-administrasjon-ontology.ttl) |
+| Python-klasser | [fint-administrasjon-model.py](fint-administrasjon-model.py) |
+| ER-diagram (Mermaid) | [fint-administrasjon-erdiagram.md](fint-administrasjon-erdiagram.md) |
+| Eksempeldata (Turtle) | [fint-administrasjon-eksempel.ttl](fint-administrasjon-eksempel.ttl) |

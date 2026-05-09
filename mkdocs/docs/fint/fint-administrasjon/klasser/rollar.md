@@ -3,8 +3,13 @@
 # Slot: rollar 
 
 
+_Alle rollar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:rollar](https://schema.fintlabs.no/administrasjon/:rollar)
+
+
+
+
+URI: [adm:rollar](https://schema.fintlabs.no/administrasjon/rollar)
 Alias: rollar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: rollar
 | --- | --- |
 | Range | [Rolle](rolle.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:rollar](https://schema.fintlabs.no/administrasjon/rollar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: rollar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:rollar |
+| self | adm:rollar |
 | native | https://schema.fintlabs.no/administrasjon/:rollar |
 
 
@@ -84,10 +83,11 @@ Alias: rollar
 <details>
 ```yaml
 name: rollar
+description: Alle rollar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:rollar
 alias: rollar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Rolle

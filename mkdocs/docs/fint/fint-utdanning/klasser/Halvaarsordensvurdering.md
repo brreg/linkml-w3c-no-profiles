@@ -3,8 +3,13 @@
 # Slot: halvaarsordensvurdering 
 
 
+_Halvårsordensvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:halvaarsordensvurdering](https://schema.fintlabs.no/utdanning/:halvaarsordensvurdering)
+
+
+
+
+URI: [utd:halvaarsordensvurdering](https://schema.fintlabs.no/utdanning/halvaarsordensvurdering)
 Alias: halvaarsordensvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: halvaarsordensvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: halvaarsordensvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Halvaarsordensvurdering](halvaarsordensvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:halvaarsordensvurdering](https://schema.fintlabs.no/utdanning/halvaarsordensvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: halvaarsordensvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:halvaarsordensvurdering |
+| self | utd:halvaarsordensvurdering |
 | native | https://schema.fintlabs.no/utdanning/:halvaarsordensvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: halvaarsordensvurdering
 <details>
 ```yaml
 name: halvaarsordensvurdering
+description: Halvårsordensvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:halvaarsordensvurdering
 alias: halvaarsordensvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Halvaarsordensvurdering
+multivalued: true
 
 ```
 </details>

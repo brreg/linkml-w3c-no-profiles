@@ -3,8 +3,13 @@
 # Slot: elevvurdering 
 
 
+_Elevvurderingsobjekt._
 
-URI: [https://schema.fintlabs.no/utdanning/:elevvurdering](https://schema.fintlabs.no/utdanning/:elevvurdering)
+
+
+
+
+URI: [utd:elevvurdering](https://schema.fintlabs.no/utdanning/elevvurdering)
 Alias: elevvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,15 +22,15 @@ Alias: elevvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurdering for ein elev |  no  |
-| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
-| [Halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsvurdering i eit fag |  no  |
-| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  no  |
-| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
-| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurdering for ein elev |  no  |
+| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  yes  |
+| [Halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurdering for ein elev |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [Halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsvurdering i eit fag |  yes  |
+| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  yes  |
+| [Underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurdering for ein elev |  yes  |
+| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  yes  |
+| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  yes  |
 
 
 
@@ -38,8 +43,9 @@ Alias: elevvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Elevvurdering](elevvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md), [Eksamensvurdering](eksamensvurdering.md), [Halvaarsfagvurdering](halvaarsfagvurdering.md), [Halvaarsordensvurdering](halvaarsordensvurdering.md), [Sluttfagvurdering](sluttfagvurdering.md), [Sluttordensvurdering](sluttordensvurdering.md), [Underveisfagvurdering](underveisfagvurdering.md), [Underveisordensvurdering](underveisordensvurdering.md) |
+| Slot URI | [utd:elevvurdering](https://schema.fintlabs.no/utdanning/elevvurdering) |
 
 ### Cardinality and Requirements
 
@@ -61,12 +67,19 @@ Alias: elevvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:elevvurdering |
+| self | utd:elevvurdering |
 | native | https://schema.fintlabs.no/utdanning/:elevvurdering |
 
 
@@ -77,6 +90,10 @@ Alias: elevvurdering
 <details>
 ```yaml
 name: elevvurdering
+description: Elevvurderingsobjekt.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:elevvurdering
 alias: elevvurdering
 domain_of:
 - UtdanningContainer
@@ -88,7 +105,7 @@ domain_of:
 - Sluttordensvurdering
 - Underveisfagvurdering
 - Underveisordensvurdering
-range: string
+range: Elevvurdering
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: beskrivelse 
 
 
-_Beskriven namn på perioden._
+_Beskriven namn eller omtale._
 
 
 
@@ -43,13 +43,6 @@ Alias: beskrivelse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Periode](periode.md) |
-
-
 
 
 
@@ -89,12 +82,11 @@ Alias: beskrivelse
 <details>
 ```yaml
 name: beskrivelse
-description: Beskriven namn på perioden.
+description: Beskriven namn eller omtale.
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: fint:beskrivelse
 alias: beskrivelse
-owner: Periode
 domain_of:
 - Periode
 range: string

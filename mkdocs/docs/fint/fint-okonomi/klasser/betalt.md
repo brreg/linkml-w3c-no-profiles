@@ -22,7 +22,7 @@ Alias: betalt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: betalt
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Faktura](faktura.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Anbefalt](anbefalt.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: betalt
 ```yaml
 name: betalt
 description: Status på betaling.
-in_subset:
-- Anbefalt
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:betalt
 alias: betalt
-owner: Faktura
 domain_of:
 - Faktura
 range: boolean

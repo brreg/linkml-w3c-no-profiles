@@ -3,7 +3,7 @@
 # Slot: nettobelop 
 
 
-_Del av totalbeløp som utgjer summen av fakturalinjene, i øre (nettobeløp)._
+_Del av totalbeløp som utgjer summen av fakturalinjene, i øre._
 
 
 
@@ -22,7 +22,7 @@ Alias: nettobelop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: nettobelop
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: nettobelop
 <details>
 ```yaml
 name: nettobelop
-description: Del av totalbeløp som utgjer summen av fakturalinjene, i øre (nettobeløp).
-in_subset:
-- Valgfri
+description: Del av totalbeløp som utgjer summen av fakturalinjene, i øre.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:nettobelop
 alias: nettobelop
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: integer

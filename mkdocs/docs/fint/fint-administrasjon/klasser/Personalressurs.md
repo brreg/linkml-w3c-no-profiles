@@ -3,8 +3,13 @@
 # Slot: personalressurs 
 
 
+_Personalressurs til arbeidsforholdet._
 
-URI: [https://schema.fintlabs.no/administrasjon/:personalressurs](https://schema.fintlabs.no/administrasjon/:personalressurs)
+
+
+
+
+URI: [adm:personalressurs](https://schema.fintlabs.no/administrasjon/personalressurs)
 Alias: personalressurs
 
 <!-- no inheritance hierarchy -->
@@ -18,7 +23,7 @@ Alias: personalressurs
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Person](person.md) | Fysiske private personar |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: personalressurs
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Personalressurs](personalressurs.md) |
 | Domain Of | [Arbeidsforhold](arbeidsforhold.md), [Person](person.md) |
+| Slot URI | [adm:personalressurs](https://schema.fintlabs.no/administrasjon/personalressurs) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: personalressurs
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:personalressurs |
+| self | adm:personalressurs |
 | native | https://schema.fintlabs.no/administrasjon/:personalressurs |
 
 
@@ -70,11 +83,15 @@ Alias: personalressurs
 <details>
 ```yaml
 name: personalressurs
+description: Personalressurs til arbeidsforholdet.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:personalressurs
 alias: personalressurs
 domain_of:
 - Arbeidsforhold
 - Person
-range: string
+range: Personalressurs
 
 ```
 </details>

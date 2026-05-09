@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:rettigheiter](https://schema.fintlabs.no/ressurs/:rettigheiter)
+URI: [res:rettigheiter](https://schema.fintlabs.no/ressurs/rettigheiter)
 Alias: rettigheiter
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: rettigheiter
 | --- | --- |
 | Range | [Rettighet](rettighet.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:rettigheiter](https://schema.fintlabs.no/ressurs/rettigheiter) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: rettigheiter
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:rettigheiter |
+| self | res:rettigheiter |
 | native | https://schema.fintlabs.no/ressurs/:rettigheiter |
 
 
@@ -86,8 +80,8 @@ Alias: rettigheiter
 name: rettigheiter
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:rettigheiter
 alias: rettigheiter
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Rettighet

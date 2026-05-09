@@ -24,8 +24,8 @@ Alias: kan_vaere_pa
 | --- | --- | --- |
 | [Eierseksjon](eierseksjon.md) | Ein eigarseksjon er ein eigarandel i ein seksjonert eigedom |  yes  |
 | [Festegrunn](festegrunn.md) | Ein del av ei grunneigendom eller eit jordsameige som nokon har festa til |  yes  |
-| [Grunneiendom](grunneiendom.md) | Den vanlegaste typen matrikkelenheit |  yes  |
 | [Jordsameie](jordsameie.md) | Eit fellesareal som vert eigd av fleire eigedommar |  yes  |
+| [Grunneiendom](grunneiendom.md) | Den vanlegaste typen matrikkelenheit |  yes  |
 
 
 

@@ -22,7 +22,7 @@ Alias: organisasjonsKode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: organisasjonsKode
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Organisasjonselement](organisasjonselement.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: organisasjonsKode
 ```yaml
 name: organisasjonsKode
 description: Beskriven kode for organisasjonselementet.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:organisasjonsKode
 alias: organisasjonsKode
-owner: Organisasjonselement
 domain_of:
 - Organisasjonselement
 range: Identifikator
-required: true
 inlined: true
 
 ```

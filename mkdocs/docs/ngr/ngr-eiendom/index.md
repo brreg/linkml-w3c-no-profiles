@@ -1,20 +1,5 @@
 # ngr-eiendom
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [ngr-eiendom-shapes.ttl](ngr-eiendom-shapes.ttl) |
-| JSON-LD kontekst | [ngr-eiendom-context.jsonld](ngr-eiendom-context.jsonld) |
-| JSON Schema | [ngr-eiendom-schema.json](ngr-eiendom-schema.json) |
-| OWL ontologi | [ngr-eiendom-ontology.ttl](ngr-eiendom-ontology.ttl) |
-| RDF/Turtle skjema | [ngr-eiendom-schema.ttl](ngr-eiendom-schema.ttl) |
-| Python-klasser | [ngr-eiendom-model.py](ngr-eiendom-model.py) |
-| ER-diagram (Mermaid) | [ngr-eiendom-erdiagram.md](ngr-eiendom-erdiagram.md) |
-| Eksempeldata (Turtle) | [ngr-eiendom-eksempel.ttl](ngr-eiendom-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Andel {
@@ -417,3 +402,17 @@ Name: ngr-eiendom
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i domenemodellen |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i domenemodellen |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i domenemodellen |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [ngr-eiendom-shapes.ttl](ngr-eiendom-shapes.ttl) |
+| JSON-LD kontekst | [ngr-eiendom-context.jsonld](ngr-eiendom-context.jsonld) |
+| JSON Schema | [ngr-eiendom-schema.json](ngr-eiendom-schema.json) |
+| OWL ontologi | [ngr-eiendom-ontology.ttl](ngr-eiendom-ontology.ttl) |
+| RDF/Turtle skjema | [ngr-eiendom-schema.ttl](ngr-eiendom-schema.ttl) |
+| Python-klasser | [ngr-eiendom-model.py](ngr-eiendom-model.py) |
+| ER-diagram (Mermaid) | [ngr-eiendom-erdiagram.md](ngr-eiendom-erdiagram.md) |
+| Eksempeldata (Turtle) | [ngr-eiendom-eksempel.ttl](ngr-eiendom-eksempel.ttl) |

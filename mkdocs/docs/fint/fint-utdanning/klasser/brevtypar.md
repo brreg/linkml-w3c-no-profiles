@@ -3,8 +3,13 @@
 # Slot: brevtypar 
 
 
+_Alle brevtypar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:brevtypar](https://schema.fintlabs.no/utdanning/:brevtypar)
+
+
+
+
+URI: [utd:brevtypar](https://schema.fintlabs.no/utdanning/brevtypar)
 Alias: brevtypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: brevtypar
 | --- | --- |
 | Range | [Brevtype](brevtype.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:brevtypar](https://schema.fintlabs.no/utdanning/brevtypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: brevtypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:brevtypar |
+| self | utd:brevtypar |
 | native | https://schema.fintlabs.no/utdanning/:brevtypar |
 
 
@@ -84,10 +83,11 @@ Alias: brevtypar
 <details>
 ```yaml
 name: brevtypar
+description: Alle brevtypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:brevtypar
 alias: brevtypar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Brevtype

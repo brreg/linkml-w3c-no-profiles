@@ -22,7 +22,7 @@ Alias: data
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  no  |
+| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: data
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentfil](dokumentfil.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: data
 ```yaml
 name: data
 description: Dokumentfilens data, koda som Base64.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:data
 alias: data
-owner: Dokumentfil
 domain_of:
 - Dokumentfil
 range: string
-required: true
 
 ```
 </details>

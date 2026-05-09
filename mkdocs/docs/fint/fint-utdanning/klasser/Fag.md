@@ -3,8 +3,13 @@
 # Slot: fag 
 
 
+_Fag._
 
-URI: [https://schema.fintlabs.no/utdanning/:fag](https://schema.fintlabs.no/utdanning/:fag)
+
+
+
+
+URI: [utd:fag](https://schema.fintlabs.no/utdanning/fag)
 Alias: fag
 
 <!-- no inheritance hierarchy -->
@@ -18,16 +23,16 @@ Alias: fag
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 | [Halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsvurdering i eit fag |  no  |
-| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
-| [Faggruppe](faggruppe.md) | Ei gruppe elevar knytt til eit fag på ein skule |  no  |
-| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 | [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Fravarsoversikt](fravarsoversikt.md) | Oversikt over fråvær for ein elev i eit fag |  yes  |
+| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
+| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  yes  |
 
 
 
@@ -40,8 +45,9 @@ Alias: fag
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fag](fag.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Skole](skole.md), [Faggruppe](faggruppe.md), [Undervisningsgruppe](undervisningsgruppe.md), [FagvurderingAbstrakt](fagvurderingabstrakt.md), [Eksamensgruppe](eksamensgruppe.md), [Fravarsoversikt](fravarsoversikt.md) |
+| Slot URI | [utd:fag](https://schema.fintlabs.no/utdanning/fag) |
 
 ### Cardinality and Requirements
 
@@ -63,12 +69,19 @@ Alias: fag
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fag |
+| self | utd:fag |
 | native | https://schema.fintlabs.no/utdanning/:fag |
 
 
@@ -79,6 +92,10 @@ Alias: fag
 <details>
 ```yaml
 name: fag
+description: Fag.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:fag
 alias: fag
 domain_of:
 - UtdanningContainer
@@ -88,7 +105,7 @@ domain_of:
 - FagvurderingAbstrakt
 - Eksamensgruppe
 - Fravarsoversikt
-range: string
+range: Fag
 
 ```
 </details>

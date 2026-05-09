@@ -43,13 +43,6 @@ Alias: telefonnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Kontaktinformasjon](kontaktinformasjon.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:telefonnummer
 alias: telefonnummer
-owner: Kontaktinformasjon
 domain_of:
 - Kontaktinformasjon
 range: string

@@ -3,8 +3,13 @@
 # Slot: eksamensgruppe 
 
 
+_Eksamensgruppe._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamensgruppe](https://schema.fintlabs.no/utdanning/:eksamensgruppe)
+
+
+
+
+URI: [utd:eksamensgruppe](https://schema.fintlabs.no/utdanning/eksamensgruppe)
 Alias: eksamensgruppe
 
 <!-- no inheritance hierarchy -->
@@ -17,14 +22,14 @@ Alias: eksamensgruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [Sensor](sensor.md) | Ein sensor for ein eksamen |  no  |
-| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
-| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  no  |
+| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
+| [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  yes  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
+| [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  yes  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
+| [Sensor](sensor.md) | Ein sensor for ein eksamen |  yes  |
 
 
 
@@ -37,8 +42,9 @@ Alias: eksamensgruppe
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Eksamensgruppe](eksamensgruppe.md) |
 | Domain Of | [Skole](skole.md), [Eksamen](eksamen.md), [Fag](fag.md), [Undervisningsforhold](undervisningsforhold.md), [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md), [Eksamensvurdering](eksamensvurdering.md), [Sensor](sensor.md), [Sluttfagvurdering](sluttfagvurdering.md) |
+| Slot URI | [utd:eksamensgruppe](https://schema.fintlabs.no/utdanning/eksamensgruppe) |
 
 ### Cardinality and Requirements
 
@@ -60,12 +66,19 @@ Alias: eksamensgruppe
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamensgruppe |
+| self | utd:eksamensgruppe |
 | native | https://schema.fintlabs.no/utdanning/:eksamensgruppe |
 
 
@@ -76,6 +89,10 @@ Alias: eksamensgruppe
 <details>
 ```yaml
 name: eksamensgruppe
+description: Eksamensgruppe.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:eksamensgruppe
 alias: eksamensgruppe
 domain_of:
 - Skole
@@ -86,7 +103,7 @@ domain_of:
 - Eksamensvurdering
 - Sensor
 - Sluttfagvurdering
-range: string
+range: Eksamensgruppe
 
 ```
 </details>

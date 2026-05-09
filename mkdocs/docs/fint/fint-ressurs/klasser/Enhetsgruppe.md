@@ -22,7 +22,7 @@ Alias: enhetsgruppe
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |  no  |
+| [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: enhetsgruppe
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: enhetsgruppe
 ```yaml
 name: enhetsgruppe
 description: Einingsgruppen dette medlemskapet tilhøyrer.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:enhetsgruppe
 alias: enhetsgruppe
-owner: Enhetsgruppemedlemskap
 domain_of:
 - Enhetsgruppemedlemskap
 range: Enhetsgruppe
-required: true
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: karakter 
 
 
-_Karakterverdien gjeve i vurderinga._
+_Karakterverdi._
 
 
 
@@ -24,9 +24,9 @@ Alias: karakter
 | --- | --- | --- |
 | [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
 | [Halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsvurdering i eit fag |  no  |
-| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
-| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  no  |
 | [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
+| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
+| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  yes  |
 
 
 
@@ -47,23 +47,10 @@ Alias: karakter
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [FagvurderingAbstrakt](fagvurderingabstrakt.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -99,14 +86,11 @@ Alias: karakter
 <details>
 ```yaml
 name: karakter
-description: Karakterverdien gjeve i vurderinga.
-in_subset:
-- Valgfri
+description: Karakterverdi.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:karakter
 alias: karakter
-owner: FagvurderingAbstrakt
 domain_of:
 - FagvurderingAbstrakt
 range: Karakterverdi

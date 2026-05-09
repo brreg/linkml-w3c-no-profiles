@@ -22,7 +22,7 @@ Alias: nummerkode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
+| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: nummerkode
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Valuta](valuta.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: nummerkode
 ```yaml
 name: nummerkode
 description: Nummerkode for aktuell valuta.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: fint:nummerkode
 alias: nummerkode
-owner: Valuta
 domain_of:
 - Valuta
 range: Identifikator
-required: true
 inlined: true
 
 ```

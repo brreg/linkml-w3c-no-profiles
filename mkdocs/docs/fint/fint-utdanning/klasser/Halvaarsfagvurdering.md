@@ -3,8 +3,13 @@
 # Slot: halvaarsfagvurdering 
 
 
+_Halvårsfagvurderingar._
 
-URI: [https://schema.fintlabs.no/utdanning/:halvaarsfagvurdering](https://schema.fintlabs.no/utdanning/:halvaarsfagvurdering)
+
+
+
+
+URI: [utd:halvaarsfagvurdering](https://schema.fintlabs.no/utdanning/halvaarsfagvurdering)
 Alias: halvaarsfagvurdering
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: halvaarsfagvurdering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: halvaarsfagvurdering
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Halvaarsfagvurdering](halvaarsfagvurdering.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:halvaarsfagvurdering](https://schema.fintlabs.no/utdanning/halvaarsfagvurdering) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: halvaarsfagvurdering
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:halvaarsfagvurdering |
+| self | utd:halvaarsfagvurdering |
 | native | https://schema.fintlabs.no/utdanning/:halvaarsfagvurdering |
 
 
@@ -70,11 +84,16 @@ Alias: halvaarsfagvurdering
 <details>
 ```yaml
 name: halvaarsfagvurdering
+description: Halvårsfagvurderingar.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:halvaarsfagvurdering
 alias: halvaarsfagvurdering
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Halvaarsfagvurdering
+multivalued: true
 
 ```
 </details>

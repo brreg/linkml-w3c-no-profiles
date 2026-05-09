@@ -22,7 +22,7 @@ Alias: fodselsnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: fodselsnummer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: fodselsnummer
 ```yaml
 name: fodselsnummer
 description: Fødselsnummer eller ein av dei fiktive variantane.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: fint:fodselsnummer
 alias: fodselsnummer
-owner: Person
 domain_of:
 - Person
 range: Identifikator
-required: true
 inlined: true
 
 ```

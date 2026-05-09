@@ -3,8 +3,13 @@
 # Slot: eier 
 
 
+_Referanse til Organisasjonselement som har eigarskap._
 
-URI: [https://schema.fintlabs.no/ressurs/:eier](https://schema.fintlabs.no/ressurs/:eier)
+
+
+
+
+URI: [res:eier](https://schema.fintlabs.no/ressurs/eier)
 Alias: eier
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: eier
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: eier
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Applikasjonsressurs](applikasjonsressurs.md), [DigitalEnhet](digitalenhet.md) |
+| Slot URI | [res:eier](https://schema.fintlabs.no/ressurs/eier) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: eier
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:eier |
+| self | res:eier |
 | native | https://schema.fintlabs.no/ressurs/:eier |
 
 
@@ -70,11 +83,15 @@ Alias: eier
 <details>
 ```yaml
 name: eier
+description: Referanse til Organisasjonselement som har eigarskap.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: res:eier
 alias: eier
 domain_of:
 - Applikasjonsressurs
 - DigitalEnhet
-range: string
+range: uriorcurie
 
 ```
 </details>

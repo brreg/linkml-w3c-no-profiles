@@ -22,7 +22,7 @@ Alias: tiltak
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
+| [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: tiltak
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: tiltak
 ```yaml
 name: tiltak
 description: Skildrar kva tiltak som skal utførast på eigedommen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:tiltak
 alias: tiltak
-owner: DispensasjonAutomatiskFredaKulturminne
 domain_of:
 - DispensasjonAutomatiskFredaKulturminne
 range: string

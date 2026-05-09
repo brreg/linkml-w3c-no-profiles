@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:digitaleEiningar](https://schema.fintlabs.no/ressurs/:digitaleEiningar)
+URI: [res:digitaleEiningar](https://schema.fintlabs.no/ressurs/digitaleEiningar)
 Alias: digitaleEiningar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: digitaleEiningar
 | --- | --- |
 | Range | [DigitalEnhet](digitalenhet.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:digitaleEiningar](https://schema.fintlabs.no/ressurs/digitaleEiningar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: digitaleEiningar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:digitaleEiningar |
+| self | res:digitaleEiningar |
 | native | https://schema.fintlabs.no/ressurs/:digitaleEiningar |
 
 
@@ -86,8 +80,8 @@ Alias: digitaleEiningar
 name: digitaleEiningar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:digitaleEiningar
 alias: digitaleEiningar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: DigitalEnhet

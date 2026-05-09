@@ -22,7 +22,7 @@ Alias: fakturalinjer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  no  |
+| [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |  yes  |
 
 
 
@@ -43,25 +43,11 @@ Alias: fakturalinjer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturagrunnlag](fakturagrunnlag.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -98,17 +84,13 @@ Alias: fakturalinjer
 ```yaml
 name: fakturalinjer
 description: Linjer av varer eller tenester som skal fakturerast.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:fakturalinjer
 alias: fakturalinjer
-owner: Fakturagrunnlag
 domain_of:
 - Fakturagrunnlag
 range: Fakturalinje
-required: true
 multivalued: true
 inlined: true
 inlined_as_list: true

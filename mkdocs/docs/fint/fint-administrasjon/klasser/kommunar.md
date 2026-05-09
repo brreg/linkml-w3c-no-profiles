@@ -3,8 +3,13 @@
 # Slot: kommunar 
 
 
+_Alle kommuneverdiar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:kommunar](https://schema.fintlabs.no/administrasjon/:kommunar)
+
+
+
+
+URI: [adm:kommunar](https://schema.fintlabs.no/administrasjon/kommunar)
 Alias: kommunar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: kommunar
 | --- | --- |
 | Range | [Kommune](kommune.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:kommunar](https://schema.fintlabs.no/administrasjon/kommunar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: kommunar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:kommunar |
+| self | adm:kommunar |
 | native | https://schema.fintlabs.no/administrasjon/:kommunar |
 
 
@@ -84,10 +83,11 @@ Alias: kommunar
 <details>
 ```yaml
 name: kommunar
+description: Alle kommuneverdiar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:kommunar
 alias: kommunar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Kommune

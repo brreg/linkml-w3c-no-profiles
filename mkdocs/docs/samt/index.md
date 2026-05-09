@@ -1,5 +1,5 @@
-# SAMT
+# SAMT – Kommunale integrasjonar
 
-| Modell | Tilgjengelege artefaktar |
+| Modell | Tilgjengelege artefakter |
 |--------|--------------------------|
-| [bu](bu/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · RDF/Turtle skjema · Python-klasser · ER-diagram (Mermaid) |
+| [samt-bu](samt-bu/index.md) | SHACL shapes · JSON-LD kontekst · JSON Schema · OWL ontologi · Python-klasser · ER-diagram (Mermaid) · Eksempeldata (Turtle) |

@@ -3,8 +3,13 @@
 # Slot: kontaktlaerergruppemedlemskap 
 
 
+_Kontaktlærergruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:kontaktlaerergruppemedlemskap](https://schema.fintlabs.no/utdanning/:kontaktlaerergruppemedlemskap)
+
+
+
+
+URI: [utd:kontaktlaerergruppemedlemskap](https://schema.fintlabs.no/utdanning/kontaktlaerergruppemedlemskap)
 Alias: kontaktlaerergruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: kontaktlaerergruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: kontaktlaerergruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md) |
+| Slot URI | [utd:kontaktlaerergruppemedlemskap](https://schema.fintlabs.no/utdanning/kontaktlaerergruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: kontaktlaerergruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:kontaktlaerergruppemedlemskap |
+| self | utd:kontaktlaerergruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:kontaktlaerergruppemedlemskap |
 
 
@@ -70,11 +84,16 @@ Alias: kontaktlaerergruppemedlemskap
 <details>
 ```yaml
 name: kontaktlaerergruppemedlemskap
+description: Kontaktlærergruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:kontaktlaerergruppemedlemskap
 alias: kontaktlaerergruppemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
-range: string
+range: Kontaktlaerergruppemedlemskap
+multivalued: true
 
 ```
 </details>

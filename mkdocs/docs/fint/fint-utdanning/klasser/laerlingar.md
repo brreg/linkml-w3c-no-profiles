@@ -3,8 +3,13 @@
 # Slot: laerlingar 
 
 
+_Alle lærlingar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:laerlingar](https://schema.fintlabs.no/utdanning/:laerlingar)
+
+
+
+
+URI: [utd:laerlingar](https://schema.fintlabs.no/utdanning/laerlingar)
 Alias: laerlingar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: laerlingar
 | --- | --- |
 | Range | [Laerling](laerling.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:laerlingar](https://schema.fintlabs.no/utdanning/laerlingar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: laerlingar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:laerlingar |
+| self | utd:laerlingar |
 | native | https://schema.fintlabs.no/utdanning/:laerlingar |
 
 
@@ -84,10 +83,11 @@ Alias: laerlingar
 <details>
 ```yaml
 name: laerlingar
+description: Alle lærlingar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:laerlingar
 alias: laerlingar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Laerling

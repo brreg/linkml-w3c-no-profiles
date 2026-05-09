@@ -3,8 +3,13 @@
 # Slot: lopenummer 
 
 
+_Løpenummer i ei nummerserie._
 
-URI: [https://schema.fintlabs.no/administrasjon/:lopenummer](https://schema.fintlabs.no/administrasjon/:lopenummer)
+
+
+
+
+URI: [adm:lopenummer](https://schema.fintlabs.no/administrasjon/lopenummer)
 Alias: lopenummer
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: lopenummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: lopenummer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Lopenummer](lopenummer.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Kontostreng](kontostreng.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:lopenummer](https://schema.fintlabs.no/administrasjon/lopenummer) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: lopenummer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:lopenummer |
+| self | adm:lopenummer |
 | native | https://schema.fintlabs.no/administrasjon/:lopenummer |
 
 
@@ -72,13 +85,17 @@ Alias: lopenummer
 <details>
 ```yaml
 name: lopenummer
+description: Løpenummer i ei nummerserie.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:lopenummer
 alias: lopenummer
 domain_of:
 - AdministrasjonContainer
 - Kontostreng
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Lopenummer
 
 ```
 </details>

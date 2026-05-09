@@ -3,8 +3,13 @@
 # Slot: programomrade 
 
 
+_Programområde._
 
-URI: [https://schema.fintlabs.no/utdanning/:programomrade](https://schema.fintlabs.no/utdanning/:programomrade)
+
+
+
+
+URI: [utd:programomrade](https://schema.fintlabs.no/utdanning/programomrade)
 Alias: programomrade
 
 <!-- no inheritance hierarchy -->
@@ -17,12 +22,12 @@ Alias: programomrade
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  no  |
-| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  no  |
-| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  no  |
-| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  no  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  yes  |
+| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
+| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  yes  |
+| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
+| [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  yes  |
 
 
 
@@ -35,8 +40,9 @@ Alias: programomrade
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Programomrade](programomrade.md) |
 | Domain Of | [Arstrinn](arstrinn.md), [Programomrademedlemskap](programomrademedlemskap.md), [Utdanningsprogram](utdanningsprogram.md), [Fag](fag.md), [Laerling](laerling.md), [OtUngdom](otungdom.md) |
+| Slot URI | [utd:programomrade](https://schema.fintlabs.no/utdanning/programomrade) |
 
 ### Cardinality and Requirements
 
@@ -58,12 +64,19 @@ Alias: programomrade
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:programomrade |
+| self | utd:programomrade |
 | native | https://schema.fintlabs.no/utdanning/:programomrade |
 
 
@@ -74,6 +87,10 @@ Alias: programomrade
 <details>
 ```yaml
 name: programomrade
+description: Programområde.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:programomrade
 alias: programomrade
 domain_of:
 - Arstrinn
@@ -82,7 +99,7 @@ domain_of:
 - Fag
 - Laerling
 - OtUngdom
-range: string
+range: Programomrade
 
 ```
 </details>

@@ -3,8 +3,13 @@
 # Slot: fullmakt 
 
 
+_Fullmakt ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fullmakt](https://schema.fintlabs.no/administrasjon/:fullmakt)
+
+
+
+
+URI: [adm:fullmakt](https://schema.fintlabs.no/administrasjon/fullmakt)
 Alias: fullmakt
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: fullmakt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rolle](rolle.md) | Rettighet eller type fullmakt |  no  |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  no  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
+| [Rolle](rolle.md) | Rettighet eller type fullmakt |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: fullmakt
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fullmakt](fullmakt.md) |
 | Domain Of | [Rolle](rolle.md), [Personalressurs](personalressurs.md) |
+| Slot URI | [adm:fullmakt](https://schema.fintlabs.no/administrasjon/fullmakt) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: fullmakt
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fullmakt |
+| self | adm:fullmakt |
 | native | https://schema.fintlabs.no/administrasjon/:fullmakt |
 
 
@@ -70,11 +83,15 @@ Alias: fullmakt
 <details>
 ```yaml
 name: fullmakt
+description: Fullmakt ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:fullmakt
 alias: fullmakt
 domain_of:
 - Rolle
 - Personalressurs
-range: string
+range: Fullmakt
 
 ```
 </details>

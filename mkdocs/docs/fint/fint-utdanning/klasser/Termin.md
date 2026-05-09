@@ -3,8 +3,13 @@
 # Slot: termin 
 
 
+_Termin._
 
-URI: [https://schema.fintlabs.no/utdanning/:termin](https://schema.fintlabs.no/utdanning/:termin)
+
+
+
+
+URI: [utd:termin](https://schema.fintlabs.no/utdanning/termin)
 Alias: termin
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: termin
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
-| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  no  |
-| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  no  |
-| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  no  |
+| [Undervisningsgruppe](undervisningsgruppe.md) | Ei gruppe elevar som følgjer same undervisning i eit eller fleire fag |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
+| [Klasse](klasse.md) | Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe) |  yes  |
+| [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: termin
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Termin](termin.md) |
 | Domain Of | [Klasse](klasse.md), [Kontaktlaerergruppe](kontaktlaerergruppe.md), [Persongruppe](persongruppe.md), [Undervisningsgruppe](undervisningsgruppe.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:termin](https://schema.fintlabs.no/utdanning/termin) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: termin
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:termin |
+| self | utd:termin |
 | native | https://schema.fintlabs.no/utdanning/:termin |
 
 
@@ -73,6 +86,10 @@ Alias: termin
 <details>
 ```yaml
 name: termin
+description: Termin.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:termin
 alias: termin
 domain_of:
 - Klasse
@@ -80,7 +97,7 @@ domain_of:
 - Persongruppe
 - Undervisningsgruppe
 - Eksamensgruppe
-range: string
+range: Termin
 
 ```
 </details>

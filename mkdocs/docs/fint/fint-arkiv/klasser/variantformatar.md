@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:variantformatar](https://schema.fintlabs.no/arkiv/:variantformatar)
+URI: [ark:variantformatar](https://schema.fintlabs.no/arkiv/variantformatar)
 Alias: variantformatar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: variantformatar
 | --- | --- |
 | Range | [Variantformat](variantformat.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:variantformatar](https://schema.fintlabs.no/arkiv/variantformatar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: variantformatar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:variantformatar |
+| self | ark:variantformatar |
 | native | https://schema.fintlabs.no/arkiv/:variantformatar |
 
 
@@ -86,8 +80,8 @@ Alias: variantformatar
 name: variantformatar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:variantformatar
 alias: variantformatar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Variantformat

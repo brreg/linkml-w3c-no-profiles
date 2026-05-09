@@ -3,8 +3,13 @@
 # Slot: karakterverdiar 
 
 
+_Alle karakterverdiar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:karakterverdiar](https://schema.fintlabs.no/utdanning/:karakterverdiar)
+
+
+
+
+URI: [utd:karakterverdiar](https://schema.fintlabs.no/utdanning/karakterverdiar)
 Alias: karakterverdiar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: karakterverdiar
 | --- | --- |
 | Range | [Karakterverdi](karakterverdi.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:karakterverdiar](https://schema.fintlabs.no/utdanning/karakterverdiar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: karakterverdiar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:karakterverdiar |
+| self | utd:karakterverdiar |
 | native | https://schema.fintlabs.no/utdanning/:karakterverdiar |
 
 
@@ -84,10 +83,11 @@ Alias: karakterverdiar
 <details>
 ```yaml
 name: karakterverdiar
+description: Alle karakterverdiar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:karakterverdiar
 alias: karakterverdiar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Karakterverdi

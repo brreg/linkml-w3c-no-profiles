@@ -22,7 +22,7 @@ Alias: oppdatertAv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  no  |
+| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: oppdatertAv
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Karakterhistorie](karakterhistorie.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: oppdatertAv
 ```yaml
 name: oppdatertAv
 description: Skoleressurs som oppdaterte karakteren.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:oppdatertAv
 alias: oppdatertAv
-owner: Karakterhistorie
 domain_of:
 - Karakterhistorie
 range: Skoleressurs

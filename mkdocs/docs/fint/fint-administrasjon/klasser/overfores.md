@@ -22,7 +22,7 @@ Alias: overfores
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravaerstype](fravaerstype.md) | Type fråvær |  no  |
+| [Fravaerstype](fravaerstype.md) | Type fråvær |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: overfores
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravaerstype](fravaerstype.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: overfores
 ```yaml
 name: overfores
 description: Angir om fråvær av denne typen skal overførast til HR.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:overfores
 alias: overfores
-owner: Fravaerstype
 domain_of:
 - Fravaerstype
 range: boolean

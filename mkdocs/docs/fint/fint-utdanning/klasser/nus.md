@@ -3,7 +3,7 @@
 # Slot: nus 
 
 
-_NUS-kode knytt til eksamensgruppemedlemskapet._
+_NUS-kode._
 
 
 
@@ -22,7 +22,7 @@ Alias: nus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: nus
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: nus
 <details>
 ```yaml
 name: nus
-description: NUS-kode knytt til eksamensgruppemedlemskapet.
-in_subset:
-- Valgfri
+description: NUS-kode.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:nus
 alias: nus
-owner: Eksamensgruppemedlemskap
 domain_of:
 - Eksamensgruppemedlemskap
 range: Karakterstatus

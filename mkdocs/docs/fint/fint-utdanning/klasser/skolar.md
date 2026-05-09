@@ -3,8 +3,13 @@
 # Slot: skolar 
 
 
+_Alle skular i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:skolar](https://schema.fintlabs.no/utdanning/:skolar)
+
+
+
+
+URI: [utd:skolar](https://schema.fintlabs.no/utdanning/skolar)
 Alias: skolar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: skolar
 | --- | --- |
 | Range | [Skole](skole.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:skolar](https://schema.fintlabs.no/utdanning/skolar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: skolar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:skolar |
+| self | utd:skolar |
 | native | https://schema.fintlabs.no/utdanning/:skolar |
 
 
@@ -84,10 +83,11 @@ Alias: skolar
 <details>
 ```yaml
 name: skolar
+description: Alle skular i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:skolar
 alias: skolar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Skole

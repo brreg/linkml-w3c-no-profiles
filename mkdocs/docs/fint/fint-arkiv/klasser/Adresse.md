@@ -3,8 +3,13 @@
 # Slot: adresse 
 
 
+_Adresse til matrikkeleining._
 
-URI: [https://schema.fintlabs.no/arkiv/:adresse](https://schema.fintlabs.no/arkiv/:adresse)
+
+
+
+
+URI: [fint:adresse](https://schema.fintlabs.no/adresse)
 Alias: adresse
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: adresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  no  |
 | [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |  no  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
+| [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: adresse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Adresse](adresse.md) |
 | Domain Of | [Korrespondansepart](korrespondansepart.md), [Part](part.md), [Matrikkelnummer](matrikkelnummer.md) |
+| Slot URI | [fint:adresse](https://schema.fintlabs.no/adresse) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: adresse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:adresse |
+| self | fint:adresse |
 | native | https://schema.fintlabs.no/arkiv/:adresse |
 
 
@@ -71,12 +84,17 @@ Alias: adresse
 <details>
 ```yaml
 name: adresse
+description: Adresse til matrikkeleining.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: fint:adresse
 alias: adresse
 domain_of:
 - Korrespondansepart
 - Part
 - Matrikkelnummer
-range: string
+range: Adresse
+inlined: true
 
 ```
 </details>

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:transaksjonar](https://schema.fintlabs.no/okonomi/:transaksjonar)
+URI: [okn:transaksjonar](https://schema.fintlabs.no/okonomi/transaksjonar)
 Alias: transaksjonar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: transaksjonar
 | --- | --- |
 | Range | [Transaksjon](transaksjon.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:transaksjonar](https://schema.fintlabs.no/okonomi/transaksjonar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: transaksjonar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:transaksjonar |
+| self | okn:transaksjonar |
 | native | https://schema.fintlabs.no/okonomi/:transaksjonar |
 
 
@@ -86,8 +80,8 @@ Alias: transaksjonar
 name: transaksjonar
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:transaksjonar
 alias: transaksjonar
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Transaksjon

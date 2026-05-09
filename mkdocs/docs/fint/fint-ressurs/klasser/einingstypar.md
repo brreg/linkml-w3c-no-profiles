@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/ressurs/:einingstypar](https://schema.fintlabs.no/ressurs/:einingstypar)
+URI: [res:einingstypar](https://schema.fintlabs.no/ressurs/einingstypar)
 Alias: einingstypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: einingstypar
 | --- | --- |
 | Range | [Enhetstype](enhetstype.md) |
 | Domain Of | [RessursContainer](ressurscontainer.md) |
+| Slot URI | [res:einingstypar](https://schema.fintlabs.no/ressurs/einingstypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [RessursContainer](ressurscontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: einingstypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:einingstypar |
+| self | res:einingstypar |
 | native | https://schema.fintlabs.no/ressurs/:einingstypar |
 
 
@@ -86,8 +80,8 @@ Alias: einingstypar
 name: einingstypar
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
+slot_uri: res:einingstypar
 alias: einingstypar
-owner: RessursContainer
 domain_of:
 - RessursContainer
 range: Enhetstype

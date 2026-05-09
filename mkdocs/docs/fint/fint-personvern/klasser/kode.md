@@ -3,8 +3,13 @@
 # Slot: kode 
 
 
+_Verdi som identifiserer omgrepet._
 
-URI: [https://schema.fintlabs.no/personvern/:kode](https://schema.fintlabs.no/personvern/:kode)
+
+
+
+
+URI: [fint:kode](https://schema.fintlabs.no/kode)
 Alias: kode
 
 <!-- no inheritance hierarchy -->
@@ -17,14 +22,14 @@ Alias: kode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Personopplysning](personopplysning.md) | Opplysningar og vurderingar som kan knytast til enkeltpersonar |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysningar |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysningar |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Personopplysning](personopplysning.md) | Opplysningar og vurderingar som kan knytast til enkeltpersonar |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 
 
 
@@ -39,6 +44,7 @@ Alias: kode
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Behandlingsgrunnlag](behandlingsgrunnlag.md), [Personopplysning](personopplysning.md), [Begrep](begrep.md) |
+| Slot URI | [fint:kode](https://schema.fintlabs.no/kode) |
 
 ### Cardinality and Requirements
 
@@ -60,12 +66,19 @@ Alias: kode
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-personvern
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:kode |
+| self | fint:kode |
 | native | https://schema.fintlabs.no/personvern/:kode |
 
 
@@ -76,6 +89,10 @@ Alias: kode
 <details>
 ```yaml
 name: kode
+description: Verdi som identifiserer omgrepet.
+from_schema: https://data.norge.no/linkml/fint-personvern
+rank: 1000
+slot_uri: fint:kode
 alias: kode
 domain_of:
 - Behandlingsgrunnlag

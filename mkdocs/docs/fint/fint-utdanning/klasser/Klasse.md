@@ -3,8 +3,13 @@
 # Slot: klasse 
 
 
+_Klasse._
 
-URI: [https://schema.fintlabs.no/utdanning/:klasse](https://schema.fintlabs.no/utdanning/:klasse)
+
+
+
+
+URI: [utd:klasse](https://schema.fintlabs.no/utdanning/klasse)
 Alias: klasse
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: klasse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  no  |
-| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  no  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
-| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  no  |
-| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  no  |
+| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
+| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
+| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: klasse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Klasse](klasse.md) |
 | Domain Of | [Klassemedlemskap](klassemedlemskap.md), [Kontaktlaerergruppe](kontaktlaerergruppe.md), [Skole](skole.md), [Arstrinn](arstrinn.md), [Undervisningsforhold](undervisningsforhold.md) |
+| Slot URI | [utd:klasse](https://schema.fintlabs.no/utdanning/klasse) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: klasse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:klasse |
+| self | utd:klasse |
 | native | https://schema.fintlabs.no/utdanning/:klasse |
 
 
@@ -73,6 +86,10 @@ Alias: klasse
 <details>
 ```yaml
 name: klasse
+description: Klasse.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:klasse
 alias: klasse
 domain_of:
 - Klassemedlemskap
@@ -80,7 +97,7 @@ domain_of:
 - Skole
 - Arstrinn
 - Undervisningsforhold
-range: string
+range: Klasse
 
 ```
 </details>

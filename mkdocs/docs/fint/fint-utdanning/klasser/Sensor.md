@@ -3,8 +3,13 @@
 # Slot: sensor 
 
 
+_Sensor._
 
-URI: [https://schema.fintlabs.no/utdanning/:sensor](https://schema.fintlabs.no/utdanning/:sensor)
+
+
+
+
+URI: [utd:sensor](https://schema.fintlabs.no/utdanning/sensor)
 Alias: sensor
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: sensor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Eksamensgruppe](eksamensgruppe.md) | Ei gruppe elevar som avlegg same eksamen |  yes  |
+| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
 
 
 
@@ -32,13 +37,15 @@ Alias: sensor
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Sensor](sensor.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Skoleressurs](skoleressurs.md), [Eksamensgruppe](eksamensgruppe.md) |
+| Slot URI | [utd:sensor](https://schema.fintlabs.no/utdanning/sensor) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -55,12 +62,19 @@ Alias: sensor
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:sensor |
+| self | utd:sensor |
 | native | https://schema.fintlabs.no/utdanning/:sensor |
 
 
@@ -71,12 +85,17 @@ Alias: sensor
 <details>
 ```yaml
 name: sensor
+description: Sensor.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:sensor
 alias: sensor
 domain_of:
 - UtdanningContainer
 - Skoleressurs
 - Eksamensgruppe
-range: string
+range: Sensor
+multivalued: true
 
 ```
 </details>

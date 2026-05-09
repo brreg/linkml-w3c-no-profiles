@@ -3,8 +3,13 @@
 # Slot: vurderingsdato 
 
 
+_Dato og tidspunkt for vurderinga._
 
-URI: [https://schema.fintlabs.no/utdanning/:vurderingsdato](https://schema.fintlabs.no/utdanning/:vurderingsdato)
+
+
+
+
+URI: [utd:vurderingsdato](https://schema.fintlabs.no/utdanning/vurderingsdato)
 Alias: vurderingsdato
 
 <!-- no inheritance hierarchy -->
@@ -17,15 +22,15 @@ Alias: vurderingsdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurdering for ein elev |  no  |
 | [Eksamensvurdering](eksamensvurdering.md) | Vurdering gjeven i samband med ein eksamen |  no  |
+| [Halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurdering for ein elev |  no  |
 | [Halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsvurdering i eit fag |  no  |
-| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  no  |
-| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
-| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  no  |
-| [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md) | Abstrakt basisklasse for ordensvurderingar |  no  |
+| [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md) | Abstrakt basisklasse for ordensvurderingar |  yes  |
 | [Sluttfagvurdering](sluttfagvurdering.md) | Sluttkarakter i eit fag |  no  |
 | [Underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurdering for ein elev |  no  |
+| [Underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurdering for ein elev |  no  |
+| [FagvurderingAbstrakt](fagvurderingabstrakt.md) | Abstrakt basisklasse for fagvurderingar |  yes  |
+| [Sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurdering for ein elev |  no  |
 
 
 
@@ -38,8 +43,9 @@ Alias: vurderingsdato
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Datetime](datetime.md) |
 | Domain Of | [FagvurderingAbstrakt](fagvurderingabstrakt.md), [OrdensvurderingAbstrakt](ordensvurderingabstrakt.md) |
+| Slot URI | [utd:vurderingsdato](https://schema.fintlabs.no/utdanning/vurderingsdato) |
 
 ### Cardinality and Requirements
 
@@ -61,12 +67,19 @@ Alias: vurderingsdato
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:vurderingsdato |
+| self | utd:vurderingsdato |
 | native | https://schema.fintlabs.no/utdanning/:vurderingsdato |
 
 
@@ -77,11 +90,15 @@ Alias: vurderingsdato
 <details>
 ```yaml
 name: vurderingsdato
+description: Dato og tidspunkt for vurderinga.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:vurderingsdato
 alias: vurderingsdato
 domain_of:
 - FagvurderingAbstrakt
 - OrdensvurderingAbstrakt
-range: string
+range: datetime
 
 ```
 </details>

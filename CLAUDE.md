@@ -126,6 +126,16 @@ Alle klasser og slots har eksplisitt `class_uri` / `slot_uri` som mapper til de 
 ### Flerspråklige strenger
 `LangString` (type `rdf:langString`) brukes for alle egenskaper som er definert som `rdf:langString` i spesifikasjonen (tittel, beskrivelse, nøkkelord osv.).
 
+### Containerklasse
+Alle toppnivå domenemodeller skal ha Containerklasse som har eit attributt for hver klasse som kan serialiseres i tilhørende datasettfil.
+Containerklassens attributter skrives alltid i flertallsform.
+Alle verdiområde/range for attributter må mappes til linkml klasser definert i skjema eller inkluderte skjema, eller linkml innebygde typer.
+Alle containerslots skal ha:
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+Alle ap-no modeller og fair modeller skal alltid inkluderes i en annen domenemodell, og skal derfor ikkje ha egen Containerklasse.
+
 ### Endringer i koderepoet
 Forsøk alltid å utføre minimale endringer som kun løser den spesifikke oppgava.
 

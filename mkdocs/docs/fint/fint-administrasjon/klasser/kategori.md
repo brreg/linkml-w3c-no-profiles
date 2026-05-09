@@ -22,7 +22,7 @@ Alias: kategori
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Lonsart](lonsart.md) | Type ytelse |  no  |
+| [Lonsart](lonsart.md) | Type ytelse |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: kategori
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Lonsart](lonsart.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: kategori
 ```yaml
 name: kategori
 description: Kategori lønnsart.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:kategori
 alias: kategori
-owner: Lonsart
 domain_of:
 - Lonsart
 range: string

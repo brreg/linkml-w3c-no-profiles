@@ -43,13 +43,6 @@ Alias: land
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Adresse](adresse.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: fint:land
 alias: land
-owner: Adresse
 domain_of:
 - Adresse
 range: Landkode

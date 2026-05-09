@@ -3,8 +3,13 @@
 # Slot: karakterstatus 
 
 
+_Karakterstatus._
 
-URI: [https://schema.fintlabs.no/utdanning/:karakterstatus](https://schema.fintlabs.no/utdanning/:karakterstatus)
+
+
+
+
+URI: [utd:karakterstatus](https://schema.fintlabs.no/utdanning/karakterstatus)
 Alias: karakterstatus
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: karakterstatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: karakterstatus
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Karakterstatus](karakterstatus.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Karakterhistorie](karakterhistorie.md) |
+| Slot URI | [utd:karakterstatus](https://schema.fintlabs.no/utdanning/karakterstatus) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: karakterstatus
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:karakterstatus |
+| self | utd:karakterstatus |
 | native | https://schema.fintlabs.no/utdanning/:karakterstatus |
 
 
@@ -70,11 +83,15 @@ Alias: karakterstatus
 <details>
 ```yaml
 name: karakterstatus
+description: Karakterstatus.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:karakterstatus
 alias: karakterstatus
 domain_of:
 - UtdanningContainer
 - Karakterhistorie
-range: string
+range: Karakterstatus
 
 ```
 </details>

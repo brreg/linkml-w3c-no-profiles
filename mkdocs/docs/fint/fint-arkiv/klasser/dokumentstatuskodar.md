@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:dokumentstatuskodar](https://schema.fintlabs.no/arkiv/:dokumentstatuskodar)
+URI: [ark:dokumentstatuskodar](https://schema.fintlabs.no/arkiv/dokumentstatuskodar)
 Alias: dokumentstatuskodar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: dokumentstatuskodar
 | --- | --- |
 | Range | [DokumentStatus](dokumentstatus.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:dokumentstatuskodar](https://schema.fintlabs.no/arkiv/dokumentstatuskodar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: dokumentstatuskodar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:dokumentstatuskodar |
+| self | ark:dokumentstatuskodar |
 | native | https://schema.fintlabs.no/arkiv/:dokumentstatuskodar |
 
 
@@ -86,8 +80,8 @@ Alias: dokumentstatuskodar
 name: dokumentstatuskodar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:dokumentstatuskodar
 alias: dokumentstatuskodar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: DokumentStatus

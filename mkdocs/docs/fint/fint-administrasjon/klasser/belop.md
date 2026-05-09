@@ -3,8 +3,13 @@
 # Slot: belop 
 
 
+_Beløp i øre._
 
-URI: [https://schema.fintlabs.no/administrasjon/:belop](https://schema.fintlabs.no/administrasjon/:belop)
+
+
+
+
+URI: [adm:belop](https://schema.fintlabs.no/administrasjon/belop)
 Alias: belop
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: belop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: belop
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Integer](integer.md) |
 | Domain Of | [Fasttillegg](fasttillegg.md), [Variabellonn](variabellonn.md) |
+| Slot URI | [adm:belop](https://schema.fintlabs.no/administrasjon/belop) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: belop
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:belop |
+| self | adm:belop |
 | native | https://schema.fintlabs.no/administrasjon/:belop |
 
 
@@ -70,11 +83,15 @@ Alias: belop
 <details>
 ```yaml
 name: belop
+description: Beløp i øre.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:belop
 alias: belop
 domain_of:
 - Fasttillegg
 - Variabellonn
-range: string
+range: integer
 
 ```
 </details>

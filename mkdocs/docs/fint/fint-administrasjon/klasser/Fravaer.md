@@ -3,8 +3,13 @@
 # Slot: fravaer 
 
 
+_Fråvær knytt til ressursen._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fravaer](https://schema.fintlabs.no/administrasjon/:fravaer)
+
+
+
+
+URI: [adm:fravaer](https://schema.fintlabs.no/administrasjon/fravaer)
 Alias: fravaer
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: fravaer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: fravaer
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fravaer](fravaer.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:fravaer](https://schema.fintlabs.no/administrasjon/fravaer) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: fravaer
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fravaer |
+| self | adm:fravaer |
 | native | https://schema.fintlabs.no/administrasjon/:fravaer |
 
 
@@ -70,11 +83,15 @@ Alias: fravaer
 <details>
 ```yaml
 name: fravaer
+description: Fråvær knytt til ressursen.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:fravaer
 alias: fravaer
 domain_of:
 - AdministrasjonContainer
 - Arbeidsforhold
-range: string
+range: Fravaer
 
 ```
 </details>

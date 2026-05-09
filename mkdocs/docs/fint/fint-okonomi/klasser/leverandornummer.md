@@ -3,7 +3,7 @@
 # Slot: leverandornummer 
 
 
-_Nummer som identifiserer ein leverandør (leverandørnummer)._
+_Nummer som identifiserer ein leverandør._
 
 
 
@@ -22,7 +22,7 @@ Alias: leverandornummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester (Leverandør) |  no  |
+| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: leverandornummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Leverandor](leverandor.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: leverandornummer
 <details>
 ```yaml
 name: leverandornummer
-description: Nummer som identifiserer ein leverandør (leverandørnummer).
-in_subset:
-- Valgfri
+description: Nummer som identifiserer ein leverandør.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:leverandornummer
 alias: leverandornummer
-owner: Leverandor
 domain_of:
 - Leverandor
 range: Identifikator

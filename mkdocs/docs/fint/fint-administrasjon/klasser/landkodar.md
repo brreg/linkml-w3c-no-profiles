@@ -3,8 +3,13 @@
 # Slot: landkodar 
 
 
+_Alle landkodar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:landkodar](https://schema.fintlabs.no/administrasjon/:landkodar)
+
+
+
+
+URI: [adm:landkodar](https://schema.fintlabs.no/administrasjon/landkodar)
 Alias: landkodar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: landkodar
 | --- | --- |
 | Range | [Landkode](landkode.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:landkodar](https://schema.fintlabs.no/administrasjon/landkodar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: landkodar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:landkodar |
+| self | adm:landkodar |
 | native | https://schema.fintlabs.no/administrasjon/:landkodar |
 
 
@@ -84,10 +83,11 @@ Alias: landkodar
 <details>
 ```yaml
 name: landkodar
+description: Alle landkodar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:landkodar
 alias: landkodar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Landkode

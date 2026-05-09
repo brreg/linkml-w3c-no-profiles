@@ -3,8 +3,13 @@
 # Slot: personalressurskategoriar 
 
 
+_Alle personalressurskategoriar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:personalressurskategoriar](https://schema.fintlabs.no/administrasjon/:personalressurskategoriar)
+
+
+
+
+URI: [adm:personalressurskategoriar](https://schema.fintlabs.no/administrasjon/personalressurskategoriar)
 Alias: personalressurskategoriar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: personalressurskategoriar
 | --- | --- |
 | Range | [Personalressurskategori](personalressurskategori.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:personalressurskategoriar](https://schema.fintlabs.no/administrasjon/personalressurskategoriar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: personalressurskategoriar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:personalressurskategoriar |
+| self | adm:personalressurskategoriar |
 | native | https://schema.fintlabs.no/administrasjon/:personalressurskategoriar |
 
 
@@ -84,10 +83,11 @@ Alias: personalressurskategoriar
 <details>
 ```yaml
 name: personalressurskategoriar
+description: Alle personalressurskategoriar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:personalressurskategoriar
 alias: personalressurskategoriar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Personalressurskategori

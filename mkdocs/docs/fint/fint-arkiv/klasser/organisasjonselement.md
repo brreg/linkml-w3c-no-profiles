@@ -22,7 +22,7 @@ Alias: organisasjonselement
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AdministrativEnhet](administrativenhet.md) | Administrativ eining med ansvar for saksbehandling |  no  |
+| [AdministrativEnhet](administrativenhet.md) | Administrativ eining med ansvar for saksbehandling |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: organisasjonselement
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrativEnhet](administrativenhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: organisasjonselement
 ```yaml
 name: organisasjonselement
 description: Referanse til Organisasjonselement i Administrasjon-domenet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:organisasjonselement
 alias: organisasjonselement
-owner: AdministrativEnhet
 domain_of:
 - AdministrativEnhet
 range: uriorcurie

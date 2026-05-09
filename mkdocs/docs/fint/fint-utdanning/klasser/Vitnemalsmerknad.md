@@ -3,8 +3,13 @@
 # Slot: vitnemalsmerknad 
 
 
+_Vitnemålsmerknad._
 
-URI: [https://schema.fintlabs.no/utdanning/:vitnemalsmerknad](https://schema.fintlabs.no/utdanning/:vitnemalsmerknad)
+
+
+
+
+URI: [utd:vitnemalsmerknad](https://schema.fintlabs.no/utdanning/vitnemalsmerknad)
 Alias: vitnemalsmerknad
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: vitnemalsmerknad
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevvurdering](elevvurdering.md) | Samling av alle vurderingar for ein elev i eit elevforhold |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: vitnemalsmerknad
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Vitnemalsmerknad](vitnemalsmerknad.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevvurdering](elevvurdering.md) |
+| Slot URI | [utd:vitnemalsmerknad](https://schema.fintlabs.no/utdanning/vitnemalsmerknad) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: vitnemalsmerknad
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:vitnemalsmerknad |
+| self | utd:vitnemalsmerknad |
 | native | https://schema.fintlabs.no/utdanning/:vitnemalsmerknad |
 
 
@@ -70,11 +83,15 @@ Alias: vitnemalsmerknad
 <details>
 ```yaml
 name: vitnemalsmerknad
+description: Vitnemålsmerknad.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:vitnemalsmerknad
 alias: vitnemalsmerknad
 domain_of:
 - UtdanningContainer
 - Elevvurdering
-range: string
+range: Vitnemalsmerknad
 
 ```
 </details>

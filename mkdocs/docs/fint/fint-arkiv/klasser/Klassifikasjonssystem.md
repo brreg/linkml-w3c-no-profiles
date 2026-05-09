@@ -3,8 +3,13 @@
 # Slot: klassifikasjonssystem 
 
 
+_Klassifikasjonssystem._
 
-URI: [https://schema.fintlabs.no/arkiv/:klassifikasjonssystem](https://schema.fintlabs.no/arkiv/:klassifikasjonssystem)
+
+
+
+
+URI: [ark:klassifikasjonssystem](https://schema.fintlabs.no/arkiv/klassifikasjonssystem)
 Alias: klassifikasjonssystem
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: klassifikasjonssystem
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arkivdel](arkivdel.md) | Ein vilkårleg definert del av eit arkiv |  no  |
-| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  no  |
-| [ArkivContainer](arkivcontainer.md) | Rotcontainer for FINT Arkiv-instansar |  no  |
+| [ArkivContainer](arkivcontainer.md) | Rotcontainer for FINT Arkiv-instansar |  yes  |
+| [Arkivdel](arkivdel.md) | Ein vilkårleg definert del av eit arkiv |  yes  |
+| [Klasse](klasse.md) | Ein klasse i eit klassifikasjonssystem |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: klassifikasjonssystem
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Klassifikasjonssystem](klassifikasjonssystem.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md), [Arkivdel](arkivdel.md), [Klasse](klasse.md) |
+| Slot URI | [ark:klassifikasjonssystem](https://schema.fintlabs.no/arkiv/klassifikasjonssystem) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: klassifikasjonssystem
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:klassifikasjonssystem |
+| self | ark:klassifikasjonssystem |
 | native | https://schema.fintlabs.no/arkiv/:klassifikasjonssystem |
 
 
@@ -71,12 +84,16 @@ Alias: klassifikasjonssystem
 <details>
 ```yaml
 name: klassifikasjonssystem
+description: Klassifikasjonssystem.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:klassifikasjonssystem
 alias: klassifikasjonssystem
 domain_of:
 - ArkivContainer
 - Arkivdel
 - Klasse
-range: string
+range: Klassifikasjonssystem
 
 ```
 </details>

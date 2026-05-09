@@ -3,7 +3,7 @@
 # Slot: konsument 
 
 
-_Referanse til Organisasjonselement som har tilgang til denne ressursen._
+_Referanse til Organisasjonselement som har tilgang til ressursen._
 
 
 
@@ -22,7 +22,7 @@ Alias: konsument
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  no  |
+| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: konsument
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -96,18 +82,14 @@ Alias: konsument
 <details>
 ```yaml
 name: konsument
-description: Referanse til Organisasjonselement som har tilgang til denne ressursen.
-in_subset:
-- Obligatorisk
+description: Referanse til Organisasjonselement som har tilgang til ressursen.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:konsument
 alias: konsument
-owner: Applikasjonsressurstilgjengelighet
 domain_of:
 - Applikasjonsressurstilgjengelighet
 range: uriorcurie
-required: true
 
 ```
 </details>

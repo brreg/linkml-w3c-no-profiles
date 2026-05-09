@@ -47,10 +47,10 @@ Name: fint-personvern
 | [adresse](adresse.md) | Adresse til matrikkeleining |
 | [adresselinje](adresselinje.md) | Adresseinformasjon |
 | [aktiv](aktiv.md) | Status på behandling |
-| [behandling](behandling.md) | Behandling som vert omfatta av samtykket |
+| [behandling](behandling.md) | Behandlingsaktivitet |
 | [behandlingar](behandlingar.md) |  |
-| [behandlingsgrunnlag](behandlingsgrunnlag.md) |  |
-| [beskrivelse](beskrivelse.md) | Beskriven namn på perioden |
+| [behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysning |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [bilde](bilde.md) | HTTP(S)-lenkje til eit bilete av personen |
 | [bokstavkode](bokstavkode.md) | Bokstavkode for aktuell valuta |
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
@@ -65,35 +65,37 @@ Name: fint-personvern
 | [foreldreansvar](foreldreansvar.md) | Personar denne personen har foreldreansvar for |
 | [formal](formal.md) | Grunngjeving for behandling av personopplysning |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining i einingsregisteret |
-| [fylke](fylke.md) | Fylket kommunen høyrer til |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
+| [fylke](fylke.md) | Fylke |
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
-| [gyldighetsperiode](gyldighetsperiode.md) | Tidsrom samtykket er gyldig |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [id](id.md) | URI-identifikator for ressursen |
 | [identifikatorverdi](identifikatorverdi.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [kjonn](kjonn.md) | Kjønn for personen |
+| [kjonn](kjonn.md) | Kjønn |
 | [kode](kode.md) | Verdi som identifiserer omgrepet |
-| [kommune](kommune.md) | Alle kommunar som inngår i fylket |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
+| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [navn](navn.md) | Tittel på tenesta |
+| [naam](naam.md) | Namn på ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [opprettet](opprettet.md) | Dato då samtykket vart oppretta |
-| [organisasjonselement](organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) tilknytt samtykket |
+| [organisasjonselement](organisasjonselement.md) | Referanse til Organisasjonselement (Administrasjon) |
 | [organisasjonsnavn](organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
 | [organisasjonsnummer](organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](person.md) | Referanse til Person (Administrasjon) som har gjeve samtykke |
+| [person](person.md) | Referanse til Person (Administrasjon) |
+| [person_naam](person_naam.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [personopplysning](personopplysning.md) | Opplysning eller vurdering som kan knytast til ein enkeltperson |
 | [personopplysningar](personopplysningar.md) |  |
@@ -104,14 +106,15 @@ Name: fint-personvern
 | [samtykker](samtykker.md) |  |
 | [seksjonsnummer](seksjonsnummer.md) | Fortløpande nummerering av seksjonar under gårdsnummer/bruksnummer |
 | [sip](sip.md) | SIP-protokoll for VoIP (IP-telefoni) |
-| [slettet](slettet.md) | Tidspunkt behandlinga er sletta |
+| [slettet](slettet.md) | Tidspunkt ressursen er sletta |
 | [slutt](slutt.md) | Til tidspunkt |
 | [start](start.md) | Frå tidspunkt |
 | [statsborgerskap](statsborgerskap.md) | Alle statsborgarskap personen har |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
 | [tenester](tenester.md) |  |
 | [tjeneste](tjeneste.md) | Tenesta som behandlinga tilhøyrer |
-| [type](type.md) | Beskriv kva slags type kontaktperson |
+| [type](type.md) | Beskriv kva slags type |
+| [valuta_naam](valuta_naam.md) | Namn på valuta |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 

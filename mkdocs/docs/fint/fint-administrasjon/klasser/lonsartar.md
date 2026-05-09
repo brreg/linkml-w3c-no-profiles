@@ -3,8 +3,13 @@
 # Slot: lonsartar 
 
 
+_Alle lønnsartar i containeren._
 
-URI: [https://schema.fintlabs.no/administrasjon/:lonsartar](https://schema.fintlabs.no/administrasjon/:lonsartar)
+
+
+
+
+URI: [adm:lonsartar](https://schema.fintlabs.no/administrasjon/lonsartar)
 Alias: lonsartar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: lonsartar
 | --- | --- |
 | Range | [Lonsart](lonsart.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md) |
+| Slot URI | [adm:lonsartar](https://schema.fintlabs.no/administrasjon/lonsartar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [AdministrasjonContainer](administrasjoncontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: lonsartar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:lonsartar |
+| self | adm:lonsartar |
 | native | https://schema.fintlabs.no/administrasjon/:lonsartar |
 
 
@@ -84,10 +83,11 @@ Alias: lonsartar
 <details>
 ```yaml
 name: lonsartar
+description: Alle lønnsartar i containeren.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
+slot_uri: adm:lonsartar
 alias: lonsartar
-owner: AdministrasjonContainer
 domain_of:
 - AdministrasjonContainer
 range: Lonsart

@@ -22,7 +22,7 @@ Alias: referanseArkivdel
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: referanseArkivdel
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Dokumentbeskrivelse](dokumentbeskrivelse.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: referanseArkivdel
 ```yaml
 name: referanseArkivdel
 description: Referanse til arkivdelen denne arkivenheten er tilknytt.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:referanseArkivdel
 alias: referanseArkivdel
-owner: Dokumentbeskrivelse
 domain_of:
 - Dokumentbeskrivelse
 range: string

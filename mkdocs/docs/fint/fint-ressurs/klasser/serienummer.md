@@ -22,7 +22,7 @@ Alias: serienummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: serienummer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [DigitalEnhet](digitalenhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: serienummer
 ```yaml
 name: serienummer
 description: Unikt serienummer frå einingsprodusentens.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:serienummer
 alias: serienummer
-owner: DigitalEnhet
 domain_of:
 - DigitalEnhet
 range: string
-required: true
 
 ```
 </details>

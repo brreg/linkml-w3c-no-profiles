@@ -22,7 +22,7 @@ Alias: domenenavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: domenenavn
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Skole](skole.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: domenenavn
 ```yaml
 name: domenenavn
 description: Domenenamn for skulen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:domenenavn
 alias: domenenavn
-owner: Skole
 domain_of:
 - Skole
 range: string

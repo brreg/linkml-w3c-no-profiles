@@ -22,7 +22,7 @@ Alias: formal
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  no  |
+| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: formal
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Behandling](behandling.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: formal
 ```yaml
 name: formal
 description: Grunngjeving for behandling av personopplysning.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
 slot_uri: pvn:formal
 alias: formal
-owner: Behandling
 domain_of:
 - Behandling
 range: string
-required: true
 
 ```
 </details>

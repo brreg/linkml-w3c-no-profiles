@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/okonomi/:merverdiavgifter](https://schema.fintlabs.no/okonomi/:merverdiavgifter)
+URI: [okn:merverdiavgifter](https://schema.fintlabs.no/okonomi/merverdiavgifter)
 Alias: merverdiavgifter
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: merverdiavgifter
 | --- | --- |
 | Range | [Merverdiavgift](merverdiavgift.md) |
 | Domain Of | [OkonomiContainer](okonomicontainer.md) |
+| Slot URI | [okn:merverdiavgifter](https://schema.fintlabs.no/okonomi/merverdiavgifter) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [OkonomiContainer](okonomicontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: merverdiavgifter
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:merverdiavgifter |
+| self | okn:merverdiavgifter |
 | native | https://schema.fintlabs.no/okonomi/:merverdiavgifter |
 
 
@@ -86,8 +80,8 @@ Alias: merverdiavgifter
 name: merverdiavgifter
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
+slot_uri: okn:merverdiavgifter
 alias: merverdiavgifter
-owner: OkonomiContainer
 domain_of:
 - OkonomiContainer
 range: Merverdiavgift

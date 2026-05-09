@@ -22,7 +22,7 @@ Alias: foreldreansvar
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: foreldreansvar
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: foreldreansvar
 ```yaml
 name: foreldreansvar
 description: Personar denne personen har foreldreansvar for.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:foreldreansvar
 alias: foreldreansvar
-owner: Person
 domain_of:
 - Person
 range: Person

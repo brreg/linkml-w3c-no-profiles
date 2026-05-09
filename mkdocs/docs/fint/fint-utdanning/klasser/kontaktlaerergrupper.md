@@ -3,8 +3,13 @@
 # Slot: kontaktlaerergrupper 
 
 
+_Alle kontaktlærargrupper i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:kontaktlaerergrupper](https://schema.fintlabs.no/utdanning/:kontaktlaerergrupper)
+
+
+
+
+URI: [utd:kontaktlaerergrupper](https://schema.fintlabs.no/utdanning/kontaktlaerergrupper)
 Alias: kontaktlaerergrupper
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: kontaktlaerergrupper
 | --- | --- |
 | Range | [Kontaktlaerergruppe](kontaktlaerergruppe.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:kontaktlaerergrupper](https://schema.fintlabs.no/utdanning/kontaktlaerergrupper) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: kontaktlaerergrupper
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:kontaktlaerergrupper |
+| self | utd:kontaktlaerergrupper |
 | native | https://schema.fintlabs.no/utdanning/:kontaktlaerergrupper |
 
 
@@ -84,10 +83,11 @@ Alias: kontaktlaerergrupper
 <details>
 ```yaml
 name: kontaktlaerergrupper
+description: Alle kontaktlærargrupper i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:kontaktlaerergrupper
 alias: kontaktlaerergrupper
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Kontaktlaerergruppe

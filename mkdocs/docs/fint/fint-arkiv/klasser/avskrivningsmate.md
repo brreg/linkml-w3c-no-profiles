@@ -22,7 +22,7 @@ Alias: avskrivningsmate
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Avskrivning](avskrivning.md) | Avskriving av ein journalpost (markering som ferdigbehandla) |  no  |
+| [Avskrivning](avskrivning.md) | Avskriving av ein journalpost (markering som ferdigbehandla) |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: avskrivningsmate
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Avskrivning](avskrivning.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: avskrivningsmate
 ```yaml
 name: avskrivningsmate
 description: Korleis journalposten er avskriven.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:avskrivningsmate
 alias: avskrivningsmate
-owner: Avskrivning
 domain_of:
 - Avskrivning
 range: string
-required: true
 
 ```
 </details>

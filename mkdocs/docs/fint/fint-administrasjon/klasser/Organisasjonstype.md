@@ -22,7 +22,7 @@ Alias: organisasjonstype
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: organisasjonstype
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Organisasjonselement](organisasjonselement.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: organisasjonstype
 ```yaml
 name: organisasjonstype
 description: Kva type organisasjonselement dette er.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:organisasjonstype
 alias: organisasjonstype
-owner: Organisasjonselement
 domain_of:
 - Organisasjonselement
 range: Organisasjonstype

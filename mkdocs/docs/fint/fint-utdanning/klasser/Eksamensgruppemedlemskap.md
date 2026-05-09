@@ -3,8 +3,13 @@
 # Slot: eksamensgruppemedlemskap 
 
 
+_Eksamensgruppemedlemskap._
 
-URI: [https://schema.fintlabs.no/utdanning/:eksamensgruppemedlemskap](https://schema.fintlabs.no/utdanning/:eksamensgruppemedlemskap)
+
+
+
+
+URI: [utd:eksamensgruppemedlemskap](https://schema.fintlabs.no/utdanning/eksamensgruppemedlemskap)
 Alias: eksamensgruppemedlemskap
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: eksamensgruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: eksamensgruppemedlemskap
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Elevforhold](elevforhold.md) |
+| Slot URI | [utd:eksamensgruppemedlemskap](https://schema.fintlabs.no/utdanning/eksamensgruppemedlemskap) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: eksamensgruppemedlemskap
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:eksamensgruppemedlemskap |
+| self | utd:eksamensgruppemedlemskap |
 | native | https://schema.fintlabs.no/utdanning/:eksamensgruppemedlemskap |
 
 
@@ -70,11 +84,16 @@ Alias: eksamensgruppemedlemskap
 <details>
 ```yaml
 name: eksamensgruppemedlemskap
+description: Eksamensgruppemedlemskap.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:eksamensgruppemedlemskap
 alias: eksamensgruppemedlemskap
 domain_of:
 - UtdanningContainer
 - Elevforhold
-range: string
+range: Eksamensgruppemedlemskap
+multivalued: true
 
 ```
 </details>

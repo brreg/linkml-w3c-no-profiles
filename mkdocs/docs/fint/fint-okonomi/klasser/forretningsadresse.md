@@ -3,7 +3,7 @@
 # Slot: forretningsadresse 
 
 
-_Besøksadresse til ein organisasjonseining i einingsregisteret._
+_Besøksadresse til ein organisasjonseining._
 
 
 
@@ -22,7 +22,7 @@ Alias: forretningsadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
 
 
@@ -44,23 +44,10 @@ Alias: forretningsadresse
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Enhet](enhet.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,14 +83,11 @@ Alias: forretningsadresse
 <details>
 ```yaml
 name: forretningsadresse
-description: Besøksadresse til ein organisasjonseining i einingsregisteret.
-in_subset:
-- Valgfri
+description: Besøksadresse til ein organisasjonseining.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: fint:forretningsadresse
 alias: forretningsadresse
-owner: Enhet
 domain_of:
 - Enhet
 range: Adresse

@@ -3,8 +3,13 @@
 # Slot: grepreferanse 
 
 
+_Referanse til GREP-registeret._
 
-URI: [https://schema.fintlabs.no/utdanning/:grepreferanse](https://schema.fintlabs.no/utdanning/:grepreferanse)
+
+
+
+
+URI: [utd:grepreferanse](https://schema.fintlabs.no/utdanning/grepreferanse)
 Alias: grepreferanse
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: grepreferanse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  no  |
-| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  no  |
-| [Fag](fag.md) | Eit skulefag |  no  |
-| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  no  |
+| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
+| [Fag](fag.md) | Eit skulefag |  yes  |
+| [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  yes  |
+| [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  yes  |
 
 
 
@@ -33,8 +38,9 @@ Alias: grepreferanse
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Uriorcurie](uriorcurie.md) |
 | Domain Of | [Arstrinn](arstrinn.md), [Programomrade](programomrade.md), [Utdanningsprogram](utdanningsprogram.md), [Fag](fag.md) |
+| Slot URI | [utd:grepreferanse](https://schema.fintlabs.no/utdanning/grepreferanse) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: grepreferanse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:grepreferanse |
+| self | utd:grepreferanse |
 | native | https://schema.fintlabs.no/utdanning/:grepreferanse |
 
 
@@ -72,13 +85,17 @@ Alias: grepreferanse
 <details>
 ```yaml
 name: grepreferanse
+description: Referanse til GREP-registeret.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:grepreferanse
 alias: grepreferanse
 domain_of:
 - Arstrinn
 - Programomrade
 - Utdanningsprogram
 - Fag
-range: string
+range: uriorcurie
 
 ```
 </details>

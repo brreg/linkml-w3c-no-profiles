@@ -3,8 +3,13 @@
 # Slot: rom 
 
 
+_Rom._
 
-URI: [https://schema.fintlabs.no/utdanning/:rom](https://schema.fintlabs.no/utdanning/:rom)
+
+
+
+
+URI: [utd:rom](https://schema.fintlabs.no/utdanning/rom)
 Alias: rom
 
 <!-- no inheritance hierarchy -->
@@ -17,9 +22,9 @@ Alias: rom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  no  |
-| [Time](time.md) | Ein time i timeplanen |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Time](time.md) | Ein time i timeplanen |  yes  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 
@@ -32,8 +37,9 @@ Alias: rom
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Rom](rom.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Eksamen](eksamen.md), [Time](time.md) |
+| Slot URI | [utd:rom](https://schema.fintlabs.no/utdanning/rom) |
 
 ### Cardinality and Requirements
 
@@ -55,12 +61,19 @@ Alias: rom
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:rom |
+| self | utd:rom |
 | native | https://schema.fintlabs.no/utdanning/:rom |
 
 
@@ -71,12 +84,16 @@ Alias: rom
 <details>
 ```yaml
 name: rom
+description: Rom.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:rom
 alias: rom
 domain_of:
 - UtdanningContainer
 - Eksamen
 - Time
-range: string
+range: Rom
 
 ```
 </details>

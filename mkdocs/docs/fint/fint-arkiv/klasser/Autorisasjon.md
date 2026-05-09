@@ -22,7 +22,7 @@ Alias: autorisasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  no  |
+| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: autorisasjon
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Arkivressurs](arkivressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: autorisasjon
 ```yaml
 name: autorisasjon
 description: Autorisasjonar gjevne til arkivressursen.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:autorisasjon
 alias: autorisasjon
-owner: Arkivressurs
 domain_of:
 - Arkivressurs
 range: Autorisasjon

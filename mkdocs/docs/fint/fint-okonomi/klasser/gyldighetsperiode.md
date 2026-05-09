@@ -3,8 +3,13 @@
 # Slot: gyldighetsperiode 
 
 
+_Periode ressursen er gyldig for._
 
-URI: [https://schema.fintlabs.no/okonomi/:gyldighetsperiode](https://schema.fintlabs.no/okonomi/:gyldighetsperiode)
+
+
+
+
+URI: [fint:gyldighetsperiode](https://schema.fintlabs.no/gyldighetsperiode)
 Alias: gyldighetsperiode
 
 <!-- no inheritance hierarchy -->
@@ -17,16 +22,16 @@ Alias: gyldighetsperiode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [OkonomiValuta](okonomivaluta.md) | Valuta for transaksjonsbeløp |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Merverdiavgift](merverdiavgift.md) | Kodeverk for merverdiavgifter |  no  |
-| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Merverdiavgift](merverdiavgift.md) | Kodeverk for merverdiavgifter |  yes  |
 | [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [OkonomiValuta](okonomivaluta.md) | Valuta for transaksjonsbeløp |  yes  |
 
 
 
@@ -39,8 +44,9 @@ Alias: gyldighetsperiode
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Periode](periode.md) |
 | Domain Of | [Vare](vare.md), [Merverdiavgift](merverdiavgift.md), [OkonomiValuta](okonomivaluta.md), [Begrep](begrep.md), [Identifikator](identifikator.md) |
+| Slot URI | [fint:gyldighetsperiode](https://schema.fintlabs.no/gyldighetsperiode) |
 
 ### Cardinality and Requirements
 
@@ -62,12 +68,19 @@ Alias: gyldighetsperiode
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:gyldighetsperiode |
+| self | fint:gyldighetsperiode |
 | native | https://schema.fintlabs.no/okonomi/:gyldighetsperiode |
 
 
@@ -78,6 +91,10 @@ Alias: gyldighetsperiode
 <details>
 ```yaml
 name: gyldighetsperiode
+description: Periode ressursen er gyldig for.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: fint:gyldighetsperiode
 alias: gyldighetsperiode
 domain_of:
 - Vare
@@ -85,7 +102,8 @@ domain_of:
 - OkonomiValuta
 - Begrep
 - Identifikator
-range: string
+range: Periode
+inlined: true
 
 ```
 </details>

@@ -22,7 +22,7 @@ Alias: partRolle
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  no  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: partRolle
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Part](part.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: partRolle
 ```yaml
 name: partRolle
 description: Rolla til parten.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:partRolle
 alias: partRolle
-owner: Part
 domain_of:
 - Part
 range: PartRolle

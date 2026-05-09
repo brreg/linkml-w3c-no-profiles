@@ -3,8 +3,13 @@
 # Slot: slettet 
 
 
+_Tidspunkt ressursen er sletta._
 
-URI: [https://schema.fintlabs.no/personvern/:slettet](https://schema.fintlabs.no/personvern/:slettet)
+
+
+
+
+URI: [pvn:slettet](https://schema.fintlabs.no/personvern/slettet)
 Alias: slettet
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: slettet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tjeneste](tjeneste.md) | Teneste eller system som behandlar personopplysningar |  no  |
-| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  no  |
+| [Tjeneste](tjeneste.md) | Teneste eller system som behandlar personopplysningar |  yes  |
+| [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: slettet
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Datetime](datetime.md) |
 | Domain Of | [Behandling](behandling.md), [Tjeneste](tjeneste.md) |
+| Slot URI | [pvn:slettet](https://schema.fintlabs.no/personvern/slettet) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: slettet
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-personvern
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:slettet |
+| self | pvn:slettet |
 | native | https://schema.fintlabs.no/personvern/:slettet |
 
 
@@ -70,11 +83,15 @@ Alias: slettet
 <details>
 ```yaml
 name: slettet
+description: Tidspunkt ressursen er sletta.
+from_schema: https://data.norge.no/linkml/fint-personvern
+rank: 1000
+slot_uri: pvn:slettet
 alias: slettet
 domain_of:
 - Behandling
 - Tjeneste
-range: string
+range: datetime
 
 ```
 </details>

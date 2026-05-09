@@ -3,8 +3,13 @@
 # Slot: fravartypar 
 
 
+_Alle fråværstypar i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:fravartypar](https://schema.fintlabs.no/utdanning/:fravartypar)
+
+
+
+
+URI: [utd:fravartypar](https://schema.fintlabs.no/utdanning/fravartypar)
 Alias: fravartypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fravartypar
 | --- | --- |
 | Range | [Fravartype](fravartype.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:fravartypar](https://schema.fintlabs.no/utdanning/fravartypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fravartypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fravartypar |
+| self | utd:fravartypar |
 | native | https://schema.fintlabs.no/utdanning/:fravartypar |
 
 
@@ -84,10 +83,11 @@ Alias: fravartypar
 <details>
 ```yaml
 name: fravartypar
+description: Alle fråværstypar i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:fravartypar
 alias: fravartypar
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Fravartype

@@ -3,8 +3,13 @@
 # Slot: organisasjonsnavn 
 
 
+_Namn på eining registrert i Einingsregisteret._
 
-URI: [https://schema.fintlabs.no/administrasjon/:organisasjonsnavn](https://schema.fintlabs.no/administrasjon/:organisasjonsnavn)
+
+
+
+
+URI: [fint:organisasjonsnavn](https://schema.fintlabs.no/organisasjonsnavn)
 Alias: organisasjonsnavn
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: organisasjonsnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 
 
 
@@ -35,6 +40,7 @@ Alias: organisasjonsnavn
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Arbeidslokasjon](arbeidslokasjon.md), [Organisasjonselement](organisasjonselement.md), [Enhet](enhet.md) |
+| Slot URI | [fint:organisasjonsnavn](https://schema.fintlabs.no/organisasjonsnavn) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: organisasjonsnavn
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:organisasjonsnavn |
+| self | fint:organisasjonsnavn |
 | native | https://schema.fintlabs.no/administrasjon/:organisasjonsnavn |
 
 
@@ -72,6 +85,10 @@ Alias: organisasjonsnavn
 <details>
 ```yaml
 name: organisasjonsnavn
+description: Namn på eining registrert i Einingsregisteret.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: fint:organisasjonsnavn
 alias: organisasjonsnavn
 domain_of:
 - Arbeidslokasjon

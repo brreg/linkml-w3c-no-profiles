@@ -43,13 +43,6 @@ Alias: seksjonsnummer
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Matrikkelnummer](matrikkelnummer.md) |
-
-
 
 
 
@@ -94,7 +87,6 @@ from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: fint:seksjonsnummer
 alias: seksjonsnummer
-owner: Matrikkelnummer
 domain_of:
 - Matrikkelnummer
 range: string

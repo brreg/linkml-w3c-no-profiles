@@ -3,8 +3,13 @@
 # Slot: prosjekt 
 
 
+_Prosjekt ressursen er knytt til._
 
-URI: [https://schema.fintlabs.no/administrasjon/:prosjekt](https://schema.fintlabs.no/administrasjon/:prosjekt)
+
+
+
+
+URI: [adm:prosjekt](https://schema.fintlabs.no/administrasjon/prosjekt)
 Alias: prosjekt
 
 <!-- no inheritance hierarchy -->
@@ -17,11 +22,11 @@ Alias: prosjekt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  no  |
-| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  no  |
-| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  no  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
+| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  yes  |
+| [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 
 
 
@@ -34,8 +39,9 @@ Alias: prosjekt
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Prosjekt](prosjekt.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Kontostreng](kontostreng.md), [Prosjektart](prosjektart.md), [Fullmakt](fullmakt.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:prosjekt](https://schema.fintlabs.no/administrasjon/prosjekt) |
 
 ### Cardinality and Requirements
 
@@ -57,12 +63,19 @@ Alias: prosjekt
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:prosjekt |
+| self | adm:prosjekt |
 | native | https://schema.fintlabs.no/administrasjon/:prosjekt |
 
 
@@ -73,6 +86,10 @@ Alias: prosjekt
 <details>
 ```yaml
 name: prosjekt
+description: Prosjekt ressursen er knytt til.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:prosjekt
 alias: prosjekt
 domain_of:
 - AdministrasjonContainer
@@ -80,7 +97,7 @@ domain_of:
 - Prosjektart
 - Fullmakt
 - Arbeidsforhold
-range: string
+range: Prosjekt
 
 ```
 </details>

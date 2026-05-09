@@ -22,7 +22,7 @@ Alias: godkjent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  no  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: godkjent
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravaer](fravaer.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: godkjent
 ```yaml
 name: godkjent
 description: Tidspunkt då fråværet vart godkjent.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:godkjent
 alias: godkjent
-owner: Fravaer
 domain_of:
 - Fravaer
 range: datetime

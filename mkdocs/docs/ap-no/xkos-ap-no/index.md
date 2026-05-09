@@ -1,20 +1,5 @@
 # xkos-ap-no
 
-## Artefacts
-
-| Artefakt | Fil |
-|----------|-----|
-| SHACL shapes | [xkos-ap-no-shapes.ttl](xkos-ap-no-shapes.ttl) |
-| JSON-LD kontekst | [xkos-ap-no-context.jsonld](xkos-ap-no-context.jsonld) |
-| JSON Schema | [xkos-ap-no-schema.json](xkos-ap-no-schema.json) |
-| OWL ontologi | [xkos-ap-no-ontology.ttl](xkos-ap-no-ontology.ttl) |
-| RDF/Turtle skjema | [xkos-ap-no-schema.ttl](xkos-ap-no-schema.ttl) |
-| Python-klasser | [xkos-ap-no-model.py](xkos-ap-no-model.py) |
-| ER-diagram (Mermaid) | [xkos-ap-no-erdiagram.md](xkos-ap-no-erdiagram.md) |
-| Eksempeldata (Turtle) | [xkos-ap-no-eksempel.ttl](xkos-ap-no-eksempel.ttl) |
-
-## Oversiktsdiagram
-
 ```mermaid
 erDiagram
 Begrepssamling {
@@ -204,3 +189,17 @@ Name: xkos-ap-no
 | [Anbefalt](klasser/anbefalt.md) | Anbefalte eigenskapar i ein AP-NO-profil |
 | [Obligatorisk](klasser/obligatorisk.md) | Obligatoriske eigenskapar i ein AP-NO-profil |
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i ein AP-NO-profil |
+
+
+## Artifacts
+
+| Artefakt | Fil |
+|----------|-----|
+| SHACL shapes | [xkos-ap-no-shapes.ttl](xkos-ap-no-shapes.ttl) |
+| JSON-LD kontekst | [xkos-ap-no-context.jsonld](xkos-ap-no-context.jsonld) |
+| JSON Schema | [xkos-ap-no-schema.json](xkos-ap-no-schema.json) |
+| OWL ontologi | [xkos-ap-no-ontology.ttl](xkos-ap-no-ontology.ttl) |
+| RDF/Turtle skjema | [xkos-ap-no-schema.ttl](xkos-ap-no-schema.ttl) |
+| Python-klasser | [xkos-ap-no-model.py](xkos-ap-no-model.py) |
+| ER-diagram (Mermaid) | [xkos-ap-no-erdiagram.md](xkos-ap-no-erdiagram.md) |
+| Eksempeldata (Turtle) | [xkos-ap-no-eksempel.ttl](xkos-ap-no-eksempel.ttl) |

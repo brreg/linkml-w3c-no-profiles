@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:skjermingsheimlar](https://schema.fintlabs.no/arkiv/:skjermingsheimlar)
+URI: [ark:skjermingsheimlar](https://schema.fintlabs.no/arkiv/skjermingsheimlar)
 Alias: skjermingsheimlar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: skjermingsheimlar
 | --- | --- |
 | Range | [Skjermingshjemmel](skjermingshjemmel.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:skjermingsheimlar](https://schema.fintlabs.no/arkiv/skjermingsheimlar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: skjermingsheimlar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:skjermingsheimlar |
+| self | ark:skjermingsheimlar |
 | native | https://schema.fintlabs.no/arkiv/:skjermingsheimlar |
 
 
@@ -86,8 +80,8 @@ Alias: skjermingsheimlar
 name: skjermingsheimlar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:skjermingsheimlar
 alias: skjermingsheimlar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: Skjermingshjemmel

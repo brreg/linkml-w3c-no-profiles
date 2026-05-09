@@ -98,6 +98,14 @@ URI: [fint:Periode](https://schema.fintlabs.no/Periode)
   
   
   
+    
+      
+    
+      
+    
+      
+    
+  
   
     
   
@@ -114,7 +122,7 @@ URI: [fint:Periode](https://schema.fintlabs.no/Periode)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn på perioden |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale |
 | [start](start.md) | 1 <br/> [Datetime](datetime.md) | Frå tidspunkt |
 | [slutt](slutt.md) | 0..1 <br/> [Datetime](datetime.md) | Til tidspunkt |
 
@@ -188,35 +196,14 @@ URI: [fint:Periode](https://schema.fintlabs.no/Periode)
 name: Periode
 description: Tidsperiode med obligatorisk start og valfri slutt.
 from_schema: https://data.norge.no/linkml/fint-okonomi
-attributes:
-  beskrivelse:
-    name: beskrivelse
-    description: Beskriven namn på perioden.
-    from_schema: https://data.norge.no/linkml/fint-common
-    slot_uri: fint:beskrivelse
-    domain_of:
-    - Transaksjon
-    - Periode
-    range: string
+slots:
+- beskrivelse
+- start
+- slutt
+slot_usage:
   start:
     name: start
-    description: Frå tidspunkt.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:start
-    domain_of:
-    - Periode
-    range: datetime
     required: true
-  slutt:
-    name: slutt
-    description: Til tidspunkt.
-    from_schema: https://data.norge.no/linkml/fint-common
-    rank: 1000
-    slot_uri: fint:slutt
-    domain_of:
-    - Periode
-    range: datetime
 class_uri: fint:Periode
 
 ```
@@ -229,11 +216,16 @@ class_uri: fint:Periode
 name: Periode
 description: Tidsperiode med obligatorisk start og valfri slutt.
 from_schema: https://data.norge.no/linkml/fint-okonomi
+slot_usage:
+  start:
+    name: start
+    required: true
 attributes:
   beskrivelse:
     name: beskrivelse
-    description: Beskriven namn på perioden.
-    from_schema: https://data.norge.no/linkml/fint-common
+    description: Beskriven namn eller omtale.
+    from_schema: https://data.norge.no/linkml/fint-okonomi
+    rank: 1000
     slot_uri: fint:beskrivelse
     alias: beskrivelse
     owner: Periode
@@ -244,7 +236,7 @@ attributes:
   start:
     name: start
     description: Frå tidspunkt.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
     slot_uri: fint:start
     alias: start
@@ -256,7 +248,7 @@ attributes:
   slutt:
     name: slutt
     description: Til tidspunkt.
-    from_schema: https://data.norge.no/linkml/fint-common
+    from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
     slot_uri: fint:slutt
     alias: slutt

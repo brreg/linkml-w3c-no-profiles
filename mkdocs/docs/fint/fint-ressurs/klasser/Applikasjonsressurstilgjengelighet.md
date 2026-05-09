@@ -36,13 +36,13 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
         
       Applikasjonsressurstilgjengelighet : lisensantall
         
-      Applikasjonsressurstilgjengelighet : ressurs
+      Applikasjonsressurstilgjengelighet : ressursRef
         
           
     
         
         
-        Applikasjonsressurstilgjengelighet --> "1" Applikasjonsressurs : ressurs
+        Applikasjonsressurstilgjengelighet --> "1" Applikasjonsressurs : ressursRef
         click Applikasjonsressurs href "../Applikasjonsressurs/"
     
 
@@ -75,21 +75,7 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
 
   
   
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
-  
+    
   
 
   
@@ -97,12 +83,22 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
 
   
   
+    
+  
 
   
   
+    
+  
 
-  
-  
+
+### Obligatorisk
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [gyldighetsperiode](gyldighetsperiode.md) | 1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
+| [konsument](konsument.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Organisasjonselement som har tilgang til ressursen |
+| [ressursRef](ressursref.md) | 1 <br/> [Applikasjonsressurs](applikasjonsressurs.md) | Ressursen organisasjonselementet har tilgang til |
 
 
 
@@ -122,6 +118,34 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
 
   
   
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+
+### Valgfri
+
+| Namn | Kardinalitet og domene | Beskriving |
+| --- | --- | --- |
+| [lisensantall](lisensantall.md) | 0..1 <br/> [Integer](integer.md) | Totalt tal på lisensar |
 
 
 
@@ -138,29 +162,53 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
   
   
   
-  
     
+      
+    
+      
+    
+      
+    
+  
   
 
 
@@ -169,10 +217,6 @@ URI: [res:Applikasjonsressurstilgjengelighet](https://schema.fintlabs.no/ressurs
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen |
-| [gyldighetsperiode](gyldighetsperiode.md) | 1 <br/> [Periode](periode.md) | Gyldighetsperioden til applikasjonsressurstilgjengelegheita |
-| [lisensantall](lisensantall.md) | 0..1 <br/> [Integer](integer.md) | Totalt tal på lisensar tilgjengeleg for brukarar i konsumenten |
-| [konsument](konsument.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Organisasjonselement som har tilgang til denne ressursen |
-| [ressurs](ressurs.md) | 1 <br/> [Applikasjonsressurs](applikasjonsressurs.md) | Ressursen organisasjonselementet har tilgang til |
 
 
 
@@ -238,66 +282,29 @@ description: Kva organisasjonselements brukarar som har tilgang til ein ressurs.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 slots:
 - id
-attributes:
+- gyldighetsperiode
+- lisensantall
+- konsument
+- ressursRef
+slot_usage:
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Gyldighetsperioden til applikasjonsressurstilgjengelegheita.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:gyldighetsperiode
-    domain_of:
-    - Applikasjon
-    - Applikasjonsressurs
-    - Applikasjonsressurstilgjengelighet
-    - Rettighet
-    - Applikasjonskategori
-    - Brukertype
-    - Enhetstype
-    - Handhevingstype
-    - Lisensmodell
-    - Plattform
-    - Produsent
-    - Status
-    - Begrep
-    - Identifikator
-    range: Periode
     required: true
-    inlined: true
   lisensantall:
     name: lisensantall
-    description: Totalt tal på lisensar tilgjengeleg for brukarar i konsumenten.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:lisensantall
-    domain_of:
-    - Applikasjonsressurs
-    - Applikasjonsressurstilgjengelighet
-    range: integer
   konsument:
     name: konsument
-    description: Referanse til Organisasjonselement som har tilgang til denne ressursen.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    rank: 1000
-    slot_uri: res:konsument
-    domain_of:
-    - Applikasjonsressurstilgjengelighet
-    range: uriorcurie
     required: true
-  ressurs:
-    name: ressurs
-    description: Ressursen organisasjonselementet har tilgang til.
+  ressursRef:
+    name: ressursRef
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:ressursRef
-    domain_of:
-    - Applikasjon
-    - Applikasjonsressurstilgjengelighet
-    range: Applikasjonsressurs
     required: true
 class_uri: res:Applikasjonsressurstilgjengelighet
 
@@ -311,75 +318,27 @@ class_uri: res:Applikasjonsressurstilgjengelighet
 name: Applikasjonsressurstilgjengelighet
 description: Kva organisasjonselements brukarar som har tilgang til ein ressurs.
 from_schema: https://data.norge.no/linkml/fint-ressurs
-attributes:
+slot_usage:
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Gyldighetsperioden til applikasjonsressurstilgjengelegheita.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:gyldighetsperiode
-    alias: gyldighetsperiode
-    owner: Applikasjonsressurstilgjengelighet
-    domain_of:
-    - Applikasjon
-    - Applikasjonsressurs
-    - Applikasjonsressurstilgjengelighet
-    - Rettighet
-    - Applikasjonskategori
-    - Brukertype
-    - Enhetstype
-    - Handhevingstype
-    - Lisensmodell
-    - Plattform
-    - Produsent
-    - Status
-    - Begrep
-    - Identifikator
-    range: Periode
     required: true
-    inlined: true
   lisensantall:
     name: lisensantall
-    description: Totalt tal på lisensar tilgjengeleg for brukarar i konsumenten.
     in_subset:
     - Valgfri
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:lisensantall
-    alias: lisensantall
-    owner: Applikasjonsressurstilgjengelighet
-    domain_of:
-    - Applikasjonsressurs
-    - Applikasjonsressurstilgjengelighet
-    range: integer
   konsument:
     name: konsument
-    description: Referanse til Organisasjonselement som har tilgang til denne ressursen.
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    rank: 1000
-    slot_uri: res:konsument
-    alias: konsument
-    owner: Applikasjonsressurstilgjengelighet
-    domain_of:
-    - Applikasjonsressurstilgjengelighet
-    range: uriorcurie
     required: true
-  ressurs:
-    name: ressurs
-    description: Ressursen organisasjonselementet har tilgang til.
+  ressursRef:
+    name: ressursRef
     in_subset:
     - Obligatorisk
-    from_schema: https://data.norge.no/linkml/fint-ressurs
-    slot_uri: res:ressursRef
-    alias: ressurs
-    owner: Applikasjonsressurstilgjengelighet
-    domain_of:
-    - Applikasjon
-    - Applikasjonsressurstilgjengelighet
-    range: Applikasjonsressurs
     required: true
+attributes:
   id:
     name: id
     description: URI-identifikator for ressursen.
@@ -411,6 +370,76 @@ attributes:
     - Kontaktperson
     - Virksomhet
     range: uriorcurie
+    required: true
+  gyldighetsperiode:
+    name: gyldighetsperiode
+    description: Periode ressursen er gyldig for.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
+    slot_uri: fint:gyldighetsperiode
+    alias: gyldighetsperiode
+    owner: Applikasjonsressurstilgjengelighet
+    domain_of:
+    - Applikasjon
+    - Applikasjonsressurs
+    - Applikasjonsressurstilgjengelighet
+    - Rettighet
+    - Applikasjonskategori
+    - Brukertype
+    - Enhetstype
+    - Handhevingstype
+    - Lisensmodell
+    - Plattform
+    - Produsent
+    - Status
+    - Begrep
+    - Identifikator
+    range: Periode
+    required: true
+    inlined: true
+  lisensantall:
+    name: lisensantall
+    description: Totalt tal på lisensar.
+    in_subset:
+    - Valgfri
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
+    slot_uri: res:lisensantall
+    alias: lisensantall
+    owner: Applikasjonsressurstilgjengelighet
+    domain_of:
+    - Applikasjonsressurs
+    - Applikasjonsressurstilgjengelighet
+    range: integer
+  konsument:
+    name: konsument
+    description: Referanse til Organisasjonselement som har tilgang til ressursen.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
+    slot_uri: res:konsument
+    alias: konsument
+    owner: Applikasjonsressurstilgjengelighet
+    domain_of:
+    - Applikasjonsressurstilgjengelighet
+    range: uriorcurie
+    required: true
+  ressursRef:
+    name: ressursRef
+    description: Ressursen organisasjonselementet har tilgang til.
+    in_subset:
+    - Obligatorisk
+    from_schema: https://data.norge.no/linkml/fint-ressurs
+    rank: 1000
+    slot_uri: res:ressursRef
+    alias: ressursRef
+    owner: Applikasjonsressurstilgjengelighet
+    domain_of:
+    - Applikasjonsressurstilgjengelighet
+    range: Applikasjonsressurs
     required: true
 class_uri: res:Applikasjonsressurstilgjengelighet
 

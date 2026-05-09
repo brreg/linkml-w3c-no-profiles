@@ -3,8 +3,13 @@
 # Slot: fullfortkoder 
 
 
+_Alle fullfortkoder i containeren._
 
-URI: [https://schema.fintlabs.no/utdanning/:fullfortkoder](https://schema.fintlabs.no/utdanning/:fullfortkoder)
+
+
+
+
+URI: [utd:fullfortkoder](https://schema.fintlabs.no/utdanning/fullfortkoder)
 Alias: fullfortkoder
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +37,13 @@ Alias: fullfortkoder
 | --- | --- |
 | Range | [Fullfortkode](fullfortkode.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md) |
+| Slot URI | [utd:fullfortkoder](https://schema.fintlabs.no/utdanning/fullfortkoder) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [UtdanningContainer](utdanningcontainer.md) |
-
-
 
 
 
@@ -73,7 +72,7 @@ Alias: fullfortkoder
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:fullfortkoder |
+| self | utd:fullfortkoder |
 | native | https://schema.fintlabs.no/utdanning/:fullfortkoder |
 
 
@@ -84,10 +83,11 @@ Alias: fullfortkoder
 <details>
 ```yaml
 name: fullfortkoder
+description: Alle fullfortkoder i containeren.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
+slot_uri: utd:fullfortkoder
 alias: fullfortkoder
-owner: UtdanningContainer
 domain_of:
 - UtdanningContainer
 range: Fullfortkode

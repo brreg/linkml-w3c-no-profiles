@@ -3,8 +3,13 @@
 # Slot: varsel 
 
 
+_Varsel._
 
-URI: [https://schema.fintlabs.no/utdanning/:varsel](https://schema.fintlabs.no/utdanning/:varsel)
+
+
+
+
+URI: [utd:varsel](https://schema.fintlabs.no/utdanning/varsel)
 Alias: varsel
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: varsel
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  no  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 
 
 
@@ -31,13 +36,15 @@ Alias: varsel
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Varsel](varsel.md) |
 | Domain Of | [UtdanningContainer](utdanningcontainer.md), [Faggruppemedlemskap](faggruppemedlemskap.md) |
+| Slot URI | [utd:varsel](https://schema.fintlabs.no/utdanning/varsel) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -54,12 +61,19 @@ Alias: varsel
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-utdanning
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/utdanning/:varsel |
+| self | utd:varsel |
 | native | https://schema.fintlabs.no/utdanning/:varsel |
 
 
@@ -70,11 +84,16 @@ Alias: varsel
 <details>
 ```yaml
 name: varsel
+description: Varsel.
+from_schema: https://data.norge.no/linkml/fint-utdanning
+rank: 1000
+slot_uri: utd:varsel
 alias: varsel
 domain_of:
 - UtdanningContainer
 - Faggruppemedlemskap
-range: string
+range: Varsel
+multivalued: true
 
 ```
 </details>

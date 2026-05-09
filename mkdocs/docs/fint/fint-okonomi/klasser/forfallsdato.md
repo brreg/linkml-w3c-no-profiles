@@ -3,8 +3,13 @@
 # Slot: forfallsdato 
 
 
+_Frist for betaling eller forfallsdato for transaksjon._
 
-URI: [https://schema.fintlabs.no/okonomi/:forfallsdato](https://schema.fintlabs.no/okonomi/:forfallsdato)
+
+
+
+
+URI: [okn:forfallsdato](https://schema.fintlabs.no/okonomi/forfallsdato)
 Alias: forfallsdato
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: forfallsdato
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: forfallsdato
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Date](date.md) |
 | Domain Of | [Faktura](faktura.md), [Transaksjon](transaksjon.md) |
+| Slot URI | [okn:forfallsdato](https://schema.fintlabs.no/okonomi/forfallsdato) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: forfallsdato
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:forfallsdato |
+| self | okn:forfallsdato |
 | native | https://schema.fintlabs.no/okonomi/:forfallsdato |
 
 
@@ -70,11 +83,15 @@ Alias: forfallsdato
 <details>
 ```yaml
 name: forfallsdato
+description: Frist for betaling eller forfallsdato for transaksjon.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:forfallsdato
 alias: forfallsdato
 domain_of:
 - Faktura
 - Transaksjon
-range: string
+range: date
 
 ```
 </details>

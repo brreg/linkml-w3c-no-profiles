@@ -3,7 +3,7 @@
 # Slot: organisasjonselement 
 
 
-_Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura._
+_Referanse til Organisasjonselement (Administrasjon)._
 
 
 
@@ -22,7 +22,7 @@ Alias: organisasjonselement
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fakturautsteder](fakturautsteder.md) | Eining som utformar og oversender faktura og mottar betaling |  no  |
+| [Fakturautsteder](fakturautsteder.md) | Eining som utformar og oversender faktura og mottar betaling |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: organisasjonselement
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fakturautsteder](fakturautsteder.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: organisasjonselement
 <details>
 ```yaml
 name: organisasjonselement
-description: Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura.
-in_subset:
-- Valgfri
+description: Referanse til Organisasjonselement (Administrasjon).
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:organisasjonselement
 alias: organisasjonselement
-owner: Fakturautsteder
 domain_of:
 - Fakturautsteder
 range: uriorcurie

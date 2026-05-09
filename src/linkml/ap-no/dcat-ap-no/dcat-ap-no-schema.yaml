@@ -42,45 +42,20 @@ classes:
 
   # ---- Hjelpeklassar for refererte vokabularressursar ----------------------
 
-  Frekvens:
-    class_uri: dct:Frequency
-    description: Ein oppdateringsfrekvens.
-    slots:
-      - id
 
-  ProvenanceStatement:
-    class_uri: dct:ProvenanceStatement
-    description: Ein provenienserklæring.
-    slots:
-      - id
 
-  OdrlPolicy:
-    class_uri: odrl:Policy
-    description: Ein ODRL-policy.
-    slots:
-      - id
 
-  ProvAktivitet:
-    class_uri: prov:Activity
-    description: Ein PROV-aktivitet.
-    slots:
-      - id
 
-  ProvAttributering:
-    class_uri: prov:Attribution
-    description: Ein kvalifisert PROV-attributering.
-    slots:
-      - id
 
-  Tidsinstant:
-    class_uri: time:Instant
-    description: Eit tidspunkt (OWL Time).
-    slots:
-      - id
+
+
+
+
 
   # ---- Hovudklassar --------------------------------------------------------
 
   KatalogisertRessurs:
+    abstract: true
     class_uri: dcat:Resource
     description: Basisklasse for ressursar som kan katalogiserast.
     slots:
@@ -124,19 +99,19 @@ classes:
       - begynnelse
       - slutt
 
-  Standard:
-    class_uri: dct:Standard
-    description: Ein standard som ein ressurs er i samsvar med.
-    slots:
-      - id
-      - tittel
-      - har_referanse
-      - versjon
-    slot_usage:
-      tittel:
-        required: true
-        in_subset:
-          - Obligatorisk
+  # Standard:
+  #   class_uri: dct:Standard
+  #   description: Ein standard som ein ressurs er i samsvar med.
+  #   slots:
+  #     - id
+  #     - tittel
+  #     - har_referanse
+  #     - har_versjonsnummer
+  #   slot_usage:
+  #     tittel:
+  #       required: true
+  #       in_subset:
+  #         - Obligatorisk
 
   RegulativRessurs:
     class_uri: eli:LegalResource
@@ -146,7 +121,7 @@ classes:
       - beskrivelse
       - identifikator_literal
       - har_referanse
-      - sprak
+      - spraak
       - tittel
       - type_concept
       - relatert_regulativ_ressurs
@@ -244,7 +219,7 @@ classes:
       - policy
       - rettigheter
       - sjekksum
-      - sprak
+      - spraak
       - tidsopplosning
       - tilgangstjeneste
       - tittel
@@ -275,6 +250,7 @@ classes:
     class_uri: dcat:Dataset
     description: Ei samling av data utgjeven eller kuratert av éin aktør.
     slots:
+      - id
       - beskrivelse
       - kontaktpunkt
       - tema
@@ -283,7 +259,7 @@ classes:
       - begrep
       - ble_generert_ved
       - datasettdistribusjon
-      - dekningsomrade
+      - dekningsomraade
       - gjeldende_lovgivning
       - nokkelord
       - tidsrom
@@ -302,12 +278,20 @@ classes:
       - landingsside
       - produsent
       - relatert_ressurs
-      - sprak
+      - spraak
       - type_concept
       - utgivelsesdato
       - versjon
       - versjonsmerknad
+      - har_kvalitetsmerknad
+      - har_kvalitetsmaaling
     slot_usage:
+      har_kvalitetsmerknad:
+        in_subset:
+          - Anbefalt
+      har_kvalitetsmaaling:
+        in_subset:
+          - Anbefalt
       beskrivelse:
         required: true
         in_subset:
@@ -337,7 +321,7 @@ classes:
       datasettdistribusjon:
         in_subset:
           - Anbefalt
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       gjeldende_lovgivning:
@@ -363,7 +347,7 @@ classes:
       - tema
       - tittel
       - utgiver
-      - dekningsomrade
+      - dekningsomraade
       - gjeldende_lovgivning
       - siste
       - tidsrom
@@ -392,7 +376,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       gjeldende_lovgivning:
@@ -487,7 +471,7 @@ classes:
       - utgivelsesdato
       - beskrivelse
       - kilde_post
-      - sprak
+      - spraak
       - tittel
     slot_usage:
       endringsdato:
@@ -519,11 +503,11 @@ classes:
       - utgiver
       - datasett
       - datatjeneste
-      - dekningsomrade
+      - dekningsomraade
       - endringsdato
       - heimeside
       - lisens
-      - sprak
+      - spraak
       - temaer
       - utgivelsesdato
       - gjeldende_lovgivning
@@ -557,7 +541,7 @@ classes:
       datatjeneste:
         in_subset:
           - Anbefalt
-      dekningsomrade:
+      dekningsomraade:
         in_subset:
           - Anbefalt
       endringsdato:
@@ -569,7 +553,7 @@ classes:
       lisens:
         in_subset:
           - Anbefalt
-      sprak:
+      spraak:
         in_subset:
           - Anbefalt
       temaer:
@@ -681,12 +665,12 @@ slots:
 
   har_epost:
     slot_uri: vcard:hasEmail
-    range: uri
+    range: string
     description: E-postadresse til kontaktpunktet.
 
   har_kontaktside:
     slot_uri: vcard:hasURL
-    range: uri
+    range: string
     description: Nettside for kontakt.
 
   dokumentasjon:
@@ -779,7 +763,7 @@ slots:
 
   tema:
     slot_uri: dcat:theme
-    range: Konsept
+    range: string
     multivalued: true
     description: Tema frå eit kontrollert vokabular.
 
@@ -791,7 +775,7 @@ slots:
 
   begrep:
     slot_uri: dct:subject
-    range: Konsept
+    range: string
     multivalued: true
     description: Fagomgrep som datasettet handlar om.
 
@@ -812,22 +796,24 @@ slots:
 
   frekvens:
     slot_uri: dct:accrualPeriodicity
-    range: Frekvens
+    range: string
     description: Oppdateringsfrekvens for datasettet.
+    annotations:
+      gyldige_verdier: dct:Frequency
 
   tilgjengelighet:
     slot_uri: dcatap:availability
-    range: Konsept
+    range: string
     description: Planlagt tilgjengelegheit for ressursen.
 
   har_rolle:
     slot_uri: dcat:hadRole
-    range: Konsept
+    range: string
     description: Rolle ein aktør eller ressurs har i ein relasjon.
 
   lisens:
     slot_uri: dct:license
-    range: Konsept
+    range: string
     description: Lisens for bruk av ressursen.
 
   gjeldende_lovgivning:
@@ -844,8 +830,9 @@ slots:
 
   tilgangsrettigheter:
     slot_uri: dct:accessRights
-    range: Rettighetserklaring
-    description: Tilgangsrettar for ressursen.
+    range: uri
+    description: Egenskapen brukes til å angi om det er allmenn tilgang, betinget tilgang eller ikke-allmenn tilgang til datasettet.
+    multivalued: true
 
   rettigheter:
     slot_uri: dct:rights
@@ -865,25 +852,39 @@ slots:
 
   policy:
     slot_uri: odrl:hasPolicy
-    range: OdrlPolicy
+    range: string
     description: ODRL-policy som regulerer bruk av ressursen.
+    annotations:
+      gyldige_verdier: odrl:Policy
+
 
   eierskapshistorikk:
     slot_uri: dct:provenance
-    range: ProvenanceStatement
+    range: string
     multivalued: true
     description: Opphav og eigarskapshistorikk for ressursen.
+    annotations:
+      gyldige_verdier: dct:ProvenanceStatement
+    
 
   ble_generert_ved:
     slot_uri: prov:wasGeneratedBy
-    range: ProvAktivitet
-    description: Aktiviteten som genererte datasettet.
+    range: uri
+    description: Brukes til å referere til en aktivitet som genererte datasettet, eller som gir forretningskontekst for oppretting av det.
+    annotations:
+      gyldige_verdier: URI til prov:Activity
+    multivalued: true
+    domain: Datasett 
 
   annen_ansvarlig_aktor:
     slot_uri: prov:qualifiedAttribution
-    range: ProvAttributering
+    range: string
     multivalued: true
     description: Kvalifisert attributering til ansvarleg aktør.
+    annotations:
+      gyldige_verdier: prov:Attribution
+
+
 
   annen_identifikator:
     slot_uri: adms:identifier
@@ -997,11 +998,11 @@ slots:
 
   begynnelse:
     slot_uri: time:hasBeginning
-    range: Tidsinstant
+    range: datetime
     description: Starttidspunkt for eit tidsrom.
 
   slutt:
     slot_uri: time:hasEnd
-    range: Tidsinstant
+    range: datetime
     description: Sluttidspunkt for eit tidsrom.
 

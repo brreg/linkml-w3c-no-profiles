@@ -22,7 +22,7 @@ Alias: statsborgerskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -44,23 +44,10 @@ Alias: statsborgerskap
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Person](person.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -97,13 +84,10 @@ Alias: statsborgerskap
 ```yaml
 name: statsborgerskap
 description: Alle statsborgarskap personen har.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: fint:statsborgerskap
 alias: statsborgerskap
-owner: Person
 domain_of:
 - Person
 range: Landkode

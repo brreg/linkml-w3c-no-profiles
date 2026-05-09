@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/personvern/:behandlingar](https://schema.fintlabs.no/personvern/:behandlingar)
+URI: [pvn:behandlingar](https://schema.fintlabs.no/personvern/behandlingar)
 Alias: behandlingar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: behandlingar
 | --- | --- |
 | Range | [Behandling](behandling.md) |
 | Domain Of | [PersonvernContainer](personverncontainer.md) |
+| Slot URI | [pvn:behandlingar](https://schema.fintlabs.no/personvern/behandlingar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [PersonvernContainer](personverncontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: behandlingar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:behandlingar |
+| self | pvn:behandlingar |
 | native | https://schema.fintlabs.no/personvern/:behandlingar |
 
 
@@ -86,8 +80,8 @@ Alias: behandlingar
 name: behandlingar
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
+slot_uri: pvn:behandlingar
 alias: behandlingar
-owner: PersonvernContainer
 domain_of:
 - PersonvernContainer
 range: Behandling

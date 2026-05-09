@@ -3,8 +3,13 @@
 # Slot: fasttillegg 
 
 
+_Faste tillegg for arbeidsforholdet._
 
-URI: [https://schema.fintlabs.no/administrasjon/:fasttillegg](https://schema.fintlabs.no/administrasjon/:fasttillegg)
+
+
+
+
+URI: [adm:fasttillegg](https://schema.fintlabs.no/administrasjon/fasttillegg)
 Alias: fasttillegg
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: fasttillegg
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  no  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  no  |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: fasttillegg
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Fasttillegg](fasttillegg.md) |
 | Domain Of | [AdministrasjonContainer](administrasjoncontainer.md), [Arbeidsforhold](arbeidsforhold.md) |
+| Slot URI | [adm:fasttillegg](https://schema.fintlabs.no/administrasjon/fasttillegg) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: fasttillegg
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-administrasjon
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/administrasjon/:fasttillegg |
+| self | adm:fasttillegg |
 | native | https://schema.fintlabs.no/administrasjon/:fasttillegg |
 
 
@@ -70,11 +83,15 @@ Alias: fasttillegg
 <details>
 ```yaml
 name: fasttillegg
+description: Faste tillegg for arbeidsforholdet.
+from_schema: https://data.norge.no/linkml/fint-administrasjon
+rank: 1000
+slot_uri: adm:fasttillegg
 alias: fasttillegg
 domain_of:
 - AdministrasjonContainer
 - Arbeidsforhold
-range: string
+range: Fasttillegg
 
 ```
 </details>

@@ -23,7 +23,7 @@ Alias: dokumentbeskrivelse
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 
 
 
@@ -45,23 +45,10 @@ Alias: dokumentbeskrivelse
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Registrering](registrering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -98,13 +85,10 @@ Alias: dokumentbeskrivelse
 ```yaml
 name: dokumentbeskrivelse
 description: Dokumentbeskrivelsar til ei registrering.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
 slot_uri: ark:dokumentbeskrivelse
 alias: dokumentbeskrivelse
-owner: Registrering
 domain_of:
 - Registrering
 range: Dokumentbeskrivelse

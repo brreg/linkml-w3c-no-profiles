@@ -3,8 +3,13 @@
 # Slot: leverandor 
 
 
+_Leverandør._
 
-URI: [https://schema.fintlabs.no/okonomi/:leverandor](https://schema.fintlabs.no/okonomi/:leverandor)
+
+
+
+
+URI: [okn:leverandor](https://schema.fintlabs.no/okonomi/leverandor)
 Alias: leverandor
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: leverandor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Leverandorgruppe](leverandorgruppe.md) | Gruppering av leverandørar (Leverandørgruppe) |  no  |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  no  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
+| [Leverandorgruppe](leverandorgruppe.md) | Gruppering av leverandørar |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: leverandor
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Leverandor](leverandor.md) |
 | Domain Of | [Transaksjon](transaksjon.md), [Leverandorgruppe](leverandorgruppe.md) |
+| Slot URI | [okn:leverandor](https://schema.fintlabs.no/okonomi/leverandor) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: leverandor
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-okonomi
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/okonomi/:leverandor |
+| self | okn:leverandor |
 | native | https://schema.fintlabs.no/okonomi/:leverandor |
 
 
@@ -70,11 +83,15 @@ Alias: leverandor
 <details>
 ```yaml
 name: leverandor
+description: Leverandør.
+from_schema: https://data.norge.no/linkml/fint-okonomi
+rank: 1000
+slot_uri: okn:leverandor
 alias: leverandor
 domain_of:
 - Transaksjon
 - Leverandorgruppe
-range: string
+range: Leverandor
 
 ```
 </details>

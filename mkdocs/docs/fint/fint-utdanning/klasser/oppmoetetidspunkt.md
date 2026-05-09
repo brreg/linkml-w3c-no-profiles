@@ -3,7 +3,7 @@
 # Slot: oppmoetetidspunkt 
 
 
-_Tidspunkt for oppmøte til eksamenen._
+_Tidspunkt for oppmøte._
 
 
 
@@ -22,7 +22,7 @@ Alias: oppmoetetidspunkt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  no  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: oppmoetetidspunkt
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Eksamen](eksamen.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: oppmoetetidspunkt
 <details>
 ```yaml
 name: oppmoetetidspunkt
-description: Tidspunkt for oppmøte til eksamenen.
-in_subset:
-- Valgfri
+description: Tidspunkt for oppmøte.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:oppmoetetidspunkt
 alias: oppmoetetidspunkt
-owner: Eksamen
 domain_of:
 - Eksamen
 range: datetime

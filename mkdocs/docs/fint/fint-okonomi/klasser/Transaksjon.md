@@ -22,7 +22,7 @@ Alias: transaksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  no  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: transaksjon
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Postering](postering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: transaksjon
 ```yaml
 name: transaksjon
 description: Transaksjonen posteringa tilhøyrer.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:transaksjon
 alias: transaksjon
-owner: Postering
 domain_of:
 - Postering
 range: Transaksjon

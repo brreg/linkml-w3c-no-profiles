@@ -22,7 +22,7 @@ Alias: undervisningstimer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fravarsprosent](fravarsprosent.md) | Kompleks type som representerer fråværsprosent for ein periode |  no  |
+| [Fravarsprosent](fravarsprosent.md) | Kompleks type som representerer fråværsprosent for ein periode |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: undervisningstimer
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Fravarsprosent](fravarsprosent.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: undervisningstimer
 ```yaml
 name: undervisningstimer
 description: Totalt antal undervisningstimar.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
 slot_uri: utd:undervisningstimer
 alias: undervisningstimer
-owner: Fravarsprosent
 domain_of:
 - Fravarsprosent
 range: integer
-required: true
 
 ```
 </details>

@@ -3,7 +3,7 @@
 # Slot: lisensmodell 
 
 
-_Kva lisensmodell applikasjonsressursen har._
+_Lisensmodellen applikasjonsressursen har._
 
 
 
@@ -22,7 +22,7 @@ Alias: lisensmodell
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: lisensmodell
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Applikasjonsressurs](applikasjonsressurs.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -95,14 +82,11 @@ Alias: lisensmodell
 <details>
 ```yaml
 name: lisensmodell
-description: Kva lisensmodell applikasjonsressursen har.
-in_subset:
-- Valgfri
+description: Lisensmodellen applikasjonsressursen har.
 from_schema: https://data.norge.no/linkml/fint-ressurs
 rank: 1000
 slot_uri: res:lisensmodell
 alias: lisensmodell
-owner: Applikasjonsressurs
 domain_of:
 - Applikasjonsressurs
 range: Lisensmodell

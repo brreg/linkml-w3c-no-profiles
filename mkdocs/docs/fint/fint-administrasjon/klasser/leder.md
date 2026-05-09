@@ -22,7 +22,7 @@ Alias: leder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  no  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
 
 
 
@@ -43,23 +43,10 @@ Alias: leder
 
 | Property | Value |
 | --- | --- |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Organisasjonselement](organisasjonselement.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Valgfri](valgfri.md)
 
 
 
@@ -96,13 +83,10 @@ Alias: leder
 ```yaml
 name: leder
 description: Ansvarleg leiar for organisasjonselementet.
-in_subset:
-- Valgfri
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
 slot_uri: adm:leder
 alias: leder
-owner: Organisasjonselement
 domain_of:
 - Organisasjonselement
 range: Personalressurs

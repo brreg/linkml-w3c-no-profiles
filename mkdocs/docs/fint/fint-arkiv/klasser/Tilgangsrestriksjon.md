@@ -3,8 +3,13 @@
 # Slot: tilgangsrestriksjon 
 
 
+_Tilgangsrestriksjon._
 
-URI: [https://schema.fintlabs.no/arkiv/:tilgangsrestriksjon](https://schema.fintlabs.no/arkiv/:tilgangsrestriksjon)
+
+
+
+
+URI: [ark:tilgangsrestriksjon](https://schema.fintlabs.no/arkiv/tilgangsrestriksjon)
 Alias: tilgangsrestriksjon
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +22,8 @@ Alias: tilgangsrestriksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  no  |
-| [Skjerming](skjerming.md) | Skjerming av mappe, registrering eller dokument etter offentleglova |  no  |
+| [Skjerming](skjerming.md) | Skjerming av mappe, registrering eller dokument etter offentleglova |  yes  |
+| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
 
 
 
@@ -31,8 +36,9 @@ Alias: tilgangsrestriksjon
 
 | Property | Value |
 | --- | --- |
-| Range | [String](string.md) |
+| Range | [Tilgangsrestriksjon](tilgangsrestriksjon.md) |
 | Domain Of | [Autorisasjon](autorisasjon.md), [Skjerming](skjerming.md) |
+| Slot URI | [ark:tilgangsrestriksjon](https://schema.fintlabs.no/arkiv/tilgangsrestriksjon) |
 
 ### Cardinality and Requirements
 
@@ -54,12 +60,19 @@ Alias: tilgangsrestriksjon
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-arkiv
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:tilgangsrestriksjon |
+| self | ark:tilgangsrestriksjon |
 | native | https://schema.fintlabs.no/arkiv/:tilgangsrestriksjon |
 
 
@@ -70,11 +83,15 @@ Alias: tilgangsrestriksjon
 <details>
 ```yaml
 name: tilgangsrestriksjon
+description: Tilgangsrestriksjon.
+from_schema: https://data.norge.no/linkml/fint-arkiv
+rank: 1000
+slot_uri: ark:tilgangsrestriksjon
 alias: tilgangsrestriksjon
 domain_of:
 - Autorisasjon
 - Skjerming
-range: string
+range: Tilgangsrestriksjon
 
 ```
 </details>

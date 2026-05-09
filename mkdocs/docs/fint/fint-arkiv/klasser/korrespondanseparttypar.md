@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:korrespondanseparttypar](https://schema.fintlabs.no/arkiv/:korrespondanseparttypar)
+URI: [ark:korrespondanseparttypar](https://schema.fintlabs.no/arkiv/korrespondanseparttypar)
 Alias: korrespondanseparttypar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: korrespondanseparttypar
 | --- | --- |
 | Range | [KorrespondansepartType](korrespondanseparttype.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:korrespondanseparttypar](https://schema.fintlabs.no/arkiv/korrespondanseparttypar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: korrespondanseparttypar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:korrespondanseparttypar |
+| self | ark:korrespondanseparttypar |
 | native | https://schema.fintlabs.no/arkiv/:korrespondanseparttypar |
 
 
@@ -86,8 +80,8 @@ Alias: korrespondanseparttypar
 name: korrespondanseparttypar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:korrespondanseparttypar
 alias: korrespondanseparttypar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: KorrespondansepartType

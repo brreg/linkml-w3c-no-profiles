@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/personvern/:samtykker](https://schema.fintlabs.no/personvern/:samtykker)
+URI: [pvn:samtykker](https://schema.fintlabs.no/personvern/samtykker)
 Alias: samtykker
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: samtykker
 | --- | --- |
 | Range | [Samtykke](samtykke.md) |
 | Domain Of | [PersonvernContainer](personverncontainer.md) |
+| Slot URI | [pvn:samtykker](https://schema.fintlabs.no/personvern/samtykker) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [PersonvernContainer](personverncontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: samtykker
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/personvern/:samtykker |
+| self | pvn:samtykker |
 | native | https://schema.fintlabs.no/personvern/:samtykker |
 
 
@@ -86,8 +80,8 @@ Alias: samtykker
 name: samtykker
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
+slot_uri: pvn:samtykker
 alias: samtykker
-owner: PersonvernContainer
 domain_of:
 - PersonvernContainer
 range: Samtykke

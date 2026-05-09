@@ -4,7 +4,7 @@
 
 
 
-URI: [https://schema.fintlabs.no/arkiv/:partRollar](https://schema.fintlabs.no/arkiv/:partRollar)
+URI: [ark:partRollar](https://schema.fintlabs.no/arkiv/partRollar)
 Alias: partRollar
 
 <!-- no inheritance hierarchy -->
@@ -32,19 +32,13 @@ Alias: partRollar
 | --- | --- |
 | Range | [PartRolle](partrolle.md) |
 | Domain Of | [ArkivContainer](arkivcontainer.md) |
+| Slot URI | [ark:partRollar](https://schema.fintlabs.no/arkiv/partRollar) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
 | Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [ArkivContainer](arkivcontainer.md) |
-
-
 
 
 
@@ -73,7 +67,7 @@ Alias: partRollar
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/arkiv/:partRollar |
+| self | ark:partRollar |
 | native | https://schema.fintlabs.no/arkiv/:partRollar |
 
 
@@ -86,8 +80,8 @@ Alias: partRollar
 name: partRollar
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
+slot_uri: ark:partRollar
 alias: partRollar
-owner: ArkivContainer
 domain_of:
 - ArkivContainer
 range: PartRolle

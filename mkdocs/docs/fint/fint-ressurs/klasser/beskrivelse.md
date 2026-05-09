@@ -3,8 +3,13 @@
 # Slot: beskrivelse 
 
 
+_Beskriven namn eller omtale._
 
-URI: [https://schema.fintlabs.no/ressurs/:beskrivelse](https://schema.fintlabs.no/ressurs/:beskrivelse)
+
+
+
+
+URI: [fint:beskrivelse](https://schema.fintlabs.no/beskrivelse)
 Alias: beskrivelse
 
 <!-- no inheritance hierarchy -->
@@ -17,10 +22,10 @@ Alias: beskrivelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  no  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
 | [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
 
 
 
@@ -35,6 +40,7 @@ Alias: beskrivelse
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Applikasjon](applikasjon.md), [Applikasjonsressurs](applikasjonsressurs.md), [Rettighet](rettighet.md), [Periode](periode.md) |
+| Slot URI | [fint:beskrivelse](https://schema.fintlabs.no/beskrivelse) |
 
 ### Cardinality and Requirements
 
@@ -56,12 +62,19 @@ Alias: beskrivelse
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:beskrivelse |
+| self | fint:beskrivelse |
 | native | https://schema.fintlabs.no/ressurs/:beskrivelse |
 
 
@@ -72,6 +85,10 @@ Alias: beskrivelse
 <details>
 ```yaml
 name: beskrivelse
+description: Beskriven namn eller omtale.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: fint:beskrivelse
 alias: beskrivelse
 domain_of:
 - Applikasjon

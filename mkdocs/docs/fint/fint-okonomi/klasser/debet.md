@@ -22,7 +22,7 @@ Alias: debet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  no  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 
 
 
@@ -43,24 +43,10 @@ Alias: debet
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [Postering](postering.md) |
 
 
 
 
-
-
-
-
-## In Subsets
-
-
-* [Obligatorisk](obligatorisk.md)
 
 
 
@@ -97,17 +83,13 @@ Alias: debet
 ```yaml
 name: debet
 description: Angir om posteringa er debet eller kredit.
-in_subset:
-- Obligatorisk
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
 slot_uri: okn:debet
 alias: debet
-owner: Postering
 domain_of:
 - Postering
 range: boolean
-required: true
 
 ```
 </details>

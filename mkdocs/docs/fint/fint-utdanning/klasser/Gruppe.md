@@ -100,7 +100,7 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Namn |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen |
 
 
 
@@ -135,7 +135,7 @@ URI: [utd:Gruppe](https://schema.fintlabs.no/utdanning/Gruppe)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale |
 
 
 
@@ -287,7 +287,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -331,6 +330,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -339,12 +339,12 @@ attributes:
     required: true
   navn:
     name: navn
-    description: Namn.
+    description: Hovudnamn for ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:navn
+    slot_uri: fint:navn
     alias: navn
     owner: Gruppe
     domain_of:
@@ -375,16 +375,17 @@ attributes:
     - Tilrettelegging
     - Varseltype
     - Vitnemalsmerknad
+    - Begrep
     range: string
     required: true
   beskrivelse:
     name: beskrivelse
-    description: Skildring.
+    description: Beskriven namn eller omtale.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:beskrivelse
+    slot_uri: fint:beskrivelse
     alias: beskrivelse
     owner: Gruppe
     domain_of:

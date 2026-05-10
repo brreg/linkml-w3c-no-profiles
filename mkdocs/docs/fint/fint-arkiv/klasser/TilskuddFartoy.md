@@ -775,6 +775,7 @@ attributes:
     - TilknyttetRegistreringSom
     - Variantformat
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson

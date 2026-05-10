@@ -9,46 +9,47 @@
     rdfs:comment "Rotcontainer for FINT Økonomi-instansar." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class okn:Postering ;
+    sh:property [ sh:class okn:Leverandorgruppe ;
             sh:nodeKind sh:IRI ;
-            sh:order 4 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:posteringar> ],
-        [ sh:class okn:Fakturagrunnlag ;
-            sh:nodeKind sh:IRI ;
-            sh:order 1 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:fakturagrunnlag> ],
+            sh:order 6 ;
+            sh:path okn:leverandorgrupper ],
         [ sh:class okn:Faktura ;
             sh:nodeKind sh:IRI ;
             sh:order 0 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:fakturaer> ],
-        [ sh:class okn:Leverandorgruppe ;
-            sh:nodeKind sh:IRI ;
-            sh:order 6 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:leverandorgrupper> ],
+            sh:path okn:fakturaer ],
         [ sh:class okn:Fakturautsteder ;
             sh:nodeKind sh:IRI ;
             sh:order 2 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:fakturautstederear> ],
-        [ sh:class okn:Leverandor ;
+            sh:path okn:fakturautstederear ],
+        [ sh:class okn:Postering ;
             sh:nodeKind sh:IRI ;
-            sh:order 5 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:leverandorar> ],
+            sh:order 4 ;
+            sh:path okn:posteringar ],
         [ sh:class okn:Valuta ;
             sh:nodeKind sh:IRI ;
             sh:order 9 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:valutaer> ],
-        [ sh:class okn:Merverdiavgift ;
-            sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:merverdiavgifter> ],
+            sh:path okn:valutaer ],
         [ sh:class okn:Transaksjon ;
             sh:nodeKind sh:IRI ;
             sh:order 3 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:transaksjonar> ],
+            sh:path okn:transaksjonar ],
+        [ sh:class okn:Fakturagrunnlag ;
+            sh:description "Grunnlag for fakturering." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path okn:fakturagrunnlag ],
         [ sh:class okn:Vare ;
             sh:nodeKind sh:IRI ;
             sh:order 7 ;
-            sh:path <https://schema.fintlabs.no/okonomi/:varer> ] ;
+            sh:path okn:varer ],
+        [ sh:class okn:Merverdiavgift ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path okn:merverdiavgifter ],
+        [ sh:class okn:Leverandor ;
+            sh:nodeKind sh:IRI ;
+            sh:order 5 ;
+            sh:path okn:leverandorar ] ;
     sh:targetClass <https://schema.fintlabs.no/okonomi/:OkonomiContainer> .
 
 okn:Bilag a sh:NodeShape ;
@@ -98,11 +99,13 @@ okn:Fakturalinje a sh:NodeShape ;
     rdfs:comment "Del av Fakturagrunnlag som skildrar ei enkelt vare (kompleks datatype)." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "Fritekst som skildrar varen slik han er levert." ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path okn:fritekst ],
+    sh:property [ sh:class okn:Vare ;
+            sh:description "Vare i vareregisteret." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path okn:vare ],
         [ sh:datatype xsd:float ;
             sh:description "Mengd av varen levert." ;
             sh:maxCount 1 ;
@@ -110,15 +113,13 @@ okn:Fakturalinje a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path okn:antall ],
-        [ sh:class okn:Vare ;
-            sh:description "Vare i vareregisteret." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path okn:vare ],
+        [ sh:datatype xsd:string ;
+            sh:description "Fritekst som skildrar varen slik han er levert." ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path okn:fritekst ],
         [ sh:datatype xsd:integer ;
-            sh:description "Pris per eining levert, i øre." ;
+            sh:description "Pris per eining, i øre." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -130,70 +131,44 @@ okn:Fakturamottaker a sh:NodeShape ;
     rdfs:comment "Aktør som skal betale faktura (kompleks datatype)." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:anyURI ;
-            sh:description "Referanse til Person (Administrasjon) som skal betale faktura." ;
+    sh:property [ sh:class fint:Person ;
+            sh:description "Referanse til Person i Administrasjon-domenet." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
+            sh:nodeKind sh:IRI ;
             sh:order 0 ;
-            sh:path okn:person ] ;
+            sh:path fint:person ] ;
     sh:targetClass okn:Fakturamottaker .
 
 okn:Faktura a sh:NodeShape ;
     rdfs:comment "Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "Namn på mottakar." ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Status på betaling." ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path okn:mottaker ],
-        [ sh:datatype xsd:date ;
-            sh:description "Dato for utferding av faktura." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path okn:dato ],
+            sh:order 7 ;
+            sh:path okn:betalt ],
         [ sh:datatype xsd:boolean ;
-            sh:description "Status på utsending." ;
+            sh:description "Status på kreditering." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path okn:fakturert ],
+            sh:order 9 ;
+            sh:path okn:kreditert ],
         [ sh:datatype xsd:integer ;
-            sh:description "Gjenståande beløp å betale, i øre (restbeløp)." ;
+            sh:description "Beløp, i øre." ;
             sh:maxCount 1 ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path okn:restbelop ],
-        [ sh:class fint:Adresse ;
-            sh:description "Adresse til mottakar." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 6 ;
-            sh:path okn:adresse ],
+            sh:order 4 ;
+            sh:path okn:belop ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
-        [ sh:datatype xsd:date ;
-            sh:description "Frist for betaling." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:forfallsdato ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Status på betaling." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path okn:betalt ],
         [ sh:class okn:Fakturagrunnlag ;
             sh:description "Grunnlag for fakturering." ;
             sh:maxCount 1 ;
@@ -201,6 +176,19 @@ okn:Faktura a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 11 ;
             sh:path okn:fakturagrunnlag ],
+        [ sh:class fint:Adresse ;
+            sh:description "Adresse til matrikkeleining." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path fint:adresse ],
+        [ sh:datatype xsd:string ;
+            sh:description "Namn på mottakar." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path okn:mottaker ],
         [ sh:class fint:Identifikator ;
             sh:description "Identifikator oppretta i fakturaprogrammet." ;
             sh:maxCount 1 ;
@@ -209,18 +197,31 @@ okn:Faktura a sh:NodeShape ;
             sh:order 1 ;
             sh:path okn:fakturanummer ],
         [ sh:datatype xsd:integer ;
-            sh:description "Beløp mottakar skal betale, i øre (beløp)." ;
+            sh:description "Gjenståande beløp å betale, i øre." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path okn:restbelop ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Status på utsending." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path okn:fakturert ],
+        [ sh:datatype xsd:date ;
+            sh:description "Frist for betaling eller forfallsdato for transaksjon." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path okn:belop ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Status på kreditering." ;
+            sh:order 3 ;
+            sh:path okn:forfallsdato ],
+        [ sh:datatype xsd:date ;
+            sh:description "Dato for utferding av faktura." ;
             sh:maxCount 1 ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path okn:kreditert ] ;
+            sh:order 2 ;
+            sh:path okn:dato ] ;
     sh:targetClass okn:Faktura .
 
 okn:Kontostreng a sh:NodeShape ;
@@ -228,11 +229,11 @@ okn:Kontostreng a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "Funksjonskode (KOSTRA)." ;
+            sh:description "Prosjektkode." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path okn:funksjon ],
+            sh:order 3 ;
+            sh:path okn:prosjekt ],
         [ sh:datatype xsd:string ;
             sh:description "Artskonto (type utgift/inntekt)." ;
             sh:maxCount 1 ;
@@ -240,32 +241,32 @@ okn:Kontostreng a sh:NodeShape ;
             sh:order 0 ;
             sh:path okn:art ],
         [ sh:datatype xsd:string ;
-            sh:description "Prosjektkode." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:prosjekt ],
-        [ sh:datatype xsd:string ;
             sh:description "Ansvarsomrade." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path okn:ansvar ] ;
+            sh:path okn:ansvar ],
+        [ sh:datatype xsd:string ;
+            sh:description "Funksjonskode (KOSTRA)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path okn:funksjon ] ;
     sh:targetClass okn:Kontostreng .
 
 okn:Leverandorgruppe a sh:NodeShape ;
-    rdfs:comment "Gruppering av leverandørar (Leverandørgruppe)." ;
+    rdfs:comment "Gruppering av leverandørar." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "Namn på leverandørgruppen." ;
+            sh:description "Hovudnamn for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path okn:navn ],
+            sh:path fint:navn ],
         [ sh:class okn:Leverandor ;
-            sh:description "Leverandørar i leverandørgruppen." ;
+            sh:description "Leverandør." ;
             sh:nodeKind sh:IRI ;
             sh:order 2 ;
             sh:path okn:leverandor ],
@@ -290,38 +291,38 @@ okn:Merverdiavgift a sh:NodeShape ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
         [ sh:class fint:Periode ;
-            sh:description "Angir gyldighetsperioden for omgrepet/koden." ;
+            sh:description "Periode ressursen er gyldig for." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 4 ;
-            sh:path okn:gyldighetsperiode ],
-        [ sh:datatype xsd:string ;
-            sh:description "Hovudnamn for omgrepet." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path okn:navn ],
-        [ sh:datatype xsd:integer ;
-            sh:description "Sats for merverdiavgift." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:sats ],
+            sh:path fint:gyldighetsperiode ],
         [ sh:datatype xsd:string ;
             sh:description "Verdi som identifiserer omgrepet." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path okn:kode ],
+            sh:path fint:kode ],
         [ sh:datatype xsd:boolean ;
             sh:description "Angir at koden er passiv og ikkje kan veljast." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
-            sh:path okn:passiv ] ;
+            sh:path fint:passiv ],
+        [ sh:datatype xsd:string ;
+            sh:description "Hovudnamn for ressursen." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path fint:navn ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Sats for merverdiavgift." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path okn:sats ] ;
     sh:targetClass okn:Merverdiavgift .
 
 okn:Postering a sh:NodeShape ;
@@ -329,18 +330,12 @@ okn:Postering a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:integer ;
-            sh:description "Posteringsbeløp med to desimalar (beløp)." ;
+            sh:description "Beløp, i øre." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
             sh:path okn:belop ],
-        [ sh:class okn:Transaksjon ;
-            sh:description "Transaksjonen posteringa tilhøyrer." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 5 ;
-            sh:path okn:transaksjon ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
@@ -348,71 +343,44 @@ okn:Postering a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Angir om posteringa er debet eller kredit." ;
+        [ sh:class okn:Transaksjon ;
+            sh:description "Transaksjonen posteringa tilhøyrer." ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:debet ],
-        [ sh:class okn:Kontostreng ;
-            sh:description "Kontodimensjonar for posteringa." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 4 ;
-            sh:path okn:kontering ],
+            sh:nodeKind sh:IRI ;
+            sh:order 5 ;
+            sh:path okn:transaksjon ],
         [ sh:class fint:Identifikator ;
             sh:description "Intern unik identifikator i økonomisystemet." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
-            sh:path okn:posteringsId ] ;
+            sh:path okn:posteringsId ],
+        [ sh:class okn:Kontostreng ;
+            sh:description "Kontodimensjonar." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 4 ;
+            sh:path okn:kontering ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Angir om posteringa er debet eller kredit." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path okn:debet ] ;
     sh:targetClass okn:Postering .
 
 okn:Transaksjon a sh:NodeShape ;
     rdfs:comment "Overføring av pengar til eller frå eksterne partar." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class fint:Identifikator ;
-            sh:description "Intern unik identifikator i økonomisystemet." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
+    sh:property [ sh:class okn:Bilag ;
+            sh:description "Bilag til transaksjonen." ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path okn:transaksjonsId ],
-        [ sh:datatype xsd:dateTime ;
-            sh:description "Tidspunkt for siste endring i transaksjonen." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path okn:oppdateringstidspunkt ],
-        [ sh:class okn:Leverandor ;
-            sh:description "Leverandør knytt til transaksjonen (leverandor)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path okn:leverandor ],
-        [ sh:datatype xsd:string ;
-            sh:description "Skildring av transaksjonen." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path okn:beskrivelse ],
-        [ sh:class okn:Postering ;
-            sh:description "Posteringar tilhøyrande transaksjonen." ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 9 ;
-            sh:path okn:postering ],
-        [ sh:datatype xsd:integer ;
-            sh:description "Transaksjonsbeløp med to desimalar (beløp)." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path okn:belop ],
+            sh:order 5 ;
+            sh:path okn:bilag ],
         [ sh:class okn:Valuta ;
             sh:description "Valuta for oppgjeve beløp." ;
             sh:maxCount 1 ;
@@ -420,11 +388,44 @@ okn:Transaksjon a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 11 ;
             sh:path okn:valuta ],
-        [ sh:class okn:Bilag ;
-            sh:description "Bilag til transaksjonen." ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 5 ;
-            sh:path okn:bilag ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Beløp, i øre." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path okn:belop ],
+        [ sh:class okn:Leverandor ;
+            sh:description "Leverandør." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path okn:leverandor ],
+        [ sh:class okn:Postering ;
+            sh:description "Posteringar tilhøyrande transaksjonen." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path okn:postering ],
+        [ sh:datatype xsd:date ;
+            sh:description "Frist for betaling eller forfallsdato for transaksjon." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path okn:forfallsdato ],
+        [ sh:datatype xsd:string ;
+            sh:description "Beskriven namn eller omtale." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path fint:beskrivelse ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Referanse til Personalressurs (Administrasjon) som er ansvarleg." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path okn:ansvarlig ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
@@ -432,25 +433,25 @@ okn:Transaksjon a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Referanse til Personalressurs (Administrasjon) som er ansvarleg for å godkjenne transaksjonen." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path okn:ansvarlig ],
         [ sh:datatype xsd:dateTime ;
             sh:description "Tidspunkt for registrering av transaksjonen." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
             sh:path okn:transaksjonstidspunkt ],
-        [ sh:datatype xsd:date ;
-            sh:description "Dato transaksjonen forfell." ;
+        [ sh:datatype xsd:dateTime ;
+            sh:description "Tidspunkt for siste endring i transaksjonen." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path okn:oppdateringstidspunkt ],
+        [ sh:class fint:Identifikator ;
+            sh:description "Intern unik identifikator i økonomisystemet." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:forfallsdato ] ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path okn:transaksjonsId ] ;
     sh:targetClass okn:Transaksjon .
 
 okn:Valuta a sh:NodeShape ;
@@ -458,17 +459,19 @@ okn:Valuta a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "Namn på valutaen." ;
+            sh:description "Verdi som identifiserer omgrepet." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path fint:kode ],
+        [ sh:datatype xsd:string ;
+            sh:description "Hovudnamn for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path okn:namn ],
-        [ sh:datatype xsd:boolean ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path okn:passiv ],
+            sh:path fint:navn ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
@@ -476,33 +479,70 @@ okn:Valuta a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
-        [ sh:datatype xsd:string ;
-            sh:description "Valutakode (t.d. NOK, EUR, USD)." ;
+        [ sh:datatype xsd:boolean ;
+            sh:description "Angir at koden er passiv og ikkje kan veljast." ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path okn:kode ],
+            sh:order 4 ;
+            sh:path fint:passiv ],
         [ sh:class fint:Periode ;
+            sh:description "Periode ressursen er gyldig for." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 3 ;
-            sh:path okn:gyldighetsperiode ] ;
+            sh:path fint:gyldighetsperiode ] ;
     sh:targetClass okn:Valuta .
 
 okn:Fakturagrunnlag a sh:NodeShape ;
     rdfs:comment "Grunnlag for fakturering." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:anyURI ;
-            sh:description "URI-identifikator for ressursen." ;
+    sh:property [ sh:class okn:Faktura ;
+            sh:description "Utferdigde fakturaer for fakturagrunnlaget." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path okn:faktura ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Del av totalbeløp som er avgifter, i øre." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path okn:avgiftsbelop ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Del av totalbeløp som utgjer summen av fakturalinjene, i øre." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path okn:nettobelop ],
+        [ sh:class okn:Fakturamottaker ;
+            sh:description "Mottakar som skal betale faktura." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path okn:fakturamottaker ],
+        [ sh:datatype xsd:date ;
+            sh:description "Dato varer eller tenester vart leverte." ;
+            sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path <https://schema.fintlabs.no/:id> ],
+            sh:order 4 ;
+            sh:path okn:leveringsdato ],
+        [ sh:class fint:Identifikator ;
+            sh:description "Unik identifikator for ordren det skal utferdigast faktura på." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path okn:ordrenummer ],
+        [ sh:class okn:Fakturautsteder ;
+            sh:description "Utstedar av faktura og mottakar av betaling." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path okn:fakturautsteder ],
         [ sh:datatype xsd:integer ;
-            sh:description "Totalt beløp på faktura inkl. avgifter, i øre (totalbeløp)." ;
+            sh:description "Totalt beløp på faktura inkl. avgifter, i øre." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
@@ -513,68 +553,37 @@ okn:Fakturagrunnlag a sh:NodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 3 ;
             sh:path okn:fakturalinjer ],
-        [ sh:class okn:Fakturamottaker ;
-            sh:description "Mottakar som skal betale faktura." ;
+        [ sh:datatype xsd:anyURI ;
+            sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path okn:fakturamottaker ],
-        [ sh:class okn:Faktura ;
-            sh:description "Utferdigde fakturaer for fakturagrunnlaget." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path okn:faktura ],
-        [ sh:datatype xsd:date ;
-            sh:description "Dato varer eller tenester vart leverte." ;
-            sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path okn:leveringsdato ],
-        [ sh:class okn:Fakturautsteder ;
-            sh:description "Utstedar av faktura og mottakar av betaling." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 9 ;
-            sh:path okn:fakturautsteder ],
-        [ sh:class fint:Identifikator ;
-            sh:description "Unik identifikator for ordren det skal utferdigast faktura på." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path okn:ordrenummer ],
-        [ sh:datatype xsd:integer ;
-            sh:description "Del av totalbeløp som utgjer summen av fakturalinjene, i øre (nettobeløp)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path okn:nettobelop ],
-        [ sh:datatype xsd:integer ;
-            sh:description "Del av totalbeløp som er avgifter, i øre (avgiftsbeløp)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path okn:avgiftsbelop ] ;
+            sh:order 0 ;
+            sh:path <https://schema.fintlabs.no/:id> ] ;
     sh:targetClass okn:Fakturagrunnlag .
 
 okn:Fakturautsteder a sh:NodeShape ;
     rdfs:comment "Eining som utformar og oversender faktura og mottar betaling." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "Juridisk namn på fakturutstedar." ;
+    sh:property [ sh:class okn:Fakturagrunnlag ;
+            sh:description "Grunnlag for fakturering." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path okn:fakturagrunnlag ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Referanse til Organisasjonselement (Administrasjon)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path okn:organisasjonselement ],
+        [ sh:datatype xsd:string ;
+            sh:description "Hovudnamn for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path okn:navn ],
-        [ sh:class okn:Fakturagrunnlag ;
-            sh:description "Alle fakturagrunnlag for fakturutstedaren." ;
-            sh:nodeKind sh:IRI ;
-            sh:order 2 ;
-            sh:path okn:fakturagrunnlag ],
+            sh:path fint:navn ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
@@ -583,20 +592,14 @@ okn:Fakturautsteder a sh:NodeShape ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
         [ sh:class okn:Vare ;
-            sh:description "Alle varer i vareregisteret til fakturutstedaren." ;
+            sh:description "Vare i vareregisteret." ;
             sh:nodeKind sh:IRI ;
             sh:order 4 ;
-            sh:path okn:vare ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:organisasjonselement ] ;
+            sh:path okn:vare ] ;
     sh:targetClass okn:Fakturautsteder .
 
 okn:Leverandor a sh:NodeShape ;
-    rdfs:comment "Person eller verksemd som leverer produkt eller tenester (Leverandør)." ;
+    rdfs:comment "Person eller verksemd som leverer produkt eller tenester." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:anyURI ;
@@ -605,18 +608,6 @@ okn:Leverandor a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
             sh:path okn:virksomhet ],
-        [ sh:class fint:Identifikator ;
-            sh:description "Nummer som identifiserer ein leverandør (leverandørnummer)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path okn:leverandornummer ],
-        [ sh:datatype xsd:string ;
-            sh:description "Kontonummer til leverandøren." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path okn:kontonummer ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
@@ -624,58 +615,75 @@ okn:Leverandor a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path <https://schema.fintlabs.no/:id> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Kontonummer til leverandøren." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path okn:kontonummer ],
+        [ sh:class fint:Person ;
+            sh:description "Referanse til Person i Administrasjon-domenet." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path fint:person ],
         [ sh:class okn:Leverandorgruppe ;
-            sh:description "Gruppe av leverandørar leverandøren tilhøyrer (leverandørgruppe)." ;
+            sh:description "Gruppe av leverandørar leverandøren tilhøyrer." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:order 4 ;
             sh:path okn:leverandorgruppe ],
-        [ sh:datatype xsd:anyURI ;
-            sh:description "Referanse til Person (Administrasjon) som er leverandør." ;
+        [ sh:class fint:Identifikator ;
+            sh:description "Nummer som identifiserer ein leverandør." ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path okn:person ] ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path okn:leverandornummer ] ;
     sh:targetClass okn:Leverandor .
 
 okn:Vare a sh:NodeShape ;
     rdfs:comment "Vare eller teneste som kan leverast og fakturerast." ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:integer ;
-            sh:description "Varens pris per eining i vareregisteret, i øre." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path okn:pris ],
-        [ sh:datatype xsd:string ;
-            sh:description "Verdi som identifiserer omgrepet." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path okn:kode ],
-        [ sh:class okn:Merverdiavgift ;
+    sh:property [ sh:class okn:Merverdiavgift ;
             sh:description "Varens avgiftsklasse og -sats." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:order 9 ;
             sh:path okn:merverdiavgift ],
+        [ sh:class fint:Periode ;
+            sh:description "Periode ressursen er gyldig for." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 6 ;
+            sh:path fint:gyldighetsperiode ],
         [ sh:class okn:Kontostreng ;
-            sh:description "Varens kontering i økonomisystemet." ;
+            sh:description "Kontodimensjonar." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 5 ;
             sh:path okn:kontering ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Angir at koden er passiv og ikkje kan veljast." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path fint:passiv ],
         [ sh:datatype xsd:string ;
-            sh:description "Hovudnamn for omgrepet." ;
+            sh:description "Hovudnamn for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path okn:navn ],
+            sh:path fint:navn ],
+        [ sh:class okn:Fakturautsteder ;
+            sh:description "Utstedar av faktura og mottakar av betaling." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path okn:fakturautsteder ],
         [ sh:datatype xsd:string ;
             sh:description "Namn på mengdeeininga varen leverast i." ;
             sh:maxCount 1 ;
@@ -683,32 +691,27 @@ okn:Vare a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 3 ;
             sh:path okn:enhet ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Angir at koden er passiv og ikkje kan veljast." ;
+        [ sh:datatype xsd:string ;
+            sh:description "Verdi som identifiserer omgrepet." ;
             sh:maxCount 1 ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path okn:passiv ],
+            sh:order 1 ;
+            sh:path fint:kode ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Pris per eining, i øre." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path okn:pris ],
         [ sh:datatype xsd:anyURI ;
             sh:description "URI-identifikator for ressursen." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path <https://schema.fintlabs.no/:id> ],
-        [ sh:class fint:Periode ;
-            sh:description "Angir gyldighetsperioden for omgrepet/koden." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 6 ;
-            sh:path okn:gyldighetsperiode ],
-        [ sh:class okn:Fakturautsteder ;
-            sh:description "Fakturautstedar for varen." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 8 ;
-            sh:path okn:fakturautsteder ] ;
+            sh:path <https://schema.fintlabs.no/:id> ] ;
     sh:targetClass okn:Vare .
 
 

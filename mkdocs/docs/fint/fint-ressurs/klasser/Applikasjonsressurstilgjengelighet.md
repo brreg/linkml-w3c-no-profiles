@@ -365,6 +365,7 @@ attributes:
     - Produsent
     - Status
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson

@@ -43,7 +43,7 @@ URI: [fint:Valuta](https://schema.fintlabs.no/Valuta)
     
 
         
-      Valuta : valuta_naam
+      Valuta : valuta_navn
         
       
 ```
@@ -92,7 +92,7 @@ URI: [fint:Valuta](https://schema.fintlabs.no/Valuta)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [bokstavkode](bokstavkode.md) | 1 <br/> [Identifikator](identifikator.md) | Bokstavkode for aktuell valuta |
-| [valuta_naam](valuta_naam.md) | 1 <br/> [String](string.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | 1 <br/> [String](string.md) | Namn på valuta |
 | [nummerkode](nummerkode.md) | 1 <br/> [Identifikator](identifikator.md) | Nummerkode for aktuell valuta |
 
 
@@ -242,7 +242,7 @@ from_schema: https://data.norge.no/linkml/fint-utdanning
 slots:
 - id
 - bokstavkode
-- valuta_naam
+- valuta_navn
 - nummerkode
 slot_usage:
   bokstavkode:
@@ -250,8 +250,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  valuta_naam:
-    name: valuta_naam
+  valuta_navn:
+    name: valuta_navn
     in_subset:
     - Obligatorisk
     required: true
@@ -278,8 +278,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  valuta_naam:
-    name: valuta_naam
+  valuta_navn:
+    name: valuta_navn
     in_subset:
     - Obligatorisk
     required: true
@@ -301,7 +301,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -345,6 +344,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -366,15 +366,15 @@ attributes:
     range: Identifikator
     required: true
     inlined: true
-  valuta_naam:
-    name: valuta_naam
+  valuta_navn:
+    name: valuta_navn
     description: Namn på valuta.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
     slot_uri: fint:valutaNavn
-    alias: valuta_naam
+    alias: valuta_navn
     owner: Valuta
     domain_of:
     - Valuta

@@ -150,6 +150,15 @@ URI: [ark:Personalmappe](https://schema.fintlabs.no/arkiv/Personalmappe)
         
       Personalmappe : person
         
+          
+    
+        
+        
+        Personalmappe --> "1" Person : person
+        click Person href "../Person/"
+    
+
+        
       Personalmappe : personalressurs
         
       Personalmappe : personnavn
@@ -287,7 +296,7 @@ URI: [ark:Personalmappe](https://schema.fintlabs.no/arkiv/Personalmappe)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [personnavn](personnavn.md) | 1 <br/> [Personnavn](personnavn.md) | Namn på person (Personnavn-objekt) |
-| [person](person.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Person i Administrasjon-domenet |
+| [person](person.md) | 1 <br/> [Person](person.md) | Referanse til Person i Administrasjon-domenet |
 | [leder](leder.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Personalressurs som er arbeidstakarens leiar |
 | [arbeidssted](arbeidssted.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Organisasjonselement som er arbeidstakarens arbeidsstad |
 | [personalressurs](personalressurs.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | Referanse til Personalressurs i Administrasjon-domenet |
@@ -586,12 +595,13 @@ attributes:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    slot_uri: ark:person
+    slot_uri: fint:person
     alias: person
     owner: Personalmappe
     domain_of:
     - Personalmappe
-    range: uriorcurie
+    - Elev
+    range: Person
     required: true
   leder:
     name: leder
@@ -825,6 +835,7 @@ attributes:
     - TilknyttetRegistreringSom
     - Variantformat
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson

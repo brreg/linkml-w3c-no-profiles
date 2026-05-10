@@ -3,13 +3,13 @@
 # Slot: forretningsadresse 
 
 
-_Forretningsadresse._
+_Besøksadresse til ein organisasjonseining._
 
 
 
 
 
-URI: [utd:forretningsadresse](https://schema.fintlabs.no/utdanning/forretningsadresse)
+URI: [fint:forretningsadresse](https://schema.fintlabs.no/forretningsadresse)
 Alias: forretningsadresse
 
 <!-- no inheritance hierarchy -->
@@ -22,8 +22,8 @@ Alias: forretningsadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
@@ -39,7 +39,7 @@ Alias: forretningsadresse
 | --- | --- |
 | Range | [Adresse](adresse.md) |
 | Domain Of | [Skole](skole.md), [Enhet](enhet.md) |
-| Slot URI | [utd:forretningsadresse](https://schema.fintlabs.no/utdanning/forretningsadresse) |
+| Slot URI | [fint:forretningsadresse](https://schema.fintlabs.no/forretningsadresse) |
 
 ### Cardinality and Requirements
 
@@ -73,7 +73,7 @@ Alias: forretningsadresse
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:forretningsadresse |
+| self | fint:forretningsadresse |
 | native | https://schema.fintlabs.no/utdanning/:forretningsadresse |
 
 
@@ -84,10 +84,10 @@ Alias: forretningsadresse
 <details>
 ```yaml
 name: forretningsadresse
-description: Forretningsadresse.
+description: Besøksadresse til ein organisasjonseining.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:forretningsadresse
+slot_uri: fint:forretningsadresse
 alias: forretningsadresse
 domain_of:
 - Skole

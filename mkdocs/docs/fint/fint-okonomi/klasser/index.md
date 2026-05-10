@@ -25,6 +25,7 @@ Name: fint-okonomi
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Bilag](bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |
 | [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |
 | [Fakturagrunnlag](fakturagrunnlag.md) | Grunnlag for fakturering |
 | [Fakturalinje](fakturalinje.md) | Del av Fakturagrunnlag som skildrar ei enkelt vare (kompleks datatype) |
@@ -74,6 +75,7 @@ Name: fint-okonomi
 | [dato](dato.md) | Dato for utferding av faktura |
 | [debet](debet.md) | Angir om posteringa er debet eller kredit |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
 | [enhet](enhet.md) | Namn på mengdeeininga varen leverast i |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
@@ -108,7 +110,7 @@ Name: fint-okonomi
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontering](kontering.md) | Kontodimensjonar |
 | [kontonummer](kontonummer.md) | Kontonummer til leverandøren |
 | [kreditert](kreditert.md) | Status på kreditering |
@@ -127,7 +129,7 @@ Name: fint-okonomi
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
 | [mottaker](mottaker.md) | Namn på mottakar |
-| [naam](naam.md) | Namn på eining eller kodeverk-element |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettobelop](nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
@@ -139,8 +141,8 @@ Name: fint-okonomi
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](person.md) | Referanse til Person (Administrasjon) |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person](person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postering](postering.md) | Posteringar tilhøyrande transaksjonen |
@@ -167,7 +169,7 @@ Name: fint-okonomi
 | [type](type.md) | Beskriv kva slags type |
 | [url](url.md) | URL til eksternt dokument |
 | [valuta](valuta.md) | Valuta for oppgjeve beløp |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [valutaer](valutaer.md) |  |
 | [vare](vare.md) | Vare i vareregisteret |
 | [varer](varer.md) |  |

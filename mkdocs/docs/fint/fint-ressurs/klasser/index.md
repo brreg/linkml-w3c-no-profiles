@@ -30,6 +30,7 @@ Name: fint-ressurs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |
 | [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |
 | [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |
 | [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |
 | [Enhetstype](enhetstype.md) | Type digital eining |
@@ -80,6 +81,7 @@ Name: fint-ressurs
 | [einingsgrupper](einingsgrupper.md) |  |
 | [einingstypar](einingstypar.md) |  |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
 | [enhetsgruppe](enhetsgruppe.md) | Einingsgruppen dette medlemskapet tilhøyrer |
 | [enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Einingsgruppemelemskap |
 | [enhetskostnad](enhetskostnad.md) | Kostnad per ressurs |
@@ -110,7 +112,7 @@ Name: fint-ressurs
 | [konsument](konsument.md) | Referanse til Organisasjonselement som har tilgang til ressursen |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kreverGodkjenning](krevergodkjenning.md) | True dersom tildeling av ressursen krev godkjenning |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
@@ -121,7 +123,7 @@ Name: fint-ressurs
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [naam](naam.md) | Namn på ressursen eller kodeverk-elementet |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [organisasjonsenhet](organisasjonsenhet.md) | Referanse til Organisasjonselement grupperinga er tilknytt |
@@ -130,7 +132,8 @@ Name: fint-ressurs
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person](person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [plattform](plattform.md) | Plattforma ressursen er knytt til |
 | [plattformar](plattformar.md) |  |
@@ -154,7 +157,7 @@ Name: fint-ressurs
 | [statusar](statusar.md) |  |
 | [telefonnummer](telefonnummer.md) | Telefonnummer |
 | [type](type.md) | Beskriv kva slags type |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 

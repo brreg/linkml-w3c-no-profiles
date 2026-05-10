@@ -23,8 +23,8 @@ Alias: persongruppemedlemskap
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 | [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 
 
 

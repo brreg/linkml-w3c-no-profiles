@@ -22,9 +22,9 @@ Alias: anvist
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
 | [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 | [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
 
 

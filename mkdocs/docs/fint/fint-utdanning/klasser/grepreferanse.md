@@ -22,10 +22,10 @@ Alias: grepreferanse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
 | [Fag](fag.md) | Eit skulefag |  yes  |
 | [Programomrade](programomrade.md) | Eit programområde innanfor eit utdanningsprogram (t |  yes  |
 | [Utdanningsprogram](utdanningsprogram.md) | Eit utdanningsprogram (t |  yes  |
+| [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
 
 
 

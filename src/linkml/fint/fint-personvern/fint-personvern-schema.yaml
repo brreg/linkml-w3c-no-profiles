@@ -104,10 +104,10 @@ slots:
     range: datetime
     description: Dato då samtykket vart oppretta.
 
-  person:
-    slot_uri: pvn:person
-    range: uriorcurie
-    description: Referanse til Person (Administrasjon).
+  # person:
+  #   slot_uri: pvn:person
+  #   range: uriorcurie
+  #   description: Referanse til Person (Administrasjon).
 
   organisasjonselement:
     slot_uri: pvn:organisasjonselement
@@ -116,10 +116,10 @@ slots:
 
   # --- Tjeneste / kodeverk --------------------------------------------------
 
-  naam:
-    slot_uri: pvn:naam
-    range: string
-    description: Namn på ressursen.
+  # navn:
+  #   slot_uri: pvn:navn
+  #   range: string
+  #   description: Namn på ressursen.
 
 # ---------------------------------------------------------------------------
 # Klasser
@@ -219,11 +219,11 @@ classes:
     class_uri: pvn:Tjeneste
     slots:
       - id
-      - naam
+      - navn
       - slettet
       - behandling
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -243,7 +243,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
@@ -251,7 +251,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -268,7 +268,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
@@ -276,7 +276,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk

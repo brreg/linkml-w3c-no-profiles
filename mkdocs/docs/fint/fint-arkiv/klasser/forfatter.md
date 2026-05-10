@@ -22,8 +22,8 @@ Alias: forfatter
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
 | [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  yes  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
 | [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  yes  |
 
 

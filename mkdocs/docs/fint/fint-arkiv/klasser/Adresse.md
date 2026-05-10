@@ -22,9 +22,9 @@ Alias: adresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |  no  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 | [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
+| [Matrikkelnummer](matrikkelnummer.md) | Eintydleg identifisering av matrikkeleining innanfor kommune |  no  |
 
 
 

@@ -22,8 +22,8 @@ Alias: kontaktperson_str
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 | [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 
 
 

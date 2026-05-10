@@ -218,20 +218,20 @@ classes:
 
   # --- utdanning.elev --------------------------------------------------------
 
-  Elev:
-    description: Ein elev registrert i skulesystemet.
-    class_uri: utd:Elev
-    slots:
-      - id
-      - elevnummer
-      - person
-    slot_usage:
-      elevnummer:
-        in_subset:
-          - Obligatorisk
-      person:
-        in_subset:
-          - Obligatorisk
+  # Elev:
+  #   description: Ein elev registrert i skulesystemet.
+  #   class_uri: utd:Elev
+  #   slots:
+  #     - id
+  #     - elevnummer
+  #     - person
+  #   slot_usage:
+  #     elevnummer:
+  #       in_subset:
+  #         - Obligatorisk
+  #     person:
+  #       in_subset:
+  #         - Obligatorisk
 
   Elevforhold:
     description: Eit elevs tilknyting til ein skule og eit skoleår.
@@ -877,7 +877,7 @@ classes:
       - id
       - navn
       - eksamen
-      - time
+      - skuletime
     slot_usage:
       navn:
         in_subset:
@@ -886,7 +886,7 @@ classes:
         multivalued: true
         in_subset:
           - Valgfri
-      time:
+      skuletime:
         multivalued: true
         in_subset:
           - Valgfri
@@ -935,7 +935,7 @@ classes:
       - skoleressurs
       - klasse
       - kontaktlaerergruppe
-      - time
+      - skuletime
       - eksamensgruppe
     slot_usage:
       arbeidsforhold:
@@ -953,7 +953,7 @@ classes:
         multivalued: true
         in_subset:
           - Valgfri
-      time:
+      skuletime:
         in_subset:
           - Valgfri
       eksamensgruppe:
@@ -968,7 +968,7 @@ classes:
     slots:
       - undervisningsforhold
       - fag
-      - time
+      - skuletime
       - termin
       - skole
       - skoleaar
@@ -982,7 +982,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      time:
+      skuletime:
         in_subset:
           - Valgfri
       termin:
@@ -2612,44 +2612,44 @@ slots:
 
   # Basisegenskaper (brukte i fleire klasser og kodeverk)
 
-  navn:
-    slot_uri: utd:navn
-    range: string
-    description: Namn.
+  # navn:
+  #   slot_uri: utd:navn
+  #   range: string
+  #   description: Namn.
 
-  beskrivelse:
-    slot_uri: utd:beskrivelse
-    range: string
-    description: Skildring.
+  # beskrivelse:
+  #   slot_uri: utd:beskrivelse
+  #   range: string
+  #   description: Skildring.
 
-  kode:
-    slot_uri: utd:kode
-    range: string
-    description: Kode.
+  # kode:
+  #   slot_uri: utd:kode
+  #   range: string
+  #   description: Kode.
 
-  gyldighetsperiode:
-    slot_uri: utd:gyldighetsperiode
-    range: Periode
-    inlined: true
-    description: Gyldigheitsperiode.
+  # gyldighetsperiode:
+  #   slot_uri: utd:gyldighetsperiode
+  #   range: Periode
+  #   inlined: true
+  #   description: Gyldigheitsperiode.
 
-  passiv:
-    slot_uri: utd:passiv
-    range: boolean
-    description: Angir om oppføringen er passiv/inaktiv.
+  # passiv:
+  #   slot_uri: utd:passiv
+  #   range: boolean
+  #   description: Angir om oppføringen er passiv/inaktiv.
 
   # Elev
 
-  elevnummer:
-    slot_uri: utd:elevnummer
-    range: Identifikator
-    inlined: true
-    description: Skulens interne elevnummer.
+  # elevnummer:
+  #   slot_uri: utd:elevnummer
+  #   range: Identifikator
+  #   inlined: true
+  #   description: Skulens interne elevnummer.
 
-  person:
-    slot_uri: utd:person
-    range: uriorcurie
-    description: Referanse til Person i Administrasjon-domenet.
+  # person:
+  #   slot_uri: utd:person
+  #   range: uriorcurie
+  #   description: Referanse til Person i Administrasjon-domenet.
 
   # Elevforhold
 
@@ -2663,10 +2663,10 @@ slots:
     range: boolean
     description: Indikerer om eleven har tospråkleg fagopplæring.
 
-  elev:
-    slot_uri: utd:elev
-    range: Elev
-    description: Eleven dette gjeld.
+  # elev:
+  #   slot_uri: utd:elev
+  #   range: Elev
+  #   description: Eleven dette gjeld.
 
   kategori:
     slot_uri: utd:kategori
@@ -2696,10 +2696,10 @@ slots:
     range: string
     description: Juridisk namn på skulen.
 
-  organisasjonsnavn:
-    slot_uri: utd:organisasjonsnavn
-    range: string
-    description: Organisasjonsnamn.
+  # organisasjonsnavn:
+  #   slot_uri: utd:organisasjonsnavn
+  #   range: string
+  #   description: Organisasjonsnamn.
 
   skolenummer:
     slot_uri: utd:skolenummer
@@ -2707,23 +2707,23 @@ slots:
     inlined: true
     description: Nasjonal skulenummer-identifikator.
 
-  organisasjonsnummer:
-    slot_uri: utd:organisasjonsnummer
-    range: Identifikator
-    inlined: true
-    description: Organisasjonsnummer-identifikator.
+  # organisasjonsnummer:
+  #   slot_uri: utd:organisasjonsnummer
+  #   range: Identifikator
+  #   inlined: true
+  #   description: Organisasjonsnummer-identifikator.
 
-  forretningsadresse:
-    slot_uri: utd:forretningsadresse
-    range: Adresse
-    inlined: true
-    description: Forretningsadresse.
+  # forretningsadresse:
+  #   slot_uri: utd:forretningsadresse
+  #   range: Adresse
+  #   inlined: true
+  #   description: Forretningsadresse.
 
-  postadresse:
-    slot_uri: utd:postadresse
-    range: Adresse
-    inlined: true
-    description: Postadresse.
+  # postadresse:
+  #   slot_uri: utd:postadresse
+  #   range: Adresse
+  #   inlined: true
+  #   description: Postadresse.
 
   organisasjon:
     slot_uri: utd:organisasjon
@@ -2805,10 +2805,10 @@ slots:
     range: Skoleressurs
     description: Skoleressurs som er ansvarleg for karakteren.
 
-  type:
-    slot_uri: utd:type
-    range: string
-    description: Type.
+  # type:
+  #   slot_uri: utd:type
+  #   range: string
+  #   description: Type.
 
   # Gruppe-basisklassar
 
@@ -2869,11 +2869,11 @@ slots:
     range: uriorcurie
     description: Referanse til Arbeidsforhold i Administrasjon-domenet.
 
-  time:
-    slot_uri: utd:time
+  skuletime:
+    slot_uri: utd:skuletime
     range: Time
     multivalued: true
-    description: Time.
+    description: Ein skuletime i timeplanen.
 
   undervisningsgruppe:
     slot_uri: utd:undervisningsgruppe
@@ -3053,10 +3053,10 @@ slots:
     range: date
     description: Dato prøva vart avlagt.
 
-  laerling:
-    slot_uri: utd:laerling
-    range: Laerling
-    description: Lærling.
+  # laerling:
+  #   slot_uri: utd:laerling
+  #   range: Laerling
+  #   description: Lærling.
 
   provestatus:
     slot_uri: utd:provestatus
@@ -3131,10 +3131,10 @@ slots:
 
   # Kodeverk: OtEnhet
 
-  kommune:
-    slot_uri: utd:kommune
-    range: uriorcurie
-    description: Referanse til kommunen OT-eininga dekker.
+  # kommune:
+  #   slot_uri: utd:kommune
+  #   range: uriorcurie
+  #   description: Referanse til kommunen OT-eininga dekker.
 
   # Kodeverk: Fagmerknad (brukt i Faggruppemedlemskap)
 

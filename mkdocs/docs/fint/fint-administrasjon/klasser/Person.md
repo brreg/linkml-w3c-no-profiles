@@ -3,13 +3,13 @@
 # Slot: person 
 
 
-_Person som er ein personalressurs._
+_Referanse til Person i Administrasjon-domenet._
 
 
 
 
 
-URI: [adm:person](https://schema.fintlabs.no/administrasjon/person)
+URI: [fint:person](https://schema.fintlabs.no/person)
 Alias: person
 
 <!-- no inheritance hierarchy -->
@@ -22,6 +22,7 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 | [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
@@ -36,8 +37,8 @@ Alias: person
 | Property | Value |
 | --- | --- |
 | Range | [Person](person.md) |
-| Domain Of | [Personalressurs](personalressurs.md) |
-| Slot URI | [adm:person](https://schema.fintlabs.no/administrasjon/person) |
+| Domain Of | [Personalressurs](personalressurs.md), [Elev](elev.md) |
+| Slot URI | [fint:person](https://schema.fintlabs.no/person) |
 
 ### Cardinality and Requirements
 
@@ -71,7 +72,7 @@ Alias: person
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | adm:person |
+| self | fint:person |
 | native | https://schema.fintlabs.no/administrasjon/:person |
 
 
@@ -82,13 +83,14 @@ Alias: person
 <details>
 ```yaml
 name: person
-description: Person som er ein personalressurs.
+description: Referanse til Person i Administrasjon-domenet.
 from_schema: https://data.norge.no/linkml/fint-administrasjon
 rank: 1000
-slot_uri: adm:person
+slot_uri: fint:person
 alias: person
 domain_of:
 - Personalressurs
+- Elev
 range: Person
 
 ```

@@ -88,7 +88,7 @@ URI: [utd:Utdanningsforhold](https://schema.fintlabs.no/utdanning/Utdanningsforh
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Skildring |
+| [beskrivelse](beskrivelse.md) | 0..1 <br/> [String](string.md) | Beskriven namn eller omtale |
 
 
 
@@ -216,7 +216,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -260,6 +259,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -268,12 +268,12 @@ attributes:
     required: true
   beskrivelse:
     name: beskrivelse
-    description: Skildring.
+    description: Beskriven namn eller omtale.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:beskrivelse
+    slot_uri: fint:beskrivelse
     alias: beskrivelse
     owner: Utdanningsforhold
     domain_of:

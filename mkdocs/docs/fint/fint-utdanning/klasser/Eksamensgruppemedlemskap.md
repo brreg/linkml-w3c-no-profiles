@@ -22,8 +22,8 @@ Alias: eksamensgruppemedlemskap
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 | [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 
 
 

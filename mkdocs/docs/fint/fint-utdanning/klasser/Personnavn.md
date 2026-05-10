@@ -145,8 +145,8 @@ URI: [fint:Personnavn](https://schema.fintlabs.no/Personnavn)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Person](person.md) | [person_naam](person_naam.md) | range | [Personnavn](personnavn.md) |
-| [Kontaktperson](kontaktperson.md) | [kontaktperson_naam](kontaktperson_naam.md) | range | [Personnavn](personnavn.md) |
+| [Person](person.md) | [person_navn](person_navn.md) | range | [Personnavn](personnavn.md) |
+| [Kontaktperson](kontaktperson.md) | [kontaktperson_navn](kontaktperson_navn.md) | range | [Personnavn](personnavn.md) |
 
 
 

@@ -1,6 +1,5 @@
 @prefix ark: <https://schema.fintlabs.no/arkiv/> .
 @prefix fint: <https://schema.fintlabs.no/> .
-@prefix ns1: <https://schema.fintlabs.no/arkiv/:> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.no/fint/journalpost/2024-0001-1> a ark:Journalpost ;
@@ -49,43 +48,43 @@
     ark:tittel "Reguleringsplan Sentrum Nord" .
 
 <https://example.no/fint/journalposttype/inngaaende-dokument> a ark:JournalpostType ;
-    ark:kode "I" ;
-    ark:navn "Inngående dokument" .
+    fint:kode "I" ;
+    fint:navn "Inngående dokument" .
 
 <https://example.no/fint/journalposttype/utgaaende-dokument> a ark:JournalpostType ;
-    ark:kode "U" ;
-    ark:navn "Utgående dokument" .
+    fint:kode "U" ;
+    fint:navn "Utgående dokument" .
 
 <https://example.no/fint/saksstatus/avsluttet> a ark:Saksstatus ;
-    ark:kode "A" ;
-    ark:navn "Avsluttet" .
+    fint:kode "A" ;
+    fint:navn "Avsluttet" .
 
 <https://example.no/fint/saksstatus/under-behandling> a ark:Saksstatus ;
-    ark:kode "B" ;
-    ark:navn "Under behandling" .
+    fint:kode "B" ;
+    fint:navn "Under behandling" .
 
 <https://example.no/fint/administrativenhet/post-og-arkiv> a ark:AdministrativEnhet ;
-    ark:navn "Post og arkiv" .
+    fint:navn "Post og arkiv" .
 
 <https://example.no/fint/journalstatus/journalfoert> a ark:JournalStatus ;
-    ark:kode "J" ;
-    ark:navn "Journalført" .
+    fint:kode "J" ;
+    fint:navn "Journalført" .
 
 <https://example.no/fint/arkivressurs/ar-1> a ark:Arkivressurs ;
     ark:kildesystemId [ a fint:Identifikator ;
             fint:identifikatorverdi "AR001" ] ;
     ark:personalressurs "finta:personalressurs/p12345"^^xsd:anyURI .
 
-[] a ns1:ArkivContainer ;
-    ns1:administrativeEiningar <https://example.no/fint/administrativenhet/post-og-arkiv> ;
-    ns1:arkivressursar <https://example.no/fint/arkivressurs/ar-1> ;
-    ns1:journalpostar <https://example.no/fint/journalpost/2024-0001-1>,
+[] a <https://schema.fintlabs.no/arkiv/:ArkivContainer> ;
+    ark:administrativeEiningar <https://example.no/fint/administrativenhet/post-og-arkiv> ;
+    ark:arkivressursar <https://example.no/fint/arkivressurs/ar-1> ;
+    ark:journalpostar <https://example.no/fint/journalpost/2024-0001-1>,
         <https://example.no/fint/journalpost/2024-0001-2> ;
-    ns1:journalposttypar <https://example.no/fint/journalposttype/inngaaende-dokument>,
+    ark:journalposttypar <https://example.no/fint/journalposttype/inngaaende-dokument>,
         <https://example.no/fint/journalposttype/utgaaende-dokument> ;
-    ns1:journalstatuskodar <https://example.no/fint/journalstatus/journalfoert> ;
-    ns1:sakar <https://example.no/fint/sak/2024-0001>,
+    ark:journalstatuskodar <https://example.no/fint/journalstatus/journalfoert> ;
+    ark:sakar <https://example.no/fint/sak/2024-0001>,
         <https://example.no/fint/sak/2024-0002> ;
-    ns1:sakstatuskodar <https://example.no/fint/saksstatus/avsluttet>,
+    ark:sakstatuskodar <https://example.no/fint/saksstatus/avsluttet>,
         <https://example.no/fint/saksstatus/under-behandling> .
 

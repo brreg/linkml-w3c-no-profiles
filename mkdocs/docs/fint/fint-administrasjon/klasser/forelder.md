@@ -22,8 +22,8 @@ Alias: forelder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Arbeidsforholdstype](arbeidsforholdstype.md) | Viser kva behov hos arbeidsgjevar arbeidsforholdet dekkjer |  yes  |
 | [Stillingskode](stillingskode.md) | Felles kodeverk for stillingar |  yes  |
+| [Arbeidsforholdstype](arbeidsforholdstype.md) | Viser kva behov hos arbeidsgjevar arbeidsforholdet dekkjer |  yes  |
 
 
 

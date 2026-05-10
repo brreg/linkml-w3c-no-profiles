@@ -2,15 +2,20 @@
 
 ```mermaid
 erDiagram
+Adresse {
+    stringList adresselinje  
+    string postnummer  
+    string poststed  
+}
 Applikasjon {
     uriorcurie id  
     string beskrivelse  
-    string naam  
+    string navn  
 }
 Applikasjonskategori {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Applikasjonsressurs {
@@ -20,7 +25,7 @@ Applikasjonsressurs {
     integer enhetskostnad  
     boolean kreverGodkjenning  
     integer lisensantall  
-    string naam  
+    string navn  
 }
 Applikasjonsressurstilgjengelighet {
     uriorcurie id  
@@ -30,23 +35,25 @@ Applikasjonsressurstilgjengelighet {
 Brukertype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 DigitalEnhet {
     uriorcurie id  
     uriorcurie administrator  
     uriorcurie eier  
-    uriorcurie elev  
     boolean flerbrukerenhet  
-    string naam  
+    string navn  
     uriorcurie personalressurs  
     boolean privateid  
     string serienummer  
 }
+Elev {
+    uriorcurie id  
+}
 Enhetsgruppe {
     uriorcurie id  
-    string naam  
+    string navn  
     uriorcurie organisasjonsenhet  
 }
 Enhetsgruppemedlemskap {
@@ -55,13 +62,19 @@ Enhetsgruppemedlemskap {
 Enhetstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
+    boolean passiv  
+}
+Fylke {
+    uriorcurie id  
+    string kode  
+    string navn  
     boolean passiv  
 }
 Handhevingstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Identifikator {
@@ -71,10 +84,39 @@ Identitet {
     uriorcurie id  
     uriorcurie personalressurs  
 }
+Kjonn {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kommune {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kontaktinformasjon {
+    string epostadresse  
+    string mobiltelefonnummer  
+    string nettsted  
+    string sip  
+    string telefonnummer  
+}
+Kontaktperson {
+    uriorcurie id  
+    string type  
+}
+Landkode {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
 Lisensmodell {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Periode {
@@ -82,32 +124,52 @@ Periode {
     datetime slutt  
     datetime start  
 }
+Person {
+    uriorcurie id  
+    string bilde  
+    date fodselsdato  
+    uriorcurieList laerling  
+    uriorcurie otungdom  
+    uriorcurie personalressurs  
+}
+Personnavn {
+    string etternavn  
+    string fornavn  
+    string mellomnavn  
+}
 Plattform {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Produsent {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Rettighet {
     uriorcurie id  
     string beskrivelse  
     string kode  
-    string naam  
+    string navn  
+    boolean passiv  
+}
+Spraak {
+    uriorcurie id  
+    string kode  
+    string navn  
     boolean passiv  
 }
 Status {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 
+Adresse ||--|o Landkode : "land"
 Applikasjon ||--|| Periode : "gyldighetsperiode"
 Applikasjon ||--}o Applikasjonskategori : "applikasjonskategori"
 Applikasjon ||--}o Applikasjonsressurs : "applikasjonsressurs"
@@ -122,26 +184,50 @@ Applikasjonsressurs ||--}| Brukertype : "brukertype"
 Applikasjonsressurstilgjengelighet ||--|| Applikasjonsressurs : "ressursRef"
 Applikasjonsressurstilgjengelighet ||--|| Periode : "gyldighetsperiode"
 Brukertype ||--|o Periode : "gyldighetsperiode"
+DigitalEnhet ||--|o Elev : "elev"
 DigitalEnhet ||--|o Identifikator : "dataobjektId"
 DigitalEnhet ||--|o Produsent : "produsent"
 DigitalEnhet ||--|o Status : "status"
 DigitalEnhet ||--|| Enhetstype : "enhetstype"
 DigitalEnhet ||--|| Plattform : "plattform"
 DigitalEnhet ||--}o Enhetsgruppemedlemskap : "enhetsgruppemedlemskap"
+Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
 Enhetsgruppe ||--|| Enhetstype : "enhetstype"
 Enhetsgruppe ||--|| Plattform : "plattform"
 Enhetsgruppe ||--}o Enhetsgruppemedlemskap : "enhetsgruppemedlemskap"
 Enhetsgruppemedlemskap ||--|| DigitalEnhet : "digitalEnhet"
 Enhetsgruppemedlemskap ||--|| Enhetsgruppe : "enhetsgruppe"
 Enhetstype ||--|o Periode : "gyldighetsperiode"
+Fylke ||--|o Periode : "gyldighetsperiode"
+Fylke ||--}o Kommune : "kommune"
 Handhevingstype ||--|o Periode : "gyldighetsperiode"
 Identifikator ||--|o Periode : "gyldighetsperiode"
 Identitet ||--}o Rettighet : "rettighet"
+Kjonn ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|| Fylke : "fylke"
+Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
+Kontaktperson ||--}o Person : "kontaktperson"
+Landkode ||--|o Periode : "gyldighetsperiode"
 Lisensmodell ||--|o Periode : "gyldighetsperiode"
+Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
+Person ||--|o Kjonn : "kjonn"
+Person ||--|o Kommune : "kommune"
+Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Person ||--|o Spraak : "maalform, morsmaal"
+Person ||--|| Identifikator : "fodselsnummer"
+Person ||--|| Personnavn : "person_navn"
+Person ||--}o Kontaktperson : "parorende"
+Person ||--}o Landkode : "statsborgerskap"
+Person ||--}o Person : "foreldre, foreldreansvar"
 Plattform ||--|o Periode : "gyldighetsperiode"
 Produsent ||--|o Periode : "gyldighetsperiode"
 Rettighet ||--|o Periode : "gyldighetsperiode"
 Rettighet ||--}o Identitet : "identitet"
+Spraak ||--|o Periode : "gyldighetsperiode"
 Status ||--|o Periode : "gyldighetsperiode"
 
 ```
@@ -178,6 +264,7 @@ Name: fint-ressurs
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](klasser/spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Brukertype](klasser/brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |
 | [DigitalEnhet](klasser/digitalenhet.md) | Ei digital eining som t |
+| [Elev](klasser/elev.md) | Ein elev registrert i skulesystemet |
 | [Enhetsgruppe](klasser/enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |
 | [Enhetsgruppemedlemskap](klasser/enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |
 | [Enhetstype](klasser/enhetstype.md) | Type digital eining |
@@ -228,6 +315,7 @@ Name: fint-ressurs
 | [einingsgrupper](klasser/einingsgrupper.md) |  |
 | [einingstypar](klasser/einingstypar.md) |  |
 | [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](klasser/elevnummer.md) | Skulens interne elevnummer |
 | [enhetsgruppe](klasser/enhetsgruppe.md) | Einingsgruppen dette medlemskapet tilhøyrer |
 | [enhetsgruppemedlemskap](klasser/enhetsgruppemedlemskap.md) | Einingsgruppemelemskap |
 | [enhetskostnad](klasser/enhetskostnad.md) | Kostnad per ressurs |
@@ -258,7 +346,7 @@ Name: fint-ressurs
 | [konsument](klasser/konsument.md) | Referanse til Organisasjonselement som har tilgang til ressursen |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](klasser/kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kreverGodkjenning](klasser/krevergodkjenning.md) | True dersom tildeling av ressursen krev godkjenning |
 | [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](klasser/land.md) | Land der adressa befinn seg |
@@ -269,7 +357,7 @@ Name: fint-ressurs
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
-| [naam](klasser/naam.md) | Namn på ressursen eller kodeverk-elementet |
+| [navn](klasser/navn.md) | Hovudnamn for ressursen |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
 | [organisasjonsenhet](klasser/organisasjonsenhet.md) | Referanse til Organisasjonselement grupperinga er tilknytt |
@@ -278,7 +366,8 @@ Name: fint-ressurs
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person_naam](klasser/person_naam.md) | Namn på personen |
+| [person](klasser/person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](klasser/person_navn.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [plattform](klasser/plattform.md) | Plattforma ressursen er knytt til |
 | [plattformar](klasser/plattformar.md) |  |
@@ -302,7 +391,7 @@ Name: fint-ressurs
 | [statusar](klasser/statusar.md) |  |
 | [telefonnummer](klasser/telefonnummer.md) | Telefonnummer |
 | [type](klasser/type.md) | Beskriv kva slags type |
-| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [valuta_navn](klasser/valuta_navn.md) | Namn på valuta |
 | [virksomhetsId](klasser/virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 
@@ -346,7 +435,7 @@ Name: fint-ressurs
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|
@@ -354,6 +443,7 @@ Name: fint-ressurs
 | JSON-LD kontekst | [fint-ressurs-context.jsonld](fint-ressurs-context.jsonld) |
 | JSON Schema | [fint-ressurs-schema.json](fint-ressurs-schema.json) |
 | OWL ontologi | [fint-ressurs-ontology.ttl](fint-ressurs-ontology.ttl) |
+| RDF/Turtle skjema | [fint-ressurs-schema.ttl](fint-ressurs-schema.ttl) |
 | Python-klasser | [fint-ressurs-model.py](fint-ressurs-model.py) |
 | ER-diagram (Mermaid) | [fint-ressurs-erdiagram.md](fint-ressurs-erdiagram.md) |
 | Eksempeldata (Turtle) | [fint-ressurs-eksempel.ttl](fint-ressurs-eksempel.ttl) |

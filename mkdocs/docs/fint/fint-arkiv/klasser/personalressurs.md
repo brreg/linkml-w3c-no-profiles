@@ -22,9 +22,9 @@ Alias: personalressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
 | [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  yes  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
+| [Person](person.md) | Fysiske private personar |  no  |
 
 
 

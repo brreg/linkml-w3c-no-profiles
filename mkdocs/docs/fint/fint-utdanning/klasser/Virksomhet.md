@@ -48,15 +48,6 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
         
       Virksomhet : laerling
         
-          
-    
-        
-        
-        Virksomhet --> "0..1" Laerling : laerling
-        click Laerling href "../Laerling/"
-    
-
-        
       Virksomhet : organisasjonsnavn
         
       Virksomhet : organisasjonsnummer
@@ -171,7 +162,7 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [laerling](laerling.md) | 0..1 <br/> [Laerling](laerling.md) | Lærling |
+| [laerling](laerling.md) | * <br/> [Uriorcurie](uriorcurie.md) | Referanse til Laerling (Utdanning) |
 
 
 
@@ -224,11 +215,11 @@ URI: [fint:Virksomhet](https://schema.fintlabs.no/Virksomhet)
 ### Arva
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
-| --- | --- | --- | --- || [forretningsadresse](forretningsadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Forretningsadresse | [Enhet](enhet.md) |
-| [organisasjonsnavn](organisasjonsnavn.md) | 0..1 <br/> [String](string.md) | Organisasjonsnamn | [Enhet](enhet.md) |
-| [organisasjonsnummer](organisasjonsnummer.md) | 0..1 <br/> [Identifikator](identifikator.md) | Organisasjonsnummer-identifikator | [Enhet](enhet.md) |
+| --- | --- | --- | --- || [forretningsadresse](forretningsadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Besøksadresse til ein organisasjonseining | [Enhet](enhet.md) |
+| [organisasjonsnavn](organisasjonsnavn.md) | 0..1 <br/> [String](string.md) | Namn på eining registrert i Einingsregisteret | [Enhet](enhet.md) |
+| [organisasjonsnummer](organisasjonsnummer.md) | 0..1 <br/> [Identifikator](identifikator.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret | [Enhet](enhet.md) |
 | [kontaktinformasjon](kontaktinformasjon.md) | 0..1 <br/> [Kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør | [Aktoer](aktoer.md) |
-| [postadresse](postadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Postadresse | [Aktoer](aktoer.md) |
+| [postadresse](postadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Informasjon om postadresse til ein aktør | [Aktoer](aktoer.md) |
 
 
 
@@ -332,7 +323,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -376,6 +366,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -399,27 +390,28 @@ attributes:
     inlined: true
   laerling:
     name: laerling
-    description: Lærling.
+    description: Referanse til Laerling (Utdanning).
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:laerling
+    slot_uri: fint:laerling
     alias: laerling
     owner: Virksomhet
     domain_of:
     - AvlagtProve
     - Person
     - Virksomhet
-    range: Laerling
+    range: uriorcurie
+    multivalued: true
   forretningsadresse:
     name: forretningsadresse
-    description: Forretningsadresse.
+    description: Besøksadresse til ein organisasjonseining.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:forretningsadresse
+    slot_uri: fint:forretningsadresse
     alias: forretningsadresse
     owner: Virksomhet
     domain_of:
@@ -429,12 +421,12 @@ attributes:
     inlined: true
   organisasjonsnavn:
     name: organisasjonsnavn
-    description: Organisasjonsnamn.
+    description: Namn på eining registrert i Einingsregisteret.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:organisasjonsnavn
+    slot_uri: fint:organisasjonsnavn
     alias: organisasjonsnavn
     owner: Virksomhet
     domain_of:
@@ -443,12 +435,12 @@ attributes:
     range: string
   organisasjonsnummer:
     name: organisasjonsnummer
-    description: Organisasjonsnummer-identifikator.
+    description: Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:organisasjonsnummer
+    slot_uri: fint:organisasjonsnummer
     alias: organisasjonsnummer
     owner: Virksomhet
     domain_of:
@@ -473,12 +465,12 @@ attributes:
     inlined: true
   postadresse:
     name: postadresse
-    description: Postadresse.
+    description: Informasjon om postadresse til ein aktør.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:postadresse
+    slot_uri: fint:postadresse
     alias: postadresse
     owner: Virksomhet
     domain_of:

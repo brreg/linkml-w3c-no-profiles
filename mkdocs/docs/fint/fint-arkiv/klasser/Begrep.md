@@ -47,7 +47,7 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
         
       Begrep : kode
         
-      Begrep : naam
+      Begrep : navn
         
       Begrep : passiv
         
@@ -107,7 +107,7 @@ URI: [fint:Begrep](https://schema.fintlabs.no/Begrep)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
-| [naam](naam.md) | 1 <br/> [String](string.md) | Namn på arkivenhet eller kodeverk-element |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen |
 
 
 
@@ -288,7 +288,7 @@ abstract: true
 slots:
 - id
 - kode
-- naam
+- navn
 - gyldighetsperiode
 - passiv
 slot_usage:
@@ -297,8 +297,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  naam:
-    name: naam
+  navn:
+    name: navn
     in_subset:
     - Obligatorisk
     required: true
@@ -329,8 +329,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  naam:
-    name: naam
+  navn:
+    name: navn
     in_subset:
     - Obligatorisk
     required: true
@@ -380,6 +380,7 @@ attributes:
     - TilknyttetRegistreringSom
     - Variantformat
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -417,15 +418,15 @@ attributes:
     - Begrep
     range: string
     required: true
-  naam:
-    name: naam
-    description: Namn på arkivenhet eller kodeverk-element.
+  navn:
+    name: navn
+    description: Hovudnamn for ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-arkiv
     rank: 1000
-    slot_uri: ark:naam
-    alias: naam
+    slot_uri: fint:navn
+    alias: navn
     owner: Begrep
     domain_of:
     - AdministrativEnhet

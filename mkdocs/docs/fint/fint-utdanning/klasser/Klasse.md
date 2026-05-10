@@ -22,10 +22,10 @@ Alias: klasse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
-| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 | [Arstrinn](arstrinn.md) | Eit årstrinn i skulen (t |  yes  |
+| [Kontaktlaerergruppe](kontaktlaerergruppe.md) | Gruppe av elevar med felles kontaktlærar |  yes  |
+| [Undervisningsforhold](undervisningsforhold.md) | Eit tilhøve mellom ein skoleressurs og undervisningsaktivitetar |  yes  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 | [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  yes  |
 
 

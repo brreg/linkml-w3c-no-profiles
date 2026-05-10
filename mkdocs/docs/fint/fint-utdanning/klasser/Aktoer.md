@@ -112,7 +112,7 @@ URI: [fint:Aktoer](https://schema.fintlabs.no/Aktoer)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [kontaktinformasjon](kontaktinformasjon.md) | 0..1 <br/> [Kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
-| [postadresse](postadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Postadresse |
+| [postadresse](postadresse.md) | 0..1 <br/> [Adresse](adresse.md) | Informasjon om postadresse til ein aktør |
 
 
 
@@ -252,12 +252,12 @@ attributes:
     inlined: true
   postadresse:
     name: postadresse
-    description: Postadresse.
+    description: Informasjon om postadresse til ein aktør.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:postadresse
+    slot_uri: fint:postadresse
     alias: postadresse
     owner: Aktoer
     domain_of:

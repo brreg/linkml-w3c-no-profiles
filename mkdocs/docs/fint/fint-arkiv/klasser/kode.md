@@ -22,29 +22,29 @@ Alias: kode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Kva rolle dokumentet har i høve registreringa (t |  yes  |
-| [Format](format.md) | Dokumentets filformat |  yes  |
-| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  yes  |
-| [DokumentType](dokumenttype.md) | Type dokument |  yes  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
 | [Merknadstype](merknadstype.md) | Namn på type merknad |  yes  |
-| [JournalpostType](journalposttype.md) | Namn på type journalpost |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  yes  |
 | [Tilgangsrestriksjon](tilgangsrestriksjon.md) | Angiving av at dokumenta ikkje er offentleg tilgjengelege |  yes  |
 | [DokumentStatus](dokumentstatus.md) | Status til eit dokument |  yes  |
+| [DokumentType](dokumenttype.md) | Type dokument |  yes  |
+| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  yes  |
+| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  yes  |
+| [Saksstatus](saksstatus.md) | Status til saksmappa |  yes  |
+| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  yes  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
 | [Klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |  yes  |
 | [Skjermingshjemmel](skjermingshjemmel.md) | Tilvising til heimel i offentleglova, tryggingslova eller tryggingsinstruksen |  yes  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [JournalStatus](journalstatus.md) | Status til journalposten |  yes  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Rolle](rolle.md) | Rolla til ein arkivressurs |  yes  |
-| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  yes  |
-| [Saksstatus](saksstatus.md) | Status til saksmappa |  yes  |
-| [PartRolle](partrolle.md) | Rolla til ein part |  yes  |
+| [JournalpostType](journalposttype.md) | Namn på type journalpost |  yes  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  yes  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  yes  |
+| [PartRolle](partrolle.md) | Rolla til ein part |  yes  |
+| [JournalStatus](journalstatus.md) | Status til journalposten |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Kva rolle dokumentet har i høve registreringa (t |  yes  |
+| [Format](format.md) | Dokumentets filformat |  yes  |
+| [Rolle](rolle.md) | Rolla til ein arkivressurs |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
 
 
 

@@ -3,13 +3,13 @@
 # Slot: elev 
 
 
-_Eleven dette gjeld._
+_Referanse til Elev (Utdanning)._
 
 
 
 
 
-URI: [utd:elev](https://schema.fintlabs.no/utdanning/elev)
+URI: [fint:elev](https://schema.fintlabs.no/elev)
 Alias: elev
 
 <!-- no inheritance hierarchy -->
@@ -24,8 +24,8 @@ Alias: elev
 | --- | --- | --- |
 | [Persongruppe](persongruppe.md) | Ei gruppe elevar definert for personlege føremål |  yes  |
 | [Person](person.md) | Fysiske private personar |  yes  |
-| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 | [Elevtilrettelegging](elevtilrettelegging.md) | Tilrettelegging for ein elev i eit elevforhold |  yes  |
+| [Elevforhold](elevforhold.md) | Eit elevs tilknyting til ein skule og eit skoleår |  yes  |
 
 
 
@@ -40,7 +40,7 @@ Alias: elev
 | --- | --- |
 | Range | [Elev](elev.md) |
 | Domain Of | [Elevforhold](elevforhold.md), [Elevtilrettelegging](elevtilrettelegging.md), [Persongruppe](persongruppe.md), [Person](person.md) |
-| Slot URI | [utd:elev](https://schema.fintlabs.no/utdanning/elev) |
+| Slot URI | [fint:elev](https://schema.fintlabs.no/elev) |
 
 ### Cardinality and Requirements
 
@@ -74,7 +74,7 @@ Alias: elev
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:elev |
+| self | fint:elev |
 | native | https://schema.fintlabs.no/utdanning/:elev |
 
 
@@ -85,10 +85,10 @@ Alias: elev
 <details>
 ```yaml
 name: elev
-description: Eleven dette gjeld.
+description: Referanse til Elev (Utdanning).
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:elev
+slot_uri: fint:elev
 alias: elev
 domain_of:
 - Elevforhold

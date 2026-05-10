@@ -336,6 +336,7 @@ attributes:
     - Personalressurs
     - Arbeidsforhold
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson

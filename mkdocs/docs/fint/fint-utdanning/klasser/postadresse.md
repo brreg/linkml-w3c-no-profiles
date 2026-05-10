@@ -3,13 +3,13 @@
 # Slot: postadresse 
 
 
-_Postadresse._
+_Informasjon om postadresse til ein aktør._
 
 
 
 
 
-URI: [utd:postadresse](https://schema.fintlabs.no/utdanning/postadresse)
+URI: [fint:postadresse](https://schema.fintlabs.no/postadresse)
 Alias: postadresse
 
 <!-- no inheritance hierarchy -->
@@ -22,11 +22,11 @@ Alias: postadresse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
-| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 | [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
+| [Person](person.md) | Fysiske private personar |  no  |
+| [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
 
 
 
@@ -41,7 +41,7 @@ Alias: postadresse
 | --- | --- |
 | Range | [Adresse](adresse.md) |
 | Domain Of | [Skole](skole.md), [Aktoer](aktoer.md) |
-| Slot URI | [utd:postadresse](https://schema.fintlabs.no/utdanning/postadresse) |
+| Slot URI | [fint:postadresse](https://schema.fintlabs.no/postadresse) |
 
 ### Cardinality and Requirements
 
@@ -75,7 +75,7 @@ Alias: postadresse
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:postadresse |
+| self | fint:postadresse |
 | native | https://schema.fintlabs.no/utdanning/:postadresse |
 
 
@@ -86,10 +86,10 @@ Alias: postadresse
 <details>
 ```yaml
 name: postadresse
-description: Postadresse.
+description: Informasjon om postadresse til ein aktør.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:postadresse
+slot_uri: fint:postadresse
 alias: postadresse
 domain_of:
 - Skole

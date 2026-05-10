@@ -22,8 +22,8 @@ Alias: elev
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](person.md) | Fysiske private personar |  yes  |
 | [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
+| [Person](person.md) | Fysiske private personar |  yes  |
 
 
 
@@ -36,7 +36,7 @@ Alias: elev
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
+| Range | [Elev](elev.md) |
 | Domain Of | [DigitalEnhet](digitalenhet.md), [Person](person.md) |
 | Slot URI | [fint:elev](https://schema.fintlabs.no/elev) |
 
@@ -91,7 +91,7 @@ alias: elev
 domain_of:
 - DigitalEnhet
 - Person
-range: uriorcurie
+range: Elev
 
 ```
 </details>

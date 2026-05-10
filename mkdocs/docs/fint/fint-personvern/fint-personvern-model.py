@@ -1,5 +1,5 @@
 # Auto generated from fint-personvern-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:28:04
+# Generation date: 2026-05-10T09:44:47
 # Schema: fint-personvern
 #
 # id: https://data.norge.no/linkml/fint-personvern
@@ -94,6 +94,10 @@ class PersonopplysningId(URIorCURIE):
 
 
 class BegrepId(URIorCURIE):
+    pass
+
+
+class ElevId(URIorCURIE):
     pass
 
 
@@ -243,7 +247,7 @@ class Samtykke(YAMLRoot):
     gyldighetsperiode: Union[dict, "Periode"] = None
     opprettet: Union[str, XSDDateTime] = None
     behandling: Union[str, BehandlingId] = None
-    person: Union[str, URIorCURIE] = None
+    person: Union[str, PersonId] = None
     organisasjonselement: Optional[Union[str, URIorCURIE]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -269,8 +273,8 @@ class Samtykke(YAMLRoot):
 
         if self._is_empty(self.person):
             self.MissingRequiredField("person")
-        if not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
+        if not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         if self.organisasjonselement is not None and not isinstance(self.organisasjonselement, URIorCURIE):
             self.organisasjonselement = URIorCURIE(self.organisasjonselement)
@@ -466,6 +470,37 @@ class Begrep(YAMLRoot):
 
         if self.passiv is not None and not isinstance(self.passiv, Bool):
             self.passiv = Bool(self.passiv)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class Elev(YAMLRoot):
+    """
+    Ein elev registrert i skulesystemet.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = FINT["Elev"]
+    class_class_curie: ClassVar[str] = "fint:Elev"
+    class_name: ClassVar[str] = "Elev"
+    class_model_uri: ClassVar[URIRef] = PVN.Elev
+
+    id: Union[str, ElevId] = None
+    elevnummer: Optional[Union[dict, "Identifikator"]] = None
+    person: Optional[Union[str, PersonId]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ElevId):
+            self.id = ElevId(self.id)
+
+        if self.elevnummer is not None and not isinstance(self.elevnummer, Identifikator):
+            self.elevnummer = Identifikator(**as_dict(self.elevnummer))
+
+        if self.person is not None and not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         super().__post_init__(**kwargs)
 
@@ -852,7 +887,7 @@ class Valuta(YAMLRoot):
 
     id: Union[str, ValutaId] = None
     bokstavkode: Union[dict, Identifikator] = None
-    navn: str = None
+    valuta_navn: str = None
     nummerkode: Union[dict, Identifikator] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -866,10 +901,10 @@ class Valuta(YAMLRoot):
         if not isinstance(self.bokstavkode, Identifikator):
             self.bokstavkode = Identifikator(**as_dict(self.bokstavkode))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, str):
-            self.navn = str(self.navn)
+        if self._is_empty(self.valuta_navn):
+            self.MissingRequiredField("valuta_navn")
+        if not isinstance(self.valuta_navn, str):
+            self.valuta_navn = str(self.valuta_navn)
 
         if self._is_empty(self.nummerkode):
             self.MissingRequiredField("nummerkode")
@@ -893,7 +928,7 @@ class Person(Aktoer):
 
     id: Union[str, PersonId] = None
     fodselsnummer: Union[dict, Identifikator] = None
-    navn: Union[dict, Personnavn] = None
+    person_navn: Union[dict, Personnavn] = None
     bilde: Optional[str] = None
     bostedsadresse: Optional[Union[dict, Adresse]] = None
     fodselsdato: Optional[Union[str, XSDDate]] = None
@@ -904,11 +939,11 @@ class Person(Aktoer):
     foreldreansvar: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     foreldre: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     maalform: Optional[Union[str, SpraakId]] = None
-    personalressurs: Optional[Union[str, URIorCURIE]] = None
     morsmaal: Optional[Union[str, SpraakId]] = None
     laerling: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    elev: Optional[Union[str, URIorCURIE]] = None
+    elev: Optional[Union[str, ElevId]] = None
     otungdom: Optional[Union[str, URIorCURIE]] = None
+    personalressurs: Optional[Union[str, URIorCURIE]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -921,10 +956,10 @@ class Person(Aktoer):
         if not isinstance(self.fodselsnummer, Identifikator):
             self.fodselsnummer = Identifikator(**as_dict(self.fodselsnummer))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self._is_empty(self.person_navn):
+            self.MissingRequiredField("person_navn")
+        if not isinstance(self.person_navn, Personnavn):
+            self.person_navn = Personnavn(**as_dict(self.person_navn))
 
         if self.bilde is not None and not isinstance(self.bilde, str):
             self.bilde = str(self.bilde)
@@ -960,9 +995,6 @@ class Person(Aktoer):
         if self.maalform is not None and not isinstance(self.maalform, SpraakId):
             self.maalform = SpraakId(self.maalform)
 
-        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
-            self.personalressurs = URIorCURIE(self.personalressurs)
-
         if self.morsmaal is not None and not isinstance(self.morsmaal, SpraakId):
             self.morsmaal = SpraakId(self.morsmaal)
 
@@ -970,11 +1002,14 @@ class Person(Aktoer):
             self.laerling = [self.laerling] if self.laerling is not None else []
         self.laerling = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.laerling]
 
-        if self.elev is not None and not isinstance(self.elev, URIorCURIE):
-            self.elev = URIorCURIE(self.elev)
+        if self.elev is not None and not isinstance(self.elev, ElevId):
+            self.elev = ElevId(self.elev)
 
         if self.otungdom is not None and not isinstance(self.otungdom, URIorCURIE):
             self.otungdom = URIorCURIE(self.otungdom)
+
+        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
+            self.personalressurs = URIorCURIE(self.personalressurs)
 
         super().__post_init__(**kwargs)
 
@@ -994,7 +1029,7 @@ class Kontaktperson(YAMLRoot):
     id: Union[str, KontaktpersonId] = None
     type: str = None
     kontaktinformasjon: Optional[Union[dict, Kontaktinformasjon]] = None
-    navn: Optional[Union[dict, Personnavn]] = None
+    kontaktperson_navn: Optional[Union[dict, Personnavn]] = None
     kontaktperson: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1011,8 +1046,8 @@ class Kontaktperson(YAMLRoot):
         if self.kontaktinformasjon is not None and not isinstance(self.kontaktinformasjon, Kontaktinformasjon):
             self.kontaktinformasjon = Kontaktinformasjon(**as_dict(self.kontaktinformasjon))
 
-        if self.navn is not None and not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self.kontaktperson_navn is not None and not isinstance(self.kontaktperson_navn, Personnavn):
+            self.kontaktperson_navn = Personnavn(**as_dict(self.kontaktperson_navn))
 
         if not isinstance(self.kontaktperson, list):
             self.kontaktperson = [self.kontaktperson] if self.kontaktperson is not None else []
@@ -1062,270 +1097,420 @@ class Virksomhet(Enhet):
 class slots:
     pass
 
+slots.behandlingar = Slot(uri=PVN.behandlingar, name="behandlingar", curie=PVN.curie('behandlingar'),
+                   model_uri=PVN.behandlingar, domain=None, range=Optional[Union[dict[Union[str, BehandlingId], Union[dict, Behandling]], list[Union[dict, Behandling]]]])
+
+slots.samtykker = Slot(uri=PVN.samtykker, name="samtykker", curie=PVN.curie('samtykker'),
+                   model_uri=PVN.samtykker, domain=None, range=Optional[Union[dict[Union[str, SamtykkeId], Union[dict, Samtykke]], list[Union[dict, Samtykke]]]])
+
+slots.tenester = Slot(uri=PVN.tenester, name="tenester", curie=PVN.curie('tenester'),
+                   model_uri=PVN.tenester, domain=None, range=Optional[Union[dict[Union[str, TjenesteId], Union[dict, Tjeneste]], list[Union[dict, Tjeneste]]]])
+
+slots.personopplysningar = Slot(uri=PVN.personopplysningar, name="personopplysningar", curie=PVN.curie('personopplysningar'),
+                   model_uri=PVN.personopplysningar, domain=None, range=Optional[Union[dict[Union[str, PersonopplysningId], Union[dict, Personopplysning]], list[Union[dict, Personopplysning]]]])
+
+slots.behandlingsgrunnlag = Slot(uri=PVN.behandlingsgrunnlag, name="behandlingsgrunnlag", curie=PVN.curie('behandlingsgrunnlag'),
+                   model_uri=PVN.behandlingsgrunnlag, domain=None, range=Optional[Union[str, BehandlingsgrunnlagId]])
+
+slots.behandling = Slot(uri=PVN.behandling, name="behandling", curie=PVN.curie('behandling'),
+                   model_uri=PVN.behandling, domain=None, range=Optional[Union[str, BehandlingId]])
+
+slots.slettet = Slot(uri=PVN.slettet, name="slettet", curie=PVN.curie('slettet'),
+                   model_uri=PVN.slettet, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.aktiv = Slot(uri=PVN.aktiv, name="aktiv", curie=PVN.curie('aktiv'),
+                   model_uri=PVN.aktiv, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.formal = Slot(uri=PVN.formal, name="formal", curie=PVN.curie('formal'),
+                   model_uri=PVN.formal, domain=None, range=Optional[str])
+
+slots.personopplysning = Slot(uri=PVN.personopplysning, name="personopplysning", curie=PVN.curie('personopplysning'),
+                   model_uri=PVN.personopplysning, domain=None, range=Optional[Union[str, PersonopplysningId]])
+
+slots.samtykke = Slot(uri=PVN.samtykke, name="samtykke", curie=PVN.curie('samtykke'),
+                   model_uri=PVN.samtykke, domain=None, range=Optional[Union[Union[str, SamtykkeId], list[Union[str, SamtykkeId]]]])
+
+slots.tjeneste = Slot(uri=PVN.tjeneste, name="tjeneste", curie=PVN.curie('tjeneste'),
+                   model_uri=PVN.tjeneste, domain=None, range=Optional[Union[str, TjenesteId]])
+
+slots.opprettet = Slot(uri=PVN.opprettet, name="opprettet", curie=PVN.curie('opprettet'),
+                   model_uri=PVN.opprettet, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.organisasjonselement = Slot(uri=PVN.organisasjonselement, name="organisasjonselement", curie=PVN.curie('organisasjonselement'),
+                   model_uri=PVN.organisasjonselement, domain=None, range=Optional[Union[str, URIorCURIE]])
+
 slots.id = Slot(uri=FINT.id, name="id", curie=FINT.curie('id'),
                    model_uri=PVN.id, domain=None, range=URIRef)
 
-slots.personvernContainer__behandlingar = Slot(uri=PVN.behandlingar, name="personvernContainer__behandlingar", curie=PVN.curie('behandlingar'),
-                   model_uri=PVN.personvernContainer__behandlingar, domain=None, range=Optional[Union[dict[Union[str, BehandlingId], Union[dict, Behandling]], list[Union[dict, Behandling]]]])
+slots.gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=PVN.gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
 
-slots.personvernContainer__samtykker = Slot(uri=PVN.samtykker, name="personvernContainer__samtykker", curie=PVN.curie('samtykker'),
-                   model_uri=PVN.personvernContainer__samtykker, domain=None, range=Optional[Union[dict[Union[str, SamtykkeId], Union[dict, Samtykke]], list[Union[dict, Samtykke]]]])
+slots.kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=PVN.kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
 
-slots.personvernContainer__tenester = Slot(uri=PVN.tenester, name="personvernContainer__tenester", curie=PVN.curie('tenester'),
-                   model_uri=PVN.personvernContainer__tenester, domain=None, range=Optional[Union[dict[Union[str, TjenesteId], Union[dict, Tjeneste]], list[Union[dict, Tjeneste]]]])
+slots.postadresse = Slot(uri=FINT.postadresse, name="postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=PVN.postadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.personvernContainer__behandlingsgrunnlag = Slot(uri=PVN.behandlingsgrunnlag, name="personvernContainer__behandlingsgrunnlag", curie=PVN.curie('behandlingsgrunnlag'),
-                   model_uri=PVN.personvernContainer__behandlingsgrunnlag, domain=None, range=Optional[Union[dict[Union[str, BehandlingsgrunnlagId], Union[dict, Behandlingsgrunnlag]], list[Union[dict, Behandlingsgrunnlag]]]])
+slots.forretningsadresse = Slot(uri=FINT.forretningsadresse, name="forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=PVN.forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.personvernContainer__personopplysningar = Slot(uri=PVN.personopplysningar, name="personvernContainer__personopplysningar", curie=PVN.curie('personopplysningar'),
-                   model_uri=PVN.personvernContainer__personopplysningar, domain=None, range=Optional[Union[dict[Union[str, PersonopplysningId], Union[dict, Personopplysning]], list[Union[dict, Personopplysning]]]])
+slots.organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=PVN.organisasjonsnavn, domain=None, range=Optional[str])
 
-slots.behandling__aktiv = Slot(uri=PVN.aktiv, name="behandling__aktiv", curie=PVN.curie('aktiv'),
-                   model_uri=PVN.behandling__aktiv, domain=None, range=Union[bool, Bool])
+slots.organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=PVN.organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.behandling__formal = Slot(uri=PVN.formal, name="behandling__formal", curie=PVN.curie('formal'),
-                   model_uri=PVN.behandling__formal, domain=None, range=str)
+slots.kode = Slot(uri=FINT.kode, name="kode", curie=FINT.curie('kode'),
+                   model_uri=PVN.kode, domain=None, range=Optional[str])
 
-slots.behandling__slettet = Slot(uri=PVN.slettet, name="behandling__slettet", curie=PVN.curie('slettet'),
-                   model_uri=PVN.behandling__slettet, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.navn = Slot(uri=FINT.navn, name="navn", curie=FINT.curie('navn'),
+                   model_uri=PVN.navn, domain=None, range=Optional[str])
 
-slots.behandling__behandlingsgrunnlag = Slot(uri=PVN.behandlingsgrunnlag, name="behandling__behandlingsgrunnlag", curie=PVN.curie('behandlingsgrunnlag'),
-                   model_uri=PVN.behandling__behandlingsgrunnlag, domain=None, range=Union[str, BehandlingsgrunnlagId])
+slots.passiv = Slot(uri=FINT.passiv, name="passiv", curie=FINT.curie('passiv'),
+                   model_uri=PVN.passiv, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.behandling__personopplysning = Slot(uri=PVN.personopplysning, name="behandling__personopplysning", curie=PVN.curie('personopplysning'),
-                   model_uri=PVN.behandling__personopplysning, domain=None, range=Union[str, PersonopplysningId])
+slots.identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=PVN.identifikatorverdi, domain=None, range=Optional[str])
 
-slots.behandling__samtykke = Slot(uri=PVN.samtykke, name="behandling__samtykke", curie=PVN.curie('samtykke'),
-                   model_uri=PVN.behandling__samtykke, domain=None, range=Optional[Union[Union[str, SamtykkeId], list[Union[str, SamtykkeId]]]])
+slots.beskrivelse = Slot(uri=FINT.beskrivelse, name="beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=PVN.beskrivelse, domain=None, range=Optional[str])
 
-slots.behandling__tjeneste = Slot(uri=PVN.tjeneste, name="behandling__tjeneste", curie=PVN.curie('tjeneste'),
-                   model_uri=PVN.behandling__tjeneste, domain=None, range=Union[str, TjenesteId])
+slots.start = Slot(uri=FINT.start, name="start", curie=FINT.curie('start'),
+                   model_uri=PVN.start, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.samtykke__gyldighetsperiode = Slot(uri=PVN.gyldighetsperiode, name="samtykke__gyldighetsperiode", curie=PVN.curie('gyldighetsperiode'),
-                   model_uri=PVN.samtykke__gyldighetsperiode, domain=None, range=Union[dict, Periode])
+slots.slutt = Slot(uri=FINT.slutt, name="slutt", curie=FINT.curie('slutt'),
+                   model_uri=PVN.slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.samtykke__opprettet = Slot(uri=PVN.opprettet, name="samtykke__opprettet", curie=PVN.curie('opprettet'),
-                   model_uri=PVN.samtykke__opprettet, domain=None, range=Union[str, XSDDateTime])
+slots.fornavn = Slot(uri=FINT.fornavn, name="fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=PVN.fornavn, domain=None, range=Optional[str])
 
-slots.samtykke__behandling = Slot(uri=PVN.behandling, name="samtykke__behandling", curie=PVN.curie('behandling'),
-                   model_uri=PVN.samtykke__behandling, domain=None, range=Union[str, BehandlingId])
+slots.mellomnavn = Slot(uri=FINT.mellomnavn, name="mellomnavn", curie=FINT.curie('mellomnavn'),
+                   model_uri=PVN.mellomnavn, domain=None, range=Optional[str])
 
-slots.samtykke__person = Slot(uri=PVN.person, name="samtykke__person", curie=PVN.curie('person'),
-                   model_uri=PVN.samtykke__person, domain=None, range=Union[str, URIorCURIE])
+slots.etternavn = Slot(uri=FINT.etternavn, name="etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=PVN.etternavn, domain=None, range=Optional[str])
 
-slots.samtykke__organisasjonselement = Slot(uri=PVN.organisasjonselement, name="samtykke__organisasjonselement", curie=PVN.curie('organisasjonselement'),
-                   model_uri=PVN.samtykke__organisasjonselement, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.epostadresse = Slot(uri=FINT.epostadresse, name="epostadresse", curie=FINT.curie('epostadresse'),
+                   model_uri=PVN.epostadresse, domain=None, range=Optional[str])
 
-slots.tjeneste__navn = Slot(uri=PVN.navn, name="tjeneste__navn", curie=PVN.curie('navn'),
-                   model_uri=PVN.tjeneste__navn, domain=None, range=str)
+slots.mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
+                   model_uri=PVN.mobiltelefonnummer, domain=None, range=Optional[str])
 
-slots.tjeneste__slettet = Slot(uri=PVN.slettet, name="tjeneste__slettet", curie=PVN.curie('slettet'),
-                   model_uri=PVN.tjeneste__slettet, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.nettsted = Slot(uri=FINT.nettsted, name="nettsted", curie=FINT.curie('nettsted'),
+                   model_uri=PVN.nettsted, domain=None, range=Optional[str])
 
-slots.tjeneste__behandling = Slot(uri=PVN.behandling, name="tjeneste__behandling", curie=PVN.curie('behandling'),
-                   model_uri=PVN.tjeneste__behandling, domain=None, range=Optional[Union[Union[str, BehandlingId], list[Union[str, BehandlingId]]]])
+slots.sip = Slot(uri=FINT.sip, name="sip", curie=FINT.curie('sip'),
+                   model_uri=PVN.sip, domain=None, range=Optional[str])
 
-slots.behandlingsgrunnlag__kode = Slot(uri=PVN.kode, name="behandlingsgrunnlag__kode", curie=PVN.curie('kode'),
-                   model_uri=PVN.behandlingsgrunnlag__kode, domain=None, range=str)
+slots.telefonnummer = Slot(uri=FINT.telefonnummer, name="telefonnummer", curie=FINT.curie('telefonnummer'),
+                   model_uri=PVN.telefonnummer, domain=None, range=Optional[str])
 
-slots.behandlingsgrunnlag__navn = Slot(uri=PVN.navn, name="behandlingsgrunnlag__navn", curie=PVN.curie('navn'),
-                   model_uri=PVN.behandlingsgrunnlag__navn, domain=None, range=str)
+slots.adresselinje = Slot(uri=FINT.adresselinje, name="adresselinje", curie=FINT.curie('adresselinje'),
+                   model_uri=PVN.adresselinje, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.behandlingsgrunnlag__gyldighetsperiode = Slot(uri=PVN.gyldighetsperiode, name="behandlingsgrunnlag__gyldighetsperiode", curie=PVN.curie('gyldighetsperiode'),
-                   model_uri=PVN.behandlingsgrunnlag__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
+slots.postnummer = Slot(uri=FINT.postnummer, name="postnummer", curie=FINT.curie('postnummer'),
+                   model_uri=PVN.postnummer, domain=None, range=Optional[str])
 
-slots.behandlingsgrunnlag__passiv = Slot(uri=PVN.passiv, name="behandlingsgrunnlag__passiv", curie=PVN.curie('passiv'),
-                   model_uri=PVN.behandlingsgrunnlag__passiv, domain=None, range=Optional[Union[bool, Bool]])
+slots.poststed = Slot(uri=FINT.poststed, name="poststed", curie=FINT.curie('poststed'),
+                   model_uri=PVN.poststed, domain=None, range=Optional[str])
 
-slots.personopplysning__kode = Slot(uri=PVN.kode, name="personopplysning__kode", curie=PVN.curie('kode'),
-                   model_uri=PVN.personopplysning__kode, domain=None, range=str)
+slots.land = Slot(uri=FINT.land, name="land", curie=FINT.curie('land'),
+                   model_uri=PVN.land, domain=None, range=Optional[Union[str, LandkodeId]])
 
-slots.personopplysning__navn = Slot(uri=PVN.navn, name="personopplysning__navn", curie=PVN.curie('navn'),
-                   model_uri=PVN.personopplysning__navn, domain=None, range=str)
+slots.adresse = Slot(uri=FINT.adresse, name="adresse", curie=FINT.curie('adresse'),
+                   model_uri=PVN.adresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.personopplysning__gyldighetsperiode = Slot(uri=PVN.gyldighetsperiode, name="personopplysning__gyldighetsperiode", curie=PVN.curie('gyldighetsperiode'),
-                   model_uri=PVN.personopplysning__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
+slots.bruksnummer = Slot(uri=FINT.bruksnummer, name="bruksnummer", curie=FINT.curie('bruksnummer'),
+                   model_uri=PVN.bruksnummer, domain=None, range=Optional[str])
 
-slots.personopplysning__passiv = Slot(uri=PVN.passiv, name="personopplysning__passiv", curie=PVN.curie('passiv'),
-                   model_uri=PVN.personopplysning__passiv, domain=None, range=Optional[Union[bool, Bool]])
+slots.festenummer = Slot(uri=FINT.festenummer, name="festenummer", curie=FINT.curie('festenummer'),
+                   model_uri=PVN.festenummer, domain=None, range=Optional[str])
 
-slots.aktoer__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="aktoer__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=PVN.aktoer__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
+slots.gaardsnummer = Slot(uri=FINT.gaardsnummer, name="gaardsnummer", curie=FINT.curie('gaardsnummer'),
+                   model_uri=PVN.gaardsnummer, domain=None, range=Optional[str])
 
-slots.aktoer__postadresse = Slot(uri=FINT.postadresse, name="aktoer__postadresse", curie=FINT.curie('postadresse'),
-                   model_uri=PVN.aktoer__postadresse, domain=None, range=Optional[Union[dict, Adresse]])
+slots.seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
+                   model_uri=PVN.seksjonsnummer, domain=None, range=Optional[str])
 
-slots.begrep__kode = Slot(uri=FINT.kode, name="begrep__kode", curie=FINT.curie('kode'),
-                   model_uri=PVN.begrep__kode, domain=None, range=str)
+slots.kommunenummer = Slot(uri=FINT.kommunenummer, name="kommunenummer", curie=FINT.curie('kommunenummer'),
+                   model_uri=PVN.kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.begrep__navn = Slot(uri=FINT.navn, name="begrep__navn", curie=FINT.curie('navn'),
-                   model_uri=PVN.begrep__navn, domain=None, range=str)
+slots.fylke = Slot(uri=FINT.fylke, name="fylke", curie=FINT.curie('fylke'),
+                   model_uri=PVN.fylke, domain=None, range=Optional[Union[str, FylkeId]])
 
-slots.begrep__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="begrep__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=PVN.begrep__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
+slots.kommune = Slot(uri=FINT.kommune, name="kommune", curie=FINT.curie('kommune'),
+                   model_uri=PVN.kommune, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.begrep__passiv = Slot(uri=FINT.passiv, name="begrep__passiv", curie=FINT.curie('passiv'),
-                   model_uri=PVN.begrep__passiv, domain=None, range=Optional[Union[bool, Bool]])
+slots.kjonn = Slot(uri=FINT.kjonn, name="kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=PVN.kjonn, domain=None, range=Optional[Union[str, KjonnId]])
 
-slots.enhet__forretningsadresse = Slot(uri=FINT.forretningsadresse, name="enhet__forretningsadresse", curie=FINT.curie('forretningsadresse'),
-                   model_uri=PVN.enhet__forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
+slots.bokstavkode = Slot(uri=FINT.bokstavkode, name="bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=PVN.bokstavkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.enhet__organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="enhet__organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
-                   model_uri=PVN.enhet__organisasjonsnavn, domain=None, range=Optional[str])
+slots.valuta_navn = Slot(uri=FINT.valutaNavn, name="valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=PVN.valuta_navn, domain=None, range=Optional[str])
 
-slots.enhet__organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="enhet__organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
-                   model_uri=PVN.enhet__organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
+slots.nummerkode = Slot(uri=FINT.nummerkode, name="nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=PVN.nummerkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.identifikator__identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikator__identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
-                   model_uri=PVN.identifikator__identifikatorverdi, domain=None, range=str)
+slots.bilde = Slot(uri=FINT.bilde, name="bilde", curie=FINT.curie('bilde'),
+                   model_uri=PVN.bilde, domain=None, range=Optional[str])
 
-slots.identifikator__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="identifikator__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=PVN.identifikator__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
+slots.bostedsadresse = Slot(uri=FINT.bostedsadresse, name="bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=PVN.bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.periode__beskrivelse = Slot(uri=FINT.beskrivelse, name="periode__beskrivelse", curie=FINT.curie('beskrivelse'),
-                   model_uri=PVN.periode__beskrivelse, domain=None, range=Optional[str])
+slots.fodselsdato = Slot(uri=FINT.fodselsdato, name="fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=PVN.fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.periode__start = Slot(uri=FINT.start, name="periode__start", curie=FINT.curie('start'),
-                   model_uri=PVN.periode__start, domain=None, range=Union[str, XSDDateTime])
+slots.fodselsnummer = Slot(uri=FINT.fodselsnummer, name="fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=PVN.fodselsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.periode__slutt = Slot(uri=FINT.slutt, name="periode__slutt", curie=FINT.curie('slutt'),
-                   model_uri=PVN.periode__slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.person_navn = Slot(uri=FINT.personNavn, name="person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=PVN.person_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.personnavn__fornavn = Slot(uri=FINT.fornavn, name="personnavn__fornavn", curie=FINT.curie('fornavn'),
-                   model_uri=PVN.personnavn__fornavn, domain=None, range=str)
+slots.parorende = Slot(uri=FINT.parorende, name="parorende", curie=FINT.curie('parorende'),
+                   model_uri=PVN.parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
 
-slots.personnavn__mellomnavn = Slot(uri=FINT.mellomnavn, name="personnavn__mellomnavn", curie=FINT.curie('mellomnavn'),
-                   model_uri=PVN.personnavn__mellomnavn, domain=None, range=Optional[str])
+slots.statsborgerskap = Slot(uri=FINT.statsborgerskap, name="statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=PVN.statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
 
-slots.personnavn__etternavn = Slot(uri=FINT.etternavn, name="personnavn__etternavn", curie=FINT.curie('etternavn'),
-                   model_uri=PVN.personnavn__etternavn, domain=None, range=str)
+slots.foreldreansvar = Slot(uri=FINT.foreldreansvar, name="foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=PVN.foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.kontaktinformasjon__epostadresse = Slot(uri=FINT.epostadresse, name="kontaktinformasjon__epostadresse", curie=FINT.curie('epostadresse'),
-                   model_uri=PVN.kontaktinformasjon__epostadresse, domain=None, range=Optional[str])
+slots.foreldre = Slot(uri=FINT.foreldre, name="foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=PVN.foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.kontaktinformasjon__mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="kontaktinformasjon__mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
-                   model_uri=PVN.kontaktinformasjon__mobiltelefonnummer, domain=None, range=Optional[str])
+slots.maalform = Slot(uri=FINT.maalform, name="maalform", curie=FINT.curie('maalform'),
+                   model_uri=PVN.maalform, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.kontaktinformasjon__nettsted = Slot(uri=FINT.nettsted, name="kontaktinformasjon__nettsted", curie=FINT.curie('nettsted'),
-                   model_uri=PVN.kontaktinformasjon__nettsted, domain=None, range=Optional[str])
+slots.morsmaal = Slot(uri=FINT.morsmaal, name="morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=PVN.morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.kontaktinformasjon__sip = Slot(uri=FINT.sip, name="kontaktinformasjon__sip", curie=FINT.curie('sip'),
-                   model_uri=PVN.kontaktinformasjon__sip, domain=None, range=Optional[str])
+slots.laerling = Slot(uri=FINT.laerling, name="laerling", curie=FINT.curie('laerling'),
+                   model_uri=PVN.laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
-slots.kontaktinformasjon__telefonnummer = Slot(uri=FINT.telefonnummer, name="kontaktinformasjon__telefonnummer", curie=FINT.curie('telefonnummer'),
-                   model_uri=PVN.kontaktinformasjon__telefonnummer, domain=None, range=Optional[str])
+slots.elev = Slot(uri=FINT.elev, name="elev", curie=FINT.curie('elev'),
+                   model_uri=PVN.elev, domain=None, range=Optional[Union[str, ElevId]])
 
-slots.adresse__adresselinje = Slot(uri=FINT.adresselinje, name="adresse__adresselinje", curie=FINT.curie('adresselinje'),
-                   model_uri=PVN.adresse__adresselinje, domain=None, range=Optional[Union[str, list[str]]])
+slots.elevnummer = Slot(uri=FINT.elevnummer, name="elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=PVN.elevnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.adresse__postnummer = Slot(uri=FINT.postnummer, name="adresse__postnummer", curie=FINT.curie('postnummer'),
-                   model_uri=PVN.adresse__postnummer, domain=None, range=Optional[str])
+slots.person = Slot(uri=FINT.person, name="person", curie=FINT.curie('person'),
+                   model_uri=PVN.person, domain=None, range=Optional[Union[str, PersonId]])
 
-slots.adresse__poststed = Slot(uri=FINT.poststed, name="adresse__poststed", curie=FINT.curie('poststed'),
-                   model_uri=PVN.adresse__poststed, domain=None, range=Optional[str])
+slots.otungdom = Slot(uri=FINT.otungdom, name="otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=PVN.otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.adresse__land = Slot(uri=FINT.land, name="adresse__land", curie=FINT.curie('land'),
-                   model_uri=PVN.adresse__land, domain=None, range=Optional[Union[str, LandkodeId]])
+slots.kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=PVN.kontaktperson_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.matrikkelnummer__adresse = Slot(uri=FINT.adresse, name="matrikkelnummer__adresse", curie=FINT.curie('adresse'),
-                   model_uri=PVN.matrikkelnummer__adresse, domain=None, range=Optional[Union[dict, Adresse]])
+slots.type = Slot(uri=FINT.type, name="type", curie=FINT.curie('type'),
+                   model_uri=PVN.type, domain=None, range=Optional[str])
 
-slots.matrikkelnummer__bruksnummer = Slot(uri=FINT.bruksnummer, name="matrikkelnummer__bruksnummer", curie=FINT.curie('bruksnummer'),
-                   model_uri=PVN.matrikkelnummer__bruksnummer, domain=None, range=Optional[str])
+slots.kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=PVN.kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.matrikkelnummer__festenummer = Slot(uri=FINT.festenummer, name="matrikkelnummer__festenummer", curie=FINT.curie('festenummer'),
-                   model_uri=PVN.matrikkelnummer__festenummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__gaardsnummer = Slot(uri=FINT.gaardsnummer, name="matrikkelnummer__gaardsnummer", curie=FINT.curie('gaardsnummer'),
-                   model_uri=PVN.matrikkelnummer__gaardsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="matrikkelnummer__seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
-                   model_uri=PVN.matrikkelnummer__seksjonsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__kommunenummer = Slot(uri=FINT.kommunenummer, name="matrikkelnummer__kommunenummer", curie=FINT.curie('kommunenummer'),
-                   model_uri=PVN.matrikkelnummer__kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.fylke__kommune = Slot(uri=FINT.kommune, name="fylke__kommune", curie=FINT.curie('kommune'),
-                   model_uri=PVN.fylke__kommune, domain=None, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
-
-slots.kommune__fylke = Slot(uri=FINT.fylke, name="kommune__fylke", curie=FINT.curie('fylke'),
-                   model_uri=PVN.kommune__fylke, domain=None, range=Union[str, FylkeId])
-
-slots.valuta__bokstavkode = Slot(uri=FINT.bokstavkode, name="valuta__bokstavkode", curie=FINT.curie('bokstavkode'),
-                   model_uri=PVN.valuta__bokstavkode, domain=None, range=Union[dict, Identifikator])
-
-slots.valuta__navn = Slot(uri=FINT.valutaNavn, name="valuta__navn", curie=FINT.curie('valutaNavn'),
-                   model_uri=PVN.valuta__navn, domain=None, range=str)
-
-slots.valuta__nummerkode = Slot(uri=FINT.nummerkode, name="valuta__nummerkode", curie=FINT.curie('nummerkode'),
-                   model_uri=PVN.valuta__nummerkode, domain=None, range=Union[dict, Identifikator])
-
-slots.person__bilde = Slot(uri=FINT.bilde, name="person__bilde", curie=FINT.curie('bilde'),
-                   model_uri=PVN.person__bilde, domain=None, range=Optional[str])
-
-slots.person__bostedsadresse = Slot(uri=FINT.bostedsadresse, name="person__bostedsadresse", curie=FINT.curie('bostedsadresse'),
-                   model_uri=PVN.person__bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.person__fodselsdato = Slot(uri=FINT.fodselsdato, name="person__fodselsdato", curie=FINT.curie('fodselsdato'),
-                   model_uri=PVN.person__fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.person__fodselsnummer = Slot(uri=FINT.fodselsnummer, name="person__fodselsnummer", curie=FINT.curie('fodselsnummer'),
-                   model_uri=PVN.person__fodselsnummer, domain=None, range=Union[dict, Identifikator])
-
-slots.person__navn = Slot(uri=FINT.personNavn, name="person__navn", curie=FINT.curie('personNavn'),
-                   model_uri=PVN.person__navn, domain=None, range=Union[dict, Personnavn])
-
-slots.person__parorende = Slot(uri=FINT.parorende, name="person__parorende", curie=FINT.curie('parorende'),
-                   model_uri=PVN.person__parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
-
-slots.person__statsborgerskap = Slot(uri=FINT.statsborgerskap, name="person__statsborgerskap", curie=FINT.curie('statsborgerskap'),
-                   model_uri=PVN.person__statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
-
-slots.person__kommune = Slot(uri=FINT.kommune, name="person__kommune", curie=FINT.curie('kommune'),
-                   model_uri=PVN.person__kommune, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.person__kjonn = Slot(uri=FINT.kjonn, name="person__kjonn", curie=FINT.curie('kjonn'),
-                   model_uri=PVN.person__kjonn, domain=None, range=Optional[Union[str, KjonnId]])
-
-slots.person__foreldreansvar = Slot(uri=FINT.foreldreansvar, name="person__foreldreansvar", curie=FINT.curie('foreldreansvar'),
-                   model_uri=PVN.person__foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__foreldre = Slot(uri=FINT.foreldre, name="person__foreldre", curie=FINT.curie('foreldre'),
-                   model_uri=PVN.person__foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__maalform = Slot(uri=FINT.maalform, name="person__maalform", curie=FINT.curie('maalform'),
-                   model_uri=PVN.person__maalform, domain=None, range=Optional[Union[str, SpraakId]])
+slots.virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=PVN.virksomhetsId, domain=None, range=Optional[Union[dict, Identifikator]])
 
 slots.person__personalressurs = Slot(uri=FINT.personalressurs, name="person__personalressurs", curie=FINT.curie('personalressurs'),
                    model_uri=PVN.person__personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.person__morsmaal = Slot(uri=FINT.morsmaal, name="person__morsmaal", curie=FINT.curie('morsmaal'),
-                   model_uri=PVN.person__morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
+slots.PersonvernContainer_behandlingsgrunnlag = Slot(uri=PVN.behandlingsgrunnlag, name="PersonvernContainer_behandlingsgrunnlag", curie=PVN.curie('behandlingsgrunnlag'),
+                   model_uri=PVN.PersonvernContainer_behandlingsgrunnlag, domain=PersonvernContainer, range=Optional[Union[dict[Union[str, BehandlingsgrunnlagId], Union[dict, "Behandlingsgrunnlag"]], list[Union[dict, "Behandlingsgrunnlag"]]]])
 
-slots.person__laerling = Slot(uri=FINT.laerling, name="person__laerling", curie=FINT.curie('laerling'),
-                   model_uri=PVN.person__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.Behandling_aktiv = Slot(uri=PVN.aktiv, name="Behandling_aktiv", curie=PVN.curie('aktiv'),
+                   model_uri=PVN.Behandling_aktiv, domain=Behandling, range=Union[bool, Bool])
 
-slots.person__elev = Slot(uri=FINT.elev, name="person__elev", curie=FINT.curie('elev'),
-                   model_uri=PVN.person__elev, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.Behandling_formal = Slot(uri=PVN.formal, name="Behandling_formal", curie=PVN.curie('formal'),
+                   model_uri=PVN.Behandling_formal, domain=Behandling, range=str)
 
-slots.person__otungdom = Slot(uri=FINT.otungdom, name="person__otungdom", curie=FINT.curie('otungdom'),
-                   model_uri=PVN.person__otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.Behandling_slettet = Slot(uri=PVN.slettet, name="Behandling_slettet", curie=PVN.curie('slettet'),
+                   model_uri=PVN.Behandling_slettet, domain=Behandling, range=Optional[Union[str, XSDDateTime]])
 
-slots.kontaktperson__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktperson__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=PVN.kontaktperson__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
+slots.Behandling_behandlingsgrunnlag = Slot(uri=PVN.behandlingsgrunnlag, name="Behandling_behandlingsgrunnlag", curie=PVN.curie('behandlingsgrunnlag'),
+                   model_uri=PVN.Behandling_behandlingsgrunnlag, domain=Behandling, range=Union[str, BehandlingsgrunnlagId])
 
-slots.kontaktperson__navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson__navn", curie=FINT.curie('kontaktpersonNavn'),
-                   model_uri=PVN.kontaktperson__navn, domain=None, range=Optional[Union[dict, Personnavn]])
+slots.Behandling_personopplysning = Slot(uri=PVN.personopplysning, name="Behandling_personopplysning", curie=PVN.curie('personopplysning'),
+                   model_uri=PVN.Behandling_personopplysning, domain=Behandling, range=Union[str, PersonopplysningId])
 
-slots.kontaktperson__type = Slot(uri=FINT.type, name="kontaktperson__type", curie=FINT.curie('type'),
-                   model_uri=PVN.kontaktperson__type, domain=None, range=str)
+slots.Behandling_samtykke = Slot(uri=PVN.samtykke, name="Behandling_samtykke", curie=PVN.curie('samtykke'),
+                   model_uri=PVN.Behandling_samtykke, domain=Behandling, range=Optional[Union[Union[str, SamtykkeId], list[Union[str, SamtykkeId]]]])
 
-slots.kontaktperson__kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson__kontaktperson", curie=FINT.curie('kontaktpersonFor'),
-                   model_uri=PVN.kontaktperson__kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+slots.Behandling_tjeneste = Slot(uri=PVN.tjeneste, name="Behandling_tjeneste", curie=PVN.curie('tjeneste'),
+                   model_uri=PVN.Behandling_tjeneste, domain=Behandling, range=Union[str, TjenesteId])
 
-slots.virksomhet__virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhet__virksomhetsId", curie=FINT.curie('virksomhetsId'),
-                   model_uri=PVN.virksomhet__virksomhetsId, domain=None, range=Union[dict, Identifikator])
+slots.Samtykke_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Samtykke_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=PVN.Samtykke_gyldighetsperiode, domain=Samtykke, range=Union[dict, "Periode"])
 
-slots.virksomhet__laerling = Slot(uri=FINT.laerling, name="virksomhet__laerling", curie=FINT.curie('laerling'),
-                   model_uri=PVN.virksomhet__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.Samtykke_opprettet = Slot(uri=PVN.opprettet, name="Samtykke_opprettet", curie=PVN.curie('opprettet'),
+                   model_uri=PVN.Samtykke_opprettet, domain=Samtykke, range=Union[str, XSDDateTime])
+
+slots.Samtykke_behandling = Slot(uri=PVN.behandling, name="Samtykke_behandling", curie=PVN.curie('behandling'),
+                   model_uri=PVN.Samtykke_behandling, domain=Samtykke, range=Union[str, BehandlingId])
+
+slots.Samtykke_person = Slot(uri=FINT.person, name="Samtykke_person", curie=FINT.curie('person'),
+                   model_uri=PVN.Samtykke_person, domain=Samtykke, range=Union[str, PersonId])
+
+slots.Samtykke_organisasjonselement = Slot(uri=PVN.organisasjonselement, name="Samtykke_organisasjonselement", curie=PVN.curie('organisasjonselement'),
+                   model_uri=PVN.Samtykke_organisasjonselement, domain=Samtykke, range=Optional[Union[str, URIorCURIE]])
+
+slots.Tjeneste_navn = Slot(uri=FINT.navn, name="Tjeneste_navn", curie=FINT.curie('navn'),
+                   model_uri=PVN.Tjeneste_navn, domain=Tjeneste, range=str)
+
+slots.Tjeneste_slettet = Slot(uri=PVN.slettet, name="Tjeneste_slettet", curie=PVN.curie('slettet'),
+                   model_uri=PVN.Tjeneste_slettet, domain=Tjeneste, range=Optional[Union[str, XSDDateTime]])
+
+slots.Tjeneste_behandling = Slot(uri=PVN.behandling, name="Tjeneste_behandling", curie=PVN.curie('behandling'),
+                   model_uri=PVN.Tjeneste_behandling, domain=Tjeneste, range=Optional[Union[Union[str, BehandlingId], list[Union[str, BehandlingId]]]])
+
+slots.Behandlingsgrunnlag_kode = Slot(uri=FINT.kode, name="Behandlingsgrunnlag_kode", curie=FINT.curie('kode'),
+                   model_uri=PVN.Behandlingsgrunnlag_kode, domain=Behandlingsgrunnlag, range=str)
+
+slots.Behandlingsgrunnlag_navn = Slot(uri=FINT.navn, name="Behandlingsgrunnlag_navn", curie=FINT.curie('navn'),
+                   model_uri=PVN.Behandlingsgrunnlag_navn, domain=Behandlingsgrunnlag, range=str)
+
+slots.Behandlingsgrunnlag_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Behandlingsgrunnlag_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=PVN.Behandlingsgrunnlag_gyldighetsperiode, domain=Behandlingsgrunnlag, range=Optional[Union[dict, "Periode"]])
+
+slots.Behandlingsgrunnlag_passiv = Slot(uri=FINT.passiv, name="Behandlingsgrunnlag_passiv", curie=FINT.curie('passiv'),
+                   model_uri=PVN.Behandlingsgrunnlag_passiv, domain=Behandlingsgrunnlag, range=Optional[Union[bool, Bool]])
+
+slots.Personopplysning_kode = Slot(uri=FINT.kode, name="Personopplysning_kode", curie=FINT.curie('kode'),
+                   model_uri=PVN.Personopplysning_kode, domain=Personopplysning, range=str)
+
+slots.Personopplysning_navn = Slot(uri=FINT.navn, name="Personopplysning_navn", curie=FINT.curie('navn'),
+                   model_uri=PVN.Personopplysning_navn, domain=Personopplysning, range=str)
+
+slots.Personopplysning_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Personopplysning_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=PVN.Personopplysning_gyldighetsperiode, domain=Personopplysning, range=Optional[Union[dict, "Periode"]])
+
+slots.Personopplysning_passiv = Slot(uri=FINT.passiv, name="Personopplysning_passiv", curie=FINT.curie('passiv'),
+                   model_uri=PVN.Personopplysning_passiv, domain=Personopplysning, range=Optional[Union[bool, Bool]])
+
+slots.Aktoer_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Aktoer_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=PVN.Aktoer_kontaktinformasjon, domain=Aktoer, range=Optional[Union[dict, "Kontaktinformasjon"]])
+
+slots.Aktoer_postadresse = Slot(uri=FINT.postadresse, name="Aktoer_postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=PVN.Aktoer_postadresse, domain=Aktoer, range=Optional[Union[dict, "Adresse"]])
+
+slots.Begrep_kode = Slot(uri=FINT.kode, name="Begrep_kode", curie=FINT.curie('kode'),
+                   model_uri=PVN.Begrep_kode, domain=Begrep, range=str)
+
+slots.Begrep_navn = Slot(uri=FINT.navn, name="Begrep_navn", curie=FINT.curie('navn'),
+                   model_uri=PVN.Begrep_navn, domain=Begrep, range=str)
+
+slots.Begrep_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Begrep_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=PVN.Begrep_gyldighetsperiode, domain=Begrep, range=Optional[Union[dict, "Periode"]])
+
+slots.Begrep_passiv = Slot(uri=FINT.passiv, name="Begrep_passiv", curie=FINT.curie('passiv'),
+                   model_uri=PVN.Begrep_passiv, domain=Begrep, range=Optional[Union[bool, Bool]])
+
+slots.Elev_elevnummer = Slot(uri=FINT.elevnummer, name="Elev_elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=PVN.Elev_elevnummer, domain=Elev, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Elev_person = Slot(uri=FINT.person, name="Elev_person", curie=FINT.curie('person'),
+                   model_uri=PVN.Elev_person, domain=Elev, range=Optional[Union[str, PersonId]])
+
+slots.Enhet_forretningsadresse = Slot(uri=FINT.forretningsadresse, name="Enhet_forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=PVN.Enhet_forretningsadresse, domain=Enhet, range=Optional[Union[dict, "Adresse"]])
+
+slots.Enhet_organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="Enhet_organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=PVN.Enhet_organisasjonsnavn, domain=Enhet, range=Optional[str])
+
+slots.Enhet_organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="Enhet_organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=PVN.Enhet_organisasjonsnummer, domain=Enhet, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Identifikator_identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="Identifikator_identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=PVN.Identifikator_identifikatorverdi, domain=Identifikator, range=str)
+
+slots.Periode_start = Slot(uri=FINT.start, name="Periode_start", curie=FINT.curie('start'),
+                   model_uri=PVN.Periode_start, domain=Periode, range=Union[str, XSDDateTime])
+
+slots.Personnavn_fornavn = Slot(uri=FINT.fornavn, name="Personnavn_fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=PVN.Personnavn_fornavn, domain=Personnavn, range=str)
+
+slots.Personnavn_etternavn = Slot(uri=FINT.etternavn, name="Personnavn_etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=PVN.Personnavn_etternavn, domain=Personnavn, range=str)
+
+slots.Fylke_kommune = Slot(uri=FINT.kommune, name="Fylke_kommune", curie=FINT.curie('kommune'),
+                   model_uri=PVN.Fylke_kommune, domain=Fylke, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
+
+slots.Kommune_fylke = Slot(uri=FINT.fylke, name="Kommune_fylke", curie=FINT.curie('fylke'),
+                   model_uri=PVN.Kommune_fylke, domain=Kommune, range=Union[str, FylkeId])
+
+slots.Valuta_bokstavkode = Slot(uri=FINT.bokstavkode, name="Valuta_bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=PVN.Valuta_bokstavkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Valuta_valuta_navn = Slot(uri=FINT.valutaNavn, name="Valuta_valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=PVN.Valuta_valuta_navn, domain=Valuta, range=str)
+
+slots.Valuta_nummerkode = Slot(uri=FINT.nummerkode, name="Valuta_nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=PVN.Valuta_nummerkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Person_fodselsnummer = Slot(uri=FINT.fodselsnummer, name="Person_fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=PVN.Person_fodselsnummer, domain=Person, range=Union[dict, Identifikator])
+
+slots.Person_person_navn = Slot(uri=FINT.personNavn, name="Person_person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=PVN.Person_person_navn, domain=Person, range=Union[dict, Personnavn])
+
+slots.Person_bilde = Slot(uri=FINT.bilde, name="Person_bilde", curie=FINT.curie('bilde'),
+                   model_uri=PVN.Person_bilde, domain=Person, range=Optional[str])
+
+slots.Person_bostedsadresse = Slot(uri=FINT.bostedsadresse, name="Person_bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=PVN.Person_bostedsadresse, domain=Person, range=Optional[Union[dict, Adresse]])
+
+slots.Person_fodselsdato = Slot(uri=FINT.fodselsdato, name="Person_fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=PVN.Person_fodselsdato, domain=Person, range=Optional[Union[str, XSDDate]])
+
+slots.Person_parorende = Slot(uri=FINT.parorende, name="Person_parorende", curie=FINT.curie('parorende'),
+                   model_uri=PVN.Person_parorende, domain=Person, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
+
+slots.Person_statsborgerskap = Slot(uri=FINT.statsborgerskap, name="Person_statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=PVN.Person_statsborgerskap, domain=Person, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
+
+slots.Person_kommune = Slot(uri=FINT.kommune, name="Person_kommune", curie=FINT.curie('kommune'),
+                   model_uri=PVN.Person_kommune, domain=Person, range=Optional[Union[str, KommuneId]])
+
+slots.Person_kjonn = Slot(uri=FINT.kjonn, name="Person_kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=PVN.Person_kjonn, domain=Person, range=Optional[Union[str, KjonnId]])
+
+slots.Person_foreldreansvar = Slot(uri=FINT.foreldreansvar, name="Person_foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=PVN.Person_foreldreansvar, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_foreldre = Slot(uri=FINT.foreldre, name="Person_foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=PVN.Person_foreldre, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_maalform = Slot(uri=FINT.maalform, name="Person_maalform", curie=FINT.curie('maalform'),
+                   model_uri=PVN.Person_maalform, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_morsmaal = Slot(uri=FINT.morsmaal, name="Person_morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=PVN.Person_morsmaal, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_laerling = Slot(uri=FINT.laerling, name="Person_laerling", curie=FINT.curie('laerling'),
+                   model_uri=PVN.Person_laerling, domain=Person, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+
+slots.Person_elev = Slot(uri=FINT.elev, name="Person_elev", curie=FINT.curie('elev'),
+                   model_uri=PVN.Person_elev, domain=Person, range=Optional[Union[str, ElevId]])
+
+slots.Person_otungdom = Slot(uri=FINT.otungdom, name="Person_otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=PVN.Person_otungdom, domain=Person, range=Optional[Union[str, URIorCURIE]])
+
+slots.Kontaktperson_type = Slot(uri=FINT.type, name="Kontaktperson_type", curie=FINT.curie('type'),
+                   model_uri=PVN.Kontaktperson_type, domain=Kontaktperson, range=str)
+
+slots.Kontaktperson_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Kontaktperson_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=PVN.Kontaktperson_kontaktinformasjon, domain=Kontaktperson, range=Optional[Union[dict, Kontaktinformasjon]])
+
+slots.Kontaktperson_kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="Kontaktperson_kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=PVN.Kontaktperson_kontaktperson_navn, domain=Kontaktperson, range=Optional[Union[dict, Personnavn]])
+
+slots.Kontaktperson_kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="Kontaktperson_kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=PVN.Kontaktperson_kontaktperson, domain=Kontaktperson, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Virksomhet_virksomhetsId = Slot(uri=FINT.virksomhetsId, name="Virksomhet_virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=PVN.Virksomhet_virksomhetsId, domain=Virksomhet, range=Union[dict, Identifikator])
+
+slots.Virksomhet_laerling = Slot(uri=FINT.laerling, name="Virksomhet_laerling", curie=FINT.curie('laerling'),
+                   model_uri=PVN.Virksomhet_laerling, domain=Virksomhet, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 

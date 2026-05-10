@@ -22,14 +22,14 @@ Alias: arbeidsforhold
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
-| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  yes  |
-| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
-| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
-| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
 | [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
+| [AdministrasjonContainer](administrasjoncontainer.md) | Rotcontainer for FINT Administrasjon-instansar |  yes  |
+| [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |  yes  |
+| [Arbeidslokasjon](arbeidslokasjon.md) | Fysisk lokasjon der ein tilsett har sitt arbeidsstad |  yes  |
+| [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  yes  |
 
 
 

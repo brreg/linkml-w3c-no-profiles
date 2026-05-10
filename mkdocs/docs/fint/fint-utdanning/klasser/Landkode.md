@@ -37,7 +37,7 @@ URI: [fint:Landkode](https://schema.fintlabs.no/Landkode)
         
       Landkode : kode
         
-      Landkode : naam
+      Landkode : navn
         
       Landkode : passiv
         
@@ -88,10 +88,10 @@ URI: [fint:Landkode](https://schema.fintlabs.no/Landkode)
 
 | Namn | Kardinalitet og domene | Beskriving | Frå |
 | --- | --- | --- | --- || [id](id.md) | 1 <br/> [Uriorcurie](uriorcurie.md) | URI-identifikator for ressursen | [Begrep](begrep.md) |
-| [kode](kode.md) | 1 <br/> [String](string.md) | Kode | [Begrep](begrep.md) |
-| [naam](naam.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen | [Begrep](begrep.md) |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Gyldigheitsperiode | [Begrep](begrep.md) |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir om oppføringen er passiv/inaktiv | [Begrep](begrep.md) |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet | [Begrep](begrep.md) |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen | [Begrep](begrep.md) |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for | [Begrep](begrep.md) |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast | [Begrep](begrep.md) |
 
 
 
@@ -179,7 +179,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -223,6 +222,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -231,12 +231,12 @@ attributes:
     required: true
   kode:
     name: kode
-    description: Kode.
+    description: Verdi som identifiserer omgrepet.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:kode
+    slot_uri: fint:kode
     alias: kode
     owner: Landkode
     domain_of:
@@ -265,28 +265,55 @@ attributes:
     - Begrep
     range: string
     required: true
-  naam:
-    name: naam
+  navn:
+    name: navn
     description: Hovudnamn for ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: fint:naam
-    alias: naam
+    slot_uri: fint:navn
+    alias: navn
     owner: Landkode
     domain_of:
+    - Gruppe
+    - Skole
+    - Eksamen
+    - Rom
+    - Time
+    - Avbruddsaarsak
+    - Betalingsstatus
+    - Bevistype
+    - Brevtype
+    - Eksamensform
+    - Elevkategori
+    - Fagmerknad
+    - Fagstatus
+    - Fravartype
+    - Fullfortkode
+    - Karakterskala
+    - Karakterstatus
+    - Karakterverdi
+    - OtEnhet
+    - OtStatus
+    - Provestatus
+    - Skoleaar
+    - Skoleeiertype
+    - Termin
+    - Tilrettelegging
+    - Varseltype
+    - Vitnemalsmerknad
     - Begrep
     range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Gyldigheitsperiode.
+    description: Periode ressursen er gyldig for.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:gyldighetsperiode
+    slot_uri: fint:gyldighetsperiode
     alias: gyldighetsperiode
     owner: Landkode
     domain_of:
@@ -319,12 +346,12 @@ attributes:
     inlined: true
   passiv:
     name: passiv
-    description: Angir om oppføringen er passiv/inaktiv.
+    description: Angir at koden er passiv og ikkje kan veljast.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:passiv
+    slot_uri: fint:passiv
     alias: passiv
     owner: Landkode
     domain_of:

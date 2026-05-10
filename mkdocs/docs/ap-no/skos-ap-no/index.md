@@ -219,7 +219,7 @@ Name: skos-ap-no
 | [Valgfri](klasser/valgfri.md) | Valfrie eigenskapar i ein AP-NO-profil |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|

@@ -22,20 +22,20 @@ Alias: passiv
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [Produsent](produsent.md) | Produsent av ei digital eining |  yes  |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
-| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  yes  |
 | [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  yes  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
+| [Status](status.md) | Status på ei digital eining i fagsystemet |  yes  |
+| [Produsent](produsent.md) | Produsent av ei digital eining |  yes  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
 | [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  yes  |
 | [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  yes  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Status](status.md) | Status på ei digital eining i fagsystemet |  yes  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
+| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  yes  |
 | [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
 
 

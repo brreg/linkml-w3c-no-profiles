@@ -44,7 +44,7 @@
             "description": "\u00c5tferds- og ordensanmerkningar for ein elev i eit skole\u00e5r.",
             "properties": {
                 "atferd": {
-                    "description": "Antal \u00e5tferdsanmerkningar.",
+                    "description": "\u00c5tferdskarakter.",
                     "type": "integer"
                 },
                 "id": {
@@ -52,11 +52,11 @@
                     "type": "string"
                 },
                 "orden": {
-                    "description": "Antal ordensanmerkningar.",
+                    "description": "Ordenskarakter.",
                     "type": "integer"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret anmerkningane gjeld.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -76,7 +76,7 @@
             "description": "Eit \u00e5rstrinn i skulen (t.d. Vg1, Vg2, Vg3).",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -94,7 +94,7 @@
                     "type": "string"
                 },
                 "klasse": {
-                    "description": "Klassar p\u00e5 dette \u00e5rstrinnet.",
+                    "description": "Klasse.",
                     "items": {
                         "type": "string"
                     },
@@ -104,11 +104,11 @@
                     ]
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5de knytt til \u00e5rstrinnet.",
+                    "description": "Programomr\u00e5de.",
                     "items": {
                         "type": "string"
                     },
@@ -144,19 +144,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -183,7 +187,7 @@
                     ]
                 },
                 "brevtype": {
-                    "description": "Type brev knytt til pr\u00f8va.",
+                    "description": "Type brev.",
                     "type": [
                         "string",
                         "null"
@@ -201,8 +205,11 @@
                     "type": "string"
                 },
                 "laerling": {
-                    "description": "L\u00e6rlingen som avla pr\u00f8va.",
-                    "type": "string"
+                    "description": "Referanse til Laerling (Utdanning).",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 },
                 "provedato": {
                     "description": "Dato pr\u00f8va vart avlagt.",
@@ -239,19 +246,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -278,19 +289,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -317,19 +332,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -349,14 +368,14 @@
             "description": "Ein eksamen knytt til ei eksamensgruppe.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av eksamenen.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgruppe eksamenen tilh\u00f8yrer.",
+                    "description": "Eksamensgruppe.",
                     "type": [
                         "string",
                         "null"
@@ -367,11 +386,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 eksamenen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "oppmoetetidspunkt": {
-                    "description": "Tidspunkt for oppm\u00f8te til eksamenen.",
+                    "description": "Tidspunkt for oppm\u00f8te.",
                     "format": "date-time",
                     "type": [
                         "string",
@@ -379,7 +398,7 @@
                     ]
                 },
                 "rom": {
-                    "description": "Rom eksamenen vert halden i.",
+                    "description": "Rom.",
                     "items": {
                         "type": "string"
                     },
@@ -397,7 +416,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Tidsrom for eksamenen."
+                    "description": "Tidsrom."
                 }
             },
             "required": [
@@ -419,19 +438,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -451,14 +474,14 @@
             "description": "Ei gruppe elevar som avlegg same eksamen.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "eksamen": {
-                    "description": "Eksamenen knytt til denne gruppa.",
+                    "description": "Eksamen.",
                     "type": [
                         "string",
                         "null"
@@ -473,18 +496,18 @@
                     ]
                 },
                 "eksamensform": {
-                    "description": "Form for eksamenen.",
+                    "description": "Eksamensform.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fag": {
-                    "description": "Faget eksamensgruppen gjeld.",
+                    "description": "Fag.",
                     "type": "string"
                 },
                 "gruppemedlemskap": {
-                    "description": "Elevmedlemskap i eksamensgruppen.",
+                    "description": "Gruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -498,11 +521,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "sensor": {
-                    "description": "Sensorar for eksamensgruppen.",
+                    "description": "Sensor.",
                     "items": {
                         "type": "string"
                     },
@@ -512,22 +535,22 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skulen eksamensgruppen tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret eksamensgruppen tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "termin": {
-                    "description": "Terminen eksamensgruppen er aktiv i.",
+                    "description": "Termin.",
                     "type": "string"
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til eksamensgruppen.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
@@ -552,7 +575,7 @@
             "description": "Eit elevs deltaking i ei eksamensgruppe.",
             "properties": {
                 "betalingsstatus": {
-                    "description": "Betalingsstatus for eksamensavgift.",
+                    "description": "Betalingsstatus.",
                     "type": [
                         "string",
                         "null"
@@ -573,11 +596,11 @@
                     ]
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgruppen dette medlemskapet er i.",
+                    "description": "Eksamensgruppe.",
                     "type": "string"
                 },
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": "string"
                 },
                 "foretrukketSensor": {
@@ -603,21 +626,21 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kandidatnummer": {
-                    "description": "Kandidatnummer for eksamenen.",
+                    "description": "Kandidatnummer.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "nus": {
-                    "description": "NUS-kode knytt til eksamensgruppemedlemskapet.",
+                    "description": "NUS-kode.",
                     "type": [
                         "string",
                         "null"
@@ -637,15 +660,15 @@
             "description": "Vurdering gjeven i samband med ein eksamen.",
             "properties": {
                 "eksamensgruppe": {
-                    "description": "Eksamensgruppen vurderinga er knytt til.",
+                    "description": "Eksamensgruppe.",
                     "type": "string"
                 },
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "fag": {
-                    "description": "Faget vurderinga gjeld.",
+                    "description": "Fag.",
                     "type": [
                         "string",
                         "null"
@@ -656,14 +679,14 @@
                     "type": "string"
                 },
                 "karakter": {
-                    "description": "Karakterverdien gjeve i vurderinga.",
+                    "description": "Karakterverdi.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "karakterhistorie": {
-                    "description": "Endringshistorikk for karakteren.",
+                    "description": "Karakterhistorikk.",
                     "items": {
                         "type": "string"
                     },
@@ -673,11 +696,11 @@
                     ]
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -716,7 +739,10 @@
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "person": {
                     "description": "Referanse til Person i Administrasjon-domenet.",
@@ -752,11 +778,11 @@
                     ]
                 },
                 "beskrivelse": {
-                    "description": "Skildring av elevforholdet.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "eksamensgruppemedlemskap": {
-                    "description": "Eksamensgruppemedlemskap knytt til elevforholdet.",
+                    "description": "Eksamensgruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -766,25 +792,25 @@
                     ]
                 },
                 "elev": {
-                    "description": "Eleven dette forholdet gjeld.",
+                    "description": "Referanse til Elev (Utdanning).",
                     "type": "string"
                 },
                 "elevfravar": {
-                    "description": "Fr\u00e5v\u00e6rsoversikt for elevforholdet.",
+                    "description": "Fr\u00e5v\u00e6rsobjekt for elev.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elevvurdering": {
-                    "description": "Vurderingssamling for elevforholdet.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "faggruppemedlemskap": {
-                    "description": "Faggruppemedlemskap knytt til elevforholdet.",
+                    "description": "Faggruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -815,7 +841,7 @@
                     ]
                 },
                 "klassemedlemskap": {
-                    "description": "Klassemedlemskap knytt til elevforholdet.",
+                    "description": "Klassemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -825,7 +851,7 @@
                     ]
                 },
                 "kontaktlaerergruppemedlemskap": {
-                    "description": "Kontaktl\u00e6rergruppemedlemskap knytt til elevforholdet.",
+                    "description": "Kontaktl\u00e6rergruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -835,7 +861,7 @@
                     ]
                 },
                 "persongruppemedlemskap": {
-                    "description": "Persongruppemedlemskap knytt til elevforholdet.",
+                    "description": "Persongruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -845,7 +871,7 @@
                     ]
                 },
                 "programomrademedlemskap": {
-                    "description": "Programomr\u00e5demedlemskap knytt til elevforholdet.",
+                    "description": "Programomr\u00e5demedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -855,18 +881,18 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skulen eleven er tilknytt.",
+                    "description": "Skulen dette gjeld.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret elevforholdet tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "tilrettelegging": {
-                    "description": "Tilretteleggingar knytt til elevforholdet.",
+                    "description": "Tilretteleggingstype.",
                     "items": {
                         "type": "string"
                     },
@@ -883,7 +909,7 @@
                     ]
                 },
                 "undervisningsgruppemedlemskap": {
-                    "description": "Undervisningsgruppemedlemskap knytt til elevforholdet.",
+                    "description": "Undervisningsgruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -907,11 +933,11 @@
             "description": "Fr\u00e5v\u00e6rsregistreringar for ein elev knytt til eit elevforhold.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet fr\u00e5v\u00e6ret gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": "string"
                 },
                 "fraversregistrering": {
-                    "description": "Registrerte fr\u00e5versinstansar.",
+                    "description": "Fr\u00e5versregistreringar.",
                     "items": {
                         "type": "string"
                     },
@@ -944,19 +970,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -976,14 +1006,14 @@
             "description": "Tilrettelegging for ein elev i eit elevforhold.",
             "properties": {
                 "eksamensform": {
-                    "description": "Eksamensform knytt til tilrettelegginga.",
+                    "description": "Eksamensform.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elev": {
-                    "description": "Elevforholdet tilrettelegginga gjeld.",
+                    "description": "Referanse til Elev (Utdanning).",
                     "type": [
                         "string",
                         "null"
@@ -994,7 +1024,7 @@
                     "type": "string"
                 },
                 "tilrettelegging": {
-                    "description": "Type tilrettelegging.",
+                    "description": "Tilretteleggingstype.",
                     "type": [
                         "string",
                         "null"
@@ -1012,7 +1042,7 @@
             "description": "Samling av alle vurderingar for ein elev i eit elevforhold.",
             "properties": {
                 "eksamensvurdering": {
-                    "description": "Eksamensvurderingar for eleven.",
+                    "description": "Eksamensvurderingar.",
                     "items": {
                         "type": "string"
                     },
@@ -1022,11 +1052,11 @@
                     ]
                 },
                 "elevforhold": {
-                    "description": "Elevforholdet vurderingane gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": "string"
                 },
                 "halvaarsfagvurdering": {
-                    "description": "Halv\u00e5rsvurderingar for fag.",
+                    "description": "Halv\u00e5rsfagvurderingar.",
                     "items": {
                         "type": "string"
                     },
@@ -1050,7 +1080,7 @@
                     "type": "string"
                 },
                 "sluttfagvurdering": {
-                    "description": "Sluttkarakterar for fag.",
+                    "description": "Sluttfagvurderingar.",
                     "items": {
                         "type": "string"
                     },
@@ -1090,7 +1120,7 @@
                     ]
                 },
                 "vitnemalsmerknad": {
-                    "description": "Merknad p\u00e5 vitnem\u00e5let.",
+                    "description": "Vitnem\u00e5lsmerknad.",
                     "type": [
                         "string",
                         "null"
@@ -1109,14 +1139,14 @@
             "description": "Eit skulefag.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgrupper knytt til faget.",
+                    "description": "Eksamensgruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -1126,7 +1156,7 @@
                     ]
                 },
                 "faggruppe": {
-                    "description": "Faggrupper knytt til faget.",
+                    "description": "Faggruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -1147,11 +1177,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5de faget er knytt til.",
+                    "description": "Programomr\u00e5de.",
                     "items": {
                         "type": "string"
                     },
@@ -1161,7 +1191,7 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skular som underviser i faget.",
+                    "description": "Skulen dette gjeld.",
                     "items": {
                         "type": "string"
                     },
@@ -1171,7 +1201,7 @@
                     ]
                 },
                 "tilrettelegging": {
-                    "description": "Tilretteleggingstypar for faget.",
+                    "description": "Tilretteleggingstype.",
                     "items": {
                         "type": "string"
                     },
@@ -1181,7 +1211,7 @@
                     ]
                 },
                 "undervisningsgruppe": {
-                    "description": "Undervisningsgrupper som underviser i faget.",
+                    "description": "Undervisningsgruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -1210,18 +1240,18 @@
             "description": "Ei gruppe elevar knytt til eit fag p\u00e5 ein skule.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fag": {
-                    "description": "Faget denne faggruppa er knytt til.",
+                    "description": "Fag.",
                     "type": "string"
                 },
                 "faggruppemedlemskap": {
-                    "description": "Elevmedlemskap i faggruppa.",
+                    "description": "Faggruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -1235,18 +1265,18 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "skole": {
-                    "description": "Skulen faggruppa tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret faggruppa tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -1266,28 +1296,28 @@
             "description": "Eit elevs medlemskap i ei faggruppe.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "faggruppe": {
-                    "description": "Faggruppa dette medlemskapet er i.",
+                    "description": "Faggruppe.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fagmerknad": {
-                    "description": "Merknad til faget for dette medlemskapet.",
+                    "description": "Merknad til faget.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fagstatus": {
-                    "description": "Status for faget i dette medlemskapet.",
+                    "description": "Fagstatus.",
                     "type": [
                         "string",
                         "null"
@@ -1302,14 +1332,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "varsel": {
-                    "description": "Varsel knytt til dette faggruppemedlemskapet.",
+                    "description": "Varsel.",
                     "items": {
                         "type": "string"
                     },
@@ -1337,19 +1367,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1376,19 +1410,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1408,11 +1446,11 @@
             "description": "Oversikt over fr\u00e5v\u00e6r for ein elev i eit fag.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet fr\u00e5v\u00e6rsoversikta gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": "string"
                 },
                 "fag": {
-                    "description": "Faget fr\u00e5v\u00e6rsoversikta gjeld.",
+                    "description": "Fag.",
                     "type": "string"
                 },
                 "halvaar": {
@@ -1475,19 +1513,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1507,11 +1549,14 @@
             "description": "Ei enkelt fr\u00e5versregistrering for ein elev.",
             "properties": {
                 "elevfravar": {
-                    "description": "Elevfr\u00e5v\u00e6r-objektet dette h\u00f8yrer til.",
-                    "type": "string"
+                    "description": "Fr\u00e5v\u00e6rsobjekt for elev.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "faggruppe": {
-                    "description": "Faggruppa fr\u00e5v\u00e6ret gjeld.",
+                    "description": "Faggruppe.",
                     "type": [
                         "string",
                         "null"
@@ -1530,7 +1575,7 @@
                     "type": "string"
                 },
                 "kommentar": {
-                    "description": "Kommentar til fr\u00e5v\u00e6rsregistreringa.",
+                    "description": "Kommentar.",
                     "type": [
                         "string",
                         "null"
@@ -1538,7 +1583,7 @@
                 },
                 "periode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Perioden fr\u00e5v\u00e6ret varte."
+                    "description": "Periode."
                 },
                 "registrertAv": {
                     "description": "Skoleressurs som registrerte fr\u00e5v\u00e6ret.",
@@ -1548,7 +1593,7 @@
                     ]
                 },
                 "undervisningsgruppe": {
-                    "description": "Undervisningsgruppa fr\u00e5v\u00e6ret er registrert i.",
+                    "description": "Undervisningsgruppe.",
                     "type": "string"
                 }
             },
@@ -1557,7 +1602,6 @@
                 "forersPaaVitnemaal",
                 "periode",
                 "undervisningsgruppe",
-                "elevfravar",
                 "fravartype"
             ],
             "title": "Fraversregistrering",
@@ -1575,19 +1619,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1615,7 +1663,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1626,7 +1674,7 @@
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Alle kommunar som inng\u00e5r i fylket.",
+                    "description": "Kommune.",
                     "items": {
                         "type": "string"
                     },
@@ -1636,7 +1684,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1660,11 +1708,11 @@
             "description": "Halv\u00e5rsvurdering i eit fag.",
             "properties": {
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "fag": {
-                    "description": "Faget vurderinga gjeld.",
+                    "description": "Fag.",
                     "type": [
                         "string",
                         "null"
@@ -1675,18 +1723,18 @@
                     "type": "string"
                 },
                 "karakter": {
-                    "description": "Karakterverdien gjeve i vurderinga.",
+                    "description": "Karakterverdi.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -1712,14 +1760,14 @@
             "description": "Halv\u00e5rsordensvurdering for ein elev.",
             "properties": {
                 "atferd": {
-                    "description": "Karakterverdi for \u00e5tferd.",
+                    "description": "\u00c5tferdskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "id": {
@@ -1727,18 +1775,18 @@
                     "type": "string"
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "orden": {
-                    "description": "Karakterverdi for orden.",
+                    "description": "Ordenskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -1772,7 +1820,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden ein gjeven identifikator er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "identifikatorverdi": {
                     "description": "Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt identifikator.",
@@ -1799,14 +1847,14 @@
                     "type": "string"
                 },
                 "karakterstatus": {
-                    "description": "Ny karakterstatus etter endringa.",
+                    "description": "Karakterstatus.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "karakterverdi": {
-                    "description": "Ny karakterverdi etter endringa.",
+                    "description": "Karakterverdi.",
                     "type": [
                         "string",
                         "null"
@@ -1820,14 +1868,14 @@
                     ]
                 },
                 "opprinneligKarakterstatus": {
-                    "description": "Opphavleg karakterstatus f\u00f8r endringa.",
+                    "description": "Opphavleg karakterstatus.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "opprinneligKarakterverdi": {
-                    "description": "Opphavleg karakterverdi f\u00f8r endringa.",
+                    "description": "Opphavleg karakterverdi.",
                     "type": [
                         "string",
                         "null"
@@ -1853,26 +1901,30 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
                     ]
                 },
                 "verdi": {
-                    "description": "Karakterverdiar i denne skalaen.",
+                    "description": "Karakterverdiar i skalaen.",
                     "items": {
                         "type": "string"
                     },
@@ -1909,19 +1961,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1948,19 +2004,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1993,7 +2053,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2004,7 +2064,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2028,7 +2088,7 @@
             "description": "Ei fast klasse av elevar ved ein skule (tidlegare kalla Basisgruppe).",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -2039,7 +2099,7 @@
                     "type": "string"
                 },
                 "klassemedlemskap": {
-                    "description": "Klassemedlemskap i denne klassen.",
+                    "description": "Klassemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -2049,7 +2109,7 @@
                     ]
                 },
                 "kontaktlaerergruppe": {
-                    "description": "Kontaktl\u00e6rergrupper knytt til klassen.",
+                    "description": "Kontaktl\u00e6rargruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -2059,25 +2119,25 @@
                     ]
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "skole": {
-                    "description": "Skulen klassen tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret klassen tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "termin": {
-                    "description": "Terminar klassen er aktiv i.",
+                    "description": "Termin.",
                     "items": {
                         "type": "string"
                     },
@@ -2087,7 +2147,7 @@
                     ]
                 },
                 "trinn": {
-                    "description": "\u00c5rstrinnet klassen tilh\u00f8yrer.",
+                    "description": "\u00c5rstrinnet.",
                     "items": {
                         "type": "string"
                     },
@@ -2097,7 +2157,7 @@
                     ]
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til klassen.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
@@ -2119,7 +2179,7 @@
             "description": "Eit elevs medlemskap i ei klasse.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
@@ -2134,14 +2194,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "klasse": {
-                    "description": "Klassen dette medlemskapet er i.",
+                    "description": "Klasse.",
                     "type": [
                         "string",
                         "null"
@@ -2159,7 +2219,7 @@
             "description": "Liste over Norges kommunar.",
             "properties": {
                 "fylke": {
-                    "description": "Fylket kommunen h\u00f8yrer til.",
+                    "description": "Fylke.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -2171,7 +2231,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2182,7 +2242,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2250,14 +2310,14 @@
             "description": "Gruppe av elevar med felles kontaktl\u00e6rar.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "gruppemedlemskap": {
-                    "description": "Medlemskapar i denne kontaktl\u00e6rergruppa.",
+                    "description": "Gruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -2271,32 +2331,32 @@
                     "type": "string"
                 },
                 "klasse": {
-                    "description": "Klasse(r) denne kontaktl\u00e6rergruppa er knytt til.",
+                    "description": "Klasse.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "skole": {
-                    "description": "Skulen gruppa tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret gruppa tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "termin": {
-                    "description": "Terminar gruppa er aktiv i.",
+                    "description": "Termin.",
                     "items": {
                         "type": "string"
                     },
@@ -2306,7 +2366,7 @@
                     ]
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til gruppa.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
@@ -2329,7 +2389,7 @@
             "description": "Eit elevs medlemskap i ei kontaktl\u00e6rargruppe.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
@@ -2344,14 +2404,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kontaktlaerergruppe": {
-                    "description": "Kontaktl\u00e6rergruppa dette medlemskapet er i.",
+                    "description": "Kontaktl\u00e6rargruppe.",
                     "type": [
                         "string",
                         "null"
@@ -2381,7 +2441,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon for kontaktpersonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kontaktperson": {
                     "description": "Personar kontaktpersonen er p\u00e5r\u00f8rande for.",
@@ -2393,7 +2453,7 @@
                         "null"
                     ]
                 },
-                "navn": {
+                "kontaktperson_navn": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Personnavn"
@@ -2405,7 +2465,7 @@
                     "description": "Namn p\u00e5 kontaktpersonen."
                 },
                 "type": {
-                    "description": "Beskriv kva slags type kontaktperson.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -2421,7 +2481,7 @@
             "description": "Ein l\u00e6rling i yrkesoppl\u00e6ring.",
             "properties": {
                 "avlagtprove": {
-                    "description": "Avlagde pr\u00f8ver for l\u00e6rlingen.",
+                    "description": "Avlagde pr\u00f8ver.",
                     "items": {
                         "type": "string"
                     },
@@ -2464,7 +2524,7 @@
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5de l\u00e6rlingen er knytt til.",
+                    "description": "Programomr\u00e5de.",
                     "type": [
                         "string",
                         "null"
@@ -2491,21 +2551,18 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "type": "string"
                 },
                 "kode": {
                     "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2590,23 +2647,27 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Referanse til kommunen OT-eininga dekker.",
+                    "description": "Kommune.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -2627,7 +2688,7 @@
             "description": "Status for ein ungdom i oppf\u00f8lgingstenesta.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av statusen.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -2641,26 +2702,30 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
                     ]
                 },
                 "type": {
-                    "description": "Hovudtype for OT-statusen.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -2678,7 +2743,7 @@
             "description": "Eit ungdomsobjekt i oppf\u00f8lgingstenesta (OT).",
             "properties": {
                 "enhet": {
-                    "description": "OT-eining knytt til ungdommen.",
+                    "description": "OT-eining.",
                     "type": [
                         "string",
                         "null"
@@ -2693,7 +2758,7 @@
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5de ungdommen er knytt til.",
+                    "description": "Programomr\u00e5de.",
                     "type": [
                         "string",
                         "null"
@@ -2719,7 +2784,7 @@
             "description": "Tidsperiode med obligatorisk start og valfri slutt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Beskriven namn p\u00e5 perioden.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -2811,14 +2876,14 @@
                     "type": "string"
                 },
                 "kjonn": {
-                    "description": "Kj\u00f8nn for personen.",
+                    "description": "Kj\u00f8nn.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommune": {
-                    "description": "Kommune der personen er busett.",
+                    "description": "Kommune.",
                     "type": [
                         "string",
                         "null"
@@ -2859,10 +2924,6 @@
                         "null"
                     ]
                 },
-                "navn": {
-                    "$ref": "#/$defs/Personnavn",
-                    "description": "Namn p\u00e5 personen."
-                },
                 "otungdom": {
                     "description": "Referanse til OtUngdom (Utdanning).",
                     "type": [
@@ -2879,6 +2940,10 @@
                         "array",
                         "null"
                     ]
+                },
+                "person_navn": {
+                    "$ref": "#/$defs/Personnavn",
+                    "description": "Namn p\u00e5 personen."
                 },
                 "personalressurs": {
                     "description": "Referanse til Personalressurs (Administrasjon).",
@@ -2912,7 +2977,7 @@
             "required": [
                 "id",
                 "fodselsnummer",
-                "navn"
+                "person_navn"
             ],
             "title": "Person",
             "type": "object"
@@ -2922,14 +2987,14 @@
             "description": "Ei gruppe elevar definert for personlege f\u00f8rem\u00e5l.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elev": {
-                    "description": "Elevforhold i denne persongruppa.",
+                    "description": "Referanse til Elev (Utdanning).",
                     "items": {
                         "type": "string"
                     },
@@ -2943,11 +3008,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "persongruppemedlemskap": {
-                    "description": "Medlemskapar i persongruppa.",
+                    "description": "Persongruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -2957,21 +3022,21 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skulen gruppa tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret gruppa tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleressurs": {
-                    "description": "Skoleressursar knytt til gruppa.",
+                    "description": "Skoleressurs.",
                     "items": {
                         "type": "string"
                     },
@@ -2981,7 +3046,7 @@
                     ]
                 },
                 "termin": {
-                    "description": "Terminar gruppa er aktiv i.",
+                    "description": "Termin.",
                     "items": {
                         "type": "string"
                     },
@@ -2991,7 +3056,7 @@
                     ]
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til gruppa.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
@@ -3013,7 +3078,7 @@
             "description": "Eit elevs medlemskap i ei persongruppe.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
@@ -3028,14 +3093,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "persongruppe": {
-                    "description": "Persongruppa dette medlemskapet er i.",
+                    "description": "Persongruppe.",
                     "type": [
                         "string",
                         "null"
@@ -3080,7 +3145,7 @@
             "description": "Eit programomr\u00e5de innanfor eit utdanningsprogram (t.d. Vg2 Elektrofaget).",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -3094,7 +3159,7 @@
                     ]
                 },
                 "gruppemedlemskap": {
-                    "description": "Elevmedlemskap i programomr\u00e5det.",
+                    "description": "Gruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -3108,11 +3173,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "trinn": {
-                    "description": "\u00c5rstrinnet programomr\u00e5det er knytt til.",
+                    "description": "\u00c5rstrinnet.",
                     "items": {
                         "type": "string"
                     },
@@ -3141,7 +3206,7 @@
             "description": "Eit elevs tilknyting til eit programomr\u00e5de.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
@@ -3156,14 +3221,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5det dette medlemskapet er i.",
+                    "description": "Programomr\u00e5de.",
                     "type": [
                         "string",
                         "null"
@@ -3188,19 +3253,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -3220,7 +3289,7 @@
             "description": "Eit rom eller lokale ved ein skule.",
             "properties": {
                 "eksamen": {
-                    "description": "Eksamenar haldne i dette rommet.",
+                    "description": "Eksamen.",
                     "items": {
                         "type": "string"
                     },
@@ -3234,14 +3303,14 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 rommet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
-                "time": {
-                    "description": "Timar haldne i dette rommet.",
+                "skuletime": {
+                    "description": "Ein skuletime i timeplanen.",
                     "items": {
                         "type": "string"
                     },
@@ -3266,7 +3335,7 @@
                     "type": "boolean"
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgruppen sensoren er knytt til.",
+                    "description": "Eksamensgruppe.",
                     "type": "string"
                 },
                 "id": {
@@ -3281,7 +3350,7 @@
                     ]
                 },
                 "skoleressurs": {
-                    "description": "Skoleressursen som er sensor.",
+                    "description": "Skoleressurs.",
                     "type": "string"
                 }
             },
@@ -3306,7 +3375,7 @@
                     ]
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgrupper ved skulen.",
+                    "description": "Eksamensgruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -3316,7 +3385,7 @@
                     ]
                 },
                 "fag": {
-                    "description": "Fag ved skulen.",
+                    "description": "Fag.",
                     "items": {
                         "type": "string"
                     },
@@ -3326,7 +3395,7 @@
                     ]
                 },
                 "faggruppe": {
-                    "description": "Faggrupper ved skulen.",
+                    "description": "Faggruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -3344,7 +3413,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Forretningsadresse til skulen."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3358,7 +3427,7 @@
                     ]
                 },
                 "klasse": {
-                    "description": "Klassar ved skulen.",
+                    "description": "Klasse.",
                     "items": {
                         "type": "string"
                     },
@@ -3368,7 +3437,7 @@
                     ]
                 },
                 "kontaktlaerergruppe": {
-                    "description": "Kontaktl\u00e6rergrupper ved skulen.",
+                    "description": "Kontaktl\u00e6rargruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -3378,7 +3447,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 skulen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "organisasjon": {
@@ -3389,7 +3458,7 @@
                     ]
                 },
                 "organisasjonsnavn": {
-                    "description": "Organisasjonsnamn for skulen.",
+                    "description": "Namn p\u00e5 eining registrert i Einingsregisteret.",
                     "type": [
                         "string",
                         "null"
@@ -3404,7 +3473,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Organisasjonsnummer-identifikator."
+                    "description": "Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret."
                 },
                 "postadresse": {
                     "anyOf": [
@@ -3415,7 +3484,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Postadresse til skulen."
+                    "description": "Informasjon om postadresse til ein akt\u00f8r."
                 },
                 "skoleeierType": {
                     "description": "Kategori for skuleeigartilknyting.",
@@ -3436,7 +3505,7 @@
                     "description": "Nasjonal skulenummer-identifikator."
                 },
                 "skoleressurs": {
-                    "description": "Skoleressursar ved skulen.",
+                    "description": "Skoleressurs.",
                     "items": {
                         "type": "string"
                     },
@@ -3446,7 +3515,7 @@
                     ]
                 },
                 "utdanningsprogram": {
-                    "description": "Utdanningsprogram ved skulen.",
+                    "description": "Utdanningsprogram.",
                     "items": {
                         "type": "string"
                     },
@@ -3482,19 +3551,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -3521,19 +3594,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -3561,7 +3638,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Feide-identifikator for skoleressursen."
+                    "description": "Feide-identifikator."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3582,7 +3659,7 @@
                     ]
                 },
                 "sensor": {
-                    "description": "Sensor-roller for skoleressursen.",
+                    "description": "Sensor.",
                     "items": {
                         "type": "string"
                     },
@@ -3592,7 +3669,7 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skular skoleressursen er knytt til.",
+                    "description": "Skulen dette gjeld.",
                     "items": {
                         "type": "string"
                     },
@@ -3613,18 +3690,18 @@
             "description": "Sluttkarakter i eit fag.",
             "properties": {
                 "eksamensgruppe": {
-                    "description": "Eksamensgruppe knytt til sluttkarakteren.",
+                    "description": "Eksamensgruppe.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "fag": {
-                    "description": "Faget vurderinga gjeld.",
+                    "description": "Fag.",
                     "type": [
                         "string",
                         "null"
@@ -3635,14 +3712,14 @@
                     "type": "string"
                 },
                 "karakter": {
-                    "description": "Karakterverdien gjeve i vurderinga.",
+                    "description": "Karakterverdi.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "karakterhistorie": {
-                    "description": "Endringshistorikk for sluttkarakteren.",
+                    "description": "Karakterhistorikk.",
                     "items": {
                         "type": "string"
                     },
@@ -3652,11 +3729,11 @@
                     ]
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -3682,14 +3759,14 @@
             "description": "Sluttordensvurdering for ein elev.",
             "properties": {
                 "atferd": {
-                    "description": "Karakterverdi for \u00e5tferd.",
+                    "description": "\u00c5tferdskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "id": {
@@ -3697,18 +3774,18 @@
                     "type": "string"
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "orden": {
-                    "description": "Karakterverdi for orden.",
+                    "description": "Ordenskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -3742,7 +3819,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3753,7 +3830,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -3784,19 +3861,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -3823,19 +3904,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -3855,7 +3940,7 @@
             "description": "Ein time i timeplanen.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av timen.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -3866,14 +3951,14 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 timen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "rom": {
-                    "description": "Rom timen finn stad i.",
+                    "description": "Rom.",
                     "items": {
                         "type": "string"
                     },
@@ -3891,17 +3976,17 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Tidsrommet timen finn stad."
+                    "description": "Tidsrom."
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til timen.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "undervisningsgruppe": {
-                    "description": "Undervisningsgruppe(r) timen gjeld.",
+                    "description": "Undervisningsgruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -3921,11 +4006,11 @@
             "description": "Underveisfagvurdering for ein elev.",
             "properties": {
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "fag": {
-                    "description": "Faget vurderinga gjeld.",
+                    "description": "Fag.",
                     "type": [
                         "string",
                         "null"
@@ -3936,18 +4021,18 @@
                     "type": "string"
                 },
                 "karakter": {
-                    "description": "Karakterverdien gjeve i vurderinga.",
+                    "description": "Karakterverdi.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -3973,14 +4058,14 @@
             "description": "Underveisordensvurdering for ein elev.",
             "properties": {
                 "atferd": {
-                    "description": "Karakterverdi for \u00e5tferd.",
+                    "description": "\u00c5tferdskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elevvurdering": {
-                    "description": "Elevvurderingsobjektet denne vurderinga tilh\u00f8yrer.",
+                    "description": "Elevvurderingsobjekt.",
                     "type": "string"
                 },
                 "id": {
@@ -3988,18 +4073,18 @@
                     "type": "string"
                 },
                 "kommentar": {
-                    "description": "Kommentar til vurderinga.",
+                    "description": "Kommentar.",
                     "type": "string"
                 },
                 "orden": {
-                    "description": "Karakterverdi for orden.",
+                    "description": "Ordenskarakter.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret vurderinga tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
@@ -4029,14 +4114,14 @@
                     "type": "string"
                 },
                 "beskrivelse": {
-                    "description": "Skildring av utdanningsforholdet.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "eksamensgruppe": {
-                    "description": "Eksamensgrupper knytt til undervisningsforholdet.",
+                    "description": "Eksamensgruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -4050,7 +4135,7 @@
                     "type": "string"
                 },
                 "klasse": {
-                    "description": "Klassar knytt til undervisningsforholdet.",
+                    "description": "Klasse.",
                     "items": {
                         "type": "string"
                     },
@@ -4060,7 +4145,7 @@
                     ]
                 },
                 "kontaktlaerergruppe": {
-                    "description": "Kontaktl\u00e6rergrupper knytt til undervisningsforholdet.",
+                    "description": "Kontaktl\u00e6rargruppe.",
                     "items": {
                         "type": "string"
                     },
@@ -4070,14 +4155,14 @@
                     ]
                 },
                 "skoleressurs": {
-                    "description": "Skoleressursen dette forholdet gjeld.",
+                    "description": "Skoleressurs.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
-                "time": {
-                    "description": "Timar knytt til undervisningsforholdet.",
+                "skuletime": {
+                    "description": "Ein skuletime i timeplanen.",
                     "items": {
                         "type": "string"
                     },
@@ -4099,21 +4184,21 @@
             "description": "Ei gruppe elevar som f\u00f8lgjer same undervisning i eit eller fleire fag.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fag": {
-                    "description": "Fag denne gruppa underviser i.",
+                    "description": "Fag.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "gruppemedlemskap": {
-                    "description": "Elevmedlemskap i undervisningsgruppa.",
+                    "description": "Gruppemedlemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -4127,25 +4212,25 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "skole": {
-                    "description": "Skulen gruppa tilh\u00f8yrer.",
+                    "description": "Skulen dette gjeld.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "skoleaar": {
-                    "description": "Skole\u00e5ret gruppa tilh\u00f8yrer.",
+                    "description": "Skole\u00e5ret.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
-                "termin": {
-                    "description": "Terminar gruppa er aktiv i.",
+                "skuletime": {
+                    "description": "Ein skuletime i timeplanen.",
                     "items": {
                         "type": "string"
                     },
@@ -4154,8 +4239,8 @@
                         "null"
                     ]
                 },
-                "time": {
-                    "description": "Timar knytt til gruppa.",
+                "termin": {
+                    "description": "Termin.",
                     "items": {
                         "type": "string"
                     },
@@ -4165,7 +4250,7 @@
                     ]
                 },
                 "undervisningsforhold": {
-                    "description": "Undervisningsforhold knytt til gruppa.",
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "type": "string"
                     },
@@ -4188,7 +4273,7 @@
             "description": "Eit elevs medlemskap i ei undervisningsgruppe.",
             "properties": {
                 "elevforhold": {
-                    "description": "Elevforholdet dette medlemskapet gjeld.",
+                    "description": "Elevforholdet dette gjeld.",
                     "type": [
                         "string",
                         "null"
@@ -4203,14 +4288,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden medlemskapet er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "undervisningsgruppe": {
-                    "description": "Undervisningsgruppa dette medlemskapet er i.",
+                    "description": "Undervisningsgruppe.",
                     "type": [
                         "string",
                         "null"
@@ -4228,6 +4313,7 @@
             "description": "Rotcontainer for FINT Utdanning-instansar.",
             "properties": {
                 "anmerkningar": {
+                    "description": "Alle anmerkningar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Anmerkninger"
                     },
@@ -4237,6 +4323,7 @@
                     ]
                 },
                 "arstrinn": {
+                    "description": "Alle \u00e5rstrinns-objekt i containeren.",
                     "items": {
                         "$ref": "#/$defs/Arstrinn"
                     },
@@ -4246,6 +4333,7 @@
                     ]
                 },
                 "avbruddsaarsaker": {
+                    "description": "Alle avbrudds\u00e5rsakar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Avbruddsaarsak"
                     },
@@ -4255,6 +4343,7 @@
                     ]
                 },
                 "avlagteprover": {
+                    "description": "Alle avlagde pr\u00f8ver i containeren.",
                     "items": {
                         "$ref": "#/$defs/AvlagtProve"
                     },
@@ -4264,6 +4353,7 @@
                     ]
                 },
                 "betalingsstatus": {
+                    "description": "Betalingsstatus.",
                     "items": {
                         "$ref": "#/$defs/Betalingsstatus"
                     },
@@ -4273,6 +4363,7 @@
                     ]
                 },
                 "bevistypar": {
+                    "description": "Alle bevistypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Bevistype"
                     },
@@ -4282,6 +4373,7 @@
                     ]
                 },
                 "brevtypar": {
+                    "description": "Alle brevtypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Brevtype"
                     },
@@ -4291,6 +4383,7 @@
                     ]
                 },
                 "eksamen": {
+                    "description": "Eksamen.",
                     "items": {
                         "$ref": "#/$defs/Eksamen"
                     },
@@ -4300,6 +4393,7 @@
                     ]
                 },
                 "eksamensformer": {
+                    "description": "Alle eksamensformer i containeren.",
                     "items": {
                         "$ref": "#/$defs/Eksamensform"
                     },
@@ -4309,6 +4403,7 @@
                     ]
                 },
                 "eksamensgruppemedlemskap": {
+                    "description": "Eksamensgruppemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Eksamensgruppemedlemskap"
                     },
@@ -4318,6 +4413,7 @@
                     ]
                 },
                 "eksamensgrupper": {
+                    "description": "Alle eksamensgrupper i containeren.",
                     "items": {
                         "$ref": "#/$defs/Eksamensgruppe"
                     },
@@ -4327,6 +4423,7 @@
                     ]
                 },
                 "eksamensvurdering": {
+                    "description": "Eksamensvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Eksamensvurdering"
                     },
@@ -4336,6 +4433,7 @@
                     ]
                 },
                 "elevar": {
+                    "description": "Alle elevar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Elev"
                     },
@@ -4345,6 +4443,7 @@
                     ]
                 },
                 "elevforhold": {
+                    "description": "Elevforholdet dette gjeld.",
                     "items": {
                         "$ref": "#/$defs/Elevforhold"
                     },
@@ -4354,6 +4453,7 @@
                     ]
                 },
                 "elevfravar": {
+                    "description": "Fr\u00e5v\u00e6rsobjekt for elev.",
                     "items": {
                         "$ref": "#/$defs/Elevfravar"
                     },
@@ -4363,6 +4463,7 @@
                     ]
                 },
                 "elevkategoriar": {
+                    "description": "Alle elevkategoriar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Elevkategori"
                     },
@@ -4372,6 +4473,7 @@
                     ]
                 },
                 "elevtilrettelegging": {
+                    "description": "Alle elevtilretteleggingar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Elevtilrettelegging"
                     },
@@ -4381,6 +4483,7 @@
                     ]
                 },
                 "elevvurdering": {
+                    "description": "Elevvurderingsobjekt.",
                     "items": {
                         "$ref": "#/$defs/Elevvurdering"
                     },
@@ -4390,6 +4493,7 @@
                     ]
                 },
                 "fag": {
+                    "description": "Fag.",
                     "items": {
                         "$ref": "#/$defs/Fag"
                     },
@@ -4399,6 +4503,7 @@
                     ]
                 },
                 "faggruppemedlemskap": {
+                    "description": "Faggruppemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Faggruppemedlemskap"
                     },
@@ -4408,6 +4513,7 @@
                     ]
                 },
                 "faggrupper": {
+                    "description": "Alle faggrupper i containeren.",
                     "items": {
                         "$ref": "#/$defs/Faggruppe"
                     },
@@ -4417,6 +4523,7 @@
                     ]
                 },
                 "fagmerknader": {
+                    "description": "Alle fagmerknadar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fagmerknad"
                     },
@@ -4426,6 +4533,7 @@
                     ]
                 },
                 "fagstatus": {
+                    "description": "Fagstatus.",
                     "items": {
                         "$ref": "#/$defs/Fagstatus"
                     },
@@ -4435,6 +4543,7 @@
                     ]
                 },
                 "fravarsoversikt": {
+                    "description": "Alle fr\u00e5v\u00e6rsoversikter i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fravarsoversikt"
                     },
@@ -4444,6 +4553,7 @@
                     ]
                 },
                 "fravartypar": {
+                    "description": "Alle fr\u00e5v\u00e6rstypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fravartype"
                     },
@@ -4453,6 +4563,7 @@
                     ]
                 },
                 "fraversregistrering": {
+                    "description": "Fr\u00e5versregistreringar.",
                     "items": {
                         "$ref": "#/$defs/Fraversregistrering"
                     },
@@ -4462,6 +4573,7 @@
                     ]
                 },
                 "fullfortkoder": {
+                    "description": "Alle fullfortkoder i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fullfortkode"
                     },
@@ -4471,6 +4583,7 @@
                     ]
                 },
                 "halvaarsfagvurdering": {
+                    "description": "Halv\u00e5rsfagvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Halvaarsfagvurdering"
                     },
@@ -4480,6 +4593,7 @@
                     ]
                 },
                 "halvaarsordensvurdering": {
+                    "description": "Halv\u00e5rsordensvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Halvaarsordensvurdering"
                     },
@@ -4489,6 +4603,7 @@
                     ]
                 },
                 "karakterhistorie": {
+                    "description": "Karakterhistorikk.",
                     "items": {
                         "$ref": "#/$defs/Karakterhistorie"
                     },
@@ -4498,6 +4613,7 @@
                     ]
                 },
                 "karakterskalaer": {
+                    "description": "Alle karakterskalaer i containeren.",
                     "items": {
                         "$ref": "#/$defs/Karakterskala"
                     },
@@ -4507,6 +4623,7 @@
                     ]
                 },
                 "karakterstatus": {
+                    "description": "Karakterstatus.",
                     "items": {
                         "$ref": "#/$defs/Karakterstatus"
                     },
@@ -4516,6 +4633,7 @@
                     ]
                 },
                 "karakterverdiar": {
+                    "description": "Alle karakterverdiar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Karakterverdi"
                     },
@@ -4525,6 +4643,7 @@
                     ]
                 },
                 "klassemedlemskap": {
+                    "description": "Klassemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Klassemedlemskap"
                     },
@@ -4534,6 +4653,7 @@
                     ]
                 },
                 "klasser": {
+                    "description": "Alle klassar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Klasse"
                     },
@@ -4543,6 +4663,7 @@
                     ]
                 },
                 "kontaktlaerergruppemedlemskap": {
+                    "description": "Kontaktl\u00e6rergruppemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Kontaktlaerergruppemedlemskap"
                     },
@@ -4552,6 +4673,7 @@
                     ]
                 },
                 "kontaktlaerergrupper": {
+                    "description": "Alle kontaktl\u00e6rargrupper i containeren.",
                     "items": {
                         "$ref": "#/$defs/Kontaktlaerergruppe"
                     },
@@ -4561,6 +4683,7 @@
                     ]
                 },
                 "laerlingar": {
+                    "description": "Alle l\u00e6rlingar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Laerling"
                     },
@@ -4570,6 +4693,7 @@
                     ]
                 },
                 "otEnheter": {
+                    "description": "Alle OT-einingar i containeren.",
                     "items": {
                         "$ref": "#/$defs/OtEnhet"
                     },
@@ -4579,6 +4703,7 @@
                     ]
                 },
                 "otStatus": {
+                    "description": "Alle OT-statuser i containeren.",
                     "items": {
                         "$ref": "#/$defs/OtStatus"
                     },
@@ -4588,6 +4713,7 @@
                     ]
                 },
                 "otUngdom": {
+                    "description": "Alle OT-ungdom i containeren.",
                     "items": {
                         "$ref": "#/$defs/OtUngdom"
                     },
@@ -4597,6 +4723,7 @@
                     ]
                 },
                 "persongruppemedlemskap": {
+                    "description": "Persongruppemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Persongruppemedlemskap"
                     },
@@ -4606,6 +4733,7 @@
                     ]
                 },
                 "persongrupper": {
+                    "description": "Alle persongrupper i containeren.",
                     "items": {
                         "$ref": "#/$defs/Persongruppe"
                     },
@@ -4615,6 +4743,7 @@
                     ]
                 },
                 "programomrademedlemskap": {
+                    "description": "Programomr\u00e5demedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Programomrademedlemskap"
                     },
@@ -4624,6 +4753,7 @@
                     ]
                 },
                 "programomrader": {
+                    "description": "Alle programomr\u00e5de i containeren.",
                     "items": {
                         "$ref": "#/$defs/Programomrade"
                     },
@@ -4633,6 +4763,7 @@
                     ]
                 },
                 "provestatuser": {
+                    "description": "Alle pr\u00f8vestatuser i containeren.",
                     "items": {
                         "$ref": "#/$defs/Provestatus"
                     },
@@ -4642,6 +4773,7 @@
                     ]
                 },
                 "rom": {
+                    "description": "Rom.",
                     "items": {
                         "$ref": "#/$defs/Rom"
                     },
@@ -4651,6 +4783,7 @@
                     ]
                 },
                 "sensor": {
+                    "description": "Sensor.",
                     "items": {
                         "$ref": "#/$defs/Sensor"
                     },
@@ -4660,6 +4793,7 @@
                     ]
                 },
                 "skolar": {
+                    "description": "Alle skular i containeren.",
                     "items": {
                         "$ref": "#/$defs/Skole"
                     },
@@ -4669,6 +4803,7 @@
                     ]
                 },
                 "skoleaar": {
+                    "description": "Skole\u00e5ret.",
                     "items": {
                         "$ref": "#/$defs/Skoleaar"
                     },
@@ -4678,6 +4813,7 @@
                     ]
                 },
                 "skoleeijartypar": {
+                    "description": "Alle skuleeigarstypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Skoleeiertype"
                     },
@@ -4687,6 +4823,7 @@
                     ]
                 },
                 "skoleressursar": {
+                    "description": "Alle skoleressursar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Skoleressurs"
                     },
@@ -4696,6 +4833,7 @@
                     ]
                 },
                 "sluttfagvurdering": {
+                    "description": "Sluttfagvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Sluttfagvurdering"
                     },
@@ -4705,6 +4843,7 @@
                     ]
                 },
                 "sluttordensvurdering": {
+                    "description": "Sluttordensvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Sluttordensvurdering"
                     },
@@ -4714,6 +4853,7 @@
                     ]
                 },
                 "terminar": {
+                    "description": "Alle terminar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Termin"
                     },
@@ -4723,6 +4863,7 @@
                     ]
                 },
                 "tilrettelegging": {
+                    "description": "Tilretteleggingstype.",
                     "items": {
                         "$ref": "#/$defs/Tilrettelegging"
                     },
@@ -4732,6 +4873,7 @@
                     ]
                 },
                 "timar": {
+                    "description": "Alle timar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Time"
                     },
@@ -4741,6 +4883,7 @@
                     ]
                 },
                 "underveisfagvurdering": {
+                    "description": "Underveisfagvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Underveisfagvurdering"
                     },
@@ -4750,6 +4893,7 @@
                     ]
                 },
                 "underveisordensvurdering": {
+                    "description": "Underveisordensvurderingar.",
                     "items": {
                         "$ref": "#/$defs/Underveisordensvurdering"
                     },
@@ -4759,6 +4903,7 @@
                     ]
                 },
                 "undervisningsforhold": {
+                    "description": "Undervisningsforhold.",
                     "items": {
                         "$ref": "#/$defs/Undervisningsforhold"
                     },
@@ -4768,6 +4913,7 @@
                     ]
                 },
                 "undervisningsgruppemedlemskap": {
+                    "description": "Undervisningsgruppemedlemskap.",
                     "items": {
                         "$ref": "#/$defs/Undervisningsgruppemedlemskap"
                     },
@@ -4777,6 +4923,7 @@
                     ]
                 },
                 "undervisningsgrupper": {
+                    "description": "Alle undervisningsgrupper i containeren.",
                     "items": {
                         "$ref": "#/$defs/Undervisningsgruppe"
                     },
@@ -4786,6 +4933,7 @@
                     ]
                 },
                 "utdanningsprogram": {
+                    "description": "Utdanningsprogram.",
                     "items": {
                         "$ref": "#/$defs/Utdanningsprogram"
                     },
@@ -4795,6 +4943,7 @@
                     ]
                 },
                 "varsel": {
+                    "description": "Varsel.",
                     "items": {
                         "$ref": "#/$defs/Varsel"
                     },
@@ -4804,6 +4953,7 @@
                     ]
                 },
                 "varseltypar": {
+                    "description": "Alle varseltypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Varseltype"
                     },
@@ -4813,6 +4963,7 @@
                     ]
                 },
                 "vitnemalsmerknad": {
+                    "description": "Vitnem\u00e5lsmerknad.",
                     "items": {
                         "$ref": "#/$defs/Vitnemalsmerknad"
                     },
@@ -4830,7 +4981,7 @@
             "description": "Eit utdanningsprogram (t.d. Elektrofag, Studiespesialisering).",
             "properties": {
                 "beskrivelse": {
-                    "description": "Skildring av gruppa.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -4848,11 +4999,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 gruppa.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "programomrade": {
-                    "description": "Programomr\u00e5de under utdanningsprogrammet.",
+                    "description": "Programomr\u00e5de.",
                     "items": {
                         "type": "string"
                     },
@@ -4862,7 +5013,7 @@
                     ]
                 },
                 "skole": {
-                    "description": "Skular som tilbyr utdanningsprogrammet.",
+                    "description": "Skulen dette gjeld.",
                     "items": {
                         "type": "string"
                     },
@@ -4898,19 +5049,19 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "navn": {
-                    "description": "Namn p\u00e5 valuta.",
-                    "type": "string"
-                },
                 "nummerkode": {
                     "$ref": "#/$defs/Identifikator",
                     "description": "Nummerkode for aktuell valuta."
+                },
+                "valuta_navn": {
+                    "description": "Namn p\u00e5 valuta.",
+                    "type": "string"
                 }
             },
             "required": [
                 "id",
                 "bokstavkode",
-                "navn",
+                "valuta_navn",
                 "nummerkode"
             ],
             "title": "Valuta",
@@ -4921,14 +5072,17 @@
             "description": "Eit varsel knytt til ein elev i ei faggruppe.",
             "properties": {
                 "faggruppemedlemskap": {
-                    "description": "Faggruppemedlemskapet dette varselet gjeld.",
+                    "description": "Faggruppemedlemskap.",
+                    "items": {
+                        "type": "string"
+                    },
                     "type": [
-                        "string",
+                        "array",
                         "null"
                     ]
                 },
                 "fravarsprosent": {
-                    "description": "Fr\u00e5v\u00e6rsprosent ved utsending av varselet.",
+                    "description": "Fr\u00e5v\u00e6rsprosent.",
                     "type": [
                         "integer",
                         "null"
@@ -4961,7 +5115,7 @@
                     ]
                 },
                 "type": {
-                    "description": "Type varsel.",
+                    "description": "Beskriv kva slags type.",
                     "type": [
                         "string",
                         "null"
@@ -4993,19 +5147,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -5033,7 +5191,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til ein organisasjonseining i einingsregisteret."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -5051,7 +5209,7 @@
                     "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "laerling": {
-                    "description": "Referanse til Laerling (Utdanning) i verksemda.",
+                    "description": "Referanse til Laerling (Utdanning).",
                     "items": {
                         "type": "string"
                     },
@@ -5113,19 +5271,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -5148,6 +5310,7 @@
     "metamodel_version": "1.7.0",
     "properties": {
         "anmerkningar": {
+            "description": "Alle anmerkningar i containeren.",
             "items": {
                 "$ref": "#/$defs/Anmerkninger"
             },
@@ -5157,6 +5320,7 @@
             ]
         },
         "arstrinn": {
+            "description": "Alle \u00e5rstrinns-objekt i containeren.",
             "items": {
                 "$ref": "#/$defs/Arstrinn"
             },
@@ -5166,6 +5330,7 @@
             ]
         },
         "avbruddsaarsaker": {
+            "description": "Alle avbrudds\u00e5rsakar i containeren.",
             "items": {
                 "$ref": "#/$defs/Avbruddsaarsak"
             },
@@ -5175,6 +5340,7 @@
             ]
         },
         "avlagteprover": {
+            "description": "Alle avlagde pr\u00f8ver i containeren.",
             "items": {
                 "$ref": "#/$defs/AvlagtProve"
             },
@@ -5184,6 +5350,7 @@
             ]
         },
         "betalingsstatus": {
+            "description": "Betalingsstatus.",
             "items": {
                 "$ref": "#/$defs/Betalingsstatus"
             },
@@ -5193,6 +5360,7 @@
             ]
         },
         "bevistypar": {
+            "description": "Alle bevistypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Bevistype"
             },
@@ -5202,6 +5370,7 @@
             ]
         },
         "brevtypar": {
+            "description": "Alle brevtypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Brevtype"
             },
@@ -5211,6 +5380,7 @@
             ]
         },
         "eksamen": {
+            "description": "Eksamen.",
             "items": {
                 "$ref": "#/$defs/Eksamen"
             },
@@ -5220,6 +5390,7 @@
             ]
         },
         "eksamensformer": {
+            "description": "Alle eksamensformer i containeren.",
             "items": {
                 "$ref": "#/$defs/Eksamensform"
             },
@@ -5229,6 +5400,7 @@
             ]
         },
         "eksamensgruppemedlemskap": {
+            "description": "Eksamensgruppemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Eksamensgruppemedlemskap"
             },
@@ -5238,6 +5410,7 @@
             ]
         },
         "eksamensgrupper": {
+            "description": "Alle eksamensgrupper i containeren.",
             "items": {
                 "$ref": "#/$defs/Eksamensgruppe"
             },
@@ -5247,6 +5420,7 @@
             ]
         },
         "eksamensvurdering": {
+            "description": "Eksamensvurderingar.",
             "items": {
                 "$ref": "#/$defs/Eksamensvurdering"
             },
@@ -5256,6 +5430,7 @@
             ]
         },
         "elevar": {
+            "description": "Alle elevar i containeren.",
             "items": {
                 "$ref": "#/$defs/Elev"
             },
@@ -5265,6 +5440,7 @@
             ]
         },
         "elevforhold": {
+            "description": "Elevforholdet dette gjeld.",
             "items": {
                 "$ref": "#/$defs/Elevforhold"
             },
@@ -5274,6 +5450,7 @@
             ]
         },
         "elevfravar": {
+            "description": "Fr\u00e5v\u00e6rsobjekt for elev.",
             "items": {
                 "$ref": "#/$defs/Elevfravar"
             },
@@ -5283,6 +5460,7 @@
             ]
         },
         "elevkategoriar": {
+            "description": "Alle elevkategoriar i containeren.",
             "items": {
                 "$ref": "#/$defs/Elevkategori"
             },
@@ -5292,6 +5470,7 @@
             ]
         },
         "elevtilrettelegging": {
+            "description": "Alle elevtilretteleggingar i containeren.",
             "items": {
                 "$ref": "#/$defs/Elevtilrettelegging"
             },
@@ -5301,6 +5480,7 @@
             ]
         },
         "elevvurdering": {
+            "description": "Elevvurderingsobjekt.",
             "items": {
                 "$ref": "#/$defs/Elevvurdering"
             },
@@ -5310,6 +5490,7 @@
             ]
         },
         "fag": {
+            "description": "Fag.",
             "items": {
                 "$ref": "#/$defs/Fag"
             },
@@ -5319,6 +5500,7 @@
             ]
         },
         "faggruppemedlemskap": {
+            "description": "Faggruppemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Faggruppemedlemskap"
             },
@@ -5328,6 +5510,7 @@
             ]
         },
         "faggrupper": {
+            "description": "Alle faggrupper i containeren.",
             "items": {
                 "$ref": "#/$defs/Faggruppe"
             },
@@ -5337,6 +5520,7 @@
             ]
         },
         "fagmerknader": {
+            "description": "Alle fagmerknadar i containeren.",
             "items": {
                 "$ref": "#/$defs/Fagmerknad"
             },
@@ -5346,6 +5530,7 @@
             ]
         },
         "fagstatus": {
+            "description": "Fagstatus.",
             "items": {
                 "$ref": "#/$defs/Fagstatus"
             },
@@ -5355,6 +5540,7 @@
             ]
         },
         "fravarsoversikt": {
+            "description": "Alle fr\u00e5v\u00e6rsoversikter i containeren.",
             "items": {
                 "$ref": "#/$defs/Fravarsoversikt"
             },
@@ -5364,6 +5550,7 @@
             ]
         },
         "fravartypar": {
+            "description": "Alle fr\u00e5v\u00e6rstypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Fravartype"
             },
@@ -5373,6 +5560,7 @@
             ]
         },
         "fraversregistrering": {
+            "description": "Fr\u00e5versregistreringar.",
             "items": {
                 "$ref": "#/$defs/Fraversregistrering"
             },
@@ -5382,6 +5570,7 @@
             ]
         },
         "fullfortkoder": {
+            "description": "Alle fullfortkoder i containeren.",
             "items": {
                 "$ref": "#/$defs/Fullfortkode"
             },
@@ -5391,6 +5580,7 @@
             ]
         },
         "halvaarsfagvurdering": {
+            "description": "Halv\u00e5rsfagvurderingar.",
             "items": {
                 "$ref": "#/$defs/Halvaarsfagvurdering"
             },
@@ -5400,6 +5590,7 @@
             ]
         },
         "halvaarsordensvurdering": {
+            "description": "Halv\u00e5rsordensvurderingar.",
             "items": {
                 "$ref": "#/$defs/Halvaarsordensvurdering"
             },
@@ -5409,6 +5600,7 @@
             ]
         },
         "karakterhistorie": {
+            "description": "Karakterhistorikk.",
             "items": {
                 "$ref": "#/$defs/Karakterhistorie"
             },
@@ -5418,6 +5610,7 @@
             ]
         },
         "karakterskalaer": {
+            "description": "Alle karakterskalaer i containeren.",
             "items": {
                 "$ref": "#/$defs/Karakterskala"
             },
@@ -5427,6 +5620,7 @@
             ]
         },
         "karakterstatus": {
+            "description": "Karakterstatus.",
             "items": {
                 "$ref": "#/$defs/Karakterstatus"
             },
@@ -5436,6 +5630,7 @@
             ]
         },
         "karakterverdiar": {
+            "description": "Alle karakterverdiar i containeren.",
             "items": {
                 "$ref": "#/$defs/Karakterverdi"
             },
@@ -5445,6 +5640,7 @@
             ]
         },
         "klassemedlemskap": {
+            "description": "Klassemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Klassemedlemskap"
             },
@@ -5454,6 +5650,7 @@
             ]
         },
         "klasser": {
+            "description": "Alle klassar i containeren.",
             "items": {
                 "$ref": "#/$defs/Klasse"
             },
@@ -5463,6 +5660,7 @@
             ]
         },
         "kontaktlaerergruppemedlemskap": {
+            "description": "Kontaktl\u00e6rergruppemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Kontaktlaerergruppemedlemskap"
             },
@@ -5472,6 +5670,7 @@
             ]
         },
         "kontaktlaerergrupper": {
+            "description": "Alle kontaktl\u00e6rargrupper i containeren.",
             "items": {
                 "$ref": "#/$defs/Kontaktlaerergruppe"
             },
@@ -5481,6 +5680,7 @@
             ]
         },
         "laerlingar": {
+            "description": "Alle l\u00e6rlingar i containeren.",
             "items": {
                 "$ref": "#/$defs/Laerling"
             },
@@ -5490,6 +5690,7 @@
             ]
         },
         "otEnheter": {
+            "description": "Alle OT-einingar i containeren.",
             "items": {
                 "$ref": "#/$defs/OtEnhet"
             },
@@ -5499,6 +5700,7 @@
             ]
         },
         "otStatus": {
+            "description": "Alle OT-statuser i containeren.",
             "items": {
                 "$ref": "#/$defs/OtStatus"
             },
@@ -5508,6 +5710,7 @@
             ]
         },
         "otUngdom": {
+            "description": "Alle OT-ungdom i containeren.",
             "items": {
                 "$ref": "#/$defs/OtUngdom"
             },
@@ -5517,6 +5720,7 @@
             ]
         },
         "persongruppemedlemskap": {
+            "description": "Persongruppemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Persongruppemedlemskap"
             },
@@ -5526,6 +5730,7 @@
             ]
         },
         "persongrupper": {
+            "description": "Alle persongrupper i containeren.",
             "items": {
                 "$ref": "#/$defs/Persongruppe"
             },
@@ -5535,6 +5740,7 @@
             ]
         },
         "programomrademedlemskap": {
+            "description": "Programomr\u00e5demedlemskap.",
             "items": {
                 "$ref": "#/$defs/Programomrademedlemskap"
             },
@@ -5544,6 +5750,7 @@
             ]
         },
         "programomrader": {
+            "description": "Alle programomr\u00e5de i containeren.",
             "items": {
                 "$ref": "#/$defs/Programomrade"
             },
@@ -5553,6 +5760,7 @@
             ]
         },
         "provestatuser": {
+            "description": "Alle pr\u00f8vestatuser i containeren.",
             "items": {
                 "$ref": "#/$defs/Provestatus"
             },
@@ -5562,6 +5770,7 @@
             ]
         },
         "rom": {
+            "description": "Rom.",
             "items": {
                 "$ref": "#/$defs/Rom"
             },
@@ -5571,6 +5780,7 @@
             ]
         },
         "sensor": {
+            "description": "Sensor.",
             "items": {
                 "$ref": "#/$defs/Sensor"
             },
@@ -5580,6 +5790,7 @@
             ]
         },
         "skolar": {
+            "description": "Alle skular i containeren.",
             "items": {
                 "$ref": "#/$defs/Skole"
             },
@@ -5589,6 +5800,7 @@
             ]
         },
         "skoleaar": {
+            "description": "Skole\u00e5ret.",
             "items": {
                 "$ref": "#/$defs/Skoleaar"
             },
@@ -5598,6 +5810,7 @@
             ]
         },
         "skoleeijartypar": {
+            "description": "Alle skuleeigarstypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Skoleeiertype"
             },
@@ -5607,6 +5820,7 @@
             ]
         },
         "skoleressursar": {
+            "description": "Alle skoleressursar i containeren.",
             "items": {
                 "$ref": "#/$defs/Skoleressurs"
             },
@@ -5616,6 +5830,7 @@
             ]
         },
         "sluttfagvurdering": {
+            "description": "Sluttfagvurderingar.",
             "items": {
                 "$ref": "#/$defs/Sluttfagvurdering"
             },
@@ -5625,6 +5840,7 @@
             ]
         },
         "sluttordensvurdering": {
+            "description": "Sluttordensvurderingar.",
             "items": {
                 "$ref": "#/$defs/Sluttordensvurdering"
             },
@@ -5634,6 +5850,7 @@
             ]
         },
         "terminar": {
+            "description": "Alle terminar i containeren.",
             "items": {
                 "$ref": "#/$defs/Termin"
             },
@@ -5643,6 +5860,7 @@
             ]
         },
         "tilrettelegging": {
+            "description": "Tilretteleggingstype.",
             "items": {
                 "$ref": "#/$defs/Tilrettelegging"
             },
@@ -5652,6 +5870,7 @@
             ]
         },
         "timar": {
+            "description": "Alle timar i containeren.",
             "items": {
                 "$ref": "#/$defs/Time"
             },
@@ -5661,6 +5880,7 @@
             ]
         },
         "underveisfagvurdering": {
+            "description": "Underveisfagvurderingar.",
             "items": {
                 "$ref": "#/$defs/Underveisfagvurdering"
             },
@@ -5670,6 +5890,7 @@
             ]
         },
         "underveisordensvurdering": {
+            "description": "Underveisordensvurderingar.",
             "items": {
                 "$ref": "#/$defs/Underveisordensvurdering"
             },
@@ -5679,6 +5900,7 @@
             ]
         },
         "undervisningsforhold": {
+            "description": "Undervisningsforhold.",
             "items": {
                 "$ref": "#/$defs/Undervisningsforhold"
             },
@@ -5688,6 +5910,7 @@
             ]
         },
         "undervisningsgruppemedlemskap": {
+            "description": "Undervisningsgruppemedlemskap.",
             "items": {
                 "$ref": "#/$defs/Undervisningsgruppemedlemskap"
             },
@@ -5697,6 +5920,7 @@
             ]
         },
         "undervisningsgrupper": {
+            "description": "Alle undervisningsgrupper i containeren.",
             "items": {
                 "$ref": "#/$defs/Undervisningsgruppe"
             },
@@ -5706,6 +5930,7 @@
             ]
         },
         "utdanningsprogram": {
+            "description": "Utdanningsprogram.",
             "items": {
                 "$ref": "#/$defs/Utdanningsprogram"
             },
@@ -5715,6 +5940,7 @@
             ]
         },
         "varsel": {
+            "description": "Varsel.",
             "items": {
                 "$ref": "#/$defs/Varsel"
             },
@@ -5724,6 +5950,7 @@
             ]
         },
         "varseltypar": {
+            "description": "Alle varseltypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Varseltype"
             },
@@ -5733,6 +5960,7 @@
             ]
         },
         "vitnemalsmerknad": {
+            "description": "Vitnem\u00e5lsmerknad.",
             "items": {
                 "$ref": "#/$defs/Vitnemalsmerknad"
             },

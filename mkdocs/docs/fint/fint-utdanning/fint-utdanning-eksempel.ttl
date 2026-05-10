@@ -1,24 +1,23 @@
 @prefix fint: <https://schema.fintlabs.no/> .
-@prefix ns1: <https://schema.fintlabs.no/utdanning/:> .
 @prefix utd: <https://schema.fintlabs.no/utdanning/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.no/fint/elevforhold/ef-elev-1-2024> a utd:Elevforhold ;
-    utd:beskrivelse "Elevforhold for Ola Nordmann ved Bakkehaugen skole, 2024–2025" ;
-    utd:elev <https://example.no/fint/elev/elev-1> ;
+    fint:beskrivelse "Elevforhold for Ola Nordmann ved Bakkehaugen skole, 2024–2025" ;
+    fint:elev <https://example.no/fint/elev/elev-1> ;
     utd:skole <https://example.no/fint/skole/bakkehaugen-skole> .
 
 <https://example.no/fint/elevforhold/ef-elev-2-2024> a utd:Elevforhold ;
-    utd:beskrivelse "Elevforhold ved Bakkehaugen skole, 2024–2025" ;
-    utd:elev <https://example.no/fint/elev/elev-2> ;
+    fint:beskrivelse "Elevforhold ved Bakkehaugen skole, 2024–2025" ;
+    fint:elev <https://example.no/fint/elev/elev-2> ;
     utd:skole <https://example.no/fint/skole/bakkehaugen-skole> .
 
 <https://example.no/fint/klasse/7b-2024> a utd:Klasse ;
-    utd:navn "7B" .
+    fint:navn "7B" .
 
 <https://example.no/fint/kontaktlaerergruppe/7a-laerergruppe> a utd:Kontaktlaerergruppe ;
-    utd:klasse <https://example.no/fint/klasse/7a-2024> ;
-    utd:navn "Kontaktlærergruppe 7A" .
+    fint:navn "Kontaktlærergruppe 7A" ;
+    utd:klasse <https://example.no/fint/klasse/7a-2024> .
 
 <https://example.no/fint/skoleressurs/sr-p23456> a utd:Skoleressurs ;
     utd:feidenavn [ a fint:Identifikator ;
@@ -26,31 +25,31 @@
     utd:personalressurs "finta:personalressurs/p23456"^^xsd:anyURI ;
     utd:skole <https://example.no/fint/skole/bakkehaugen-skole> .
 
-<https://example.no/fint/elev/elev-1> a utd:Elev ;
-    utd:elevnummer [ a fint:Identifikator ;
+<https://example.no/fint/elev/elev-1> a fint:Elev ;
+    fint:elevnummer [ a fint:Identifikator ;
             fint:identifikatorverdi "E-2024-001" ] ;
-    utd:person "finta:person/ola-nordmann"^^xsd:anyURI .
+    fint:person <https://example.no/fint/person/ola-nordmann> .
 
-<https://example.no/fint/elev/elev-2> a utd:Elev ;
-    utd:elevnummer [ a fint:Identifikator ;
+<https://example.no/fint/elev/elev-2> a fint:Elev ;
+    fint:elevnummer [ a fint:Identifikator ;
             fint:identifikatorverdi "E-2024-002" ] .
 
 <https://example.no/fint/klasse/7a-2024> a utd:Klasse ;
-    utd:navn "7A" .
+    fint:navn "7A" .
 
 <https://example.no/fint/skole/bakkehaugen-skole> a utd:Skole ;
+    fint:navn "Bakkehaugen skole" ;
     utd:domenenavn "bakkehaugen.skole.no" ;
-    utd:juridiskNavn "Bakkehaugen skole" ;
-    utd:navn "Bakkehaugen skole" .
+    utd:juridiskNavn "Bakkehaugen skole" .
 
-[] a ns1:UtdanningContainer ;
-    ns1:elevar <https://example.no/fint/elev/elev-1>,
+[] a <https://schema.fintlabs.no/utdanning/:UtdanningContainer> ;
+    utd:elevar <https://example.no/fint/elev/elev-1>,
         <https://example.no/fint/elev/elev-2> ;
-    ns1:elevforhold <https://example.no/fint/elevforhold/ef-elev-1-2024>,
+    utd:elevforhold <https://example.no/fint/elevforhold/ef-elev-1-2024>,
         <https://example.no/fint/elevforhold/ef-elev-2-2024> ;
-    ns1:klasser <https://example.no/fint/klasse/7a-2024>,
+    utd:klasser <https://example.no/fint/klasse/7a-2024>,
         <https://example.no/fint/klasse/7b-2024> ;
-    ns1:kontaktlaerergrupper <https://example.no/fint/kontaktlaerergruppe/7a-laerergruppe> ;
-    ns1:skolar <https://example.no/fint/skole/bakkehaugen-skole> ;
-    ns1:skoleressursar <https://example.no/fint/skoleressurs/sr-p23456> .
+    utd:kontaktlaerergrupper <https://example.no/fint/kontaktlaerergruppe/7a-laerergruppe> ;
+    utd:skolar <https://example.no/fint/skole/bakkehaugen-skole> ;
+    utd:skoleressursar <https://example.no/fint/skoleressurs/sr-p23456> .
 

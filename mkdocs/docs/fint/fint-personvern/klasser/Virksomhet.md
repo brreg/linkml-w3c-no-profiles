@@ -326,6 +326,7 @@ attributes:
     - Behandlingsgrunnlag
     - Personopplysning
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson

@@ -454,10 +454,10 @@ slots:
     range: string
     description: Forkorta namn som beskriv organisasjonselementet.
 
-  navn:
-    slot_uri: adm:namn
-    range: string
-    description: Namn på organisasjonselementet.
+  # navn:
+  #   slot_uri: adm:namn
+  #   range: string
+  #   description: Namn på organisasjonselementet.
 
   organisasjonsId:
     slot_uri: adm:organisasjonsId
@@ -516,10 +516,10 @@ slots:
     range: string
     description: Namn som beskriv jobben eller stillinga.
 
-  person:
-    slot_uri: adm:person
-    range: Person
-    description: Person som er ein personalressurs.
+  # person:
+  #   slot_uri: adm:person
+  #   range: Person
+  #   description: Person som er ein personalressurs.
 
   personalressurskategori:
     slot_uri: adm:personalressurskategori

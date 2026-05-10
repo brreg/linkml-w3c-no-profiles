@@ -35,7 +35,7 @@ Alias: elev
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
+| Range | [Elev](elev.md) |
 | Domain Of | [Person](person.md) |
 | Slot URI | [fint:elev](https://schema.fintlabs.no/elev) |
 
@@ -89,7 +89,7 @@ slot_uri: fint:elev
 alias: elev
 domain_of:
 - Person
-range: uriorcurie
+range: Elev
 
 ```
 </details>

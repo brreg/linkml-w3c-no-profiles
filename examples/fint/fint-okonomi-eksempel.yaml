@@ -29,7 +29,7 @@ fakturagrunnlag:
   - id: finta:fakturagrunnlag/fg-2024-001
     ordrenummer:
       identifikatorverdi: "ORD-2024-001"
-    mottaker:
+    fakturamottaker:
       person: finta:person/ola-nordmann
     fakturalinjer:
       - antall: 10.0

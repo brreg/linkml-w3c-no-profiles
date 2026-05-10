@@ -5,6 +5,7 @@
             "description": "Rotcontainer for FINT Administrasjon-instansar.",
             "properties": {
                 "aktivitetar": {
+                    "description": "Alle aktivitetar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Aktivitet"
                     },
@@ -14,6 +15,7 @@
                     ]
                 },
                 "anlegg": {
+                    "description": "Objekt som skal aktiverast eller avskrivast.",
                     "items": {
                         "$ref": "#/$defs/Anlegg"
                     },
@@ -23,6 +25,7 @@
                     ]
                 },
                 "ansvar": {
+                    "description": "Ansvarleg for ei utgift eller inntekt.",
                     "items": {
                         "$ref": "#/$defs/Ansvar"
                     },
@@ -32,6 +35,7 @@
                     ]
                 },
                 "arbeidsforhold": {
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "items": {
                         "$ref": "#/$defs/Arbeidsforhold"
                     },
@@ -41,6 +45,7 @@
                     ]
                 },
                 "arbeidsforholdstypar": {
+                    "description": "Alle arbeidsforholdstypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Arbeidsforholdstype"
                     },
@@ -50,6 +55,7 @@
                     ]
                 },
                 "arbeidslokasjoner": {
+                    "description": "Alle arbeidslokasjoner i containeren.",
                     "items": {
                         "$ref": "#/$defs/Arbeidslokasjon"
                     },
@@ -59,6 +65,7 @@
                     ]
                 },
                 "artar": {
+                    "description": "Alle artar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Art"
                     },
@@ -68,6 +75,7 @@
                     ]
                 },
                 "diverse": {
+                    "description": "Spesifikasjon som ikkje kjem fram i \u00f8vrige dimensjonar.",
                     "items": {
                         "$ref": "#/$defs/Diverse"
                     },
@@ -77,6 +85,7 @@
                     ]
                 },
                 "fastlonn": {
+                    "description": "Fastl\u00f8nn for arbeidsforholdet.",
                     "items": {
                         "$ref": "#/$defs/Fastlonn"
                     },
@@ -86,6 +95,7 @@
                     ]
                 },
                 "fasttillegg": {
+                    "description": "Faste tillegg for arbeidsforholdet.",
                     "items": {
                         "$ref": "#/$defs/Fasttillegg"
                     },
@@ -95,6 +105,7 @@
                     ]
                 },
                 "formaal": {
+                    "description": "Form\u00e5l viser aktivitet og tenesteproduksjon.",
                     "items": {
                         "$ref": "#/$defs/Formaal"
                     },
@@ -104,6 +115,7 @@
                     ]
                 },
                 "fravaer": {
+                    "description": "Fr\u00e5v\u00e6r knytt til ressursen.",
                     "items": {
                         "$ref": "#/$defs/Fravaer"
                     },
@@ -113,6 +125,7 @@
                     ]
                 },
                 "fravaersgrunnar": {
+                    "description": "Alle fr\u00e5v\u00e6rsgrunnar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fravaersgrunn"
                     },
@@ -122,6 +135,7 @@
                     ]
                 },
                 "fravaerstypar": {
+                    "description": "Alle fr\u00e5v\u00e6rstypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fravaerstype"
                     },
@@ -131,6 +145,7 @@
                     ]
                 },
                 "fullmakter": {
+                    "description": "Alle fullmakter i containeren.",
                     "items": {
                         "$ref": "#/$defs/Fullmakt"
                     },
@@ -140,6 +155,7 @@
                     ]
                 },
                 "funksjonar": {
+                    "description": "Alle funksjonar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Funksjon"
                     },
@@ -149,6 +165,7 @@
                     ]
                 },
                 "fylke": {
+                    "description": "Fylke.",
                     "items": {
                         "$ref": "#/$defs/Fylke"
                     },
@@ -158,6 +175,7 @@
                     ]
                 },
                 "kjonn": {
+                    "description": "Kj\u00f8nn.",
                     "items": {
                         "$ref": "#/$defs/Kjonn"
                     },
@@ -167,6 +185,7 @@
                     ]
                 },
                 "kommunar": {
+                    "description": "Alle kommuneverdiar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Kommune"
                     },
@@ -176,6 +195,7 @@
                     ]
                 },
                 "kontaktpersonar": {
+                    "description": "Alle kontaktpersonar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Kontaktperson"
                     },
@@ -185,6 +205,7 @@
                     ]
                 },
                 "kontrakter": {
+                    "description": "Alle kontrakter i containeren.",
                     "items": {
                         "$ref": "#/$defs/Kontrakt"
                     },
@@ -194,6 +215,7 @@
                     ]
                 },
                 "landkodar": {
+                    "description": "Alle landkodar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Landkode"
                     },
@@ -203,6 +225,7 @@
                     ]
                 },
                 "lonsartar": {
+                    "description": "Alle l\u00f8nnsartar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Lonsart"
                     },
@@ -212,6 +235,7 @@
                     ]
                 },
                 "lopenummer": {
+                    "description": "L\u00f8penummer i ei nummerserie.",
                     "items": {
                         "$ref": "#/$defs/Lopenummer"
                     },
@@ -221,6 +245,7 @@
                     ]
                 },
                 "objekt": {
+                    "description": "Objekt ressursen er knytt til.",
                     "items": {
                         "$ref": "#/$defs/Objekt"
                     },
@@ -230,6 +255,7 @@
                     ]
                 },
                 "organisasjonselement": {
+                    "description": "Organisasjonselement ressursen er knytt til.",
                     "items": {
                         "$ref": "#/$defs/Organisasjonselement"
                     },
@@ -239,6 +265,7 @@
                     ]
                 },
                 "organisasjonstypar": {
+                    "description": "Alle organisasjonstypar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Organisasjonstype"
                     },
@@ -248,6 +275,7 @@
                     ]
                 },
                 "personalressursar": {
+                    "description": "Alle personalressursar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Personalressurs"
                     },
@@ -257,6 +285,7 @@
                     ]
                 },
                 "personalressurskategoriar": {
+                    "description": "Alle personalressurskategoriar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Personalressurskategori"
                     },
@@ -266,6 +295,7 @@
                     ]
                 },
                 "personar": {
+                    "description": "Alle personar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Person"
                     },
@@ -275,6 +305,7 @@
                     ]
                 },
                 "prosjekt": {
+                    "description": "Prosjekt ressursen er knytt til.",
                     "items": {
                         "$ref": "#/$defs/Prosjekt"
                     },
@@ -284,6 +315,7 @@
                     ]
                 },
                 "prosjektartar": {
+                    "description": "Alle prosjektartar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Prosjektart"
                     },
@@ -293,6 +325,7 @@
                     ]
                 },
                 "rammer": {
+                    "description": "Alle rammer i containeren.",
                     "items": {
                         "$ref": "#/$defs/Ramme"
                     },
@@ -302,6 +335,7 @@
                     ]
                 },
                 "rollar": {
+                    "description": "Alle rollar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Rolle"
                     },
@@ -311,6 +345,7 @@
                     ]
                 },
                 "spraak": {
+                    "description": "Alle spr\u00e5kverdiar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Spraak"
                     },
@@ -320,6 +355,7 @@
                     ]
                 },
                 "stillingskoder": {
+                    "description": "Alle stillingskoder i containeren.",
                     "items": {
                         "$ref": "#/$defs/Stillingskode"
                     },
@@ -329,6 +365,7 @@
                     ]
                 },
                 "uketimetall": {
+                    "description": "Alle uketimetallverdiar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Uketimetall"
                     },
@@ -338,6 +375,7 @@
                     ]
                 },
                 "valuta": {
+                    "description": "Alle valutaverdiar i containeren.",
                     "items": {
                         "$ref": "#/$defs/Valuta"
                     },
@@ -347,6 +385,7 @@
                     ]
                 },
                 "variabellonn": {
+                    "description": "Variabel l\u00f8nn for arbeidsforholdet.",
                     "items": {
                         "$ref": "#/$defs/Variabellonn"
                     },
@@ -356,6 +395,7 @@
                     ]
                 },
                 "virksomhetar": {
+                    "description": "Alle verksemder i containeren.",
                     "items": {
                         "$ref": "#/$defs/Virksomhet"
                     },
@@ -420,7 +460,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -431,7 +471,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -463,7 +503,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -474,7 +514,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -506,7 +546,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -517,11 +557,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "organisasjonselement": {
-                    "description": "Organisasjonselement ansvaret er knytt til.",
+                    "description": "Organisasjonselement ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -531,7 +571,7 @@
                     ]
                 },
                 "overordnet": {
-                    "description": "Overordna ansvar.",
+                    "description": "Overordna element i hierarkiet.",
                     "type": [
                         "string",
                         "null"
@@ -545,7 +585,7 @@
                     ]
                 },
                 "underordnet": {
-                    "description": "Alle underansvar.",
+                    "description": "Underordna element i hierarkiet.",
                     "items": {
                         "type": "string"
                     },
@@ -572,14 +612,14 @@
                     "type": "integer"
                 },
                 "aktivitet": {
-                    "description": "Aktivitet arbeidsforholdet er knytt til.",
+                    "description": "Detaljering av funksjon.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "anlegg": {
-                    "description": "Anlegg arbeidsforholdet er knytt til.",
+                    "description": "Objekt som skal aktiverast eller avskrivast.",
                     "type": [
                         "string",
                         "null"
@@ -590,7 +630,7 @@
                     "type": "integer"
                 },
                 "ansvar": {
-                    "description": "Relasjon til omgrepet ansvar.",
+                    "description": "Ansvarleg for ei utgift eller inntekt.",
                     "type": [
                         "string",
                         "null"
@@ -626,21 +666,21 @@
                     "type": "string"
                 },
                 "art": {
-                    "description": "Art arbeidsforholdet er knytt til.",
+                    "description": "Type inntekt eller utgift.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "diverse": {
-                    "description": "Diverse arbeidsforholdet er knytt til.",
+                    "description": "Spesifikasjon som ikkje kjem fram i \u00f8vrige dimensjonar.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "fastlonn": {
-                    "description": "All fastl\u00f8nn for arbeidsforholdet.",
+                    "description": "Fastl\u00f8nn for arbeidsforholdet.",
                     "items": {
                         "type": "string"
                     },
@@ -650,7 +690,7 @@
                     ]
                 },
                 "fasttillegg": {
-                    "description": "Alle faste tillegg for arbeidsforholdet.",
+                    "description": "Faste tillegg for arbeidsforholdet.",
                     "items": {
                         "type": "string"
                     },
@@ -667,7 +707,7 @@
                     ]
                 },
                 "fravaer": {
-                    "description": "Alle fr\u00e5v\u00e6r knytt til arbeidsforholdet.",
+                    "description": "Fr\u00e5v\u00e6r knytt til ressursen.",
                     "items": {
                         "type": "string"
                     },
@@ -677,7 +717,7 @@
                     ]
                 },
                 "funksjon": {
-                    "description": "Arbeidsforholdet sin relasjon til funksjon.",
+                    "description": "Det som vert produsert eller tenesta som vert levert.",
                     "type": [
                         "string",
                         "null"
@@ -685,7 +725,7 @@
                 },
                 "gyldighetsperiode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Gyldig periode for arbeidsforholdet."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "hovedstilling": {
                     "description": "Angir kva arbeidsforhold som er hovudarbeidsforhold.",
@@ -696,7 +736,7 @@
                     "type": "string"
                 },
                 "kontrakt": {
-                    "description": "Kontrakt arbeidsforholdet er knytt til.",
+                    "description": "Kontrakt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
@@ -707,14 +747,14 @@
                     "type": "integer"
                 },
                 "lopenummer": {
-                    "description": "L\u00f8penummer arbeidsforholdet er knytt til.",
+                    "description": "L\u00f8penummer i ei nummerserie.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "objekt": {
-                    "description": "Objekt arbeidsforholdet er knytt til.",
+                    "description": "Objekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
@@ -732,14 +772,14 @@
                     "type": "string"
                 },
                 "prosjekt": {
-                    "description": "Prosjekt arbeidsforholdet er knytt til.",
+                    "description": "Prosjekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "ramme": {
-                    "description": "Ramme arbeidsforholdet er knytt til.",
+                    "description": "Budsjettramme som skal bere kostnadane.",
                     "type": [
                         "string",
                         "null"
@@ -782,7 +822,7 @@
                     ]
                 },
                 "variabellonn": {
-                    "description": "All variabel l\u00f8nn for arbeidsforholdet.",
+                    "description": "Variabel l\u00f8nn for arbeidsforholdet.",
                     "items": {
                         "type": "string"
                     },
@@ -812,7 +852,7 @@
             "description": "Viser kva behov hos arbeidsgjevar arbeidsforholdet dekkjer.",
             "properties": {
                 "forelder": {
-                    "description": "For \u00e5 byggje hierarki av Arbeidsforholdstype.",
+                    "description": "Foreldreelement i hierarki.",
                     "type": [
                         "string",
                         "null"
@@ -827,7 +867,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -838,7 +878,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -862,7 +902,7 @@
             "description": "Fysisk lokasjon der ein tilsett har sitt arbeidsstad.",
             "properties": {
                 "arbeidsforhold": {
-                    "description": "Arbeidsforhold knytt til arbeidslokasjonen.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -880,7 +920,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til organisasjonseininga."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -895,7 +935,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon til arbeidslokasjonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "lokasjonskode": {
                     "$ref": "#/$defs/Identifikator",
@@ -935,7 +975,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Postadresse til arbeidslokasjonen."
+                    "description": "Informasjon om postadresse til ein akt\u00f8r."
                 }
             },
             "required": [
@@ -958,7 +998,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -969,7 +1009,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1001,7 +1041,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1012,7 +1052,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1029,6 +1069,42 @@
                 "navn"
             ],
             "title": "Diverse",
+            "type": "object"
+        },
+        "Elev": {
+            "additionalProperties": false,
+            "description": "Ein elev registrert i skulesystemet.",
+            "properties": {
+                "elevnummer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Identifikator"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Skulens interne elevnummer."
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "person": {
+                    "description": "Referanse til Person i Administrasjon-domenet.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Elev",
             "type": "object"
         },
         "Fastlonn": {
@@ -1051,7 +1127,7 @@
                     ]
                 },
                 "arbeidsforhold": {
-                    "description": "Arbeidsforhold fastl\u00f8nna gjeld for.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "type": "string"
                 },
                 "attestant": {
@@ -1070,7 +1146,7 @@
                     ]
                 },
                 "beskrivelse": {
-                    "description": "Beskriving av l\u00f8nn til f\u00f8ring p\u00e5 l\u00f8nnslipp.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "id": {
@@ -1086,7 +1162,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kjeldesystemets unike identifikator for l\u00f8nn."
+                    "description": "Kjeldesystemets unike identifikator."
                 },
                 "konterer": {
                     "description": "Personalressurs som har kontert l\u00f8nsmeldinga etter fullmakt.",
@@ -1108,7 +1184,7 @@
                     "description": "Kontering av l\u00f8nn."
                 },
                 "lonsart": {
-                    "description": "L\u00f8nnsart for fastl\u00f8nn.",
+                    "description": "L\u00f8nnsart.",
                     "type": [
                         "string",
                         "null"
@@ -1127,10 +1203,10 @@
                 },
                 "periode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Periode l\u00f8nn vert utbetalt."
+                    "description": "Periode for ressursen."
                 },
                 "prosent": {
-                    "description": "Andel av l\u00f8nnsprosent som vert beslaglagt.",
+                    "description": "Prosent.",
                     "type": "integer"
                 }
             },
@@ -1165,7 +1241,7 @@
                     ]
                 },
                 "arbeidsforhold": {
-                    "description": "Arbeidsforhold fasttillegget gjeld for.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "type": "string"
                 },
                 "attestant": {
@@ -1188,7 +1264,7 @@
                     "type": "integer"
                 },
                 "beskrivelse": {
-                    "description": "Beskriving av l\u00f8nn til f\u00f8ring p\u00e5 l\u00f8nnslipp.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "id": {
@@ -1204,7 +1280,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kjeldesystemets unike identifikator for l\u00f8nn."
+                    "description": "Kjeldesystemets unike identifikator."
                 },
                 "konterer": {
                     "description": "Personalressurs som har kontert l\u00f8nsmeldinga etter fullmakt.",
@@ -1226,7 +1302,7 @@
                     "description": "Kontering av l\u00f8nn."
                 },
                 "lonsart": {
-                    "description": "L\u00f8nnsart for tillegget.",
+                    "description": "L\u00f8nnsart.",
                     "type": "string"
                 },
                 "opptjent": {
@@ -1242,7 +1318,7 @@
                 },
                 "periode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Periode l\u00f8nn vert utbetalt."
+                    "description": "Periode for ressursen."
                 }
             },
             "required": [
@@ -1270,7 +1346,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1281,7 +1357,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1305,7 +1381,7 @@
             "description": "Fr\u00e5v\u00e6r fr\u00e5 eit arbeidsforhold.",
             "properties": {
                 "arbeidsforhold": {
-                    "description": "Arbeidsforholdet fr\u00e5v\u00e6ret gjeld for.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -1364,14 +1440,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kjeldesystemets unike identifikator for fr\u00e5v\u00e6ret."
+                    "description": "Kjeldesystemets unike identifikator."
                 },
                 "periode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Periode for fr\u00e5v\u00e6ret."
+                    "description": "Periode for ressursen."
                 },
                 "prosent": {
-                    "description": "Prosent fr\u00e5v\u00e6rande.",
+                    "description": "Prosent.",
                     "type": "integer"
                 }
             },
@@ -1398,7 +1474,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1409,7 +1485,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1441,7 +1517,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1452,14 +1528,14 @@
                     "type": "string"
                 },
                 "lonsart": {
-                    "description": "L\u00f8nnsart fr\u00e5v\u00e6rstypen vert f\u00f8rt p\u00e5.",
+                    "description": "L\u00f8nnsart.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "overfores": {
@@ -1490,35 +1566,35 @@
             "description": "Fullmakt til \u00e5 gjere handlingar i h\u00f8ve til ei gjeven Rolle.",
             "properties": {
                 "aktivitet": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon aktivitet.",
+                    "description": "Detaljering av funksjon.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "anlegg": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon anlegg.",
+                    "description": "Objekt som skal aktiverast eller avskrivast.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "ansvar": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon ansvar.",
+                    "description": "Ansvarleg for ei utgift eller inntekt.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "art": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon art.",
+                    "description": "Type inntekt eller utgift.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "diverse": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon diverse.",
+                    "description": "Spesifikasjon som ikkje kjem fram i \u00f8vrige dimensjonar.",
                     "type": [
                         "string",
                         "null"
@@ -1539,7 +1615,7 @@
                     ]
                 },
                 "funksjon": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon funksjon.",
+                    "description": "Det som vert produsert eller tenesta som vert levert.",
                     "type": [
                         "string",
                         "null"
@@ -1547,49 +1623,49 @@
                 },
                 "gyldighetsperiode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Periode fullmakta er gyldig for."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kontrakt": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon kontrakt.",
+                    "description": "Kontrakt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "lopenummer": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon l\u00f8penummer.",
+                    "description": "L\u00f8penummer i ei nummerserie.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "objekt": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon objekt.",
+                    "description": "Objekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "organisasjonselement": {
-                    "description": "Myndigheit p\u00e5 organisasjonselement.",
+                    "description": "Organisasjonselement ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "prosjekt": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon prosjekt.",
+                    "description": "Prosjekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "ramme": {
-                    "description": "Myndigheit p\u00e5 kontodimensjon ramme.",
+                    "description": "Budsjettramme som skal bere kostnadane.",
                     "type": [
                         "string",
                         "null"
@@ -1600,7 +1676,7 @@
                     "type": "string"
                 },
                 "stedfortreder": {
-                    "description": "Personalressurs som er stedfortredar for den fullmektige.",
+                    "description": "Stedfortredar i fullmaktssamanheng.",
                     "type": [
                         "string",
                         "null"
@@ -1628,7 +1704,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1639,11 +1715,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "overordnet": {
-                    "description": "Overordna funksjon.",
+                    "description": "Overordna element i hierarkiet.",
                     "type": [
                         "string",
                         "null"
@@ -1657,7 +1733,7 @@
                     ]
                 },
                 "underordnet": {
-                    "description": "Underordna funksjonar.",
+                    "description": "Underordna element i hierarkiet.",
                     "items": {
                         "type": "string"
                     },
@@ -1688,7 +1764,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1699,7 +1775,7 @@
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Alle kommunar som inng\u00e5r i fylket.",
+                    "description": "Kommune.",
                     "items": {
                         "type": "string"
                     },
@@ -1709,7 +1785,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1741,7 +1817,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden ein gjeven identifikator er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "identifikatorverdi": {
                     "description": "Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt identifikator.",
@@ -1767,7 +1843,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1778,7 +1854,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1802,7 +1878,7 @@
             "description": "Liste over Norges kommunar.",
             "properties": {
                 "fylke": {
-                    "description": "Fylket kommunen h\u00f8yrer til.",
+                    "description": "Fylke.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -1814,7 +1890,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1825,7 +1901,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1905,7 +1981,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon for kontaktpersonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kontaktperson": {
                     "description": "Personar kontaktpersonen er p\u00e5r\u00f8rande for.",
@@ -1917,7 +1993,7 @@
                         "null"
                     ]
                 },
-                "navn": {
+                "kontaktperson_navn": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Personnavn"
@@ -1929,7 +2005,7 @@
                     "description": "Namn p\u00e5 kontaktpersonen."
                 },
                 "type": {
-                    "description": "Beskriv kva slags type kontaktperson.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -1985,7 +2061,7 @@
                     "type": "string"
                 },
                 "kontrakt": {
-                    "description": "Kontostrengens kontraktsegment.",
+                    "description": "Kontrakt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
@@ -1999,14 +2075,14 @@
                     ]
                 },
                 "objekt": {
-                    "description": "Objekt som skal aktiverast eller avskrivast.",
+                    "description": "Objekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "prosjekt": {
-                    "description": "Kontostrengens prosjektsegment.",
+                    "description": "Prosjekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
@@ -2048,7 +2124,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2059,7 +2135,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2091,21 +2167,18 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "type": "string"
                 },
                 "kode": {
                     "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2129,7 +2202,7 @@
             "description": "Type ytelse.",
             "properties": {
                 "art": {
-                    "description": "Art som l\u00f8nnsarten er knytt til.",
+                    "description": "Type inntekt eller utgift.",
                     "type": [
                         "string",
                         "null"
@@ -2144,7 +2217,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2162,7 +2235,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2194,7 +2267,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2205,7 +2278,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2291,7 +2364,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2302,7 +2375,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2326,7 +2399,7 @@
             "description": "Eit element i organisasjonsstrukturen.",
             "properties": {
                 "ansvar": {
-                    "description": "Ansvar i kontoplanen som organisasjonselementet er knytt til.",
+                    "description": "Ansvarleg for ei utgift eller inntekt.",
                     "items": {
                         "type": "string"
                     },
@@ -2336,7 +2409,7 @@
                     ]
                 },
                 "arbeidsforhold": {
-                    "description": "Alle arbeidsforhold til organisasjonselementet.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -2354,7 +2427,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til organisasjonselementet."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "gyldighetsperiode": {
                     "anyOf": [
@@ -2365,7 +2438,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Tidsperiode for n\u00e5r organisasjonselementet er gjeldande."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2380,7 +2453,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon til organisasjonselementet."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kortnavn": {
                     "description": "Forkorta namn som beskriv organisasjonselementet.",
@@ -2397,7 +2470,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 organisasjonselementet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": [
                         "string",
                         "null"
@@ -2437,7 +2510,7 @@
                     ]
                 },
                 "overordnet": {
-                    "description": "Referanse til organisasjonselement p\u00e5 niv\u00e5et over.",
+                    "description": "Overordna element i hierarkiet.",
                     "type": "string"
                 },
                 "postadresse": {
@@ -2449,7 +2522,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Postadresse til organisasjonselementet."
+                    "description": "Informasjon om postadresse til ein akt\u00f8r."
                 },
                 "skole": {
                     "description": "Referanse til Skole (Utdanning).",
@@ -2459,7 +2532,7 @@
                     ]
                 },
                 "underordnet": {
-                    "description": "Alle underordna organisasjonselement.",
+                    "description": "Underordna element i hierarkiet.",
                     "items": {
                         "type": "string"
                     },
@@ -2491,7 +2564,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2502,7 +2575,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2526,7 +2599,7 @@
             "description": "Tidsperiode med obligatorisk start og valfri slutt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Beskriven namn p\u00e5 perioden.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -2618,14 +2691,14 @@
                     "type": "string"
                 },
                 "kjonn": {
-                    "description": "Kj\u00f8nn for personen.",
+                    "description": "Kj\u00f8nn.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommune": {
-                    "description": "Kommune der personen er busett.",
+                    "description": "Kommune.",
                     "type": [
                         "string",
                         "null"
@@ -2666,10 +2739,6 @@
                         "null"
                     ]
                 },
-                "navn": {
-                    "$ref": "#/$defs/Personnavn",
-                    "description": "Namn p\u00e5 personen."
-                },
                 "otungdom": {
                     "description": "Referanse til OtUngdom (Utdanning).",
                     "type": [
@@ -2686,6 +2755,10 @@
                         "array",
                         "null"
                     ]
+                },
+                "person_navn": {
+                    "$ref": "#/$defs/Personnavn",
+                    "description": "Namn p\u00e5 personen."
                 },
                 "personalressurs": {
                     "description": "Referanse til Personalressurs (Administrasjon).",
@@ -2719,7 +2792,7 @@
             "required": [
                 "id",
                 "fodselsnummer",
-                "navn"
+                "person_navn"
             ],
             "title": "Person",
             "type": "object"
@@ -2745,7 +2818,7 @@
                     ]
                 },
                 "arbeidsforhold": {
-                    "description": "Arbeidsforhold til personalressursen.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -2766,7 +2839,7 @@
                     "description": "Brukarnamn til den tilsette."
                 },
                 "fullmakt": {
-                    "description": "Fullmakter personalressursen har f\u00e5tt.",
+                    "description": "Fullmakt ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -2795,7 +2868,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Arbeidsrelatert kontaktinformasjon til personalressursen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "lederFor": {
                     "description": "Organisasjonselement personalressursen er leiar for.",
@@ -2808,7 +2881,7 @@
                     ]
                 },
                 "person": {
-                    "description": "Person som er ein personalressurs.",
+                    "description": "Referanse til Person i Administrasjon-domenet.",
                     "type": "string"
                 },
                 "personalansvar": {
@@ -2833,7 +2906,7 @@
                     ]
                 },
                 "stedfortreder": {
-                    "description": "Alle fullmakter der personalressursen er stedfortredar.",
+                    "description": "Stedfortredar i fullmaktssamanheng.",
                     "items": {
                         "type": "string"
                     },
@@ -2866,7 +2939,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2877,7 +2950,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2936,7 +3009,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -2947,7 +3020,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -2958,7 +3031,7 @@
                     ]
                 },
                 "prosjektart": {
-                    "description": "Deloppg\u00e5ver eller delprosjekt som h\u00f8yrer til prosjektet.",
+                    "description": "Deloppg\u00e5ve eller delprosjekt.",
                     "items": {
                         "type": "string"
                     },
@@ -2989,7 +3062,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3000,11 +3073,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "overordnet": {
-                    "description": "Prosjektart i niv\u00e5et over i strukturen.",
+                    "description": "Overordna element i hierarkiet.",
                     "type": [
                         "string",
                         "null"
@@ -3018,14 +3091,14 @@
                     ]
                 },
                 "prosjekt": {
-                    "description": "Prosjektet som er \u00f8vste niv\u00e5 i strukturen.",
+                    "description": "Prosjekt ressursen er knytt til.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "underordnet": {
-                    "description": "Prosjektartar i niv\u00e5et under i strukturen.",
+                    "description": "Underordna element i hierarkiet.",
                     "items": {
                         "type": "string"
                     },
@@ -3056,7 +3129,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3067,7 +3140,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -3091,11 +3164,11 @@
             "description": "Rettighet eller type fullmakt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Utfyllande beskriving av kva rolla gjev fullmakt til.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "fullmakt": {
-                    "description": "Alle fullmakter av denne typen.",
+                    "description": "Fullmakt ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -3132,7 +3205,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3143,7 +3216,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -3167,7 +3240,7 @@
             "description": "Felles kodeverk for stillingar.",
             "properties": {
                 "forelder": {
-                    "description": "For \u00e5 byggje hierarki av stillingskoder.",
+                    "description": "Foreldreelement i hierarki.",
                     "type": [
                         "string",
                         "null"
@@ -3182,7 +3255,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3193,7 +3266,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -3225,7 +3298,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3236,7 +3309,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -3267,19 +3340,19 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "navn": {
-                    "description": "Namn p\u00e5 valuta.",
-                    "type": "string"
-                },
                 "nummerkode": {
                     "$ref": "#/$defs/Identifikator",
                     "description": "Nummerkode for aktuell valuta."
+                },
+                "valuta_navn": {
+                    "description": "Namn p\u00e5 valuta.",
+                    "type": "string"
                 }
             },
             "required": [
                 "id",
                 "bokstavkode",
-                "navn",
+                "valuta_navn",
                 "nummerkode"
             ],
             "title": "Valuta",
@@ -3309,7 +3382,7 @@
                     ]
                 },
                 "arbeidsforhold": {
-                    "description": "Arbeidsforhold variabell\u00f8nna gjeld for.",
+                    "description": "Arbeidsforhold ressursen er knytt til.",
                     "type": "string"
                 },
                 "attestant": {
@@ -3328,14 +3401,14 @@
                     ]
                 },
                 "belop": {
-                    "description": "Bel\u00f8p i \u00f8re som skal betalast ut.",
+                    "description": "Bel\u00f8p i \u00f8re.",
                     "type": [
                         "integer",
                         "null"
                     ]
                 },
                 "beskrivelse": {
-                    "description": "Beskriving av l\u00f8nn til f\u00f8ring p\u00e5 l\u00f8nnslipp.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "id": {
@@ -3351,7 +3424,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kjeldesystemets unike identifikator for l\u00f8nn."
+                    "description": "Kjeldesystemets unike identifikator."
                 },
                 "konterer": {
                     "description": "Personalressurs som har kontert l\u00f8nsmeldinga etter fullmakt.",
@@ -3373,7 +3446,7 @@
                     "description": "Kontering av l\u00f8nn."
                 },
                 "lonsart": {
-                    "description": "L\u00f8nnsart for variabel l\u00f8nn.",
+                    "description": "L\u00f8nnsart.",
                     "type": "string"
                 },
                 "opptjent": {
@@ -3389,7 +3462,7 @@
                 },
                 "periode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Periode l\u00f8nn vert utbetalt."
+                    "description": "Periode for ressursen."
                 }
             },
             "required": [
@@ -3417,7 +3490,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til ein organisasjonseining i einingsregisteret."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -3435,7 +3508,7 @@
                     "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "laerling": {
-                    "description": "Referanse til Laerling (Utdanning) i verksemda.",
+                    "description": "Referanse til Laerling (Utdanning).",
                     "items": {
                         "type": "string"
                     },
@@ -3493,6 +3566,7 @@
     "metamodel_version": "1.7.0",
     "properties": {
         "aktivitetar": {
+            "description": "Alle aktivitetar i containeren.",
             "items": {
                 "$ref": "#/$defs/Aktivitet"
             },
@@ -3502,6 +3576,7 @@
             ]
         },
         "anlegg": {
+            "description": "Objekt som skal aktiverast eller avskrivast.",
             "items": {
                 "$ref": "#/$defs/Anlegg"
             },
@@ -3511,6 +3586,7 @@
             ]
         },
         "ansvar": {
+            "description": "Ansvarleg for ei utgift eller inntekt.",
             "items": {
                 "$ref": "#/$defs/Ansvar"
             },
@@ -3520,6 +3596,7 @@
             ]
         },
         "arbeidsforhold": {
+            "description": "Arbeidsforhold ressursen er knytt til.",
             "items": {
                 "$ref": "#/$defs/Arbeidsforhold"
             },
@@ -3529,6 +3606,7 @@
             ]
         },
         "arbeidsforholdstypar": {
+            "description": "Alle arbeidsforholdstypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Arbeidsforholdstype"
             },
@@ -3538,6 +3616,7 @@
             ]
         },
         "arbeidslokasjoner": {
+            "description": "Alle arbeidslokasjoner i containeren.",
             "items": {
                 "$ref": "#/$defs/Arbeidslokasjon"
             },
@@ -3547,6 +3626,7 @@
             ]
         },
         "artar": {
+            "description": "Alle artar i containeren.",
             "items": {
                 "$ref": "#/$defs/Art"
             },
@@ -3556,6 +3636,7 @@
             ]
         },
         "diverse": {
+            "description": "Spesifikasjon som ikkje kjem fram i \u00f8vrige dimensjonar.",
             "items": {
                 "$ref": "#/$defs/Diverse"
             },
@@ -3565,6 +3646,7 @@
             ]
         },
         "fastlonn": {
+            "description": "Fastl\u00f8nn for arbeidsforholdet.",
             "items": {
                 "$ref": "#/$defs/Fastlonn"
             },
@@ -3574,6 +3656,7 @@
             ]
         },
         "fasttillegg": {
+            "description": "Faste tillegg for arbeidsforholdet.",
             "items": {
                 "$ref": "#/$defs/Fasttillegg"
             },
@@ -3583,6 +3666,7 @@
             ]
         },
         "formaal": {
+            "description": "Form\u00e5l viser aktivitet og tenesteproduksjon.",
             "items": {
                 "$ref": "#/$defs/Formaal"
             },
@@ -3592,6 +3676,7 @@
             ]
         },
         "fravaer": {
+            "description": "Fr\u00e5v\u00e6r knytt til ressursen.",
             "items": {
                 "$ref": "#/$defs/Fravaer"
             },
@@ -3601,6 +3686,7 @@
             ]
         },
         "fravaersgrunnar": {
+            "description": "Alle fr\u00e5v\u00e6rsgrunnar i containeren.",
             "items": {
                 "$ref": "#/$defs/Fravaersgrunn"
             },
@@ -3610,6 +3696,7 @@
             ]
         },
         "fravaerstypar": {
+            "description": "Alle fr\u00e5v\u00e6rstypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Fravaerstype"
             },
@@ -3619,6 +3706,7 @@
             ]
         },
         "fullmakter": {
+            "description": "Alle fullmakter i containeren.",
             "items": {
                 "$ref": "#/$defs/Fullmakt"
             },
@@ -3628,6 +3716,7 @@
             ]
         },
         "funksjonar": {
+            "description": "Alle funksjonar i containeren.",
             "items": {
                 "$ref": "#/$defs/Funksjon"
             },
@@ -3637,6 +3726,7 @@
             ]
         },
         "fylke": {
+            "description": "Fylke.",
             "items": {
                 "$ref": "#/$defs/Fylke"
             },
@@ -3646,6 +3736,7 @@
             ]
         },
         "kjonn": {
+            "description": "Kj\u00f8nn.",
             "items": {
                 "$ref": "#/$defs/Kjonn"
             },
@@ -3655,6 +3746,7 @@
             ]
         },
         "kommunar": {
+            "description": "Alle kommuneverdiar i containeren.",
             "items": {
                 "$ref": "#/$defs/Kommune"
             },
@@ -3664,6 +3756,7 @@
             ]
         },
         "kontaktpersonar": {
+            "description": "Alle kontaktpersonar i containeren.",
             "items": {
                 "$ref": "#/$defs/Kontaktperson"
             },
@@ -3673,6 +3766,7 @@
             ]
         },
         "kontrakter": {
+            "description": "Alle kontrakter i containeren.",
             "items": {
                 "$ref": "#/$defs/Kontrakt"
             },
@@ -3682,6 +3776,7 @@
             ]
         },
         "landkodar": {
+            "description": "Alle landkodar i containeren.",
             "items": {
                 "$ref": "#/$defs/Landkode"
             },
@@ -3691,6 +3786,7 @@
             ]
         },
         "lonsartar": {
+            "description": "Alle l\u00f8nnsartar i containeren.",
             "items": {
                 "$ref": "#/$defs/Lonsart"
             },
@@ -3700,6 +3796,7 @@
             ]
         },
         "lopenummer": {
+            "description": "L\u00f8penummer i ei nummerserie.",
             "items": {
                 "$ref": "#/$defs/Lopenummer"
             },
@@ -3709,6 +3806,7 @@
             ]
         },
         "objekt": {
+            "description": "Objekt ressursen er knytt til.",
             "items": {
                 "$ref": "#/$defs/Objekt"
             },
@@ -3718,6 +3816,7 @@
             ]
         },
         "organisasjonselement": {
+            "description": "Organisasjonselement ressursen er knytt til.",
             "items": {
                 "$ref": "#/$defs/Organisasjonselement"
             },
@@ -3727,6 +3826,7 @@
             ]
         },
         "organisasjonstypar": {
+            "description": "Alle organisasjonstypar i containeren.",
             "items": {
                 "$ref": "#/$defs/Organisasjonstype"
             },
@@ -3736,6 +3836,7 @@
             ]
         },
         "personalressursar": {
+            "description": "Alle personalressursar i containeren.",
             "items": {
                 "$ref": "#/$defs/Personalressurs"
             },
@@ -3745,6 +3846,7 @@
             ]
         },
         "personalressurskategoriar": {
+            "description": "Alle personalressurskategoriar i containeren.",
             "items": {
                 "$ref": "#/$defs/Personalressurskategori"
             },
@@ -3754,6 +3856,7 @@
             ]
         },
         "personar": {
+            "description": "Alle personar i containeren.",
             "items": {
                 "$ref": "#/$defs/Person"
             },
@@ -3763,6 +3866,7 @@
             ]
         },
         "prosjekt": {
+            "description": "Prosjekt ressursen er knytt til.",
             "items": {
                 "$ref": "#/$defs/Prosjekt"
             },
@@ -3772,6 +3876,7 @@
             ]
         },
         "prosjektartar": {
+            "description": "Alle prosjektartar i containeren.",
             "items": {
                 "$ref": "#/$defs/Prosjektart"
             },
@@ -3781,6 +3886,7 @@
             ]
         },
         "rammer": {
+            "description": "Alle rammer i containeren.",
             "items": {
                 "$ref": "#/$defs/Ramme"
             },
@@ -3790,6 +3896,7 @@
             ]
         },
         "rollar": {
+            "description": "Alle rollar i containeren.",
             "items": {
                 "$ref": "#/$defs/Rolle"
             },
@@ -3799,6 +3906,7 @@
             ]
         },
         "spraak": {
+            "description": "Alle spr\u00e5kverdiar i containeren.",
             "items": {
                 "$ref": "#/$defs/Spraak"
             },
@@ -3808,6 +3916,7 @@
             ]
         },
         "stillingskoder": {
+            "description": "Alle stillingskoder i containeren.",
             "items": {
                 "$ref": "#/$defs/Stillingskode"
             },
@@ -3817,6 +3926,7 @@
             ]
         },
         "uketimetall": {
+            "description": "Alle uketimetallverdiar i containeren.",
             "items": {
                 "$ref": "#/$defs/Uketimetall"
             },
@@ -3826,6 +3936,7 @@
             ]
         },
         "valuta": {
+            "description": "Alle valutaverdiar i containeren.",
             "items": {
                 "$ref": "#/$defs/Valuta"
             },
@@ -3835,6 +3946,7 @@
             ]
         },
         "variabellonn": {
+            "description": "Variabel l\u00f8nn for arbeidsforholdet.",
             "items": {
                 "$ref": "#/$defs/Variabellonn"
             },
@@ -3844,6 +3956,7 @@
             ]
         },
         "virksomhetar": {
+            "description": "Alle verksemder i containeren.",
             "items": {
                 "$ref": "#/$defs/Virksomhet"
             },

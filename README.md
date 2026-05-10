@@ -47,8 +47,8 @@ Nye skjema under `src/linkml/<domene>/<namn>/<namn>-schema.yaml` vert oppdaga au
 ## Linte enkeltskjema
 ./tests/validate_schema.bash ./src/linkml/samt/samt-bu/samt-bu-schema.yaml 
 
-## Validere eksempel mot skjema
-
+## Valider eksempelfil mot skjema direkte: 
+./tests/validate_schema.bash ./src/linkml/samt/samt-bu/samt-bu-schema.yaml ./examples/samt/samt-bu-eksempel.yaml
 
 ### Domain-spesifikke targets
 

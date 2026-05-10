@@ -9,7 +9,7 @@ _Skulens interne elevnummer._
 
 
 
-URI: [utd:elevnummer](https://schema.fintlabs.no/utdanning/elevnummer)
+URI: [fint:elevnummer](https://schema.fintlabs.no/elevnummer)
 Alias: elevnummer
 
 <!-- no inheritance hierarchy -->
@@ -37,7 +37,7 @@ Alias: elevnummer
 | --- | --- |
 | Range | [Identifikator](identifikator.md) |
 | Domain Of | [Elev](elev.md) |
-| Slot URI | [utd:elevnummer](https://schema.fintlabs.no/utdanning/elevnummer) |
+| Slot URI | [fint:elevnummer](https://schema.fintlabs.no/elevnummer) |
 
 ### Cardinality and Requirements
 
@@ -71,7 +71,7 @@ Alias: elevnummer
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:elevnummer |
+| self | fint:elevnummer |
 | native | https://schema.fintlabs.no/utdanning/:elevnummer |
 
 
@@ -85,7 +85,7 @@ name: elevnummer
 description: Skulens interne elevnummer.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:elevnummer
+slot_uri: fint:elevnummer
 alias: elevnummer
 domain_of:
 - Elev

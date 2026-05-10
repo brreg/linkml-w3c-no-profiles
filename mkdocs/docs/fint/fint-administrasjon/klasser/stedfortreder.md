@@ -22,8 +22,8 @@ Alias: stedfortreder
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 | [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
+| [Personalressurs](personalressurs.md) | Arbeidstakar eller oppdragstakar i organisasjonen |  yes  |
 
 
 

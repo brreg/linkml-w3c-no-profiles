@@ -74,7 +74,7 @@
                     ]
                 },
                 "slettet": {
-                    "description": "Tidspunkt behandlinga er sletta.",
+                    "description": "Tidspunkt ressursen er sletta.",
                     "format": "date-time",
                     "type": [
                         "string",
@@ -110,7 +110,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -121,7 +121,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -140,6 +140,42 @@
             "title": "Behandlingsgrunnlag",
             "type": "object"
         },
+        "Elev": {
+            "additionalProperties": false,
+            "description": "Ein elev registrert i skulesystemet.",
+            "properties": {
+                "elevnummer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Identifikator"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Skulens interne elevnummer."
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "person": {
+                    "description": "Referanse til Person i Administrasjon-domenet.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Elev",
+            "type": "object"
+        },
         "Fylke": {
             "additionalProperties": false,
             "description": "Liste over Norges fylker.",
@@ -153,7 +189,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -164,7 +200,7 @@
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Alle kommunar som inng\u00e5r i fylket.",
+                    "description": "Kommune.",
                     "items": {
                         "type": "string"
                     },
@@ -174,7 +210,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -206,7 +242,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden ein gjeven identifikator er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "identifikatorverdi": {
                     "description": "Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt identifikator.",
@@ -232,7 +268,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -243,7 +279,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -267,7 +303,7 @@
             "description": "Liste over Norges kommunar.",
             "properties": {
                 "fylke": {
-                    "description": "Fylket kommunen h\u00f8yrer til.",
+                    "description": "Fylke.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -279,7 +315,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -290,7 +326,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -370,7 +406,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon for kontaktpersonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kontaktperson": {
                     "description": "Personar kontaktpersonen er p\u00e5r\u00f8rande for.",
@@ -382,7 +418,7 @@
                         "null"
                     ]
                 },
-                "navn": {
+                "kontaktperson_navn": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Personnavn"
@@ -394,7 +430,7 @@
                     "description": "Namn p\u00e5 kontaktpersonen."
                 },
                 "type": {
-                    "description": "Beskriv kva slags type kontaktperson.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -418,21 +454,18 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "type": "string"
                 },
                 "kode": {
                     "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -510,7 +543,7 @@
             "description": "Tidsperiode med obligatorisk start og valfri slutt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Beskriven namn p\u00e5 perioden.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -602,14 +635,14 @@
                     "type": "string"
                 },
                 "kjonn": {
-                    "description": "Kj\u00f8nn for personen.",
+                    "description": "Kj\u00f8nn.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommune": {
-                    "description": "Kommune der personen er busett.",
+                    "description": "Kommune.",
                     "type": [
                         "string",
                         "null"
@@ -650,10 +683,6 @@
                         "null"
                     ]
                 },
-                "navn": {
-                    "$ref": "#/$defs/Personnavn",
-                    "description": "Namn p\u00e5 personen."
-                },
                 "otungdom": {
                     "description": "Referanse til OtUngdom (Utdanning).",
                     "type": [
@@ -670,6 +699,10 @@
                         "array",
                         "null"
                     ]
+                },
+                "person_navn": {
+                    "$ref": "#/$defs/Personnavn",
+                    "description": "Namn p\u00e5 personen."
                 },
                 "personalressurs": {
                     "description": "Referanse til Personalressurs (Administrasjon).",
@@ -703,7 +736,7 @@
             "required": [
                 "id",
                 "fodselsnummer",
-                "navn"
+                "person_navn"
             ],
             "title": "Person",
             "type": "object"
@@ -748,7 +781,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -759,7 +792,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -792,6 +825,7 @@
                     ]
                 },
                 "behandlingsgrunnlag": {
+                    "description": "Rettsleg grunnlag for behandling av personopplysning.",
                     "items": {
                         "$ref": "#/$defs/Behandlingsgrunnlag"
                     },
@@ -836,12 +870,12 @@
             "description": "Tillating til behandling av personopplysning.",
             "properties": {
                 "behandling": {
-                    "description": "Behandling som vert omfatta av samtykket.",
+                    "description": "Behandlingsaktivitet.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Tidsrom samtykket er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -853,14 +887,14 @@
                     "type": "string"
                 },
                 "organisasjonselement": {
-                    "description": "Referanse til Organisasjonselement (Administrasjon) tilknytt samtykket.",
+                    "description": "Referanse til Organisasjonselement (Administrasjon).",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "person": {
-                    "description": "Referanse til Person (Administrasjon) som har gjeve samtykke.",
+                    "description": "Referanse til Person i Administrasjon-domenet.",
                     "type": "string"
                 }
             },
@@ -887,7 +921,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -898,7 +932,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -922,7 +956,7 @@
             "description": "Teneste eller system som behandlar personopplysningar.",
             "properties": {
                 "behandling": {
-                    "description": "Alle behandlingar til ei teneste.",
+                    "description": "Behandlingsaktivitet.",
                     "items": {
                         "type": "string"
                     },
@@ -936,11 +970,11 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Tittel p\u00e5 tenesta.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "slettet": {
-                    "description": "Tidspunkt tenesta er sletta.",
+                    "description": "Tidspunkt ressursen er sletta.",
                     "format": "date-time",
                     "type": [
                         "string",
@@ -967,19 +1001,19 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "navn": {
-                    "description": "Namn p\u00e5 valuta.",
-                    "type": "string"
-                },
                 "nummerkode": {
                     "$ref": "#/$defs/Identifikator",
                     "description": "Nummerkode for aktuell valuta."
+                },
+                "valuta_navn": {
+                    "description": "Namn p\u00e5 valuta.",
+                    "type": "string"
                 }
             },
             "required": [
                 "id",
                 "bokstavkode",
-                "navn",
+                "valuta_navn",
                 "nummerkode"
             ],
             "title": "Valuta",
@@ -998,7 +1032,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til ein organisasjonseining i einingsregisteret."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1016,7 +1050,7 @@
                     "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "laerling": {
-                    "description": "Referanse til Laerling (Utdanning) i verksemda.",
+                    "description": "Referanse til Laerling (Utdanning).",
                     "items": {
                         "type": "string"
                     },
@@ -1083,6 +1117,7 @@
             ]
         },
         "behandlingsgrunnlag": {
+            "description": "Rettsleg grunnlag for behandling av personopplysning.",
             "items": {
                 "$ref": "#/$defs/Behandlingsgrunnlag"
             },

@@ -48,6 +48,7 @@ Name: fint-administrasjon
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Stillingskode](stillingskode.md) | Felles kodeverk for stillingar |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Uketimetall](uketimetall.md) | Timer per veke i 100 % stilling |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |
 | [Fravaer](fravaer.md) | Fråvær frå eit arbeidsforhold |
 | [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |
 | [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |
@@ -106,6 +107,7 @@ Name: fint-administrasjon
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
 | [diverse](diverse.md) | Spesifikasjon som ikkje kjem fram i øvrige dimensjonar |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
 | [fastlonn](fastlonn.md) | Fastlønn for arbeidsforholdet |
@@ -149,7 +151,7 @@ Name: fint-administrasjon
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontaktpersonar](kontaktpersonar.md) | Alle kontaktpersonar i containeren |
 | [konterer](konterer.md) | Personalressurs som har kontert lønsmeldinga etter fullmakt |
 | [kontert](kontert.md) | Tidspunkt då lønn vart kontert |
@@ -172,8 +174,7 @@ Name: fint-administrasjon
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [naam](naam.md) | Hovudnamn for ressursen |
-| [navn](navn.md) | Namn på organisasjonselementet |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [objekt](objekt.md) | Objekt ressursen er knytt til |
@@ -191,8 +192,8 @@ Name: fint-administrasjon
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [periode](periode.md) | Periode for ressursen |
-| [person](person.md) | Person som er ein personalressurs |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person](person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalansvar](personalansvar.md) | Arbeidsforhold der personalressursen har personalansvar |
 | [personalleder](personalleder.md) | Personalleiar til arbeidsforholdet |
 | [personalressurs](personalressurs.md) | Personalressurs til arbeidsforholdet |
@@ -233,7 +234,7 @@ Name: fint-administrasjon
 | [underordnet](underordnet.md) | Underordna element i hierarkiet |
 | [undervisningsforhold](undervisningsforhold.md) | Referanse til Undervisningsforhold (Utdanning) |
 | [valuta](valuta.md) | Alle valutaverdiar i containeren |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [variabellonn](variabellonn.md) | Variabel lønn for arbeidsforholdet |
 | [virksomhetar](virksomhetar.md) | Alle verksemder i containeren |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |

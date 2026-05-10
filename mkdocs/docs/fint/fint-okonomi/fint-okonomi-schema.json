@@ -90,6 +90,42 @@
             "title": "Bilag",
             "type": "object"
         },
+        "Elev": {
+            "additionalProperties": false,
+            "description": "Ein elev registrert i skulesystemet.",
+            "properties": {
+                "elevnummer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Identifikator"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Skulens interne elevnummer."
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "person": {
+                    "description": "Referanse til Person i Administrasjon-domenet.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Elev",
+            "type": "object"
+        },
         "Faktura": {
             "additionalProperties": false,
             "description": "Betalingskrav utforma og oversendt fr\u00e5 fakturautstedar til fakturamottakar.",
@@ -103,10 +139,10 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Adresse til mottakar."
+                    "description": "Adresse til matrikkeleining."
                 },
                 "belop": {
-                    "description": "Bel\u00f8p mottakar skal betale, i \u00f8re (bel\u00f8p).",
+                    "description": "Bel\u00f8p, i \u00f8re.",
                     "type": "integer"
                 },
                 "betalt": {
@@ -137,7 +173,7 @@
                     ]
                 },
                 "forfallsdato": {
-                    "description": "Frist for betaling.",
+                    "description": "Frist for betaling eller forfallsdato for transaksjon.",
                     "format": "date",
                     "type": "string"
                 },
@@ -157,7 +193,7 @@
                     "type": "string"
                 },
                 "restbelop": {
-                    "description": "Gjenst\u00e5ande bel\u00f8p \u00e5 betale, i \u00f8re (restbel\u00f8p).",
+                    "description": "Gjenst\u00e5ande bel\u00f8p \u00e5 betale, i \u00f8re.",
                     "type": [
                         "integer",
                         "null"
@@ -181,7 +217,7 @@
             "description": "Grunnlag for fakturering.",
             "properties": {
                 "avgiftsbelop": {
-                    "description": "Del av totalbel\u00f8p som er avgifter, i \u00f8re (avgiftsbel\u00f8p).",
+                    "description": "Del av totalbel\u00f8p som er avgifter, i \u00f8re.",
                     "type": [
                         "integer",
                         "null"
@@ -204,6 +240,10 @@
                     },
                     "type": "array"
                 },
+                "fakturamottaker": {
+                    "$ref": "#/$defs/Fakturamottaker",
+                    "description": "Mottakar som skal betale faktura."
+                },
                 "fakturautsteder": {
                     "description": "Utstedar av faktura og mottakar av betaling.",
                     "type": "string"
@@ -220,12 +260,8 @@
                         "null"
                     ]
                 },
-                "mottaker": {
-                    "$ref": "#/$defs/Fakturamottaker",
-                    "description": "Mottakar som skal betale faktura."
-                },
                 "nettobelop": {
-                    "description": "Del av totalbel\u00f8p som utgjer summen av fakturalinjene, i \u00f8re (nettobel\u00f8p).",
+                    "description": "Del av totalbel\u00f8p som utgjer summen av fakturalinjene, i \u00f8re.",
                     "type": [
                         "integer",
                         "null"
@@ -236,7 +272,7 @@
                     "description": "Unik identifikator for ordren det skal utferdigast faktura p\u00e5."
                 },
                 "totalbelop": {
-                    "description": "Totalt bel\u00f8p p\u00e5 faktura inkl. avgifter, i \u00f8re (totalbel\u00f8p).",
+                    "description": "Totalt bel\u00f8p p\u00e5 faktura inkl. avgifter, i \u00f8re.",
                     "type": [
                         "integer",
                         "null"
@@ -246,7 +282,7 @@
             "required": [
                 "id",
                 "ordrenummer",
-                "mottaker",
+                "fakturamottaker",
                 "fakturalinjer",
                 "fakturautsteder"
             ],
@@ -272,7 +308,7 @@
                     ]
                 },
                 "pris": {
-                    "description": "Pris per eining levert, i \u00f8re.",
+                    "description": "Pris per eining, i \u00f8re.",
                     "type": "integer"
                 },
                 "vare": {
@@ -293,7 +329,7 @@
             "description": "Akt\u00f8r som skal betale faktura (kompleks datatype).",
             "properties": {
                 "person": {
-                    "description": "Referanse til Person (Administrasjon) som skal betale faktura.",
+                    "description": "Referanse til Person i Administrasjon-domenet.",
                     "type": "string"
                 }
             },
@@ -308,7 +344,7 @@
             "description": "Eining som utformar og oversender faktura og mottar betaling.",
             "properties": {
                 "fakturagrunnlag": {
-                    "description": "Alle fakturagrunnlag for fakturutstedaren.",
+                    "description": "Grunnlag for fakturering.",
                     "items": {
                         "type": "string"
                     },
@@ -322,18 +358,18 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Juridisk namn p\u00e5 fakturutstedar.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "organisasjonselement": {
-                    "description": "Referanse til Organisasjonselement (Administrasjon) som kan utstede faktura.",
+                    "description": "Referanse til Organisasjonselement (Administrasjon).",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "vare": {
-                    "description": "Alle varer i vareregisteret til fakturutstedaren.",
+                    "description": "Vare i vareregisteret.",
                     "items": {
                         "type": "string"
                     },
@@ -363,7 +399,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -374,7 +410,7 @@
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Alle kommunar som inng\u00e5r i fylket.",
+                    "description": "Kommune.",
                     "items": {
                         "type": "string"
                     },
@@ -384,7 +420,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -416,7 +452,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden ein gjeven identifikator er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "identifikatorverdi": {
                     "description": "Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt identifikator.",
@@ -442,7 +478,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -453,7 +489,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -477,7 +513,7 @@
             "description": "Liste over Norges kommunar.",
             "properties": {
                 "fylke": {
-                    "description": "Fylket kommunen h\u00f8yrer til.",
+                    "description": "Fylke.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -489,7 +525,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -500,7 +536,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -580,7 +616,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon for kontaktpersonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kontaktperson": {
                     "description": "Personar kontaktpersonen er p\u00e5r\u00f8rande for.",
@@ -592,7 +628,7 @@
                         "null"
                     ]
                 },
-                "navn": {
+                "kontaktperson_navn": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Personnavn"
@@ -604,7 +640,7 @@
                     "description": "Namn p\u00e5 kontaktpersonen."
                 },
                 "type": {
-                    "description": "Beskriv kva slags type kontaktperson.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -664,21 +700,18 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "type": "string"
                 },
                 "kode": {
                     "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -699,7 +732,7 @@
         },
         "Leverandor": {
             "additionalProperties": false,
-            "description": "Person eller verksemd som leverer produkt eller tenester (Leverand\u00f8r).",
+            "description": "Person eller verksemd som leverer produkt eller tenester.",
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -713,7 +746,7 @@
                     ]
                 },
                 "leverandorgruppe": {
-                    "description": "Gruppe av leverand\u00f8rar leverand\u00f8ren tilh\u00f8yrer (leverand\u00f8rgruppe).",
+                    "description": "Gruppe av leverand\u00f8rar leverand\u00f8ren tilh\u00f8yrer.",
                     "type": [
                         "string",
                         "null"
@@ -728,10 +761,10 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Nummer som identifiserer ein leverand\u00f8r (leverand\u00f8rnummer)."
+                    "description": "Nummer som identifiserer ein leverand\u00f8r."
                 },
                 "person": {
-                    "description": "Referanse til Person (Administrasjon) som er leverand\u00f8r.",
+                    "description": "Referanse til Person i Administrasjon-domenet.",
                     "type": [
                         "string",
                         "null"
@@ -753,14 +786,14 @@
         },
         "Leverandorgruppe": {
             "additionalProperties": false,
-            "description": "Gruppering av leverand\u00f8rar (Leverand\u00f8rgruppe).",
+            "description": "Gruppering av leverand\u00f8rar.",
             "properties": {
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "leverandor": {
-                    "description": "Leverand\u00f8rar i leverand\u00f8rgruppen.",
+                    "description": "Leverand\u00f8r.",
                     "items": {
                         "type": "string"
                     },
@@ -770,7 +803,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 leverand\u00f8rgruppen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 }
             },
@@ -848,7 +881,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for omgrepet/koden."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -859,7 +892,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -897,6 +930,7 @@
                     ]
                 },
                 "fakturagrunnlag": {
+                    "description": "Grunnlag for fakturering.",
                     "items": {
                         "$ref": "#/$defs/Fakturagrunnlag"
                     },
@@ -993,21 +1027,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
-                    "description": "Valutakode (t.d. NOK, EUR, USD).",
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namn p\u00e5 valutaen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1027,7 +1063,7 @@
             "description": "Tidsperiode med obligatorisk start og valfri slutt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Beskriven namn p\u00e5 perioden.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -1119,14 +1155,14 @@
                     "type": "string"
                 },
                 "kjonn": {
-                    "description": "Kj\u00f8nn for personen.",
+                    "description": "Kj\u00f8nn.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommune": {
-                    "description": "Kommune der personen er busett.",
+                    "description": "Kommune.",
                     "type": [
                         "string",
                         "null"
@@ -1167,10 +1203,6 @@
                         "null"
                     ]
                 },
-                "navn": {
-                    "$ref": "#/$defs/Personnavn",
-                    "description": "Namn p\u00e5 personen."
-                },
                 "otungdom": {
                     "description": "Referanse til OtUngdom (Utdanning).",
                     "type": [
@@ -1187,6 +1219,10 @@
                         "array",
                         "null"
                     ]
+                },
+                "person_navn": {
+                    "$ref": "#/$defs/Personnavn",
+                    "description": "Namn p\u00e5 personen."
                 },
                 "personalressurs": {
                     "description": "Referanse til Personalressurs (Administrasjon).",
@@ -1220,7 +1256,7 @@
             "required": [
                 "id",
                 "fodselsnummer",
-                "navn"
+                "person_navn"
             ],
             "title": "Person",
             "type": "object"
@@ -1257,7 +1293,7 @@
             "description": "F\u00f8ring p\u00e5 ein konto i rekneskapet.",
             "properties": {
                 "belop": {
-                    "description": "Posteringsbel\u00f8p med to desimalar (bel\u00f8p).",
+                    "description": "Bel\u00f8p, i \u00f8re.",
                     "type": "integer"
                 },
                 "debet": {
@@ -1270,7 +1306,7 @@
                 },
                 "kontering": {
                     "$ref": "#/$defs/Kontostreng",
-                    "description": "Kontodimensjonar for posteringa."
+                    "description": "Kontodimensjonar."
                 },
                 "posteringsId": {
                     "$ref": "#/$defs/Identifikator",
@@ -1307,7 +1343,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1318,7 +1354,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1342,18 +1378,18 @@
             "description": "Overf\u00f8ring av pengar til eller fr\u00e5 eksterne partar.",
             "properties": {
                 "ansvarlig": {
-                    "description": "Referanse til Personalressurs (Administrasjon) som er ansvarleg for \u00e5 godkjenne transaksjonen.",
+                    "description": "Referanse til Personalressurs (Administrasjon) som er ansvarleg.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "belop": {
-                    "description": "Transaksjonsbel\u00f8p med to desimalar (bel\u00f8p).",
+                    "description": "Bel\u00f8p, i \u00f8re.",
                     "type": "integer"
                 },
                 "beskrivelse": {
-                    "description": "Skildring av transaksjonen.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -1370,7 +1406,7 @@
                     ]
                 },
                 "forfallsdato": {
-                    "description": "Dato transaksjonen forfell.",
+                    "description": "Frist for betaling eller forfallsdato for transaksjon.",
                     "format": "date",
                     "type": "string"
                 },
@@ -1379,7 +1415,7 @@
                     "type": "string"
                 },
                 "leverandor": {
-                    "description": "Leverand\u00f8r knytt til transaksjonen (leverandor).",
+                    "description": "Leverand\u00f8r.",
                     "type": [
                         "string",
                         "null"
@@ -1440,19 +1476,19 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "navn": {
-                    "description": "Namn p\u00e5 valuta.",
-                    "type": "string"
-                },
                 "nummerkode": {
                     "$ref": "#/$defs/Identifikator",
                     "description": "Nummerkode for aktuell valuta."
+                },
+                "valuta_navn": {
+                    "description": "Namn p\u00e5 valuta.",
+                    "type": "string"
                 }
             },
             "required": [
                 "id",
                 "bokstavkode",
-                "navn",
+                "valuta_navn",
                 "nummerkode"
             ],
             "title": "Valuta",
@@ -1467,7 +1503,7 @@
                     "type": "string"
                 },
                 "fakturautsteder": {
-                    "description": "Fakturautstedar for varen.",
+                    "description": "Utstedar av faktura og mottakar av betaling.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -1479,7 +1515,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for omgrepet/koden."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1498,14 +1534,14 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Varens kontering i \u00f8konomisystemet."
+                    "description": "Kontodimensjonar."
                 },
                 "merverdiavgift": {
                     "description": "Varens avgiftsklasse og -sats.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1516,7 +1552,7 @@
                     ]
                 },
                 "pris": {
-                    "description": "Varens pris per eining i vareregisteret, i \u00f8re.",
+                    "description": "Pris per eining, i \u00f8re.",
                     "type": "integer"
                 }
             },
@@ -1545,7 +1581,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til ein organisasjonseining i einingsregisteret."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1563,7 +1599,7 @@
                     "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "laerling": {
-                    "description": "Referanse til Laerling (Utdanning) i verksemda.",
+                    "description": "Referanse til Laerling (Utdanning).",
                     "items": {
                         "type": "string"
                     },
@@ -1630,6 +1666,7 @@
             ]
         },
         "fakturagrunnlag": {
+            "description": "Grunnlag for fakturering.",
             "items": {
                 "$ref": "#/$defs/Fakturagrunnlag"
             },

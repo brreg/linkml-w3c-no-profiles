@@ -88,8 +88,8 @@ slots:
     range: string
     description: Verdi som identifiserer omgrepet.
 
-  naam:
-    slot_uri: fint:naam
+  navn:
+    slot_uri: fint:navn
     range: string
     description: Hovudnamn for ressursen.
 
@@ -248,7 +248,7 @@ slots:
     inlined: true
     description: Bokstavkode for aktuell valuta.
 
-  valuta_naam:
+  valuta_navn:
     slot_uri: fint:valutaNavn
     range: string
     description: Namn på valuta.
@@ -283,7 +283,7 @@ slots:
     inlined: true
     description: Fødselsnummer eller ein av dei fiktive variantane.
 
-  person_naam:
+  person_navn:
     slot_uri: fint:personNavn
     range: Personnavn
     inlined: true
@@ -331,8 +331,19 @@ slots:
 
   elev:
     slot_uri: fint:elev
-    range: uriorcurie
+    range: Elev
     description: Referanse til Elev (Utdanning).
+
+  elevnummer:
+    slot_uri: fint:elevnummer
+    range: Identifikator
+    inlined: true
+    description: Skulens interne elevnummer.
+
+  person:
+    slot_uri: fint:person
+    range: Person
+    description: Referanse til Person i Administrasjon-domenet.
 
   otungdom:
     slot_uri: fint:otungdom
@@ -341,7 +352,7 @@ slots:
 
   # --- Kontaktperson ---------------------------------------------------------
 
-  kontaktperson_naam:
+  kontaktperson_navn:
     slot_uri: fint:kontaktpersonNavn
     range: Personnavn
     inlined: true
@@ -397,7 +408,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
@@ -405,7 +416,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -415,6 +426,21 @@ classes:
       passiv:
         in_subset:
           - Valgfri
+
+  Elev:
+    description: Ein elev registrert i skulesystemet.
+    class_uri: fint:Elev
+    slots:
+      - id
+      - elevnummer
+      - person
+    slot_usage:
+      elevnummer:
+        in_subset:
+          - Obligatorisk
+      person:
+        in_subset:
+          - Obligatorisk
 
   Enhet:
     is_a: Aktoer
@@ -549,14 +575,14 @@ classes:
     slots:
       - id
       - bokstavkode
-      - valuta_naam
+      - valuta_navn
       - nummerkode
     slot_usage:
       bokstavkode:
         required: true
         in_subset:
           - Obligatorisk
-      valuta_naam:
+      valuta_navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -577,7 +603,7 @@ classes:
       - bostedsadresse
       - fodselsdato
       - fodselsnummer
-      - person_naam
+      - person_navn
       - parorende
       - statsborgerskap
       - kommune
@@ -601,7 +627,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      person_naam:
+      person_navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -654,7 +680,7 @@ classes:
     slots:
       - id
       - kontaktinformasjon
-      - kontaktperson_naam
+      - kontaktperson_navn
       - type
       - kontaktperson
     slot_usage:
@@ -665,7 +691,7 @@ classes:
       kontaktinformasjon:
         in_subset:
           - Valgfri
-      kontaktperson_naam:
+      kontaktperson_navn:
         in_subset:
           - Valgfri
       kontaktperson:

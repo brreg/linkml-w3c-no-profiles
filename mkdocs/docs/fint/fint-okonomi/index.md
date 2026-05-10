@@ -15,6 +15,9 @@ Bilag {
     string referanse  
     string url  
 }
+Elev {
+    uriorcurie id  
+}
 Faktura {
     uriorcurie id  
     integer belop  
@@ -39,15 +42,44 @@ Fakturalinje {
     integer pris  
 }
 Fakturamottaker {
-    uriorcurie person  
+
 }
 Fakturautsteder {
     uriorcurie id  
-    string naam  
+    string navn  
     uriorcurie organisasjonselement  
+}
+Fylke {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
 }
 Identifikator {
     string identifikatorverdi  
+}
+Kjonn {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kommune {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kontaktinformasjon {
+    string epostadresse  
+    string mobiltelefonnummer  
+    string nettsted  
+    string sip  
+    string telefonnummer  
+}
+Kontaktperson {
+    uriorcurie id  
+    string type  
 }
 Kontostreng {
     string ansvar  
@@ -58,30 +90,29 @@ Kontostreng {
 Landkode {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Leverandor {
     uriorcurie id  
     string kontonummer  
-    uriorcurie person  
     uriorcurie virksomhet  
 }
 Leverandorgruppe {
     uriorcurie id  
-    string naam  
+    string navn  
 }
 Merverdiavgift {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
     integer sats  
 }
 OkonomiValuta {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Periode {
@@ -89,10 +120,29 @@ Periode {
     datetime slutt  
     datetime start  
 }
+Person {
+    uriorcurie id  
+    string bilde  
+    date fodselsdato  
+    uriorcurieList laerling  
+    uriorcurie otungdom  
+    uriorcurie personalressurs  
+}
+Personnavn {
+    string etternavn  
+    string fornavn  
+    string mellomnavn  
+}
 Postering {
     uriorcurie id  
     integer belop  
     boolean debet  
+}
+Spraak {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
 }
 Transaksjon {
     uriorcurie id  
@@ -107,12 +157,14 @@ Vare {
     uriorcurie id  
     string enhet  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
     integer pris  
 }
 
 Adresse ||--|o Landkode : "land"
+Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
 Faktura ||--|o Adresse : "adresse"
 Faktura ||--|| Fakturagrunnlag : "fakturagrunnlag"
 Faktura ||--|| Identifikator : "fakturanummer"
@@ -122,18 +174,40 @@ Fakturagrunnlag ||--|| Identifikator : "ordrenummer"
 Fakturagrunnlag ||--}o Faktura : "faktura"
 Fakturagrunnlag ||--}| Fakturalinje : "fakturalinjer"
 Fakturalinje ||--|| Vare : "vare"
+Fakturamottaker ||--|| Person : "person"
 Fakturautsteder ||--}o Fakturagrunnlag : "fakturagrunnlag"
 Fakturautsteder ||--}o Vare : "vare"
+Fylke ||--|o Periode : "gyldighetsperiode"
+Fylke ||--}o Kommune : "kommune"
 Identifikator ||--|o Periode : "gyldighetsperiode"
+Kjonn ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|| Fylke : "fylke"
+Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
+Kontaktperson ||--}o Person : "kontaktperson"
 Landkode ||--|o Periode : "gyldighetsperiode"
 Leverandor ||--|o Identifikator : "leverandornummer"
 Leverandor ||--|o Leverandorgruppe : "leverandorgruppe"
+Leverandor ||--|o Person : "person"
 Leverandorgruppe ||--}o Leverandor : "leverandor"
 Merverdiavgift ||--|o Periode : "gyldighetsperiode"
 OkonomiValuta ||--|o Periode : "gyldighetsperiode"
+Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
+Person ||--|o Kjonn : "kjonn"
+Person ||--|o Kommune : "kommune"
+Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Person ||--|o Spraak : "maalform, morsmaal"
+Person ||--|| Identifikator : "fodselsnummer"
+Person ||--|| Personnavn : "person_navn"
+Person ||--}o Kontaktperson : "parorende"
+Person ||--}o Landkode : "statsborgerskap"
+Person ||--}o Person : "foreldre, foreldreansvar"
 Postering ||--|o Transaksjon : "transaksjon"
 Postering ||--|| Identifikator : "posteringsId"
 Postering ||--|| Kontostreng : "kontering"
+Spraak ||--|o Periode : "gyldighetsperiode"
 Transaksjon ||--|o Leverandor : "leverandor"
 Transaksjon ||--|| Identifikator : "transaksjonsId"
 Transaksjon ||--|| OkonomiValuta : "valuta"
@@ -173,6 +247,7 @@ Name: fint-okonomi
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Landkode](klasser/landkode.md) | Landskode i ISO 3166-1 alpha-2 format |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](klasser/spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Bilag](klasser/bilag.md) | Dokumentasjon til ein transaksjon (kompleks datatype) |
+| [Elev](klasser/elev.md) | Ein elev registrert i skulesystemet |
 | [Faktura](klasser/faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |
 | [Fakturagrunnlag](klasser/fakturagrunnlag.md) | Grunnlag for fakturering |
 | [Fakturalinje](klasser/fakturalinje.md) | Del av Fakturagrunnlag som skildrar ei enkelt vare (kompleks datatype) |
@@ -222,6 +297,7 @@ Name: fint-okonomi
 | [dato](klasser/dato.md) | Dato for utferding av faktura |
 | [debet](klasser/debet.md) | Angir om posteringa er debet eller kredit |
 | [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](klasser/elevnummer.md) | Skulens interne elevnummer |
 | [enhet](klasser/enhet.md) | Namn på mengdeeininga varen leverast i |
 | [epostadresse](klasser/epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](klasser/etternavn.md) | Etternamn til personen |
@@ -256,7 +332,7 @@ Name: fint-okonomi
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](klasser/kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontering](klasser/kontering.md) | Kontodimensjonar |
 | [kontonummer](klasser/kontonummer.md) | Kontonummer til leverandøren |
 | [kreditert](klasser/kreditert.md) | Status på kreditering |
@@ -275,7 +351,7 @@ Name: fint-okonomi
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
 | [mottaker](klasser/mottaker.md) | Namn på mottakar |
-| [naam](klasser/naam.md) | Namn på eining eller kodeverk-element |
+| [navn](klasser/navn.md) | Hovudnamn for ressursen |
 | [nettobelop](klasser/nettobelop.md) | Del av totalbeløp som utgjer summen av fakturalinjene, i øre |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
@@ -287,8 +363,8 @@ Name: fint-okonomi
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](klasser/person.md) | Referanse til Person (Administrasjon) |
-| [person_naam](klasser/person_naam.md) | Namn på personen |
+| [person](klasser/person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](klasser/person_navn.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [postadresse](klasser/postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postering](klasser/postering.md) | Posteringar tilhøyrande transaksjonen |
@@ -315,7 +391,7 @@ Name: fint-okonomi
 | [type](klasser/type.md) | Beskriv kva slags type |
 | [url](klasser/url.md) | URL til eksternt dokument |
 | [valuta](klasser/valuta.md) | Valuta for oppgjeve beløp |
-| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [valuta_navn](klasser/valuta_navn.md) | Namn på valuta |
 | [valutaer](klasser/valutaer.md) |  |
 | [vare](klasser/vare.md) | Vare i vareregisteret |
 | [varer](klasser/varer.md) |  |
@@ -363,7 +439,7 @@ Name: fint-okonomi
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|
@@ -371,6 +447,7 @@ Name: fint-okonomi
 | JSON-LD kontekst | [fint-okonomi-context.jsonld](fint-okonomi-context.jsonld) |
 | JSON Schema | [fint-okonomi-schema.json](fint-okonomi-schema.json) |
 | OWL ontologi | [fint-okonomi-ontology.ttl](fint-okonomi-ontology.ttl) |
+| RDF/Turtle skjema | [fint-okonomi-schema.ttl](fint-okonomi-schema.ttl) |
 | Python-klasser | [fint-okonomi-model.py](fint-okonomi-model.py) |
 | ER-diagram (Mermaid) | [fint-okonomi-erdiagram.md](fint-okonomi-erdiagram.md) |
 | Eksempeldata (Turtle) | [fint-okonomi-eksempel.ttl](fint-okonomi-eksempel.ttl) |

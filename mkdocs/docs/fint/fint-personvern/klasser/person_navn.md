@@ -1,0 +1,96 @@
+
+
+# Slot: person_navn 
+
+
+_Namn på personen._
+
+
+
+
+
+URI: [fint:personNavn](https://schema.fintlabs.no/personNavn)
+Alias: person_navn
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Person](person.md) | Fysiske private personar |  yes  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Personnavn](personnavn.md) |
+| Domain Of | [Person](person.md) |
+| Slot URI | [fint:personNavn](https://schema.fintlabs.no/personNavn) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-personvern
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | fint:personNavn |
+| native | https://schema.fintlabs.no/personvern/:person_navn |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: person_navn
+description: Namn på personen.
+from_schema: https://data.norge.no/linkml/fint-personvern
+rank: 1000
+slot_uri: fint:personNavn
+alias: person_navn
+domain_of:
+- Person
+range: Personnavn
+inlined: true
+
+```
+</details>

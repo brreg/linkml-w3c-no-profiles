@@ -22,9 +22,9 @@ Alias: orgnummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  yes  |
-| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
 | [Korrespondansepart](korrespondansepart.md) | Verksemd eller person som arkivskapar mottek eller sender arkivdokument til |  yes  |
+| [Part](part.md) | Part til Mappe, Registrering eller Dokumentbeskrivelse |  yes  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  yes  |
 
 
 

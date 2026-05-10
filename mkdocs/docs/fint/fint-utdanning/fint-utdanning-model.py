@@ -1,5 +1,5 @@
 # Auto generated from fint-utdanning-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:28:11
+# Generation date: 2026-05-10T09:44:54
 # Schema: fint-utdanning
 #
 # id: https://data.norge.no/linkml/fint-utdanning
@@ -82,10 +82,6 @@ class GruppemedlemskapId(URIorCURIE):
 
 
 class UtdanningsforholdId(URIorCURIE):
-    pass
-
-
-class ElevId(URIorCURIE):
     pass
 
 
@@ -361,6 +357,10 @@ class BegrepId(URIorCURIE):
     pass
 
 
+class ElevId(URIorCURIE):
+    pass
+
+
 class LandkodeId(BegrepId):
     pass
 
@@ -450,31 +450,31 @@ class UtdanningContainer(YAMLRoot):
     sluttordensvurdering: Optional[Union[dict[Union[str, SluttordensvurderingId], Union[dict, "Sluttordensvurdering"]], list[Union[dict, "Sluttordensvurdering"]]]] = empty_dict()
     underveisfagvurdering: Optional[Union[dict[Union[str, UnderveisfagvurderingId], Union[dict, "Underveisfagvurdering"]], list[Union[dict, "Underveisfagvurdering"]]]] = empty_dict()
     underveisordensvurdering: Optional[Union[dict[Union[str, UnderveisordensvurderingId], Union[dict, "Underveisordensvurdering"]], list[Union[dict, "Underveisordensvurdering"]]]] = empty_dict()
+    vitnemalsmerknad: Optional[Union[dict[Union[str, VitnemalsmerknadId], Union[dict, "Vitnemalsmerknad"]], list[Union[dict, "Vitnemalsmerknad"]]]] = empty_dict()
+    betalingsstatus: Optional[Union[dict[Union[str, BetalingsstatusId], Union[dict, "Betalingsstatus"]], list[Union[dict, "Betalingsstatus"]]]] = empty_dict()
+    fagstatus: Optional[Union[dict[Union[str, FagstatusId], Union[dict, "Fagstatus"]], list[Union[dict, "Fagstatus"]]]] = empty_dict()
+    karakterstatus: Optional[Union[dict[Union[str, KarakterstatusId], Union[dict, "Karakterstatus"]], list[Union[dict, "Karakterstatus"]]]] = empty_dict()
+    skoleaar: Optional[Union[dict[Union[str, SkoleaarId], Union[dict, "Skoleaar"]], list[Union[dict, "Skoleaar"]]]] = empty_dict()
+    tilrettelegging: Optional[Union[dict[Union[str, TilretteleggingId], Union[dict, "Tilrettelegging"]], list[Union[dict, "Tilrettelegging"]]]] = empty_dict()
     avlagteprover: Optional[Union[dict[Union[str, AvlagtProveId], Union[dict, "AvlagtProve"]], list[Union[dict, "AvlagtProve"]]]] = empty_dict()
     laerlingar: Optional[Union[dict[Union[str, LaerlingId], Union[dict, "Laerling"]], list[Union[dict, "Laerling"]]]] = empty_dict()
     otUngdom: Optional[Union[dict[Union[str, OtUngdomId], Union[dict, "OtUngdom"]], list[Union[dict, "OtUngdom"]]]] = empty_dict()
     avbruddsaarsaker: Optional[Union[dict[Union[str, AvbruddsaarsakId], Union[dict, "Avbruddsaarsak"]], list[Union[dict, "Avbruddsaarsak"]]]] = empty_dict()
-    betalingsstatus: Optional[Union[dict[Union[str, BetalingsstatusId], Union[dict, "Betalingsstatus"]], list[Union[dict, "Betalingsstatus"]]]] = empty_dict()
     bevistypar: Optional[Union[dict[Union[str, BevistypeId], Union[dict, "Bevistype"]], list[Union[dict, "Bevistype"]]]] = empty_dict()
     brevtypar: Optional[Union[dict[Union[str, BrevtypeId], Union[dict, "Brevtype"]], list[Union[dict, "Brevtype"]]]] = empty_dict()
     eksamensformer: Optional[Union[dict[Union[str, EksamensformId], Union[dict, "Eksamensform"]], list[Union[dict, "Eksamensform"]]]] = empty_dict()
     elevkategoriar: Optional[Union[dict[Union[str, ElevkategoriId], Union[dict, "Elevkategori"]], list[Union[dict, "Elevkategori"]]]] = empty_dict()
     fagmerknader: Optional[Union[dict[Union[str, FagmerknadId], Union[dict, "Fagmerknad"]], list[Union[dict, "Fagmerknad"]]]] = empty_dict()
-    fagstatus: Optional[Union[dict[Union[str, FagstatusId], Union[dict, "Fagstatus"]], list[Union[dict, "Fagstatus"]]]] = empty_dict()
     fravartypar: Optional[Union[dict[Union[str, FravartypeId], Union[dict, "Fravartype"]], list[Union[dict, "Fravartype"]]]] = empty_dict()
     fullfortkoder: Optional[Union[dict[Union[str, FullfortkodeId], Union[dict, "Fullfortkode"]], list[Union[dict, "Fullfortkode"]]]] = empty_dict()
     karakterskalaer: Optional[Union[dict[Union[str, KarakterskalaId], Union[dict, "Karakterskala"]], list[Union[dict, "Karakterskala"]]]] = empty_dict()
-    karakterstatus: Optional[Union[dict[Union[str, KarakterstatusId], Union[dict, "Karakterstatus"]], list[Union[dict, "Karakterstatus"]]]] = empty_dict()
     karakterverdiar: Optional[Union[dict[Union[str, KarakterverdiId], Union[dict, "Karakterverdi"]], list[Union[dict, "Karakterverdi"]]]] = empty_dict()
     otEnheter: Optional[Union[dict[Union[str, OtEnhetId], Union[dict, "OtEnhet"]], list[Union[dict, "OtEnhet"]]]] = empty_dict()
     otStatus: Optional[Union[dict[Union[str, OtStatusId], Union[dict, "OtStatus"]], list[Union[dict, "OtStatus"]]]] = empty_dict()
     provestatuser: Optional[Union[dict[Union[str, ProvestatusId], Union[dict, "Provestatus"]], list[Union[dict, "Provestatus"]]]] = empty_dict()
-    skoleaar: Optional[Union[dict[Union[str, SkoleaarId], Union[dict, "Skoleaar"]], list[Union[dict, "Skoleaar"]]]] = empty_dict()
     skoleeijartypar: Optional[Union[dict[Union[str, SkoleeiertypeId], Union[dict, "Skoleeiertype"]], list[Union[dict, "Skoleeiertype"]]]] = empty_dict()
     terminar: Optional[Union[dict[Union[str, TerminId], Union[dict, "Termin"]], list[Union[dict, "Termin"]]]] = empty_dict()
-    tilrettelegging: Optional[Union[dict[Union[str, TilretteleggingId], Union[dict, "Tilrettelegging"]], list[Union[dict, "Tilrettelegging"]]]] = empty_dict()
     varseltypar: Optional[Union[dict[Union[str, VarseltypeId], Union[dict, "Varseltype"]], list[Union[dict, "Varseltype"]]]] = empty_dict()
-    vitnemalsmerknad: Optional[Union[dict[Union[str, VitnemalsmerknadId], Union[dict, "Vitnemalsmerknad"]], list[Union[dict, "Vitnemalsmerknad"]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         self._normalize_inlined_as_list(slot_name="elevar", slot_type=Elev, key_name="id", keyed=True)
@@ -559,6 +559,18 @@ class UtdanningContainer(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="underveisordensvurdering", slot_type=Underveisordensvurdering, key_name="id", keyed=True)
 
+        self._normalize_inlined_as_list(slot_name="vitnemalsmerknad", slot_type=Vitnemalsmerknad, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="betalingsstatus", slot_type=Betalingsstatus, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="fagstatus", slot_type=Fagstatus, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="karakterstatus", slot_type=Karakterstatus, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="skoleaar", slot_type=Skoleaar, key_name="id", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="tilrettelegging", slot_type=Tilrettelegging, key_name="id", keyed=True)
+
         self._normalize_inlined_as_list(slot_name="avlagteprover", slot_type=AvlagtProve, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="laerlingar", slot_type=Laerling, key_name="id", keyed=True)
@@ -566,8 +578,6 @@ class UtdanningContainer(YAMLRoot):
         self._normalize_inlined_as_list(slot_name="otUngdom", slot_type=OtUngdom, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="avbruddsaarsaker", slot_type=Avbruddsaarsak, key_name="id", keyed=True)
-
-        self._normalize_inlined_as_list(slot_name="betalingsstatus", slot_type=Betalingsstatus, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="bevistypar", slot_type=Bevistype, key_name="id", keyed=True)
 
@@ -579,15 +589,11 @@ class UtdanningContainer(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="fagmerknader", slot_type=Fagmerknad, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="fagstatus", slot_type=Fagstatus, key_name="id", keyed=True)
-
         self._normalize_inlined_as_list(slot_name="fravartypar", slot_type=Fravartype, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="fullfortkoder", slot_type=Fullfortkode, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="karakterskalaer", slot_type=Karakterskala, key_name="id", keyed=True)
-
-        self._normalize_inlined_as_list(slot_name="karakterstatus", slot_type=Karakterstatus, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="karakterverdiar", slot_type=Karakterverdi, key_name="id", keyed=True)
 
@@ -597,17 +603,11 @@ class UtdanningContainer(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="provestatuser", slot_type=Provestatus, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="skoleaar", slot_type=Skoleaar, key_name="id", keyed=True)
-
         self._normalize_inlined_as_list(slot_name="skoleeijartypar", slot_type=Skoleeiertype, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="terminar", slot_type=Termin, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="tilrettelegging", slot_type=Tilrettelegging, key_name="id", keyed=True)
-
         self._normalize_inlined_as_list(slot_name="varseltypar", slot_type=Varseltype, key_name="id", keyed=True)
-
-        self._normalize_inlined_as_list(slot_name="vitnemalsmerknad", slot_type=Vitnemalsmerknad, key_name="id", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -695,37 +695,6 @@ class Utdanningsforhold(YAMLRoot):
 
         if self.beskrivelse is not None and not isinstance(self.beskrivelse, str):
             self.beskrivelse = str(self.beskrivelse)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass(repr=False)
-class Elev(YAMLRoot):
-    """
-    Ein elev registrert i skulesystemet.
-    """
-    _inherited_slots: ClassVar[list[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = UTD["Elev"]
-    class_class_curie: ClassVar[str] = "utd:Elev"
-    class_name: ClassVar[str] = "Elev"
-    class_model_uri: ClassVar[URIRef] = UTD.Elev
-
-    id: Union[str, ElevId] = None
-    elevnummer: Optional[Union[dict, "Identifikator"]] = None
-    person: Optional[Union[str, URIorCURIE]] = None
-
-    def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, ElevId):
-            self.id = ElevId(self.id)
-
-        if self.elevnummer is not None and not isinstance(self.elevnummer, Identifikator):
-            self.elevnummer = Identifikator(**as_dict(self.elevnummer))
-
-        if self.person is not None and not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
 
         super().__post_init__(**kwargs)
 
@@ -1259,7 +1228,7 @@ class Skoleressurs(YAMLRoot):
     id: Union[str, SkoleressursId] = None
     feidenavn: Optional[Union[dict, "Identifikator"]] = None
     personalressurs: Optional[Union[str, URIorCURIE]] = None
-    person: Optional[Union[str, URIorCURIE]] = None
+    person: Optional[Union[str, PersonId]] = None
     skole: Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]] = empty_list()
     sensor: Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]] = empty_list()
 
@@ -1275,8 +1244,8 @@ class Skoleressurs(YAMLRoot):
         if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
             self.personalressurs = URIorCURIE(self.personalressurs)
 
-        if self.person is not None and not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
+        if self.person is not None and not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         if not isinstance(self.skole, list):
             self.skole = [self.skole] if self.skole is not None else []
@@ -1308,7 +1277,7 @@ class Varsel(YAMLRoot):
     utsteder: Optional[Union[str, SkoleressursId]] = None
     karakteransvarlig: Optional[Union[str, SkoleressursId]] = None
     type: Optional[Union[str, VarseltypeId]] = None
-    faggruppemedlemskap: Optional[Union[str, FaggruppemedlemskapId]] = None
+    faggruppemedlemskap: Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1334,8 +1303,9 @@ class Varsel(YAMLRoot):
         if self.type is not None and not isinstance(self.type, VarseltypeId):
             self.type = VarseltypeId(self.type)
 
-        if self.faggruppemedlemskap is not None and not isinstance(self.faggruppemedlemskap, FaggruppemedlemskapId):
-            self.faggruppemedlemskap = FaggruppemedlemskapId(self.faggruppemedlemskap)
+        if not isinstance(self.faggruppemedlemskap, list):
+            self.faggruppemedlemskap = [self.faggruppemedlemskap] if self.faggruppemedlemskap is not None else []
+        self.faggruppemedlemskap = [v if isinstance(v, FaggruppemedlemskapId) else FaggruppemedlemskapId(v) for v in self.faggruppemedlemskap]
 
         super().__post_init__(**kwargs)
 
@@ -1711,7 +1681,7 @@ class Rom(YAMLRoot):
     id: Union[str, RomId] = None
     navn: Optional[str] = None
     eksamen: Optional[Union[Union[str, EksamenId], list[Union[str, EksamenId]]]] = empty_list()
-    time: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
+    skuletime: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1726,9 +1696,9 @@ class Rom(YAMLRoot):
             self.eksamen = [self.eksamen] if self.eksamen is not None else []
         self.eksamen = [v if isinstance(v, EksamenId) else EksamenId(v) for v in self.eksamen]
 
-        if not isinstance(self.time, list):
-            self.time = [self.time] if self.time is not None else []
-        self.time = [v if isinstance(v, TimeId) else TimeId(v) for v in self.time]
+        if not isinstance(self.skuletime, list):
+            self.skuletime = [self.skuletime] if self.skuletime is not None else []
+        self.skuletime = [v if isinstance(v, TimeId) else TimeId(v) for v in self.skuletime]
 
         super().__post_init__(**kwargs)
 
@@ -1804,7 +1774,7 @@ class Undervisningsforhold(Utdanningsforhold):
     skoleressurs: Optional[Union[str, SkoleressursId]] = None
     klasse: Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]] = empty_list()
     kontaktlaerergruppe: Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]] = empty_list()
-    time: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
+    skuletime: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
     eksamensgruppe: Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1829,9 +1799,9 @@ class Undervisningsforhold(Utdanningsforhold):
             self.kontaktlaerergruppe = [self.kontaktlaerergruppe] if self.kontaktlaerergruppe is not None else []
         self.kontaktlaerergruppe = [v if isinstance(v, KontaktlaerergruppeId) else KontaktlaerergruppeId(v) for v in self.kontaktlaerergruppe]
 
-        if not isinstance(self.time, list):
-            self.time = [self.time] if self.time is not None else []
-        self.time = [v if isinstance(v, TimeId) else TimeId(v) for v in self.time]
+        if not isinstance(self.skuletime, list):
+            self.skuletime = [self.skuletime] if self.skuletime is not None else []
+        self.skuletime = [v if isinstance(v, TimeId) else TimeId(v) for v in self.skuletime]
 
         if not isinstance(self.eksamensgruppe, list):
             self.eksamensgruppe = [self.eksamensgruppe] if self.eksamensgruppe is not None else []
@@ -1856,7 +1826,7 @@ class Undervisningsgruppe(Gruppe):
     navn: str = None
     fag: Union[Union[str, FagId], list[Union[str, FagId]]] = None
     undervisningsforhold: Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]] = empty_list()
-    time: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
+    skuletime: Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]] = empty_list()
     termin: Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]] = empty_list()
     skole: Optional[Union[str, SkoleId]] = None
     skoleaar: Optional[Union[str, SkoleaarId]] = None
@@ -1878,9 +1848,9 @@ class Undervisningsgruppe(Gruppe):
             self.undervisningsforhold = [self.undervisningsforhold] if self.undervisningsforhold is not None else []
         self.undervisningsforhold = [v if isinstance(v, UndervisningsforholdId) else UndervisningsforholdId(v) for v in self.undervisningsforhold]
 
-        if not isinstance(self.time, list):
-            self.time = [self.time] if self.time is not None else []
-        self.time = [v if isinstance(v, TimeId) else TimeId(v) for v in self.time]
+        if not isinstance(self.skuletime, list):
+            self.skuletime = [self.skuletime] if self.skuletime is not None else []
+        self.skuletime = [v if isinstance(v, TimeId) else TimeId(v) for v in self.skuletime]
 
         if not isinstance(self.termin, list):
             self.termin = [self.termin] if self.termin is not None else []
@@ -2441,11 +2411,11 @@ class Fraversregistrering(YAMLRoot):
     forersPaaVitnemaal: Union[bool, Bool] = None
     periode: Union[dict, "Periode"] = None
     undervisningsgruppe: Union[str, UndervisningsgruppeId] = None
-    elevfravar: Union[str, ElevfravarId] = None
     fravartype: Union[str, FravartypeId] = None
     kommentar: Optional[str] = None
     registrertAv: Optional[Union[str, SkoleressursId]] = None
     faggruppe: Optional[Union[str, FaggruppeId]] = None
+    elevfravar: Optional[Union[str, ElevfravarId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2468,11 +2438,6 @@ class Fraversregistrering(YAMLRoot):
         if not isinstance(self.undervisningsgruppe, UndervisningsgruppeId):
             self.undervisningsgruppe = UndervisningsgruppeId(self.undervisningsgruppe)
 
-        if self._is_empty(self.elevfravar):
-            self.MissingRequiredField("elevfravar")
-        if not isinstance(self.elevfravar, ElevfravarId):
-            self.elevfravar = ElevfravarId(self.elevfravar)
-
         if self._is_empty(self.fravartype):
             self.MissingRequiredField("fravartype")
         if not isinstance(self.fravartype, FravartypeId):
@@ -2486,6 +2451,9 @@ class Fraversregistrering(YAMLRoot):
 
         if self.faggruppe is not None and not isinstance(self.faggruppe, FaggruppeId):
             self.faggruppe = FaggruppeId(self.faggruppe)
+
+        if self.elevfravar is not None and not isinstance(self.elevfravar, ElevfravarId):
+            self.elevfravar = ElevfravarId(self.elevfravar)
 
         super().__post_init__(**kwargs)
 
@@ -2792,7 +2760,7 @@ class AvlagtProve(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = UTD.AvlagtProve
 
     id: Union[str, AvlagtProveId] = None
-    laerling: Union[str, LaerlingId] = None
+    laerling: Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]] = None
     provedato: Optional[Union[str, XSDDate]] = None
     provestatus: Optional[Union[str, ProvestatusId]] = None
     fullfortkode: Optional[Union[str, FullfortkodeId]] = None
@@ -2807,8 +2775,9 @@ class AvlagtProve(YAMLRoot):
 
         if self._is_empty(self.laerling):
             self.MissingRequiredField("laerling")
-        if not isinstance(self.laerling, LaerlingId):
-            self.laerling = LaerlingId(self.laerling)
+        if not isinstance(self.laerling, list):
+            self.laerling = [self.laerling] if self.laerling is not None else []
+        self.laerling = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.laerling]
 
         if self.provedato is not None and not isinstance(self.provedato, XSDDate):
             self.provedato = XSDDate(self.provedato)
@@ -2841,7 +2810,7 @@ class Laerling(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = UTD.Laerling
 
     id: Union[str, LaerlingId] = None
-    person: Union[str, URIorCURIE] = None
+    person: Union[str, PersonId] = None
     kontraktstype: Optional[str] = None
     laretid: Optional[Union[dict, "Periode"]] = None
     bedrift: Optional[Union[str, URIorCURIE]] = None
@@ -2856,8 +2825,8 @@ class Laerling(YAMLRoot):
 
         if self._is_empty(self.person):
             self.MissingRequiredField("person")
-        if not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
+        if not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         if self.kontraktstype is not None and not isinstance(self.kontraktstype, str):
             self.kontraktstype = str(self.kontraktstype)
@@ -2891,7 +2860,7 @@ class OtUngdom(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = UTD.OtUngdom
 
     id: Union[str, OtUngdomId] = None
-    person: Union[str, URIorCURIE] = None
+    person: Union[str, PersonId] = None
     status: Optional[Union[str, OtStatusId]] = None
     enhet: Optional[Union[str, OtEnhetId]] = None
     programomrade: Optional[Union[str, ProgramomradeId]] = None
@@ -2904,8 +2873,8 @@ class OtUngdom(YAMLRoot):
 
         if self._is_empty(self.person):
             self.MissingRequiredField("person")
-        if not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
+        if not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         if self.status is not None and not isinstance(self.status, OtStatusId):
             self.status = OtStatusId(self.status)
@@ -3508,7 +3477,7 @@ class OtEnhet(YAMLRoot):
     id: Union[str, OtEnhetId] = None
     kode: str = None
     navn: str = None
-    kommune: Union[str, URIorCURIE] = None
+    kommune: Union[str, KommuneId] = None
     gyldighetsperiode: Optional[Union[dict, "Periode"]] = None
     passiv: Optional[Union[bool, Bool]] = None
 
@@ -3530,8 +3499,8 @@ class OtEnhet(YAMLRoot):
 
         if self._is_empty(self.kommune):
             self.MissingRequiredField("kommune")
-        if not isinstance(self.kommune, URIorCURIE):
-            self.kommune = URIorCURIE(self.kommune)
+        if not isinstance(self.kommune, KommuneId):
+            self.kommune = KommuneId(self.kommune)
 
         if self.gyldighetsperiode is not None and not isinstance(self.gyldighetsperiode, Periode):
             self.gyldighetsperiode = Periode(**as_dict(self.gyldighetsperiode))
@@ -3965,6 +3934,37 @@ class Begrep(YAMLRoot):
 
 
 @dataclass(repr=False)
+class Elev(YAMLRoot):
+    """
+    Ein elev registrert i skulesystemet.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = FINT["Elev"]
+    class_class_curie: ClassVar[str] = "fint:Elev"
+    class_name: ClassVar[str] = "Elev"
+    class_model_uri: ClassVar[URIRef] = UTD.Elev
+
+    id: Union[str, ElevId] = None
+    elevnummer: Optional[Union[dict, "Identifikator"]] = None
+    person: Optional[Union[str, PersonId]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ElevId):
+            self.id = ElevId(self.id)
+
+        if self.elevnummer is not None and not isinstance(self.elevnummer, Identifikator):
+            self.elevnummer = Identifikator(**as_dict(self.elevnummer))
+
+        if self.person is not None and not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
 class Enhet(Aktoer):
     """
     Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd identifisert med organisasjonsnummer.
@@ -4346,7 +4346,7 @@ class Valuta(YAMLRoot):
 
     id: Union[str, ValutaId] = None
     bokstavkode: Union[dict, Identifikator] = None
-    navn: str = None
+    valuta_navn: str = None
     nummerkode: Union[dict, Identifikator] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -4360,10 +4360,10 @@ class Valuta(YAMLRoot):
         if not isinstance(self.bokstavkode, Identifikator):
             self.bokstavkode = Identifikator(**as_dict(self.bokstavkode))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, str):
-            self.navn = str(self.navn)
+        if self._is_empty(self.valuta_navn):
+            self.MissingRequiredField("valuta_navn")
+        if not isinstance(self.valuta_navn, str):
+            self.valuta_navn = str(self.valuta_navn)
 
         if self._is_empty(self.nummerkode):
             self.MissingRequiredField("nummerkode")
@@ -4387,7 +4387,7 @@ class Person(Aktoer):
 
     id: Union[str, PersonId] = None
     fodselsnummer: Union[dict, Identifikator] = None
-    navn: Union[dict, Personnavn] = None
+    person_navn: Union[dict, Personnavn] = None
     bilde: Optional[str] = None
     bostedsadresse: Optional[Union[dict, Adresse]] = None
     fodselsdato: Optional[Union[str, XSDDate]] = None
@@ -4398,11 +4398,11 @@ class Person(Aktoer):
     foreldreansvar: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     foreldre: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     maalform: Optional[Union[str, SpraakId]] = None
-    personalressurs: Optional[Union[str, URIorCURIE]] = None
     morsmaal: Optional[Union[str, SpraakId]] = None
     laerling: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    elev: Optional[Union[str, URIorCURIE]] = None
+    elev: Optional[Union[str, ElevId]] = None
     otungdom: Optional[Union[str, URIorCURIE]] = None
+    personalressurs: Optional[Union[str, URIorCURIE]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -4415,10 +4415,10 @@ class Person(Aktoer):
         if not isinstance(self.fodselsnummer, Identifikator):
             self.fodselsnummer = Identifikator(**as_dict(self.fodselsnummer))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self._is_empty(self.person_navn):
+            self.MissingRequiredField("person_navn")
+        if not isinstance(self.person_navn, Personnavn):
+            self.person_navn = Personnavn(**as_dict(self.person_navn))
 
         if self.bilde is not None and not isinstance(self.bilde, str):
             self.bilde = str(self.bilde)
@@ -4454,9 +4454,6 @@ class Person(Aktoer):
         if self.maalform is not None and not isinstance(self.maalform, SpraakId):
             self.maalform = SpraakId(self.maalform)
 
-        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
-            self.personalressurs = URIorCURIE(self.personalressurs)
-
         if self.morsmaal is not None and not isinstance(self.morsmaal, SpraakId):
             self.morsmaal = SpraakId(self.morsmaal)
 
@@ -4464,11 +4461,14 @@ class Person(Aktoer):
             self.laerling = [self.laerling] if self.laerling is not None else []
         self.laerling = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.laerling]
 
-        if self.elev is not None and not isinstance(self.elev, URIorCURIE):
-            self.elev = URIorCURIE(self.elev)
+        if self.elev is not None and not isinstance(self.elev, ElevId):
+            self.elev = ElevId(self.elev)
 
         if self.otungdom is not None and not isinstance(self.otungdom, URIorCURIE):
             self.otungdom = URIorCURIE(self.otungdom)
+
+        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
+            self.personalressurs = URIorCURIE(self.personalressurs)
 
         super().__post_init__(**kwargs)
 
@@ -4488,7 +4488,7 @@ class Kontaktperson(YAMLRoot):
     id: Union[str, KontaktpersonId] = None
     type: str = None
     kontaktinformasjon: Optional[Union[dict, Kontaktinformasjon]] = None
-    navn: Optional[Union[dict, Personnavn]] = None
+    kontaktperson_navn: Optional[Union[dict, Personnavn]] = None
     kontaktperson: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -4505,8 +4505,8 @@ class Kontaktperson(YAMLRoot):
         if self.kontaktinformasjon is not None and not isinstance(self.kontaktinformasjon, Kontaktinformasjon):
             self.kontaktinformasjon = Kontaktinformasjon(**as_dict(self.kontaktinformasjon))
 
-        if self.navn is not None and not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self.kontaktperson_navn is not None and not isinstance(self.kontaktperson_navn, Personnavn):
+            self.kontaktperson_navn = Personnavn(**as_dict(self.kontaktperson_navn))
 
         if not isinstance(self.kontaktperson, list):
             self.kontaktperson = [self.kontaktperson] if self.kontaktperson is not None else []
@@ -4556,1386 +4556,1830 @@ class Virksomhet(Enhet):
 class slots:
     pass
 
+slots.elevar = Slot(uri=UTD.elevar, name="elevar", curie=UTD.curie('elevar'),
+                   model_uri=UTD.elevar, domain=None, range=Optional[Union[dict[Union[str, ElevId], Union[dict, Elev]], list[Union[dict, Elev]]]])
+
+slots.skolar = Slot(uri=UTD.skolar, name="skolar", curie=UTD.curie('skolar'),
+                   model_uri=UTD.skolar, domain=None, range=Optional[Union[dict[Union[str, SkoleId], Union[dict, Skole]], list[Union[dict, Skole]]]])
+
+slots.skoleressursar = Slot(uri=UTD.skoleressursar, name="skoleressursar", curie=UTD.curie('skoleressursar'),
+                   model_uri=UTD.skoleressursar, domain=None, range=Optional[Union[dict[Union[str, SkoleressursId], Union[dict, Skoleressurs]], list[Union[dict, Skoleressurs]]]])
+
+slots.elevtilrettelegging = Slot(uri=UTD.elevtilrettelegging, name="elevtilrettelegging", curie=UTD.curie('elevtilrettelegging'),
+                   model_uri=UTD.elevtilrettelegging, domain=None, range=Optional[Union[dict[Union[str, ElevtilretteleggingId], Union[dict, Elevtilrettelegging]], list[Union[dict, Elevtilrettelegging]]]])
+
+slots.klasser = Slot(uri=UTD.klasser, name="klasser", curie=UTD.curie('klasser'),
+                   model_uri=UTD.klasser, domain=None, range=Optional[Union[dict[Union[str, KlasseId], Union[dict, Klasse]], list[Union[dict, Klasse]]]])
+
+slots.kontaktlaerergrupper = Slot(uri=UTD.kontaktlaerergrupper, name="kontaktlaerergrupper", curie=UTD.curie('kontaktlaerergrupper'),
+                   model_uri=UTD.kontaktlaerergrupper, domain=None, range=Optional[Union[dict[Union[str, KontaktlaerergruppeId], Union[dict, Kontaktlaerergruppe]], list[Union[dict, Kontaktlaerergruppe]]]])
+
+slots.persongrupper = Slot(uri=UTD.persongrupper, name="persongrupper", curie=UTD.curie('persongrupper'),
+                   model_uri=UTD.persongrupper, domain=None, range=Optional[Union[dict[Union[str, PersongruppeId], Union[dict, Persongruppe]], list[Union[dict, Persongruppe]]]])
+
+slots.arstrinn = Slot(uri=UTD.arstrinn, name="arstrinn", curie=UTD.curie('arstrinn'),
+                   model_uri=UTD.arstrinn, domain=None, range=Optional[Union[dict[Union[str, ArstrinnId], Union[dict, Arstrinn]], list[Union[dict, Arstrinn]]]])
+
+slots.programomrader = Slot(uri=UTD.programomrader, name="programomrader", curie=UTD.curie('programomrader'),
+                   model_uri=UTD.programomrader, domain=None, range=Optional[Union[dict[Union[str, ProgramomradeId], Union[dict, Programomrade]], list[Union[dict, Programomrade]]]])
+
+slots.faggrupper = Slot(uri=UTD.faggrupper, name="faggrupper", curie=UTD.curie('faggrupper'),
+                   model_uri=UTD.faggrupper, domain=None, range=Optional[Union[dict[Union[str, FaggruppeId], Union[dict, Faggruppe]], list[Union[dict, Faggruppe]]]])
+
+slots.timar = Slot(uri=UTD.timar, name="timar", curie=UTD.curie('timar'),
+                   model_uri=UTD.timar, domain=None, range=Optional[Union[dict[Union[str, TimeId], Union[dict, Time]], list[Union[dict, Time]]]])
+
+slots.undervisningsgrupper = Slot(uri=UTD.undervisningsgrupper, name="undervisningsgrupper", curie=UTD.curie('undervisningsgrupper'),
+                   model_uri=UTD.undervisningsgrupper, domain=None, range=Optional[Union[dict[Union[str, UndervisningsgruppeId], Union[dict, Undervisningsgruppe]], list[Union[dict, Undervisningsgruppe]]]])
+
+slots.anmerkningar = Slot(uri=UTD.anmerkningar, name="anmerkningar", curie=UTD.curie('anmerkningar'),
+                   model_uri=UTD.anmerkningar, domain=None, range=Optional[Union[dict[Union[str, AnmerkningerId], Union[dict, Anmerkninger]], list[Union[dict, Anmerkninger]]]])
+
+slots.eksamensgrupper = Slot(uri=UTD.eksamensgrupper, name="eksamensgrupper", curie=UTD.curie('eksamensgrupper'),
+                   model_uri=UTD.eksamensgrupper, domain=None, range=Optional[Union[dict[Union[str, EksamensgruppeId], Union[dict, Eksamensgruppe]], list[Union[dict, Eksamensgruppe]]]])
+
+slots.fravarsoversikt = Slot(uri=UTD.fravarsoversikt, name="fravarsoversikt", curie=UTD.curie('fravarsoversikt'),
+                   model_uri=UTD.fravarsoversikt, domain=None, range=Optional[Union[dict[Union[str, FravarsoversiktId], Union[dict, Fravarsoversikt]], list[Union[dict, Fravarsoversikt]]]])
+
+slots.avlagteprover = Slot(uri=UTD.avlagteprover, name="avlagteprover", curie=UTD.curie('avlagteprover'),
+                   model_uri=UTD.avlagteprover, domain=None, range=Optional[Union[dict[Union[str, AvlagtProveId], Union[dict, AvlagtProve]], list[Union[dict, AvlagtProve]]]])
+
+slots.laerlingar = Slot(uri=UTD.laerlingar, name="laerlingar", curie=UTD.curie('laerlingar'),
+                   model_uri=UTD.laerlingar, domain=None, range=Optional[Union[dict[Union[str, LaerlingId], Union[dict, Laerling]], list[Union[dict, Laerling]]]])
+
+slots.otUngdom = Slot(uri=UTD.otUngdom, name="otUngdom", curie=UTD.curie('otUngdom'),
+                   model_uri=UTD.otUngdom, domain=None, range=Optional[Union[dict[Union[str, OtUngdomId], Union[dict, OtUngdom]], list[Union[dict, OtUngdom]]]])
+
+slots.avbruddsaarsaker = Slot(uri=UTD.avbruddsaarsaker, name="avbruddsaarsaker", curie=UTD.curie('avbruddsaarsaker'),
+                   model_uri=UTD.avbruddsaarsaker, domain=None, range=Optional[Union[dict[Union[str, AvbruddsaarsakId], Union[dict, Avbruddsaarsak]], list[Union[dict, Avbruddsaarsak]]]])
+
+slots.bevistypar = Slot(uri=UTD.bevistypar, name="bevistypar", curie=UTD.curie('bevistypar'),
+                   model_uri=UTD.bevistypar, domain=None, range=Optional[Union[dict[Union[str, BevistypeId], Union[dict, Bevistype]], list[Union[dict, Bevistype]]]])
+
+slots.brevtypar = Slot(uri=UTD.brevtypar, name="brevtypar", curie=UTD.curie('brevtypar'),
+                   model_uri=UTD.brevtypar, domain=None, range=Optional[Union[dict[Union[str, BrevtypeId], Union[dict, Brevtype]], list[Union[dict, Brevtype]]]])
+
+slots.eksamensformer = Slot(uri=UTD.eksamensformer, name="eksamensformer", curie=UTD.curie('eksamensformer'),
+                   model_uri=UTD.eksamensformer, domain=None, range=Optional[Union[dict[Union[str, EksamensformId], Union[dict, Eksamensform]], list[Union[dict, Eksamensform]]]])
+
+slots.elevkategoriar = Slot(uri=UTD.elevkategoriar, name="elevkategoriar", curie=UTD.curie('elevkategoriar'),
+                   model_uri=UTD.elevkategoriar, domain=None, range=Optional[Union[dict[Union[str, ElevkategoriId], Union[dict, Elevkategori]], list[Union[dict, Elevkategori]]]])
+
+slots.fagmerknader = Slot(uri=UTD.fagmerknader, name="fagmerknader", curie=UTD.curie('fagmerknader'),
+                   model_uri=UTD.fagmerknader, domain=None, range=Optional[Union[dict[Union[str, FagmerknadId], Union[dict, Fagmerknad]], list[Union[dict, Fagmerknad]]]])
+
+slots.fravartypar = Slot(uri=UTD.fravartypar, name="fravartypar", curie=UTD.curie('fravartypar'),
+                   model_uri=UTD.fravartypar, domain=None, range=Optional[Union[dict[Union[str, FravartypeId], Union[dict, Fravartype]], list[Union[dict, Fravartype]]]])
+
+slots.fullfortkoder = Slot(uri=UTD.fullfortkoder, name="fullfortkoder", curie=UTD.curie('fullfortkoder'),
+                   model_uri=UTD.fullfortkoder, domain=None, range=Optional[Union[dict[Union[str, FullfortkodeId], Union[dict, Fullfortkode]], list[Union[dict, Fullfortkode]]]])
+
+slots.karakterskalaer = Slot(uri=UTD.karakterskalaer, name="karakterskalaer", curie=UTD.curie('karakterskalaer'),
+                   model_uri=UTD.karakterskalaer, domain=None, range=Optional[Union[dict[Union[str, KarakterskalaId], Union[dict, Karakterskala]], list[Union[dict, Karakterskala]]]])
+
+slots.otEnheter = Slot(uri=UTD.otEnheter, name="otEnheter", curie=UTD.curie('otEnheter'),
+                   model_uri=UTD.otEnheter, domain=None, range=Optional[Union[dict[Union[str, OtEnhetId], Union[dict, OtEnhet]], list[Union[dict, OtEnhet]]]])
+
+slots.karakterverdiar = Slot(uri=UTD.karakterverdiar, name="karakterverdiar", curie=UTD.curie('karakterverdiar'),
+                   model_uri=UTD.karakterverdiar, domain=None, range=Optional[Union[dict[Union[str, KarakterverdiId], Union[dict, Karakterverdi]], list[Union[dict, Karakterverdi]]]])
+
+slots.otStatus = Slot(uri=UTD.otStatus, name="otStatus", curie=UTD.curie('otStatus'),
+                   model_uri=UTD.otStatus, domain=None, range=Optional[Union[dict[Union[str, OtStatusId], Union[dict, OtStatus]], list[Union[dict, OtStatus]]]])
+
+slots.provestatuser = Slot(uri=UTD.provestatuser, name="provestatuser", curie=UTD.curie('provestatuser'),
+                   model_uri=UTD.provestatuser, domain=None, range=Optional[Union[dict[Union[str, ProvestatusId], Union[dict, Provestatus]], list[Union[dict, Provestatus]]]])
+
+slots.skoleeijartypar = Slot(uri=UTD.skoleeijartypar, name="skoleeijartypar", curie=UTD.curie('skoleeijartypar'),
+                   model_uri=UTD.skoleeijartypar, domain=None, range=Optional[Union[dict[Union[str, SkoleeiertypeId], Union[dict, Skoleeiertype]], list[Union[dict, Skoleeiertype]]]])
+
+slots.terminar = Slot(uri=UTD.terminar, name="terminar", curie=UTD.curie('terminar'),
+                   model_uri=UTD.terminar, domain=None, range=Optional[Union[dict[Union[str, TerminId], Union[dict, Termin]], list[Union[dict, Termin]]]])
+
+slots.varseltypar = Slot(uri=UTD.varseltypar, name="varseltypar", curie=UTD.curie('varseltypar'),
+                   model_uri=UTD.varseltypar, domain=None, range=Optional[Union[dict[Union[str, VarseltypeId], Union[dict, Varseltype]], list[Union[dict, Varseltype]]]])
+
+slots.elevforhold = Slot(uri=UTD.elevforhold, name="elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
+
+slots.klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
+                   model_uri=UTD.klassemedlemskap, domain=None, range=Optional[Union[Union[str, KlassemedlemskapId], list[Union[str, KlassemedlemskapId]]]])
+
+slots.kontaktlaerergruppemedlemskap = Slot(uri=UTD.kontaktlaerergruppemedlemskap, name="kontaktlaerergruppemedlemskap", curie=UTD.curie('kontaktlaerergruppemedlemskap'),
+                   model_uri=UTD.kontaktlaerergruppemedlemskap, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppemedlemskapId], list[Union[str, KontaktlaerergruppemedlemskapId]]]])
+
+slots.persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
+                   model_uri=UTD.persongruppemedlemskap, domain=None, range=Optional[Union[Union[str, PersongruppemedlemskapId], list[Union[str, PersongruppemedlemskapId]]]])
+
+slots.programomrademedlemskap = Slot(uri=UTD.programomrademedlemskap, name="programomrademedlemskap", curie=UTD.curie('programomrademedlemskap'),
+                   model_uri=UTD.programomrademedlemskap, domain=None, range=Optional[Union[Union[str, ProgramomrademedlemskapId], list[Union[str, ProgramomrademedlemskapId]]]])
+
+slots.undervisningsgruppemedlemskap = Slot(uri=UTD.undervisningsgruppemedlemskap, name="undervisningsgruppemedlemskap", curie=UTD.curie('undervisningsgruppemedlemskap'),
+                   model_uri=UTD.undervisningsgruppemedlemskap, domain=None, range=Optional[Union[Union[str, UndervisningsgruppemedlemskapId], list[Union[str, UndervisningsgruppemedlemskapId]]]])
+
+slots.eksamensgruppemedlemskap = Slot(uri=UTD.eksamensgruppemedlemskap, name="eksamensgruppemedlemskap", curie=UTD.curie('eksamensgruppemedlemskap'),
+                   model_uri=UTD.eksamensgruppemedlemskap, domain=None, range=Optional[Union[Union[str, EksamensgruppemedlemskapId], list[Union[str, EksamensgruppemedlemskapId]]]])
+
+slots.faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
+                   model_uri=UTD.faggruppemedlemskap, domain=None, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
+
+slots.utdanningsprogram = Slot(uri=UTD.utdanningsprogram, name="utdanningsprogram", curie=UTD.curie('utdanningsprogram'),
+                   model_uri=UTD.utdanningsprogram, domain=None, range=Optional[Union[Union[str, UtdanningsprogramId], list[Union[str, UtdanningsprogramId]]]])
+
+slots.eksamen = Slot(uri=UTD.eksamen, name="eksamen", curie=UTD.curie('eksamen'),
+                   model_uri=UTD.eksamen, domain=None, range=Optional[Union[str, EksamenId]])
+
+slots.fag = Slot(uri=UTD.fag, name="fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.fag, domain=None, range=Optional[Union[str, FagId]])
+
+slots.rom = Slot(uri=UTD.rom, name="rom", curie=UTD.curie('rom'),
+                   model_uri=UTD.rom, domain=None, range=Optional[Union[str, RomId]])
+
+slots.undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.varsel = Slot(uri=UTD.varsel, name="varsel", curie=UTD.curie('varsel'),
+                   model_uri=UTD.varsel, domain=None, range=Optional[Union[Union[str, VarselId], list[Union[str, VarselId]]]])
+
+slots.karakterhistorie = Slot(uri=UTD.karakterhistorie, name="karakterhistorie", curie=UTD.curie('karakterhistorie'),
+                   model_uri=UTD.karakterhistorie, domain=None, range=Optional[Union[Union[str, KarakterhistorieId], list[Union[str, KarakterhistorieId]]]])
+
+slots.sensor = Slot(uri=UTD.sensor, name="sensor", curie=UTD.curie('sensor'),
+                   model_uri=UTD.sensor, domain=None, range=Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]])
+
+slots.elevfravar = Slot(uri=UTD.elevfravar, name="elevfravar", curie=UTD.curie('elevfravar'),
+                   model_uri=UTD.elevfravar, domain=None, range=Optional[Union[str, ElevfravarId]])
+
+slots.elevvurdering = Slot(uri=UTD.elevvurdering, name="elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.elevvurdering, domain=None, range=Optional[Union[str, ElevvurderingId]])
+
+slots.fraversregistrering = Slot(uri=UTD.fraversregistrering, name="fraversregistrering", curie=UTD.curie('fraversregistrering'),
+                   model_uri=UTD.fraversregistrering, domain=None, range=Optional[Union[Union[str, FraversregistreringId], list[Union[str, FraversregistreringId]]]])
+
+slots.halvaarsfagvurdering = Slot(uri=UTD.halvaarsfagvurdering, name="halvaarsfagvurdering", curie=UTD.curie('halvaarsfagvurdering'),
+                   model_uri=UTD.halvaarsfagvurdering, domain=None, range=Optional[Union[Union[str, HalvaarsfagvurderingId], list[Union[str, HalvaarsfagvurderingId]]]])
+
+slots.halvaarsordensvurdering = Slot(uri=UTD.halvaarsordensvurdering, name="halvaarsordensvurdering", curie=UTD.curie('halvaarsordensvurdering'),
+                   model_uri=UTD.halvaarsordensvurdering, domain=None, range=Optional[Union[Union[str, HalvaarsordensvurderingId], list[Union[str, HalvaarsordensvurderingId]]]])
+
+slots.sluttfagvurdering = Slot(uri=UTD.sluttfagvurdering, name="sluttfagvurdering", curie=UTD.curie('sluttfagvurdering'),
+                   model_uri=UTD.sluttfagvurdering, domain=None, range=Optional[Union[Union[str, SluttfagvurderingId], list[Union[str, SluttfagvurderingId]]]])
+
+slots.sluttordensvurdering = Slot(uri=UTD.sluttordensvurdering, name="sluttordensvurdering", curie=UTD.curie('sluttordensvurdering'),
+                   model_uri=UTD.sluttordensvurdering, domain=None, range=Optional[Union[Union[str, SluttordensvurderingId], list[Union[str, SluttordensvurderingId]]]])
+
+slots.underveisfagvurdering = Slot(uri=UTD.underveisfagvurdering, name="underveisfagvurdering", curie=UTD.curie('underveisfagvurdering'),
+                   model_uri=UTD.underveisfagvurdering, domain=None, range=Optional[Union[Union[str, UnderveisfagvurderingId], list[Union[str, UnderveisfagvurderingId]]]])
+
+slots.underveisordensvurdering = Slot(uri=UTD.underveisordensvurdering, name="underveisordensvurdering", curie=UTD.curie('underveisordensvurdering'),
+                   model_uri=UTD.underveisordensvurdering, domain=None, range=Optional[Union[Union[str, UnderveisordensvurderingId], list[Union[str, UnderveisordensvurderingId]]]])
+
+slots.eksamensvurdering = Slot(uri=UTD.eksamensvurdering, name="eksamensvurdering", curie=UTD.curie('eksamensvurdering'),
+                   model_uri=UTD.eksamensvurdering, domain=None, range=Optional[Union[Union[str, EksamensvurderingId], list[Union[str, EksamensvurderingId]]]])
+
+slots.vitnemalsmerknad = Slot(uri=UTD.vitnemalsmerknad, name="vitnemalsmerknad", curie=UTD.curie('vitnemalsmerknad'),
+                   model_uri=UTD.vitnemalsmerknad, domain=None, range=Optional[Union[str, VitnemalsmerknadId]])
+
+slots.betalingsstatus = Slot(uri=UTD.betalingsstatus, name="betalingsstatus", curie=UTD.curie('betalingsstatus'),
+                   model_uri=UTD.betalingsstatus, domain=None, range=Optional[Union[str, BetalingsstatusId]])
+
+slots.fagstatus = Slot(uri=UTD.fagstatus, name="fagstatus", curie=UTD.curie('fagstatus'),
+                   model_uri=UTD.fagstatus, domain=None, range=Optional[Union[str, FagstatusId]])
+
+slots.karakterstatus = Slot(uri=UTD.karakterstatus, name="karakterstatus", curie=UTD.curie('karakterstatus'),
+                   model_uri=UTD.karakterstatus, domain=None, range=Optional[Union[str, KarakterstatusId]])
+
+slots.skoleaar = Slot(uri=UTD.skoleaar, name="skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
+
+slots.tilrettelegging = Slot(uri=UTD.tilrettelegging, name="tilrettelegging", curie=UTD.curie('tilrettelegging'),
+                   model_uri=UTD.tilrettelegging, domain=None, range=Optional[Union[str, TilretteleggingId]])
+
+slots.avbruddsdato = Slot(uri=UTD.avbruddsdato, name="avbruddsdato", curie=UTD.curie('avbruddsdato'),
+                   model_uri=UTD.avbruddsdato, domain=None, range=Optional[Union[str, XSDDate]])
+
+slots.tosprakligFagopplaering = Slot(uri=UTD.tosprakligFagopplaering, name="tosprakligFagopplaering", curie=UTD.curie('tosprakligFagopplaering'),
+                   model_uri=UTD.tosprakligFagopplaering, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.kategori = Slot(uri=UTD.kategori, name="kategori", curie=UTD.curie('kategori'),
+                   model_uri=UTD.kategori, domain=None, range=Optional[Union[str, ElevkategoriId]])
+
+slots.avbruddsarsak = Slot(uri=UTD.avbruddsarsak, name="avbruddsarsak", curie=UTD.curie('avbruddsarsak'),
+                   model_uri=UTD.avbruddsarsak, domain=None, range=Optional[Union[str, AvbruddsaarsakId]])
+
+slots.fraversregistreringer = Slot(uri=UTD.fraversregistreringer, name="fraversregistreringer", curie=UTD.curie('fraversregistreringer'),
+                   model_uri=UTD.fraversregistreringer, domain=None, range=Optional[Union[Union[str, ElevfravarId], list[Union[str, ElevfravarId]]]])
+
+slots.domenenavn = Slot(uri=UTD.domenenavn, name="domenenavn", curie=UTD.curie('domenenavn'),
+                   model_uri=UTD.domenenavn, domain=None, range=Optional[str])
+
+slots.juridiskNavn = Slot(uri=UTD.juridiskNavn, name="juridiskNavn", curie=UTD.curie('juridiskNavn'),
+                   model_uri=UTD.juridiskNavn, domain=None, range=Optional[str])
+
+slots.skolenummer = Slot(uri=UTD.skolenummer, name="skolenummer", curie=UTD.curie('skolenummer'),
+                   model_uri=UTD.skolenummer, domain=None, range=Optional[Union[dict, Identifikator]])
+
+slots.organisasjon = Slot(uri=UTD.organisasjon, name="organisasjon", curie=UTD.curie('organisasjon'),
+                   model_uri=UTD.organisasjon, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.skole = Slot(uri=UTD.skole, name="skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.skole, domain=None, range=Optional[Union[str, SkoleId]])
+
+slots.kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
+                   model_uri=UTD.kontaktlaerergruppe, domain=None, range=Optional[Union[str, KontaktlaerergruppeId]])
+
+slots.faggruppe = Slot(uri=UTD.faggruppe, name="faggruppe", curie=UTD.curie('faggruppe'),
+                   model_uri=UTD.faggruppe, domain=None, range=Optional[Union[str, FaggruppeId]])
+
+slots.skoleeierType = Slot(uri=UTD.skoleeierType, name="skoleeierType", curie=UTD.curie('skoleeierType'),
+                   model_uri=UTD.skoleeierType, domain=None, range=Optional[Union[str, SkoleeiertypeId]])
+
+slots.vigoreferanse = Slot(uri=UTD.vigoreferanse, name="vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.eksamensgruppe, domain=None, range=Optional[Union[str, EksamensgruppeId]])
+
+slots.feidenavn = Slot(uri=UTD.feidenavn, name="feidenavn", curie=UTD.curie('feidenavn'),
+                   model_uri=UTD.feidenavn, domain=None, range=Optional[Union[dict, Identifikator]])
+
+slots.personalressurs = Slot(uri=UTD.personalressurs, name="personalressurs", curie=UTD.curie('personalressurs'),
+                   model_uri=UTD.personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.skoleressurs = Slot(uri=UTD.skoleressurs, name="skoleressurs", curie=UTD.curie('skoleressurs'),
+                   model_uri=UTD.skoleressurs, domain=None, range=Optional[Union[str, SkoleressursId]])
+
+slots.fravarsprosent = Slot(uri=UTD.fravarsprosent, name="fravarsprosent", curie=UTD.curie('fravarsprosent'),
+                   model_uri=UTD.fravarsprosent, domain=None, range=Optional[int])
+
+slots.sendt = Slot(uri=UTD.sendt, name="sendt", curie=UTD.curie('sendt'),
+                   model_uri=UTD.sendt, domain=None, range=Optional[Union[str, XSDDate]])
+
+slots.tekst = Slot(uri=UTD.tekst, name="tekst", curie=UTD.curie('tekst'),
+                   model_uri=UTD.tekst, domain=None, range=Optional[str])
+
+slots.utsteder = Slot(uri=UTD.utsteder, name="utsteder", curie=UTD.curie('utsteder'),
+                   model_uri=UTD.utsteder, domain=None, range=Optional[Union[str, SkoleressursId]])
+
+slots.karakteransvarlig = Slot(uri=UTD.karakteransvarlig, name="karakteransvarlig", curie=UTD.curie('karakteransvarlig'),
+                   model_uri=UTD.karakteransvarlig, domain=None, range=Optional[Union[str, SkoleressursId]])
+
+slots.klasse = Slot(uri=UTD.klasse, name="klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.klasse, domain=None, range=Optional[Union[str, KlasseId]])
+
+slots.termin = Slot(uri=UTD.termin, name="termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.termin, domain=None, range=Optional[Union[str, TerminId]])
+
+slots.trinn = Slot(uri=UTD.trinn, name="trinn", curie=UTD.curie('trinn'),
+                   model_uri=UTD.trinn, domain=None, range=Optional[Union[Union[str, ArstrinnId], list[Union[str, ArstrinnId]]]])
+
+slots.gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
+                   model_uri=UTD.gruppemedlemskap, domain=None, range=Optional[Union[Union[str, GruppemedlemskapId], list[Union[str, GruppemedlemskapId]]]])
+
+slots.persongruppe = Slot(uri=UTD.persongruppe, name="persongruppe", curie=UTD.curie('persongruppe'),
+                   model_uri=UTD.persongruppe, domain=None, range=Optional[Union[str, PersongruppeId]])
+
+slots.programomrade = Slot(uri=UTD.programomrade, name="programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.programomrade, domain=None, range=Optional[Union[str, ProgramomradeId]])
+
+slots.grepreferanse = Slot(uri=UTD.grepreferanse, name="grepreferanse", curie=UTD.curie('grepreferanse'),
+                   model_uri=UTD.grepreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.oppmoetetidspunkt = Slot(uri=UTD.oppmoetetidspunkt, name="oppmoetetidspunkt", curie=UTD.curie('oppmoetetidspunkt'),
+                   model_uri=UTD.oppmoetetidspunkt, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.tidsrom = Slot(uri=UTD.tidsrom, name="tidsrom", curie=UTD.curie('tidsrom'),
+                   model_uri=UTD.tidsrom, domain=None, range=Optional[Union[dict, Periode]])
+
+slots.arbeidsforhold = Slot(uri=UTD.arbeidsforhold, name="arbeidsforhold", curie=UTD.curie('arbeidsforhold'),
+                   model_uri=UTD.arbeidsforhold, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.skuletime = Slot(uri=UTD.skuletime, name="skuletime", curie=UTD.curie('skuletime'),
+                   model_uri=UTD.skuletime, domain=None, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
+
+slots.undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
+                   model_uri=UTD.undervisningsgruppe, domain=None, range=Optional[Union[str, UndervisningsgruppeId]])
+
+slots.kommentar = Slot(uri=UTD.kommentar, name="kommentar", curie=UTD.curie('kommentar'),
+                   model_uri=UTD.kommentar, domain=None, range=Optional[str])
+
+slots.vurderingsdato = Slot(uri=UTD.vurderingsdato, name="vurderingsdato", curie=UTD.curie('vurderingsdato'),
+                   model_uri=UTD.vurderingsdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.karakter = Slot(uri=UTD.karakter, name="karakter", curie=UTD.curie('karakter'),
+                   model_uri=UTD.karakter, domain=None, range=Optional[Union[str, KarakterverdiId]])
+
+slots.atferd = Slot(uri=UTD.atferd, name="atferd", curie=UTD.curie('atferd'),
+                   model_uri=UTD.atferd, domain=None, range=Optional[Union[str, KarakterverdiId]])
+
+slots.orden = Slot(uri=UTD.orden, name="orden", curie=UTD.curie('orden'),
+                   model_uri=UTD.orden, domain=None, range=Optional[Union[str, KarakterverdiId]])
+
+slots.delegert = Slot(uri=UTD.delegert, name="delegert", curie=UTD.curie('delegert'),
+                   model_uri=UTD.delegert, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.kandidatnummer = Slot(uri=UTD.kandidatnummer, name="kandidatnummer", curie=UTD.curie('kandidatnummer'),
+                   model_uri=UTD.kandidatnummer, domain=None, range=Optional[str])
+
+slots.delegertTil = Slot(uri=UTD.delegertTil, name="delegertTil", curie=UTD.curie('delegertTil'),
+                   model_uri=UTD.delegertTil, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.foretrukketSkole = Slot(uri=UTD.foretrukketSkole, name="foretrukketSkole", curie=UTD.curie('foretrukketSkole'),
+                   model_uri=UTD.foretrukketSkole, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.foretrukketSensor = Slot(uri=UTD.foretrukketSensor, name="foretrukketSensor", curie=UTD.curie('foretrukketSensor'),
+                   model_uri=UTD.foretrukketSensor, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.nus = Slot(uri=UTD.nus, name="nus", curie=UTD.curie('nus'),
+                   model_uri=UTD.nus, domain=None, range=Optional[Union[str, KarakterstatusId]])
+
+slots.halvaar = Slot(uri=UTD.halvaar, name="halvaar", curie=UTD.curie('halvaar'),
+                   model_uri=UTD.halvaar, domain=None, range=Optional[Union[dict, Fravarsprosent]])
+
+slots.skoleaarFravar = Slot(uri=UTD.skoleaarFravar, name="skoleaarFravar", curie=UTD.curie('skoleaarFravar'),
+                   model_uri=UTD.skoleaarFravar, domain=None, range=Optional[Union[dict, Fravarsprosent]])
+
+slots.fravaerstimer = Slot(uri=UTD.fravaerstimer, name="fravaerstimer", curie=UTD.curie('fravaerstimer'),
+                   model_uri=UTD.fravaerstimer, domain=None, range=Optional[int])
+
+slots.prosent = Slot(uri=UTD.prosent, name="prosent", curie=UTD.curie('prosent'),
+                   model_uri=UTD.prosent, domain=None, range=Optional[int])
+
+slots.undervisningstimer = Slot(uri=UTD.undervisningstimer, name="undervisningstimer", curie=UTD.curie('undervisningstimer'),
+                   model_uri=UTD.undervisningstimer, domain=None, range=Optional[int])
+
+slots.forersPaaVitnemaal = Slot(uri=UTD.forersPaaVitnemaal, name="forersPaaVitnemaal", curie=UTD.curie('forersPaaVitnemaal'),
+                   model_uri=UTD.forersPaaVitnemaal, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.periode = Slot(uri=UTD.periode, name="periode", curie=UTD.curie('periode'),
+                   model_uri=UTD.periode, domain=None, range=Optional[Union[dict, Periode]])
+
+slots.registrertAv = Slot(uri=UTD.registrertAv, name="registrertAv", curie=UTD.curie('registrertAv'),
+                   model_uri=UTD.registrertAv, domain=None, range=Optional[Union[str, SkoleressursId]])
+
+slots.fravartype = Slot(uri=UTD.fravartype, name="fravartype", curie=UTD.curie('fravartype'),
+                   model_uri=UTD.fravartype, domain=None, range=Optional[Union[str, FravartypeId]])
+
+slots.endretDato = Slot(uri=UTD.endretDato, name="endretDato", curie=UTD.curie('endretDato'),
+                   model_uri=UTD.endretDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.oppdatertAv = Slot(uri=UTD.oppdatertAv, name="oppdatertAv", curie=UTD.curie('oppdatertAv'),
+                   model_uri=UTD.oppdatertAv, domain=None, range=Optional[Union[str, SkoleressursId]])
+
+slots.opprinneligKarakterverdi = Slot(uri=UTD.opprinneligKarakterverdi, name="opprinneligKarakterverdi", curie=UTD.curie('opprinneligKarakterverdi'),
+                   model_uri=UTD.opprinneligKarakterverdi, domain=None, range=Optional[Union[str, KarakterverdiId]])
+
+slots.opprinneligKarakterstatus = Slot(uri=UTD.opprinneligKarakterstatus, name="opprinneligKarakterstatus", curie=UTD.curie('opprinneligKarakterstatus'),
+                   model_uri=UTD.opprinneligKarakterstatus, domain=None, range=Optional[Union[str, KarakterstatusId]])
+
+slots.karakterverdi = Slot(uri=UTD.karakterverdi, name="karakterverdi", curie=UTD.curie('karakterverdi'),
+                   model_uri=UTD.karakterverdi, domain=None, range=Optional[Union[str, KarakterverdiId]])
+
+slots.aktiv = Slot(uri=UTD.aktiv, name="aktiv", curie=UTD.curie('aktiv'),
+                   model_uri=UTD.aktiv, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.sensornummer = Slot(uri=UTD.sensornummer, name="sensornummer", curie=UTD.curie('sensornummer'),
+                   model_uri=UTD.sensornummer, domain=None, range=Optional[int])
+
+slots.eksamensdato = Slot(uri=UTD.eksamensdato, name="eksamensdato", curie=UTD.curie('eksamensdato'),
+                   model_uri=UTD.eksamensdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.eksamensform = Slot(uri=UTD.eksamensform, name="eksamensform", curie=UTD.curie('eksamensform'),
+                   model_uri=UTD.eksamensform, domain=None, range=Optional[Union[str, EksamensformId]])
+
+slots.provedato = Slot(uri=UTD.provedato, name="provedato", curie=UTD.curie('provedato'),
+                   model_uri=UTD.provedato, domain=None, range=Optional[Union[str, XSDDate]])
+
+slots.provestatus = Slot(uri=UTD.provestatus, name="provestatus", curie=UTD.curie('provestatus'),
+                   model_uri=UTD.provestatus, domain=None, range=Optional[Union[str, ProvestatusId]])
+
+slots.fullfortkode = Slot(uri=UTD.fullfortkode, name="fullfortkode", curie=UTD.curie('fullfortkode'),
+                   model_uri=UTD.fullfortkode, domain=None, range=Optional[Union[str, FullfortkodeId]])
+
+slots.brevtype = Slot(uri=UTD.brevtype, name="brevtype", curie=UTD.curie('brevtype'),
+                   model_uri=UTD.brevtype, domain=None, range=Optional[Union[str, BrevtypeId]])
+
+slots.bevistype = Slot(uri=UTD.bevistype, name="bevistype", curie=UTD.curie('bevistype'),
+                   model_uri=UTD.bevistype, domain=None, range=Optional[Union[str, BevistypeId]])
+
+slots.kontraktstype = Slot(uri=UTD.kontraktstype, name="kontraktstype", curie=UTD.curie('kontraktstype'),
+                   model_uri=UTD.kontraktstype, domain=None, range=Optional[str])
+
+slots.laretid = Slot(uri=UTD.laretid, name="laretid", curie=UTD.curie('laretid'),
+                   model_uri=UTD.laretid, domain=None, range=Optional[Union[dict, Periode]])
+
+slots.bedrift = Slot(uri=UTD.bedrift, name="bedrift", curie=UTD.curie('bedrift'),
+                   model_uri=UTD.bedrift, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.avlagtprove = Slot(uri=UTD.avlagtprove, name="avlagtprove", curie=UTD.curie('avlagtprove'),
+                   model_uri=UTD.avlagtprove, domain=None, range=Optional[Union[Union[str, AvlagtProveId], list[Union[str, AvlagtProveId]]]])
+
+slots.status = Slot(uri=UTD.status, name="status", curie=UTD.curie('status'),
+                   model_uri=UTD.status, domain=None, range=Optional[Union[str, OtStatusId]])
+
+slots.enhet = Slot(uri=UTD.enhet, name="enhet", curie=UTD.curie('enhet'),
+                   model_uri=UTD.enhet, domain=None, range=Optional[Union[str, OtEnhetId]])
+
+slots.verdi = Slot(uri=UTD.verdi, name="verdi", curie=UTD.curie('verdi'),
+                   model_uri=UTD.verdi, domain=None, range=Optional[Union[Union[str, KarakterverdiId], list[Union[str, KarakterverdiId]]]])
+
+slots.skala = Slot(uri=UTD.skala, name="skala", curie=UTD.curie('skala'),
+                   model_uri=UTD.skala, domain=None, range=Optional[Union[str, KarakterskalaId]])
+
+slots.fagmerknad = Slot(uri=UTD.fagmerknad, name="fagmerknad", curie=UTD.curie('fagmerknad'),
+                   model_uri=UTD.fagmerknad, domain=None, range=Optional[Union[str, FagmerknadId]])
+
 slots.id = Slot(uri=FINT.id, name="id", curie=FINT.curie('id'),
                    model_uri=UTD.id, domain=None, range=URIRef)
 
-slots.utdanningContainer__elevar = Slot(uri=UTD.elevar, name="utdanningContainer__elevar", curie=UTD.curie('elevar'),
-                   model_uri=UTD.utdanningContainer__elevar, domain=None, range=Optional[Union[dict[Union[str, ElevId], Union[dict, Elev]], list[Union[dict, Elev]]]])
+slots.gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
 
-slots.utdanningContainer__skolar = Slot(uri=UTD.skolar, name="utdanningContainer__skolar", curie=UTD.curie('skolar'),
-                   model_uri=UTD.utdanningContainer__skolar, domain=None, range=Optional[Union[dict[Union[str, SkoleId], Union[dict, Skole]], list[Union[dict, Skole]]]])
+slots.kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=UTD.kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
 
-slots.utdanningContainer__skoleressursar = Slot(uri=UTD.skoleressursar, name="utdanningContainer__skoleressursar", curie=UTD.curie('skoleressursar'),
-                   model_uri=UTD.utdanningContainer__skoleressursar, domain=None, range=Optional[Union[dict[Union[str, SkoleressursId], Union[dict, Skoleressurs]], list[Union[dict, Skoleressurs]]]])
+slots.postadresse = Slot(uri=FINT.postadresse, name="postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=UTD.postadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.utdanningContainer__elevforhold = Slot(uri=UTD.elevforhold, name="utdanningContainer__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.utdanningContainer__elevforhold, domain=None, range=Optional[Union[dict[Union[str, ElevforholdId], Union[dict, Elevforhold]], list[Union[dict, Elevforhold]]]])
+slots.forretningsadresse = Slot(uri=FINT.forretningsadresse, name="forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=UTD.forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.utdanningContainer__elevtilrettelegging = Slot(uri=UTD.elevtilrettelegging, name="utdanningContainer__elevtilrettelegging", curie=UTD.curie('elevtilrettelegging'),
-                   model_uri=UTD.utdanningContainer__elevtilrettelegging, domain=None, range=Optional[Union[dict[Union[str, ElevtilretteleggingId], Union[dict, Elevtilrettelegging]], list[Union[dict, Elevtilrettelegging]]]])
+slots.organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=UTD.organisasjonsnavn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__klasser = Slot(uri=UTD.klasser, name="utdanningContainer__klasser", curie=UTD.curie('klasser'),
-                   model_uri=UTD.utdanningContainer__klasser, domain=None, range=Optional[Union[dict[Union[str, KlasseId], Union[dict, Klasse]], list[Union[dict, Klasse]]]])
+slots.organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=UTD.organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.utdanningContainer__klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="utdanningContainer__klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
-                   model_uri=UTD.utdanningContainer__klassemedlemskap, domain=None, range=Optional[Union[dict[Union[str, KlassemedlemskapId], Union[dict, Klassemedlemskap]], list[Union[dict, Klassemedlemskap]]]])
+slots.kode = Slot(uri=FINT.kode, name="kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.kode, domain=None, range=Optional[str])
 
-slots.utdanningContainer__kontaktlaerergrupper = Slot(uri=UTD.kontaktlaerergrupper, name="utdanningContainer__kontaktlaerergrupper", curie=UTD.curie('kontaktlaerergrupper'),
-                   model_uri=UTD.utdanningContainer__kontaktlaerergrupper, domain=None, range=Optional[Union[dict[Union[str, KontaktlaerergruppeId], Union[dict, Kontaktlaerergruppe]], list[Union[dict, Kontaktlaerergruppe]]]])
+slots.navn = Slot(uri=FINT.navn, name="navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.navn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__kontaktlaerergruppemedlemskap = Slot(uri=UTD.kontaktlaerergruppemedlemskap, name="utdanningContainer__kontaktlaerergruppemedlemskap", curie=UTD.curie('kontaktlaerergruppemedlemskap'),
-                   model_uri=UTD.utdanningContainer__kontaktlaerergruppemedlemskap, domain=None, range=Optional[Union[dict[Union[str, KontaktlaerergruppemedlemskapId], Union[dict, Kontaktlaerergruppemedlemskap]], list[Union[dict, Kontaktlaerergruppemedlemskap]]]])
+slots.passiv = Slot(uri=FINT.passiv, name="passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.passiv, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.utdanningContainer__persongrupper = Slot(uri=UTD.persongrupper, name="utdanningContainer__persongrupper", curie=UTD.curie('persongrupper'),
-                   model_uri=UTD.utdanningContainer__persongrupper, domain=None, range=Optional[Union[dict[Union[str, PersongruppeId], Union[dict, Persongruppe]], list[Union[dict, Persongruppe]]]])
+slots.identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=UTD.identifikatorverdi, domain=None, range=Optional[str])
 
-slots.utdanningContainer__persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="utdanningContainer__persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
-                   model_uri=UTD.utdanningContainer__persongruppemedlemskap, domain=None, range=Optional[Union[dict[Union[str, PersongruppemedlemskapId], Union[dict, Persongruppemedlemskap]], list[Union[dict, Persongruppemedlemskap]]]])
+slots.beskrivelse = Slot(uri=FINT.beskrivelse, name="beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.beskrivelse, domain=None, range=Optional[str])
 
-slots.utdanningContainer__varsel = Slot(uri=UTD.varsel, name="utdanningContainer__varsel", curie=UTD.curie('varsel'),
-                   model_uri=UTD.utdanningContainer__varsel, domain=None, range=Optional[Union[dict[Union[str, VarselId], Union[dict, Varsel]], list[Union[dict, Varsel]]]])
+slots.start = Slot(uri=FINT.start, name="start", curie=FINT.curie('start'),
+                   model_uri=UTD.start, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.utdanningContainer__arstrinn = Slot(uri=UTD.arstrinn, name="utdanningContainer__arstrinn", curie=UTD.curie('arstrinn'),
-                   model_uri=UTD.utdanningContainer__arstrinn, domain=None, range=Optional[Union[dict[Union[str, ArstrinnId], Union[dict, Arstrinn]], list[Union[dict, Arstrinn]]]])
+slots.slutt = Slot(uri=FINT.slutt, name="slutt", curie=FINT.curie('slutt'),
+                   model_uri=UTD.slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.utdanningContainer__programomrader = Slot(uri=UTD.programomrader, name="utdanningContainer__programomrader", curie=UTD.curie('programomrader'),
-                   model_uri=UTD.utdanningContainer__programomrader, domain=None, range=Optional[Union[dict[Union[str, ProgramomradeId], Union[dict, Programomrade]], list[Union[dict, Programomrade]]]])
+slots.fornavn = Slot(uri=FINT.fornavn, name="fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=UTD.fornavn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__programomrademedlemskap = Slot(uri=UTD.programomrademedlemskap, name="utdanningContainer__programomrademedlemskap", curie=UTD.curie('programomrademedlemskap'),
-                   model_uri=UTD.utdanningContainer__programomrademedlemskap, domain=None, range=Optional[Union[dict[Union[str, ProgramomrademedlemskapId], Union[dict, Programomrademedlemskap]], list[Union[dict, Programomrademedlemskap]]]])
+slots.mellomnavn = Slot(uri=FINT.mellomnavn, name="mellomnavn", curie=FINT.curie('mellomnavn'),
+                   model_uri=UTD.mellomnavn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__utdanningsprogram = Slot(uri=UTD.utdanningsprogram, name="utdanningContainer__utdanningsprogram", curie=UTD.curie('utdanningsprogram'),
-                   model_uri=UTD.utdanningContainer__utdanningsprogram, domain=None, range=Optional[Union[dict[Union[str, UtdanningsprogramId], Union[dict, Utdanningsprogram]], list[Union[dict, Utdanningsprogram]]]])
+slots.etternavn = Slot(uri=FINT.etternavn, name="etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=UTD.etternavn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__eksamen = Slot(uri=UTD.eksamen, name="utdanningContainer__eksamen", curie=UTD.curie('eksamen'),
-                   model_uri=UTD.utdanningContainer__eksamen, domain=None, range=Optional[Union[dict[Union[str, EksamenId], Union[dict, Eksamen]], list[Union[dict, Eksamen]]]])
+slots.epostadresse = Slot(uri=FINT.epostadresse, name="epostadresse", curie=FINT.curie('epostadresse'),
+                   model_uri=UTD.epostadresse, domain=None, range=Optional[str])
 
-slots.utdanningContainer__fag = Slot(uri=UTD.fag, name="utdanningContainer__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.utdanningContainer__fag, domain=None, range=Optional[Union[dict[Union[str, FagId], Union[dict, Fag]], list[Union[dict, Fag]]]])
+slots.mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
+                   model_uri=UTD.mobiltelefonnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__faggrupper = Slot(uri=UTD.faggrupper, name="utdanningContainer__faggrupper", curie=UTD.curie('faggrupper'),
-                   model_uri=UTD.utdanningContainer__faggrupper, domain=None, range=Optional[Union[dict[Union[str, FaggruppeId], Union[dict, Faggruppe]], list[Union[dict, Faggruppe]]]])
+slots.nettsted = Slot(uri=FINT.nettsted, name="nettsted", curie=FINT.curie('nettsted'),
+                   model_uri=UTD.nettsted, domain=None, range=Optional[str])
 
-slots.utdanningContainer__faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="utdanningContainer__faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
-                   model_uri=UTD.utdanningContainer__faggruppemedlemskap, domain=None, range=Optional[Union[dict[Union[str, FaggruppemedlemskapId], Union[dict, Faggruppemedlemskap]], list[Union[dict, Faggruppemedlemskap]]]])
+slots.sip = Slot(uri=FINT.sip, name="sip", curie=FINT.curie('sip'),
+                   model_uri=UTD.sip, domain=None, range=Optional[str])
 
-slots.utdanningContainer__rom = Slot(uri=UTD.rom, name="utdanningContainer__rom", curie=UTD.curie('rom'),
-                   model_uri=UTD.utdanningContainer__rom, domain=None, range=Optional[Union[dict[Union[str, RomId], Union[dict, Rom]], list[Union[dict, Rom]]]])
+slots.telefonnummer = Slot(uri=FINT.telefonnummer, name="telefonnummer", curie=FINT.curie('telefonnummer'),
+                   model_uri=UTD.telefonnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__timar = Slot(uri=UTD.timar, name="utdanningContainer__timar", curie=UTD.curie('timar'),
-                   model_uri=UTD.utdanningContainer__timar, domain=None, range=Optional[Union[dict[Union[str, TimeId], Union[dict, Time]], list[Union[dict, Time]]]])
+slots.adresselinje = Slot(uri=FINT.adresselinje, name="adresselinje", curie=FINT.curie('adresselinje'),
+                   model_uri=UTD.adresselinje, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.utdanningContainer__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="utdanningContainer__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.utdanningContainer__undervisningsforhold, domain=None, range=Optional[Union[dict[Union[str, UndervisningsforholdId], Union[dict, Undervisningsforhold]], list[Union[dict, Undervisningsforhold]]]])
+slots.postnummer = Slot(uri=FINT.postnummer, name="postnummer", curie=FINT.curie('postnummer'),
+                   model_uri=UTD.postnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__undervisningsgrupper = Slot(uri=UTD.undervisningsgrupper, name="utdanningContainer__undervisningsgrupper", curie=UTD.curie('undervisningsgrupper'),
-                   model_uri=UTD.utdanningContainer__undervisningsgrupper, domain=None, range=Optional[Union[dict[Union[str, UndervisningsgruppeId], Union[dict, Undervisningsgruppe]], list[Union[dict, Undervisningsgruppe]]]])
+slots.poststed = Slot(uri=FINT.poststed, name="poststed", curie=FINT.curie('poststed'),
+                   model_uri=UTD.poststed, domain=None, range=Optional[str])
 
-slots.utdanningContainer__undervisningsgruppemedlemskap = Slot(uri=UTD.undervisningsgruppemedlemskap, name="utdanningContainer__undervisningsgruppemedlemskap", curie=UTD.curie('undervisningsgruppemedlemskap'),
-                   model_uri=UTD.utdanningContainer__undervisningsgruppemedlemskap, domain=None, range=Optional[Union[dict[Union[str, UndervisningsgruppemedlemskapId], Union[dict, Undervisningsgruppemedlemskap]], list[Union[dict, Undervisningsgruppemedlemskap]]]])
+slots.land = Slot(uri=FINT.land, name="land", curie=FINT.curie('land'),
+                   model_uri=UTD.land, domain=None, range=Optional[Union[str, LandkodeId]])
 
-slots.utdanningContainer__anmerkningar = Slot(uri=UTD.anmerkningar, name="utdanningContainer__anmerkningar", curie=UTD.curie('anmerkningar'),
-                   model_uri=UTD.utdanningContainer__anmerkningar, domain=None, range=Optional[Union[dict[Union[str, AnmerkningerId], Union[dict, Anmerkninger]], list[Union[dict, Anmerkninger]]]])
+slots.adresse = Slot(uri=FINT.adresse, name="adresse", curie=FINT.curie('adresse'),
+                   model_uri=UTD.adresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.utdanningContainer__eksamensgrupper = Slot(uri=UTD.eksamensgrupper, name="utdanningContainer__eksamensgrupper", curie=UTD.curie('eksamensgrupper'),
-                   model_uri=UTD.utdanningContainer__eksamensgrupper, domain=None, range=Optional[Union[dict[Union[str, EksamensgruppeId], Union[dict, Eksamensgruppe]], list[Union[dict, Eksamensgruppe]]]])
+slots.bruksnummer = Slot(uri=FINT.bruksnummer, name="bruksnummer", curie=FINT.curie('bruksnummer'),
+                   model_uri=UTD.bruksnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__eksamensgruppemedlemskap = Slot(uri=UTD.eksamensgruppemedlemskap, name="utdanningContainer__eksamensgruppemedlemskap", curie=UTD.curie('eksamensgruppemedlemskap'),
-                   model_uri=UTD.utdanningContainer__eksamensgruppemedlemskap, domain=None, range=Optional[Union[dict[Union[str, EksamensgruppemedlemskapId], Union[dict, Eksamensgruppemedlemskap]], list[Union[dict, Eksamensgruppemedlemskap]]]])
+slots.festenummer = Slot(uri=FINT.festenummer, name="festenummer", curie=FINT.curie('festenummer'),
+                   model_uri=UTD.festenummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__eksamensvurdering = Slot(uri=UTD.eksamensvurdering, name="utdanningContainer__eksamensvurdering", curie=UTD.curie('eksamensvurdering'),
-                   model_uri=UTD.utdanningContainer__eksamensvurdering, domain=None, range=Optional[Union[dict[Union[str, EksamensvurderingId], Union[dict, Eksamensvurdering]], list[Union[dict, Eksamensvurdering]]]])
+slots.gaardsnummer = Slot(uri=FINT.gaardsnummer, name="gaardsnummer", curie=FINT.curie('gaardsnummer'),
+                   model_uri=UTD.gaardsnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__elevfravar = Slot(uri=UTD.elevfravar, name="utdanningContainer__elevfravar", curie=UTD.curie('elevfravar'),
-                   model_uri=UTD.utdanningContainer__elevfravar, domain=None, range=Optional[Union[dict[Union[str, ElevfravarId], Union[dict, Elevfravar]], list[Union[dict, Elevfravar]]]])
+slots.seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
+                   model_uri=UTD.seksjonsnummer, domain=None, range=Optional[str])
 
-slots.utdanningContainer__elevvurdering = Slot(uri=UTD.elevvurdering, name="utdanningContainer__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.utdanningContainer__elevvurdering, domain=None, range=Optional[Union[dict[Union[str, ElevvurderingId], Union[dict, Elevvurdering]], list[Union[dict, Elevvurdering]]]])
+slots.kommunenummer = Slot(uri=FINT.kommunenummer, name="kommunenummer", curie=FINT.curie('kommunenummer'),
+                   model_uri=UTD.kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.utdanningContainer__fravarsoversikt = Slot(uri=UTD.fravarsoversikt, name="utdanningContainer__fravarsoversikt", curie=UTD.curie('fravarsoversikt'),
-                   model_uri=UTD.utdanningContainer__fravarsoversikt, domain=None, range=Optional[Union[dict[Union[str, FravarsoversiktId], Union[dict, Fravarsoversikt]], list[Union[dict, Fravarsoversikt]]]])
+slots.fylke = Slot(uri=FINT.fylke, name="fylke", curie=FINT.curie('fylke'),
+                   model_uri=UTD.fylke, domain=None, range=Optional[Union[str, FylkeId]])
 
-slots.utdanningContainer__fraversregistrering = Slot(uri=UTD.fraversregistrering, name="utdanningContainer__fraversregistrering", curie=UTD.curie('fraversregistrering'),
-                   model_uri=UTD.utdanningContainer__fraversregistrering, domain=None, range=Optional[Union[dict[Union[str, FraversregistreringId], Union[dict, Fraversregistrering]], list[Union[dict, Fraversregistrering]]]])
+slots.kommune = Slot(uri=FINT.kommune, name="kommune", curie=FINT.curie('kommune'),
+                   model_uri=UTD.kommune, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.utdanningContainer__halvaarsfagvurdering = Slot(uri=UTD.halvaarsfagvurdering, name="utdanningContainer__halvaarsfagvurdering", curie=UTD.curie('halvaarsfagvurdering'),
-                   model_uri=UTD.utdanningContainer__halvaarsfagvurdering, domain=None, range=Optional[Union[dict[Union[str, HalvaarsfagvurderingId], Union[dict, Halvaarsfagvurdering]], list[Union[dict, Halvaarsfagvurdering]]]])
+slots.kjonn = Slot(uri=FINT.kjonn, name="kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=UTD.kjonn, domain=None, range=Optional[Union[str, KjonnId]])
 
-slots.utdanningContainer__halvaarsordensvurdering = Slot(uri=UTD.halvaarsordensvurdering, name="utdanningContainer__halvaarsordensvurdering", curie=UTD.curie('halvaarsordensvurdering'),
-                   model_uri=UTD.utdanningContainer__halvaarsordensvurdering, domain=None, range=Optional[Union[dict[Union[str, HalvaarsordensvurderingId], Union[dict, Halvaarsordensvurdering]], list[Union[dict, Halvaarsordensvurdering]]]])
+slots.bokstavkode = Slot(uri=FINT.bokstavkode, name="bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=UTD.bokstavkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.utdanningContainer__karakterhistorie = Slot(uri=UTD.karakterhistorie, name="utdanningContainer__karakterhistorie", curie=UTD.curie('karakterhistorie'),
-                   model_uri=UTD.utdanningContainer__karakterhistorie, domain=None, range=Optional[Union[dict[Union[str, KarakterhistorieId], Union[dict, Karakterhistorie]], list[Union[dict, Karakterhistorie]]]])
+slots.valuta_navn = Slot(uri=FINT.valutaNavn, name="valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=UTD.valuta_navn, domain=None, range=Optional[str])
 
-slots.utdanningContainer__sensor = Slot(uri=UTD.sensor, name="utdanningContainer__sensor", curie=UTD.curie('sensor'),
-                   model_uri=UTD.utdanningContainer__sensor, domain=None, range=Optional[Union[dict[Union[str, SensorId], Union[dict, Sensor]], list[Union[dict, Sensor]]]])
+slots.nummerkode = Slot(uri=FINT.nummerkode, name="nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=UTD.nummerkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.utdanningContainer__sluttfagvurdering = Slot(uri=UTD.sluttfagvurdering, name="utdanningContainer__sluttfagvurdering", curie=UTD.curie('sluttfagvurdering'),
-                   model_uri=UTD.utdanningContainer__sluttfagvurdering, domain=None, range=Optional[Union[dict[Union[str, SluttfagvurderingId], Union[dict, Sluttfagvurdering]], list[Union[dict, Sluttfagvurdering]]]])
+slots.bilde = Slot(uri=FINT.bilde, name="bilde", curie=FINT.curie('bilde'),
+                   model_uri=UTD.bilde, domain=None, range=Optional[str])
 
-slots.utdanningContainer__sluttordensvurdering = Slot(uri=UTD.sluttordensvurdering, name="utdanningContainer__sluttordensvurdering", curie=UTD.curie('sluttordensvurdering'),
-                   model_uri=UTD.utdanningContainer__sluttordensvurdering, domain=None, range=Optional[Union[dict[Union[str, SluttordensvurderingId], Union[dict, Sluttordensvurdering]], list[Union[dict, Sluttordensvurdering]]]])
+slots.bostedsadresse = Slot(uri=FINT.bostedsadresse, name="bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=UTD.bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.utdanningContainer__underveisfagvurdering = Slot(uri=UTD.underveisfagvurdering, name="utdanningContainer__underveisfagvurdering", curie=UTD.curie('underveisfagvurdering'),
-                   model_uri=UTD.utdanningContainer__underveisfagvurdering, domain=None, range=Optional[Union[dict[Union[str, UnderveisfagvurderingId], Union[dict, Underveisfagvurdering]], list[Union[dict, Underveisfagvurdering]]]])
+slots.fodselsdato = Slot(uri=FINT.fodselsdato, name="fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=UTD.fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.utdanningContainer__underveisordensvurdering = Slot(uri=UTD.underveisordensvurdering, name="utdanningContainer__underveisordensvurdering", curie=UTD.curie('underveisordensvurdering'),
-                   model_uri=UTD.utdanningContainer__underveisordensvurdering, domain=None, range=Optional[Union[dict[Union[str, UnderveisordensvurderingId], Union[dict, Underveisordensvurdering]], list[Union[dict, Underveisordensvurdering]]]])
+slots.fodselsnummer = Slot(uri=FINT.fodselsnummer, name="fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=UTD.fodselsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.utdanningContainer__avlagteprover = Slot(uri=UTD.avlagteprover, name="utdanningContainer__avlagteprover", curie=UTD.curie('avlagteprover'),
-                   model_uri=UTD.utdanningContainer__avlagteprover, domain=None, range=Optional[Union[dict[Union[str, AvlagtProveId], Union[dict, AvlagtProve]], list[Union[dict, AvlagtProve]]]])
+slots.person_navn = Slot(uri=FINT.personNavn, name="person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=UTD.person_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.utdanningContainer__laerlingar = Slot(uri=UTD.laerlingar, name="utdanningContainer__laerlingar", curie=UTD.curie('laerlingar'),
-                   model_uri=UTD.utdanningContainer__laerlingar, domain=None, range=Optional[Union[dict[Union[str, LaerlingId], Union[dict, Laerling]], list[Union[dict, Laerling]]]])
+slots.parorende = Slot(uri=FINT.parorende, name="parorende", curie=FINT.curie('parorende'),
+                   model_uri=UTD.parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
 
-slots.utdanningContainer__otUngdom = Slot(uri=UTD.otUngdom, name="utdanningContainer__otUngdom", curie=UTD.curie('otUngdom'),
-                   model_uri=UTD.utdanningContainer__otUngdom, domain=None, range=Optional[Union[dict[Union[str, OtUngdomId], Union[dict, OtUngdom]], list[Union[dict, OtUngdom]]]])
+slots.statsborgerskap = Slot(uri=FINT.statsborgerskap, name="statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=UTD.statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
 
-slots.utdanningContainer__avbruddsaarsaker = Slot(uri=UTD.avbruddsaarsaker, name="utdanningContainer__avbruddsaarsaker", curie=UTD.curie('avbruddsaarsaker'),
-                   model_uri=UTD.utdanningContainer__avbruddsaarsaker, domain=None, range=Optional[Union[dict[Union[str, AvbruddsaarsakId], Union[dict, Avbruddsaarsak]], list[Union[dict, Avbruddsaarsak]]]])
+slots.foreldreansvar = Slot(uri=FINT.foreldreansvar, name="foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=UTD.foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.utdanningContainer__betalingsstatus = Slot(uri=UTD.betalingsstatus, name="utdanningContainer__betalingsstatus", curie=UTD.curie('betalingsstatus'),
-                   model_uri=UTD.utdanningContainer__betalingsstatus, domain=None, range=Optional[Union[dict[Union[str, BetalingsstatusId], Union[dict, Betalingsstatus]], list[Union[dict, Betalingsstatus]]]])
+slots.foreldre = Slot(uri=FINT.foreldre, name="foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=UTD.foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.utdanningContainer__bevistypar = Slot(uri=UTD.bevistypar, name="utdanningContainer__bevistypar", curie=UTD.curie('bevistypar'),
-                   model_uri=UTD.utdanningContainer__bevistypar, domain=None, range=Optional[Union[dict[Union[str, BevistypeId], Union[dict, Bevistype]], list[Union[dict, Bevistype]]]])
+slots.maalform = Slot(uri=FINT.maalform, name="maalform", curie=FINT.curie('maalform'),
+                   model_uri=UTD.maalform, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.utdanningContainer__brevtypar = Slot(uri=UTD.brevtypar, name="utdanningContainer__brevtypar", curie=UTD.curie('brevtypar'),
-                   model_uri=UTD.utdanningContainer__brevtypar, domain=None, range=Optional[Union[dict[Union[str, BrevtypeId], Union[dict, Brevtype]], list[Union[dict, Brevtype]]]])
+slots.morsmaal = Slot(uri=FINT.morsmaal, name="morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=UTD.morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.utdanningContainer__eksamensformer = Slot(uri=UTD.eksamensformer, name="utdanningContainer__eksamensformer", curie=UTD.curie('eksamensformer'),
-                   model_uri=UTD.utdanningContainer__eksamensformer, domain=None, range=Optional[Union[dict[Union[str, EksamensformId], Union[dict, Eksamensform]], list[Union[dict, Eksamensform]]]])
+slots.laerling = Slot(uri=FINT.laerling, name="laerling", curie=FINT.curie('laerling'),
+                   model_uri=UTD.laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
-slots.utdanningContainer__elevkategoriar = Slot(uri=UTD.elevkategoriar, name="utdanningContainer__elevkategoriar", curie=UTD.curie('elevkategoriar'),
-                   model_uri=UTD.utdanningContainer__elevkategoriar, domain=None, range=Optional[Union[dict[Union[str, ElevkategoriId], Union[dict, Elevkategori]], list[Union[dict, Elevkategori]]]])
+slots.elev = Slot(uri=FINT.elev, name="elev", curie=FINT.curie('elev'),
+                   model_uri=UTD.elev, domain=None, range=Optional[Union[str, ElevId]])
 
-slots.utdanningContainer__fagmerknader = Slot(uri=UTD.fagmerknader, name="utdanningContainer__fagmerknader", curie=UTD.curie('fagmerknader'),
-                   model_uri=UTD.utdanningContainer__fagmerknader, domain=None, range=Optional[Union[dict[Union[str, FagmerknadId], Union[dict, Fagmerknad]], list[Union[dict, Fagmerknad]]]])
+slots.elevnummer = Slot(uri=FINT.elevnummer, name="elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=UTD.elevnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.utdanningContainer__fagstatus = Slot(uri=UTD.fagstatus, name="utdanningContainer__fagstatus", curie=UTD.curie('fagstatus'),
-                   model_uri=UTD.utdanningContainer__fagstatus, domain=None, range=Optional[Union[dict[Union[str, FagstatusId], Union[dict, Fagstatus]], list[Union[dict, Fagstatus]]]])
+slots.person = Slot(uri=FINT.person, name="person", curie=FINT.curie('person'),
+                   model_uri=UTD.person, domain=None, range=Optional[Union[str, PersonId]])
 
-slots.utdanningContainer__fravartypar = Slot(uri=UTD.fravartypar, name="utdanningContainer__fravartypar", curie=UTD.curie('fravartypar'),
-                   model_uri=UTD.utdanningContainer__fravartypar, domain=None, range=Optional[Union[dict[Union[str, FravartypeId], Union[dict, Fravartype]], list[Union[dict, Fravartype]]]])
+slots.otungdom = Slot(uri=FINT.otungdom, name="otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=UTD.otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.utdanningContainer__fullfortkoder = Slot(uri=UTD.fullfortkoder, name="utdanningContainer__fullfortkoder", curie=UTD.curie('fullfortkoder'),
-                   model_uri=UTD.utdanningContainer__fullfortkoder, domain=None, range=Optional[Union[dict[Union[str, FullfortkodeId], Union[dict, Fullfortkode]], list[Union[dict, Fullfortkode]]]])
+slots.kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=UTD.kontaktperson_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.utdanningContainer__karakterskalaer = Slot(uri=UTD.karakterskalaer, name="utdanningContainer__karakterskalaer", curie=UTD.curie('karakterskalaer'),
-                   model_uri=UTD.utdanningContainer__karakterskalaer, domain=None, range=Optional[Union[dict[Union[str, KarakterskalaId], Union[dict, Karakterskala]], list[Union[dict, Karakterskala]]]])
+slots.type = Slot(uri=FINT.type, name="type", curie=FINT.curie('type'),
+                   model_uri=UTD.type, domain=None, range=Optional[str])
 
-slots.utdanningContainer__karakterstatus = Slot(uri=UTD.karakterstatus, name="utdanningContainer__karakterstatus", curie=UTD.curie('karakterstatus'),
-                   model_uri=UTD.utdanningContainer__karakterstatus, domain=None, range=Optional[Union[dict[Union[str, KarakterstatusId], Union[dict, Karakterstatus]], list[Union[dict, Karakterstatus]]]])
+slots.kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=UTD.kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.utdanningContainer__karakterverdiar = Slot(uri=UTD.karakterverdiar, name="utdanningContainer__karakterverdiar", curie=UTD.curie('karakterverdiar'),
-                   model_uri=UTD.utdanningContainer__karakterverdiar, domain=None, range=Optional[Union[dict[Union[str, KarakterverdiId], Union[dict, Karakterverdi]], list[Union[dict, Karakterverdi]]]])
-
-slots.utdanningContainer__otEnheter = Slot(uri=UTD.otEnheter, name="utdanningContainer__otEnheter", curie=UTD.curie('otEnheter'),
-                   model_uri=UTD.utdanningContainer__otEnheter, domain=None, range=Optional[Union[dict[Union[str, OtEnhetId], Union[dict, OtEnhet]], list[Union[dict, OtEnhet]]]])
-
-slots.utdanningContainer__otStatus = Slot(uri=UTD.otStatus, name="utdanningContainer__otStatus", curie=UTD.curie('otStatus'),
-                   model_uri=UTD.utdanningContainer__otStatus, domain=None, range=Optional[Union[dict[Union[str, OtStatusId], Union[dict, OtStatus]], list[Union[dict, OtStatus]]]])
-
-slots.utdanningContainer__provestatuser = Slot(uri=UTD.provestatuser, name="utdanningContainer__provestatuser", curie=UTD.curie('provestatuser'),
-                   model_uri=UTD.utdanningContainer__provestatuser, domain=None, range=Optional[Union[dict[Union[str, ProvestatusId], Union[dict, Provestatus]], list[Union[dict, Provestatus]]]])
-
-slots.utdanningContainer__skoleaar = Slot(uri=UTD.skoleaar, name="utdanningContainer__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.utdanningContainer__skoleaar, domain=None, range=Optional[Union[dict[Union[str, SkoleaarId], Union[dict, Skoleaar]], list[Union[dict, Skoleaar]]]])
-
-slots.utdanningContainer__skoleeijartypar = Slot(uri=UTD.skoleeijartypar, name="utdanningContainer__skoleeijartypar", curie=UTD.curie('skoleeijartypar'),
-                   model_uri=UTD.utdanningContainer__skoleeijartypar, domain=None, range=Optional[Union[dict[Union[str, SkoleeiertypeId], Union[dict, Skoleeiertype]], list[Union[dict, Skoleeiertype]]]])
-
-slots.utdanningContainer__terminar = Slot(uri=UTD.terminar, name="utdanningContainer__terminar", curie=UTD.curie('terminar'),
-                   model_uri=UTD.utdanningContainer__terminar, domain=None, range=Optional[Union[dict[Union[str, TerminId], Union[dict, Termin]], list[Union[dict, Termin]]]])
-
-slots.utdanningContainer__tilrettelegging = Slot(uri=UTD.tilrettelegging, name="utdanningContainer__tilrettelegging", curie=UTD.curie('tilrettelegging'),
-                   model_uri=UTD.utdanningContainer__tilrettelegging, domain=None, range=Optional[Union[dict[Union[str, TilretteleggingId], Union[dict, Tilrettelegging]], list[Union[dict, Tilrettelegging]]]])
-
-slots.utdanningContainer__varseltypar = Slot(uri=UTD.varseltypar, name="utdanningContainer__varseltypar", curie=UTD.curie('varseltypar'),
-                   model_uri=UTD.utdanningContainer__varseltypar, domain=None, range=Optional[Union[dict[Union[str, VarseltypeId], Union[dict, Varseltype]], list[Union[dict, Varseltype]]]])
-
-slots.utdanningContainer__vitnemalsmerknad = Slot(uri=UTD.vitnemalsmerknad, name="utdanningContainer__vitnemalsmerknad", curie=UTD.curie('vitnemalsmerknad'),
-                   model_uri=UTD.utdanningContainer__vitnemalsmerknad, domain=None, range=Optional[Union[dict[Union[str, VitnemalsmerknadId], Union[dict, Vitnemalsmerknad]], list[Union[dict, Vitnemalsmerknad]]]])
-
-slots.gruppe__navn = Slot(uri=UTD.navn, name="gruppe__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.gruppe__navn, domain=None, range=str)
-
-slots.gruppe__beskrivelse = Slot(uri=UTD.beskrivelse, name="gruppe__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.gruppe__beskrivelse, domain=None, range=Optional[str])
-
-slots.gruppemedlemskap__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="gruppemedlemskap__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.gruppemedlemskap__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.utdanningsforhold__beskrivelse = Slot(uri=UTD.beskrivelse, name="utdanningsforhold__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.utdanningsforhold__beskrivelse, domain=None, range=Optional[str])
-
-slots.elev__elevnummer = Slot(uri=UTD.elevnummer, name="elev__elevnummer", curie=UTD.curie('elevnummer'),
-                   model_uri=UTD.elev__elevnummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.elev__person = Slot(uri=UTD.person, name="elev__person", curie=UTD.curie('person'),
-                   model_uri=UTD.elev__person, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.elevforhold__beskrivelse = Slot(uri=UTD.beskrivelse, name="elevforhold__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.elevforhold__beskrivelse, domain=None, range=str)
-
-slots.elevforhold__avbruddsdato = Slot(uri=UTD.avbruddsdato, name="elevforhold__avbruddsdato", curie=UTD.curie('avbruddsdato'),
-                   model_uri=UTD.elevforhold__avbruddsdato, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.elevforhold__tosprakligFagopplaering = Slot(uri=UTD.tosprakligFagopplaering, name="elevforhold__tosprakligFagopplaering", curie=UTD.curie('tosprakligFagopplaering'),
-                   model_uri=UTD.elevforhold__tosprakligFagopplaering, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.elevforhold__elev = Slot(uri=UTD.elev, name="elevforhold__elev", curie=UTD.curie('elev'),
-                   model_uri=UTD.elevforhold__elev, domain=None, range=Union[str, ElevId])
-
-slots.elevforhold__skole = Slot(uri=UTD.skole, name="elevforhold__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.elevforhold__skole, domain=None, range=Union[str, SkoleId])
-
-slots.elevforhold__kategori = Slot(uri=UTD.kategori, name="elevforhold__kategori", curie=UTD.curie('kategori'),
-                   model_uri=UTD.elevforhold__kategori, domain=None, range=Optional[Union[str, ElevkategoriId]])
-
-slots.elevforhold__avbruddsarsak = Slot(uri=UTD.avbruddsarsak, name="elevforhold__avbruddsarsak", curie=UTD.curie('avbruddsarsak'),
-                   model_uri=UTD.elevforhold__avbruddsarsak, domain=None, range=Optional[Union[str, AvbruddsaarsakId]])
-
-slots.elevforhold__skoleaar = Slot(uri=UTD.skoleaar, name="elevforhold__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.elevforhold__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.elevforhold__programomrademedlemskap = Slot(uri=UTD.programomrademedlemskap, name="elevforhold__programomrademedlemskap", curie=UTD.curie('programomrademedlemskap'),
-                   model_uri=UTD.elevforhold__programomrademedlemskap, domain=None, range=Optional[Union[Union[str, ProgramomrademedlemskapId], list[Union[str, ProgramomrademedlemskapId]]]])
-
-slots.elevforhold__klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="elevforhold__klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
-                   model_uri=UTD.elevforhold__klassemedlemskap, domain=None, range=Optional[Union[Union[str, KlassemedlemskapId], list[Union[str, KlassemedlemskapId]]]])
-
-slots.elevforhold__faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="elevforhold__faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
-                   model_uri=UTD.elevforhold__faggruppemedlemskap, domain=None, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
-
-slots.elevforhold__undervisningsgruppemedlemskap = Slot(uri=UTD.undervisningsgruppemedlemskap, name="elevforhold__undervisningsgruppemedlemskap", curie=UTD.curie('undervisningsgruppemedlemskap'),
-                   model_uri=UTD.elevforhold__undervisningsgruppemedlemskap, domain=None, range=Optional[Union[Union[str, UndervisningsgruppemedlemskapId], list[Union[str, UndervisningsgruppemedlemskapId]]]])
-
-slots.elevforhold__kontaktlaerergruppemedlemskap = Slot(uri=UTD.kontaktlaerergruppemedlemskap, name="elevforhold__kontaktlaerergruppemedlemskap", curie=UTD.curie('kontaktlaerergruppemedlemskap'),
-                   model_uri=UTD.elevforhold__kontaktlaerergruppemedlemskap, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppemedlemskapId], list[Union[str, KontaktlaerergruppemedlemskapId]]]])
-
-slots.elevforhold__persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="elevforhold__persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
-                   model_uri=UTD.elevforhold__persongruppemedlemskap, domain=None, range=Optional[Union[Union[str, PersongruppemedlemskapId], list[Union[str, PersongruppemedlemskapId]]]])
-
-slots.elevforhold__eksamensgruppemedlemskap = Slot(uri=UTD.eksamensgruppemedlemskap, name="elevforhold__eksamensgruppemedlemskap", curie=UTD.curie('eksamensgruppemedlemskap'),
-                   model_uri=UTD.elevforhold__eksamensgruppemedlemskap, domain=None, range=Optional[Union[Union[str, EksamensgruppemedlemskapId], list[Union[str, EksamensgruppemedlemskapId]]]])
-
-slots.elevforhold__fraversregistreringer = Slot(uri=UTD.fraversregistreringer, name="elevforhold__fraversregistreringer", curie=UTD.curie('fraversregistreringer'),
-                   model_uri=UTD.elevforhold__fraversregistreringer, domain=None, range=Optional[Union[Union[str, ElevfravarId], list[Union[str, ElevfravarId]]]])
-
-slots.elevforhold__elevfravar = Slot(uri=UTD.elevfravar, name="elevforhold__elevfravar", curie=UTD.curie('elevfravar'),
-                   model_uri=UTD.elevforhold__elevfravar, domain=None, range=Optional[Union[str, FravarsoversiktId]])
-
-slots.elevforhold__tilrettelegging = Slot(uri=UTD.tilrettelegging, name="elevforhold__tilrettelegging", curie=UTD.curie('tilrettelegging'),
-                   model_uri=UTD.elevforhold__tilrettelegging, domain=None, range=Optional[Union[Union[str, ElevtilretteleggingId], list[Union[str, ElevtilretteleggingId]]]])
-
-slots.elevforhold__elevvurdering = Slot(uri=UTD.elevvurdering, name="elevforhold__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.elevforhold__elevvurdering, domain=None, range=Optional[Union[str, ElevvurderingId]])
-
-slots.elevtilrettelegging__elev = Slot(uri=UTD.elev, name="elevtilrettelegging__elev", curie=UTD.curie('elev'),
-                   model_uri=UTD.elevtilrettelegging__elev, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.elevtilrettelegging__tilrettelegging = Slot(uri=UTD.tilrettelegging, name="elevtilrettelegging__tilrettelegging", curie=UTD.curie('tilrettelegging'),
-                   model_uri=UTD.elevtilrettelegging__tilrettelegging, domain=None, range=Optional[Union[str, TilretteleggingId]])
-
-slots.elevtilrettelegging__eksamensform = Slot(uri=UTD.eksamensform, name="elevtilrettelegging__eksamensform", curie=UTD.curie('eksamensform'),
-                   model_uri=UTD.elevtilrettelegging__eksamensform, domain=None, range=Optional[Union[str, EksamensformId]])
-
-slots.klasse__skoleaar = Slot(uri=UTD.skoleaar, name="klasse__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.klasse__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.klasse__termin = Slot(uri=UTD.termin, name="klasse__termin", curie=UTD.curie('termin'),
-                   model_uri=UTD.klasse__termin, domain=None, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
-
-slots.klasse__trinn = Slot(uri=UTD.trinn, name="klasse__trinn", curie=UTD.curie('trinn'),
-                   model_uri=UTD.klasse__trinn, domain=None, range=Optional[Union[Union[str, ArstrinnId], list[Union[str, ArstrinnId]]]])
-
-slots.klasse__skole = Slot(uri=UTD.skole, name="klasse__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.klasse__skole, domain=None, range=Optional[Union[str, SkoleId]])
-
-slots.klasse__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="klasse__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.klasse__undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
-
-slots.klasse__klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="klasse__klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
-                   model_uri=UTD.klasse__klassemedlemskap, domain=None, range=Optional[Union[Union[str, KlassemedlemskapId], list[Union[str, KlassemedlemskapId]]]])
-
-slots.klasse__kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="klasse__kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
-                   model_uri=UTD.klasse__kontaktlaerergruppe, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
-
-slots.klassemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="klassemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.klassemedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.klassemedlemskap__klasse = Slot(uri=UTD.klasse, name="klassemedlemskap__klasse", curie=UTD.curie('klasse'),
-                   model_uri=UTD.klassemedlemskap__klasse, domain=None, range=Optional[Union[str, KlasseId]])
-
-slots.kontaktlaerergruppe__klasse = Slot(uri=UTD.klasse, name="kontaktlaerergruppe__klasse", curie=UTD.curie('klasse'),
-                   model_uri=UTD.kontaktlaerergruppe__klasse, domain=None, range=Union[Union[str, KlasseId], list[Union[str, KlasseId]]])
-
-slots.kontaktlaerergruppe__termin = Slot(uri=UTD.termin, name="kontaktlaerergruppe__termin", curie=UTD.curie('termin'),
-                   model_uri=UTD.kontaktlaerergruppe__termin, domain=None, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
-
-slots.kontaktlaerergruppe__skole = Slot(uri=UTD.skole, name="kontaktlaerergruppe__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.kontaktlaerergruppe__skole, domain=None, range=Optional[Union[str, SkoleId]])
-
-slots.kontaktlaerergruppe__skoleaar = Slot(uri=UTD.skoleaar, name="kontaktlaerergruppe__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.kontaktlaerergruppe__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.kontaktlaerergruppe__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="kontaktlaerergruppe__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.kontaktlaerergruppe__undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
-
-slots.kontaktlaerergruppe__gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="kontaktlaerergruppe__gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
-                   model_uri=UTD.kontaktlaerergruppe__gruppemedlemskap, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppemedlemskapId], list[Union[str, KontaktlaerergruppemedlemskapId]]]])
-
-slots.kontaktlaerergruppemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="kontaktlaerergruppemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.kontaktlaerergruppemedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.kontaktlaerergruppemedlemskap__kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="kontaktlaerergruppemedlemskap__kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
-                   model_uri=UTD.kontaktlaerergruppemedlemskap__kontaktlaerergruppe, domain=None, range=Optional[Union[str, KontaktlaerergruppeId]])
-
-slots.persongruppe__elev = Slot(uri=UTD.elev, name="persongruppe__elev", curie=UTD.curie('elev'),
-                   model_uri=UTD.persongruppe__elev, domain=None, range=Optional[Union[Union[str, ElevforholdId], list[Union[str, ElevforholdId]]]])
-
-slots.persongruppe__persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="persongruppe__persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
-                   model_uri=UTD.persongruppe__persongruppemedlemskap, domain=None, range=Optional[Union[Union[str, PersongruppemedlemskapId], list[Union[str, PersongruppemedlemskapId]]]])
-
-slots.persongruppe__termin = Slot(uri=UTD.termin, name="persongruppe__termin", curie=UTD.curie('termin'),
-                   model_uri=UTD.persongruppe__termin, domain=None, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
-
-slots.persongruppe__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="persongruppe__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.persongruppe__undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
-
-slots.persongruppe__skole = Slot(uri=UTD.skole, name="persongruppe__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.persongruppe__skole, domain=None, range=Optional[Union[str, SkoleId]])
-
-slots.persongruppe__skoleressurs = Slot(uri=UTD.skoleressurs, name="persongruppe__skoleressurs", curie=UTD.curie('skoleressurs'),
-                   model_uri=UTD.persongruppe__skoleressurs, domain=None, range=Optional[Union[Union[str, SkoleressursId], list[Union[str, SkoleressursId]]]])
-
-slots.persongruppe__skoleaar = Slot(uri=UTD.skoleaar, name="persongruppe__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.persongruppe__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.persongruppemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="persongruppemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.persongruppemedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.persongruppemedlemskap__persongruppe = Slot(uri=UTD.persongruppe, name="persongruppemedlemskap__persongruppe", curie=UTD.curie('persongruppe'),
-                   model_uri=UTD.persongruppemedlemskap__persongruppe, domain=None, range=Optional[Union[str, PersongruppeId]])
-
-slots.skole__navn = Slot(uri=UTD.navn, name="skole__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.skole__navn, domain=None, range=str)
-
-slots.skole__domenenavn = Slot(uri=UTD.domenenavn, name="skole__domenenavn", curie=UTD.curie('domenenavn'),
-                   model_uri=UTD.skole__domenenavn, domain=None, range=Optional[str])
-
-slots.skole__juridiskNavn = Slot(uri=UTD.juridiskNavn, name="skole__juridiskNavn", curie=UTD.curie('juridiskNavn'),
-                   model_uri=UTD.skole__juridiskNavn, domain=None, range=Optional[str])
-
-slots.skole__organisasjonsnavn = Slot(uri=UTD.organisasjonsnavn, name="skole__organisasjonsnavn", curie=UTD.curie('organisasjonsnavn'),
-                   model_uri=UTD.skole__organisasjonsnavn, domain=None, range=Optional[str])
-
-slots.skole__skolenummer = Slot(uri=UTD.skolenummer, name="skole__skolenummer", curie=UTD.curie('skolenummer'),
-                   model_uri=UTD.skole__skolenummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.skole__organisasjonsnummer = Slot(uri=UTD.organisasjonsnummer, name="skole__organisasjonsnummer", curie=UTD.curie('organisasjonsnummer'),
-                   model_uri=UTD.skole__organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.skole__forretningsadresse = Slot(uri=UTD.forretningsadresse, name="skole__forretningsadresse", curie=UTD.curie('forretningsadresse'),
-                   model_uri=UTD.skole__forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.skole__postadresse = Slot(uri=UTD.postadresse, name="skole__postadresse", curie=UTD.curie('postadresse'),
-                   model_uri=UTD.skole__postadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.skole__organisasjon = Slot(uri=UTD.organisasjon, name="skole__organisasjon", curie=UTD.curie('organisasjon'),
-                   model_uri=UTD.skole__organisasjon, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.skole__klasse = Slot(uri=UTD.klasse, name="skole__klasse", curie=UTD.curie('klasse'),
-                   model_uri=UTD.skole__klasse, domain=None, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
-
-slots.skole__kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="skole__kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
-                   model_uri=UTD.skole__kontaktlaerergruppe, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
-
-slots.skole__skoleressurs = Slot(uri=UTD.skoleressurs, name="skole__skoleressurs", curie=UTD.curie('skoleressurs'),
-                   model_uri=UTD.skole__skoleressurs, domain=None, range=Optional[Union[Union[str, SkoleressursId], list[Union[str, SkoleressursId]]]])
-
-slots.skole__fag = Slot(uri=UTD.fag, name="skole__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.skole__fag, domain=None, range=Optional[Union[Union[str, FagId], list[Union[str, FagId]]]])
-
-slots.skole__faggruppe = Slot(uri=UTD.faggruppe, name="skole__faggruppe", curie=UTD.curie('faggruppe'),
-                   model_uri=UTD.skole__faggruppe, domain=None, range=Optional[Union[Union[str, FaggruppeId], list[Union[str, FaggruppeId]]]])
-
-slots.skole__skoleeierType = Slot(uri=UTD.skoleeierType, name="skole__skoleeierType", curie=UTD.curie('skoleeierType'),
-                   model_uri=UTD.skole__skoleeierType, domain=None, range=Optional[Union[str, SkoleeiertypeId]])
-
-slots.skole__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="skole__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.skole__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.skole__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="skole__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.skole__eksamensgruppe, domain=None, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
-
-slots.skole__utdanningsprogram = Slot(uri=UTD.utdanningsprogram, name="skole__utdanningsprogram", curie=UTD.curie('utdanningsprogram'),
-                   model_uri=UTD.skole__utdanningsprogram, domain=None, range=Optional[Union[Union[str, UtdanningsprogramId], list[Union[str, UtdanningsprogramId]]]])
-
-slots.skoleressurs__feidenavn = Slot(uri=UTD.feidenavn, name="skoleressurs__feidenavn", curie=UTD.curie('feidenavn'),
-                   model_uri=UTD.skoleressurs__feidenavn, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.skoleressurs__personalressurs = Slot(uri=UTD.personalressurs, name="skoleressurs__personalressurs", curie=UTD.curie('personalressurs'),
-                   model_uri=UTD.skoleressurs__personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.skoleressurs__person = Slot(uri=UTD.person, name="skoleressurs__person", curie=UTD.curie('person'),
-                   model_uri=UTD.skoleressurs__person, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.skoleressurs__skole = Slot(uri=UTD.skole, name="skoleressurs__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.skoleressurs__skole, domain=None, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
-
-slots.skoleressurs__sensor = Slot(uri=UTD.sensor, name="skoleressurs__sensor", curie=UTD.curie('sensor'),
-                   model_uri=UTD.skoleressurs__sensor, domain=None, range=Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]])
-
-slots.varsel__fravarsprosent = Slot(uri=UTD.fravarsprosent, name="varsel__fravarsprosent", curie=UTD.curie('fravarsprosent'),
-                   model_uri=UTD.varsel__fravarsprosent, domain=None, range=Optional[int])
-
-slots.varsel__sendt = Slot(uri=UTD.sendt, name="varsel__sendt", curie=UTD.curie('sendt'),
-                   model_uri=UTD.varsel__sendt, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.varsel__tekst = Slot(uri=UTD.tekst, name="varsel__tekst", curie=UTD.curie('tekst'),
-                   model_uri=UTD.varsel__tekst, domain=None, range=Optional[str])
-
-slots.varsel__utsteder = Slot(uri=UTD.utsteder, name="varsel__utsteder", curie=UTD.curie('utsteder'),
-                   model_uri=UTD.varsel__utsteder, domain=None, range=Optional[Union[str, SkoleressursId]])
-
-slots.varsel__karakteransvarlig = Slot(uri=UTD.karakteransvarlig, name="varsel__karakteransvarlig", curie=UTD.curie('karakteransvarlig'),
-                   model_uri=UTD.varsel__karakteransvarlig, domain=None, range=Optional[Union[str, SkoleressursId]])
-
-slots.varsel__type = Slot(uri=UTD.type, name="varsel__type", curie=UTD.curie('type'),
-                   model_uri=UTD.varsel__type, domain=None, range=Optional[Union[str, VarseltypeId]])
-
-slots.varsel__faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="varsel__faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
-                   model_uri=UTD.varsel__faggruppemedlemskap, domain=None, range=Optional[Union[str, FaggruppemedlemskapId]])
-
-slots.arstrinn__klasse = Slot(uri=UTD.klasse, name="arstrinn__klasse", curie=UTD.curie('klasse'),
-                   model_uri=UTD.arstrinn__klasse, domain=None, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
-
-slots.arstrinn__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="arstrinn__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.arstrinn__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.arstrinn__grepreferanse = Slot(uri=UTD.grepreferanse, name="arstrinn__grepreferanse", curie=UTD.curie('grepreferanse'),
-                   model_uri=UTD.arstrinn__grepreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.arstrinn__programomrade = Slot(uri=UTD.programomrade, name="arstrinn__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.arstrinn__programomrade, domain=None, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
-
-slots.programomrade__trinn = Slot(uri=UTD.trinn, name="programomrade__trinn", curie=UTD.curie('trinn'),
-                   model_uri=UTD.programomrade__trinn, domain=None, range=Optional[Union[Union[str, ArstrinnId], list[Union[str, ArstrinnId]]]])
-
-slots.programomrade__grepreferanse = Slot(uri=UTD.grepreferanse, name="programomrade__grepreferanse", curie=UTD.curie('grepreferanse'),
-                   model_uri=UTD.programomrade__grepreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.programomrade__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="programomrade__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.programomrade__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.programomrade__gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="programomrade__gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
-                   model_uri=UTD.programomrade__gruppemedlemskap, domain=None, range=Optional[Union[Union[str, ProgramomrademedlemskapId], list[Union[str, ProgramomrademedlemskapId]]]])
-
-slots.programomrademedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="programomrademedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.programomrademedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.programomrademedlemskap__programomrade = Slot(uri=UTD.programomrade, name="programomrademedlemskap__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.programomrademedlemskap__programomrade, domain=None, range=Optional[Union[str, ProgramomradeId]])
-
-slots.utdanningsprogram__programomrade = Slot(uri=UTD.programomrade, name="utdanningsprogram__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.utdanningsprogram__programomrade, domain=None, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
-
-slots.utdanningsprogram__skole = Slot(uri=UTD.skole, name="utdanningsprogram__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.utdanningsprogram__skole, domain=None, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
-
-slots.utdanningsprogram__grepreferanse = Slot(uri=UTD.grepreferanse, name="utdanningsprogram__grepreferanse", curie=UTD.curie('grepreferanse'),
-                   model_uri=UTD.utdanningsprogram__grepreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.utdanningsprogram__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="utdanningsprogram__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.utdanningsprogram__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.eksamen__navn = Slot(uri=UTD.navn, name="eksamen__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.eksamen__navn, domain=None, range=str)
-
-slots.eksamen__beskrivelse = Slot(uri=UTD.beskrivelse, name="eksamen__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.eksamen__beskrivelse, domain=None, range=Optional[str])
-
-slots.eksamen__oppmoetetidspunkt = Slot(uri=UTD.oppmoetetidspunkt, name="eksamen__oppmoetetidspunkt", curie=UTD.curie('oppmoetetidspunkt'),
-                   model_uri=UTD.eksamen__oppmoetetidspunkt, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.eksamen__tidsrom = Slot(uri=UTD.tidsrom, name="eksamen__tidsrom", curie=UTD.curie('tidsrom'),
-                   model_uri=UTD.eksamen__tidsrom, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.eksamen__rom = Slot(uri=UTD.rom, name="eksamen__rom", curie=UTD.curie('rom'),
-                   model_uri=UTD.eksamen__rom, domain=None, range=Optional[Union[Union[str, RomId], list[Union[str, RomId]]]])
-
-slots.eksamen__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="eksamen__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.eksamen__eksamensgruppe, domain=None, range=Optional[Union[str, EksamensgruppeId]])
-
-slots.fag__tilrettelegging = Slot(uri=UTD.tilrettelegging, name="fag__tilrettelegging", curie=UTD.curie('tilrettelegging'),
-                   model_uri=UTD.fag__tilrettelegging, domain=None, range=Optional[Union[Union[str, TilretteleggingId], list[Union[str, TilretteleggingId]]]])
-
-slots.fag__grepreferanse = Slot(uri=UTD.grepreferanse, name="fag__grepreferanse", curie=UTD.curie('grepreferanse'),
-                   model_uri=UTD.fag__grepreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.fag__skole = Slot(uri=UTD.skole, name="fag__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.fag__skole, domain=None, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
-
-slots.fag__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="fag__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.fag__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.fag__programomrade = Slot(uri=UTD.programomrade, name="fag__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.fag__programomrade, domain=None, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
-
-slots.fag__faggruppe = Slot(uri=UTD.faggruppe, name="fag__faggruppe", curie=UTD.curie('faggruppe'),
-                   model_uri=UTD.fag__faggruppe, domain=None, range=Optional[Union[Union[str, FaggruppeId], list[Union[str, FaggruppeId]]]])
-
-slots.fag__undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="fag__undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
-                   model_uri=UTD.fag__undervisningsgruppe, domain=None, range=Optional[Union[Union[str, UndervisningsgruppeId], list[Union[str, UndervisningsgruppeId]]]])
-
-slots.fag__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="fag__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.fag__eksamensgruppe, domain=None, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
-
-slots.faggruppe__fag = Slot(uri=UTD.fag, name="faggruppe__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.faggruppe__fag, domain=None, range=Union[str, FagId])
-
-slots.faggruppe__skole = Slot(uri=UTD.skole, name="faggruppe__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.faggruppe__skole, domain=None, range=Optional[Union[str, SkoleId]])
-
-slots.faggruppe__skoleaar = Slot(uri=UTD.skoleaar, name="faggruppe__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.faggruppe__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.faggruppe__faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="faggruppe__faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
-                   model_uri=UTD.faggruppe__faggruppemedlemskap, domain=None, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
-
-slots.faggruppemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="faggruppemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.faggruppemedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.faggruppemedlemskap__varsel = Slot(uri=UTD.varsel, name="faggruppemedlemskap__varsel", curie=UTD.curie('varsel'),
-                   model_uri=UTD.faggruppemedlemskap__varsel, domain=None, range=Optional[Union[Union[str, VarselId], list[Union[str, VarselId]]]])
-
-slots.faggruppemedlemskap__faggruppe = Slot(uri=UTD.faggruppe, name="faggruppemedlemskap__faggruppe", curie=UTD.curie('faggruppe'),
-                   model_uri=UTD.faggruppemedlemskap__faggruppe, domain=None, range=Optional[Union[str, FaggruppeId]])
-
-slots.faggruppemedlemskap__fagmerknad = Slot(uri=UTD.fagmerknad, name="faggruppemedlemskap__fagmerknad", curie=UTD.curie('fagmerknad'),
-                   model_uri=UTD.faggruppemedlemskap__fagmerknad, domain=None, range=Optional[Union[str, FagmerknadId]])
-
-slots.faggruppemedlemskap__fagstatus = Slot(uri=UTD.fagstatus, name="faggruppemedlemskap__fagstatus", curie=UTD.curie('fagstatus'),
-                   model_uri=UTD.faggruppemedlemskap__fagstatus, domain=None, range=Optional[Union[str, FagstatusId]])
-
-slots.rom__navn = Slot(uri=UTD.navn, name="rom__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.rom__navn, domain=None, range=Optional[str])
-
-slots.rom__eksamen = Slot(uri=UTD.eksamen, name="rom__eksamen", curie=UTD.curie('eksamen'),
-                   model_uri=UTD.rom__eksamen, domain=None, range=Optional[Union[Union[str, EksamenId], list[Union[str, EksamenId]]]])
-
-slots.rom__time = Slot(uri=UTD.time, name="rom__time", curie=UTD.curie('time'),
-                   model_uri=UTD.rom__time, domain=None, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
-
-slots.time__navn = Slot(uri=UTD.navn, name="time__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.time__navn, domain=None, range=Optional[str])
-
-slots.time__beskrivelse = Slot(uri=UTD.beskrivelse, name="time__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.time__beskrivelse, domain=None, range=Optional[str])
-
-slots.time__tidsrom = Slot(uri=UTD.tidsrom, name="time__tidsrom", curie=UTD.curie('tidsrom'),
-                   model_uri=UTD.time__tidsrom, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.time__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="time__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.time__undervisningsforhold, domain=None, range=Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]])
-
-slots.time__rom = Slot(uri=UTD.rom, name="time__rom", curie=UTD.curie('rom'),
-                   model_uri=UTD.time__rom, domain=None, range=Optional[Union[Union[str, RomId], list[Union[str, RomId]]]])
-
-slots.time__undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="time__undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
-                   model_uri=UTD.time__undervisningsgruppe, domain=None, range=Union[Union[str, UndervisningsgruppeId], list[Union[str, UndervisningsgruppeId]]])
-
-slots.undervisningsforhold__arbeidsforhold = Slot(uri=UTD.arbeidsforhold, name="undervisningsforhold__arbeidsforhold", curie=UTD.curie('arbeidsforhold'),
-                   model_uri=UTD.undervisningsforhold__arbeidsforhold, domain=None, range=Union[str, URIorCURIE])
-
-slots.undervisningsforhold__skoleressurs = Slot(uri=UTD.skoleressurs, name="undervisningsforhold__skoleressurs", curie=UTD.curie('skoleressurs'),
-                   model_uri=UTD.undervisningsforhold__skoleressurs, domain=None, range=Optional[Union[str, SkoleressursId]])
-
-slots.undervisningsforhold__klasse = Slot(uri=UTD.klasse, name="undervisningsforhold__klasse", curie=UTD.curie('klasse'),
-                   model_uri=UTD.undervisningsforhold__klasse, domain=None, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
-
-slots.undervisningsforhold__kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="undervisningsforhold__kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
-                   model_uri=UTD.undervisningsforhold__kontaktlaerergruppe, domain=None, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
-
-slots.undervisningsforhold__time = Slot(uri=UTD.time, name="undervisningsforhold__time", curie=UTD.curie('time'),
-                   model_uri=UTD.undervisningsforhold__time, domain=None, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
-
-slots.undervisningsforhold__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="undervisningsforhold__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.undervisningsforhold__eksamensgruppe, domain=None, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
-
-slots.undervisningsgruppe__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="undervisningsgruppe__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.undervisningsgruppe__undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
-
-slots.undervisningsgruppe__fag = Slot(uri=UTD.fag, name="undervisningsgruppe__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.undervisningsgruppe__fag, domain=None, range=Union[Union[str, FagId], list[Union[str, FagId]]])
-
-slots.undervisningsgruppe__time = Slot(uri=UTD.time, name="undervisningsgruppe__time", curie=UTD.curie('time'),
-                   model_uri=UTD.undervisningsgruppe__time, domain=None, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
-
-slots.undervisningsgruppe__termin = Slot(uri=UTD.termin, name="undervisningsgruppe__termin", curie=UTD.curie('termin'),
-                   model_uri=UTD.undervisningsgruppe__termin, domain=None, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
-
-slots.undervisningsgruppe__skole = Slot(uri=UTD.skole, name="undervisningsgruppe__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.undervisningsgruppe__skole, domain=None, range=Optional[Union[str, SkoleId]])
-
-slots.undervisningsgruppe__skoleaar = Slot(uri=UTD.skoleaar, name="undervisningsgruppe__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.undervisningsgruppe__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.undervisningsgruppe__gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="undervisningsgruppe__gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
-                   model_uri=UTD.undervisningsgruppe__gruppemedlemskap, domain=None, range=Optional[Union[Union[str, UndervisningsgruppemedlemskapId], list[Union[str, UndervisningsgruppemedlemskapId]]]])
-
-slots.undervisningsgruppemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="undervisningsgruppemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.undervisningsgruppemedlemskap__elevforhold, domain=None, range=Optional[Union[str, ElevforholdId]])
-
-slots.undervisningsgruppemedlemskap__undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="undervisningsgruppemedlemskap__undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
-                   model_uri=UTD.undervisningsgruppemedlemskap__undervisningsgruppe, domain=None, range=Optional[Union[str, UndervisningsgruppeId]])
-
-slots.fagvurderingAbstrakt__kommentar = Slot(uri=UTD.kommentar, name="fagvurderingAbstrakt__kommentar", curie=UTD.curie('kommentar'),
-                   model_uri=UTD.fagvurderingAbstrakt__kommentar, domain=None, range=str)
-
-slots.fagvurderingAbstrakt__vurderingsdato = Slot(uri=UTD.vurderingsdato, name="fagvurderingAbstrakt__vurderingsdato", curie=UTD.curie('vurderingsdato'),
-                   model_uri=UTD.fagvurderingAbstrakt__vurderingsdato, domain=None, range=Union[str, XSDDateTime])
-
-slots.fagvurderingAbstrakt__fag = Slot(uri=UTD.fag, name="fagvurderingAbstrakt__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.fagvurderingAbstrakt__fag, domain=None, range=Optional[Union[str, FagId]])
-
-slots.fagvurderingAbstrakt__skoleaar = Slot(uri=UTD.skoleaar, name="fagvurderingAbstrakt__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.fagvurderingAbstrakt__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.fagvurderingAbstrakt__karakter = Slot(uri=UTD.karakter, name="fagvurderingAbstrakt__karakter", curie=UTD.curie('karakter'),
-                   model_uri=UTD.fagvurderingAbstrakt__karakter, domain=None, range=Optional[Union[str, KarakterverdiId]])
-
-slots.ordensvurderingAbstrakt__kommentar = Slot(uri=UTD.kommentar, name="ordensvurderingAbstrakt__kommentar", curie=UTD.curie('kommentar'),
-                   model_uri=UTD.ordensvurderingAbstrakt__kommentar, domain=None, range=str)
-
-slots.ordensvurderingAbstrakt__vurderingsdato = Slot(uri=UTD.vurderingsdato, name="ordensvurderingAbstrakt__vurderingsdato", curie=UTD.curie('vurderingsdato'),
-                   model_uri=UTD.ordensvurderingAbstrakt__vurderingsdato, domain=None, range=Union[str, XSDDateTime])
-
-slots.ordensvurderingAbstrakt__atferd = Slot(uri=UTD.atferd, name="ordensvurderingAbstrakt__atferd", curie=UTD.curie('atferd'),
-                   model_uri=UTD.ordensvurderingAbstrakt__atferd, domain=None, range=Optional[Union[str, KarakterverdiId]])
-
-slots.ordensvurderingAbstrakt__orden = Slot(uri=UTD.orden, name="ordensvurderingAbstrakt__orden", curie=UTD.curie('orden'),
-                   model_uri=UTD.ordensvurderingAbstrakt__orden, domain=None, range=Optional[Union[str, KarakterverdiId]])
-
-slots.ordensvurderingAbstrakt__skoleaar = Slot(uri=UTD.skoleaar, name="ordensvurderingAbstrakt__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.ordensvurderingAbstrakt__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.anmerkninger__atferd = Slot(uri=UTD.atferd, name="anmerkninger__atferd", curie=UTD.curie('atferd'),
-                   model_uri=UTD.anmerkninger__atferd, domain=None, range=int)
-
-slots.anmerkninger__orden = Slot(uri=UTD.orden, name="anmerkninger__orden", curie=UTD.curie('orden'),
-                   model_uri=UTD.anmerkninger__orden, domain=None, range=int)
-
-slots.anmerkninger__skoleaar = Slot(uri=UTD.skoleaar, name="anmerkninger__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.anmerkninger__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.eksamensgruppe__eksamensdato = Slot(uri=UTD.eksamensdato, name="eksamensgruppe__eksamensdato", curie=UTD.curie('eksamensdato'),
-                   model_uri=UTD.eksamensgruppe__eksamensdato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.eksamensgruppe__fag = Slot(uri=UTD.fag, name="eksamensgruppe__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.eksamensgruppe__fag, domain=None, range=Union[str, FagId])
-
-slots.eksamensgruppe__skole = Slot(uri=UTD.skole, name="eksamensgruppe__skole", curie=UTD.curie('skole'),
-                   model_uri=UTD.eksamensgruppe__skole, domain=None, range=Union[str, SkoleId])
-
-slots.eksamensgruppe__termin = Slot(uri=UTD.termin, name="eksamensgruppe__termin", curie=UTD.curie('termin'),
-                   model_uri=UTD.eksamensgruppe__termin, domain=None, range=Union[str, TerminId])
-
-slots.eksamensgruppe__undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="eksamensgruppe__undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
-                   model_uri=UTD.eksamensgruppe__undervisningsforhold, domain=None, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
-
-slots.eksamensgruppe__eksamen = Slot(uri=UTD.eksamen, name="eksamensgruppe__eksamen", curie=UTD.curie('eksamen'),
-                   model_uri=UTD.eksamensgruppe__eksamen, domain=None, range=Optional[Union[str, EksamenId]])
-
-slots.eksamensgruppe__eksamensform = Slot(uri=UTD.eksamensform, name="eksamensgruppe__eksamensform", curie=UTD.curie('eksamensform'),
-                   model_uri=UTD.eksamensgruppe__eksamensform, domain=None, range=Optional[Union[str, EksamensformId]])
-
-slots.eksamensgruppe__skoleaar = Slot(uri=UTD.skoleaar, name="eksamensgruppe__skoleaar", curie=UTD.curie('skoleaar'),
-                   model_uri=UTD.eksamensgruppe__skoleaar, domain=None, range=Optional[Union[str, SkoleaarId]])
-
-slots.eksamensgruppe__gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="eksamensgruppe__gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
-                   model_uri=UTD.eksamensgruppe__gruppemedlemskap, domain=None, range=Optional[Union[Union[str, EksamensgruppemedlemskapId], list[Union[str, EksamensgruppemedlemskapId]]]])
-
-slots.eksamensgruppe__sensor = Slot(uri=UTD.sensor, name="eksamensgruppe__sensor", curie=UTD.curie('sensor'),
-                   model_uri=UTD.eksamensgruppe__sensor, domain=None, range=Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]])
-
-slots.eksamensgruppemedlemskap__delegert = Slot(uri=UTD.delegert, name="eksamensgruppemedlemskap__delegert", curie=UTD.curie('delegert'),
-                   model_uri=UTD.eksamensgruppemedlemskap__delegert, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.eksamensgruppemedlemskap__kandidatnummer = Slot(uri=UTD.kandidatnummer, name="eksamensgruppemedlemskap__kandidatnummer", curie=UTD.curie('kandidatnummer'),
-                   model_uri=UTD.eksamensgruppemedlemskap__kandidatnummer, domain=None, range=Optional[str])
-
-slots.eksamensgruppemedlemskap__delegertTil = Slot(uri=UTD.delegertTil, name="eksamensgruppemedlemskap__delegertTil", curie=UTD.curie('delegertTil'),
-                   model_uri=UTD.eksamensgruppemedlemskap__delegertTil, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.eksamensgruppemedlemskap__foretrukketSkole = Slot(uri=UTD.foretrukketSkole, name="eksamensgruppemedlemskap__foretrukketSkole", curie=UTD.curie('foretrukketSkole'),
-                   model_uri=UTD.eksamensgruppemedlemskap__foretrukketSkole, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.eksamensgruppemedlemskap__foretrukketSensor = Slot(uri=UTD.foretrukketSensor, name="eksamensgruppemedlemskap__foretrukketSensor", curie=UTD.curie('foretrukketSensor'),
-                   model_uri=UTD.eksamensgruppemedlemskap__foretrukketSensor, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.eksamensgruppemedlemskap__betalingsstatus = Slot(uri=UTD.betalingsstatus, name="eksamensgruppemedlemskap__betalingsstatus", curie=UTD.curie('betalingsstatus'),
-                   model_uri=UTD.eksamensgruppemedlemskap__betalingsstatus, domain=None, range=Optional[Union[str, BetalingsstatusId]])
-
-slots.eksamensgruppemedlemskap__elevforhold = Slot(uri=UTD.elevforhold, name="eksamensgruppemedlemskap__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.eksamensgruppemedlemskap__elevforhold, domain=None, range=Union[str, ElevforholdId])
-
-slots.eksamensgruppemedlemskap__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="eksamensgruppemedlemskap__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.eksamensgruppemedlemskap__eksamensgruppe, domain=None, range=Union[str, EksamensgruppeId])
-
-slots.eksamensgruppemedlemskap__nus = Slot(uri=UTD.nus, name="eksamensgruppemedlemskap__nus", curie=UTD.curie('nus'),
-                   model_uri=UTD.eksamensgruppemedlemskap__nus, domain=None, range=Optional[Union[str, KarakterstatusId]])
-
-slots.eksamensvurdering__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="eksamensvurdering__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.eksamensvurdering__eksamensgruppe, domain=None, range=Union[str, EksamensgruppeId])
-
-slots.eksamensvurdering__karakterhistorie = Slot(uri=UTD.karakterhistorie, name="eksamensvurdering__karakterhistorie", curie=UTD.curie('karakterhistorie'),
-                   model_uri=UTD.eksamensvurdering__karakterhistorie, domain=None, range=Optional[Union[Union[str, KarakterhistorieId], list[Union[str, KarakterhistorieId]]]])
-
-slots.eksamensvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="eksamensvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.eksamensvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.elevfravar__elevforhold = Slot(uri=UTD.elevforhold, name="elevfravar__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.elevfravar__elevforhold, domain=None, range=Union[str, ElevforholdId])
-
-slots.elevfravar__fraversregistrering = Slot(uri=UTD.fraversregistrering, name="elevfravar__fraversregistrering", curie=UTD.curie('fraversregistrering'),
-                   model_uri=UTD.elevfravar__fraversregistrering, domain=None, range=Optional[Union[Union[str, FraversregistreringId], list[Union[str, FraversregistreringId]]]])
-
-slots.elevvurdering__elevforhold = Slot(uri=UTD.elevforhold, name="elevvurdering__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.elevvurdering__elevforhold, domain=None, range=Union[str, ElevforholdId])
-
-slots.elevvurdering__eksamensvurdering = Slot(uri=UTD.eksamensvurdering, name="elevvurdering__eksamensvurdering", curie=UTD.curie('eksamensvurdering'),
-                   model_uri=UTD.elevvurdering__eksamensvurdering, domain=None, range=Optional[Union[Union[str, EksamensvurderingId], list[Union[str, EksamensvurderingId]]]])
-
-slots.elevvurdering__sluttfagvurdering = Slot(uri=UTD.sluttfagvurdering, name="elevvurdering__sluttfagvurdering", curie=UTD.curie('sluttfagvurdering'),
-                   model_uri=UTD.elevvurdering__sluttfagvurdering, domain=None, range=Optional[Union[Union[str, SluttfagvurderingId], list[Union[str, SluttfagvurderingId]]]])
-
-slots.elevvurdering__halvaarsfagvurdering = Slot(uri=UTD.halvaarsfagvurdering, name="elevvurdering__halvaarsfagvurdering", curie=UTD.curie('halvaarsfagvurdering'),
-                   model_uri=UTD.elevvurdering__halvaarsfagvurdering, domain=None, range=Optional[Union[Union[str, HalvaarsfagvurderingId], list[Union[str, HalvaarsfagvurderingId]]]])
-
-slots.elevvurdering__underveisfagvurdering = Slot(uri=UTD.underveisfagvurdering, name="elevvurdering__underveisfagvurdering", curie=UTD.curie('underveisfagvurdering'),
-                   model_uri=UTD.elevvurdering__underveisfagvurdering, domain=None, range=Optional[Union[Union[str, UnderveisfagvurderingId], list[Union[str, UnderveisfagvurderingId]]]])
-
-slots.elevvurdering__halvaarsordensvurdering = Slot(uri=UTD.halvaarsordensvurdering, name="elevvurdering__halvaarsordensvurdering", curie=UTD.curie('halvaarsordensvurdering'),
-                   model_uri=UTD.elevvurdering__halvaarsordensvurdering, domain=None, range=Optional[Union[Union[str, HalvaarsordensvurderingId], list[Union[str, HalvaarsordensvurderingId]]]])
-
-slots.elevvurdering__underveisordensvurdering = Slot(uri=UTD.underveisordensvurdering, name="elevvurdering__underveisordensvurdering", curie=UTD.curie('underveisordensvurdering'),
-                   model_uri=UTD.elevvurdering__underveisordensvurdering, domain=None, range=Optional[Union[Union[str, UnderveisordensvurderingId], list[Union[str, UnderveisordensvurderingId]]]])
-
-slots.elevvurdering__sluttordensvurdering = Slot(uri=UTD.sluttordensvurdering, name="elevvurdering__sluttordensvurdering", curie=UTD.curie('sluttordensvurdering'),
-                   model_uri=UTD.elevvurdering__sluttordensvurdering, domain=None, range=Optional[Union[Union[str, SluttordensvurderingId], list[Union[str, SluttordensvurderingId]]]])
-
-slots.elevvurdering__vitnemalsmerknad = Slot(uri=UTD.vitnemalsmerknad, name="elevvurdering__vitnemalsmerknad", curie=UTD.curie('vitnemalsmerknad'),
-                   model_uri=UTD.elevvurdering__vitnemalsmerknad, domain=None, range=Optional[Union[str, VitnemalsmerknadId]])
-
-slots.fravarsoversikt__halvaar = Slot(uri=UTD.halvaar, name="fravarsoversikt__halvaar", curie=UTD.curie('halvaar'),
-                   model_uri=UTD.fravarsoversikt__halvaar, domain=None, range=Union[dict, Fravarsprosent])
-
-slots.fravarsoversikt__skoleaarFravar = Slot(uri=UTD.skoleaarFravar, name="fravarsoversikt__skoleaarFravar", curie=UTD.curie('skoleaarFravar'),
-                   model_uri=UTD.fravarsoversikt__skoleaarFravar, domain=None, range=Union[dict, Fravarsprosent])
-
-slots.fravarsoversikt__elevforhold = Slot(uri=UTD.elevforhold, name="fravarsoversikt__elevforhold", curie=UTD.curie('elevforhold'),
-                   model_uri=UTD.fravarsoversikt__elevforhold, domain=None, range=Union[str, ElevforholdId])
-
-slots.fravarsoversikt__fag = Slot(uri=UTD.fag, name="fravarsoversikt__fag", curie=UTD.curie('fag'),
-                   model_uri=UTD.fravarsoversikt__fag, domain=None, range=Union[str, FagId])
-
-slots.fravarsprosent__fravaerstimer = Slot(uri=UTD.fravaerstimer, name="fravarsprosent__fravaerstimer", curie=UTD.curie('fravaerstimer'),
-                   model_uri=UTD.fravarsprosent__fravaerstimer, domain=None, range=int)
-
-slots.fravarsprosent__prosent = Slot(uri=UTD.prosent, name="fravarsprosent__prosent", curie=UTD.curie('prosent'),
-                   model_uri=UTD.fravarsprosent__prosent, domain=None, range=int)
-
-slots.fravarsprosent__undervisningstimer = Slot(uri=UTD.undervisningstimer, name="fravarsprosent__undervisningstimer", curie=UTD.curie('undervisningstimer'),
-                   model_uri=UTD.fravarsprosent__undervisningstimer, domain=None, range=int)
-
-slots.fraversregistrering__forersPaaVitnemaal = Slot(uri=UTD.forersPaaVitnemaal, name="fraversregistrering__forersPaaVitnemaal", curie=UTD.curie('forersPaaVitnemaal'),
-                   model_uri=UTD.fraversregistrering__forersPaaVitnemaal, domain=None, range=Union[bool, Bool])
-
-slots.fraversregistrering__kommentar = Slot(uri=UTD.kommentar, name="fraversregistrering__kommentar", curie=UTD.curie('kommentar'),
-                   model_uri=UTD.fraversregistrering__kommentar, domain=None, range=Optional[str])
-
-slots.fraversregistrering__periode = Slot(uri=UTD.periode, name="fraversregistrering__periode", curie=UTD.curie('periode'),
-                   model_uri=UTD.fraversregistrering__periode, domain=None, range=Union[dict, Periode])
-
-slots.fraversregistrering__registrertAv = Slot(uri=UTD.registrertAv, name="fraversregistrering__registrertAv", curie=UTD.curie('registrertAv'),
-                   model_uri=UTD.fraversregistrering__registrertAv, domain=None, range=Optional[Union[str, SkoleressursId]])
-
-slots.fraversregistrering__faggruppe = Slot(uri=UTD.faggruppe, name="fraversregistrering__faggruppe", curie=UTD.curie('faggruppe'),
-                   model_uri=UTD.fraversregistrering__faggruppe, domain=None, range=Optional[Union[str, FaggruppeId]])
-
-slots.fraversregistrering__undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="fraversregistrering__undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
-                   model_uri=UTD.fraversregistrering__undervisningsgruppe, domain=None, range=Union[str, UndervisningsgruppeId])
-
-slots.fraversregistrering__elevfravar = Slot(uri=UTD.elevfravar, name="fraversregistrering__elevfravar", curie=UTD.curie('elevfravar'),
-                   model_uri=UTD.fraversregistrering__elevfravar, domain=None, range=Union[str, ElevfravarId])
-
-slots.fraversregistrering__fravartype = Slot(uri=UTD.fravartype, name="fraversregistrering__fravartype", curie=UTD.curie('fravartype'),
-                   model_uri=UTD.fraversregistrering__fravartype, domain=None, range=Union[str, FravartypeId])
-
-slots.halvaarsfagvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="halvaarsfagvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.halvaarsfagvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.halvaarsordensvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="halvaarsordensvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.halvaarsordensvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.karakterhistorie__endretDato = Slot(uri=UTD.endretDato, name="karakterhistorie__endretDato", curie=UTD.curie('endretDato'),
-                   model_uri=UTD.karakterhistorie__endretDato, domain=None, range=Union[str, XSDDateTime])
-
-slots.karakterhistorie__oppdatertAv = Slot(uri=UTD.oppdatertAv, name="karakterhistorie__oppdatertAv", curie=UTD.curie('oppdatertAv'),
-                   model_uri=UTD.karakterhistorie__oppdatertAv, domain=None, range=Optional[Union[str, SkoleressursId]])
-
-slots.karakterhistorie__opprinneligKarakterverdi = Slot(uri=UTD.opprinneligKarakterverdi, name="karakterhistorie__opprinneligKarakterverdi", curie=UTD.curie('opprinneligKarakterverdi'),
-                   model_uri=UTD.karakterhistorie__opprinneligKarakterverdi, domain=None, range=Optional[Union[str, KarakterverdiId]])
-
-slots.karakterhistorie__opprinneligKarakterstatus = Slot(uri=UTD.opprinneligKarakterstatus, name="karakterhistorie__opprinneligKarakterstatus", curie=UTD.curie('opprinneligKarakterstatus'),
-                   model_uri=UTD.karakterhistorie__opprinneligKarakterstatus, domain=None, range=Optional[Union[str, KarakterstatusId]])
-
-slots.karakterhistorie__karakterverdi = Slot(uri=UTD.karakterverdi, name="karakterhistorie__karakterverdi", curie=UTD.curie('karakterverdi'),
-                   model_uri=UTD.karakterhistorie__karakterverdi, domain=None, range=Optional[Union[str, KarakterverdiId]])
-
-slots.karakterhistorie__karakterstatus = Slot(uri=UTD.karakterstatus, name="karakterhistorie__karakterstatus", curie=UTD.curie('karakterstatus'),
-                   model_uri=UTD.karakterhistorie__karakterstatus, domain=None, range=Optional[Union[str, KarakterstatusId]])
-
-slots.sensor__aktiv = Slot(uri=UTD.aktiv, name="sensor__aktiv", curie=UTD.curie('aktiv'),
-                   model_uri=UTD.sensor__aktiv, domain=None, range=Union[bool, Bool])
-
-slots.sensor__sensornummer = Slot(uri=UTD.sensornummer, name="sensor__sensornummer", curie=UTD.curie('sensornummer'),
-                   model_uri=UTD.sensor__sensornummer, domain=None, range=Optional[int])
-
-slots.sensor__skoleressurs = Slot(uri=UTD.skoleressurs, name="sensor__skoleressurs", curie=UTD.curie('skoleressurs'),
-                   model_uri=UTD.sensor__skoleressurs, domain=None, range=Union[str, SkoleressursId])
-
-slots.sensor__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="sensor__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.sensor__eksamensgruppe, domain=None, range=Union[str, EksamensgruppeId])
-
-slots.sluttfagvurdering__eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="sluttfagvurdering__eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
-                   model_uri=UTD.sluttfagvurdering__eksamensgruppe, domain=None, range=Optional[Union[str, EksamensgruppeId]])
-
-slots.sluttfagvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="sluttfagvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.sluttfagvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.sluttfagvurdering__karakterhistorie = Slot(uri=UTD.karakterhistorie, name="sluttfagvurdering__karakterhistorie", curie=UTD.curie('karakterhistorie'),
-                   model_uri=UTD.sluttfagvurdering__karakterhistorie, domain=None, range=Optional[Union[Union[str, KarakterhistorieId], list[Union[str, KarakterhistorieId]]]])
-
-slots.sluttordensvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="sluttordensvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.sluttordensvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.underveisfagvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="underveisfagvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.underveisfagvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.underveisordensvurdering__elevvurdering = Slot(uri=UTD.elevvurdering, name="underveisordensvurdering__elevvurdering", curie=UTD.curie('elevvurdering'),
-                   model_uri=UTD.underveisordensvurdering__elevvurdering, domain=None, range=Union[str, ElevvurderingId])
-
-slots.avlagtProve__provedato = Slot(uri=UTD.provedato, name="avlagtProve__provedato", curie=UTD.curie('provedato'),
-                   model_uri=UTD.avlagtProve__provedato, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.avlagtProve__laerling = Slot(uri=UTD.laerling, name="avlagtProve__laerling", curie=UTD.curie('laerling'),
-                   model_uri=UTD.avlagtProve__laerling, domain=None, range=Union[str, LaerlingId])
-
-slots.avlagtProve__provestatus = Slot(uri=UTD.provestatus, name="avlagtProve__provestatus", curie=UTD.curie('provestatus'),
-                   model_uri=UTD.avlagtProve__provestatus, domain=None, range=Optional[Union[str, ProvestatusId]])
-
-slots.avlagtProve__fullfortkode = Slot(uri=UTD.fullfortkode, name="avlagtProve__fullfortkode", curie=UTD.curie('fullfortkode'),
-                   model_uri=UTD.avlagtProve__fullfortkode, domain=None, range=Optional[Union[str, FullfortkodeId]])
-
-slots.avlagtProve__brevtype = Slot(uri=UTD.brevtype, name="avlagtProve__brevtype", curie=UTD.curie('brevtype'),
-                   model_uri=UTD.avlagtProve__brevtype, domain=None, range=Optional[Union[str, BrevtypeId]])
-
-slots.avlagtProve__bevistype = Slot(uri=UTD.bevistype, name="avlagtProve__bevistype", curie=UTD.curie('bevistype'),
-                   model_uri=UTD.avlagtProve__bevistype, domain=None, range=Optional[Union[str, BevistypeId]])
-
-slots.laerling__kontraktstype = Slot(uri=UTD.kontraktstype, name="laerling__kontraktstype", curie=UTD.curie('kontraktstype'),
-                   model_uri=UTD.laerling__kontraktstype, domain=None, range=Optional[str])
-
-slots.laerling__laretid = Slot(uri=UTD.laretid, name="laerling__laretid", curie=UTD.curie('laretid'),
-                   model_uri=UTD.laerling__laretid, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.laerling__person = Slot(uri=UTD.person, name="laerling__person", curie=UTD.curie('person'),
-                   model_uri=UTD.laerling__person, domain=None, range=Union[str, URIorCURIE])
-
-slots.laerling__bedrift = Slot(uri=UTD.bedrift, name="laerling__bedrift", curie=UTD.curie('bedrift'),
-                   model_uri=UTD.laerling__bedrift, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.laerling__avlagtprove = Slot(uri=UTD.avlagtprove, name="laerling__avlagtprove", curie=UTD.curie('avlagtprove'),
-                   model_uri=UTD.laerling__avlagtprove, domain=None, range=Optional[Union[Union[str, AvlagtProveId], list[Union[str, AvlagtProveId]]]])
-
-slots.laerling__programomrade = Slot(uri=UTD.programomrade, name="laerling__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.laerling__programomrade, domain=None, range=Optional[Union[str, ProgramomradeId]])
-
-slots.otUngdom__person = Slot(uri=UTD.person, name="otUngdom__person", curie=UTD.curie('person'),
-                   model_uri=UTD.otUngdom__person, domain=None, range=Union[str, URIorCURIE])
-
-slots.otUngdom__status = Slot(uri=UTD.status, name="otUngdom__status", curie=UTD.curie('status'),
-                   model_uri=UTD.otUngdom__status, domain=None, range=Optional[Union[str, OtStatusId]])
-
-slots.otUngdom__enhet = Slot(uri=UTD.enhet, name="otUngdom__enhet", curie=UTD.curie('enhet'),
-                   model_uri=UTD.otUngdom__enhet, domain=None, range=Optional[Union[str, OtEnhetId]])
-
-slots.otUngdom__programomrade = Slot(uri=UTD.programomrade, name="otUngdom__programomrade", curie=UTD.curie('programomrade'),
-                   model_uri=UTD.otUngdom__programomrade, domain=None, range=Optional[Union[str, ProgramomradeId]])
-
-slots.avbruddsaarsak__kode = Slot(uri=UTD.kode, name="avbruddsaarsak__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.avbruddsaarsak__kode, domain=None, range=str)
-
-slots.avbruddsaarsak__navn = Slot(uri=UTD.navn, name="avbruddsaarsak__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.avbruddsaarsak__navn, domain=None, range=str)
-
-slots.avbruddsaarsak__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="avbruddsaarsak__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.avbruddsaarsak__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.avbruddsaarsak__passiv = Slot(uri=UTD.passiv, name="avbruddsaarsak__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.avbruddsaarsak__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.betalingsstatus__kode = Slot(uri=UTD.kode, name="betalingsstatus__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.betalingsstatus__kode, domain=None, range=str)
-
-slots.betalingsstatus__navn = Slot(uri=UTD.navn, name="betalingsstatus__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.betalingsstatus__navn, domain=None, range=str)
-
-slots.betalingsstatus__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="betalingsstatus__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.betalingsstatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.betalingsstatus__passiv = Slot(uri=UTD.passiv, name="betalingsstatus__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.betalingsstatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.bevistype__kode = Slot(uri=UTD.kode, name="bevistype__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.bevistype__kode, domain=None, range=str)
-
-slots.bevistype__navn = Slot(uri=UTD.navn, name="bevistype__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.bevistype__navn, domain=None, range=str)
-
-slots.bevistype__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="bevistype__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.bevistype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.bevistype__passiv = Slot(uri=UTD.passiv, name="bevistype__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.bevistype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.brevtype__kode = Slot(uri=UTD.kode, name="brevtype__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.brevtype__kode, domain=None, range=str)
-
-slots.brevtype__navn = Slot(uri=UTD.navn, name="brevtype__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.brevtype__navn, domain=None, range=str)
-
-slots.brevtype__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="brevtype__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.brevtype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.brevtype__passiv = Slot(uri=UTD.passiv, name="brevtype__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.brevtype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.eksamensform__kode = Slot(uri=UTD.kode, name="eksamensform__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.eksamensform__kode, domain=None, range=str)
-
-slots.eksamensform__navn = Slot(uri=UTD.navn, name="eksamensform__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.eksamensform__navn, domain=None, range=str)
-
-slots.eksamensform__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="eksamensform__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.eksamensform__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.eksamensform__passiv = Slot(uri=UTD.passiv, name="eksamensform__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.eksamensform__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.elevkategori__kode = Slot(uri=UTD.kode, name="elevkategori__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.elevkategori__kode, domain=None, range=str)
-
-slots.elevkategori__navn = Slot(uri=UTD.navn, name="elevkategori__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.elevkategori__navn, domain=None, range=str)
-
-slots.elevkategori__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="elevkategori__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.elevkategori__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.elevkategori__passiv = Slot(uri=UTD.passiv, name="elevkategori__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.elevkategori__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.fagmerknad__kode = Slot(uri=UTD.kode, name="fagmerknad__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.fagmerknad__kode, domain=None, range=str)
-
-slots.fagmerknad__navn = Slot(uri=UTD.navn, name="fagmerknad__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.fagmerknad__navn, domain=None, range=str)
-
-slots.fagmerknad__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="fagmerknad__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.fagmerknad__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.fagmerknad__passiv = Slot(uri=UTD.passiv, name="fagmerknad__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.fagmerknad__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.fagstatus__kode = Slot(uri=UTD.kode, name="fagstatus__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.fagstatus__kode, domain=None, range=str)
-
-slots.fagstatus__navn = Slot(uri=UTD.navn, name="fagstatus__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.fagstatus__navn, domain=None, range=str)
-
-slots.fagstatus__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="fagstatus__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.fagstatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.fagstatus__passiv = Slot(uri=UTD.passiv, name="fagstatus__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.fagstatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.fravartype__kode = Slot(uri=UTD.kode, name="fravartype__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.fravartype__kode, domain=None, range=str)
-
-slots.fravartype__navn = Slot(uri=UTD.navn, name="fravartype__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.fravartype__navn, domain=None, range=str)
-
-slots.fravartype__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="fravartype__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.fravartype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.fravartype__passiv = Slot(uri=UTD.passiv, name="fravartype__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.fravartype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.fullfortkode__kode = Slot(uri=UTD.kode, name="fullfortkode__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.fullfortkode__kode, domain=None, range=str)
-
-slots.fullfortkode__navn = Slot(uri=UTD.navn, name="fullfortkode__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.fullfortkode__navn, domain=None, range=str)
-
-slots.fullfortkode__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="fullfortkode__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.fullfortkode__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.fullfortkode__passiv = Slot(uri=UTD.passiv, name="fullfortkode__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.fullfortkode__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.karakterskala__kode = Slot(uri=UTD.kode, name="karakterskala__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.karakterskala__kode, domain=None, range=str)
-
-slots.karakterskala__navn = Slot(uri=UTD.navn, name="karakterskala__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.karakterskala__navn, domain=None, range=str)
-
-slots.karakterskala__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="karakterskala__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.karakterskala__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.karakterskala__passiv = Slot(uri=UTD.passiv, name="karakterskala__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.karakterskala__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.karakterskala__verdi = Slot(uri=UTD.verdi, name="karakterskala__verdi", curie=UTD.curie('verdi'),
-                   model_uri=UTD.karakterskala__verdi, domain=None, range=Optional[Union[Union[str, KarakterverdiId], list[Union[str, KarakterverdiId]]]])
-
-slots.karakterskala__vigoreferanse = Slot(uri=UTD.vigoreferanse, name="karakterskala__vigoreferanse", curie=UTD.curie('vigoreferanse'),
-                   model_uri=UTD.karakterskala__vigoreferanse, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.karakterstatus__kode = Slot(uri=UTD.kode, name="karakterstatus__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.karakterstatus__kode, domain=None, range=str)
-
-slots.karakterstatus__navn = Slot(uri=UTD.navn, name="karakterstatus__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.karakterstatus__navn, domain=None, range=str)
-
-slots.karakterstatus__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="karakterstatus__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.karakterstatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.karakterstatus__passiv = Slot(uri=UTD.passiv, name="karakterstatus__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.karakterstatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.karakterverdi__kode = Slot(uri=UTD.kode, name="karakterverdi__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.karakterverdi__kode, domain=None, range=str)
-
-slots.karakterverdi__navn = Slot(uri=UTD.navn, name="karakterverdi__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.karakterverdi__navn, domain=None, range=str)
-
-slots.karakterverdi__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="karakterverdi__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.karakterverdi__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.karakterverdi__passiv = Slot(uri=UTD.passiv, name="karakterverdi__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.karakterverdi__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.karakterverdi__skala = Slot(uri=UTD.skala, name="karakterverdi__skala", curie=UTD.curie('skala'),
-                   model_uri=UTD.karakterverdi__skala, domain=None, range=Union[str, KarakterskalaId])
-
-slots.otEnhet__kode = Slot(uri=UTD.kode, name="otEnhet__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.otEnhet__kode, domain=None, range=str)
-
-slots.otEnhet__navn = Slot(uri=UTD.navn, name="otEnhet__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.otEnhet__navn, domain=None, range=str)
-
-slots.otEnhet__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="otEnhet__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.otEnhet__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.otEnhet__passiv = Slot(uri=UTD.passiv, name="otEnhet__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.otEnhet__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.otEnhet__kommune = Slot(uri=UTD.kommune, name="otEnhet__kommune", curie=UTD.curie('kommune'),
-                   model_uri=UTD.otEnhet__kommune, domain=None, range=Union[str, URIorCURIE])
-
-slots.otStatus__kode = Slot(uri=UTD.kode, name="otStatus__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.otStatus__kode, domain=None, range=str)
-
-slots.otStatus__navn = Slot(uri=UTD.navn, name="otStatus__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.otStatus__navn, domain=None, range=str)
-
-slots.otStatus__beskrivelse = Slot(uri=UTD.beskrivelse, name="otStatus__beskrivelse", curie=UTD.curie('beskrivelse'),
-                   model_uri=UTD.otStatus__beskrivelse, domain=None, range=Optional[str])
-
-slots.otStatus__type = Slot(uri=UTD.type, name="otStatus__type", curie=UTD.curie('type'),
-                   model_uri=UTD.otStatus__type, domain=None, range=str)
-
-slots.otStatus__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="otStatus__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.otStatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.otStatus__passiv = Slot(uri=UTD.passiv, name="otStatus__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.otStatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.provestatus__kode = Slot(uri=UTD.kode, name="provestatus__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.provestatus__kode, domain=None, range=str)
-
-slots.provestatus__navn = Slot(uri=UTD.navn, name="provestatus__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.provestatus__navn, domain=None, range=str)
-
-slots.provestatus__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="provestatus__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.provestatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.provestatus__passiv = Slot(uri=UTD.passiv, name="provestatus__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.provestatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.skoleaar__kode = Slot(uri=UTD.kode, name="skoleaar__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.skoleaar__kode, domain=None, range=str)
-
-slots.skoleaar__navn = Slot(uri=UTD.navn, name="skoleaar__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.skoleaar__navn, domain=None, range=str)
-
-slots.skoleaar__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="skoleaar__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.skoleaar__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.skoleaar__passiv = Slot(uri=UTD.passiv, name="skoleaar__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.skoleaar__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.skoleeiertype__kode = Slot(uri=UTD.kode, name="skoleeiertype__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.skoleeiertype__kode, domain=None, range=str)
-
-slots.skoleeiertype__navn = Slot(uri=UTD.navn, name="skoleeiertype__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.skoleeiertype__navn, domain=None, range=str)
-
-slots.skoleeiertype__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="skoleeiertype__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.skoleeiertype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.skoleeiertype__passiv = Slot(uri=UTD.passiv, name="skoleeiertype__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.skoleeiertype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.termin__kode = Slot(uri=UTD.kode, name="termin__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.termin__kode, domain=None, range=str)
-
-slots.termin__navn = Slot(uri=UTD.navn, name="termin__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.termin__navn, domain=None, range=str)
-
-slots.termin__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="termin__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.termin__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.termin__passiv = Slot(uri=UTD.passiv, name="termin__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.termin__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.tilrettelegging__kode = Slot(uri=UTD.kode, name="tilrettelegging__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.tilrettelegging__kode, domain=None, range=str)
-
-slots.tilrettelegging__navn = Slot(uri=UTD.navn, name="tilrettelegging__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.tilrettelegging__navn, domain=None, range=str)
-
-slots.tilrettelegging__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="tilrettelegging__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.tilrettelegging__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.tilrettelegging__passiv = Slot(uri=UTD.passiv, name="tilrettelegging__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.tilrettelegging__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.varseltype__kode = Slot(uri=UTD.kode, name="varseltype__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.varseltype__kode, domain=None, range=str)
-
-slots.varseltype__navn = Slot(uri=UTD.navn, name="varseltype__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.varseltype__navn, domain=None, range=str)
-
-slots.varseltype__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="varseltype__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.varseltype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.varseltype__passiv = Slot(uri=UTD.passiv, name="varseltype__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.varseltype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.vitnemalsmerknad__kode = Slot(uri=UTD.kode, name="vitnemalsmerknad__kode", curie=UTD.curie('kode'),
-                   model_uri=UTD.vitnemalsmerknad__kode, domain=None, range=str)
-
-slots.vitnemalsmerknad__navn = Slot(uri=UTD.navn, name="vitnemalsmerknad__navn", curie=UTD.curie('navn'),
-                   model_uri=UTD.vitnemalsmerknad__navn, domain=None, range=str)
-
-slots.vitnemalsmerknad__gyldighetsperiode = Slot(uri=UTD.gyldighetsperiode, name="vitnemalsmerknad__gyldighetsperiode", curie=UTD.curie('gyldighetsperiode'),
-                   model_uri=UTD.vitnemalsmerknad__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.vitnemalsmerknad__passiv = Slot(uri=UTD.passiv, name="vitnemalsmerknad__passiv", curie=UTD.curie('passiv'),
-                   model_uri=UTD.vitnemalsmerknad__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.aktoer__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="aktoer__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=UTD.aktoer__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
-
-slots.aktoer__postadresse = Slot(uri=FINT.postadresse, name="aktoer__postadresse", curie=FINT.curie('postadresse'),
-                   model_uri=UTD.aktoer__postadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.begrep__kode = Slot(uri=FINT.kode, name="begrep__kode", curie=FINT.curie('kode'),
-                   model_uri=UTD.begrep__kode, domain=None, range=str)
-
-slots.begrep__navn = Slot(uri=FINT.navn, name="begrep__navn", curie=FINT.curie('navn'),
-                   model_uri=UTD.begrep__navn, domain=None, range=str)
-
-slots.begrep__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="begrep__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=UTD.begrep__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.begrep__passiv = Slot(uri=FINT.passiv, name="begrep__passiv", curie=FINT.curie('passiv'),
-                   model_uri=UTD.begrep__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.enhet__forretningsadresse = Slot(uri=FINT.forretningsadresse, name="enhet__forretningsadresse", curie=FINT.curie('forretningsadresse'),
-                   model_uri=UTD.enhet__forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.enhet__organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="enhet__organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
-                   model_uri=UTD.enhet__organisasjonsnavn, domain=None, range=Optional[str])
-
-slots.enhet__organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="enhet__organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
-                   model_uri=UTD.enhet__organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.identifikator__identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikator__identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
-                   model_uri=UTD.identifikator__identifikatorverdi, domain=None, range=str)
-
-slots.identifikator__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="identifikator__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=UTD.identifikator__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.periode__beskrivelse = Slot(uri=FINT.beskrivelse, name="periode__beskrivelse", curie=FINT.curie('beskrivelse'),
-                   model_uri=UTD.periode__beskrivelse, domain=None, range=Optional[str])
-
-slots.periode__start = Slot(uri=FINT.start, name="periode__start", curie=FINT.curie('start'),
-                   model_uri=UTD.periode__start, domain=None, range=Union[str, XSDDateTime])
-
-slots.periode__slutt = Slot(uri=FINT.slutt, name="periode__slutt", curie=FINT.curie('slutt'),
-                   model_uri=UTD.periode__slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.personnavn__fornavn = Slot(uri=FINT.fornavn, name="personnavn__fornavn", curie=FINT.curie('fornavn'),
-                   model_uri=UTD.personnavn__fornavn, domain=None, range=str)
-
-slots.personnavn__mellomnavn = Slot(uri=FINT.mellomnavn, name="personnavn__mellomnavn", curie=FINT.curie('mellomnavn'),
-                   model_uri=UTD.personnavn__mellomnavn, domain=None, range=Optional[str])
-
-slots.personnavn__etternavn = Slot(uri=FINT.etternavn, name="personnavn__etternavn", curie=FINT.curie('etternavn'),
-                   model_uri=UTD.personnavn__etternavn, domain=None, range=str)
-
-slots.kontaktinformasjon__epostadresse = Slot(uri=FINT.epostadresse, name="kontaktinformasjon__epostadresse", curie=FINT.curie('epostadresse'),
-                   model_uri=UTD.kontaktinformasjon__epostadresse, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="kontaktinformasjon__mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
-                   model_uri=UTD.kontaktinformasjon__mobiltelefonnummer, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__nettsted = Slot(uri=FINT.nettsted, name="kontaktinformasjon__nettsted", curie=FINT.curie('nettsted'),
-                   model_uri=UTD.kontaktinformasjon__nettsted, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__sip = Slot(uri=FINT.sip, name="kontaktinformasjon__sip", curie=FINT.curie('sip'),
-                   model_uri=UTD.kontaktinformasjon__sip, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__telefonnummer = Slot(uri=FINT.telefonnummer, name="kontaktinformasjon__telefonnummer", curie=FINT.curie('telefonnummer'),
-                   model_uri=UTD.kontaktinformasjon__telefonnummer, domain=None, range=Optional[str])
-
-slots.adresse__adresselinje = Slot(uri=FINT.adresselinje, name="adresse__adresselinje", curie=FINT.curie('adresselinje'),
-                   model_uri=UTD.adresse__adresselinje, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.adresse__postnummer = Slot(uri=FINT.postnummer, name="adresse__postnummer", curie=FINT.curie('postnummer'),
-                   model_uri=UTD.adresse__postnummer, domain=None, range=Optional[str])
-
-slots.adresse__poststed = Slot(uri=FINT.poststed, name="adresse__poststed", curie=FINT.curie('poststed'),
-                   model_uri=UTD.adresse__poststed, domain=None, range=Optional[str])
-
-slots.adresse__land = Slot(uri=FINT.land, name="adresse__land", curie=FINT.curie('land'),
-                   model_uri=UTD.adresse__land, domain=None, range=Optional[Union[str, LandkodeId]])
-
-slots.matrikkelnummer__adresse = Slot(uri=FINT.adresse, name="matrikkelnummer__adresse", curie=FINT.curie('adresse'),
-                   model_uri=UTD.matrikkelnummer__adresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.matrikkelnummer__bruksnummer = Slot(uri=FINT.bruksnummer, name="matrikkelnummer__bruksnummer", curie=FINT.curie('bruksnummer'),
-                   model_uri=UTD.matrikkelnummer__bruksnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__festenummer = Slot(uri=FINT.festenummer, name="matrikkelnummer__festenummer", curie=FINT.curie('festenummer'),
-                   model_uri=UTD.matrikkelnummer__festenummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__gaardsnummer = Slot(uri=FINT.gaardsnummer, name="matrikkelnummer__gaardsnummer", curie=FINT.curie('gaardsnummer'),
-                   model_uri=UTD.matrikkelnummer__gaardsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="matrikkelnummer__seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
-                   model_uri=UTD.matrikkelnummer__seksjonsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__kommunenummer = Slot(uri=FINT.kommunenummer, name="matrikkelnummer__kommunenummer", curie=FINT.curie('kommunenummer'),
-                   model_uri=UTD.matrikkelnummer__kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.fylke__kommune = Slot(uri=FINT.kommune, name="fylke__kommune", curie=FINT.curie('kommune'),
-                   model_uri=UTD.fylke__kommune, domain=None, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
-
-slots.kommune__fylke = Slot(uri=FINT.fylke, name="kommune__fylke", curie=FINT.curie('fylke'),
-                   model_uri=UTD.kommune__fylke, domain=None, range=Union[str, FylkeId])
-
-slots.valuta__bokstavkode = Slot(uri=FINT.bokstavkode, name="valuta__bokstavkode", curie=FINT.curie('bokstavkode'),
-                   model_uri=UTD.valuta__bokstavkode, domain=None, range=Union[dict, Identifikator])
-
-slots.valuta__navn = Slot(uri=FINT.valutaNavn, name="valuta__navn", curie=FINT.curie('valutaNavn'),
-                   model_uri=UTD.valuta__navn, domain=None, range=str)
-
-slots.valuta__nummerkode = Slot(uri=FINT.nummerkode, name="valuta__nummerkode", curie=FINT.curie('nummerkode'),
-                   model_uri=UTD.valuta__nummerkode, domain=None, range=Union[dict, Identifikator])
-
-slots.person__bilde = Slot(uri=FINT.bilde, name="person__bilde", curie=FINT.curie('bilde'),
-                   model_uri=UTD.person__bilde, domain=None, range=Optional[str])
-
-slots.person__bostedsadresse = Slot(uri=FINT.bostedsadresse, name="person__bostedsadresse", curie=FINT.curie('bostedsadresse'),
-                   model_uri=UTD.person__bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.person__fodselsdato = Slot(uri=FINT.fodselsdato, name="person__fodselsdato", curie=FINT.curie('fodselsdato'),
-                   model_uri=UTD.person__fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.person__fodselsnummer = Slot(uri=FINT.fodselsnummer, name="person__fodselsnummer", curie=FINT.curie('fodselsnummer'),
-                   model_uri=UTD.person__fodselsnummer, domain=None, range=Union[dict, Identifikator])
-
-slots.person__navn = Slot(uri=FINT.personNavn, name="person__navn", curie=FINT.curie('personNavn'),
-                   model_uri=UTD.person__navn, domain=None, range=Union[dict, Personnavn])
-
-slots.person__parorende = Slot(uri=FINT.parorende, name="person__parorende", curie=FINT.curie('parorende'),
-                   model_uri=UTD.person__parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
-
-slots.person__statsborgerskap = Slot(uri=FINT.statsborgerskap, name="person__statsborgerskap", curie=FINT.curie('statsborgerskap'),
-                   model_uri=UTD.person__statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
-
-slots.person__kommune = Slot(uri=FINT.kommune, name="person__kommune", curie=FINT.curie('kommune'),
-                   model_uri=UTD.person__kommune, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.person__kjonn = Slot(uri=FINT.kjonn, name="person__kjonn", curie=FINT.curie('kjonn'),
-                   model_uri=UTD.person__kjonn, domain=None, range=Optional[Union[str, KjonnId]])
-
-slots.person__foreldreansvar = Slot(uri=FINT.foreldreansvar, name="person__foreldreansvar", curie=FINT.curie('foreldreansvar'),
-                   model_uri=UTD.person__foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__foreldre = Slot(uri=FINT.foreldre, name="person__foreldre", curie=FINT.curie('foreldre'),
-                   model_uri=UTD.person__foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__maalform = Slot(uri=FINT.maalform, name="person__maalform", curie=FINT.curie('maalform'),
-                   model_uri=UTD.person__maalform, domain=None, range=Optional[Union[str, SpraakId]])
+slots.virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=UTD.virksomhetsId, domain=None, range=Optional[Union[dict, Identifikator]])
 
 slots.person__personalressurs = Slot(uri=FINT.personalressurs, name="person__personalressurs", curie=FINT.curie('personalressurs'),
                    model_uri=UTD.person__personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.person__morsmaal = Slot(uri=FINT.morsmaal, name="person__morsmaal", curie=FINT.curie('morsmaal'),
-                   model_uri=UTD.person__morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
+slots.UtdanningContainer_elevforhold = Slot(uri=UTD.elevforhold, name="UtdanningContainer_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.UtdanningContainer_elevforhold, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, ElevforholdId], Union[dict, "Elevforhold"]], list[Union[dict, "Elevforhold"]]]])
 
-slots.person__laerling = Slot(uri=FINT.laerling, name="person__laerling", curie=FINT.curie('laerling'),
-                   model_uri=UTD.person__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.UtdanningContainer_eksamen = Slot(uri=UTD.eksamen, name="UtdanningContainer_eksamen", curie=UTD.curie('eksamen'),
+                   model_uri=UTD.UtdanningContainer_eksamen, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, EksamenId], Union[dict, "Eksamen"]], list[Union[dict, "Eksamen"]]]])
 
-slots.person__elev = Slot(uri=FINT.elev, name="person__elev", curie=FINT.curie('elev'),
-                   model_uri=UTD.person__elev, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.UtdanningContainer_fag = Slot(uri=UTD.fag, name="UtdanningContainer_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.UtdanningContainer_fag, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, FagId], Union[dict, "Fag"]], list[Union[dict, "Fag"]]]])
 
-slots.person__otungdom = Slot(uri=FINT.otungdom, name="person__otungdom", curie=FINT.curie('otungdom'),
-                   model_uri=UTD.person__otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.UtdanningContainer_rom = Slot(uri=UTD.rom, name="UtdanningContainer_rom", curie=UTD.curie('rom'),
+                   model_uri=UTD.UtdanningContainer_rom, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, RomId], Union[dict, "Rom"]], list[Union[dict, "Rom"]]]])
 
-slots.kontaktperson__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktperson__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=UTD.kontaktperson__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
+slots.UtdanningContainer_elevfravar = Slot(uri=UTD.elevfravar, name="UtdanningContainer_elevfravar", curie=UTD.curie('elevfravar'),
+                   model_uri=UTD.UtdanningContainer_elevfravar, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, ElevfravarId], Union[dict, "Elevfravar"]], list[Union[dict, "Elevfravar"]]]])
 
-slots.kontaktperson__navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson__navn", curie=FINT.curie('kontaktpersonNavn'),
-                   model_uri=UTD.kontaktperson__navn, domain=None, range=Optional[Union[dict, Personnavn]])
+slots.UtdanningContainer_elevvurdering = Slot(uri=UTD.elevvurdering, name="UtdanningContainer_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.UtdanningContainer_elevvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, ElevvurderingId], Union[dict, "Elevvurdering"]], list[Union[dict, "Elevvurdering"]]]])
 
-slots.kontaktperson__type = Slot(uri=FINT.type, name="kontaktperson__type", curie=FINT.curie('type'),
-                   model_uri=UTD.kontaktperson__type, domain=None, range=str)
+slots.UtdanningContainer_vitnemalsmerknad = Slot(uri=UTD.vitnemalsmerknad, name="UtdanningContainer_vitnemalsmerknad", curie=UTD.curie('vitnemalsmerknad'),
+                   model_uri=UTD.UtdanningContainer_vitnemalsmerknad, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, VitnemalsmerknadId], Union[dict, "Vitnemalsmerknad"]], list[Union[dict, "Vitnemalsmerknad"]]]])
 
-slots.kontaktperson__kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson__kontaktperson", curie=FINT.curie('kontaktpersonFor'),
-                   model_uri=UTD.kontaktperson__kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+slots.UtdanningContainer_betalingsstatus = Slot(uri=UTD.betalingsstatus, name="UtdanningContainer_betalingsstatus", curie=UTD.curie('betalingsstatus'),
+                   model_uri=UTD.UtdanningContainer_betalingsstatus, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, BetalingsstatusId], Union[dict, "Betalingsstatus"]], list[Union[dict, "Betalingsstatus"]]]])
 
-slots.virksomhet__virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhet__virksomhetsId", curie=FINT.curie('virksomhetsId'),
-                   model_uri=UTD.virksomhet__virksomhetsId, domain=None, range=Union[dict, Identifikator])
+slots.UtdanningContainer_fagstatus = Slot(uri=UTD.fagstatus, name="UtdanningContainer_fagstatus", curie=UTD.curie('fagstatus'),
+                   model_uri=UTD.UtdanningContainer_fagstatus, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, FagstatusId], Union[dict, "Fagstatus"]], list[Union[dict, "Fagstatus"]]]])
 
-slots.virksomhet__laerling = Slot(uri=FINT.laerling, name="virksomhet__laerling", curie=FINT.curie('laerling'),
-                   model_uri=UTD.virksomhet__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.UtdanningContainer_karakterstatus = Slot(uri=UTD.karakterstatus, name="UtdanningContainer_karakterstatus", curie=UTD.curie('karakterstatus'),
+                   model_uri=UTD.UtdanningContainer_karakterstatus, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, KarakterstatusId], Union[dict, "Karakterstatus"]], list[Union[dict, "Karakterstatus"]]]])
+
+slots.UtdanningContainer_skoleaar = Slot(uri=UTD.skoleaar, name="UtdanningContainer_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.UtdanningContainer_skoleaar, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, SkoleaarId], Union[dict, "Skoleaar"]], list[Union[dict, "Skoleaar"]]]])
+
+slots.UtdanningContainer_tilrettelegging = Slot(uri=UTD.tilrettelegging, name="UtdanningContainer_tilrettelegging", curie=UTD.curie('tilrettelegging'),
+                   model_uri=UTD.UtdanningContainer_tilrettelegging, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, TilretteleggingId], Union[dict, "Tilrettelegging"]], list[Union[dict, "Tilrettelegging"]]]])
+
+slots.UtdanningContainer_klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="UtdanningContainer_klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_klassemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, KlassemedlemskapId], Union[dict, "Klassemedlemskap"]], list[Union[dict, "Klassemedlemskap"]]]])
+
+slots.UtdanningContainer_kontaktlaerergruppemedlemskap = Slot(uri=UTD.kontaktlaerergruppemedlemskap, name="UtdanningContainer_kontaktlaerergruppemedlemskap", curie=UTD.curie('kontaktlaerergruppemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_kontaktlaerergruppemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, KontaktlaerergruppemedlemskapId], Union[dict, "Kontaktlaerergruppemedlemskap"]], list[Union[dict, "Kontaktlaerergruppemedlemskap"]]]])
+
+slots.UtdanningContainer_persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="UtdanningContainer_persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_persongruppemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, PersongruppemedlemskapId], Union[dict, "Persongruppemedlemskap"]], list[Union[dict, "Persongruppemedlemskap"]]]])
+
+slots.UtdanningContainer_programomrademedlemskap = Slot(uri=UTD.programomrademedlemskap, name="UtdanningContainer_programomrademedlemskap", curie=UTD.curie('programomrademedlemskap'),
+                   model_uri=UTD.UtdanningContainer_programomrademedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, ProgramomrademedlemskapId], Union[dict, "Programomrademedlemskap"]], list[Union[dict, "Programomrademedlemskap"]]]])
+
+slots.UtdanningContainer_undervisningsgruppemedlemskap = Slot(uri=UTD.undervisningsgruppemedlemskap, name="UtdanningContainer_undervisningsgruppemedlemskap", curie=UTD.curie('undervisningsgruppemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_undervisningsgruppemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, UndervisningsgruppemedlemskapId], Union[dict, "Undervisningsgruppemedlemskap"]], list[Union[dict, "Undervisningsgruppemedlemskap"]]]])
+
+slots.UtdanningContainer_eksamensgruppemedlemskap = Slot(uri=UTD.eksamensgruppemedlemskap, name="UtdanningContainer_eksamensgruppemedlemskap", curie=UTD.curie('eksamensgruppemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_eksamensgruppemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, EksamensgruppemedlemskapId], Union[dict, "Eksamensgruppemedlemskap"]], list[Union[dict, "Eksamensgruppemedlemskap"]]]])
+
+slots.UtdanningContainer_faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="UtdanningContainer_faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
+                   model_uri=UTD.UtdanningContainer_faggruppemedlemskap, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, FaggruppemedlemskapId], Union[dict, "Faggruppemedlemskap"]], list[Union[dict, "Faggruppemedlemskap"]]]])
+
+slots.UtdanningContainer_utdanningsprogram = Slot(uri=UTD.utdanningsprogram, name="UtdanningContainer_utdanningsprogram", curie=UTD.curie('utdanningsprogram'),
+                   model_uri=UTD.UtdanningContainer_utdanningsprogram, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, UtdanningsprogramId], Union[dict, "Utdanningsprogram"]], list[Union[dict, "Utdanningsprogram"]]]])
+
+slots.UtdanningContainer_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="UtdanningContainer_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.UtdanningContainer_undervisningsforhold, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, UndervisningsforholdId], Union[dict, "Undervisningsforhold"]], list[Union[dict, "Undervisningsforhold"]]]])
+
+slots.UtdanningContainer_varsel = Slot(uri=UTD.varsel, name="UtdanningContainer_varsel", curie=UTD.curie('varsel'),
+                   model_uri=UTD.UtdanningContainer_varsel, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, VarselId], Union[dict, "Varsel"]], list[Union[dict, "Varsel"]]]])
+
+slots.UtdanningContainer_karakterhistorie = Slot(uri=UTD.karakterhistorie, name="UtdanningContainer_karakterhistorie", curie=UTD.curie('karakterhistorie'),
+                   model_uri=UTD.UtdanningContainer_karakterhistorie, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, KarakterhistorieId], Union[dict, "Karakterhistorie"]], list[Union[dict, "Karakterhistorie"]]]])
+
+slots.UtdanningContainer_sensor = Slot(uri=UTD.sensor, name="UtdanningContainer_sensor", curie=UTD.curie('sensor'),
+                   model_uri=UTD.UtdanningContainer_sensor, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, SensorId], Union[dict, "Sensor"]], list[Union[dict, "Sensor"]]]])
+
+slots.UtdanningContainer_fraversregistrering = Slot(uri=UTD.fraversregistrering, name="UtdanningContainer_fraversregistrering", curie=UTD.curie('fraversregistrering'),
+                   model_uri=UTD.UtdanningContainer_fraversregistrering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, FraversregistreringId], Union[dict, "Fraversregistrering"]], list[Union[dict, "Fraversregistrering"]]]])
+
+slots.UtdanningContainer_halvaarsfagvurdering = Slot(uri=UTD.halvaarsfagvurdering, name="UtdanningContainer_halvaarsfagvurdering", curie=UTD.curie('halvaarsfagvurdering'),
+                   model_uri=UTD.UtdanningContainer_halvaarsfagvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, HalvaarsfagvurderingId], Union[dict, "Halvaarsfagvurdering"]], list[Union[dict, "Halvaarsfagvurdering"]]]])
+
+slots.UtdanningContainer_halvaarsordensvurdering = Slot(uri=UTD.halvaarsordensvurdering, name="UtdanningContainer_halvaarsordensvurdering", curie=UTD.curie('halvaarsordensvurdering'),
+                   model_uri=UTD.UtdanningContainer_halvaarsordensvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, HalvaarsordensvurderingId], Union[dict, "Halvaarsordensvurdering"]], list[Union[dict, "Halvaarsordensvurdering"]]]])
+
+slots.UtdanningContainer_sluttfagvurdering = Slot(uri=UTD.sluttfagvurdering, name="UtdanningContainer_sluttfagvurdering", curie=UTD.curie('sluttfagvurdering'),
+                   model_uri=UTD.UtdanningContainer_sluttfagvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, SluttfagvurderingId], Union[dict, "Sluttfagvurdering"]], list[Union[dict, "Sluttfagvurdering"]]]])
+
+slots.UtdanningContainer_sluttordensvurdering = Slot(uri=UTD.sluttordensvurdering, name="UtdanningContainer_sluttordensvurdering", curie=UTD.curie('sluttordensvurdering'),
+                   model_uri=UTD.UtdanningContainer_sluttordensvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, SluttordensvurderingId], Union[dict, "Sluttordensvurdering"]], list[Union[dict, "Sluttordensvurdering"]]]])
+
+slots.UtdanningContainer_underveisfagvurdering = Slot(uri=UTD.underveisfagvurdering, name="UtdanningContainer_underveisfagvurdering", curie=UTD.curie('underveisfagvurdering'),
+                   model_uri=UTD.UtdanningContainer_underveisfagvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, UnderveisfagvurderingId], Union[dict, "Underveisfagvurdering"]], list[Union[dict, "Underveisfagvurdering"]]]])
+
+slots.UtdanningContainer_underveisordensvurdering = Slot(uri=UTD.underveisordensvurdering, name="UtdanningContainer_underveisordensvurdering", curie=UTD.curie('underveisordensvurdering'),
+                   model_uri=UTD.UtdanningContainer_underveisordensvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, UnderveisordensvurderingId], Union[dict, "Underveisordensvurdering"]], list[Union[dict, "Underveisordensvurdering"]]]])
+
+slots.UtdanningContainer_eksamensvurdering = Slot(uri=UTD.eksamensvurdering, name="UtdanningContainer_eksamensvurdering", curie=UTD.curie('eksamensvurdering'),
+                   model_uri=UTD.UtdanningContainer_eksamensvurdering, domain=UtdanningContainer, range=Optional[Union[dict[Union[str, EksamensvurderingId], Union[dict, "Eksamensvurdering"]], list[Union[dict, "Eksamensvurdering"]]]])
+
+slots.Gruppe_navn = Slot(uri=FINT.navn, name="Gruppe_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Gruppe_navn, domain=Gruppe, range=str)
+
+slots.Gruppe_beskrivelse = Slot(uri=FINT.beskrivelse, name="Gruppe_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.Gruppe_beskrivelse, domain=Gruppe, range=Optional[str])
+
+slots.Gruppemedlemskap_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Gruppemedlemskap_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Gruppemedlemskap_gyldighetsperiode, domain=Gruppemedlemskap, range=Optional[Union[dict, "Periode"]])
+
+slots.Utdanningsforhold_beskrivelse = Slot(uri=FINT.beskrivelse, name="Utdanningsforhold_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.Utdanningsforhold_beskrivelse, domain=Utdanningsforhold, range=Optional[str])
+
+slots.Elevforhold_beskrivelse = Slot(uri=FINT.beskrivelse, name="Elevforhold_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.Elevforhold_beskrivelse, domain=Elevforhold, range=str)
+
+slots.Elevforhold_avbruddsdato = Slot(uri=UTD.avbruddsdato, name="Elevforhold_avbruddsdato", curie=UTD.curie('avbruddsdato'),
+                   model_uri=UTD.Elevforhold_avbruddsdato, domain=Elevforhold, range=Optional[Union[str, XSDDate]])
+
+slots.Elevforhold_tosprakligFagopplaering = Slot(uri=UTD.tosprakligFagopplaering, name="Elevforhold_tosprakligFagopplaering", curie=UTD.curie('tosprakligFagopplaering'),
+                   model_uri=UTD.Elevforhold_tosprakligFagopplaering, domain=Elevforhold, range=Optional[Union[bool, Bool]])
+
+slots.Elevforhold_elev = Slot(uri=FINT.elev, name="Elevforhold_elev", curie=FINT.curie('elev'),
+                   model_uri=UTD.Elevforhold_elev, domain=Elevforhold, range=Union[str, ElevId])
+
+slots.Elevforhold_skole = Slot(uri=UTD.skole, name="Elevforhold_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Elevforhold_skole, domain=Elevforhold, range=Union[str, SkoleId])
+
+slots.Elevforhold_kategori = Slot(uri=UTD.kategori, name="Elevforhold_kategori", curie=UTD.curie('kategori'),
+                   model_uri=UTD.Elevforhold_kategori, domain=Elevforhold, range=Optional[Union[str, ElevkategoriId]])
+
+slots.Elevforhold_avbruddsarsak = Slot(uri=UTD.avbruddsarsak, name="Elevforhold_avbruddsarsak", curie=UTD.curie('avbruddsarsak'),
+                   model_uri=UTD.Elevforhold_avbruddsarsak, domain=Elevforhold, range=Optional[Union[str, AvbruddsaarsakId]])
+
+slots.Elevforhold_skoleaar = Slot(uri=UTD.skoleaar, name="Elevforhold_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Elevforhold_skoleaar, domain=Elevforhold, range=Optional[Union[str, SkoleaarId]])
+
+slots.Elevforhold_programomrademedlemskap = Slot(uri=UTD.programomrademedlemskap, name="Elevforhold_programomrademedlemskap", curie=UTD.curie('programomrademedlemskap'),
+                   model_uri=UTD.Elevforhold_programomrademedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, ProgramomrademedlemskapId], list[Union[str, ProgramomrademedlemskapId]]]])
+
+slots.Elevforhold_klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="Elevforhold_klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
+                   model_uri=UTD.Elevforhold_klassemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, KlassemedlemskapId], list[Union[str, KlassemedlemskapId]]]])
+
+slots.Elevforhold_faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="Elevforhold_faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
+                   model_uri=UTD.Elevforhold_faggruppemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
+
+slots.Elevforhold_undervisningsgruppemedlemskap = Slot(uri=UTD.undervisningsgruppemedlemskap, name="Elevforhold_undervisningsgruppemedlemskap", curie=UTD.curie('undervisningsgruppemedlemskap'),
+                   model_uri=UTD.Elevforhold_undervisningsgruppemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, UndervisningsgruppemedlemskapId], list[Union[str, UndervisningsgruppemedlemskapId]]]])
+
+slots.Elevforhold_kontaktlaerergruppemedlemskap = Slot(uri=UTD.kontaktlaerergruppemedlemskap, name="Elevforhold_kontaktlaerergruppemedlemskap", curie=UTD.curie('kontaktlaerergruppemedlemskap'),
+                   model_uri=UTD.Elevforhold_kontaktlaerergruppemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, KontaktlaerergruppemedlemskapId], list[Union[str, KontaktlaerergruppemedlemskapId]]]])
+
+slots.Elevforhold_persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="Elevforhold_persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
+                   model_uri=UTD.Elevforhold_persongruppemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, PersongruppemedlemskapId], list[Union[str, PersongruppemedlemskapId]]]])
+
+slots.Elevforhold_eksamensgruppemedlemskap = Slot(uri=UTD.eksamensgruppemedlemskap, name="Elevforhold_eksamensgruppemedlemskap", curie=UTD.curie('eksamensgruppemedlemskap'),
+                   model_uri=UTD.Elevforhold_eksamensgruppemedlemskap, domain=Elevforhold, range=Optional[Union[Union[str, EksamensgruppemedlemskapId], list[Union[str, EksamensgruppemedlemskapId]]]])
+
+slots.Elevforhold_fraversregistreringer = Slot(uri=UTD.fraversregistreringer, name="Elevforhold_fraversregistreringer", curie=UTD.curie('fraversregistreringer'),
+                   model_uri=UTD.Elevforhold_fraversregistreringer, domain=Elevforhold, range=Optional[Union[Union[str, ElevfravarId], list[Union[str, ElevfravarId]]]])
+
+slots.Elevforhold_elevfravar = Slot(uri=UTD.elevfravar, name="Elevforhold_elevfravar", curie=UTD.curie('elevfravar'),
+                   model_uri=UTD.Elevforhold_elevfravar, domain=Elevforhold, range=Optional[Union[str, FravarsoversiktId]])
+
+slots.Elevforhold_tilrettelegging = Slot(uri=UTD.tilrettelegging, name="Elevforhold_tilrettelegging", curie=UTD.curie('tilrettelegging'),
+                   model_uri=UTD.Elevforhold_tilrettelegging, domain=Elevforhold, range=Optional[Union[Union[str, ElevtilretteleggingId], list[Union[str, ElevtilretteleggingId]]]])
+
+slots.Elevforhold_elevvurdering = Slot(uri=UTD.elevvurdering, name="Elevforhold_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Elevforhold_elevvurdering, domain=Elevforhold, range=Optional[Union[str, ElevvurderingId]])
+
+slots.Elevtilrettelegging_elev = Slot(uri=FINT.elev, name="Elevtilrettelegging_elev", curie=FINT.curie('elev'),
+                   model_uri=UTD.Elevtilrettelegging_elev, domain=Elevtilrettelegging, range=Optional[Union[str, ElevforholdId]])
+
+slots.Elevtilrettelegging_tilrettelegging = Slot(uri=UTD.tilrettelegging, name="Elevtilrettelegging_tilrettelegging", curie=UTD.curie('tilrettelegging'),
+                   model_uri=UTD.Elevtilrettelegging_tilrettelegging, domain=Elevtilrettelegging, range=Optional[Union[str, TilretteleggingId]])
+
+slots.Elevtilrettelegging_eksamensform = Slot(uri=UTD.eksamensform, name="Elevtilrettelegging_eksamensform", curie=UTD.curie('eksamensform'),
+                   model_uri=UTD.Elevtilrettelegging_eksamensform, domain=Elevtilrettelegging, range=Optional[Union[str, EksamensformId]])
+
+slots.Klasse_skoleaar = Slot(uri=UTD.skoleaar, name="Klasse_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Klasse_skoleaar, domain=Klasse, range=Optional[Union[str, SkoleaarId]])
+
+slots.Klasse_termin = Slot(uri=UTD.termin, name="Klasse_termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.Klasse_termin, domain=Klasse, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
+
+slots.Klasse_trinn = Slot(uri=UTD.trinn, name="Klasse_trinn", curie=UTD.curie('trinn'),
+                   model_uri=UTD.Klasse_trinn, domain=Klasse, range=Optional[Union[Union[str, ArstrinnId], list[Union[str, ArstrinnId]]]])
+
+slots.Klasse_skole = Slot(uri=UTD.skole, name="Klasse_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Klasse_skole, domain=Klasse, range=Optional[Union[str, SkoleId]])
+
+slots.Klasse_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Klasse_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Klasse_undervisningsforhold, domain=Klasse, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.Klasse_klassemedlemskap = Slot(uri=UTD.klassemedlemskap, name="Klasse_klassemedlemskap", curie=UTD.curie('klassemedlemskap'),
+                   model_uri=UTD.Klasse_klassemedlemskap, domain=Klasse, range=Optional[Union[Union[str, KlassemedlemskapId], list[Union[str, KlassemedlemskapId]]]])
+
+slots.Klasse_kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="Klasse_kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
+                   model_uri=UTD.Klasse_kontaktlaerergruppe, domain=Klasse, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
+
+slots.Klassemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Klassemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Klassemedlemskap_elevforhold, domain=Klassemedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Klassemedlemskap_klasse = Slot(uri=UTD.klasse, name="Klassemedlemskap_klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.Klassemedlemskap_klasse, domain=Klassemedlemskap, range=Optional[Union[str, KlasseId]])
+
+slots.Kontaktlaerergruppe_klasse = Slot(uri=UTD.klasse, name="Kontaktlaerergruppe_klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.Kontaktlaerergruppe_klasse, domain=Kontaktlaerergruppe, range=Union[Union[str, KlasseId], list[Union[str, KlasseId]]])
+
+slots.Kontaktlaerergruppe_termin = Slot(uri=UTD.termin, name="Kontaktlaerergruppe_termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.Kontaktlaerergruppe_termin, domain=Kontaktlaerergruppe, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
+
+slots.Kontaktlaerergruppe_skole = Slot(uri=UTD.skole, name="Kontaktlaerergruppe_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Kontaktlaerergruppe_skole, domain=Kontaktlaerergruppe, range=Optional[Union[str, SkoleId]])
+
+slots.Kontaktlaerergruppe_skoleaar = Slot(uri=UTD.skoleaar, name="Kontaktlaerergruppe_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Kontaktlaerergruppe_skoleaar, domain=Kontaktlaerergruppe, range=Optional[Union[str, SkoleaarId]])
+
+slots.Kontaktlaerergruppe_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Kontaktlaerergruppe_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Kontaktlaerergruppe_undervisningsforhold, domain=Kontaktlaerergruppe, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.Kontaktlaerergruppe_gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="Kontaktlaerergruppe_gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
+                   model_uri=UTD.Kontaktlaerergruppe_gruppemedlemskap, domain=Kontaktlaerergruppe, range=Optional[Union[Union[str, KontaktlaerergruppemedlemskapId], list[Union[str, KontaktlaerergruppemedlemskapId]]]])
+
+slots.Kontaktlaerergruppemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Kontaktlaerergruppemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Kontaktlaerergruppemedlemskap_elevforhold, domain=Kontaktlaerergruppemedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Kontaktlaerergruppemedlemskap_kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="Kontaktlaerergruppemedlemskap_kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
+                   model_uri=UTD.Kontaktlaerergruppemedlemskap_kontaktlaerergruppe, domain=Kontaktlaerergruppemedlemskap, range=Optional[Union[str, KontaktlaerergruppeId]])
+
+slots.Persongruppe_elev = Slot(uri=FINT.elev, name="Persongruppe_elev", curie=FINT.curie('elev'),
+                   model_uri=UTD.Persongruppe_elev, domain=Persongruppe, range=Optional[Union[Union[str, ElevforholdId], list[Union[str, ElevforholdId]]]])
+
+slots.Persongruppe_persongruppemedlemskap = Slot(uri=UTD.persongruppemedlemskap, name="Persongruppe_persongruppemedlemskap", curie=UTD.curie('persongruppemedlemskap'),
+                   model_uri=UTD.Persongruppe_persongruppemedlemskap, domain=Persongruppe, range=Optional[Union[Union[str, PersongruppemedlemskapId], list[Union[str, PersongruppemedlemskapId]]]])
+
+slots.Persongruppe_termin = Slot(uri=UTD.termin, name="Persongruppe_termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.Persongruppe_termin, domain=Persongruppe, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
+
+slots.Persongruppe_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Persongruppe_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Persongruppe_undervisningsforhold, domain=Persongruppe, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.Persongruppe_skole = Slot(uri=UTD.skole, name="Persongruppe_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Persongruppe_skole, domain=Persongruppe, range=Optional[Union[str, SkoleId]])
+
+slots.Persongruppe_skoleressurs = Slot(uri=UTD.skoleressurs, name="Persongruppe_skoleressurs", curie=UTD.curie('skoleressurs'),
+                   model_uri=UTD.Persongruppe_skoleressurs, domain=Persongruppe, range=Optional[Union[Union[str, SkoleressursId], list[Union[str, SkoleressursId]]]])
+
+slots.Persongruppe_skoleaar = Slot(uri=UTD.skoleaar, name="Persongruppe_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Persongruppe_skoleaar, domain=Persongruppe, range=Optional[Union[str, SkoleaarId]])
+
+slots.Persongruppemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Persongruppemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Persongruppemedlemskap_elevforhold, domain=Persongruppemedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Persongruppemedlemskap_persongruppe = Slot(uri=UTD.persongruppe, name="Persongruppemedlemskap_persongruppe", curie=UTD.curie('persongruppe'),
+                   model_uri=UTD.Persongruppemedlemskap_persongruppe, domain=Persongruppemedlemskap, range=Optional[Union[str, PersongruppeId]])
+
+slots.Skole_navn = Slot(uri=FINT.navn, name="Skole_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Skole_navn, domain=Skole, range=str)
+
+slots.Skole_domenenavn = Slot(uri=UTD.domenenavn, name="Skole_domenenavn", curie=UTD.curie('domenenavn'),
+                   model_uri=UTD.Skole_domenenavn, domain=Skole, range=Optional[str])
+
+slots.Skole_juridiskNavn = Slot(uri=UTD.juridiskNavn, name="Skole_juridiskNavn", curie=UTD.curie('juridiskNavn'),
+                   model_uri=UTD.Skole_juridiskNavn, domain=Skole, range=Optional[str])
+
+slots.Skole_organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="Skole_organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=UTD.Skole_organisasjonsnavn, domain=Skole, range=Optional[str])
+
+slots.Skole_skolenummer = Slot(uri=UTD.skolenummer, name="Skole_skolenummer", curie=UTD.curie('skolenummer'),
+                   model_uri=UTD.Skole_skolenummer, domain=Skole, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Skole_organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="Skole_organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=UTD.Skole_organisasjonsnummer, domain=Skole, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Skole_forretningsadresse = Slot(uri=FINT.forretningsadresse, name="Skole_forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=UTD.Skole_forretningsadresse, domain=Skole, range=Optional[Union[dict, "Adresse"]])
+
+slots.Skole_postadresse = Slot(uri=FINT.postadresse, name="Skole_postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=UTD.Skole_postadresse, domain=Skole, range=Optional[Union[dict, "Adresse"]])
+
+slots.Skole_organisasjon = Slot(uri=UTD.organisasjon, name="Skole_organisasjon", curie=UTD.curie('organisasjon'),
+                   model_uri=UTD.Skole_organisasjon, domain=Skole, range=Optional[Union[str, URIorCURIE]])
+
+slots.Skole_klasse = Slot(uri=UTD.klasse, name="Skole_klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.Skole_klasse, domain=Skole, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
+
+slots.Skole_kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="Skole_kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
+                   model_uri=UTD.Skole_kontaktlaerergruppe, domain=Skole, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
+
+slots.Skole_skoleressurs = Slot(uri=UTD.skoleressurs, name="Skole_skoleressurs", curie=UTD.curie('skoleressurs'),
+                   model_uri=UTD.Skole_skoleressurs, domain=Skole, range=Optional[Union[Union[str, SkoleressursId], list[Union[str, SkoleressursId]]]])
+
+slots.Skole_fag = Slot(uri=UTD.fag, name="Skole_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.Skole_fag, domain=Skole, range=Optional[Union[Union[str, FagId], list[Union[str, FagId]]]])
+
+slots.Skole_faggruppe = Slot(uri=UTD.faggruppe, name="Skole_faggruppe", curie=UTD.curie('faggruppe'),
+                   model_uri=UTD.Skole_faggruppe, domain=Skole, range=Optional[Union[Union[str, FaggruppeId], list[Union[str, FaggruppeId]]]])
+
+slots.Skole_skoleeierType = Slot(uri=UTD.skoleeierType, name="Skole_skoleeierType", curie=UTD.curie('skoleeierType'),
+                   model_uri=UTD.Skole_skoleeierType, domain=Skole, range=Optional[Union[str, SkoleeiertypeId]])
+
+slots.Skole_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Skole_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Skole_vigoreferanse, domain=Skole, range=Optional[Union[str, URIorCURIE]])
+
+slots.Skole_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Skole_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Skole_eksamensgruppe, domain=Skole, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
+
+slots.Skole_utdanningsprogram = Slot(uri=UTD.utdanningsprogram, name="Skole_utdanningsprogram", curie=UTD.curie('utdanningsprogram'),
+                   model_uri=UTD.Skole_utdanningsprogram, domain=Skole, range=Optional[Union[Union[str, UtdanningsprogramId], list[Union[str, UtdanningsprogramId]]]])
+
+slots.Skoleressurs_feidenavn = Slot(uri=UTD.feidenavn, name="Skoleressurs_feidenavn", curie=UTD.curie('feidenavn'),
+                   model_uri=UTD.Skoleressurs_feidenavn, domain=Skoleressurs, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Skoleressurs_personalressurs = Slot(uri=UTD.personalressurs, name="Skoleressurs_personalressurs", curie=UTD.curie('personalressurs'),
+                   model_uri=UTD.Skoleressurs_personalressurs, domain=Skoleressurs, range=Optional[Union[str, URIorCURIE]])
+
+slots.Skoleressurs_person = Slot(uri=FINT.person, name="Skoleressurs_person", curie=FINT.curie('person'),
+                   model_uri=UTD.Skoleressurs_person, domain=Skoleressurs, range=Optional[Union[str, PersonId]])
+
+slots.Skoleressurs_skole = Slot(uri=UTD.skole, name="Skoleressurs_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Skoleressurs_skole, domain=Skoleressurs, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
+
+slots.Skoleressurs_sensor = Slot(uri=UTD.sensor, name="Skoleressurs_sensor", curie=UTD.curie('sensor'),
+                   model_uri=UTD.Skoleressurs_sensor, domain=Skoleressurs, range=Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]])
+
+slots.Varsel_fravarsprosent = Slot(uri=UTD.fravarsprosent, name="Varsel_fravarsprosent", curie=UTD.curie('fravarsprosent'),
+                   model_uri=UTD.Varsel_fravarsprosent, domain=Varsel, range=Optional[int])
+
+slots.Varsel_sendt = Slot(uri=UTD.sendt, name="Varsel_sendt", curie=UTD.curie('sendt'),
+                   model_uri=UTD.Varsel_sendt, domain=Varsel, range=Optional[Union[str, XSDDate]])
+
+slots.Varsel_tekst = Slot(uri=UTD.tekst, name="Varsel_tekst", curie=UTD.curie('tekst'),
+                   model_uri=UTD.Varsel_tekst, domain=Varsel, range=Optional[str])
+
+slots.Varsel_utsteder = Slot(uri=UTD.utsteder, name="Varsel_utsteder", curie=UTD.curie('utsteder'),
+                   model_uri=UTD.Varsel_utsteder, domain=Varsel, range=Optional[Union[str, SkoleressursId]])
+
+slots.Varsel_karakteransvarlig = Slot(uri=UTD.karakteransvarlig, name="Varsel_karakteransvarlig", curie=UTD.curie('karakteransvarlig'),
+                   model_uri=UTD.Varsel_karakteransvarlig, domain=Varsel, range=Optional[Union[str, SkoleressursId]])
+
+slots.Varsel_type = Slot(uri=FINT.type, name="Varsel_type", curie=FINT.curie('type'),
+                   model_uri=UTD.Varsel_type, domain=Varsel, range=Optional[Union[str, VarseltypeId]])
+
+slots.Varsel_faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="Varsel_faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
+                   model_uri=UTD.Varsel_faggruppemedlemskap, domain=Varsel, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
+
+slots.Arstrinn_klasse = Slot(uri=UTD.klasse, name="Arstrinn_klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.Arstrinn_klasse, domain=Arstrinn, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
+
+slots.Arstrinn_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Arstrinn_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Arstrinn_vigoreferanse, domain=Arstrinn, range=Optional[Union[str, URIorCURIE]])
+
+slots.Arstrinn_grepreferanse = Slot(uri=UTD.grepreferanse, name="Arstrinn_grepreferanse", curie=UTD.curie('grepreferanse'),
+                   model_uri=UTD.Arstrinn_grepreferanse, domain=Arstrinn, range=Optional[Union[str, URIorCURIE]])
+
+slots.Arstrinn_programomrade = Slot(uri=UTD.programomrade, name="Arstrinn_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.Arstrinn_programomrade, domain=Arstrinn, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
+
+slots.Programomrade_trinn = Slot(uri=UTD.trinn, name="Programomrade_trinn", curie=UTD.curie('trinn'),
+                   model_uri=UTD.Programomrade_trinn, domain=Programomrade, range=Optional[Union[Union[str, ArstrinnId], list[Union[str, ArstrinnId]]]])
+
+slots.Programomrade_grepreferanse = Slot(uri=UTD.grepreferanse, name="Programomrade_grepreferanse", curie=UTD.curie('grepreferanse'),
+                   model_uri=UTD.Programomrade_grepreferanse, domain=Programomrade, range=Optional[Union[str, URIorCURIE]])
+
+slots.Programomrade_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Programomrade_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Programomrade_vigoreferanse, domain=Programomrade, range=Optional[Union[str, URIorCURIE]])
+
+slots.Programomrade_gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="Programomrade_gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
+                   model_uri=UTD.Programomrade_gruppemedlemskap, domain=Programomrade, range=Optional[Union[Union[str, ProgramomrademedlemskapId], list[Union[str, ProgramomrademedlemskapId]]]])
+
+slots.Programomrademedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Programomrademedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Programomrademedlemskap_elevforhold, domain=Programomrademedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Programomrademedlemskap_programomrade = Slot(uri=UTD.programomrade, name="Programomrademedlemskap_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.Programomrademedlemskap_programomrade, domain=Programomrademedlemskap, range=Optional[Union[str, ProgramomradeId]])
+
+slots.Utdanningsprogram_programomrade = Slot(uri=UTD.programomrade, name="Utdanningsprogram_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.Utdanningsprogram_programomrade, domain=Utdanningsprogram, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
+
+slots.Utdanningsprogram_skole = Slot(uri=UTD.skole, name="Utdanningsprogram_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Utdanningsprogram_skole, domain=Utdanningsprogram, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
+
+slots.Utdanningsprogram_grepreferanse = Slot(uri=UTD.grepreferanse, name="Utdanningsprogram_grepreferanse", curie=UTD.curie('grepreferanse'),
+                   model_uri=UTD.Utdanningsprogram_grepreferanse, domain=Utdanningsprogram, range=Optional[Union[str, URIorCURIE]])
+
+slots.Utdanningsprogram_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Utdanningsprogram_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Utdanningsprogram_vigoreferanse, domain=Utdanningsprogram, range=Optional[Union[str, URIorCURIE]])
+
+slots.Eksamen_navn = Slot(uri=FINT.navn, name="Eksamen_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Eksamen_navn, domain=Eksamen, range=str)
+
+slots.Eksamen_beskrivelse = Slot(uri=FINT.beskrivelse, name="Eksamen_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.Eksamen_beskrivelse, domain=Eksamen, range=Optional[str])
+
+slots.Eksamen_oppmoetetidspunkt = Slot(uri=UTD.oppmoetetidspunkt, name="Eksamen_oppmoetetidspunkt", curie=UTD.curie('oppmoetetidspunkt'),
+                   model_uri=UTD.Eksamen_oppmoetetidspunkt, domain=Eksamen, range=Optional[Union[str, XSDDateTime]])
+
+slots.Eksamen_tidsrom = Slot(uri=UTD.tidsrom, name="Eksamen_tidsrom", curie=UTD.curie('tidsrom'),
+                   model_uri=UTD.Eksamen_tidsrom, domain=Eksamen, range=Optional[Union[dict, "Periode"]])
+
+slots.Eksamen_rom = Slot(uri=UTD.rom, name="Eksamen_rom", curie=UTD.curie('rom'),
+                   model_uri=UTD.Eksamen_rom, domain=Eksamen, range=Optional[Union[Union[str, RomId], list[Union[str, RomId]]]])
+
+slots.Eksamen_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Eksamen_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Eksamen_eksamensgruppe, domain=Eksamen, range=Optional[Union[str, EksamensgruppeId]])
+
+slots.Fag_tilrettelegging = Slot(uri=UTD.tilrettelegging, name="Fag_tilrettelegging", curie=UTD.curie('tilrettelegging'),
+                   model_uri=UTD.Fag_tilrettelegging, domain=Fag, range=Optional[Union[Union[str, TilretteleggingId], list[Union[str, TilretteleggingId]]]])
+
+slots.Fag_grepreferanse = Slot(uri=UTD.grepreferanse, name="Fag_grepreferanse", curie=UTD.curie('grepreferanse'),
+                   model_uri=UTD.Fag_grepreferanse, domain=Fag, range=Optional[Union[str, URIorCURIE]])
+
+slots.Fag_skole = Slot(uri=UTD.skole, name="Fag_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Fag_skole, domain=Fag, range=Optional[Union[Union[str, SkoleId], list[Union[str, SkoleId]]]])
+
+slots.Fag_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Fag_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Fag_vigoreferanse, domain=Fag, range=Optional[Union[str, URIorCURIE]])
+
+slots.Fag_programomrade = Slot(uri=UTD.programomrade, name="Fag_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.Fag_programomrade, domain=Fag, range=Optional[Union[Union[str, ProgramomradeId], list[Union[str, ProgramomradeId]]]])
+
+slots.Fag_faggruppe = Slot(uri=UTD.faggruppe, name="Fag_faggruppe", curie=UTD.curie('faggruppe'),
+                   model_uri=UTD.Fag_faggruppe, domain=Fag, range=Optional[Union[Union[str, FaggruppeId], list[Union[str, FaggruppeId]]]])
+
+slots.Fag_undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="Fag_undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
+                   model_uri=UTD.Fag_undervisningsgruppe, domain=Fag, range=Optional[Union[Union[str, UndervisningsgruppeId], list[Union[str, UndervisningsgruppeId]]]])
+
+slots.Fag_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Fag_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Fag_eksamensgruppe, domain=Fag, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
+
+slots.Faggruppe_fag = Slot(uri=UTD.fag, name="Faggruppe_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.Faggruppe_fag, domain=Faggruppe, range=Union[str, FagId])
+
+slots.Faggruppe_skole = Slot(uri=UTD.skole, name="Faggruppe_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Faggruppe_skole, domain=Faggruppe, range=Optional[Union[str, SkoleId]])
+
+slots.Faggruppe_skoleaar = Slot(uri=UTD.skoleaar, name="Faggruppe_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Faggruppe_skoleaar, domain=Faggruppe, range=Optional[Union[str, SkoleaarId]])
+
+slots.Faggruppe_faggruppemedlemskap = Slot(uri=UTD.faggruppemedlemskap, name="Faggruppe_faggruppemedlemskap", curie=UTD.curie('faggruppemedlemskap'),
+                   model_uri=UTD.Faggruppe_faggruppemedlemskap, domain=Faggruppe, range=Optional[Union[Union[str, FaggruppemedlemskapId], list[Union[str, FaggruppemedlemskapId]]]])
+
+slots.Faggruppemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Faggruppemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Faggruppemedlemskap_elevforhold, domain=Faggruppemedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Faggruppemedlemskap_varsel = Slot(uri=UTD.varsel, name="Faggruppemedlemskap_varsel", curie=UTD.curie('varsel'),
+                   model_uri=UTD.Faggruppemedlemskap_varsel, domain=Faggruppemedlemskap, range=Optional[Union[Union[str, VarselId], list[Union[str, VarselId]]]])
+
+slots.Faggruppemedlemskap_faggruppe = Slot(uri=UTD.faggruppe, name="Faggruppemedlemskap_faggruppe", curie=UTD.curie('faggruppe'),
+                   model_uri=UTD.Faggruppemedlemskap_faggruppe, domain=Faggruppemedlemskap, range=Optional[Union[str, FaggruppeId]])
+
+slots.Faggruppemedlemskap_fagmerknad = Slot(uri=UTD.fagmerknad, name="Faggruppemedlemskap_fagmerknad", curie=UTD.curie('fagmerknad'),
+                   model_uri=UTD.Faggruppemedlemskap_fagmerknad, domain=Faggruppemedlemskap, range=Optional[Union[str, FagmerknadId]])
+
+slots.Faggruppemedlemskap_fagstatus = Slot(uri=UTD.fagstatus, name="Faggruppemedlemskap_fagstatus", curie=UTD.curie('fagstatus'),
+                   model_uri=UTD.Faggruppemedlemskap_fagstatus, domain=Faggruppemedlemskap, range=Optional[Union[str, FagstatusId]])
+
+slots.Rom_navn = Slot(uri=FINT.navn, name="Rom_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Rom_navn, domain=Rom, range=Optional[str])
+
+slots.Rom_eksamen = Slot(uri=UTD.eksamen, name="Rom_eksamen", curie=UTD.curie('eksamen'),
+                   model_uri=UTD.Rom_eksamen, domain=Rom, range=Optional[Union[Union[str, EksamenId], list[Union[str, EksamenId]]]])
+
+slots.Rom_skuletime = Slot(uri=UTD.skuletime, name="Rom_skuletime", curie=UTD.curie('skuletime'),
+                   model_uri=UTD.Rom_skuletime, domain=Rom, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
+
+slots.Time_navn = Slot(uri=FINT.navn, name="Time_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Time_navn, domain=Time, range=Optional[str])
+
+slots.Time_beskrivelse = Slot(uri=FINT.beskrivelse, name="Time_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.Time_beskrivelse, domain=Time, range=Optional[str])
+
+slots.Time_tidsrom = Slot(uri=UTD.tidsrom, name="Time_tidsrom", curie=UTD.curie('tidsrom'),
+                   model_uri=UTD.Time_tidsrom, domain=Time, range=Optional[Union[dict, "Periode"]])
+
+slots.Time_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Time_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Time_undervisningsforhold, domain=Time, range=Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]])
+
+slots.Time_rom = Slot(uri=UTD.rom, name="Time_rom", curie=UTD.curie('rom'),
+                   model_uri=UTD.Time_rom, domain=Time, range=Optional[Union[Union[str, RomId], list[Union[str, RomId]]]])
+
+slots.Time_undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="Time_undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
+                   model_uri=UTD.Time_undervisningsgruppe, domain=Time, range=Union[Union[str, UndervisningsgruppeId], list[Union[str, UndervisningsgruppeId]]])
+
+slots.Undervisningsforhold_arbeidsforhold = Slot(uri=UTD.arbeidsforhold, name="Undervisningsforhold_arbeidsforhold", curie=UTD.curie('arbeidsforhold'),
+                   model_uri=UTD.Undervisningsforhold_arbeidsforhold, domain=Undervisningsforhold, range=Union[str, URIorCURIE])
+
+slots.Undervisningsforhold_skoleressurs = Slot(uri=UTD.skoleressurs, name="Undervisningsforhold_skoleressurs", curie=UTD.curie('skoleressurs'),
+                   model_uri=UTD.Undervisningsforhold_skoleressurs, domain=Undervisningsforhold, range=Optional[Union[str, SkoleressursId]])
+
+slots.Undervisningsforhold_klasse = Slot(uri=UTD.klasse, name="Undervisningsforhold_klasse", curie=UTD.curie('klasse'),
+                   model_uri=UTD.Undervisningsforhold_klasse, domain=Undervisningsforhold, range=Optional[Union[Union[str, KlasseId], list[Union[str, KlasseId]]]])
+
+slots.Undervisningsforhold_kontaktlaerergruppe = Slot(uri=UTD.kontaktlaerergruppe, name="Undervisningsforhold_kontaktlaerergruppe", curie=UTD.curie('kontaktlaerergruppe'),
+                   model_uri=UTD.Undervisningsforhold_kontaktlaerergruppe, domain=Undervisningsforhold, range=Optional[Union[Union[str, KontaktlaerergruppeId], list[Union[str, KontaktlaerergruppeId]]]])
+
+slots.Undervisningsforhold_skuletime = Slot(uri=UTD.skuletime, name="Undervisningsforhold_skuletime", curie=UTD.curie('skuletime'),
+                   model_uri=UTD.Undervisningsforhold_skuletime, domain=Undervisningsforhold, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
+
+slots.Undervisningsforhold_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Undervisningsforhold_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Undervisningsforhold_eksamensgruppe, domain=Undervisningsforhold, range=Optional[Union[Union[str, EksamensgruppeId], list[Union[str, EksamensgruppeId]]]])
+
+slots.Undervisningsgruppe_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Undervisningsgruppe_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Undervisningsgruppe_undervisningsforhold, domain=Undervisningsgruppe, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.Undervisningsgruppe_fag = Slot(uri=UTD.fag, name="Undervisningsgruppe_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.Undervisningsgruppe_fag, domain=Undervisningsgruppe, range=Union[Union[str, FagId], list[Union[str, FagId]]])
+
+slots.Undervisningsgruppe_skuletime = Slot(uri=UTD.skuletime, name="Undervisningsgruppe_skuletime", curie=UTD.curie('skuletime'),
+                   model_uri=UTD.Undervisningsgruppe_skuletime, domain=Undervisningsgruppe, range=Optional[Union[Union[str, TimeId], list[Union[str, TimeId]]]])
+
+slots.Undervisningsgruppe_termin = Slot(uri=UTD.termin, name="Undervisningsgruppe_termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.Undervisningsgruppe_termin, domain=Undervisningsgruppe, range=Optional[Union[Union[str, TerminId], list[Union[str, TerminId]]]])
+
+slots.Undervisningsgruppe_skole = Slot(uri=UTD.skole, name="Undervisningsgruppe_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Undervisningsgruppe_skole, domain=Undervisningsgruppe, range=Optional[Union[str, SkoleId]])
+
+slots.Undervisningsgruppe_skoleaar = Slot(uri=UTD.skoleaar, name="Undervisningsgruppe_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Undervisningsgruppe_skoleaar, domain=Undervisningsgruppe, range=Optional[Union[str, SkoleaarId]])
+
+slots.Undervisningsgruppe_gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="Undervisningsgruppe_gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
+                   model_uri=UTD.Undervisningsgruppe_gruppemedlemskap, domain=Undervisningsgruppe, range=Optional[Union[Union[str, UndervisningsgruppemedlemskapId], list[Union[str, UndervisningsgruppemedlemskapId]]]])
+
+slots.Undervisningsgruppemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Undervisningsgruppemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Undervisningsgruppemedlemskap_elevforhold, domain=Undervisningsgruppemedlemskap, range=Optional[Union[str, ElevforholdId]])
+
+slots.Undervisningsgruppemedlemskap_undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="Undervisningsgruppemedlemskap_undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
+                   model_uri=UTD.Undervisningsgruppemedlemskap_undervisningsgruppe, domain=Undervisningsgruppemedlemskap, range=Optional[Union[str, UndervisningsgruppeId]])
+
+slots.FagvurderingAbstrakt_kommentar = Slot(uri=UTD.kommentar, name="FagvurderingAbstrakt_kommentar", curie=UTD.curie('kommentar'),
+                   model_uri=UTD.FagvurderingAbstrakt_kommentar, domain=FagvurderingAbstrakt, range=str)
+
+slots.FagvurderingAbstrakt_vurderingsdato = Slot(uri=UTD.vurderingsdato, name="FagvurderingAbstrakt_vurderingsdato", curie=UTD.curie('vurderingsdato'),
+                   model_uri=UTD.FagvurderingAbstrakt_vurderingsdato, domain=FagvurderingAbstrakt, range=Union[str, XSDDateTime])
+
+slots.FagvurderingAbstrakt_fag = Slot(uri=UTD.fag, name="FagvurderingAbstrakt_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.FagvurderingAbstrakt_fag, domain=FagvurderingAbstrakt, range=Optional[Union[str, FagId]])
+
+slots.FagvurderingAbstrakt_skoleaar = Slot(uri=UTD.skoleaar, name="FagvurderingAbstrakt_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.FagvurderingAbstrakt_skoleaar, domain=FagvurderingAbstrakt, range=Optional[Union[str, SkoleaarId]])
+
+slots.FagvurderingAbstrakt_karakter = Slot(uri=UTD.karakter, name="FagvurderingAbstrakt_karakter", curie=UTD.curie('karakter'),
+                   model_uri=UTD.FagvurderingAbstrakt_karakter, domain=FagvurderingAbstrakt, range=Optional[Union[str, KarakterverdiId]])
+
+slots.OrdensvurderingAbstrakt_kommentar = Slot(uri=UTD.kommentar, name="OrdensvurderingAbstrakt_kommentar", curie=UTD.curie('kommentar'),
+                   model_uri=UTD.OrdensvurderingAbstrakt_kommentar, domain=OrdensvurderingAbstrakt, range=str)
+
+slots.OrdensvurderingAbstrakt_vurderingsdato = Slot(uri=UTD.vurderingsdato, name="OrdensvurderingAbstrakt_vurderingsdato", curie=UTD.curie('vurderingsdato'),
+                   model_uri=UTD.OrdensvurderingAbstrakt_vurderingsdato, domain=OrdensvurderingAbstrakt, range=Union[str, XSDDateTime])
+
+slots.OrdensvurderingAbstrakt_atferd = Slot(uri=UTD.atferd, name="OrdensvurderingAbstrakt_atferd", curie=UTD.curie('atferd'),
+                   model_uri=UTD.OrdensvurderingAbstrakt_atferd, domain=OrdensvurderingAbstrakt, range=Optional[Union[str, KarakterverdiId]])
+
+slots.OrdensvurderingAbstrakt_orden = Slot(uri=UTD.orden, name="OrdensvurderingAbstrakt_orden", curie=UTD.curie('orden'),
+                   model_uri=UTD.OrdensvurderingAbstrakt_orden, domain=OrdensvurderingAbstrakt, range=Optional[Union[str, KarakterverdiId]])
+
+slots.OrdensvurderingAbstrakt_skoleaar = Slot(uri=UTD.skoleaar, name="OrdensvurderingAbstrakt_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.OrdensvurderingAbstrakt_skoleaar, domain=OrdensvurderingAbstrakt, range=Optional[Union[str, SkoleaarId]])
+
+slots.Anmerkninger_atferd = Slot(uri=UTD.atferd, name="Anmerkninger_atferd", curie=UTD.curie('atferd'),
+                   model_uri=UTD.Anmerkninger_atferd, domain=Anmerkninger, range=int)
+
+slots.Anmerkninger_orden = Slot(uri=UTD.orden, name="Anmerkninger_orden", curie=UTD.curie('orden'),
+                   model_uri=UTD.Anmerkninger_orden, domain=Anmerkninger, range=int)
+
+slots.Anmerkninger_skoleaar = Slot(uri=UTD.skoleaar, name="Anmerkninger_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Anmerkninger_skoleaar, domain=Anmerkninger, range=Optional[Union[str, SkoleaarId]])
+
+slots.Eksamensgruppe_eksamensdato = Slot(uri=UTD.eksamensdato, name="Eksamensgruppe_eksamensdato", curie=UTD.curie('eksamensdato'),
+                   model_uri=UTD.Eksamensgruppe_eksamensdato, domain=Eksamensgruppe, range=Optional[Union[str, XSDDateTime]])
+
+slots.Eksamensgruppe_fag = Slot(uri=UTD.fag, name="Eksamensgruppe_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.Eksamensgruppe_fag, domain=Eksamensgruppe, range=Union[str, FagId])
+
+slots.Eksamensgruppe_skole = Slot(uri=UTD.skole, name="Eksamensgruppe_skole", curie=UTD.curie('skole'),
+                   model_uri=UTD.Eksamensgruppe_skole, domain=Eksamensgruppe, range=Union[str, SkoleId])
+
+slots.Eksamensgruppe_termin = Slot(uri=UTD.termin, name="Eksamensgruppe_termin", curie=UTD.curie('termin'),
+                   model_uri=UTD.Eksamensgruppe_termin, domain=Eksamensgruppe, range=Union[str, TerminId])
+
+slots.Eksamensgruppe_undervisningsforhold = Slot(uri=UTD.undervisningsforhold, name="Eksamensgruppe_undervisningsforhold", curie=UTD.curie('undervisningsforhold'),
+                   model_uri=UTD.Eksamensgruppe_undervisningsforhold, domain=Eksamensgruppe, range=Optional[Union[Union[str, UndervisningsforholdId], list[Union[str, UndervisningsforholdId]]]])
+
+slots.Eksamensgruppe_eksamen = Slot(uri=UTD.eksamen, name="Eksamensgruppe_eksamen", curie=UTD.curie('eksamen'),
+                   model_uri=UTD.Eksamensgruppe_eksamen, domain=Eksamensgruppe, range=Optional[Union[str, EksamenId]])
+
+slots.Eksamensgruppe_eksamensform = Slot(uri=UTD.eksamensform, name="Eksamensgruppe_eksamensform", curie=UTD.curie('eksamensform'),
+                   model_uri=UTD.Eksamensgruppe_eksamensform, domain=Eksamensgruppe, range=Optional[Union[str, EksamensformId]])
+
+slots.Eksamensgruppe_skoleaar = Slot(uri=UTD.skoleaar, name="Eksamensgruppe_skoleaar", curie=UTD.curie('skoleaar'),
+                   model_uri=UTD.Eksamensgruppe_skoleaar, domain=Eksamensgruppe, range=Optional[Union[str, SkoleaarId]])
+
+slots.Eksamensgruppe_gruppemedlemskap = Slot(uri=UTD.gruppemedlemskap, name="Eksamensgruppe_gruppemedlemskap", curie=UTD.curie('gruppemedlemskap'),
+                   model_uri=UTD.Eksamensgruppe_gruppemedlemskap, domain=Eksamensgruppe, range=Optional[Union[Union[str, EksamensgruppemedlemskapId], list[Union[str, EksamensgruppemedlemskapId]]]])
+
+slots.Eksamensgruppe_sensor = Slot(uri=UTD.sensor, name="Eksamensgruppe_sensor", curie=UTD.curie('sensor'),
+                   model_uri=UTD.Eksamensgruppe_sensor, domain=Eksamensgruppe, range=Optional[Union[Union[str, SensorId], list[Union[str, SensorId]]]])
+
+slots.Eksamensgruppemedlemskap_delegert = Slot(uri=UTD.delegert, name="Eksamensgruppemedlemskap_delegert", curie=UTD.curie('delegert'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_delegert, domain=Eksamensgruppemedlemskap, range=Optional[Union[bool, Bool]])
+
+slots.Eksamensgruppemedlemskap_kandidatnummer = Slot(uri=UTD.kandidatnummer, name="Eksamensgruppemedlemskap_kandidatnummer", curie=UTD.curie('kandidatnummer'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_kandidatnummer, domain=Eksamensgruppemedlemskap, range=Optional[str])
+
+slots.Eksamensgruppemedlemskap_delegertTil = Slot(uri=UTD.delegertTil, name="Eksamensgruppemedlemskap_delegertTil", curie=UTD.curie('delegertTil'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_delegertTil, domain=Eksamensgruppemedlemskap, range=Optional[Union[str, URIorCURIE]])
+
+slots.Eksamensgruppemedlemskap_foretrukketSkole = Slot(uri=UTD.foretrukketSkole, name="Eksamensgruppemedlemskap_foretrukketSkole", curie=UTD.curie('foretrukketSkole'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_foretrukketSkole, domain=Eksamensgruppemedlemskap, range=Optional[Union[bool, Bool]])
+
+slots.Eksamensgruppemedlemskap_foretrukketSensor = Slot(uri=UTD.foretrukketSensor, name="Eksamensgruppemedlemskap_foretrukketSensor", curie=UTD.curie('foretrukketSensor'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_foretrukketSensor, domain=Eksamensgruppemedlemskap, range=Optional[Union[bool, Bool]])
+
+slots.Eksamensgruppemedlemskap_betalingsstatus = Slot(uri=UTD.betalingsstatus, name="Eksamensgruppemedlemskap_betalingsstatus", curie=UTD.curie('betalingsstatus'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_betalingsstatus, domain=Eksamensgruppemedlemskap, range=Optional[Union[str, BetalingsstatusId]])
+
+slots.Eksamensgruppemedlemskap_elevforhold = Slot(uri=UTD.elevforhold, name="Eksamensgruppemedlemskap_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_elevforhold, domain=Eksamensgruppemedlemskap, range=Union[str, ElevforholdId])
+
+slots.Eksamensgruppemedlemskap_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Eksamensgruppemedlemskap_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_eksamensgruppe, domain=Eksamensgruppemedlemskap, range=Union[str, EksamensgruppeId])
+
+slots.Eksamensgruppemedlemskap_nus = Slot(uri=UTD.nus, name="Eksamensgruppemedlemskap_nus", curie=UTD.curie('nus'),
+                   model_uri=UTD.Eksamensgruppemedlemskap_nus, domain=Eksamensgruppemedlemskap, range=Optional[Union[str, KarakterstatusId]])
+
+slots.Eksamensvurdering_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Eksamensvurdering_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Eksamensvurdering_eksamensgruppe, domain=Eksamensvurdering, range=Union[str, EksamensgruppeId])
+
+slots.Eksamensvurdering_karakterhistorie = Slot(uri=UTD.karakterhistorie, name="Eksamensvurdering_karakterhistorie", curie=UTD.curie('karakterhistorie'),
+                   model_uri=UTD.Eksamensvurdering_karakterhistorie, domain=Eksamensvurdering, range=Optional[Union[Union[str, KarakterhistorieId], list[Union[str, KarakterhistorieId]]]])
+
+slots.Eksamensvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Eksamensvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Eksamensvurdering_elevvurdering, domain=Eksamensvurdering, range=Union[str, ElevvurderingId])
+
+slots.Elevfravar_elevforhold = Slot(uri=UTD.elevforhold, name="Elevfravar_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Elevfravar_elevforhold, domain=Elevfravar, range=Union[str, ElevforholdId])
+
+slots.Elevfravar_fraversregistrering = Slot(uri=UTD.fraversregistrering, name="Elevfravar_fraversregistrering", curie=UTD.curie('fraversregistrering'),
+                   model_uri=UTD.Elevfravar_fraversregistrering, domain=Elevfravar, range=Optional[Union[Union[str, FraversregistreringId], list[Union[str, FraversregistreringId]]]])
+
+slots.Elevvurdering_elevforhold = Slot(uri=UTD.elevforhold, name="Elevvurdering_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Elevvurdering_elevforhold, domain=Elevvurdering, range=Union[str, ElevforholdId])
+
+slots.Elevvurdering_eksamensvurdering = Slot(uri=UTD.eksamensvurdering, name="Elevvurdering_eksamensvurdering", curie=UTD.curie('eksamensvurdering'),
+                   model_uri=UTD.Elevvurdering_eksamensvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, EksamensvurderingId], list[Union[str, EksamensvurderingId]]]])
+
+slots.Elevvurdering_sluttfagvurdering = Slot(uri=UTD.sluttfagvurdering, name="Elevvurdering_sluttfagvurdering", curie=UTD.curie('sluttfagvurdering'),
+                   model_uri=UTD.Elevvurdering_sluttfagvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, SluttfagvurderingId], list[Union[str, SluttfagvurderingId]]]])
+
+slots.Elevvurdering_halvaarsfagvurdering = Slot(uri=UTD.halvaarsfagvurdering, name="Elevvurdering_halvaarsfagvurdering", curie=UTD.curie('halvaarsfagvurdering'),
+                   model_uri=UTD.Elevvurdering_halvaarsfagvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, HalvaarsfagvurderingId], list[Union[str, HalvaarsfagvurderingId]]]])
+
+slots.Elevvurdering_underveisfagvurdering = Slot(uri=UTD.underveisfagvurdering, name="Elevvurdering_underveisfagvurdering", curie=UTD.curie('underveisfagvurdering'),
+                   model_uri=UTD.Elevvurdering_underveisfagvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, UnderveisfagvurderingId], list[Union[str, UnderveisfagvurderingId]]]])
+
+slots.Elevvurdering_halvaarsordensvurdering = Slot(uri=UTD.halvaarsordensvurdering, name="Elevvurdering_halvaarsordensvurdering", curie=UTD.curie('halvaarsordensvurdering'),
+                   model_uri=UTD.Elevvurdering_halvaarsordensvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, HalvaarsordensvurderingId], list[Union[str, HalvaarsordensvurderingId]]]])
+
+slots.Elevvurdering_underveisordensvurdering = Slot(uri=UTD.underveisordensvurdering, name="Elevvurdering_underveisordensvurdering", curie=UTD.curie('underveisordensvurdering'),
+                   model_uri=UTD.Elevvurdering_underveisordensvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, UnderveisordensvurderingId], list[Union[str, UnderveisordensvurderingId]]]])
+
+slots.Elevvurdering_sluttordensvurdering = Slot(uri=UTD.sluttordensvurdering, name="Elevvurdering_sluttordensvurdering", curie=UTD.curie('sluttordensvurdering'),
+                   model_uri=UTD.Elevvurdering_sluttordensvurdering, domain=Elevvurdering, range=Optional[Union[Union[str, SluttordensvurderingId], list[Union[str, SluttordensvurderingId]]]])
+
+slots.Elevvurdering_vitnemalsmerknad = Slot(uri=UTD.vitnemalsmerknad, name="Elevvurdering_vitnemalsmerknad", curie=UTD.curie('vitnemalsmerknad'),
+                   model_uri=UTD.Elevvurdering_vitnemalsmerknad, domain=Elevvurdering, range=Optional[Union[str, VitnemalsmerknadId]])
+
+slots.Fravarsoversikt_halvaar = Slot(uri=UTD.halvaar, name="Fravarsoversikt_halvaar", curie=UTD.curie('halvaar'),
+                   model_uri=UTD.Fravarsoversikt_halvaar, domain=Fravarsoversikt, range=Union[dict, "Fravarsprosent"])
+
+slots.Fravarsoversikt_skoleaarFravar = Slot(uri=UTD.skoleaarFravar, name="Fravarsoversikt_skoleaarFravar", curie=UTD.curie('skoleaarFravar'),
+                   model_uri=UTD.Fravarsoversikt_skoleaarFravar, domain=Fravarsoversikt, range=Union[dict, "Fravarsprosent"])
+
+slots.Fravarsoversikt_elevforhold = Slot(uri=UTD.elevforhold, name="Fravarsoversikt_elevforhold", curie=UTD.curie('elevforhold'),
+                   model_uri=UTD.Fravarsoversikt_elevforhold, domain=Fravarsoversikt, range=Union[str, ElevforholdId])
+
+slots.Fravarsoversikt_fag = Slot(uri=UTD.fag, name="Fravarsoversikt_fag", curie=UTD.curie('fag'),
+                   model_uri=UTD.Fravarsoversikt_fag, domain=Fravarsoversikt, range=Union[str, FagId])
+
+slots.Fravarsprosent_fravaerstimer = Slot(uri=UTD.fravaerstimer, name="Fravarsprosent_fravaerstimer", curie=UTD.curie('fravaerstimer'),
+                   model_uri=UTD.Fravarsprosent_fravaerstimer, domain=Fravarsprosent, range=int)
+
+slots.Fravarsprosent_prosent = Slot(uri=UTD.prosent, name="Fravarsprosent_prosent", curie=UTD.curie('prosent'),
+                   model_uri=UTD.Fravarsprosent_prosent, domain=Fravarsprosent, range=int)
+
+slots.Fravarsprosent_undervisningstimer = Slot(uri=UTD.undervisningstimer, name="Fravarsprosent_undervisningstimer", curie=UTD.curie('undervisningstimer'),
+                   model_uri=UTD.Fravarsprosent_undervisningstimer, domain=Fravarsprosent, range=int)
+
+slots.Fraversregistrering_forersPaaVitnemaal = Slot(uri=UTD.forersPaaVitnemaal, name="Fraversregistrering_forersPaaVitnemaal", curie=UTD.curie('forersPaaVitnemaal'),
+                   model_uri=UTD.Fraversregistrering_forersPaaVitnemaal, domain=Fraversregistrering, range=Union[bool, Bool])
+
+slots.Fraversregistrering_kommentar = Slot(uri=UTD.kommentar, name="Fraversregistrering_kommentar", curie=UTD.curie('kommentar'),
+                   model_uri=UTD.Fraversregistrering_kommentar, domain=Fraversregistrering, range=Optional[str])
+
+slots.Fraversregistrering_periode = Slot(uri=UTD.periode, name="Fraversregistrering_periode", curie=UTD.curie('periode'),
+                   model_uri=UTD.Fraversregistrering_periode, domain=Fraversregistrering, range=Union[dict, "Periode"])
+
+slots.Fraversregistrering_registrertAv = Slot(uri=UTD.registrertAv, name="Fraversregistrering_registrertAv", curie=UTD.curie('registrertAv'),
+                   model_uri=UTD.Fraversregistrering_registrertAv, domain=Fraversregistrering, range=Optional[Union[str, SkoleressursId]])
+
+slots.Fraversregistrering_faggruppe = Slot(uri=UTD.faggruppe, name="Fraversregistrering_faggruppe", curie=UTD.curie('faggruppe'),
+                   model_uri=UTD.Fraversregistrering_faggruppe, domain=Fraversregistrering, range=Optional[Union[str, FaggruppeId]])
+
+slots.Fraversregistrering_undervisningsgruppe = Slot(uri=UTD.undervisningsgruppe, name="Fraversregistrering_undervisningsgruppe", curie=UTD.curie('undervisningsgruppe'),
+                   model_uri=UTD.Fraversregistrering_undervisningsgruppe, domain=Fraversregistrering, range=Union[str, UndervisningsgruppeId])
+
+slots.Fraversregistrering_elevfravar = Slot(uri=UTD.elevfravar, name="Fraversregistrering_elevfravar", curie=UTD.curie('elevfravar'),
+                   model_uri=UTD.Fraversregistrering_elevfravar, domain=Fraversregistrering, range=Optional[Union[str, ElevfravarId]])
+
+slots.Fraversregistrering_fravartype = Slot(uri=UTD.fravartype, name="Fraversregistrering_fravartype", curie=UTD.curie('fravartype'),
+                   model_uri=UTD.Fraversregistrering_fravartype, domain=Fraversregistrering, range=Union[str, FravartypeId])
+
+slots.Halvaarsfagvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Halvaarsfagvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Halvaarsfagvurdering_elevvurdering, domain=Halvaarsfagvurdering, range=Union[str, ElevvurderingId])
+
+slots.Halvaarsordensvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Halvaarsordensvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Halvaarsordensvurdering_elevvurdering, domain=Halvaarsordensvurdering, range=Union[str, ElevvurderingId])
+
+slots.Karakterhistorie_endretDato = Slot(uri=UTD.endretDato, name="Karakterhistorie_endretDato", curie=UTD.curie('endretDato'),
+                   model_uri=UTD.Karakterhistorie_endretDato, domain=Karakterhistorie, range=Union[str, XSDDateTime])
+
+slots.Karakterhistorie_oppdatertAv = Slot(uri=UTD.oppdatertAv, name="Karakterhistorie_oppdatertAv", curie=UTD.curie('oppdatertAv'),
+                   model_uri=UTD.Karakterhistorie_oppdatertAv, domain=Karakterhistorie, range=Optional[Union[str, SkoleressursId]])
+
+slots.Karakterhistorie_opprinneligKarakterverdi = Slot(uri=UTD.opprinneligKarakterverdi, name="Karakterhistorie_opprinneligKarakterverdi", curie=UTD.curie('opprinneligKarakterverdi'),
+                   model_uri=UTD.Karakterhistorie_opprinneligKarakterverdi, domain=Karakterhistorie, range=Optional[Union[str, KarakterverdiId]])
+
+slots.Karakterhistorie_opprinneligKarakterstatus = Slot(uri=UTD.opprinneligKarakterstatus, name="Karakterhistorie_opprinneligKarakterstatus", curie=UTD.curie('opprinneligKarakterstatus'),
+                   model_uri=UTD.Karakterhistorie_opprinneligKarakterstatus, domain=Karakterhistorie, range=Optional[Union[str, KarakterstatusId]])
+
+slots.Karakterhistorie_karakterverdi = Slot(uri=UTD.karakterverdi, name="Karakterhistorie_karakterverdi", curie=UTD.curie('karakterverdi'),
+                   model_uri=UTD.Karakterhistorie_karakterverdi, domain=Karakterhistorie, range=Optional[Union[str, KarakterverdiId]])
+
+slots.Karakterhistorie_karakterstatus = Slot(uri=UTD.karakterstatus, name="Karakterhistorie_karakterstatus", curie=UTD.curie('karakterstatus'),
+                   model_uri=UTD.Karakterhistorie_karakterstatus, domain=Karakterhistorie, range=Optional[Union[str, KarakterstatusId]])
+
+slots.Sensor_aktiv = Slot(uri=UTD.aktiv, name="Sensor_aktiv", curie=UTD.curie('aktiv'),
+                   model_uri=UTD.Sensor_aktiv, domain=Sensor, range=Union[bool, Bool])
+
+slots.Sensor_sensornummer = Slot(uri=UTD.sensornummer, name="Sensor_sensornummer", curie=UTD.curie('sensornummer'),
+                   model_uri=UTD.Sensor_sensornummer, domain=Sensor, range=Optional[int])
+
+slots.Sensor_skoleressurs = Slot(uri=UTD.skoleressurs, name="Sensor_skoleressurs", curie=UTD.curie('skoleressurs'),
+                   model_uri=UTD.Sensor_skoleressurs, domain=Sensor, range=Union[str, SkoleressursId])
+
+slots.Sensor_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Sensor_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Sensor_eksamensgruppe, domain=Sensor, range=Union[str, EksamensgruppeId])
+
+slots.Sluttfagvurdering_eksamensgruppe = Slot(uri=UTD.eksamensgruppe, name="Sluttfagvurdering_eksamensgruppe", curie=UTD.curie('eksamensgruppe'),
+                   model_uri=UTD.Sluttfagvurdering_eksamensgruppe, domain=Sluttfagvurdering, range=Optional[Union[str, EksamensgruppeId]])
+
+slots.Sluttfagvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Sluttfagvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Sluttfagvurdering_elevvurdering, domain=Sluttfagvurdering, range=Union[str, ElevvurderingId])
+
+slots.Sluttfagvurdering_karakterhistorie = Slot(uri=UTD.karakterhistorie, name="Sluttfagvurdering_karakterhistorie", curie=UTD.curie('karakterhistorie'),
+                   model_uri=UTD.Sluttfagvurdering_karakterhistorie, domain=Sluttfagvurdering, range=Optional[Union[Union[str, KarakterhistorieId], list[Union[str, KarakterhistorieId]]]])
+
+slots.Sluttordensvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Sluttordensvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Sluttordensvurdering_elevvurdering, domain=Sluttordensvurdering, range=Union[str, ElevvurderingId])
+
+slots.Underveisfagvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Underveisfagvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Underveisfagvurdering_elevvurdering, domain=Underveisfagvurdering, range=Union[str, ElevvurderingId])
+
+slots.Underveisordensvurdering_elevvurdering = Slot(uri=UTD.elevvurdering, name="Underveisordensvurdering_elevvurdering", curie=UTD.curie('elevvurdering'),
+                   model_uri=UTD.Underveisordensvurdering_elevvurdering, domain=Underveisordensvurdering, range=Union[str, ElevvurderingId])
+
+slots.AvlagtProve_provedato = Slot(uri=UTD.provedato, name="AvlagtProve_provedato", curie=UTD.curie('provedato'),
+                   model_uri=UTD.AvlagtProve_provedato, domain=AvlagtProve, range=Optional[Union[str, XSDDate]])
+
+slots.AvlagtProve_laerling = Slot(uri=FINT.laerling, name="AvlagtProve_laerling", curie=FINT.curie('laerling'),
+                   model_uri=UTD.AvlagtProve_laerling, domain=AvlagtProve, range=Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]])
+
+slots.AvlagtProve_provestatus = Slot(uri=UTD.provestatus, name="AvlagtProve_provestatus", curie=UTD.curie('provestatus'),
+                   model_uri=UTD.AvlagtProve_provestatus, domain=AvlagtProve, range=Optional[Union[str, ProvestatusId]])
+
+slots.AvlagtProve_fullfortkode = Slot(uri=UTD.fullfortkode, name="AvlagtProve_fullfortkode", curie=UTD.curie('fullfortkode'),
+                   model_uri=UTD.AvlagtProve_fullfortkode, domain=AvlagtProve, range=Optional[Union[str, FullfortkodeId]])
+
+slots.AvlagtProve_brevtype = Slot(uri=UTD.brevtype, name="AvlagtProve_brevtype", curie=UTD.curie('brevtype'),
+                   model_uri=UTD.AvlagtProve_brevtype, domain=AvlagtProve, range=Optional[Union[str, BrevtypeId]])
+
+slots.AvlagtProve_bevistype = Slot(uri=UTD.bevistype, name="AvlagtProve_bevistype", curie=UTD.curie('bevistype'),
+                   model_uri=UTD.AvlagtProve_bevistype, domain=AvlagtProve, range=Optional[Union[str, BevistypeId]])
+
+slots.Laerling_kontraktstype = Slot(uri=UTD.kontraktstype, name="Laerling_kontraktstype", curie=UTD.curie('kontraktstype'),
+                   model_uri=UTD.Laerling_kontraktstype, domain=Laerling, range=Optional[str])
+
+slots.Laerling_laretid = Slot(uri=UTD.laretid, name="Laerling_laretid", curie=UTD.curie('laretid'),
+                   model_uri=UTD.Laerling_laretid, domain=Laerling, range=Optional[Union[dict, "Periode"]])
+
+slots.Laerling_person = Slot(uri=FINT.person, name="Laerling_person", curie=FINT.curie('person'),
+                   model_uri=UTD.Laerling_person, domain=Laerling, range=Union[str, PersonId])
+
+slots.Laerling_bedrift = Slot(uri=UTD.bedrift, name="Laerling_bedrift", curie=UTD.curie('bedrift'),
+                   model_uri=UTD.Laerling_bedrift, domain=Laerling, range=Optional[Union[str, URIorCURIE]])
+
+slots.Laerling_avlagtprove = Slot(uri=UTD.avlagtprove, name="Laerling_avlagtprove", curie=UTD.curie('avlagtprove'),
+                   model_uri=UTD.Laerling_avlagtprove, domain=Laerling, range=Optional[Union[Union[str, AvlagtProveId], list[Union[str, AvlagtProveId]]]])
+
+slots.Laerling_programomrade = Slot(uri=UTD.programomrade, name="Laerling_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.Laerling_programomrade, domain=Laerling, range=Optional[Union[str, ProgramomradeId]])
+
+slots.OtUngdom_person = Slot(uri=FINT.person, name="OtUngdom_person", curie=FINT.curie('person'),
+                   model_uri=UTD.OtUngdom_person, domain=OtUngdom, range=Union[str, PersonId])
+
+slots.OtUngdom_status = Slot(uri=UTD.status, name="OtUngdom_status", curie=UTD.curie('status'),
+                   model_uri=UTD.OtUngdom_status, domain=OtUngdom, range=Optional[Union[str, OtStatusId]])
+
+slots.OtUngdom_enhet = Slot(uri=UTD.enhet, name="OtUngdom_enhet", curie=UTD.curie('enhet'),
+                   model_uri=UTD.OtUngdom_enhet, domain=OtUngdom, range=Optional[Union[str, OtEnhetId]])
+
+slots.OtUngdom_programomrade = Slot(uri=UTD.programomrade, name="OtUngdom_programomrade", curie=UTD.curie('programomrade'),
+                   model_uri=UTD.OtUngdom_programomrade, domain=OtUngdom, range=Optional[Union[str, ProgramomradeId]])
+
+slots.Avbruddsaarsak_kode = Slot(uri=FINT.kode, name="Avbruddsaarsak_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Avbruddsaarsak_kode, domain=Avbruddsaarsak, range=str)
+
+slots.Avbruddsaarsak_navn = Slot(uri=FINT.navn, name="Avbruddsaarsak_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Avbruddsaarsak_navn, domain=Avbruddsaarsak, range=str)
+
+slots.Avbruddsaarsak_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Avbruddsaarsak_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Avbruddsaarsak_gyldighetsperiode, domain=Avbruddsaarsak, range=Optional[Union[dict, "Periode"]])
+
+slots.Avbruddsaarsak_passiv = Slot(uri=FINT.passiv, name="Avbruddsaarsak_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Avbruddsaarsak_passiv, domain=Avbruddsaarsak, range=Optional[Union[bool, Bool]])
+
+slots.Betalingsstatus_kode = Slot(uri=FINT.kode, name="Betalingsstatus_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Betalingsstatus_kode, domain=Betalingsstatus, range=str)
+
+slots.Betalingsstatus_navn = Slot(uri=FINT.navn, name="Betalingsstatus_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Betalingsstatus_navn, domain=Betalingsstatus, range=str)
+
+slots.Betalingsstatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Betalingsstatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Betalingsstatus_gyldighetsperiode, domain=Betalingsstatus, range=Optional[Union[dict, "Periode"]])
+
+slots.Betalingsstatus_passiv = Slot(uri=FINT.passiv, name="Betalingsstatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Betalingsstatus_passiv, domain=Betalingsstatus, range=Optional[Union[bool, Bool]])
+
+slots.Bevistype_kode = Slot(uri=FINT.kode, name="Bevistype_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Bevistype_kode, domain=Bevistype, range=str)
+
+slots.Bevistype_navn = Slot(uri=FINT.navn, name="Bevistype_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Bevistype_navn, domain=Bevistype, range=str)
+
+slots.Bevistype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Bevistype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Bevistype_gyldighetsperiode, domain=Bevistype, range=Optional[Union[dict, "Periode"]])
+
+slots.Bevistype_passiv = Slot(uri=FINT.passiv, name="Bevistype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Bevistype_passiv, domain=Bevistype, range=Optional[Union[bool, Bool]])
+
+slots.Brevtype_kode = Slot(uri=FINT.kode, name="Brevtype_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Brevtype_kode, domain=Brevtype, range=str)
+
+slots.Brevtype_navn = Slot(uri=FINT.navn, name="Brevtype_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Brevtype_navn, domain=Brevtype, range=str)
+
+slots.Brevtype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Brevtype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Brevtype_gyldighetsperiode, domain=Brevtype, range=Optional[Union[dict, "Periode"]])
+
+slots.Brevtype_passiv = Slot(uri=FINT.passiv, name="Brevtype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Brevtype_passiv, domain=Brevtype, range=Optional[Union[bool, Bool]])
+
+slots.Eksamensform_kode = Slot(uri=FINT.kode, name="Eksamensform_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Eksamensform_kode, domain=Eksamensform, range=str)
+
+slots.Eksamensform_navn = Slot(uri=FINT.navn, name="Eksamensform_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Eksamensform_navn, domain=Eksamensform, range=str)
+
+slots.Eksamensform_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Eksamensform_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Eksamensform_gyldighetsperiode, domain=Eksamensform, range=Optional[Union[dict, "Periode"]])
+
+slots.Eksamensform_passiv = Slot(uri=FINT.passiv, name="Eksamensform_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Eksamensform_passiv, domain=Eksamensform, range=Optional[Union[bool, Bool]])
+
+slots.Elevkategori_kode = Slot(uri=FINT.kode, name="Elevkategori_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Elevkategori_kode, domain=Elevkategori, range=str)
+
+slots.Elevkategori_navn = Slot(uri=FINT.navn, name="Elevkategori_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Elevkategori_navn, domain=Elevkategori, range=str)
+
+slots.Elevkategori_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Elevkategori_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Elevkategori_gyldighetsperiode, domain=Elevkategori, range=Optional[Union[dict, "Periode"]])
+
+slots.Elevkategori_passiv = Slot(uri=FINT.passiv, name="Elevkategori_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Elevkategori_passiv, domain=Elevkategori, range=Optional[Union[bool, Bool]])
+
+slots.Fagmerknad_kode = Slot(uri=FINT.kode, name="Fagmerknad_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Fagmerknad_kode, domain=Fagmerknad, range=str)
+
+slots.Fagmerknad_navn = Slot(uri=FINT.navn, name="Fagmerknad_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Fagmerknad_navn, domain=Fagmerknad, range=str)
+
+slots.Fagmerknad_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Fagmerknad_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Fagmerknad_gyldighetsperiode, domain=Fagmerknad, range=Optional[Union[dict, "Periode"]])
+
+slots.Fagmerknad_passiv = Slot(uri=FINT.passiv, name="Fagmerknad_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Fagmerknad_passiv, domain=Fagmerknad, range=Optional[Union[bool, Bool]])
+
+slots.Fagstatus_kode = Slot(uri=FINT.kode, name="Fagstatus_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Fagstatus_kode, domain=Fagstatus, range=str)
+
+slots.Fagstatus_navn = Slot(uri=FINT.navn, name="Fagstatus_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Fagstatus_navn, domain=Fagstatus, range=str)
+
+slots.Fagstatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Fagstatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Fagstatus_gyldighetsperiode, domain=Fagstatus, range=Optional[Union[dict, "Periode"]])
+
+slots.Fagstatus_passiv = Slot(uri=FINT.passiv, name="Fagstatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Fagstatus_passiv, domain=Fagstatus, range=Optional[Union[bool, Bool]])
+
+slots.Fravartype_kode = Slot(uri=FINT.kode, name="Fravartype_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Fravartype_kode, domain=Fravartype, range=str)
+
+slots.Fravartype_navn = Slot(uri=FINT.navn, name="Fravartype_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Fravartype_navn, domain=Fravartype, range=str)
+
+slots.Fravartype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Fravartype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Fravartype_gyldighetsperiode, domain=Fravartype, range=Optional[Union[dict, "Periode"]])
+
+slots.Fravartype_passiv = Slot(uri=FINT.passiv, name="Fravartype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Fravartype_passiv, domain=Fravartype, range=Optional[Union[bool, Bool]])
+
+slots.Fullfortkode_kode = Slot(uri=FINT.kode, name="Fullfortkode_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Fullfortkode_kode, domain=Fullfortkode, range=str)
+
+slots.Fullfortkode_navn = Slot(uri=FINT.navn, name="Fullfortkode_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Fullfortkode_navn, domain=Fullfortkode, range=str)
+
+slots.Fullfortkode_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Fullfortkode_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Fullfortkode_gyldighetsperiode, domain=Fullfortkode, range=Optional[Union[dict, "Periode"]])
+
+slots.Fullfortkode_passiv = Slot(uri=FINT.passiv, name="Fullfortkode_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Fullfortkode_passiv, domain=Fullfortkode, range=Optional[Union[bool, Bool]])
+
+slots.Karakterskala_kode = Slot(uri=FINT.kode, name="Karakterskala_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Karakterskala_kode, domain=Karakterskala, range=str)
+
+slots.Karakterskala_navn = Slot(uri=FINT.navn, name="Karakterskala_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Karakterskala_navn, domain=Karakterskala, range=str)
+
+slots.Karakterskala_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Karakterskala_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Karakterskala_gyldighetsperiode, domain=Karakterskala, range=Optional[Union[dict, "Periode"]])
+
+slots.Karakterskala_passiv = Slot(uri=FINT.passiv, name="Karakterskala_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Karakterskala_passiv, domain=Karakterskala, range=Optional[Union[bool, Bool]])
+
+slots.Karakterskala_verdi = Slot(uri=UTD.verdi, name="Karakterskala_verdi", curie=UTD.curie('verdi'),
+                   model_uri=UTD.Karakterskala_verdi, domain=Karakterskala, range=Optional[Union[Union[str, KarakterverdiId], list[Union[str, KarakterverdiId]]]])
+
+slots.Karakterskala_vigoreferanse = Slot(uri=UTD.vigoreferanse, name="Karakterskala_vigoreferanse", curie=UTD.curie('vigoreferanse'),
+                   model_uri=UTD.Karakterskala_vigoreferanse, domain=Karakterskala, range=Optional[Union[str, URIorCURIE]])
+
+slots.Karakterstatus_kode = Slot(uri=FINT.kode, name="Karakterstatus_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Karakterstatus_kode, domain=Karakterstatus, range=str)
+
+slots.Karakterstatus_navn = Slot(uri=FINT.navn, name="Karakterstatus_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Karakterstatus_navn, domain=Karakterstatus, range=str)
+
+slots.Karakterstatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Karakterstatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Karakterstatus_gyldighetsperiode, domain=Karakterstatus, range=Optional[Union[dict, "Periode"]])
+
+slots.Karakterstatus_passiv = Slot(uri=FINT.passiv, name="Karakterstatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Karakterstatus_passiv, domain=Karakterstatus, range=Optional[Union[bool, Bool]])
+
+slots.Karakterverdi_kode = Slot(uri=FINT.kode, name="Karakterverdi_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Karakterverdi_kode, domain=Karakterverdi, range=str)
+
+slots.Karakterverdi_navn = Slot(uri=FINT.navn, name="Karakterverdi_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Karakterverdi_navn, domain=Karakterverdi, range=str)
+
+slots.Karakterverdi_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Karakterverdi_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Karakterverdi_gyldighetsperiode, domain=Karakterverdi, range=Optional[Union[dict, "Periode"]])
+
+slots.Karakterverdi_passiv = Slot(uri=FINT.passiv, name="Karakterverdi_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Karakterverdi_passiv, domain=Karakterverdi, range=Optional[Union[bool, Bool]])
+
+slots.Karakterverdi_skala = Slot(uri=UTD.skala, name="Karakterverdi_skala", curie=UTD.curie('skala'),
+                   model_uri=UTD.Karakterverdi_skala, domain=Karakterverdi, range=Union[str, KarakterskalaId])
+
+slots.OtEnhet_kode = Slot(uri=FINT.kode, name="OtEnhet_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.OtEnhet_kode, domain=OtEnhet, range=str)
+
+slots.OtEnhet_navn = Slot(uri=FINT.navn, name="OtEnhet_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.OtEnhet_navn, domain=OtEnhet, range=str)
+
+slots.OtEnhet_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="OtEnhet_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.OtEnhet_gyldighetsperiode, domain=OtEnhet, range=Optional[Union[dict, "Periode"]])
+
+slots.OtEnhet_passiv = Slot(uri=FINT.passiv, name="OtEnhet_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.OtEnhet_passiv, domain=OtEnhet, range=Optional[Union[bool, Bool]])
+
+slots.OtEnhet_kommune = Slot(uri=FINT.kommune, name="OtEnhet_kommune", curie=FINT.curie('kommune'),
+                   model_uri=UTD.OtEnhet_kommune, domain=OtEnhet, range=Union[str, KommuneId])
+
+slots.OtStatus_kode = Slot(uri=FINT.kode, name="OtStatus_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.OtStatus_kode, domain=OtStatus, range=str)
+
+slots.OtStatus_navn = Slot(uri=FINT.navn, name="OtStatus_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.OtStatus_navn, domain=OtStatus, range=str)
+
+slots.OtStatus_beskrivelse = Slot(uri=FINT.beskrivelse, name="OtStatus_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=UTD.OtStatus_beskrivelse, domain=OtStatus, range=Optional[str])
+
+slots.OtStatus_type = Slot(uri=FINT.type, name="OtStatus_type", curie=FINT.curie('type'),
+                   model_uri=UTD.OtStatus_type, domain=OtStatus, range=str)
+
+slots.OtStatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="OtStatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.OtStatus_gyldighetsperiode, domain=OtStatus, range=Optional[Union[dict, "Periode"]])
+
+slots.OtStatus_passiv = Slot(uri=FINT.passiv, name="OtStatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.OtStatus_passiv, domain=OtStatus, range=Optional[Union[bool, Bool]])
+
+slots.Provestatus_kode = Slot(uri=FINT.kode, name="Provestatus_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Provestatus_kode, domain=Provestatus, range=str)
+
+slots.Provestatus_navn = Slot(uri=FINT.navn, name="Provestatus_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Provestatus_navn, domain=Provestatus, range=str)
+
+slots.Provestatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Provestatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Provestatus_gyldighetsperiode, domain=Provestatus, range=Optional[Union[dict, "Periode"]])
+
+slots.Provestatus_passiv = Slot(uri=FINT.passiv, name="Provestatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Provestatus_passiv, domain=Provestatus, range=Optional[Union[bool, Bool]])
+
+slots.Skoleaar_kode = Slot(uri=FINT.kode, name="Skoleaar_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Skoleaar_kode, domain=Skoleaar, range=str)
+
+slots.Skoleaar_navn = Slot(uri=FINT.navn, name="Skoleaar_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Skoleaar_navn, domain=Skoleaar, range=str)
+
+slots.Skoleaar_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Skoleaar_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Skoleaar_gyldighetsperiode, domain=Skoleaar, range=Optional[Union[dict, "Periode"]])
+
+slots.Skoleaar_passiv = Slot(uri=FINT.passiv, name="Skoleaar_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Skoleaar_passiv, domain=Skoleaar, range=Optional[Union[bool, Bool]])
+
+slots.Skoleeiertype_kode = Slot(uri=FINT.kode, name="Skoleeiertype_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Skoleeiertype_kode, domain=Skoleeiertype, range=str)
+
+slots.Skoleeiertype_navn = Slot(uri=FINT.navn, name="Skoleeiertype_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Skoleeiertype_navn, domain=Skoleeiertype, range=str)
+
+slots.Skoleeiertype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Skoleeiertype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Skoleeiertype_gyldighetsperiode, domain=Skoleeiertype, range=Optional[Union[dict, "Periode"]])
+
+slots.Skoleeiertype_passiv = Slot(uri=FINT.passiv, name="Skoleeiertype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Skoleeiertype_passiv, domain=Skoleeiertype, range=Optional[Union[bool, Bool]])
+
+slots.Termin_kode = Slot(uri=FINT.kode, name="Termin_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Termin_kode, domain=Termin, range=str)
+
+slots.Termin_navn = Slot(uri=FINT.navn, name="Termin_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Termin_navn, domain=Termin, range=str)
+
+slots.Termin_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Termin_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Termin_gyldighetsperiode, domain=Termin, range=Optional[Union[dict, "Periode"]])
+
+slots.Termin_passiv = Slot(uri=FINT.passiv, name="Termin_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Termin_passiv, domain=Termin, range=Optional[Union[bool, Bool]])
+
+slots.Tilrettelegging_kode = Slot(uri=FINT.kode, name="Tilrettelegging_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Tilrettelegging_kode, domain=Tilrettelegging, range=str)
+
+slots.Tilrettelegging_navn = Slot(uri=FINT.navn, name="Tilrettelegging_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Tilrettelegging_navn, domain=Tilrettelegging, range=str)
+
+slots.Tilrettelegging_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Tilrettelegging_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Tilrettelegging_gyldighetsperiode, domain=Tilrettelegging, range=Optional[Union[dict, "Periode"]])
+
+slots.Tilrettelegging_passiv = Slot(uri=FINT.passiv, name="Tilrettelegging_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Tilrettelegging_passiv, domain=Tilrettelegging, range=Optional[Union[bool, Bool]])
+
+slots.Varseltype_kode = Slot(uri=FINT.kode, name="Varseltype_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Varseltype_kode, domain=Varseltype, range=str)
+
+slots.Varseltype_navn = Slot(uri=FINT.navn, name="Varseltype_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Varseltype_navn, domain=Varseltype, range=str)
+
+slots.Varseltype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Varseltype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Varseltype_gyldighetsperiode, domain=Varseltype, range=Optional[Union[dict, "Periode"]])
+
+slots.Varseltype_passiv = Slot(uri=FINT.passiv, name="Varseltype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Varseltype_passiv, domain=Varseltype, range=Optional[Union[bool, Bool]])
+
+slots.Vitnemalsmerknad_kode = Slot(uri=FINT.kode, name="Vitnemalsmerknad_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Vitnemalsmerknad_kode, domain=Vitnemalsmerknad, range=str)
+
+slots.Vitnemalsmerknad_navn = Slot(uri=FINT.navn, name="Vitnemalsmerknad_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Vitnemalsmerknad_navn, domain=Vitnemalsmerknad, range=str)
+
+slots.Vitnemalsmerknad_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Vitnemalsmerknad_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Vitnemalsmerknad_gyldighetsperiode, domain=Vitnemalsmerknad, range=Optional[Union[dict, "Periode"]])
+
+slots.Vitnemalsmerknad_passiv = Slot(uri=FINT.passiv, name="Vitnemalsmerknad_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Vitnemalsmerknad_passiv, domain=Vitnemalsmerknad, range=Optional[Union[bool, Bool]])
+
+slots.Aktoer_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Aktoer_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=UTD.Aktoer_kontaktinformasjon, domain=Aktoer, range=Optional[Union[dict, "Kontaktinformasjon"]])
+
+slots.Aktoer_postadresse = Slot(uri=FINT.postadresse, name="Aktoer_postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=UTD.Aktoer_postadresse, domain=Aktoer, range=Optional[Union[dict, "Adresse"]])
+
+slots.Begrep_kode = Slot(uri=FINT.kode, name="Begrep_kode", curie=FINT.curie('kode'),
+                   model_uri=UTD.Begrep_kode, domain=Begrep, range=str)
+
+slots.Begrep_navn = Slot(uri=FINT.navn, name="Begrep_navn", curie=FINT.curie('navn'),
+                   model_uri=UTD.Begrep_navn, domain=Begrep, range=str)
+
+slots.Begrep_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Begrep_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=UTD.Begrep_gyldighetsperiode, domain=Begrep, range=Optional[Union[dict, "Periode"]])
+
+slots.Begrep_passiv = Slot(uri=FINT.passiv, name="Begrep_passiv", curie=FINT.curie('passiv'),
+                   model_uri=UTD.Begrep_passiv, domain=Begrep, range=Optional[Union[bool, Bool]])
+
+slots.Elev_elevnummer = Slot(uri=FINT.elevnummer, name="Elev_elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=UTD.Elev_elevnummer, domain=Elev, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Elev_person = Slot(uri=FINT.person, name="Elev_person", curie=FINT.curie('person'),
+                   model_uri=UTD.Elev_person, domain=Elev, range=Optional[Union[str, PersonId]])
+
+slots.Enhet_forretningsadresse = Slot(uri=FINT.forretningsadresse, name="Enhet_forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=UTD.Enhet_forretningsadresse, domain=Enhet, range=Optional[Union[dict, "Adresse"]])
+
+slots.Enhet_organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="Enhet_organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=UTD.Enhet_organisasjonsnavn, domain=Enhet, range=Optional[str])
+
+slots.Enhet_organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="Enhet_organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=UTD.Enhet_organisasjonsnummer, domain=Enhet, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Identifikator_identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="Identifikator_identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=UTD.Identifikator_identifikatorverdi, domain=Identifikator, range=str)
+
+slots.Periode_start = Slot(uri=FINT.start, name="Periode_start", curie=FINT.curie('start'),
+                   model_uri=UTD.Periode_start, domain=Periode, range=Union[str, XSDDateTime])
+
+slots.Personnavn_fornavn = Slot(uri=FINT.fornavn, name="Personnavn_fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=UTD.Personnavn_fornavn, domain=Personnavn, range=str)
+
+slots.Personnavn_etternavn = Slot(uri=FINT.etternavn, name="Personnavn_etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=UTD.Personnavn_etternavn, domain=Personnavn, range=str)
+
+slots.Fylke_kommune = Slot(uri=FINT.kommune, name="Fylke_kommune", curie=FINT.curie('kommune'),
+                   model_uri=UTD.Fylke_kommune, domain=Fylke, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
+
+slots.Kommune_fylke = Slot(uri=FINT.fylke, name="Kommune_fylke", curie=FINT.curie('fylke'),
+                   model_uri=UTD.Kommune_fylke, domain=Kommune, range=Union[str, FylkeId])
+
+slots.Valuta_bokstavkode = Slot(uri=FINT.bokstavkode, name="Valuta_bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=UTD.Valuta_bokstavkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Valuta_valuta_navn = Slot(uri=FINT.valutaNavn, name="Valuta_valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=UTD.Valuta_valuta_navn, domain=Valuta, range=str)
+
+slots.Valuta_nummerkode = Slot(uri=FINT.nummerkode, name="Valuta_nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=UTD.Valuta_nummerkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Person_fodselsnummer = Slot(uri=FINT.fodselsnummer, name="Person_fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=UTD.Person_fodselsnummer, domain=Person, range=Union[dict, Identifikator])
+
+slots.Person_person_navn = Slot(uri=FINT.personNavn, name="Person_person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=UTD.Person_person_navn, domain=Person, range=Union[dict, Personnavn])
+
+slots.Person_bilde = Slot(uri=FINT.bilde, name="Person_bilde", curie=FINT.curie('bilde'),
+                   model_uri=UTD.Person_bilde, domain=Person, range=Optional[str])
+
+slots.Person_bostedsadresse = Slot(uri=FINT.bostedsadresse, name="Person_bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=UTD.Person_bostedsadresse, domain=Person, range=Optional[Union[dict, Adresse]])
+
+slots.Person_fodselsdato = Slot(uri=FINT.fodselsdato, name="Person_fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=UTD.Person_fodselsdato, domain=Person, range=Optional[Union[str, XSDDate]])
+
+slots.Person_parorende = Slot(uri=FINT.parorende, name="Person_parorende", curie=FINT.curie('parorende'),
+                   model_uri=UTD.Person_parorende, domain=Person, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
+
+slots.Person_statsborgerskap = Slot(uri=FINT.statsborgerskap, name="Person_statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=UTD.Person_statsborgerskap, domain=Person, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
+
+slots.Person_kommune = Slot(uri=FINT.kommune, name="Person_kommune", curie=FINT.curie('kommune'),
+                   model_uri=UTD.Person_kommune, domain=Person, range=Optional[Union[str, KommuneId]])
+
+slots.Person_kjonn = Slot(uri=FINT.kjonn, name="Person_kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=UTD.Person_kjonn, domain=Person, range=Optional[Union[str, KjonnId]])
+
+slots.Person_foreldreansvar = Slot(uri=FINT.foreldreansvar, name="Person_foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=UTD.Person_foreldreansvar, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_foreldre = Slot(uri=FINT.foreldre, name="Person_foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=UTD.Person_foreldre, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_maalform = Slot(uri=FINT.maalform, name="Person_maalform", curie=FINT.curie('maalform'),
+                   model_uri=UTD.Person_maalform, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_morsmaal = Slot(uri=FINT.morsmaal, name="Person_morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=UTD.Person_morsmaal, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_laerling = Slot(uri=FINT.laerling, name="Person_laerling", curie=FINT.curie('laerling'),
+                   model_uri=UTD.Person_laerling, domain=Person, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+
+slots.Person_elev = Slot(uri=FINT.elev, name="Person_elev", curie=FINT.curie('elev'),
+                   model_uri=UTD.Person_elev, domain=Person, range=Optional[Union[str, ElevId]])
+
+slots.Person_otungdom = Slot(uri=FINT.otungdom, name="Person_otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=UTD.Person_otungdom, domain=Person, range=Optional[Union[str, URIorCURIE]])
+
+slots.Kontaktperson_type = Slot(uri=FINT.type, name="Kontaktperson_type", curie=FINT.curie('type'),
+                   model_uri=UTD.Kontaktperson_type, domain=Kontaktperson, range=str)
+
+slots.Kontaktperson_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Kontaktperson_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=UTD.Kontaktperson_kontaktinformasjon, domain=Kontaktperson, range=Optional[Union[dict, Kontaktinformasjon]])
+
+slots.Kontaktperson_kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="Kontaktperson_kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=UTD.Kontaktperson_kontaktperson_navn, domain=Kontaktperson, range=Optional[Union[dict, Personnavn]])
+
+slots.Kontaktperson_kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="Kontaktperson_kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=UTD.Kontaktperson_kontaktperson, domain=Kontaktperson, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Virksomhet_virksomhetsId = Slot(uri=FINT.virksomhetsId, name="Virksomhet_virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=UTD.Virksomhet_virksomhetsId, domain=Virksomhet, range=Union[dict, Identifikator])
+
+slots.Virksomhet_laerling = Slot(uri=FINT.laerling, name="Virksomhet_laerling", curie=FINT.curie('laerling'),
+                   model_uri=UTD.Virksomhet_laerling, domain=Virksomhet, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 

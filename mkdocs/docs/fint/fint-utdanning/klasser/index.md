@@ -124,7 +124,7 @@ Name: fint-utdanning
 | [avlagteprover](avlagteprover.md) | Alle avlagde prøver i containeren |
 | [avlagtprove](avlagtprove.md) | Avlagde prøver |
 | [bedrift](bedrift.md) | Referanse til bedrifta lærlingen er i |
-| [beskrivelse](beskrivelse.md) | Skildring |
+| [beskrivelse](beskrivelse.md) | Beskriven namn eller omtale |
 | [betalingsstatus](betalingsstatus.md) | Betalingsstatus |
 | [bevistypar](bevistypar.md) | Alle bevistypar i containeren |
 | [bevistype](bevistype.md) | Type kompetansebevis |
@@ -145,7 +145,7 @@ Name: fint-utdanning
 | [eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eksamensgruppemedlemskap |
 | [eksamensgrupper](eksamensgrupper.md) | Alle eksamensgrupper i containeren |
 | [eksamensvurdering](eksamensvurdering.md) | Eksamensvurderingar |
-| [elev](elev.md) | Eleven dette gjeld |
+| [elev](elev.md) | Referanse til Elev (Utdanning) |
 | [elevar](elevar.md) | Alle elevar i containeren |
 | [elevforhold](elevforhold.md) | Elevforholdet dette gjeld |
 | [elevfravar](elevfravar.md) | Fråværsobjekt for elev |
@@ -174,7 +174,7 @@ Name: fint-utdanning
 | [foretrukketSensor](foretrukketsensor.md) | Angir om sensor er føretrekt |
 | [foretrukketSkole](foretrukketskole.md) | Angir om skulen er føretrekt for eksamenen |
 | [fornavn](fornavn.md) | Fornamn til personen |
-| [forretningsadresse](forretningsadresse.md) | Forretningsadresse |
+| [forretningsadresse](forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fravaerstimer](fravaerstimer.md) | Antal fråværstimar |
 | [fravarsoversikt](fravarsoversikt.md) | Alle fråværsoversikter i containeren |
 | [fravarsprosent](fravarsprosent.md) | Fråværsprosent |
@@ -188,7 +188,7 @@ Name: fint-utdanning
 | [gaardsnummer](gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
 | [grepreferanse](grepreferanse.md) | Referanse til GREP-registeret |
 | [gruppemedlemskap](gruppemedlemskap.md) | Gruppemedlemskap |
-| [gyldighetsperiode](gyldighetsperiode.md) | Gyldigheitsperiode |
+| [gyldighetsperiode](gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [halvaar](halvaar.md) | Fråværsprosent for halvåret |
 | [halvaarsfagvurdering](halvaarsfagvurdering.md) | Halvårsfagvurderingar |
 | [halvaarsordensvurdering](halvaarsordensvurdering.md) | Halvårsordensvurderingar |
@@ -208,18 +208,18 @@ Name: fint-utdanning
 | [klasse](klasse.md) | Klasse |
 | [klassemedlemskap](klassemedlemskap.md) | Klassemedlemskap |
 | [klasser](klasser.md) | Alle klassar i containeren |
-| [kode](kode.md) | Kode |
+| [kode](kode.md) | Verdi som identifiserer omgrepet |
 | [kommentar](kommentar.md) | Kommentar |
-| [kommune](kommune.md) | Referanse til kommunen OT-eininga dekker |
+| [kommune](kommune.md) | Kommune |
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktlaerergruppe](kontaktlaerergruppe.md) | Kontaktlærargruppe |
 | [kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Kontaktlærergruppemedlemskap |
 | [kontaktlaerergrupper](kontaktlaerergrupper.md) | Alle kontaktlærargrupper i containeren |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontraktstype](kontraktstype.md) | Type kontrakt for lærlingen |
-| [laerling](laerling.md) | Lærling |
+| [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [laerlingar](laerlingar.md) | Alle lærlingar i containeren |
 | [land](land.md) | Land der adressa befinn seg |
 | [laretid](laretid.md) | Læringstidsperiode for lærlingen |
@@ -227,8 +227,7 @@ Name: fint-utdanning
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [naam](naam.md) | Hovudnamn for ressursen |
-| [navn](navn.md) | Namn |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [nus](nus.md) | NUS-kode |
@@ -238,22 +237,22 @@ Name: fint-utdanning
 | [opprinneligKarakterverdi](opprinneligkarakterverdi.md) | Opphavleg karakterverdi |
 | [orden](orden.md) | Ordenskarakter |
 | [organisasjon](organisasjon.md) | Referanse til Organisasjonselement i Administrasjon-domenet |
-| [organisasjonsnavn](organisasjonsnavn.md) | Organisasjonsnamn |
-| [organisasjonsnummer](organisasjonsnummer.md) | Organisasjonsnummer-identifikator |
+| [organisasjonsnavn](organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
+| [organisasjonsnummer](organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otEnheter](otenheter.md) | Alle OT-einingar i containeren |
 | [otStatus](otstatus.md) | Alle OT-statuser i containeren |
 | [otUngdom](otungdom.md) | Alle OT-ungdom i containeren |
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
-| [passiv](passiv.md) | Angir om oppføringen er passiv/inaktiv |
+| [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [periode](periode.md) | Periode |
 | [person](person.md) | Referanse til Person i Administrasjon-domenet |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
 | [persongruppe](persongruppe.md) | Persongruppe |
 | [persongruppemedlemskap](persongruppemedlemskap.md) | Persongruppemedlemskap |
 | [persongrupper](persongrupper.md) | Alle persongrupper i containeren |
-| [postadresse](postadresse.md) | Postadresse |
+| [postadresse](postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](postnummer.md) | Postnummer |
 | [poststed](poststed.md) | Poststad |
 | [programomrade](programomrade.md) | Programområde |
@@ -280,6 +279,7 @@ Name: fint-utdanning
 | [skolenummer](skolenummer.md) | Nasjonal skulenummer-identifikator |
 | [skoleressurs](skoleressurs.md) | Skoleressurs |
 | [skoleressursar](skoleressursar.md) | Alle skoleressursar i containeren |
+| [skuletime](skuletime.md) | Ein skuletime i timeplanen |
 | [slutt](slutt.md) | Til tidspunkt |
 | [sluttfagvurdering](sluttfagvurdering.md) | Sluttfagvurderingar |
 | [sluttordensvurdering](sluttordensvurdering.md) | Sluttordensvurderingar |
@@ -293,10 +293,9 @@ Name: fint-utdanning
 | [tidsrom](tidsrom.md) | Tidsrom |
 | [tilrettelegging](tilrettelegging.md) | Tilretteleggingstype |
 | [timar](timar.md) | Alle timar i containeren |
-| [time](time.md) | Time |
 | [tosprakligFagopplaering](tosprakligfagopplaering.md) | Indikerer om eleven har tospråkleg fagopplæring |
 | [trinn](trinn.md) | Årstrinnet |
-| [type](type.md) | Type |
+| [type](type.md) | Beskriv kva slags type |
 | [underveisfagvurdering](underveisfagvurdering.md) | Underveisfagvurderingar |
 | [underveisordensvurdering](underveisordensvurdering.md) | Underveisordensvurderingar |
 | [undervisningsforhold](undervisningsforhold.md) | Undervisningsforhold |
@@ -306,7 +305,7 @@ Name: fint-utdanning
 | [undervisningstimer](undervisningstimer.md) | Totalt antal undervisningstimar |
 | [utdanningsprogram](utdanningsprogram.md) | Utdanningsprogram |
 | [utsteder](utsteder.md) | Skoleressurs som sende varselet |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [varsel](varsel.md) | Varsel |
 | [varseltypar](varseltypar.md) | Alle varseltypar i containeren |
 | [verdi](verdi.md) | Karakterverdiar i skalaen |

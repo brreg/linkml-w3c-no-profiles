@@ -140,6 +140,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | [Organisasjonselement](organisasjonselement.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Personalressurs](personalressurs.md) | [ansattnummer](ansattnummer.md) | range | [Identifikator](identifikator.md) |
 | [Personalressurs](personalressurs.md) | [brukernavn](brukernavn.md) | range | [Identifikator](identifikator.md) |
+| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Enhet](enhet.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [bokstavkode](bokstavkode.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [nummerkode](nummerkode.md) | range | [Identifikator](identifikator.md) |

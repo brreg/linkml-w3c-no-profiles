@@ -22,10 +22,10 @@ Alias: beskrivelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
 | [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
 | [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
+| [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
 
 
 

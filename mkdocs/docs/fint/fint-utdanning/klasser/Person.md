@@ -9,7 +9,7 @@ _Referanse til Person i Administrasjon-domenet._
 
 
 
-URI: [utd:person](https://schema.fintlabs.no/utdanning/person)
+URI: [fint:person](https://schema.fintlabs.no/person)
 Alias: person
 
 <!-- no inheritance hierarchy -->
@@ -22,10 +22,10 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
 | [OtUngdom](otungdom.md) | Eit ungdomsobjekt i oppfølgingstenesta (OT) |  yes  |
-| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
 | [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
+| [Skoleressurs](skoleressurs.md) | Ein lærar eller anna tilsett ved ein skule |  yes  |
+| [Laerling](laerling.md) | Ein lærling i yrkesopplæring |  yes  |
 
 
 
@@ -38,9 +38,9 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Elev](elev.md), [Skoleressurs](skoleressurs.md), [Laerling](laerling.md), [OtUngdom](otungdom.md) |
-| Slot URI | [utd:person](https://schema.fintlabs.no/utdanning/person) |
+| Range | [Person](person.md) |
+| Domain Of | [Skoleressurs](skoleressurs.md), [Laerling](laerling.md), [OtUngdom](otungdom.md), [Elev](elev.md) |
+| Slot URI | [fint:person](https://schema.fintlabs.no/person) |
 
 ### Cardinality and Requirements
 
@@ -74,7 +74,7 @@ Alias: person
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:person |
+| self | fint:person |
 | native | https://schema.fintlabs.no/utdanning/:person |
 
 
@@ -88,14 +88,14 @@ name: person
 description: Referanse til Person i Administrasjon-domenet.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:person
+slot_uri: fint:person
 alias: person
 domain_of:
-- Elev
 - Skoleressurs
 - Laerling
 - OtUngdom
-range: uriorcurie
+- Elev
+range: Person
 
 ```
 </details>

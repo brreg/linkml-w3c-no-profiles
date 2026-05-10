@@ -34,7 +34,7 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
         
       OkonomiValuta : kode
         
-      OkonomiValuta : naam
+      OkonomiValuta : navn
         
       OkonomiValuta : passiv
         
@@ -86,7 +86,7 @@ URI: [okn:Valuta](https://schema.fintlabs.no/okonomi/Valuta)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
-| [naam](naam.md) | 1 <br/> [String](string.md) | Namn på eining eller kodeverk-element |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen |
 
 
 
@@ -274,7 +274,7 @@ from_schema: https://data.norge.no/linkml/fint-okonomi
 slots:
 - id
 - kode
-- naam
+- navn
 - gyldighetsperiode
 - passiv
 slot_usage:
@@ -283,8 +283,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  naam:
-    name: naam
+  navn:
+    name: navn
     in_subset:
     - Obligatorisk
     required: true
@@ -314,8 +314,8 @@ slot_usage:
     in_subset:
     - Obligatorisk
     required: true
-  naam:
-    name: naam
+  navn:
+    name: navn
     in_subset:
     - Obligatorisk
     required: true
@@ -348,6 +348,7 @@ attributes:
     - Merverdiavgift
     - OkonomiValuta
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -371,15 +372,15 @@ attributes:
     - Begrep
     range: string
     required: true
-  naam:
-    name: naam
-    description: Namn på eining eller kodeverk-element.
+  navn:
+    name: navn
+    description: Hovudnamn for ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-okonomi
     rank: 1000
-    slot_uri: okn:naam
-    alias: naam
+    slot_uri: fint:navn
+    alias: navn
     owner: OkonomiValuta
     domain_of:
     - Fakturautsteder

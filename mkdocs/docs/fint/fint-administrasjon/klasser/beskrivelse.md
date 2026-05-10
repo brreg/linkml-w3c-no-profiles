@@ -22,12 +22,12 @@ Alias: beskrivelse
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Rolle](rolle.md) | Rettighet eller type fullmakt |  yes  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
-| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 | [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 | [Periode](periode.md) | Tidsperiode med obligatorisk start og valfri slutt |  no  |
-| [Rolle](rolle.md) | Rettighet eller type fullmakt |  yes  |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
+| [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
 
 
 

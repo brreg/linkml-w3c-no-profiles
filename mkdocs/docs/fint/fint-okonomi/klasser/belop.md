@@ -22,9 +22,9 @@ Alias: belop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 | [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
+| [Transaksjon](transaksjon.md) | Overføring av pengar til eller frå eksterne partar |  yes  |
 
 
 

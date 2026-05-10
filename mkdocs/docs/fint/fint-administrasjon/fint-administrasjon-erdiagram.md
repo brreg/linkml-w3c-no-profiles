@@ -8,19 +8,19 @@ Adresse {
 Aktivitet {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Anlegg {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Ansvar {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Arbeidsforhold {
@@ -37,7 +37,7 @@ Arbeidsforhold {
 Arbeidsforholdstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Arbeidslokasjon {
@@ -48,14 +48,17 @@ Arbeidslokasjon {
 Art {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Diverse {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
+}
+Elev {
+    uriorcurie id  
 }
 Fastlonn {
     integer prosent  
@@ -76,7 +79,7 @@ Fasttillegg {
 Formaal {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Fravaer {
@@ -87,14 +90,14 @@ Fravaer {
 Fravaersgrunn {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Fravaerstype {
     boolean overfores  
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Fullmakt {
@@ -103,13 +106,13 @@ Fullmakt {
 Funksjon {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Fylke {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Identifikator {
@@ -118,13 +121,13 @@ Identifikator {
 Kjonn {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Kommune {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Kontaktinformasjon {
@@ -144,32 +147,32 @@ Kontostreng {
 Kontrakt {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Landkode {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Lonsart {
     string kategori  
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Lopenummer {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Objekt {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Organisasjonselement {
@@ -182,7 +185,7 @@ Organisasjonselement {
 Organisasjonstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Periode {
@@ -193,7 +196,6 @@ Periode {
 Person {
     uriorcurie id  
     string bilde  
-    uriorcurie elev  
     date fodselsdato  
     uriorcurieList laerling  
     uriorcurie otungdom  
@@ -208,7 +210,7 @@ Personalressurs {
 Personalressurskategori {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Personnavn {
@@ -219,19 +221,19 @@ Personnavn {
 Prosjekt {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Prosjektart {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Ramme {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Rolle {
@@ -241,24 +243,24 @@ Rolle {
 Spraak {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Stillingskode {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Uketimetall {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Valuta {
     uriorcurie id  
-    string valuta_naam  
+    string valuta_navn  
 }
 Variabellonn {
     integer antall  
@@ -316,6 +318,8 @@ Arbeidslokasjon ||--|| Identifikator : "lokasjonskode"
 Arbeidslokasjon ||--}o Arbeidsforhold : "arbeidsforhold"
 Art ||--|o Periode : "gyldighetsperiode"
 Diverse ||--|o Periode : "gyldighetsperiode"
+Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
 Fastlonn ||--|o Identifikator : "kildesystemId"
 Fastlonn ||--|o Lonsart : "lonsart"
 Fastlonn ||--|o Periode : "opptjent"
@@ -367,7 +371,7 @@ Kjonn ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|| Fylke : "fylke"
 Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
-Kontaktperson ||--|o Personnavn : "kontaktperson_naam"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
 Kontaktperson ||--}o Person : "kontaktperson"
 Kontostreng ||--|o Aktivitet : "aktivitet"
 Kontostreng ||--|o Anlegg : "anlegg"
@@ -401,12 +405,13 @@ Organisasjonselement ||--}o Arbeidsforhold : "arbeidsforhold"
 Organisasjonselement ||--}o Organisasjonselement : "underordnet"
 Organisasjonstype ||--|o Periode : "gyldighetsperiode"
 Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
 Person ||--|o Kjonn : "kjonn"
 Person ||--|o Kommune : "kommune"
 Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
 Person ||--|o Spraak : "maalform, morsmaal"
 Person ||--|| Identifikator : "fodselsnummer"
-Person ||--|| Personnavn : "person_naam"
+Person ||--|| Personnavn : "person_navn"
 Person ||--}o Kontaktperson : "parorende"
 Person ||--}o Landkode : "statsborgerskap"
 Person ||--}o Person : "foreldre, foreldreansvar"

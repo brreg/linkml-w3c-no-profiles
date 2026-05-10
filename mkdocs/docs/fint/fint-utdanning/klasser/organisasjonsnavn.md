@@ -3,13 +3,13 @@
 # Slot: organisasjonsnavn 
 
 
-_Organisasjonsnamn._
+_Namn på eining registrert i Einingsregisteret._
 
 
 
 
 
-URI: [utd:organisasjonsnavn](https://schema.fintlabs.no/utdanning/organisasjonsnavn)
+URI: [fint:organisasjonsnavn](https://schema.fintlabs.no/organisasjonsnavn)
 Alias: organisasjonsnavn
 
 <!-- no inheritance hierarchy -->
@@ -22,8 +22,8 @@ Alias: organisasjonsnavn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  yes  |
 | [Skole](skole.md) | Ein skule eller opplæringsinstitusjon |  yes  |
 
 
@@ -39,7 +39,7 @@ Alias: organisasjonsnavn
 | --- | --- |
 | Range | [String](string.md) |
 | Domain Of | [Skole](skole.md), [Enhet](enhet.md) |
-| Slot URI | [utd:organisasjonsnavn](https://schema.fintlabs.no/utdanning/organisasjonsnavn) |
+| Slot URI | [fint:organisasjonsnavn](https://schema.fintlabs.no/organisasjonsnavn) |
 
 ### Cardinality and Requirements
 
@@ -73,7 +73,7 @@ Alias: organisasjonsnavn
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:organisasjonsnavn |
+| self | fint:organisasjonsnavn |
 | native | https://schema.fintlabs.no/utdanning/:organisasjonsnavn |
 
 
@@ -84,10 +84,10 @@ Alias: organisasjonsnavn
 <details>
 ```yaml
 name: organisasjonsnavn
-description: Organisasjonsnamn.
+description: Namn på eining registrert i Einingsregisteret.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:organisasjonsnavn
+slot_uri: fint:organisasjonsnavn
 alias: organisasjonsnavn
 domain_of:
 - Skole

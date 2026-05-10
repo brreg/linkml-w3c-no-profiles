@@ -22,8 +22,8 @@ Alias: karakterstatus
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 | [Karakterhistorie](karakterhistorie.md) | Historikk over endringar i ein karakter |  yes  |
+| [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
 
 
 

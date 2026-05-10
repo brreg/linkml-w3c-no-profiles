@@ -126,10 +126,10 @@ slots:
     range: Leverandor
     description: Leverandør.
 
-  person:
-    slot_uri: okn:person
-    range: uriorcurie
-    description: Referanse til Person (Administrasjon).
+  # person:
+  #   slot_uri: okn:person
+  #   range: uriorcurie
+  #   description: Referanse til Person (Administrasjon).
 
   # --- Faktura --------------------------------------------------------------
 
@@ -219,10 +219,10 @@ slots:
 
   # --- Fakturautsteder ------------------------------------------------------
 
-  naam:
-    slot_uri: okn:naam
-    range: string
-    description: Namn på eining eller kodeverk-element.
+  # navn:
+  #   slot_uri: okn:navn
+  #   range: string
+  #   description: Namn på eining eller kodeverk-element.
 
   organisasjonselement:
     slot_uri: okn:organisasjonselement
@@ -538,12 +538,12 @@ classes:
     class_uri: okn:Fakturautsteder
     slots:
       - id
-      - naam
+      - navn
       - fakturagrunnlag
       - organisasjonselement
       - vare
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -721,10 +721,10 @@ classes:
     class_uri: okn:Leverandorgruppe
     slots:
       - id
-      - naam
+      - navn
       - leverandor
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -798,7 +798,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - enhet
       - pris
       - kontering
@@ -811,7 +811,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -847,7 +847,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - sats
       - gyldighetsperiode
       - passiv
@@ -856,7 +856,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -877,7 +877,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
@@ -885,7 +885,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk

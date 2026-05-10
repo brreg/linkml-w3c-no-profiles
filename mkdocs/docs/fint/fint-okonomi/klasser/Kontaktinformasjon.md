@@ -22,10 +22,10 @@ Alias: kontaktinformasjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
+| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
 | [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
-| [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
 | [Person](person.md) | Fysiske private personar |  no  |
 
 

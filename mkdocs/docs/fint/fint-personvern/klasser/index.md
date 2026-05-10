@@ -26,6 +26,7 @@ Name: fint-personvern
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Behandling](behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |
 | [Behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysningar |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |
 | [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |
 | [Kontaktinformasjon](kontaktinformasjon.md) | Informasjon som kan brukast for å oppnå kontakt |
 | [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |
@@ -56,6 +57,7 @@ Name: fint-personvern
 | [bostedsadresse](bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [bruksnummer](bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
 | [festenummer](festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
@@ -77,14 +79,14 @@ Name: fint-personvern
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [laerling](laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](land.md) | Land der adressa befinn seg |
 | [maalform](maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
-| [naam](naam.md) | Namn på ressursen |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](nummerkode.md) | Nummerkode for aktuell valuta |
 | [opprettet](opprettet.md) | Dato då samtykket vart oppretta |
@@ -94,8 +96,8 @@ Name: fint-personvern
 | [otungdom](otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](person.md) | Referanse til Person (Administrasjon) |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person](person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [personopplysning](personopplysning.md) | Opplysning eller vurdering som kan knytast til ein enkeltperson |
 | [personopplysningar](personopplysningar.md) |  |
@@ -114,7 +116,7 @@ Name: fint-personvern
 | [tenester](tenester.md) |  |
 | [tjeneste](tjeneste.md) | Tenesta som behandlinga tilhøyrer |
 | [type](type.md) | Beskriv kva slags type |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [virksomhetsId](virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 

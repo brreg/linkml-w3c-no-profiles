@@ -141,7 +141,7 @@ for domain_dir in $(find "$GEN" -mindepth 1 -maxdepth 1 -type d | sort); do
             if $has_artifact; then
                 echo ""
                 echo ""
-                echo "## Artifacts"
+                echo "## Generated artifacts"
                 echo ""
                 echo "| Artefakt | Fil |"
                 echo "|----------|-----|"

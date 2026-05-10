@@ -132,6 +132,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | [Transaksjon](transaksjon.md) | [transaksjonsId](transaksjonsid.md) | range | [Identifikator](identifikator.md) |
 | [Postering](postering.md) | [posteringsId](posteringsid.md) | range | [Identifikator](identifikator.md) |
 | [Leverandor](leverandor.md) | [leverandornummer](leverandornummer.md) | range | [Identifikator](identifikator.md) |
+| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Enhet](enhet.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [bokstavkode](bokstavkode.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [nummerkode](nummerkode.md) | range | [Identifikator](identifikator.md) |

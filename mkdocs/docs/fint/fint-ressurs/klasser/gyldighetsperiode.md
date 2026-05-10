@@ -22,25 +22,25 @@ Alias: gyldighetsperiode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  yes  |
-| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  yes  |
+| [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  yes  |
 | [Status](status.md) | Status på ei digital eining i fagsystemet |  yes  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
+| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  yes  |
+| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
 | [Produsent](produsent.md) | Produsent av ei digital eining |  yes  |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
+| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 | [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  yes  |
 | [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  yes  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  yes  |
-| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
 | [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
-| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
 
 
 

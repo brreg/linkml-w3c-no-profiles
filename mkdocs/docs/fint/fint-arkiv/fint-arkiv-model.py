@@ -1,5 +1,5 @@
 # Auto generated from fint-arkiv-schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-05T13:27:56
+# Generation date: 2026-05-10T09:44:40
 # Schema: fint-arkiv
 #
 # id: https://data.norge.no/linkml/fint-arkiv
@@ -217,6 +217,10 @@ class BegrepId(URIorCURIE):
     pass
 
 
+class ElevId(URIorCURIE):
+    pass
+
+
 class LandkodeId(BegrepId):
     pass
 
@@ -275,11 +279,11 @@ class ArkivContainer(YAMLRoot):
     klassifikasjonssystem: Optional[Union[dict[Union[str, KlassifikasjonssystemId], Union[dict, "Klassifikasjonssystem"]], list[Union[dict, "Klassifikasjonssystem"]]]] = empty_dict()
     tilgangar: Optional[Union[dict[Union[str, TilgangId], Union[dict, "Tilgang"]], list[Union[dict, "Tilgang"]]]] = empty_dict()
     sakar: Optional[Union[dict[Union[str, SakId], Union[dict, "Sak"]], list[Union[dict, "Sak"]]]] = empty_dict()
-    personalmappe: Optional[Union[dict[Union[str, PersonalmappeId], Union[dict, "Personalmappe"]], list[Union[dict, "Personalmappe"]]]] = empty_dict()
-    dispensasjonAutomatiskFredaKulturminne: Optional[Union[dict[Union[str, DispensasjonAutomatiskFredaKulturminneId], Union[dict, "DispensasjonAutomatiskFredaKulturminne"]], list[Union[dict, "DispensasjonAutomatiskFredaKulturminne"]]]] = empty_dict()
-    tilskuddFartoy: Optional[Union[dict[Union[str, TilskuddFartoyId], Union[dict, "TilskuddFartoy"]], list[Union[dict, "TilskuddFartoy"]]]] = empty_dict()
-    tilskuddFredaBygningPrivatEie: Optional[Union[dict[Union[str, TilskuddFredaBygningPrivatEieId], Union[dict, "TilskuddFredaBygningPrivatEie"]], list[Union[dict, "TilskuddFredaBygningPrivatEie"]]]] = empty_dict()
-    soeknadDrosjeloeyve: Optional[Union[dict[Union[str, SoeknadDrosjeloeyveId], Union[dict, "SoeknadDrosjeloeyve"]], list[Union[dict, "SoeknadDrosjeloeyve"]]]] = empty_dict()
+    personalmappe_liste: Optional[Union[dict[Union[str, PersonalmappeId], Union[dict, "Personalmappe"]], list[Union[dict, "Personalmappe"]]]] = empty_dict()
+    dispensasjonAutomatiskFredaKulturminne_liste: Optional[Union[dict[Union[str, DispensasjonAutomatiskFredaKulturminneId], Union[dict, "DispensasjonAutomatiskFredaKulturminne"]], list[Union[dict, "DispensasjonAutomatiskFredaKulturminne"]]]] = empty_dict()
+    tilskuddFartoy_liste: Optional[Union[dict[Union[str, TilskuddFartoyId], Union[dict, "TilskuddFartoy"]], list[Union[dict, "TilskuddFartoy"]]]] = empty_dict()
+    tilskuddFredaBygningPrivatEie_liste: Optional[Union[dict[Union[str, TilskuddFredaBygningPrivatEieId], Union[dict, "TilskuddFredaBygningPrivatEie"]], list[Union[dict, "TilskuddFredaBygningPrivatEie"]]]] = empty_dict()
+    soeknadDrosjeloeyve_liste: Optional[Union[dict[Union[str, SoeknadDrosjeloeyveId], Union[dict, "SoeknadDrosjeloeyve"]], list[Union[dict, "SoeknadDrosjeloeyve"]]]] = empty_dict()
     dokumentstatuskodar: Optional[Union[dict[Union[str, DokumentStatusId], Union[dict, "DokumentStatus"]], list[Union[dict, "DokumentStatus"]]]] = empty_dict()
     dokumenttypar: Optional[Union[dict[Union[str, DokumentTypeId], Union[dict, "DokumentType"]], list[Union[dict, "DokumentType"]]]] = empty_dict()
     formatar: Optional[Union[dict[Union[str, FormatId], Union[dict, "Format"]], list[Union[dict, "Format"]]]] = empty_dict()
@@ -319,15 +323,15 @@ class ArkivContainer(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="sakar", slot_type=Sak, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="personalmappe", slot_type=Personalmappe, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="personalmappe_liste", slot_type=Personalmappe, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="dispensasjonAutomatiskFredaKulturminne", slot_type=DispensasjonAutomatiskFredaKulturminne, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="dispensasjonAutomatiskFredaKulturminne_liste", slot_type=DispensasjonAutomatiskFredaKulturminne, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="tilskuddFartoy", slot_type=TilskuddFartoy, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="tilskuddFartoy_liste", slot_type=TilskuddFartoy, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="tilskuddFredaBygningPrivatEie", slot_type=TilskuddFredaBygningPrivatEie, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="tilskuddFredaBygningPrivatEie_liste", slot_type=TilskuddFredaBygningPrivatEie, key_name="id", keyed=True)
 
-        self._normalize_inlined_as_list(slot_name="soeknadDrosjeloeyve", slot_type=SoeknadDrosjeloeyve, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="soeknadDrosjeloeyve_liste", slot_type=SoeknadDrosjeloeyve, key_name="id", keyed=True)
 
         self._normalize_inlined_as_list(slot_name="dokumentstatuskodar", slot_type=DokumentStatus, key_name="id", keyed=True)
 
@@ -924,11 +928,11 @@ class Klassifikasjonssystem(YAMLRoot):
 
     id: Union[str, KlassifikasjonssystemId] = None
     klasse: Union[Union[dict, "Klasse"], list[Union[dict, "Klasse"]]] = None
-    opprettetAv: str = None
+    opprettetAvNavn: str = None
     opprettetDato: Union[str, XSDDateTime] = None
     tittel: str = None
     arkivdel: Union[Union[str, ArkivdelId], list[Union[str, ArkivdelId]]] = None
-    avsluttetAv: Optional[str] = None
+    avsluttetAvNavn: Optional[str] = None
     avsluttetDato: Optional[Union[str, XSDDateTime]] = None
     beskrivelse: Optional[str] = None
     klassifikasjonstype: Optional[Union[str, KlassifikasjonstypeId]] = None
@@ -943,10 +947,10 @@ class Klassifikasjonssystem(YAMLRoot):
             self.MissingRequiredField("klasse")
         self._normalize_inlined_as_list(slot_name="klasse", slot_type=Klasse, key_name="klasseId", keyed=False)
 
-        if self._is_empty(self.opprettetAv):
-            self.MissingRequiredField("opprettetAv")
-        if not isinstance(self.opprettetAv, str):
-            self.opprettetAv = str(self.opprettetAv)
+        if self._is_empty(self.opprettetAvNavn):
+            self.MissingRequiredField("opprettetAvNavn")
+        if not isinstance(self.opprettetAvNavn, str):
+            self.opprettetAvNavn = str(self.opprettetAvNavn)
 
         if self._is_empty(self.opprettetDato):
             self.MissingRequiredField("opprettetDato")
@@ -964,8 +968,8 @@ class Klassifikasjonssystem(YAMLRoot):
             self.arkivdel = [self.arkivdel] if self.arkivdel is not None else []
         self.arkivdel = [v if isinstance(v, ArkivdelId) else ArkivdelId(v) for v in self.arkivdel]
 
-        if self.avsluttetAv is not None and not isinstance(self.avsluttetAv, str):
-            self.avsluttetAv = str(self.avsluttetAv)
+        if self.avsluttetAvNavn is not None and not isinstance(self.avsluttetAvNavn, str):
+            self.avsluttetAvNavn = str(self.avsluttetAvNavn)
 
         if self.avsluttetDato is not None and not isinstance(self.avsluttetDato, XSDDateTime):
             self.avsluttetDato = XSDDateTime(self.avsluttetDato)
@@ -1071,8 +1075,8 @@ class Personalmappe(Saksmappe):
     saksstatus: Union[str, SaksstatusId] = None
     administrativEnhet: Union[str, AdministrativEnhetId] = None
     saksansvarlig: Union[str, ArkivressursId] = None
-    navn: Union[dict, "Personnavn"] = None
-    person: Union[str, URIorCURIE] = None
+    personnavn: Union[dict, "Personnavn"] = None
+    person: Union[str, PersonId] = None
     leder: Union[str, URIorCURIE] = None
     arbeidssted: Union[str, URIorCURIE] = None
     personalressurs: Union[str, URIorCURIE] = None
@@ -1083,15 +1087,15 @@ class Personalmappe(Saksmappe):
         if not isinstance(self.id, PersonalmappeId):
             self.id = PersonalmappeId(self.id)
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self._is_empty(self.personnavn):
+            self.MissingRequiredField("personnavn")
+        if not isinstance(self.personnavn, Personnavn):
+            self.personnavn = Personnavn(**as_dict(self.personnavn))
 
         if self._is_empty(self.person):
             self.MissingRequiredField("person")
-        if not isinstance(self.person, URIorCURIE):
-            self.person = URIorCURIE(self.person)
+        if not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
 
         if self._is_empty(self.leder):
             self.MissingRequiredField("leder")
@@ -1274,7 +1278,7 @@ class SoeknadDrosjeloeyve(Saksmappe):
     administrativEnhet: Union[str, AdministrativEnhetId] = None
     saksansvarlig: Union[str, ArkivressursId] = None
     organisasjonsnavn: str = None
-    organisasjonsnummer: str = None
+    orgnummer: str = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1287,10 +1291,10 @@ class SoeknadDrosjeloeyve(Saksmappe):
         if not isinstance(self.organisasjonsnavn, str):
             self.organisasjonsnavn = str(self.organisasjonsnavn)
 
-        if self._is_empty(self.organisasjonsnummer):
-            self.MissingRequiredField("organisasjonsnummer")
-        if not isinstance(self.organisasjonsnummer, str):
-            self.organisasjonsnummer = str(self.organisasjonsnummer)
+        if self._is_empty(self.orgnummer):
+            self.MissingRequiredField("orgnummer")
+        if not isinstance(self.orgnummer, str):
+            self.orgnummer = str(self.orgnummer)
 
         super().__post_init__(**kwargs)
 
@@ -1544,9 +1548,9 @@ class Korrespondansepart(YAMLRoot):
     adresse: Optional[Union[dict, "Adresse"]] = None
     foedselsnummer: Optional[str] = None
     kontaktinformasjon: Optional[Union[dict, "Kontaktinformasjon"]] = None
-    kontaktperson: Optional[str] = None
+    kontaktperson_str: Optional[str] = None
     korrespondansepartNavn: Optional[str] = None
-    organisasjonsnummer: Optional[str] = None
+    orgnummer: Optional[str] = None
     skjerming: Optional[Union[dict, "Skjerming"]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1564,14 +1568,14 @@ class Korrespondansepart(YAMLRoot):
         if self.kontaktinformasjon is not None and not isinstance(self.kontaktinformasjon, Kontaktinformasjon):
             self.kontaktinformasjon = Kontaktinformasjon(**as_dict(self.kontaktinformasjon))
 
-        if self.kontaktperson is not None and not isinstance(self.kontaktperson, str):
-            self.kontaktperson = str(self.kontaktperson)
+        if self.kontaktperson_str is not None and not isinstance(self.kontaktperson_str, str):
+            self.kontaktperson_str = str(self.kontaktperson_str)
 
         if self.korrespondansepartNavn is not None and not isinstance(self.korrespondansepartNavn, str):
             self.korrespondansepartNavn = str(self.korrespondansepartNavn)
 
-        if self.organisasjonsnummer is not None and not isinstance(self.organisasjonsnummer, str):
-            self.organisasjonsnummer = str(self.organisasjonsnummer)
+        if self.orgnummer is not None and not isinstance(self.orgnummer, str):
+            self.orgnummer = str(self.orgnummer)
 
         if self.skjerming is not None and not isinstance(self.skjerming, Skjerming):
             self.skjerming = Skjerming(**as_dict(self.skjerming))
@@ -1636,8 +1640,8 @@ class Part(YAMLRoot):
     adresse: Optional[Union[dict, "Adresse"]] = None
     foedselsnummer: Optional[str] = None
     kontaktinformasjon: Optional[Union[dict, "Kontaktinformasjon"]] = None
-    kontaktperson: Optional[str] = None
-    organisasjonsnummer: Optional[str] = None
+    kontaktperson_str: Optional[str] = None
+    orgnummer: Optional[str] = None
     partRolle: Optional[Union[str, PartRolleId]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1655,11 +1659,11 @@ class Part(YAMLRoot):
         if self.kontaktinformasjon is not None and not isinstance(self.kontaktinformasjon, Kontaktinformasjon):
             self.kontaktinformasjon = Kontaktinformasjon(**as_dict(self.kontaktinformasjon))
 
-        if self.kontaktperson is not None and not isinstance(self.kontaktperson, str):
-            self.kontaktperson = str(self.kontaktperson)
+        if self.kontaktperson_str is not None and not isinstance(self.kontaktperson_str, str):
+            self.kontaktperson_str = str(self.kontaktperson_str)
 
-        if self.organisasjonsnummer is not None and not isinstance(self.organisasjonsnummer, str):
-            self.organisasjonsnummer = str(self.organisasjonsnummer)
+        if self.orgnummer is not None and not isinstance(self.orgnummer, str):
+            self.orgnummer = str(self.orgnummer)
 
         if self.partRolle is not None and not isinstance(self.partRolle, PartRolleId):
             self.partRolle = PartRolleId(self.partRolle)
@@ -2496,6 +2500,37 @@ class Begrep(YAMLRoot):
 
 
 @dataclass(repr=False)
+class Elev(YAMLRoot):
+    """
+    Ein elev registrert i skulesystemet.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = FINT["Elev"]
+    class_class_curie: ClassVar[str] = "fint:Elev"
+    class_name: ClassVar[str] = "Elev"
+    class_model_uri: ClassVar[URIRef] = ARK.Elev
+
+    id: Union[str, ElevId] = None
+    elevnummer: Optional[Union[dict, "Identifikator"]] = None
+    person: Optional[Union[str, PersonId]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, ElevId):
+            self.id = ElevId(self.id)
+
+        if self.elevnummer is not None and not isinstance(self.elevnummer, Identifikator):
+            self.elevnummer = Identifikator(**as_dict(self.elevnummer))
+
+        if self.person is not None and not isinstance(self.person, PersonId):
+            self.person = PersonId(self.person)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
 class Enhet(Aktoer):
     """
     Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd identifisert med organisasjonsnummer.
@@ -2877,7 +2912,7 @@ class Valuta(YAMLRoot):
 
     id: Union[str, ValutaId] = None
     bokstavkode: Union[dict, Identifikator] = None
-    navn: str = None
+    valuta_navn: str = None
     nummerkode: Union[dict, Identifikator] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -2891,10 +2926,10 @@ class Valuta(YAMLRoot):
         if not isinstance(self.bokstavkode, Identifikator):
             self.bokstavkode = Identifikator(**as_dict(self.bokstavkode))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, str):
-            self.navn = str(self.navn)
+        if self._is_empty(self.valuta_navn):
+            self.MissingRequiredField("valuta_navn")
+        if not isinstance(self.valuta_navn, str):
+            self.valuta_navn = str(self.valuta_navn)
 
         if self._is_empty(self.nummerkode):
             self.MissingRequiredField("nummerkode")
@@ -2918,7 +2953,7 @@ class Person(Aktoer):
 
     id: Union[str, PersonId] = None
     fodselsnummer: Union[dict, Identifikator] = None
-    navn: Union[dict, Personnavn] = None
+    person_navn: Union[dict, Personnavn] = None
     bilde: Optional[str] = None
     bostedsadresse: Optional[Union[dict, Adresse]] = None
     fodselsdato: Optional[Union[str, XSDDate]] = None
@@ -2929,11 +2964,11 @@ class Person(Aktoer):
     foreldreansvar: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     foreldre: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
     maalform: Optional[Union[str, SpraakId]] = None
-    personalressurs: Optional[Union[str, URIorCURIE]] = None
     morsmaal: Optional[Union[str, SpraakId]] = None
     laerling: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
-    elev: Optional[Union[str, URIorCURIE]] = None
+    elev: Optional[Union[str, ElevId]] = None
     otungdom: Optional[Union[str, URIorCURIE]] = None
+    personalressurs: Optional[Union[str, URIorCURIE]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2946,10 +2981,10 @@ class Person(Aktoer):
         if not isinstance(self.fodselsnummer, Identifikator):
             self.fodselsnummer = Identifikator(**as_dict(self.fodselsnummer))
 
-        if self._is_empty(self.navn):
-            self.MissingRequiredField("navn")
-        if not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self._is_empty(self.person_navn):
+            self.MissingRequiredField("person_navn")
+        if not isinstance(self.person_navn, Personnavn):
+            self.person_navn = Personnavn(**as_dict(self.person_navn))
 
         if self.bilde is not None and not isinstance(self.bilde, str):
             self.bilde = str(self.bilde)
@@ -2985,9 +3020,6 @@ class Person(Aktoer):
         if self.maalform is not None and not isinstance(self.maalform, SpraakId):
             self.maalform = SpraakId(self.maalform)
 
-        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
-            self.personalressurs = URIorCURIE(self.personalressurs)
-
         if self.morsmaal is not None and not isinstance(self.morsmaal, SpraakId):
             self.morsmaal = SpraakId(self.morsmaal)
 
@@ -2995,11 +3027,14 @@ class Person(Aktoer):
             self.laerling = [self.laerling] if self.laerling is not None else []
         self.laerling = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.laerling]
 
-        if self.elev is not None and not isinstance(self.elev, URIorCURIE):
-            self.elev = URIorCURIE(self.elev)
+        if self.elev is not None and not isinstance(self.elev, ElevId):
+            self.elev = ElevId(self.elev)
 
         if self.otungdom is not None and not isinstance(self.otungdom, URIorCURIE):
             self.otungdom = URIorCURIE(self.otungdom)
+
+        if self.personalressurs is not None and not isinstance(self.personalressurs, URIorCURIE):
+            self.personalressurs = URIorCURIE(self.personalressurs)
 
         super().__post_init__(**kwargs)
 
@@ -3019,7 +3054,7 @@ class Kontaktperson(YAMLRoot):
     id: Union[str, KontaktpersonId] = None
     type: str = None
     kontaktinformasjon: Optional[Union[dict, Kontaktinformasjon]] = None
-    navn: Optional[Union[dict, Personnavn]] = None
+    kontaktperson_navn: Optional[Union[dict, Personnavn]] = None
     kontaktperson: Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -3036,8 +3071,8 @@ class Kontaktperson(YAMLRoot):
         if self.kontaktinformasjon is not None and not isinstance(self.kontaktinformasjon, Kontaktinformasjon):
             self.kontaktinformasjon = Kontaktinformasjon(**as_dict(self.kontaktinformasjon))
 
-        if self.navn is not None and not isinstance(self.navn, Personnavn):
-            self.navn = Personnavn(**as_dict(self.navn))
+        if self.kontaktperson_navn is not None and not isinstance(self.kontaktperson_navn, Personnavn):
+            self.kontaktperson_navn = Personnavn(**as_dict(self.kontaktperson_navn))
 
         if not isinstance(self.kontaktperson, list):
             self.kontaktperson = [self.kontaktperson] if self.kontaktperson is not None else []
@@ -3087,969 +3122,1404 @@ class Virksomhet(Enhet):
 class slots:
     pass
 
+slots.arkivdelar = Slot(uri=ARK.arkivdelar, name="arkivdelar", curie=ARK.curie('arkivdelar'),
+                   model_uri=ARK.arkivdelar, domain=None, range=Optional[Union[dict[Union[str, ArkivdelId], Union[dict, Arkivdel]], list[Union[dict, Arkivdel]]]])
+
+slots.arkivressursar = Slot(uri=ARK.arkivressursar, name="arkivressursar", curie=ARK.curie('arkivressursar'),
+                   model_uri=ARK.arkivressursar, domain=None, range=Optional[Union[dict[Union[str, ArkivressursId], Union[dict, Arkivressurs]], list[Union[dict, Arkivressurs]]]])
+
+slots.autorisasjonar = Slot(uri=ARK.autorisasjonar, name="autorisasjonar", curie=ARK.curie('autorisasjonar'),
+                   model_uri=ARK.autorisasjonar, domain=None, range=Optional[Union[dict[Union[str, AutorisasjonId], Union[dict, Autorisasjon]], list[Union[dict, Autorisasjon]]]])
+
+slots.administrativeEiningar = Slot(uri=ARK.administrativeEiningar, name="administrativeEiningar", curie=ARK.curie('administrativeEiningar'),
+                   model_uri=ARK.administrativeEiningar, domain=None, range=Optional[Union[dict[Union[str, AdministrativEnhetId], Union[dict, AdministrativEnhet]], list[Union[dict, AdministrativEnhet]]]])
+
+slots.dokumentfiler = Slot(uri=ARK.dokumentfiler, name="dokumentfiler", curie=ARK.curie('dokumentfiler'),
+                   model_uri=ARK.dokumentfiler, domain=None, range=Optional[Union[dict[Union[str, DokumentfilId], Union[dict, Dokumentfil]], list[Union[dict, Dokumentfil]]]])
+
+slots.dokumentbeskrivelsar = Slot(uri=ARK.dokumentbeskrivelsar, name="dokumentbeskrivelsar", curie=ARK.curie('dokumentbeskrivelsar'),
+                   model_uri=ARK.dokumentbeskrivelsar, domain=None, range=Optional[Union[dict[Union[str, DokumentbeskrivelseId], Union[dict, Dokumentbeskrivelse]], list[Union[dict, Dokumentbeskrivelse]]]])
+
+slots.journalpostar = Slot(uri=ARK.journalpostar, name="journalpostar", curie=ARK.curie('journalpostar'),
+                   model_uri=ARK.journalpostar, domain=None, range=Optional[Union[dict[Union[str, JournalpostId], Union[dict, Journalpost]], list[Union[dict, Journalpost]]]])
+
+slots.tilgangar = Slot(uri=ARK.tilgangar, name="tilgangar", curie=ARK.curie('tilgangar'),
+                   model_uri=ARK.tilgangar, domain=None, range=Optional[Union[dict[Union[str, TilgangId], Union[dict, Tilgang]], list[Union[dict, Tilgang]]]])
+
+slots.sakar = Slot(uri=ARK.sakar, name="sakar", curie=ARK.curie('sakar'),
+                   model_uri=ARK.sakar, domain=None, range=Optional[Union[dict[Union[str, SakId], Union[dict, Sak]], list[Union[dict, Sak]]]])
+
+slots.personalmappe_liste = Slot(uri=ARK.personalmappe, name="personalmappe_liste", curie=ARK.curie('personalmappe'),
+                   model_uri=ARK.personalmappe_liste, domain=None, range=Optional[Union[dict[Union[str, PersonalmappeId], Union[dict, Personalmappe]], list[Union[dict, Personalmappe]]]])
+
+slots.dispensasjonAutomatiskFredaKulturminne_liste = Slot(uri=ARK.dispensasjonAutomatiskFredaKulturminne, name="dispensasjonAutomatiskFredaKulturminne_liste", curie=ARK.curie('dispensasjonAutomatiskFredaKulturminne'),
+                   model_uri=ARK.dispensasjonAutomatiskFredaKulturminne_liste, domain=None, range=Optional[Union[dict[Union[str, DispensasjonAutomatiskFredaKulturminneId], Union[dict, DispensasjonAutomatiskFredaKulturminne]], list[Union[dict, DispensasjonAutomatiskFredaKulturminne]]]])
+
+slots.tilskuddFartoy_liste = Slot(uri=ARK.tilskuddFartoy, name="tilskuddFartoy_liste", curie=ARK.curie('tilskuddFartoy'),
+                   model_uri=ARK.tilskuddFartoy_liste, domain=None, range=Optional[Union[dict[Union[str, TilskuddFartoyId], Union[dict, TilskuddFartoy]], list[Union[dict, TilskuddFartoy]]]])
+
+slots.tilskuddFredaBygningPrivatEie_liste = Slot(uri=ARK.tilskuddFredaBygningPrivatEie, name="tilskuddFredaBygningPrivatEie_liste", curie=ARK.curie('tilskuddFredaBygningPrivatEie'),
+                   model_uri=ARK.tilskuddFredaBygningPrivatEie_liste, domain=None, range=Optional[Union[dict[Union[str, TilskuddFredaBygningPrivatEieId], Union[dict, TilskuddFredaBygningPrivatEie]], list[Union[dict, TilskuddFredaBygningPrivatEie]]]])
+
+slots.soeknadDrosjeloeyve_liste = Slot(uri=ARK.soeknadDrosjeloeyve, name="soeknadDrosjeloeyve_liste", curie=ARK.curie('soeknadDrosjeloeyve'),
+                   model_uri=ARK.soeknadDrosjeloeyve_liste, domain=None, range=Optional[Union[dict[Union[str, SoeknadDrosjeloeyveId], Union[dict, SoeknadDrosjeloeyve]], list[Union[dict, SoeknadDrosjeloeyve]]]])
+
+slots.dokumentstatuskodar = Slot(uri=ARK.dokumentstatuskodar, name="dokumentstatuskodar", curie=ARK.curie('dokumentstatuskodar'),
+                   model_uri=ARK.dokumentstatuskodar, domain=None, range=Optional[Union[dict[Union[str, DokumentStatusId], Union[dict, DokumentStatus]], list[Union[dict, DokumentStatus]]]])
+
+slots.dokumenttypar = Slot(uri=ARK.dokumenttypar, name="dokumenttypar", curie=ARK.curie('dokumenttypar'),
+                   model_uri=ARK.dokumenttypar, domain=None, range=Optional[Union[dict[Union[str, DokumentTypeId], Union[dict, DokumentType]], list[Union[dict, DokumentType]]]])
+
+slots.formatar = Slot(uri=ARK.formatar, name="formatar", curie=ARK.curie('formatar'),
+                   model_uri=ARK.formatar, domain=None, range=Optional[Union[dict[Union[str, FormatId], Union[dict, Format]], list[Union[dict, Format]]]])
+
+slots.journalposttypar = Slot(uri=ARK.journalposttypar, name="journalposttypar", curie=ARK.curie('journalposttypar'),
+                   model_uri=ARK.journalposttypar, domain=None, range=Optional[Union[dict[Union[str, JournalpostTypeId], Union[dict, JournalpostType]], list[Union[dict, JournalpostType]]]])
+
+slots.journalstatuskodar = Slot(uri=ARK.journalstatuskodar, name="journalstatuskodar", curie=ARK.curie('journalstatuskodar'),
+                   model_uri=ARK.journalstatuskodar, domain=None, range=Optional[Union[dict[Union[str, JournalStatusId], Union[dict, JournalStatus]], list[Union[dict, JournalStatus]]]])
+
+slots.klassifikasjonstypar = Slot(uri=ARK.klassifikasjonstypar, name="klassifikasjonstypar", curie=ARK.curie('klassifikasjonstypar'),
+                   model_uri=ARK.klassifikasjonstypar, domain=None, range=Optional[Union[dict[Union[str, KlassifikasjonstypeId], Union[dict, Klassifikasjonstype]], list[Union[dict, Klassifikasjonstype]]]])
+
+slots.korrespondanseparttypar = Slot(uri=ARK.korrespondanseparttypar, name="korrespondanseparttypar", curie=ARK.curie('korrespondanseparttypar'),
+                   model_uri=ARK.korrespondanseparttypar, domain=None, range=Optional[Union[dict[Union[str, KorrespondansepartTypeId], Union[dict, KorrespondansepartType]], list[Union[dict, KorrespondansepartType]]]])
+
+slots.merknadstypar = Slot(uri=ARK.merknadstypar, name="merknadstypar", curie=ARK.curie('merknadstypar'),
+                   model_uri=ARK.merknadstypar, domain=None, range=Optional[Union[dict[Union[str, MerknadstypeId], Union[dict, Merknadstype]], list[Union[dict, Merknadstype]]]])
+
+slots.partRollar = Slot(uri=ARK.partRollar, name="partRollar", curie=ARK.curie('partRollar'),
+                   model_uri=ARK.partRollar, domain=None, range=Optional[Union[dict[Union[str, PartRolleId], Union[dict, PartRolle]], list[Union[dict, PartRolle]]]])
+
+slots.rollar = Slot(uri=ARK.rollar, name="rollar", curie=ARK.curie('rollar'),
+                   model_uri=ARK.rollar, domain=None, range=Optional[Union[dict[Union[str, RolleId], Union[dict, Rolle]], list[Union[dict, Rolle]]]])
+
+slots.saksmappetypar = Slot(uri=ARK.saksmappetypar, name="saksmappetypar", curie=ARK.curie('saksmappetypar'),
+                   model_uri=ARK.saksmappetypar, domain=None, range=Optional[Union[dict[Union[str, SaksmappetypeId], Union[dict, Saksmappetype]], list[Union[dict, Saksmappetype]]]])
+
+slots.sakstatuskodar = Slot(uri=ARK.sakstatuskodar, name="sakstatuskodar", curie=ARK.curie('sakstatuskodar'),
+                   model_uri=ARK.sakstatuskodar, domain=None, range=Optional[Union[dict[Union[str, SaksstatusId], Union[dict, Saksstatus]], list[Union[dict, Saksstatus]]]])
+
+slots.skjermingsheimlar = Slot(uri=ARK.skjermingsheimlar, name="skjermingsheimlar", curie=ARK.curie('skjermingsheimlar'),
+                   model_uri=ARK.skjermingsheimlar, domain=None, range=Optional[Union[dict[Union[str, SkjermingshjemmelId], Union[dict, Skjermingshjemmel]], list[Union[dict, Skjermingshjemmel]]]])
+
+slots.tilgangsgrupper = Slot(uri=ARK.tilgangsgrupper, name="tilgangsgrupper", curie=ARK.curie('tilgangsgrupper'),
+                   model_uri=ARK.tilgangsgrupper, domain=None, range=Optional[Union[dict[Union[str, TilgangsgruppeId], Union[dict, Tilgangsgruppe]], list[Union[dict, Tilgangsgruppe]]]])
+
+slots.tilgangsrestriksjonar = Slot(uri=ARK.tilgangsrestriksjonar, name="tilgangsrestriksjonar", curie=ARK.curie('tilgangsrestriksjonar'),
+                   model_uri=ARK.tilgangsrestriksjonar, domain=None, range=Optional[Union[dict[Union[str, TilgangsrestriksjonId], Union[dict, Tilgangsrestriksjon]], list[Union[dict, Tilgangsrestriksjon]]]])
+
+slots.tilknyttetRegistreringSomKodar = Slot(uri=ARK.tilknyttetRegistreringSomKodar, name="tilknyttetRegistreringSomKodar", curie=ARK.curie('tilknyttetRegistreringSomKodar'),
+                   model_uri=ARK.tilknyttetRegistreringSomKodar, domain=None, range=Optional[Union[dict[Union[str, TilknyttetRegistreringSomId], Union[dict, TilknyttetRegistreringSom]], list[Union[dict, TilknyttetRegistreringSom]]]])
+
+slots.variantformatar = Slot(uri=ARK.variantformatar, name="variantformatar", curie=ARK.curie('variantformatar'),
+                   model_uri=ARK.variantformatar, domain=None, range=Optional[Union[dict[Union[str, VariantformatId], Union[dict, Variantformat]], list[Union[dict, Variantformat]]]])
+
+slots.tittel = Slot(uri=ARK.tittel, name="tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.tittel, domain=None, range=Optional[str])
+
+slots.avsluttetDato = Slot(uri=ARK.avsluttetDato, name="avsluttetDato", curie=ARK.curie('avsluttetDato'),
+                   model_uri=ARK.avsluttetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.opprettetDato = Slot(uri=ARK.opprettetDato, name="opprettetDato", curie=ARK.curie('opprettetDato'),
+                   model_uri=ARK.opprettetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.offentligTittel = Slot(uri=ARK.offentligTittel, name="offentligTittel", curie=ARK.curie('offentligTittel'),
+                   model_uri=ARK.offentligTittel, domain=None, range=Optional[str])
+
+slots.klasse = Slot(uri=ARK.klasse, name="klasse", curie=ARK.curie('klasse'),
+                   model_uri=ARK.klasse, domain=None, range=Optional[Union[dict, Klasse]])
+
+slots.part = Slot(uri=ARK.part, name="part", curie=ARK.curie('part'),
+                   model_uri=ARK.part, domain=None, range=Optional[Union[Union[dict, Part], list[Union[dict, Part]]]])
+
+slots.merknad = Slot(uri=ARK.merknad, name="merknad", curie=ARK.curie('merknad'),
+                   model_uri=ARK.merknad, domain=None, range=Optional[Union[Union[dict, Merknad], list[Union[dict, Merknad]]]])
+
+slots.skjerming = Slot(uri=ARK.skjerming, name="skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
+
+slots.arkivdel = Slot(uri=ARK.arkivdel, name="arkivdel", curie=ARK.curie('arkivdel'),
+                   model_uri=ARK.arkivdel, domain=None, range=Optional[Union[str, ArkivdelId]])
+
+slots.opprettetAv = Slot(uri=ARK.opprettetAv, name="opprettetAv", curie=ARK.curie('opprettetAv'),
+                   model_uri=ARK.opprettetAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.avsluttetAv = Slot(uri=ARK.avsluttetAv, name="avsluttetAv", curie=ARK.curie('avsluttetAv'),
+                   model_uri=ARK.avsluttetAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.noekkelord = Slot(uri=ARK.noekkelord, name="noekkelord", curie=ARK.curie('noekkelord'),
+                   model_uri=ARK.noekkelord, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.mappeId = Slot(uri=ARK.mappeId, name="mappeId", curie=ARK.curie('mappeId'),
+                   model_uri=ARK.mappeId, domain=None, range=Optional[Union[dict, Identifikator]])
+
+slots.tilgangsgruppe = Slot(uri=ARK.tilgangsgruppe, name="tilgangsgruppe", curie=ARK.curie('tilgangsgruppe'),
+                   model_uri=ARK.tilgangsgruppe, domain=None, range=Optional[Union[str, TilgangsgruppeId]])
+
+slots.administrativEnhet = Slot(uri=ARK.administrativEnhet, name="administrativEnhet", curie=ARK.curie('administrativEnhet'),
+                   model_uri=ARK.administrativEnhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.journalenhet = Slot(uri=ARK.journalenhet, name="journalenhet", curie=ARK.curie('journalenhet'),
+                   model_uri=ARK.journalenhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.arkivressurs = Slot(uri=ARK.arkivressurs, name="arkivressurs", curie=ARK.curie('arkivressurs'),
+                   model_uri=ARK.arkivressurs, domain=None, range=Optional[Union[Union[str, ArkivressursId], list[Union[str, ArkivressursId]]]])
+
+slots.tilgangsrestriksjon = Slot(uri=ARK.tilgangsrestriksjon, name="tilgangsrestriksjon", curie=ARK.curie('tilgangsrestriksjon'),
+                   model_uri=ARK.tilgangsrestriksjon, domain=None, range=Optional[Union[str, TilgangsrestriksjonId]])
+
+slots.forfatter = Slot(uri=ARK.forfatter, name="forfatter", curie=ARK.curie('forfatter'),
+                   model_uri=ARK.forfatter, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.journalpost = Slot(uri=ARK.journalpost, name="journalpost", curie=ARK.curie('journalpost'),
+                   model_uri=ARK.journalpost, domain=None, range=Optional[Union[Union[str, JournalpostId], list[Union[str, JournalpostId]]]])
+
+slots.saksaar = Slot(uri=ARK.saksaar, name="saksaar", curie=ARK.curie('saksaar'),
+                   model_uri=ARK.saksaar, domain=None, range=Optional[str])
+
+slots.saksdato = Slot(uri=ARK.saksdato, name="saksdato", curie=ARK.curie('saksdato'),
+                   model_uri=ARK.saksdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.sakssekvensnummer = Slot(uri=ARK.sakssekvensnummer, name="sakssekvensnummer", curie=ARK.curie('sakssekvensnummer'),
+                   model_uri=ARK.sakssekvensnummer, domain=None, range=Optional[str])
+
+slots.utlaantDato = Slot(uri=ARK.utlaantDato, name="utlaantDato", curie=ARK.curie('utlaantDato'),
+                   model_uri=ARK.utlaantDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.saksmappetype = Slot(uri=ARK.saksmappetype, name="saksmappetype", curie=ARK.curie('saksmappetype'),
+                   model_uri=ARK.saksmappetype, domain=None, range=Optional[Union[str, SaksmappetypeId]])
+
+slots.saksstatus = Slot(uri=ARK.saksstatus, name="saksstatus", curie=ARK.curie('saksstatus'),
+                   model_uri=ARK.saksstatus, domain=None, range=Optional[Union[str, SaksstatusId]])
+
+slots.saksansvarlig = Slot(uri=ARK.saksansvarlig, name="saksansvarlig", curie=ARK.curie('saksansvarlig'),
+                   model_uri=ARK.saksansvarlig, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.arkivertDato = Slot(uri=ARK.arkivertDato, name="arkivertDato", curie=ARK.curie('arkivertDato'),
+                   model_uri=ARK.arkivertDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.dokumentbeskrivelse = Slot(uri=ARK.dokumentbeskrivelse, name="dokumentbeskrivelse", curie=ARK.curie('dokumentbeskrivelse'),
+                   model_uri=ARK.dokumentbeskrivelse, domain=None, range=Optional[Union[Union[str, DokumentbeskrivelseId], list[Union[str, DokumentbeskrivelseId]]]])
+
+slots.korrespondansepart = Slot(uri=ARK.korrespondansepart, name="korrespondansepart", curie=ARK.curie('korrespondansepart'),
+                   model_uri=ARK.korrespondansepart, domain=None, range=Optional[Union[Union[dict, Korrespondansepart], list[Union[dict, Korrespondansepart]]]])
+
+slots.nokkelord = Slot(uri=ARK.nokkelord, name="nokkelord", curie=ARK.curie('nokkelord'),
+                   model_uri=ARK.nokkelord, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.referanseArkivDel = Slot(uri=ARK.referanseArkivDel, name="referanseArkivDel", curie=ARK.curie('referanseArkivDel'),
+                   model_uri=ARK.referanseArkivDel, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.registreringsId = Slot(uri=ARK.registreringsId, name="registreringsId", curie=ARK.curie('registreringsId'),
+                   model_uri=ARK.registreringsId, domain=None, range=Optional[str])
+
+slots.saksbehandler = Slot(uri=ARK.saksbehandler, name="saksbehandler", curie=ARK.curie('saksbehandler'),
+                   model_uri=ARK.saksbehandler, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.arkivertAv = Slot(uri=ARK.arkivertAv, name="arkivertAv", curie=ARK.curie('arkivertAv'),
+                   model_uri=ARK.arkivertAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.personnavn = Slot(uri=ARK.personnavn, name="personnavn", curie=ARK.curie('personnavn'),
+                   model_uri=ARK.personnavn, domain=None, range=Optional[Union[dict, Personnavn]])
+
+slots.organisasjonselement = Slot(uri=ARK.organisasjonselement, name="organisasjonselement", curie=ARK.curie('organisasjonselement'),
+                   model_uri=ARK.organisasjonselement, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.kildesystemId = Slot(uri=ARK.kildesystemId, name="kildesystemId", curie=ARK.curie('kildesystemId'),
+                   model_uri=ARK.kildesystemId, domain=None, range=Optional[Union[dict, Identifikator]])
+
+slots.personalressurs = Slot(uri=ARK.personalressurs, name="personalressurs", curie=ARK.curie('personalressurs'),
+                   model_uri=ARK.personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.autorisasjon = Slot(uri=ARK.autorisasjon, name="autorisasjon", curie=ARK.curie('autorisasjon'),
+                   model_uri=ARK.autorisasjon, domain=None, range=Optional[Union[Union[str, AutorisasjonId], list[Union[str, AutorisasjonId]]]])
+
+slots.tilgang = Slot(uri=ARK.tilgang, name="tilgang", curie=ARK.curie('tilgang'),
+                   model_uri=ARK.tilgang, domain=None, range=Optional[Union[Union[str, TilgangId], list[Union[str, TilgangId]]]])
+
+slots.administrativenhet = Slot(uri=ARK.administrativenhet, name="administrativenhet", curie=ARK.curie('administrativenhet'),
+                   model_uri=ARK.administrativenhet, domain=None, range=Optional[Union[Union[str, AdministrativEnhetId], list[Union[str, AdministrativEnhetId]]]])
+
+slots.klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
+                   model_uri=ARK.klassifikasjonssystem, domain=None, range=Optional[Union[str, KlassifikasjonssystemId]])
+
+slots.klassifikasjonstype = Slot(uri=ARK.klassifikasjonstype, name="klassifikasjonstype", curie=ARK.curie('klassifikasjonstype'),
+                   model_uri=ARK.klassifikasjonstype, domain=None, range=Optional[Union[str, KlassifikasjonstypeId]])
+
+slots.avsluttetAvNavn = Slot(uri=ARK.avsluttetAvNavn, name="avsluttetAvNavn", curie=ARK.curie('avsluttetAvNavn'),
+                   model_uri=ARK.avsluttetAvNavn, domain=None, range=Optional[str])
+
+slots.opprettetAvNavn = Slot(uri=ARK.opprettetAvNavn, name="opprettetAvNavn", curie=ARK.curie('opprettetAvNavn'),
+                   model_uri=ARK.opprettetAvNavn, domain=None, range=Optional[str])
+
+slots.rolle = Slot(uri=ARK.rolle, name="rolle", curie=ARK.curie('rolle'),
+                   model_uri=ARK.rolle, domain=None, range=Optional[Union[str, RolleId]])
+
+slots.data = Slot(uri=ARK.data, name="data", curie=ARK.curie('data'),
+                   model_uri=ARK.data, domain=None, range=Optional[str])
+
+slots.filnavn = Slot(uri=ARK.filnavn, name="filnavn", curie=ARK.curie('filnavn'),
+                   model_uri=ARK.filnavn, domain=None, range=Optional[str])
+
+slots.format = Slot(uri=ARK.format, name="format", curie=ARK.curie('format'),
+                   model_uri=ARK.format, domain=None, range=Optional[str])
+
+slots.antallVedlegg = Slot(uri=ARK.antallVedlegg, name="antallVedlegg", curie=ARK.curie('antallVedlegg'),
+                   model_uri=ARK.antallVedlegg, domain=None, range=Optional[int])
+
+slots.avskrivning = Slot(uri=ARK.avskrivning, name="avskrivning", curie=ARK.curie('avskrivning'),
+                   model_uri=ARK.avskrivning, domain=None, range=Optional[Union[dict, Avskrivning]])
+
+slots.dokumentetsDato = Slot(uri=ARK.dokumentetsDato, name="dokumentetsDato", curie=ARK.curie('dokumentetsDato'),
+                   model_uri=ARK.dokumentetsDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.forfallsDato = Slot(uri=ARK.forfallsDato, name="forfallsDato", curie=ARK.curie('forfallsDato'),
+                   model_uri=ARK.forfallsDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.journalAr = Slot(uri=ARK.journalAr, name="journalAr", curie=ARK.curie('journalAr'),
+                   model_uri=ARK.journalAr, domain=None, range=Optional[str])
+
+slots.journalDato = Slot(uri=ARK.journalDato, name="journalDato", curie=ARK.curie('journalDato'),
+                   model_uri=ARK.journalDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.journalPostnummer = Slot(uri=ARK.journalPostnummer, name="journalPostnummer", curie=ARK.curie('journalPostnummer'),
+                   model_uri=ARK.journalPostnummer, domain=None, range=Optional[int])
+
+slots.journalSekvensnummer = Slot(uri=ARK.journalSekvensnummer, name="journalSekvensnummer", curie=ARK.curie('journalSekvensnummer'),
+                   model_uri=ARK.journalSekvensnummer, domain=None, range=Optional[int])
+
+slots.mottattDato = Slot(uri=ARK.mottattDato, name="mottattDato", curie=ARK.curie('mottattDato'),
+                   model_uri=ARK.mottattDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.offentlighetsvurdertDato = Slot(uri=ARK.offentlighetsvurdertDato, name="offentlighetsvurdertDato", curie=ARK.curie('offentlighetsvurdertDato'),
+                   model_uri=ARK.offentlighetsvurdertDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.sendtDato = Slot(uri=ARK.sendtDato, name="sendtDato", curie=ARK.curie('sendtDato'),
+                   model_uri=ARK.sendtDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.journalposttype = Slot(uri=ARK.journalposttype, name="journalposttype", curie=ARK.curie('journalposttype'),
+                   model_uri=ARK.journalposttype, domain=None, range=Optional[Union[str, JournalpostTypeId]])
+
+slots.journalstatus = Slot(uri=ARK.journalstatus, name="journalstatus", curie=ARK.curie('journalstatus'),
+                   model_uri=ARK.journalstatus, domain=None, range=Optional[Union[str, JournalStatusId]])
+
+slots.dokumentnummer = Slot(uri=ARK.dokumentnummer, name="dokumentnummer", curie=ARK.curie('dokumentnummer'),
+                   model_uri=ARK.dokumentnummer, domain=None, range=Optional[int])
+
+slots.dokumentobjekt = Slot(uri=ARK.dokumentobjekt, name="dokumentobjekt", curie=ARK.curie('dokumentobjekt'),
+                   model_uri=ARK.dokumentobjekt, domain=None, range=Optional[Union[Union[dict, Dokumentobjekt], list[Union[dict, Dokumentobjekt]]]])
+
+slots.referanseArkivdel = Slot(uri=ARK.referanseArkivdel, name="referanseArkivdel", curie=ARK.curie('referanseArkivdel'),
+                   model_uri=ARK.referanseArkivdel, domain=None, range=Optional[Union[str, list[str]]])
+
+slots.tilknyttetDato = Slot(uri=ARK.tilknyttetDato, name="tilknyttetDato", curie=ARK.curie('tilknyttetDato'),
+                   model_uri=ARK.tilknyttetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.dokumentstatus = Slot(uri=ARK.dokumentstatus, name="dokumentstatus", curie=ARK.curie('dokumentstatus'),
+                   model_uri=ARK.dokumentstatus, domain=None, range=Optional[Union[str, DokumentStatusId]])
+
+slots.dokumentType = Slot(uri=ARK.dokumentType, name="dokumentType", curie=ARK.curie('dokumentType'),
+                   model_uri=ARK.dokumentType, domain=None, range=Optional[Union[str, DokumentTypeId]])
+
+slots.tilknyttetRegistreringSom = Slot(uri=ARK.tilknyttetRegistreringSom, name="tilknyttetRegistreringSom", curie=ARK.curie('tilknyttetRegistreringSom'),
+                   model_uri=ARK.tilknyttetRegistreringSom, domain=None, range=Optional[Union[Union[str, TilknyttetRegistreringSomId], list[Union[str, TilknyttetRegistreringSomId]]]])
+
+slots.tilknyttetAv = Slot(uri=ARK.tilknyttetAv, name="tilknyttetAv", curie=ARK.curie('tilknyttetAv'),
+                   model_uri=ARK.tilknyttetAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.filstorrelse = Slot(uri=ARK.filstorrelse, name="filstorrelse", curie=ARK.curie('filstorrelse'),
+                   model_uri=ARK.filstorrelse, domain=None, range=Optional[str])
+
+slots.formatDetaljer = Slot(uri=ARK.formatDetaljer, name="formatDetaljer", curie=ARK.curie('formatDetaljer'),
+                   model_uri=ARK.formatDetaljer, domain=None, range=Optional[str])
+
+slots.sjekksum = Slot(uri=ARK.sjekksum, name="sjekksum", curie=ARK.curie('sjekksum'),
+                   model_uri=ARK.sjekksum, domain=None, range=Optional[str])
+
+slots.sjekksumAlgoritme = Slot(uri=ARK.sjekksumAlgoritme, name="sjekksumAlgoritme", curie=ARK.curie('sjekksumAlgoritme'),
+                   model_uri=ARK.sjekksumAlgoritme, domain=None, range=Optional[str])
+
+slots.versjonsnummer = Slot(uri=ARK.versjonsnummer, name="versjonsnummer", curie=ARK.curie('versjonsnummer'),
+                   model_uri=ARK.versjonsnummer, domain=None, range=Optional[int])
+
+slots.filformat = Slot(uri=ARK.filformat, name="filformat", curie=ARK.curie('filformat'),
+                   model_uri=ARK.filformat, domain=None, range=Optional[Union[str, FormatId]])
+
+slots.variantFormat = Slot(uri=ARK.variantFormat, name="variantFormat", curie=ARK.curie('variantFormat'),
+                   model_uri=ARK.variantFormat, domain=None, range=Optional[Union[str, VariantformatId]])
+
+slots.referanseDokumentfil = Slot(uri=ARK.referanseDokumentfil, name="referanseDokumentfil", curie=ARK.curie('referanseDokumentfil'),
+                   model_uri=ARK.referanseDokumentfil, domain=None, range=Optional[Union[str, DokumentfilId]])
+
+slots.klasseId = Slot(uri=ARK.klasseId, name="klasseId", curie=ARK.curie('klasseId'),
+                   model_uri=ARK.klasseId, domain=None, range=Optional[str])
+
+slots.rekkefølge = Slot(uri=ARK.rekkefolge, name="rekkefølge", curie=ARK.curie('rekkefolge'),
+                   model_uri=ARK.rekkefølge, domain=None, range=Optional[int])
+
+slots.foedselsnummer = Slot(uri=ARK.foedselsnummer, name="foedselsnummer", curie=ARK.curie('foedselsnummer'),
+                   model_uri=ARK.foedselsnummer, domain=None, range=Optional[str])
+
+slots.kontaktperson_str = Slot(uri=ARK.kontaktperson, name="kontaktperson_str", curie=ARK.curie('kontaktperson'),
+                   model_uri=ARK.kontaktperson_str, domain=None, range=Optional[str])
+
+slots.korrespondansepartNavn = Slot(uri=ARK.korrespondansepartNavn, name="korrespondansepartNavn", curie=ARK.curie('korrespondansepartNavn'),
+                   model_uri=ARK.korrespondansepartNavn, domain=None, range=Optional[str])
+
+slots.orgnummer = Slot(uri=ARK.organisasjonsnummer, name="orgnummer", curie=ARK.curie('organisasjonsnummer'),
+                   model_uri=ARK.orgnummer, domain=None, range=Optional[str])
+
+slots.korrespondanseparttype = Slot(uri=ARK.korrespondanseparttype, name="korrespondanseparttype", curie=ARK.curie('korrespondanseparttype'),
+                   model_uri=ARK.korrespondanseparttype, domain=None, range=Optional[Union[str, KorrespondansepartTypeId]])
+
+slots.partNavn = Slot(uri=ARK.partNavn, name="partNavn", curie=ARK.curie('partNavn'),
+                   model_uri=ARK.partNavn, domain=None, range=Optional[str])
+
+slots.partRolle = Slot(uri=ARK.partRolle, name="partRolle", curie=ARK.curie('partRolle'),
+                   model_uri=ARK.partRolle, domain=None, range=Optional[Union[str, PartRolleId]])
+
+slots.merknadsdato = Slot(uri=ARK.merknadsdato, name="merknadsdato", curie=ARK.curie('merknadsdato'),
+                   model_uri=ARK.merknadsdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.merknadstekst = Slot(uri=ARK.merknadstekst, name="merknadstekst", curie=ARK.curie('merknadstekst'),
+                   model_uri=ARK.merknadstekst, domain=None, range=Optional[str])
+
+slots.merknadstype = Slot(uri=ARK.merknadstype, name="merknadstype", curie=ARK.curie('merknadstype'),
+                   model_uri=ARK.merknadstype, domain=None, range=Optional[Union[str, MerknadstypeId]])
+
+slots.merknadRegistrertAv = Slot(uri=ARK.merknadRegistrertAv, name="merknadRegistrertAv", curie=ARK.curie('merknadRegistrertAv'),
+                   model_uri=ARK.merknadRegistrertAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+
+slots.skjermingshjemmel = Slot(uri=ARK.skjermingshjemmel, name="skjermingshjemmel", curie=ARK.curie('skjermingshjemmel'),
+                   model_uri=ARK.skjermingshjemmel, domain=None, range=Optional[Union[str, SkjermingshjemmelId]])
+
+slots.avskrevetAv = Slot(uri=ARK.avskrevetAv, name="avskrevetAv", curie=ARK.curie('avskrevetAv'),
+                   model_uri=ARK.avskrevetAv, domain=None, range=Optional[str])
+
+slots.avskrivningsdato = Slot(uri=ARK.avskrivningsdato, name="avskrivningsdato", curie=ARK.curie('avskrivningsdato'),
+                   model_uri=ARK.avskrivningsdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+
+slots.avskrivningsmate = Slot(uri=ARK.avskrivningsmate, name="avskrivningsmate", curie=ARK.curie('avskrivningsmate'),
+                   model_uri=ARK.avskrivningsmate, domain=None, range=Optional[str])
+
+slots.leder = Slot(uri=ARK.leder, name="leder", curie=ARK.curie('leder'),
+                   model_uri=ARK.leder, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.arbeidssted = Slot(uri=ARK.arbeidssted, name="arbeidssted", curie=ARK.curie('arbeidssted'),
+                   model_uri=ARK.arbeidssted, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.kulturminneId = Slot(uri=ARK.kulturminneId, name="kulturminneId", curie=ARK.curie('kulturminneId'),
+                   model_uri=ARK.kulturminneId, domain=None, range=Optional[str])
+
+slots.matrikkelnummer = Slot(uri=ARK.matrikkelnummer, name="matrikkelnummer", curie=ARK.curie('matrikkelnummer'),
+                   model_uri=ARK.matrikkelnummer, domain=None, range=Optional[Union[dict, Matrikkelnummer]])
+
+slots.soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
+                   model_uri=ARK.soeknadsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
+
+slots.tiltak = Slot(uri=ARK.tiltak, name="tiltak", curie=ARK.curie('tiltak'),
+                   model_uri=ARK.tiltak, domain=None, range=Optional[str])
+
+slots.fartoyNavn = Slot(uri=ARK.fartoyNavn, name="fartoyNavn", curie=ARK.curie('fartoyNavn'),
+                   model_uri=ARK.fartoyNavn, domain=None, range=Optional[str])
+
+slots.kallesignal = Slot(uri=ARK.kallesignal, name="kallesignal", curie=ARK.curie('kallesignal'),
+                   model_uri=ARK.kallesignal, domain=None, range=Optional[str])
+
+slots.bygningsnavn = Slot(uri=ARK.bygningsnavn, name="bygningsnavn", curie=ARK.curie('bygningsnavn'),
+                   model_uri=ARK.bygningsnavn, domain=None, range=Optional[str])
+
 slots.id = Slot(uri=FINT.id, name="id", curie=FINT.curie('id'),
                    model_uri=ARK.id, domain=None, range=URIRef)
 
-slots.arkivContainer__arkivdelar = Slot(uri=ARK.arkivdelar, name="arkivContainer__arkivdelar", curie=ARK.curie('arkivdelar'),
-                   model_uri=ARK.arkivContainer__arkivdelar, domain=None, range=Optional[Union[dict[Union[str, ArkivdelId], Union[dict, Arkivdel]], list[Union[dict, Arkivdel]]]])
+slots.gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
 
-slots.arkivContainer__arkivressursar = Slot(uri=ARK.arkivressursar, name="arkivContainer__arkivressursar", curie=ARK.curie('arkivressursar'),
-                   model_uri=ARK.arkivContainer__arkivressursar, domain=None, range=Optional[Union[dict[Union[str, ArkivressursId], Union[dict, Arkivressurs]], list[Union[dict, Arkivressurs]]]])
+slots.kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=ARK.kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
 
-slots.arkivContainer__autorisasjonar = Slot(uri=ARK.autorisasjonar, name="arkivContainer__autorisasjonar", curie=ARK.curie('autorisasjonar'),
-                   model_uri=ARK.arkivContainer__autorisasjonar, domain=None, range=Optional[Union[dict[Union[str, AutorisasjonId], Union[dict, Autorisasjon]], list[Union[dict, Autorisasjon]]]])
+slots.postadresse = Slot(uri=FINT.postadresse, name="postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=ARK.postadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.arkivContainer__administrativeEiningar = Slot(uri=ARK.administrativeEiningar, name="arkivContainer__administrativeEiningar", curie=ARK.curie('administrativeEiningar'),
-                   model_uri=ARK.arkivContainer__administrativeEiningar, domain=None, range=Optional[Union[dict[Union[str, AdministrativEnhetId], Union[dict, AdministrativEnhet]], list[Union[dict, AdministrativEnhet]]]])
+slots.forretningsadresse = Slot(uri=FINT.forretningsadresse, name="forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=ARK.forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.arkivContainer__dokumentfiler = Slot(uri=ARK.dokumentfiler, name="arkivContainer__dokumentfiler", curie=ARK.curie('dokumentfiler'),
-                   model_uri=ARK.arkivContainer__dokumentfiler, domain=None, range=Optional[Union[dict[Union[str, DokumentfilId], Union[dict, Dokumentfil]], list[Union[dict, Dokumentfil]]]])
+slots.organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=ARK.organisasjonsnavn, domain=None, range=Optional[str])
 
-slots.arkivContainer__dokumentbeskrivelsar = Slot(uri=ARK.dokumentbeskrivelsar, name="arkivContainer__dokumentbeskrivelsar", curie=ARK.curie('dokumentbeskrivelsar'),
-                   model_uri=ARK.arkivContainer__dokumentbeskrivelsar, domain=None, range=Optional[Union[dict[Union[str, DokumentbeskrivelseId], Union[dict, Dokumentbeskrivelse]], list[Union[dict, Dokumentbeskrivelse]]]])
+slots.organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=ARK.organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.arkivContainer__journalpostar = Slot(uri=ARK.journalpostar, name="arkivContainer__journalpostar", curie=ARK.curie('journalpostar'),
-                   model_uri=ARK.arkivContainer__journalpostar, domain=None, range=Optional[Union[dict[Union[str, JournalpostId], Union[dict, Journalpost]], list[Union[dict, Journalpost]]]])
+slots.kode = Slot(uri=FINT.kode, name="kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.kode, domain=None, range=Optional[str])
 
-slots.arkivContainer__klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="arkivContainer__klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
-                   model_uri=ARK.arkivContainer__klassifikasjonssystem, domain=None, range=Optional[Union[dict[Union[str, KlassifikasjonssystemId], Union[dict, Klassifikasjonssystem]], list[Union[dict, Klassifikasjonssystem]]]])
+slots.navn = Slot(uri=FINT.navn, name="navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.navn, domain=None, range=Optional[str])
 
-slots.arkivContainer__tilgangar = Slot(uri=ARK.tilgangar, name="arkivContainer__tilgangar", curie=ARK.curie('tilgangar'),
-                   model_uri=ARK.arkivContainer__tilgangar, domain=None, range=Optional[Union[dict[Union[str, TilgangId], Union[dict, Tilgang]], list[Union[dict, Tilgang]]]])
+slots.passiv = Slot(uri=FINT.passiv, name="passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.passiv, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.arkivContainer__sakar = Slot(uri=ARK.sakar, name="arkivContainer__sakar", curie=ARK.curie('sakar'),
-                   model_uri=ARK.arkivContainer__sakar, domain=None, range=Optional[Union[dict[Union[str, SakId], Union[dict, Sak]], list[Union[dict, Sak]]]])
+slots.identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=ARK.identifikatorverdi, domain=None, range=Optional[str])
 
-slots.arkivContainer__personalmappe = Slot(uri=ARK.personalmappe, name="arkivContainer__personalmappe", curie=ARK.curie('personalmappe'),
-                   model_uri=ARK.arkivContainer__personalmappe, domain=None, range=Optional[Union[dict[Union[str, PersonalmappeId], Union[dict, Personalmappe]], list[Union[dict, Personalmappe]]]])
+slots.beskrivelse = Slot(uri=FINT.beskrivelse, name="beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=ARK.beskrivelse, domain=None, range=Optional[str])
 
-slots.arkivContainer__dispensasjonAutomatiskFredaKulturminne = Slot(uri=ARK.dispensasjonAutomatiskFredaKulturminne, name="arkivContainer__dispensasjonAutomatiskFredaKulturminne", curie=ARK.curie('dispensasjonAutomatiskFredaKulturminne'),
-                   model_uri=ARK.arkivContainer__dispensasjonAutomatiskFredaKulturminne, domain=None, range=Optional[Union[dict[Union[str, DispensasjonAutomatiskFredaKulturminneId], Union[dict, DispensasjonAutomatiskFredaKulturminne]], list[Union[dict, DispensasjonAutomatiskFredaKulturminne]]]])
+slots.start = Slot(uri=FINT.start, name="start", curie=FINT.curie('start'),
+                   model_uri=ARK.start, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.arkivContainer__tilskuddFartoy = Slot(uri=ARK.tilskuddFartoy, name="arkivContainer__tilskuddFartoy", curie=ARK.curie('tilskuddFartoy'),
-                   model_uri=ARK.arkivContainer__tilskuddFartoy, domain=None, range=Optional[Union[dict[Union[str, TilskuddFartoyId], Union[dict, TilskuddFartoy]], list[Union[dict, TilskuddFartoy]]]])
+slots.slutt = Slot(uri=FINT.slutt, name="slutt", curie=FINT.curie('slutt'),
+                   model_uri=ARK.slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
 
-slots.arkivContainer__tilskuddFredaBygningPrivatEie = Slot(uri=ARK.tilskuddFredaBygningPrivatEie, name="arkivContainer__tilskuddFredaBygningPrivatEie", curie=ARK.curie('tilskuddFredaBygningPrivatEie'),
-                   model_uri=ARK.arkivContainer__tilskuddFredaBygningPrivatEie, domain=None, range=Optional[Union[dict[Union[str, TilskuddFredaBygningPrivatEieId], Union[dict, TilskuddFredaBygningPrivatEie]], list[Union[dict, TilskuddFredaBygningPrivatEie]]]])
+slots.fornavn = Slot(uri=FINT.fornavn, name="fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=ARK.fornavn, domain=None, range=Optional[str])
 
-slots.arkivContainer__soeknadDrosjeloeyve = Slot(uri=ARK.soeknadDrosjeloeyve, name="arkivContainer__soeknadDrosjeloeyve", curie=ARK.curie('soeknadDrosjeloeyve'),
-                   model_uri=ARK.arkivContainer__soeknadDrosjeloeyve, domain=None, range=Optional[Union[dict[Union[str, SoeknadDrosjeloeyveId], Union[dict, SoeknadDrosjeloeyve]], list[Union[dict, SoeknadDrosjeloeyve]]]])
+slots.mellomnavn = Slot(uri=FINT.mellomnavn, name="mellomnavn", curie=FINT.curie('mellomnavn'),
+                   model_uri=ARK.mellomnavn, domain=None, range=Optional[str])
 
-slots.arkivContainer__dokumentstatuskodar = Slot(uri=ARK.dokumentstatuskodar, name="arkivContainer__dokumentstatuskodar", curie=ARK.curie('dokumentstatuskodar'),
-                   model_uri=ARK.arkivContainer__dokumentstatuskodar, domain=None, range=Optional[Union[dict[Union[str, DokumentStatusId], Union[dict, DokumentStatus]], list[Union[dict, DokumentStatus]]]])
+slots.etternavn = Slot(uri=FINT.etternavn, name="etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=ARK.etternavn, domain=None, range=Optional[str])
 
-slots.arkivContainer__dokumenttypar = Slot(uri=ARK.dokumenttypar, name="arkivContainer__dokumenttypar", curie=ARK.curie('dokumenttypar'),
-                   model_uri=ARK.arkivContainer__dokumenttypar, domain=None, range=Optional[Union[dict[Union[str, DokumentTypeId], Union[dict, DokumentType]], list[Union[dict, DokumentType]]]])
+slots.epostadresse = Slot(uri=FINT.epostadresse, name="epostadresse", curie=FINT.curie('epostadresse'),
+                   model_uri=ARK.epostadresse, domain=None, range=Optional[str])
 
-slots.arkivContainer__formatar = Slot(uri=ARK.formatar, name="arkivContainer__formatar", curie=ARK.curie('formatar'),
-                   model_uri=ARK.arkivContainer__formatar, domain=None, range=Optional[Union[dict[Union[str, FormatId], Union[dict, Format]], list[Union[dict, Format]]]])
+slots.mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
+                   model_uri=ARK.mobiltelefonnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__journalposttypar = Slot(uri=ARK.journalposttypar, name="arkivContainer__journalposttypar", curie=ARK.curie('journalposttypar'),
-                   model_uri=ARK.arkivContainer__journalposttypar, domain=None, range=Optional[Union[dict[Union[str, JournalpostTypeId], Union[dict, JournalpostType]], list[Union[dict, JournalpostType]]]])
+slots.nettsted = Slot(uri=FINT.nettsted, name="nettsted", curie=FINT.curie('nettsted'),
+                   model_uri=ARK.nettsted, domain=None, range=Optional[str])
 
-slots.arkivContainer__journalstatuskodar = Slot(uri=ARK.journalstatuskodar, name="arkivContainer__journalstatuskodar", curie=ARK.curie('journalstatuskodar'),
-                   model_uri=ARK.arkivContainer__journalstatuskodar, domain=None, range=Optional[Union[dict[Union[str, JournalStatusId], Union[dict, JournalStatus]], list[Union[dict, JournalStatus]]]])
+slots.sip = Slot(uri=FINT.sip, name="sip", curie=FINT.curie('sip'),
+                   model_uri=ARK.sip, domain=None, range=Optional[str])
 
-slots.arkivContainer__klassifikasjonstypar = Slot(uri=ARK.klassifikasjonstypar, name="arkivContainer__klassifikasjonstypar", curie=ARK.curie('klassifikasjonstypar'),
-                   model_uri=ARK.arkivContainer__klassifikasjonstypar, domain=None, range=Optional[Union[dict[Union[str, KlassifikasjonstypeId], Union[dict, Klassifikasjonstype]], list[Union[dict, Klassifikasjonstype]]]])
+slots.telefonnummer = Slot(uri=FINT.telefonnummer, name="telefonnummer", curie=FINT.curie('telefonnummer'),
+                   model_uri=ARK.telefonnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__korrespondanseparttypar = Slot(uri=ARK.korrespondanseparttypar, name="arkivContainer__korrespondanseparttypar", curie=ARK.curie('korrespondanseparttypar'),
-                   model_uri=ARK.arkivContainer__korrespondanseparttypar, domain=None, range=Optional[Union[dict[Union[str, KorrespondansepartTypeId], Union[dict, KorrespondansepartType]], list[Union[dict, KorrespondansepartType]]]])
+slots.adresselinje = Slot(uri=FINT.adresselinje, name="adresselinje", curie=FINT.curie('adresselinje'),
+                   model_uri=ARK.adresselinje, domain=None, range=Optional[Union[str, list[str]]])
 
-slots.arkivContainer__merknadstypar = Slot(uri=ARK.merknadstypar, name="arkivContainer__merknadstypar", curie=ARK.curie('merknadstypar'),
-                   model_uri=ARK.arkivContainer__merknadstypar, domain=None, range=Optional[Union[dict[Union[str, MerknadstypeId], Union[dict, Merknadstype]], list[Union[dict, Merknadstype]]]])
+slots.postnummer = Slot(uri=FINT.postnummer, name="postnummer", curie=FINT.curie('postnummer'),
+                   model_uri=ARK.postnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__partRollar = Slot(uri=ARK.partRollar, name="arkivContainer__partRollar", curie=ARK.curie('partRollar'),
-                   model_uri=ARK.arkivContainer__partRollar, domain=None, range=Optional[Union[dict[Union[str, PartRolleId], Union[dict, PartRolle]], list[Union[dict, PartRolle]]]])
+slots.poststed = Slot(uri=FINT.poststed, name="poststed", curie=FINT.curie('poststed'),
+                   model_uri=ARK.poststed, domain=None, range=Optional[str])
 
-slots.arkivContainer__rollar = Slot(uri=ARK.rollar, name="arkivContainer__rollar", curie=ARK.curie('rollar'),
-                   model_uri=ARK.arkivContainer__rollar, domain=None, range=Optional[Union[dict[Union[str, RolleId], Union[dict, Rolle]], list[Union[dict, Rolle]]]])
+slots.land = Slot(uri=FINT.land, name="land", curie=FINT.curie('land'),
+                   model_uri=ARK.land, domain=None, range=Optional[Union[str, LandkodeId]])
 
-slots.arkivContainer__saksmappetypar = Slot(uri=ARK.saksmappetypar, name="arkivContainer__saksmappetypar", curie=ARK.curie('saksmappetypar'),
-                   model_uri=ARK.arkivContainer__saksmappetypar, domain=None, range=Optional[Union[dict[Union[str, SaksmappetypeId], Union[dict, Saksmappetype]], list[Union[dict, Saksmappetype]]]])
+slots.adresse = Slot(uri=FINT.adresse, name="adresse", curie=FINT.curie('adresse'),
+                   model_uri=ARK.adresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.arkivContainer__sakstatuskodar = Slot(uri=ARK.sakstatuskodar, name="arkivContainer__sakstatuskodar", curie=ARK.curie('sakstatuskodar'),
-                   model_uri=ARK.arkivContainer__sakstatuskodar, domain=None, range=Optional[Union[dict[Union[str, SaksstatusId], Union[dict, Saksstatus]], list[Union[dict, Saksstatus]]]])
+slots.bruksnummer = Slot(uri=FINT.bruksnummer, name="bruksnummer", curie=FINT.curie('bruksnummer'),
+                   model_uri=ARK.bruksnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__skjermingsheimlar = Slot(uri=ARK.skjermingsheimlar, name="arkivContainer__skjermingsheimlar", curie=ARK.curie('skjermingsheimlar'),
-                   model_uri=ARK.arkivContainer__skjermingsheimlar, domain=None, range=Optional[Union[dict[Union[str, SkjermingshjemmelId], Union[dict, Skjermingshjemmel]], list[Union[dict, Skjermingshjemmel]]]])
+slots.festenummer = Slot(uri=FINT.festenummer, name="festenummer", curie=FINT.curie('festenummer'),
+                   model_uri=ARK.festenummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__tilgangsgrupper = Slot(uri=ARK.tilgangsgrupper, name="arkivContainer__tilgangsgrupper", curie=ARK.curie('tilgangsgrupper'),
-                   model_uri=ARK.arkivContainer__tilgangsgrupper, domain=None, range=Optional[Union[dict[Union[str, TilgangsgruppeId], Union[dict, Tilgangsgruppe]], list[Union[dict, Tilgangsgruppe]]]])
+slots.gaardsnummer = Slot(uri=FINT.gaardsnummer, name="gaardsnummer", curie=FINT.curie('gaardsnummer'),
+                   model_uri=ARK.gaardsnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__tilgangsrestriksjonar = Slot(uri=ARK.tilgangsrestriksjonar, name="arkivContainer__tilgangsrestriksjonar", curie=ARK.curie('tilgangsrestriksjonar'),
-                   model_uri=ARK.arkivContainer__tilgangsrestriksjonar, domain=None, range=Optional[Union[dict[Union[str, TilgangsrestriksjonId], Union[dict, Tilgangsrestriksjon]], list[Union[dict, Tilgangsrestriksjon]]]])
+slots.seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
+                   model_uri=ARK.seksjonsnummer, domain=None, range=Optional[str])
 
-slots.arkivContainer__tilknyttetRegistreringSomKodar = Slot(uri=ARK.tilknyttetRegistreringSomKodar, name="arkivContainer__tilknyttetRegistreringSomKodar", curie=ARK.curie('tilknyttetRegistreringSomKodar'),
-                   model_uri=ARK.arkivContainer__tilknyttetRegistreringSomKodar, domain=None, range=Optional[Union[dict[Union[str, TilknyttetRegistreringSomId], Union[dict, TilknyttetRegistreringSom]], list[Union[dict, TilknyttetRegistreringSom]]]])
+slots.kommunenummer = Slot(uri=FINT.kommunenummer, name="kommunenummer", curie=FINT.curie('kommunenummer'),
+                   model_uri=ARK.kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.arkivContainer__variantformatar = Slot(uri=ARK.variantformatar, name="arkivContainer__variantformatar", curie=ARK.curie('variantformatar'),
-                   model_uri=ARK.arkivContainer__variantformatar, domain=None, range=Optional[Union[dict[Union[str, VariantformatId], Union[dict, Variantformat]], list[Union[dict, Variantformat]]]])
+slots.fylke = Slot(uri=FINT.fylke, name="fylke", curie=FINT.curie('fylke'),
+                   model_uri=ARK.fylke, domain=None, range=Optional[Union[str, FylkeId]])
 
-slots.mappe__avsluttetDato = Slot(uri=ARK.avsluttetDato, name="mappe__avsluttetDato", curie=ARK.curie('avsluttetDato'),
-                   model_uri=ARK.mappe__avsluttetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.kommune = Slot(uri=FINT.kommune, name="kommune", curie=FINT.curie('kommune'),
+                   model_uri=ARK.kommune, domain=None, range=Optional[Union[str, KommuneId]])
 
-slots.mappe__beskrivelse = Slot(uri=ARK.beskrivelse, name="mappe__beskrivelse", curie=ARK.curie('beskrivelse'),
-                   model_uri=ARK.mappe__beskrivelse, domain=None, range=Optional[str])
+slots.kjonn = Slot(uri=FINT.kjonn, name="kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=ARK.kjonn, domain=None, range=Optional[Union[str, KjonnId]])
 
-slots.mappe__klasse = Slot(uri=ARK.klasse, name="mappe__klasse", curie=ARK.curie('klasse'),
-                   model_uri=ARK.mappe__klasse, domain=None, range=Optional[Union[Union[dict, Klasse], list[Union[dict, Klasse]]]])
+slots.bokstavkode = Slot(uri=FINT.bokstavkode, name="bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=ARK.bokstavkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.mappe__mappeId = Slot(uri=ARK.mappeId, name="mappe__mappeId", curie=ARK.curie('mappeId'),
-                   model_uri=ARK.mappe__mappeId, domain=None, range=Optional[Union[dict, Identifikator]])
+slots.valuta_navn = Slot(uri=FINT.valutaNavn, name="valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=ARK.valuta_navn, domain=None, range=Optional[str])
 
-slots.mappe__merknad = Slot(uri=ARK.merknad, name="mappe__merknad", curie=ARK.curie('merknad'),
-                   model_uri=ARK.mappe__merknad, domain=None, range=Optional[Union[Union[dict, Merknad], list[Union[dict, Merknad]]]])
+slots.nummerkode = Slot(uri=FINT.nummerkode, name="nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=ARK.nummerkode, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.mappe__noekkelord = Slot(uri=ARK.noekkelord, name="mappe__noekkelord", curie=ARK.curie('noekkelord'),
-                   model_uri=ARK.mappe__noekkelord, domain=None, range=Optional[Union[str, list[str]]])
+slots.bilde = Slot(uri=FINT.bilde, name="bilde", curie=FINT.curie('bilde'),
+                   model_uri=ARK.bilde, domain=None, range=Optional[str])
 
-slots.mappe__offentligTittel = Slot(uri=ARK.offentligTittel, name="mappe__offentligTittel", curie=ARK.curie('offentligTittel'),
-                   model_uri=ARK.mappe__offentligTittel, domain=None, range=Optional[str])
+slots.bostedsadresse = Slot(uri=FINT.bostedsadresse, name="bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=ARK.bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
 
-slots.mappe__opprettetDato = Slot(uri=ARK.opprettetDato, name="mappe__opprettetDato", curie=ARK.curie('opprettetDato'),
-                   model_uri=ARK.mappe__opprettetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.fodselsdato = Slot(uri=FINT.fodselsdato, name="fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=ARK.fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
 
-slots.mappe__part = Slot(uri=ARK.part, name="mappe__part", curie=ARK.curie('part'),
-                   model_uri=ARK.mappe__part, domain=None, range=Optional[Union[Union[dict, Part], list[Union[dict, Part]]]])
+slots.fodselsnummer = Slot(uri=FINT.fodselsnummer, name="fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=ARK.fodselsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.mappe__skjerming = Slot(uri=ARK.skjerming, name="mappe__skjerming", curie=ARK.curie('skjerming'),
-                   model_uri=ARK.mappe__skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
+slots.person_navn = Slot(uri=FINT.personNavn, name="person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=ARK.person_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.mappe__tittel = Slot(uri=ARK.tittel, name="mappe__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.mappe__tittel, domain=None, range=Optional[str])
+slots.parorende = Slot(uri=FINT.parorende, name="parorende", curie=FINT.curie('parorende'),
+                   model_uri=ARK.parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
 
-slots.mappe__arkivdel = Slot(uri=ARK.arkivdel, name="mappe__arkivdel", curie=ARK.curie('arkivdel'),
-                   model_uri=ARK.mappe__arkivdel, domain=None, range=Optional[Union[str, ArkivdelId]])
+slots.statsborgerskap = Slot(uri=FINT.statsborgerskap, name="statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=ARK.statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
 
-slots.mappe__avsluttetAv = Slot(uri=ARK.avsluttetAv, name="mappe__avsluttetAv", curie=ARK.curie('avsluttetAv'),
-                   model_uri=ARK.mappe__avsluttetAv, domain=None, range=Optional[Union[str, ArkivressursId]])
+slots.foreldreansvar = Slot(uri=FINT.foreldreansvar, name="foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=ARK.foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.mappe__opprettetAv = Slot(uri=ARK.opprettetAv, name="mappe__opprettetAv", curie=ARK.curie('opprettetAv'),
-                   model_uri=ARK.mappe__opprettetAv, domain=None, range=Union[str, ArkivressursId])
+slots.foreldre = Slot(uri=FINT.foreldre, name="foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=ARK.foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.saksmappe__journalpost = Slot(uri=ARK.journalpost, name="saksmappe__journalpost", curie=ARK.curie('journalpost'),
-                   model_uri=ARK.saksmappe__journalpost, domain=None, range=Optional[Union[Union[str, JournalpostId], list[Union[str, JournalpostId]]]])
+slots.maalform = Slot(uri=FINT.maalform, name="maalform", curie=FINT.curie('maalform'),
+                   model_uri=ARK.maalform, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.saksmappe__saksaar = Slot(uri=ARK.saksaar, name="saksmappe__saksaar", curie=ARK.curie('saksaar'),
-                   model_uri=ARK.saksmappe__saksaar, domain=None, range=Optional[str])
+slots.morsmaal = Slot(uri=FINT.morsmaal, name="morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=ARK.morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
 
-slots.saksmappe__saksdato = Slot(uri=ARK.saksdato, name="saksmappe__saksdato", curie=ARK.curie('saksdato'),
-                   model_uri=ARK.saksmappe__saksdato, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.laerling = Slot(uri=FINT.laerling, name="laerling", curie=FINT.curie('laerling'),
+                   model_uri=ARK.laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
-slots.saksmappe__sakssekvensnummer = Slot(uri=ARK.sakssekvensnummer, name="saksmappe__sakssekvensnummer", curie=ARK.curie('sakssekvensnummer'),
-                   model_uri=ARK.saksmappe__sakssekvensnummer, domain=None, range=Optional[str])
+slots.elev = Slot(uri=FINT.elev, name="elev", curie=FINT.curie('elev'),
+                   model_uri=ARK.elev, domain=None, range=Optional[Union[str, ElevId]])
 
-slots.saksmappe__utlaantDato = Slot(uri=ARK.utlaantDato, name="saksmappe__utlaantDato", curie=ARK.curie('utlaantDato'),
-                   model_uri=ARK.saksmappe__utlaantDato, domain=None, range=Optional[Union[str, XSDDateTime]])
+slots.elevnummer = Slot(uri=FINT.elevnummer, name="elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=ARK.elevnummer, domain=None, range=Optional[Union[dict, Identifikator]])
 
-slots.saksmappe__saksmappetype = Slot(uri=ARK.saksmappetype, name="saksmappe__saksmappetype", curie=ARK.curie('saksmappetype'),
-                   model_uri=ARK.saksmappe__saksmappetype, domain=None, range=Optional[Union[str, SaksmappetypeId]])
+slots.person = Slot(uri=FINT.person, name="person", curie=FINT.curie('person'),
+                   model_uri=ARK.person, domain=None, range=Optional[Union[str, PersonId]])
 
-slots.saksmappe__saksstatus = Slot(uri=ARK.saksstatus, name="saksmappe__saksstatus", curie=ARK.curie('saksstatus'),
-                   model_uri=ARK.saksmappe__saksstatus, domain=None, range=Union[str, SaksstatusId])
+slots.otungdom = Slot(uri=FINT.otungdom, name="otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=ARK.otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.saksmappe__tilgangsgruppe = Slot(uri=ARK.tilgangsgruppe, name="saksmappe__tilgangsgruppe", curie=ARK.curie('tilgangsgruppe'),
-                   model_uri=ARK.saksmappe__tilgangsgruppe, domain=None, range=Optional[Union[str, TilgangsgruppeId]])
+slots.kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=ARK.kontaktperson_navn, domain=None, range=Optional[Union[dict, Personnavn]])
 
-slots.saksmappe__journalenhet = Slot(uri=ARK.journalenhet, name="saksmappe__journalenhet", curie=ARK.curie('journalenhet'),
-                   model_uri=ARK.saksmappe__journalenhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
+slots.type = Slot(uri=FINT.type, name="type", curie=FINT.curie('type'),
+                   model_uri=ARK.type, domain=None, range=Optional[str])
 
-slots.saksmappe__administrativEnhet = Slot(uri=ARK.administrativEnhet, name="saksmappe__administrativEnhet", curie=ARK.curie('administrativEnhet'),
-                   model_uri=ARK.saksmappe__administrativEnhet, domain=None, range=Union[str, AdministrativEnhetId])
+slots.kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=ARK.kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
 
-slots.saksmappe__saksansvarlig = Slot(uri=ARK.saksansvarlig, name="saksmappe__saksansvarlig", curie=ARK.curie('saksansvarlig'),
-                   model_uri=ARK.saksmappe__saksansvarlig, domain=None, range=Union[str, ArkivressursId])
-
-slots.registrering__arkivertDato = Slot(uri=ARK.arkivertDato, name="registrering__arkivertDato", curie=ARK.curie('arkivertDato'),
-                   model_uri=ARK.registrering__arkivertDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.registrering__beskrivelse = Slot(uri=ARK.beskrivelse, name="registrering__beskrivelse", curie=ARK.curie('beskrivelse'),
-                   model_uri=ARK.registrering__beskrivelse, domain=None, range=Optional[str])
-
-slots.registrering__dokumentbeskrivelse = Slot(uri=ARK.dokumentbeskrivelse, name="registrering__dokumentbeskrivelse", curie=ARK.curie('dokumentbeskrivelse'),
-                   model_uri=ARK.registrering__dokumentbeskrivelse, domain=None, range=Optional[Union[Union[str, DokumentbeskrivelseId], list[Union[str, DokumentbeskrivelseId]]]])
-
-slots.registrering__forfatter = Slot(uri=ARK.forfatter, name="registrering__forfatter", curie=ARK.curie('forfatter'),
-                   model_uri=ARK.registrering__forfatter, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.registrering__klasse = Slot(uri=ARK.klasse, name="registrering__klasse", curie=ARK.curie('klasse'),
-                   model_uri=ARK.registrering__klasse, domain=None, range=Optional[Union[dict, Klasse]])
-
-slots.registrering__korrespondansepart = Slot(uri=ARK.korrespondansepart, name="registrering__korrespondansepart", curie=ARK.curie('korrespondansepart'),
-                   model_uri=ARK.registrering__korrespondansepart, domain=None, range=Optional[Union[Union[dict, Korrespondansepart], list[Union[dict, Korrespondansepart]]]])
-
-slots.registrering__merknad = Slot(uri=ARK.merknad, name="registrering__merknad", curie=ARK.curie('merknad'),
-                   model_uri=ARK.registrering__merknad, domain=None, range=Optional[Union[Union[dict, Merknad], list[Union[dict, Merknad]]]])
-
-slots.registrering__nokkelord = Slot(uri=ARK.nokkelord, name="registrering__nokkelord", curie=ARK.curie('nokkelord'),
-                   model_uri=ARK.registrering__nokkelord, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.registrering__offentligTittel = Slot(uri=ARK.offentligTittel, name="registrering__offentligTittel", curie=ARK.curie('offentligTittel'),
-                   model_uri=ARK.registrering__offentligTittel, domain=None, range=Optional[str])
-
-slots.registrering__opprettetDato = Slot(uri=ARK.opprettetDato, name="registrering__opprettetDato", curie=ARK.curie('opprettetDato'),
-                   model_uri=ARK.registrering__opprettetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.registrering__part = Slot(uri=ARK.part, name="registrering__part", curie=ARK.curie('part'),
-                   model_uri=ARK.registrering__part, domain=None, range=Optional[Union[Union[dict, Part], list[Union[dict, Part]]]])
-
-slots.registrering__referanseArkivDel = Slot(uri=ARK.referanseArkivDel, name="registrering__referanseArkivDel", curie=ARK.curie('referanseArkivDel'),
-                   model_uri=ARK.registrering__referanseArkivDel, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.registrering__registreringsId = Slot(uri=ARK.registreringsId, name="registrering__registreringsId", curie=ARK.curie('registreringsId'),
-                   model_uri=ARK.registrering__registreringsId, domain=None, range=Optional[str])
-
-slots.registrering__skjerming = Slot(uri=ARK.skjerming, name="registrering__skjerming", curie=ARK.curie('skjerming'),
-                   model_uri=ARK.registrering__skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
-
-slots.registrering__tittel = Slot(uri=ARK.tittel, name="registrering__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.registrering__tittel, domain=None, range=str)
-
-slots.registrering__tilgangsgruppe = Slot(uri=ARK.tilgangsgruppe, name="registrering__tilgangsgruppe", curie=ARK.curie('tilgangsgruppe'),
-                   model_uri=ARK.registrering__tilgangsgruppe, domain=None, range=Optional[Union[str, TilgangsgruppeId]])
-
-slots.registrering__administrativEnhet = Slot(uri=ARK.administrativEnhet, name="registrering__administrativEnhet", curie=ARK.curie('administrativEnhet'),
-                   model_uri=ARK.registrering__administrativEnhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
-
-slots.registrering__arkivdel = Slot(uri=ARK.arkivdel, name="registrering__arkivdel", curie=ARK.curie('arkivdel'),
-                   model_uri=ARK.registrering__arkivdel, domain=None, range=Optional[Union[str, ArkivdelId]])
-
-slots.registrering__saksbehandler = Slot(uri=ARK.saksbehandler, name="registrering__saksbehandler", curie=ARK.curie('saksbehandler'),
-                   model_uri=ARK.registrering__saksbehandler, domain=None, range=Optional[Union[str, ArkivressursId]])
-
-slots.registrering__arkivertAv = Slot(uri=ARK.arkivertAv, name="registrering__arkivertAv", curie=ARK.curie('arkivertAv'),
-                   model_uri=ARK.registrering__arkivertAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.registrering__opprettetAv = Slot(uri=ARK.opprettetAv, name="registrering__opprettetAv", curie=ARK.curie('opprettetAv'),
-                   model_uri=ARK.registrering__opprettetAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.administrativEnhet__navn = Slot(uri=ARK.navn, name="administrativEnhet__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.administrativEnhet__navn, domain=None, range=str)
-
-slots.administrativEnhet__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="administrativEnhet__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.administrativEnhet__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.administrativEnhet__organisasjonselement = Slot(uri=ARK.organisasjonselement, name="administrativEnhet__organisasjonselement", curie=ARK.curie('organisasjonselement'),
-                   model_uri=ARK.administrativEnhet__organisasjonselement, domain=None, range=Optional[Union[str, URIorCURIE]])
-
-slots.arkivdel__tittel = Slot(uri=ARK.tittel, name="arkivdel__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.arkivdel__tittel, domain=None, range=str)
-
-slots.arkivdel__klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="arkivdel__klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
-                   model_uri=ARK.arkivdel__klassifikasjonssystem, domain=None, range=Optional[Union[Union[str, KlassifikasjonssystemId], list[Union[str, KlassifikasjonssystemId]]]])
-
-slots.arkivressurs__kildesystemId = Slot(uri=ARK.kildesystemId, name="arkivressurs__kildesystemId", curie=ARK.curie('kildesystemId'),
-                   model_uri=ARK.arkivressurs__kildesystemId, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.arkivressurs__personalressurs = Slot(uri=ARK.personalressurs, name="arkivressurs__personalressurs", curie=ARK.curie('personalressurs'),
-                   model_uri=ARK.arkivressurs__personalressurs, domain=None, range=Union[str, URIorCURIE])
-
-slots.arkivressurs__autorisasjon = Slot(uri=ARK.autorisasjon, name="arkivressurs__autorisasjon", curie=ARK.curie('autorisasjon'),
-                   model_uri=ARK.arkivressurs__autorisasjon, domain=None, range=Optional[Union[Union[str, AutorisasjonId], list[Union[str, AutorisasjonId]]]])
-
-slots.arkivressurs__tilgang = Slot(uri=ARK.tilgang, name="arkivressurs__tilgang", curie=ARK.curie('tilgang'),
-                   model_uri=ARK.arkivressurs__tilgang, domain=None, range=Optional[Union[Union[str, TilgangId], list[Union[str, TilgangId]]]])
-
-slots.autorisasjon__tilgangsrestriksjon = Slot(uri=ARK.tilgangsrestriksjon, name="autorisasjon__tilgangsrestriksjon", curie=ARK.curie('tilgangsrestriksjon'),
-                   model_uri=ARK.autorisasjon__tilgangsrestriksjon, domain=None, range=Union[Union[str, TilgangsrestriksjonId], list[Union[str, TilgangsrestriksjonId]]])
-
-slots.autorisasjon__administrativenhet = Slot(uri=ARK.administrativenhet, name="autorisasjon__administrativenhet", curie=ARK.curie('administrativenhet'),
-                   model_uri=ARK.autorisasjon__administrativenhet, domain=None, range=Optional[Union[Union[str, AdministrativEnhetId], list[Union[str, AdministrativEnhetId]]]])
-
-slots.autorisasjon__arkivressurs = Slot(uri=ARK.arkivressurs, name="autorisasjon__arkivressurs", curie=ARK.curie('arkivressurs'),
-                   model_uri=ARK.autorisasjon__arkivressurs, domain=None, range=Optional[Union[Union[str, ArkivressursId], list[Union[str, ArkivressursId]]]])
-
-slots.dokumentfil__data = Slot(uri=ARK.data, name="dokumentfil__data", curie=ARK.curie('data'),
-                   model_uri=ARK.dokumentfil__data, domain=None, range=str)
-
-slots.dokumentfil__filnavn = Slot(uri=ARK.filnavn, name="dokumentfil__filnavn", curie=ARK.curie('filnavn'),
-                   model_uri=ARK.dokumentfil__filnavn, domain=None, range=Optional[str])
-
-slots.dokumentfil__format = Slot(uri=ARK.format, name="dokumentfil__format", curie=ARK.curie('format'),
-                   model_uri=ARK.dokumentfil__format, domain=None, range=str)
-
-slots.journalpost__antallVedlegg = Slot(uri=ARK.antallVedlegg, name="journalpost__antallVedlegg", curie=ARK.curie('antallVedlegg'),
-                   model_uri=ARK.journalpost__antallVedlegg, domain=None, range=Optional[int])
-
-slots.journalpost__avskrivning = Slot(uri=ARK.avskrivning, name="journalpost__avskrivning", curie=ARK.curie('avskrivning'),
-                   model_uri=ARK.journalpost__avskrivning, domain=None, range=Optional[Union[dict, Avskrivning]])
-
-slots.journalpost__dokumentetsDato = Slot(uri=ARK.dokumentetsDato, name="journalpost__dokumentetsDato", curie=ARK.curie('dokumentetsDato'),
-                   model_uri=ARK.journalpost__dokumentetsDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__forfallsDato = Slot(uri=ARK.forfallsDato, name="journalpost__forfallsDato", curie=ARK.curie('forfallsDato'),
-                   model_uri=ARK.journalpost__forfallsDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__journalAr = Slot(uri=ARK.journalAr, name="journalpost__journalAr", curie=ARK.curie('journalAr'),
-                   model_uri=ARK.journalpost__journalAr, domain=None, range=Optional[str])
-
-slots.journalpost__journalDato = Slot(uri=ARK.journalDato, name="journalpost__journalDato", curie=ARK.curie('journalDato'),
-                   model_uri=ARK.journalpost__journalDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__journalPostnummer = Slot(uri=ARK.journalPostnummer, name="journalpost__journalPostnummer", curie=ARK.curie('journalPostnummer'),
-                   model_uri=ARK.journalpost__journalPostnummer, domain=None, range=Optional[int])
-
-slots.journalpost__journalSekvensnummer = Slot(uri=ARK.journalSekvensnummer, name="journalpost__journalSekvensnummer", curie=ARK.curie('journalSekvensnummer'),
-                   model_uri=ARK.journalpost__journalSekvensnummer, domain=None, range=Optional[int])
-
-slots.journalpost__mottattDato = Slot(uri=ARK.mottattDato, name="journalpost__mottattDato", curie=ARK.curie('mottattDato'),
-                   model_uri=ARK.journalpost__mottattDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__offentlighetsvurdertDato = Slot(uri=ARK.offentlighetsvurdertDato, name="journalpost__offentlighetsvurdertDato", curie=ARK.curie('offentlighetsvurdertDato'),
-                   model_uri=ARK.journalpost__offentlighetsvurdertDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__sendtDato = Slot(uri=ARK.sendtDato, name="journalpost__sendtDato", curie=ARK.curie('sendtDato'),
-                   model_uri=ARK.journalpost__sendtDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.journalpost__journalposttype = Slot(uri=ARK.journalposttype, name="journalpost__journalposttype", curie=ARK.curie('journalposttype'),
-                   model_uri=ARK.journalpost__journalposttype, domain=None, range=Union[str, JournalpostTypeId])
-
-slots.journalpost__journalstatus = Slot(uri=ARK.journalstatus, name="journalpost__journalstatus", curie=ARK.curie('journalstatus'),
-                   model_uri=ARK.journalpost__journalstatus, domain=None, range=Union[str, JournalStatusId])
-
-slots.journalpost__journalenhet = Slot(uri=ARK.journalenhet, name="journalpost__journalenhet", curie=ARK.curie('journalenhet'),
-                   model_uri=ARK.journalpost__journalenhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
-
-slots.klassifikasjonssystem__avsluttetAv = Slot(uri=ARK.avsluttetAvNavn, name="klassifikasjonssystem__avsluttetAv", curie=ARK.curie('avsluttetAvNavn'),
-                   model_uri=ARK.klassifikasjonssystem__avsluttetAv, domain=None, range=Optional[str])
-
-slots.klassifikasjonssystem__avsluttetDato = Slot(uri=ARK.avsluttetDato, name="klassifikasjonssystem__avsluttetDato", curie=ARK.curie('avsluttetDato'),
-                   model_uri=ARK.klassifikasjonssystem__avsluttetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.klassifikasjonssystem__beskrivelse = Slot(uri=ARK.beskrivelse, name="klassifikasjonssystem__beskrivelse", curie=ARK.curie('beskrivelse'),
-                   model_uri=ARK.klassifikasjonssystem__beskrivelse, domain=None, range=Optional[str])
-
-slots.klassifikasjonssystem__klasse = Slot(uri=ARK.klasse, name="klassifikasjonssystem__klasse", curie=ARK.curie('klasse'),
-                   model_uri=ARK.klassifikasjonssystem__klasse, domain=None, range=Union[Union[dict, Klasse], list[Union[dict, Klasse]]])
-
-slots.klassifikasjonssystem__opprettetAv = Slot(uri=ARK.opprettetAvNavn, name="klassifikasjonssystem__opprettetAv", curie=ARK.curie('opprettetAvNavn'),
-                   model_uri=ARK.klassifikasjonssystem__opprettetAv, domain=None, range=str)
-
-slots.klassifikasjonssystem__opprettetDato = Slot(uri=ARK.opprettetDato, name="klassifikasjonssystem__opprettetDato", curie=ARK.curie('opprettetDato'),
-                   model_uri=ARK.klassifikasjonssystem__opprettetDato, domain=None, range=Union[str, XSDDateTime])
-
-slots.klassifikasjonssystem__tittel = Slot(uri=ARK.tittel, name="klassifikasjonssystem__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.klassifikasjonssystem__tittel, domain=None, range=str)
-
-slots.klassifikasjonssystem__klassifikasjonstype = Slot(uri=ARK.klassifikasjonstype, name="klassifikasjonssystem__klassifikasjonstype", curie=ARK.curie('klassifikasjonstype'),
-                   model_uri=ARK.klassifikasjonssystem__klassifikasjonstype, domain=None, range=Optional[Union[str, KlassifikasjonstypeId]])
-
-slots.klassifikasjonssystem__arkivdel = Slot(uri=ARK.arkivdel, name="klassifikasjonssystem__arkivdel", curie=ARK.curie('arkivdel'),
-                   model_uri=ARK.klassifikasjonssystem__arkivdel, domain=None, range=Union[Union[str, ArkivdelId], list[Union[str, ArkivdelId]]])
-
-slots.tilgang__tittel = Slot(uri=ARK.tittel, name="tilgang__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.tilgang__tittel, domain=None, range=str)
-
-slots.tilgang__rolle = Slot(uri=ARK.rolle, name="tilgang__rolle", curie=ARK.curie('rolle'),
-                   model_uri=ARK.tilgang__rolle, domain=None, range=Union[str, RolleId])
-
-slots.tilgang__administrativEnhet = Slot(uri=ARK.administrativEnhet, name="tilgang__administrativEnhet", curie=ARK.curie('administrativEnhet'),
-                   model_uri=ARK.tilgang__administrativEnhet, domain=None, range=Optional[Union[str, AdministrativEnhetId]])
-
-slots.tilgang__arkivdel = Slot(uri=ARK.arkivdel, name="tilgang__arkivdel", curie=ARK.curie('arkivdel'),
-                   model_uri=ARK.tilgang__arkivdel, domain=None, range=Optional[Union[str, ArkivdelId]])
-
-slots.tilgang__arkivressurs = Slot(uri=ARK.arkivressurs, name="tilgang__arkivressurs", curie=ARK.curie('arkivressurs'),
-                   model_uri=ARK.tilgang__arkivressurs, domain=None, range=Optional[Union[Union[str, ArkivressursId], list[Union[str, ArkivressursId]]]])
-
-slots.personalmappe__navn = Slot(uri=ARK.navn, name="personalmappe__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.personalmappe__navn, domain=None, range=Union[dict, Personnavn])
-
-slots.personalmappe__person = Slot(uri=ARK.person, name="personalmappe__person", curie=ARK.curie('person'),
-                   model_uri=ARK.personalmappe__person, domain=None, range=Union[str, URIorCURIE])
-
-slots.personalmappe__leder = Slot(uri=ARK.leder, name="personalmappe__leder", curie=ARK.curie('leder'),
-                   model_uri=ARK.personalmappe__leder, domain=None, range=Union[str, URIorCURIE])
-
-slots.personalmappe__arbeidssted = Slot(uri=ARK.arbeidssted, name="personalmappe__arbeidssted", curie=ARK.curie('arbeidssted'),
-                   model_uri=ARK.personalmappe__arbeidssted, domain=None, range=Union[str, URIorCURIE])
-
-slots.personalmappe__personalressurs = Slot(uri=ARK.personalressurs, name="personalmappe__personalressurs", curie=ARK.curie('personalressurs'),
-                   model_uri=ARK.personalmappe__personalressurs, domain=None, range=Union[str, URIorCURIE])
-
-slots.dispensasjonAutomatiskFredaKulturminne__kulturminneId = Slot(uri=ARK.kulturminneId, name="dispensasjonAutomatiskFredaKulturminne__kulturminneId", curie=ARK.curie('kulturminneId'),
-                   model_uri=ARK.dispensasjonAutomatiskFredaKulturminne__kulturminneId, domain=None, range=str)
-
-slots.dispensasjonAutomatiskFredaKulturminne__matrikkelnummer = Slot(uri=ARK.matrikkelnummer, name="dispensasjonAutomatiskFredaKulturminne__matrikkelnummer", curie=ARK.curie('matrikkelnummer'),
-                   model_uri=ARK.dispensasjonAutomatiskFredaKulturminne__matrikkelnummer, domain=None, range=Union[dict, Matrikkelnummer])
-
-slots.dispensasjonAutomatiskFredaKulturminne__soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="dispensasjonAutomatiskFredaKulturminne__soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
-                   model_uri=ARK.dispensasjonAutomatiskFredaKulturminne__soeknadsnummer, domain=None, range=Union[dict, Identifikator])
-
-slots.dispensasjonAutomatiskFredaKulturminne__tiltak = Slot(uri=ARK.tiltak, name="dispensasjonAutomatiskFredaKulturminne__tiltak", curie=ARK.curie('tiltak'),
-                   model_uri=ARK.dispensasjonAutomatiskFredaKulturminne__tiltak, domain=None, range=Optional[str])
-
-slots.tilskuddFartoy__fartoyNavn = Slot(uri=ARK.fartoyNavn, name="tilskuddFartoy__fartoyNavn", curie=ARK.curie('fartoyNavn'),
-                   model_uri=ARK.tilskuddFartoy__fartoyNavn, domain=None, range=str)
-
-slots.tilskuddFartoy__kallesignal = Slot(uri=ARK.kallesignal, name="tilskuddFartoy__kallesignal", curie=ARK.curie('kallesignal'),
-                   model_uri=ARK.tilskuddFartoy__kallesignal, domain=None, range=str)
-
-slots.tilskuddFartoy__kulturminneId = Slot(uri=ARK.kulturminneId, name="tilskuddFartoy__kulturminneId", curie=ARK.curie('kulturminneId'),
-                   model_uri=ARK.tilskuddFartoy__kulturminneId, domain=None, range=str)
-
-slots.tilskuddFartoy__soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="tilskuddFartoy__soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
-                   model_uri=ARK.tilskuddFartoy__soeknadsnummer, domain=None, range=Union[dict, Identifikator])
-
-slots.tilskuddFredaBygningPrivatEie__bygningsnavn = Slot(uri=ARK.bygningsnavn, name="tilskuddFredaBygningPrivatEie__bygningsnavn", curie=ARK.curie('bygningsnavn'),
-                   model_uri=ARK.tilskuddFredaBygningPrivatEie__bygningsnavn, domain=None, range=Optional[str])
-
-slots.tilskuddFredaBygningPrivatEie__kulturminneId = Slot(uri=ARK.kulturminneId, name="tilskuddFredaBygningPrivatEie__kulturminneId", curie=ARK.curie('kulturminneId'),
-                   model_uri=ARK.tilskuddFredaBygningPrivatEie__kulturminneId, domain=None, range=str)
-
-slots.tilskuddFredaBygningPrivatEie__matrikkelnummer = Slot(uri=ARK.matrikkelnummer, name="tilskuddFredaBygningPrivatEie__matrikkelnummer", curie=ARK.curie('matrikkelnummer'),
-                   model_uri=ARK.tilskuddFredaBygningPrivatEie__matrikkelnummer, domain=None, range=Optional[Union[dict, Matrikkelnummer]])
-
-slots.tilskuddFredaBygningPrivatEie__soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="tilskuddFredaBygningPrivatEie__soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
-                   model_uri=ARK.tilskuddFredaBygningPrivatEie__soeknadsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.soeknadDrosjeloeyve__organisasjonsnavn = Slot(uri=ARK.organisasjonsnavn, name="soeknadDrosjeloeyve__organisasjonsnavn", curie=ARK.curie('organisasjonsnavn'),
-                   model_uri=ARK.soeknadDrosjeloeyve__organisasjonsnavn, domain=None, range=str)
-
-slots.soeknadDrosjeloeyve__organisasjonsnummer = Slot(uri=ARK.organisasjonsnummer, name="soeknadDrosjeloeyve__organisasjonsnummer", curie=ARK.curie('organisasjonsnummer'),
-                   model_uri=ARK.soeknadDrosjeloeyve__organisasjonsnummer, domain=None, range=str)
-
-slots.avskrivning__avskrevetAv = Slot(uri=ARK.avskrevetAv, name="avskrivning__avskrevetAv", curie=ARK.curie('avskrevetAv'),
-                   model_uri=ARK.avskrivning__avskrevetAv, domain=None, range=str)
-
-slots.avskrivning__avskrivningsdato = Slot(uri=ARK.avskrivningsdato, name="avskrivning__avskrivningsdato", curie=ARK.curie('avskrivningsdato'),
-                   model_uri=ARK.avskrivning__avskrivningsdato, domain=None, range=Union[str, XSDDateTime])
-
-slots.avskrivning__avskrivningsmate = Slot(uri=ARK.avskrivningsmate, name="avskrivning__avskrivningsmate", curie=ARK.curie('avskrivningsmate'),
-                   model_uri=ARK.avskrivning__avskrivningsmate, domain=None, range=str)
-
-slots.dokumentbeskrivelse__beskrivelse = Slot(uri=ARK.beskrivelse, name="dokumentbeskrivelse__beskrivelse", curie=ARK.curie('beskrivelse'),
-                   model_uri=ARK.dokumentbeskrivelse__beskrivelse, domain=None, range=Optional[str])
-
-slots.dokumentbeskrivelse__dokumentnummer = Slot(uri=ARK.dokumentnummer, name="dokumentbeskrivelse__dokumentnummer", curie=ARK.curie('dokumentnummer'),
-                   model_uri=ARK.dokumentbeskrivelse__dokumentnummer, domain=None, range=Optional[int])
-
-slots.dokumentbeskrivelse__dokumentobjekt = Slot(uri=ARK.dokumentobjekt, name="dokumentbeskrivelse__dokumentobjekt", curie=ARK.curie('dokumentobjekt'),
-                   model_uri=ARK.dokumentbeskrivelse__dokumentobjekt, domain=None, range=Optional[Union[Union[dict, Dokumentobjekt], list[Union[dict, Dokumentobjekt]]]])
-
-slots.dokumentbeskrivelse__forfatter = Slot(uri=ARK.forfatter, name="dokumentbeskrivelse__forfatter", curie=ARK.curie('forfatter'),
-                   model_uri=ARK.dokumentbeskrivelse__forfatter, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.dokumentbeskrivelse__opprettetDato = Slot(uri=ARK.opprettetDato, name="dokumentbeskrivelse__opprettetDato", curie=ARK.curie('opprettetDato'),
-                   model_uri=ARK.dokumentbeskrivelse__opprettetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.dokumentbeskrivelse__part = Slot(uri=ARK.part, name="dokumentbeskrivelse__part", curie=ARK.curie('part'),
-                   model_uri=ARK.dokumentbeskrivelse__part, domain=None, range=Optional[Union[Union[dict, Part], list[Union[dict, Part]]]])
-
-slots.dokumentbeskrivelse__referanseArkivdel = Slot(uri=ARK.referanseArkivdel, name="dokumentbeskrivelse__referanseArkivdel", curie=ARK.curie('referanseArkivdel'),
-                   model_uri=ARK.dokumentbeskrivelse__referanseArkivdel, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.dokumentbeskrivelse__skjerming = Slot(uri=ARK.skjerming, name="dokumentbeskrivelse__skjerming", curie=ARK.curie('skjerming'),
-                   model_uri=ARK.dokumentbeskrivelse__skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
-
-slots.dokumentbeskrivelse__tilknyttetDato = Slot(uri=ARK.tilknyttetDato, name="dokumentbeskrivelse__tilknyttetDato", curie=ARK.curie('tilknyttetDato'),
-                   model_uri=ARK.dokumentbeskrivelse__tilknyttetDato, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.dokumentbeskrivelse__tittel = Slot(uri=ARK.tittel, name="dokumentbeskrivelse__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.dokumentbeskrivelse__tittel, domain=None, range=str)
-
-slots.dokumentbeskrivelse__dokumentstatus = Slot(uri=ARK.dokumentstatus, name="dokumentbeskrivelse__dokumentstatus", curie=ARK.curie('dokumentstatus'),
-                   model_uri=ARK.dokumentbeskrivelse__dokumentstatus, domain=None, range=Union[str, DokumentStatusId])
-
-slots.dokumentbeskrivelse__dokumentType = Slot(uri=ARK.dokumentType, name="dokumentbeskrivelse__dokumentType", curie=ARK.curie('dokumentType'),
-                   model_uri=ARK.dokumentbeskrivelse__dokumentType, domain=None, range=Union[str, DokumentTypeId])
-
-slots.dokumentbeskrivelse__tilknyttetRegistreringSom = Slot(uri=ARK.tilknyttetRegistreringSom, name="dokumentbeskrivelse__tilknyttetRegistreringSom", curie=ARK.curie('tilknyttetRegistreringSom'),
-                   model_uri=ARK.dokumentbeskrivelse__tilknyttetRegistreringSom, domain=None, range=Union[Union[str, TilknyttetRegistreringSomId], list[Union[str, TilknyttetRegistreringSomId]]])
-
-slots.dokumentbeskrivelse__tilknyttetAv = Slot(uri=ARK.tilknyttetAv, name="dokumentbeskrivelse__tilknyttetAv", curie=ARK.curie('tilknyttetAv'),
-                   model_uri=ARK.dokumentbeskrivelse__tilknyttetAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.dokumentbeskrivelse__opprettetAv = Slot(uri=ARK.opprettetAv, name="dokumentbeskrivelse__opprettetAv", curie=ARK.curie('opprettetAv'),
-                   model_uri=ARK.dokumentbeskrivelse__opprettetAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.dokumentobjekt__filstorrelse = Slot(uri=ARK.filstorrelse, name="dokumentobjekt__filstorrelse", curie=ARK.curie('filstorrelse'),
-                   model_uri=ARK.dokumentobjekt__filstorrelse, domain=None, range=Optional[str])
-
-slots.dokumentobjekt__formatDetaljer = Slot(uri=ARK.formatDetaljer, name="dokumentobjekt__formatDetaljer", curie=ARK.curie('formatDetaljer'),
-                   model_uri=ARK.dokumentobjekt__formatDetaljer, domain=None, range=Optional[str])
-
-slots.dokumentobjekt__sjekksum = Slot(uri=ARK.sjekksum, name="dokumentobjekt__sjekksum", curie=ARK.curie('sjekksum'),
-                   model_uri=ARK.dokumentobjekt__sjekksum, domain=None, range=Optional[str])
-
-slots.dokumentobjekt__sjekksumAlgoritme = Slot(uri=ARK.sjekksumAlgoritme, name="dokumentobjekt__sjekksumAlgoritme", curie=ARK.curie('sjekksumAlgoritme'),
-                   model_uri=ARK.dokumentobjekt__sjekksumAlgoritme, domain=None, range=Optional[str])
-
-slots.dokumentobjekt__versjonsnummer = Slot(uri=ARK.versjonsnummer, name="dokumentobjekt__versjonsnummer", curie=ARK.curie('versjonsnummer'),
-                   model_uri=ARK.dokumentobjekt__versjonsnummer, domain=None, range=Optional[int])
-
-slots.dokumentobjekt__filformat = Slot(uri=ARK.filformat, name="dokumentobjekt__filformat", curie=ARK.curie('filformat'),
-                   model_uri=ARK.dokumentobjekt__filformat, domain=None, range=Optional[Union[str, FormatId]])
-
-slots.dokumentobjekt__variantFormat = Slot(uri=ARK.variantFormat, name="dokumentobjekt__variantFormat", curie=ARK.curie('variantFormat'),
-                   model_uri=ARK.dokumentobjekt__variantFormat, domain=None, range=Union[str, VariantformatId])
-
-slots.dokumentobjekt__opprettetAv = Slot(uri=ARK.opprettetAv, name="dokumentobjekt__opprettetAv", curie=ARK.curie('opprettetAv'),
-                   model_uri=ARK.dokumentobjekt__opprettetAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.dokumentobjekt__referanseDokumentfil = Slot(uri=ARK.referanseDokumentfil, name="dokumentobjekt__referanseDokumentfil", curie=ARK.curie('referanseDokumentfil'),
-                   model_uri=ARK.dokumentobjekt__referanseDokumentfil, domain=None, range=Optional[Union[str, DokumentfilId]])
-
-slots.klasse__klasseId = Slot(uri=ARK.klasseId, name="klasse__klasseId", curie=ARK.curie('klasseId'),
-                   model_uri=ARK.klasse__klasseId, domain=None, range=str)
-
-slots.klasse__rekkefølge = Slot(uri=ARK.rekkefolge, name="klasse__rekkefølge", curie=ARK.curie('rekkefolge'),
-                   model_uri=ARK.klasse__rekkefølge, domain=None, range=Optional[int])
-
-slots.klasse__skjerming = Slot(uri=ARK.skjerming, name="klasse__skjerming", curie=ARK.curie('skjerming'),
-                   model_uri=ARK.klasse__skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
-
-slots.klasse__tittel = Slot(uri=ARK.tittel, name="klasse__tittel", curie=ARK.curie('tittel'),
-                   model_uri=ARK.klasse__tittel, domain=None, range=str)
-
-slots.klasse__klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="klasse__klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
-                   model_uri=ARK.klasse__klassifikasjonssystem, domain=None, range=Union[str, KlassifikasjonssystemId])
-
-slots.korrespondansepart__adresse = Slot(uri=ARK.adresse, name="korrespondansepart__adresse", curie=ARK.curie('adresse'),
-                   model_uri=ARK.korrespondansepart__adresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.korrespondansepart__foedselsnummer = Slot(uri=ARK.foedselsnummer, name="korrespondansepart__foedselsnummer", curie=ARK.curie('foedselsnummer'),
-                   model_uri=ARK.korrespondansepart__foedselsnummer, domain=None, range=Optional[str])
-
-slots.korrespondansepart__kontaktinformasjon = Slot(uri=ARK.kontaktinformasjon, name="korrespondansepart__kontaktinformasjon", curie=ARK.curie('kontaktinformasjon'),
-                   model_uri=ARK.korrespondansepart__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
-
-slots.korrespondansepart__kontaktperson = Slot(uri=ARK.kontaktperson, name="korrespondansepart__kontaktperson", curie=ARK.curie('kontaktperson'),
-                   model_uri=ARK.korrespondansepart__kontaktperson, domain=None, range=Optional[str])
-
-slots.korrespondansepart__korrespondansepartNavn = Slot(uri=ARK.korrespondansepartNavn, name="korrespondansepart__korrespondansepartNavn", curie=ARK.curie('korrespondansepartNavn'),
-                   model_uri=ARK.korrespondansepart__korrespondansepartNavn, domain=None, range=Optional[str])
-
-slots.korrespondansepart__organisasjonsnummer = Slot(uri=ARK.organisasjonsnummer, name="korrespondansepart__organisasjonsnummer", curie=ARK.curie('organisasjonsnummer'),
-                   model_uri=ARK.korrespondansepart__organisasjonsnummer, domain=None, range=Optional[str])
-
-slots.korrespondansepart__skjerming = Slot(uri=ARK.skjerming, name="korrespondansepart__skjerming", curie=ARK.curie('skjerming'),
-                   model_uri=ARK.korrespondansepart__skjerming, domain=None, range=Optional[Union[dict, Skjerming]])
-
-slots.korrespondansepart__korrespondanseparttype = Slot(uri=ARK.korrespondanseparttype, name="korrespondansepart__korrespondanseparttype", curie=ARK.curie('korrespondanseparttype'),
-                   model_uri=ARK.korrespondansepart__korrespondanseparttype, domain=None, range=Union[str, KorrespondansepartTypeId])
-
-slots.merknad__merknadsdato = Slot(uri=ARK.merknadsdato, name="merknad__merknadsdato", curie=ARK.curie('merknadsdato'),
-                   model_uri=ARK.merknad__merknadsdato, domain=None, range=Union[str, XSDDateTime])
-
-slots.merknad__merknadstekst = Slot(uri=ARK.merknadstekst, name="merknad__merknadstekst", curie=ARK.curie('merknadstekst'),
-                   model_uri=ARK.merknad__merknadstekst, domain=None, range=str)
-
-slots.merknad__merknadstype = Slot(uri=ARK.merknadstype, name="merknad__merknadstype", curie=ARK.curie('merknadstype'),
-                   model_uri=ARK.merknad__merknadstype, domain=None, range=Union[str, MerknadstypeId])
-
-slots.merknad__merknadRegistrertAv = Slot(uri=ARK.merknadRegistrertAv, name="merknad__merknadRegistrertAv", curie=ARK.curie('merknadRegistrertAv'),
-                   model_uri=ARK.merknad__merknadRegistrertAv, domain=None, range=Union[str, ArkivressursId])
-
-slots.part__adresse = Slot(uri=ARK.adresse, name="part__adresse", curie=ARK.curie('adresse'),
-                   model_uri=ARK.part__adresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.part__foedselsnummer = Slot(uri=ARK.foedselsnummer, name="part__foedselsnummer", curie=ARK.curie('foedselsnummer'),
-                   model_uri=ARK.part__foedselsnummer, domain=None, range=Optional[str])
-
-slots.part__kontaktinformasjon = Slot(uri=ARK.kontaktinformasjon, name="part__kontaktinformasjon", curie=ARK.curie('kontaktinformasjon'),
-                   model_uri=ARK.part__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
-
-slots.part__kontaktperson = Slot(uri=ARK.kontaktperson, name="part__kontaktperson", curie=ARK.curie('kontaktperson'),
-                   model_uri=ARK.part__kontaktperson, domain=None, range=Optional[str])
-
-slots.part__organisasjonsnummer = Slot(uri=ARK.organisasjonsnummer, name="part__organisasjonsnummer", curie=ARK.curie('organisasjonsnummer'),
-                   model_uri=ARK.part__organisasjonsnummer, domain=None, range=Optional[str])
-
-slots.part__partNavn = Slot(uri=ARK.partNavn, name="part__partNavn", curie=ARK.curie('partNavn'),
-                   model_uri=ARK.part__partNavn, domain=None, range=str)
-
-slots.part__partRolle = Slot(uri=ARK.partRolle, name="part__partRolle", curie=ARK.curie('partRolle'),
-                   model_uri=ARK.part__partRolle, domain=None, range=Optional[Union[str, PartRolleId]])
-
-slots.skjerming__skjermingshjemmel = Slot(uri=ARK.skjermingshjemmel, name="skjerming__skjermingshjemmel", curie=ARK.curie('skjermingshjemmel'),
-                   model_uri=ARK.skjerming__skjermingshjemmel, domain=None, range=Union[str, SkjermingshjemmelId])
-
-slots.skjerming__tilgangsrestriksjon = Slot(uri=ARK.tilgangsrestriksjon, name="skjerming__tilgangsrestriksjon", curie=ARK.curie('tilgangsrestriksjon'),
-                   model_uri=ARK.skjerming__tilgangsrestriksjon, domain=None, range=Union[str, TilgangsrestriksjonId])
-
-slots.dokumentStatus__kode = Slot(uri=ARK.kode, name="dokumentStatus__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.dokumentStatus__kode, domain=None, range=str)
-
-slots.dokumentStatus__navn = Slot(uri=ARK.navn, name="dokumentStatus__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.dokumentStatus__navn, domain=None, range=str)
-
-slots.dokumentStatus__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="dokumentStatus__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.dokumentStatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.dokumentStatus__passiv = Slot(uri=ARK.passiv, name="dokumentStatus__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.dokumentStatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.dokumentType__kode = Slot(uri=ARK.kode, name="dokumentType__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.dokumentType__kode, domain=None, range=str)
-
-slots.dokumentType__navn = Slot(uri=ARK.navn, name="dokumentType__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.dokumentType__navn, domain=None, range=str)
-
-slots.dokumentType__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="dokumentType__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.dokumentType__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.dokumentType__passiv = Slot(uri=ARK.passiv, name="dokumentType__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.dokumentType__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.format__kode = Slot(uri=ARK.kode, name="format__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.format__kode, domain=None, range=str)
-
-slots.format__navn = Slot(uri=ARK.navn, name="format__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.format__navn, domain=None, range=str)
-
-slots.format__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="format__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.format__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.format__passiv = Slot(uri=ARK.passiv, name="format__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.format__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.journalpostType__kode = Slot(uri=ARK.kode, name="journalpostType__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.journalpostType__kode, domain=None, range=str)
-
-slots.journalpostType__navn = Slot(uri=ARK.navn, name="journalpostType__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.journalpostType__navn, domain=None, range=str)
-
-slots.journalpostType__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="journalpostType__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.journalpostType__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.journalpostType__passiv = Slot(uri=ARK.passiv, name="journalpostType__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.journalpostType__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.journalStatus__kode = Slot(uri=ARK.kode, name="journalStatus__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.journalStatus__kode, domain=None, range=str)
-
-slots.journalStatus__navn = Slot(uri=ARK.navn, name="journalStatus__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.journalStatus__navn, domain=None, range=str)
-
-slots.journalStatus__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="journalStatus__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.journalStatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.journalStatus__passiv = Slot(uri=ARK.passiv, name="journalStatus__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.journalStatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.klassifikasjonstype__kode = Slot(uri=ARK.kode, name="klassifikasjonstype__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.klassifikasjonstype__kode, domain=None, range=str)
-
-slots.klassifikasjonstype__navn = Slot(uri=ARK.navn, name="klassifikasjonstype__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.klassifikasjonstype__navn, domain=None, range=str)
-
-slots.klassifikasjonstype__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="klassifikasjonstype__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.klassifikasjonstype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.klassifikasjonstype__passiv = Slot(uri=ARK.passiv, name="klassifikasjonstype__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.klassifikasjonstype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.korrespondansepartType__kode = Slot(uri=ARK.kode, name="korrespondansepartType__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.korrespondansepartType__kode, domain=None, range=str)
-
-slots.korrespondansepartType__navn = Slot(uri=ARK.navn, name="korrespondansepartType__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.korrespondansepartType__navn, domain=None, range=str)
-
-slots.korrespondansepartType__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="korrespondansepartType__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.korrespondansepartType__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.korrespondansepartType__passiv = Slot(uri=ARK.passiv, name="korrespondansepartType__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.korrespondansepartType__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.merknadstype__kode = Slot(uri=ARK.kode, name="merknadstype__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.merknadstype__kode, domain=None, range=str)
-
-slots.merknadstype__navn = Slot(uri=ARK.navn, name="merknadstype__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.merknadstype__navn, domain=None, range=str)
-
-slots.merknadstype__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="merknadstype__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.merknadstype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.merknadstype__passiv = Slot(uri=ARK.passiv, name="merknadstype__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.merknadstype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.partRolle__kode = Slot(uri=ARK.kode, name="partRolle__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.partRolle__kode, domain=None, range=str)
-
-slots.partRolle__navn = Slot(uri=ARK.navn, name="partRolle__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.partRolle__navn, domain=None, range=str)
-
-slots.partRolle__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="partRolle__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.partRolle__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.partRolle__passiv = Slot(uri=ARK.passiv, name="partRolle__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.partRolle__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.rolle__kode = Slot(uri=ARK.kode, name="rolle__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.rolle__kode, domain=None, range=str)
-
-slots.rolle__navn = Slot(uri=ARK.navn, name="rolle__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.rolle__navn, domain=None, range=str)
-
-slots.rolle__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="rolle__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.rolle__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.rolle__passiv = Slot(uri=ARK.passiv, name="rolle__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.rolle__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.saksmappetype__kode = Slot(uri=ARK.kode, name="saksmappetype__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.saksmappetype__kode, domain=None, range=str)
-
-slots.saksmappetype__navn = Slot(uri=ARK.navn, name="saksmappetype__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.saksmappetype__navn, domain=None, range=str)
-
-slots.saksmappetype__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="saksmappetype__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.saksmappetype__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.saksmappetype__passiv = Slot(uri=ARK.passiv, name="saksmappetype__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.saksmappetype__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.saksstatus__kode = Slot(uri=ARK.kode, name="saksstatus__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.saksstatus__kode, domain=None, range=str)
-
-slots.saksstatus__navn = Slot(uri=ARK.navn, name="saksstatus__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.saksstatus__navn, domain=None, range=str)
-
-slots.saksstatus__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="saksstatus__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.saksstatus__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.saksstatus__passiv = Slot(uri=ARK.passiv, name="saksstatus__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.saksstatus__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.skjermingshjemmel__kode = Slot(uri=ARK.kode, name="skjermingshjemmel__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.skjermingshjemmel__kode, domain=None, range=str)
-
-slots.skjermingshjemmel__navn = Slot(uri=ARK.navn, name="skjermingshjemmel__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.skjermingshjemmel__navn, domain=None, range=str)
-
-slots.skjermingshjemmel__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="skjermingshjemmel__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.skjermingshjemmel__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.skjermingshjemmel__passiv = Slot(uri=ARK.passiv, name="skjermingshjemmel__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.skjermingshjemmel__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.tilgangsgruppe__kode = Slot(uri=ARK.kode, name="tilgangsgruppe__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.tilgangsgruppe__kode, domain=None, range=str)
-
-slots.tilgangsgruppe__navn = Slot(uri=ARK.navn, name="tilgangsgruppe__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.tilgangsgruppe__navn, domain=None, range=str)
-
-slots.tilgangsgruppe__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="tilgangsgruppe__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.tilgangsgruppe__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.tilgangsgruppe__passiv = Slot(uri=ARK.passiv, name="tilgangsgruppe__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.tilgangsgruppe__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.tilgangsrestriksjon__kode = Slot(uri=ARK.kode, name="tilgangsrestriksjon__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.tilgangsrestriksjon__kode, domain=None, range=str)
-
-slots.tilgangsrestriksjon__navn = Slot(uri=ARK.navn, name="tilgangsrestriksjon__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.tilgangsrestriksjon__navn, domain=None, range=str)
-
-slots.tilgangsrestriksjon__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="tilgangsrestriksjon__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.tilgangsrestriksjon__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.tilgangsrestriksjon__passiv = Slot(uri=ARK.passiv, name="tilgangsrestriksjon__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.tilgangsrestriksjon__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.tilknyttetRegistreringSom__kode = Slot(uri=ARK.kode, name="tilknyttetRegistreringSom__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.tilknyttetRegistreringSom__kode, domain=None, range=str)
-
-slots.tilknyttetRegistreringSom__navn = Slot(uri=ARK.navn, name="tilknyttetRegistreringSom__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.tilknyttetRegistreringSom__navn, domain=None, range=str)
-
-slots.tilknyttetRegistreringSom__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="tilknyttetRegistreringSom__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.tilknyttetRegistreringSom__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.tilknyttetRegistreringSom__passiv = Slot(uri=ARK.passiv, name="tilknyttetRegistreringSom__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.tilknyttetRegistreringSom__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.variantformat__kode = Slot(uri=ARK.kode, name="variantformat__kode", curie=ARK.curie('kode'),
-                   model_uri=ARK.variantformat__kode, domain=None, range=str)
-
-slots.variantformat__navn = Slot(uri=ARK.navn, name="variantformat__navn", curie=ARK.curie('navn'),
-                   model_uri=ARK.variantformat__navn, domain=None, range=str)
-
-slots.variantformat__gyldighetsperiode = Slot(uri=ARK.gyldighetsperiode, name="variantformat__gyldighetsperiode", curie=ARK.curie('gyldighetsperiode'),
-                   model_uri=ARK.variantformat__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.variantformat__passiv = Slot(uri=ARK.passiv, name="variantformat__passiv", curie=ARK.curie('passiv'),
-                   model_uri=ARK.variantformat__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.aktoer__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="aktoer__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=ARK.aktoer__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
-
-slots.aktoer__postadresse = Slot(uri=FINT.postadresse, name="aktoer__postadresse", curie=FINT.curie('postadresse'),
-                   model_uri=ARK.aktoer__postadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.begrep__kode = Slot(uri=FINT.kode, name="begrep__kode", curie=FINT.curie('kode'),
-                   model_uri=ARK.begrep__kode, domain=None, range=str)
-
-slots.begrep__navn = Slot(uri=FINT.navn, name="begrep__navn", curie=FINT.curie('navn'),
-                   model_uri=ARK.begrep__navn, domain=None, range=str)
-
-slots.begrep__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="begrep__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=ARK.begrep__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.begrep__passiv = Slot(uri=FINT.passiv, name="begrep__passiv", curie=FINT.curie('passiv'),
-                   model_uri=ARK.begrep__passiv, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.enhet__forretningsadresse = Slot(uri=FINT.forretningsadresse, name="enhet__forretningsadresse", curie=FINT.curie('forretningsadresse'),
-                   model_uri=ARK.enhet__forretningsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.enhet__organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="enhet__organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
-                   model_uri=ARK.enhet__organisasjonsnavn, domain=None, range=Optional[str])
-
-slots.enhet__organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="enhet__organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
-                   model_uri=ARK.enhet__organisasjonsnummer, domain=None, range=Optional[Union[dict, Identifikator]])
-
-slots.identifikator__identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="identifikator__identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
-                   model_uri=ARK.identifikator__identifikatorverdi, domain=None, range=str)
-
-slots.identifikator__gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="identifikator__gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
-                   model_uri=ARK.identifikator__gyldighetsperiode, domain=None, range=Optional[Union[dict, Periode]])
-
-slots.periode__beskrivelse = Slot(uri=FINT.beskrivelse, name="periode__beskrivelse", curie=FINT.curie('beskrivelse'),
-                   model_uri=ARK.periode__beskrivelse, domain=None, range=Optional[str])
-
-slots.periode__start = Slot(uri=FINT.start, name="periode__start", curie=FINT.curie('start'),
-                   model_uri=ARK.periode__start, domain=None, range=Union[str, XSDDateTime])
-
-slots.periode__slutt = Slot(uri=FINT.slutt, name="periode__slutt", curie=FINT.curie('slutt'),
-                   model_uri=ARK.periode__slutt, domain=None, range=Optional[Union[str, XSDDateTime]])
-
-slots.personnavn__fornavn = Slot(uri=FINT.fornavn, name="personnavn__fornavn", curie=FINT.curie('fornavn'),
-                   model_uri=ARK.personnavn__fornavn, domain=None, range=str)
-
-slots.personnavn__mellomnavn = Slot(uri=FINT.mellomnavn, name="personnavn__mellomnavn", curie=FINT.curie('mellomnavn'),
-                   model_uri=ARK.personnavn__mellomnavn, domain=None, range=Optional[str])
-
-slots.personnavn__etternavn = Slot(uri=FINT.etternavn, name="personnavn__etternavn", curie=FINT.curie('etternavn'),
-                   model_uri=ARK.personnavn__etternavn, domain=None, range=str)
-
-slots.kontaktinformasjon__epostadresse = Slot(uri=FINT.epostadresse, name="kontaktinformasjon__epostadresse", curie=FINT.curie('epostadresse'),
-                   model_uri=ARK.kontaktinformasjon__epostadresse, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__mobiltelefonnummer = Slot(uri=FINT.mobiltelefonnummer, name="kontaktinformasjon__mobiltelefonnummer", curie=FINT.curie('mobiltelefonnummer'),
-                   model_uri=ARK.kontaktinformasjon__mobiltelefonnummer, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__nettsted = Slot(uri=FINT.nettsted, name="kontaktinformasjon__nettsted", curie=FINT.curie('nettsted'),
-                   model_uri=ARK.kontaktinformasjon__nettsted, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__sip = Slot(uri=FINT.sip, name="kontaktinformasjon__sip", curie=FINT.curie('sip'),
-                   model_uri=ARK.kontaktinformasjon__sip, domain=None, range=Optional[str])
-
-slots.kontaktinformasjon__telefonnummer = Slot(uri=FINT.telefonnummer, name="kontaktinformasjon__telefonnummer", curie=FINT.curie('telefonnummer'),
-                   model_uri=ARK.kontaktinformasjon__telefonnummer, domain=None, range=Optional[str])
-
-slots.adresse__adresselinje = Slot(uri=FINT.adresselinje, name="adresse__adresselinje", curie=FINT.curie('adresselinje'),
-                   model_uri=ARK.adresse__adresselinje, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.adresse__postnummer = Slot(uri=FINT.postnummer, name="adresse__postnummer", curie=FINT.curie('postnummer'),
-                   model_uri=ARK.adresse__postnummer, domain=None, range=Optional[str])
-
-slots.adresse__poststed = Slot(uri=FINT.poststed, name="adresse__poststed", curie=FINT.curie('poststed'),
-                   model_uri=ARK.adresse__poststed, domain=None, range=Optional[str])
-
-slots.adresse__land = Slot(uri=FINT.land, name="adresse__land", curie=FINT.curie('land'),
-                   model_uri=ARK.adresse__land, domain=None, range=Optional[Union[str, LandkodeId]])
-
-slots.matrikkelnummer__adresse = Slot(uri=FINT.adresse, name="matrikkelnummer__adresse", curie=FINT.curie('adresse'),
-                   model_uri=ARK.matrikkelnummer__adresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.matrikkelnummer__bruksnummer = Slot(uri=FINT.bruksnummer, name="matrikkelnummer__bruksnummer", curie=FINT.curie('bruksnummer'),
-                   model_uri=ARK.matrikkelnummer__bruksnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__festenummer = Slot(uri=FINT.festenummer, name="matrikkelnummer__festenummer", curie=FINT.curie('festenummer'),
-                   model_uri=ARK.matrikkelnummer__festenummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__gaardsnummer = Slot(uri=FINT.gaardsnummer, name="matrikkelnummer__gaardsnummer", curie=FINT.curie('gaardsnummer'),
-                   model_uri=ARK.matrikkelnummer__gaardsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__seksjonsnummer = Slot(uri=FINT.seksjonsnummer, name="matrikkelnummer__seksjonsnummer", curie=FINT.curie('seksjonsnummer'),
-                   model_uri=ARK.matrikkelnummer__seksjonsnummer, domain=None, range=Optional[str])
-
-slots.matrikkelnummer__kommunenummer = Slot(uri=FINT.kommunenummer, name="matrikkelnummer__kommunenummer", curie=FINT.curie('kommunenummer'),
-                   model_uri=ARK.matrikkelnummer__kommunenummer, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.fylke__kommune = Slot(uri=FINT.kommune, name="fylke__kommune", curie=FINT.curie('kommune'),
-                   model_uri=ARK.fylke__kommune, domain=None, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
-
-slots.kommune__fylke = Slot(uri=FINT.fylke, name="kommune__fylke", curie=FINT.curie('fylke'),
-                   model_uri=ARK.kommune__fylke, domain=None, range=Union[str, FylkeId])
-
-slots.valuta__bokstavkode = Slot(uri=FINT.bokstavkode, name="valuta__bokstavkode", curie=FINT.curie('bokstavkode'),
-                   model_uri=ARK.valuta__bokstavkode, domain=None, range=Union[dict, Identifikator])
-
-slots.valuta__navn = Slot(uri=FINT.valutaNavn, name="valuta__navn", curie=FINT.curie('valutaNavn'),
-                   model_uri=ARK.valuta__navn, domain=None, range=str)
-
-slots.valuta__nummerkode = Slot(uri=FINT.nummerkode, name="valuta__nummerkode", curie=FINT.curie('nummerkode'),
-                   model_uri=ARK.valuta__nummerkode, domain=None, range=Union[dict, Identifikator])
-
-slots.person__bilde = Slot(uri=FINT.bilde, name="person__bilde", curie=FINT.curie('bilde'),
-                   model_uri=ARK.person__bilde, domain=None, range=Optional[str])
-
-slots.person__bostedsadresse = Slot(uri=FINT.bostedsadresse, name="person__bostedsadresse", curie=FINT.curie('bostedsadresse'),
-                   model_uri=ARK.person__bostedsadresse, domain=None, range=Optional[Union[dict, Adresse]])
-
-slots.person__fodselsdato = Slot(uri=FINT.fodselsdato, name="person__fodselsdato", curie=FINT.curie('fodselsdato'),
-                   model_uri=ARK.person__fodselsdato, domain=None, range=Optional[Union[str, XSDDate]])
-
-slots.person__fodselsnummer = Slot(uri=FINT.fodselsnummer, name="person__fodselsnummer", curie=FINT.curie('fodselsnummer'),
-                   model_uri=ARK.person__fodselsnummer, domain=None, range=Union[dict, Identifikator])
-
-slots.person__navn = Slot(uri=FINT.personNavn, name="person__navn", curie=FINT.curie('personNavn'),
-                   model_uri=ARK.person__navn, domain=None, range=Union[dict, Personnavn])
-
-slots.person__parorende = Slot(uri=FINT.parorende, name="person__parorende", curie=FINT.curie('parorende'),
-                   model_uri=ARK.person__parorende, domain=None, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
-
-slots.person__statsborgerskap = Slot(uri=FINT.statsborgerskap, name="person__statsborgerskap", curie=FINT.curie('statsborgerskap'),
-                   model_uri=ARK.person__statsborgerskap, domain=None, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
-
-slots.person__kommune = Slot(uri=FINT.kommune, name="person__kommune", curie=FINT.curie('kommune'),
-                   model_uri=ARK.person__kommune, domain=None, range=Optional[Union[str, KommuneId]])
-
-slots.person__kjonn = Slot(uri=FINT.kjonn, name="person__kjonn", curie=FINT.curie('kjonn'),
-                   model_uri=ARK.person__kjonn, domain=None, range=Optional[Union[str, KjonnId]])
-
-slots.person__foreldreansvar = Slot(uri=FINT.foreldreansvar, name="person__foreldreansvar", curie=FINT.curie('foreldreansvar'),
-                   model_uri=ARK.person__foreldreansvar, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__foreldre = Slot(uri=FINT.foreldre, name="person__foreldre", curie=FINT.curie('foreldre'),
-                   model_uri=ARK.person__foreldre, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
-
-slots.person__maalform = Slot(uri=FINT.maalform, name="person__maalform", curie=FINT.curie('maalform'),
-                   model_uri=ARK.person__maalform, domain=None, range=Optional[Union[str, SpraakId]])
+slots.virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=ARK.virksomhetsId, domain=None, range=Optional[Union[dict, Identifikator]])
 
 slots.person__personalressurs = Slot(uri=FINT.personalressurs, name="person__personalressurs", curie=FINT.curie('personalressurs'),
                    model_uri=ARK.person__personalressurs, domain=None, range=Optional[Union[str, URIorCURIE]])
 
-slots.person__morsmaal = Slot(uri=FINT.morsmaal, name="person__morsmaal", curie=FINT.curie('morsmaal'),
-                   model_uri=ARK.person__morsmaal, domain=None, range=Optional[Union[str, SpraakId]])
+slots.ArkivContainer_klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="ArkivContainer_klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
+                   model_uri=ARK.ArkivContainer_klassifikasjonssystem, domain=ArkivContainer, range=Optional[Union[dict[Union[str, KlassifikasjonssystemId], Union[dict, "Klassifikasjonssystem"]], list[Union[dict, "Klassifikasjonssystem"]]]])
 
-slots.person__laerling = Slot(uri=FINT.laerling, name="person__laerling", curie=FINT.curie('laerling'),
-                   model_uri=ARK.person__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.Mappe_avsluttetDato = Slot(uri=ARK.avsluttetDato, name="Mappe_avsluttetDato", curie=ARK.curie('avsluttetDato'),
+                   model_uri=ARK.Mappe_avsluttetDato, domain=Mappe, range=Optional[Union[str, XSDDateTime]])
 
-slots.person__elev = Slot(uri=FINT.elev, name="person__elev", curie=FINT.curie('elev'),
-                   model_uri=ARK.person__elev, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.Mappe_beskrivelse = Slot(uri=FINT.beskrivelse, name="Mappe_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=ARK.Mappe_beskrivelse, domain=Mappe, range=Optional[str])
 
-slots.person__otungdom = Slot(uri=FINT.otungdom, name="person__otungdom", curie=FINT.curie('otungdom'),
-                   model_uri=ARK.person__otungdom, domain=None, range=Optional[Union[str, URIorCURIE]])
+slots.Mappe_klasse = Slot(uri=ARK.klasse, name="Mappe_klasse", curie=ARK.curie('klasse'),
+                   model_uri=ARK.Mappe_klasse, domain=Mappe, range=Optional[Union[Union[dict, "Klasse"], list[Union[dict, "Klasse"]]]])
 
-slots.kontaktperson__kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="kontaktperson__kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
-                   model_uri=ARK.kontaktperson__kontaktinformasjon, domain=None, range=Optional[Union[dict, Kontaktinformasjon]])
+slots.Mappe_mappeId = Slot(uri=ARK.mappeId, name="Mappe_mappeId", curie=ARK.curie('mappeId'),
+                   model_uri=ARK.Mappe_mappeId, domain=Mappe, range=Optional[Union[dict, "Identifikator"]])
 
-slots.kontaktperson__navn = Slot(uri=FINT.kontaktpersonNavn, name="kontaktperson__navn", curie=FINT.curie('kontaktpersonNavn'),
-                   model_uri=ARK.kontaktperson__navn, domain=None, range=Optional[Union[dict, Personnavn]])
+slots.Mappe_merknad = Slot(uri=ARK.merknad, name="Mappe_merknad", curie=ARK.curie('merknad'),
+                   model_uri=ARK.Mappe_merknad, domain=Mappe, range=Optional[Union[Union[dict, "Merknad"], list[Union[dict, "Merknad"]]]])
 
-slots.kontaktperson__type = Slot(uri=FINT.type, name="kontaktperson__type", curie=FINT.curie('type'),
-                   model_uri=ARK.kontaktperson__type, domain=None, range=str)
+slots.Mappe_noekkelord = Slot(uri=ARK.noekkelord, name="Mappe_noekkelord", curie=ARK.curie('noekkelord'),
+                   model_uri=ARK.Mappe_noekkelord, domain=Mappe, range=Optional[Union[str, list[str]]])
 
-slots.kontaktperson__kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="kontaktperson__kontaktperson", curie=FINT.curie('kontaktpersonFor'),
-                   model_uri=ARK.kontaktperson__kontaktperson, domain=None, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+slots.Mappe_offentligTittel = Slot(uri=ARK.offentligTittel, name="Mappe_offentligTittel", curie=ARK.curie('offentligTittel'),
+                   model_uri=ARK.Mappe_offentligTittel, domain=Mappe, range=Optional[str])
 
-slots.virksomhet__virksomhetsId = Slot(uri=FINT.virksomhetsId, name="virksomhet__virksomhetsId", curie=FINT.curie('virksomhetsId'),
-                   model_uri=ARK.virksomhet__virksomhetsId, domain=None, range=Union[dict, Identifikator])
+slots.Mappe_opprettetDato = Slot(uri=ARK.opprettetDato, name="Mappe_opprettetDato", curie=ARK.curie('opprettetDato'),
+                   model_uri=ARK.Mappe_opprettetDato, domain=Mappe, range=Optional[Union[str, XSDDateTime]])
 
-slots.virksomhet__laerling = Slot(uri=FINT.laerling, name="virksomhet__laerling", curie=FINT.curie('laerling'),
-                   model_uri=ARK.virksomhet__laerling, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+slots.Mappe_part = Slot(uri=ARK.part, name="Mappe_part", curie=ARK.curie('part'),
+                   model_uri=ARK.Mappe_part, domain=Mappe, range=Optional[Union[Union[dict, "Part"], list[Union[dict, "Part"]]]])
+
+slots.Mappe_skjerming = Slot(uri=ARK.skjerming, name="Mappe_skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.Mappe_skjerming, domain=Mappe, range=Optional[Union[dict, "Skjerming"]])
+
+slots.Mappe_tittel = Slot(uri=ARK.tittel, name="Mappe_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Mappe_tittel, domain=Mappe, range=Optional[str])
+
+slots.Mappe_arkivdel = Slot(uri=ARK.arkivdel, name="Mappe_arkivdel", curie=ARK.curie('arkivdel'),
+                   model_uri=ARK.Mappe_arkivdel, domain=Mappe, range=Optional[Union[str, ArkivdelId]])
+
+slots.Mappe_avsluttetAv = Slot(uri=ARK.avsluttetAv, name="Mappe_avsluttetAv", curie=ARK.curie('avsluttetAv'),
+                   model_uri=ARK.Mappe_avsluttetAv, domain=Mappe, range=Optional[Union[str, ArkivressursId]])
+
+slots.Mappe_opprettetAv = Slot(uri=ARK.opprettetAv, name="Mappe_opprettetAv", curie=ARK.curie('opprettetAv'),
+                   model_uri=ARK.Mappe_opprettetAv, domain=Mappe, range=Union[str, ArkivressursId])
+
+slots.Saksmappe_journalpost = Slot(uri=ARK.journalpost, name="Saksmappe_journalpost", curie=ARK.curie('journalpost'),
+                   model_uri=ARK.Saksmappe_journalpost, domain=Saksmappe, range=Optional[Union[Union[str, JournalpostId], list[Union[str, JournalpostId]]]])
+
+slots.Saksmappe_saksaar = Slot(uri=ARK.saksaar, name="Saksmappe_saksaar", curie=ARK.curie('saksaar'),
+                   model_uri=ARK.Saksmappe_saksaar, domain=Saksmappe, range=Optional[str])
+
+slots.Saksmappe_saksdato = Slot(uri=ARK.saksdato, name="Saksmappe_saksdato", curie=ARK.curie('saksdato'),
+                   model_uri=ARK.Saksmappe_saksdato, domain=Saksmappe, range=Optional[Union[str, XSDDateTime]])
+
+slots.Saksmappe_sakssekvensnummer = Slot(uri=ARK.sakssekvensnummer, name="Saksmappe_sakssekvensnummer", curie=ARK.curie('sakssekvensnummer'),
+                   model_uri=ARK.Saksmappe_sakssekvensnummer, domain=Saksmappe, range=Optional[str])
+
+slots.Saksmappe_utlaantDato = Slot(uri=ARK.utlaantDato, name="Saksmappe_utlaantDato", curie=ARK.curie('utlaantDato'),
+                   model_uri=ARK.Saksmappe_utlaantDato, domain=Saksmappe, range=Optional[Union[str, XSDDateTime]])
+
+slots.Saksmappe_saksmappetype = Slot(uri=ARK.saksmappetype, name="Saksmappe_saksmappetype", curie=ARK.curie('saksmappetype'),
+                   model_uri=ARK.Saksmappe_saksmappetype, domain=Saksmappe, range=Optional[Union[str, SaksmappetypeId]])
+
+slots.Saksmappe_saksstatus = Slot(uri=ARK.saksstatus, name="Saksmappe_saksstatus", curie=ARK.curie('saksstatus'),
+                   model_uri=ARK.Saksmappe_saksstatus, domain=Saksmappe, range=Union[str, SaksstatusId])
+
+slots.Saksmappe_tilgangsgruppe = Slot(uri=ARK.tilgangsgruppe, name="Saksmappe_tilgangsgruppe", curie=ARK.curie('tilgangsgruppe'),
+                   model_uri=ARK.Saksmappe_tilgangsgruppe, domain=Saksmappe, range=Optional[Union[str, TilgangsgruppeId]])
+
+slots.Saksmappe_journalenhet = Slot(uri=ARK.journalenhet, name="Saksmappe_journalenhet", curie=ARK.curie('journalenhet'),
+                   model_uri=ARK.Saksmappe_journalenhet, domain=Saksmappe, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.Saksmappe_administrativEnhet = Slot(uri=ARK.administrativEnhet, name="Saksmappe_administrativEnhet", curie=ARK.curie('administrativEnhet'),
+                   model_uri=ARK.Saksmappe_administrativEnhet, domain=Saksmappe, range=Union[str, AdministrativEnhetId])
+
+slots.Saksmappe_saksansvarlig = Slot(uri=ARK.saksansvarlig, name="Saksmappe_saksansvarlig", curie=ARK.curie('saksansvarlig'),
+                   model_uri=ARK.Saksmappe_saksansvarlig, domain=Saksmappe, range=Union[str, ArkivressursId])
+
+slots.Registrering_arkivertDato = Slot(uri=ARK.arkivertDato, name="Registrering_arkivertDato", curie=ARK.curie('arkivertDato'),
+                   model_uri=ARK.Registrering_arkivertDato, domain=Registrering, range=Optional[Union[str, XSDDateTime]])
+
+slots.Registrering_beskrivelse = Slot(uri=FINT.beskrivelse, name="Registrering_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=ARK.Registrering_beskrivelse, domain=Registrering, range=Optional[str])
+
+slots.Registrering_dokumentbeskrivelse = Slot(uri=ARK.dokumentbeskrivelse, name="Registrering_dokumentbeskrivelse", curie=ARK.curie('dokumentbeskrivelse'),
+                   model_uri=ARK.Registrering_dokumentbeskrivelse, domain=Registrering, range=Optional[Union[Union[str, DokumentbeskrivelseId], list[Union[str, DokumentbeskrivelseId]]]])
+
+slots.Registrering_forfatter = Slot(uri=ARK.forfatter, name="Registrering_forfatter", curie=ARK.curie('forfatter'),
+                   model_uri=ARK.Registrering_forfatter, domain=Registrering, range=Optional[Union[str, list[str]]])
+
+slots.Registrering_klasse = Slot(uri=ARK.klasse, name="Registrering_klasse", curie=ARK.curie('klasse'),
+                   model_uri=ARK.Registrering_klasse, domain=Registrering, range=Optional[Union[dict, "Klasse"]])
+
+slots.Registrering_korrespondansepart = Slot(uri=ARK.korrespondansepart, name="Registrering_korrespondansepart", curie=ARK.curie('korrespondansepart'),
+                   model_uri=ARK.Registrering_korrespondansepart, domain=Registrering, range=Optional[Union[Union[dict, "Korrespondansepart"], list[Union[dict, "Korrespondansepart"]]]])
+
+slots.Registrering_merknad = Slot(uri=ARK.merknad, name="Registrering_merknad", curie=ARK.curie('merknad'),
+                   model_uri=ARK.Registrering_merknad, domain=Registrering, range=Optional[Union[Union[dict, "Merknad"], list[Union[dict, "Merknad"]]]])
+
+slots.Registrering_nokkelord = Slot(uri=ARK.nokkelord, name="Registrering_nokkelord", curie=ARK.curie('nokkelord'),
+                   model_uri=ARK.Registrering_nokkelord, domain=Registrering, range=Optional[Union[str, list[str]]])
+
+slots.Registrering_offentligTittel = Slot(uri=ARK.offentligTittel, name="Registrering_offentligTittel", curie=ARK.curie('offentligTittel'),
+                   model_uri=ARK.Registrering_offentligTittel, domain=Registrering, range=Optional[str])
+
+slots.Registrering_opprettetDato = Slot(uri=ARK.opprettetDato, name="Registrering_opprettetDato", curie=ARK.curie('opprettetDato'),
+                   model_uri=ARK.Registrering_opprettetDato, domain=Registrering, range=Optional[Union[str, XSDDateTime]])
+
+slots.Registrering_part = Slot(uri=ARK.part, name="Registrering_part", curie=ARK.curie('part'),
+                   model_uri=ARK.Registrering_part, domain=Registrering, range=Optional[Union[Union[dict, "Part"], list[Union[dict, "Part"]]]])
+
+slots.Registrering_referanseArkivDel = Slot(uri=ARK.referanseArkivDel, name="Registrering_referanseArkivDel", curie=ARK.curie('referanseArkivDel'),
+                   model_uri=ARK.Registrering_referanseArkivDel, domain=Registrering, range=Optional[Union[str, list[str]]])
+
+slots.Registrering_registreringsId = Slot(uri=ARK.registreringsId, name="Registrering_registreringsId", curie=ARK.curie('registreringsId'),
+                   model_uri=ARK.Registrering_registreringsId, domain=Registrering, range=Optional[str])
+
+slots.Registrering_skjerming = Slot(uri=ARK.skjerming, name="Registrering_skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.Registrering_skjerming, domain=Registrering, range=Optional[Union[dict, "Skjerming"]])
+
+slots.Registrering_tittel = Slot(uri=ARK.tittel, name="Registrering_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Registrering_tittel, domain=Registrering, range=str)
+
+slots.Registrering_tilgangsgruppe = Slot(uri=ARK.tilgangsgruppe, name="Registrering_tilgangsgruppe", curie=ARK.curie('tilgangsgruppe'),
+                   model_uri=ARK.Registrering_tilgangsgruppe, domain=Registrering, range=Optional[Union[str, TilgangsgruppeId]])
+
+slots.Registrering_administrativEnhet = Slot(uri=ARK.administrativEnhet, name="Registrering_administrativEnhet", curie=ARK.curie('administrativEnhet'),
+                   model_uri=ARK.Registrering_administrativEnhet, domain=Registrering, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.Registrering_arkivdel = Slot(uri=ARK.arkivdel, name="Registrering_arkivdel", curie=ARK.curie('arkivdel'),
+                   model_uri=ARK.Registrering_arkivdel, domain=Registrering, range=Optional[Union[str, ArkivdelId]])
+
+slots.Registrering_saksbehandler = Slot(uri=ARK.saksbehandler, name="Registrering_saksbehandler", curie=ARK.curie('saksbehandler'),
+                   model_uri=ARK.Registrering_saksbehandler, domain=Registrering, range=Optional[Union[str, ArkivressursId]])
+
+slots.Registrering_arkivertAv = Slot(uri=ARK.arkivertAv, name="Registrering_arkivertAv", curie=ARK.curie('arkivertAv'),
+                   model_uri=ARK.Registrering_arkivertAv, domain=Registrering, range=Union[str, ArkivressursId])
+
+slots.Registrering_opprettetAv = Slot(uri=ARK.opprettetAv, name="Registrering_opprettetAv", curie=ARK.curie('opprettetAv'),
+                   model_uri=ARK.Registrering_opprettetAv, domain=Registrering, range=Union[str, ArkivressursId])
+
+slots.AdministrativEnhet_navn = Slot(uri=FINT.navn, name="AdministrativEnhet_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.AdministrativEnhet_navn, domain=AdministrativEnhet, range=str)
+
+slots.AdministrativEnhet_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="AdministrativEnhet_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.AdministrativEnhet_gyldighetsperiode, domain=AdministrativEnhet, range=Optional[Union[dict, "Periode"]])
+
+slots.AdministrativEnhet_organisasjonselement = Slot(uri=ARK.organisasjonselement, name="AdministrativEnhet_organisasjonselement", curie=ARK.curie('organisasjonselement'),
+                   model_uri=ARK.AdministrativEnhet_organisasjonselement, domain=AdministrativEnhet, range=Optional[Union[str, URIorCURIE]])
+
+slots.Arkivdel_tittel = Slot(uri=ARK.tittel, name="Arkivdel_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Arkivdel_tittel, domain=Arkivdel, range=str)
+
+slots.Arkivdel_klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="Arkivdel_klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
+                   model_uri=ARK.Arkivdel_klassifikasjonssystem, domain=Arkivdel, range=Optional[Union[Union[str, KlassifikasjonssystemId], list[Union[str, KlassifikasjonssystemId]]]])
+
+slots.Arkivressurs_kildesystemId = Slot(uri=ARK.kildesystemId, name="Arkivressurs_kildesystemId", curie=ARK.curie('kildesystemId'),
+                   model_uri=ARK.Arkivressurs_kildesystemId, domain=Arkivressurs, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Arkivressurs_personalressurs = Slot(uri=ARK.personalressurs, name="Arkivressurs_personalressurs", curie=ARK.curie('personalressurs'),
+                   model_uri=ARK.Arkivressurs_personalressurs, domain=Arkivressurs, range=Union[str, URIorCURIE])
+
+slots.Arkivressurs_autorisasjon = Slot(uri=ARK.autorisasjon, name="Arkivressurs_autorisasjon", curie=ARK.curie('autorisasjon'),
+                   model_uri=ARK.Arkivressurs_autorisasjon, domain=Arkivressurs, range=Optional[Union[Union[str, AutorisasjonId], list[Union[str, AutorisasjonId]]]])
+
+slots.Arkivressurs_tilgang = Slot(uri=ARK.tilgang, name="Arkivressurs_tilgang", curie=ARK.curie('tilgang'),
+                   model_uri=ARK.Arkivressurs_tilgang, domain=Arkivressurs, range=Optional[Union[Union[str, TilgangId], list[Union[str, TilgangId]]]])
+
+slots.Autorisasjon_tilgangsrestriksjon = Slot(uri=ARK.tilgangsrestriksjon, name="Autorisasjon_tilgangsrestriksjon", curie=ARK.curie('tilgangsrestriksjon'),
+                   model_uri=ARK.Autorisasjon_tilgangsrestriksjon, domain=Autorisasjon, range=Union[Union[str, TilgangsrestriksjonId], list[Union[str, TilgangsrestriksjonId]]])
+
+slots.Autorisasjon_administrativenhet = Slot(uri=ARK.administrativenhet, name="Autorisasjon_administrativenhet", curie=ARK.curie('administrativenhet'),
+                   model_uri=ARK.Autorisasjon_administrativenhet, domain=Autorisasjon, range=Optional[Union[Union[str, AdministrativEnhetId], list[Union[str, AdministrativEnhetId]]]])
+
+slots.Autorisasjon_arkivressurs = Slot(uri=ARK.arkivressurs, name="Autorisasjon_arkivressurs", curie=ARK.curie('arkivressurs'),
+                   model_uri=ARK.Autorisasjon_arkivressurs, domain=Autorisasjon, range=Optional[Union[Union[str, ArkivressursId], list[Union[str, ArkivressursId]]]])
+
+slots.Dokumentfil_data = Slot(uri=ARK.data, name="Dokumentfil_data", curie=ARK.curie('data'),
+                   model_uri=ARK.Dokumentfil_data, domain=Dokumentfil, range=str)
+
+slots.Dokumentfil_filnavn = Slot(uri=ARK.filnavn, name="Dokumentfil_filnavn", curie=ARK.curie('filnavn'),
+                   model_uri=ARK.Dokumentfil_filnavn, domain=Dokumentfil, range=Optional[str])
+
+slots.Dokumentfil_format = Slot(uri=ARK.format, name="Dokumentfil_format", curie=ARK.curie('format'),
+                   model_uri=ARK.Dokumentfil_format, domain=Dokumentfil, range=str)
+
+slots.Journalpost_antallVedlegg = Slot(uri=ARK.antallVedlegg, name="Journalpost_antallVedlegg", curie=ARK.curie('antallVedlegg'),
+                   model_uri=ARK.Journalpost_antallVedlegg, domain=Journalpost, range=Optional[int])
+
+slots.Journalpost_avskrivning = Slot(uri=ARK.avskrivning, name="Journalpost_avskrivning", curie=ARK.curie('avskrivning'),
+                   model_uri=ARK.Journalpost_avskrivning, domain=Journalpost, range=Optional[Union[dict, "Avskrivning"]])
+
+slots.Journalpost_dokumentetsDato = Slot(uri=ARK.dokumentetsDato, name="Journalpost_dokumentetsDato", curie=ARK.curie('dokumentetsDato'),
+                   model_uri=ARK.Journalpost_dokumentetsDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_forfallsDato = Slot(uri=ARK.forfallsDato, name="Journalpost_forfallsDato", curie=ARK.curie('forfallsDato'),
+                   model_uri=ARK.Journalpost_forfallsDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_journalAr = Slot(uri=ARK.journalAr, name="Journalpost_journalAr", curie=ARK.curie('journalAr'),
+                   model_uri=ARK.Journalpost_journalAr, domain=Journalpost, range=Optional[str])
+
+slots.Journalpost_journalDato = Slot(uri=ARK.journalDato, name="Journalpost_journalDato", curie=ARK.curie('journalDato'),
+                   model_uri=ARK.Journalpost_journalDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_journalPostnummer = Slot(uri=ARK.journalPostnummer, name="Journalpost_journalPostnummer", curie=ARK.curie('journalPostnummer'),
+                   model_uri=ARK.Journalpost_journalPostnummer, domain=Journalpost, range=Optional[int])
+
+slots.Journalpost_journalSekvensnummer = Slot(uri=ARK.journalSekvensnummer, name="Journalpost_journalSekvensnummer", curie=ARK.curie('journalSekvensnummer'),
+                   model_uri=ARK.Journalpost_journalSekvensnummer, domain=Journalpost, range=Optional[int])
+
+slots.Journalpost_mottattDato = Slot(uri=ARK.mottattDato, name="Journalpost_mottattDato", curie=ARK.curie('mottattDato'),
+                   model_uri=ARK.Journalpost_mottattDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_offentlighetsvurdertDato = Slot(uri=ARK.offentlighetsvurdertDato, name="Journalpost_offentlighetsvurdertDato", curie=ARK.curie('offentlighetsvurdertDato'),
+                   model_uri=ARK.Journalpost_offentlighetsvurdertDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_sendtDato = Slot(uri=ARK.sendtDato, name="Journalpost_sendtDato", curie=ARK.curie('sendtDato'),
+                   model_uri=ARK.Journalpost_sendtDato, domain=Journalpost, range=Optional[Union[str, XSDDateTime]])
+
+slots.Journalpost_journalposttype = Slot(uri=ARK.journalposttype, name="Journalpost_journalposttype", curie=ARK.curie('journalposttype'),
+                   model_uri=ARK.Journalpost_journalposttype, domain=Journalpost, range=Union[str, JournalpostTypeId])
+
+slots.Journalpost_journalstatus = Slot(uri=ARK.journalstatus, name="Journalpost_journalstatus", curie=ARK.curie('journalstatus'),
+                   model_uri=ARK.Journalpost_journalstatus, domain=Journalpost, range=Union[str, JournalStatusId])
+
+slots.Journalpost_journalenhet = Slot(uri=ARK.journalenhet, name="Journalpost_journalenhet", curie=ARK.curie('journalenhet'),
+                   model_uri=ARK.Journalpost_journalenhet, domain=Journalpost, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.Klassifikasjonssystem_avsluttetAvNavn = Slot(uri=ARK.avsluttetAvNavn, name="Klassifikasjonssystem_avsluttetAvNavn", curie=ARK.curie('avsluttetAvNavn'),
+                   model_uri=ARK.Klassifikasjonssystem_avsluttetAvNavn, domain=Klassifikasjonssystem, range=Optional[str])
+
+slots.Klassifikasjonssystem_avsluttetDato = Slot(uri=ARK.avsluttetDato, name="Klassifikasjonssystem_avsluttetDato", curie=ARK.curie('avsluttetDato'),
+                   model_uri=ARK.Klassifikasjonssystem_avsluttetDato, domain=Klassifikasjonssystem, range=Optional[Union[str, XSDDateTime]])
+
+slots.Klassifikasjonssystem_beskrivelse = Slot(uri=FINT.beskrivelse, name="Klassifikasjonssystem_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=ARK.Klassifikasjonssystem_beskrivelse, domain=Klassifikasjonssystem, range=Optional[str])
+
+slots.Klassifikasjonssystem_klasse = Slot(uri=ARK.klasse, name="Klassifikasjonssystem_klasse", curie=ARK.curie('klasse'),
+                   model_uri=ARK.Klassifikasjonssystem_klasse, domain=Klassifikasjonssystem, range=Union[Union[dict, "Klasse"], list[Union[dict, "Klasse"]]])
+
+slots.Klassifikasjonssystem_opprettetAvNavn = Slot(uri=ARK.opprettetAvNavn, name="Klassifikasjonssystem_opprettetAvNavn", curie=ARK.curie('opprettetAvNavn'),
+                   model_uri=ARK.Klassifikasjonssystem_opprettetAvNavn, domain=Klassifikasjonssystem, range=str)
+
+slots.Klassifikasjonssystem_opprettetDato = Slot(uri=ARK.opprettetDato, name="Klassifikasjonssystem_opprettetDato", curie=ARK.curie('opprettetDato'),
+                   model_uri=ARK.Klassifikasjonssystem_opprettetDato, domain=Klassifikasjonssystem, range=Union[str, XSDDateTime])
+
+slots.Klassifikasjonssystem_tittel = Slot(uri=ARK.tittel, name="Klassifikasjonssystem_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Klassifikasjonssystem_tittel, domain=Klassifikasjonssystem, range=str)
+
+slots.Klassifikasjonssystem_klassifikasjonstype = Slot(uri=ARK.klassifikasjonstype, name="Klassifikasjonssystem_klassifikasjonstype", curie=ARK.curie('klassifikasjonstype'),
+                   model_uri=ARK.Klassifikasjonssystem_klassifikasjonstype, domain=Klassifikasjonssystem, range=Optional[Union[str, KlassifikasjonstypeId]])
+
+slots.Klassifikasjonssystem_arkivdel = Slot(uri=ARK.arkivdel, name="Klassifikasjonssystem_arkivdel", curie=ARK.curie('arkivdel'),
+                   model_uri=ARK.Klassifikasjonssystem_arkivdel, domain=Klassifikasjonssystem, range=Union[Union[str, ArkivdelId], list[Union[str, ArkivdelId]]])
+
+slots.Tilgang_tittel = Slot(uri=ARK.tittel, name="Tilgang_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Tilgang_tittel, domain=Tilgang, range=str)
+
+slots.Tilgang_rolle = Slot(uri=ARK.rolle, name="Tilgang_rolle", curie=ARK.curie('rolle'),
+                   model_uri=ARK.Tilgang_rolle, domain=Tilgang, range=Union[str, RolleId])
+
+slots.Tilgang_administrativEnhet = Slot(uri=ARK.administrativEnhet, name="Tilgang_administrativEnhet", curie=ARK.curie('administrativEnhet'),
+                   model_uri=ARK.Tilgang_administrativEnhet, domain=Tilgang, range=Optional[Union[str, AdministrativEnhetId]])
+
+slots.Tilgang_arkivdel = Slot(uri=ARK.arkivdel, name="Tilgang_arkivdel", curie=ARK.curie('arkivdel'),
+                   model_uri=ARK.Tilgang_arkivdel, domain=Tilgang, range=Optional[Union[str, ArkivdelId]])
+
+slots.Tilgang_arkivressurs = Slot(uri=ARK.arkivressurs, name="Tilgang_arkivressurs", curie=ARK.curie('arkivressurs'),
+                   model_uri=ARK.Tilgang_arkivressurs, domain=Tilgang, range=Optional[Union[Union[str, ArkivressursId], list[Union[str, ArkivressursId]]]])
+
+slots.Personalmappe_personnavn = Slot(uri=ARK.personnavn, name="Personalmappe_personnavn", curie=ARK.curie('personnavn'),
+                   model_uri=ARK.Personalmappe_personnavn, domain=Personalmappe, range=Union[dict, "Personnavn"])
+
+slots.Personalmappe_person = Slot(uri=FINT.person, name="Personalmappe_person", curie=FINT.curie('person'),
+                   model_uri=ARK.Personalmappe_person, domain=Personalmappe, range=Union[str, PersonId])
+
+slots.Personalmappe_leder = Slot(uri=ARK.leder, name="Personalmappe_leder", curie=ARK.curie('leder'),
+                   model_uri=ARK.Personalmappe_leder, domain=Personalmappe, range=Union[str, URIorCURIE])
+
+slots.Personalmappe_arbeidssted = Slot(uri=ARK.arbeidssted, name="Personalmappe_arbeidssted", curie=ARK.curie('arbeidssted'),
+                   model_uri=ARK.Personalmappe_arbeidssted, domain=Personalmappe, range=Union[str, URIorCURIE])
+
+slots.Personalmappe_personalressurs = Slot(uri=ARK.personalressurs, name="Personalmappe_personalressurs", curie=ARK.curie('personalressurs'),
+                   model_uri=ARK.Personalmappe_personalressurs, domain=Personalmappe, range=Union[str, URIorCURIE])
+
+slots.DispensasjonAutomatiskFredaKulturminne_kulturminneId = Slot(uri=ARK.kulturminneId, name="DispensasjonAutomatiskFredaKulturminne_kulturminneId", curie=ARK.curie('kulturminneId'),
+                   model_uri=ARK.DispensasjonAutomatiskFredaKulturminne_kulturminneId, domain=DispensasjonAutomatiskFredaKulturminne, range=str)
+
+slots.DispensasjonAutomatiskFredaKulturminne_matrikkelnummer = Slot(uri=ARK.matrikkelnummer, name="DispensasjonAutomatiskFredaKulturminne_matrikkelnummer", curie=ARK.curie('matrikkelnummer'),
+                   model_uri=ARK.DispensasjonAutomatiskFredaKulturminne_matrikkelnummer, domain=DispensasjonAutomatiskFredaKulturminne, range=Union[dict, "Matrikkelnummer"])
+
+slots.DispensasjonAutomatiskFredaKulturminne_soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="DispensasjonAutomatiskFredaKulturminne_soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
+                   model_uri=ARK.DispensasjonAutomatiskFredaKulturminne_soeknadsnummer, domain=DispensasjonAutomatiskFredaKulturminne, range=Union[dict, "Identifikator"])
+
+slots.DispensasjonAutomatiskFredaKulturminne_tiltak = Slot(uri=ARK.tiltak, name="DispensasjonAutomatiskFredaKulturminne_tiltak", curie=ARK.curie('tiltak'),
+                   model_uri=ARK.DispensasjonAutomatiskFredaKulturminne_tiltak, domain=DispensasjonAutomatiskFredaKulturminne, range=Optional[str])
+
+slots.TilskuddFartoy_fartoyNavn = Slot(uri=ARK.fartoyNavn, name="TilskuddFartoy_fartoyNavn", curie=ARK.curie('fartoyNavn'),
+                   model_uri=ARK.TilskuddFartoy_fartoyNavn, domain=TilskuddFartoy, range=str)
+
+slots.TilskuddFartoy_kallesignal = Slot(uri=ARK.kallesignal, name="TilskuddFartoy_kallesignal", curie=ARK.curie('kallesignal'),
+                   model_uri=ARK.TilskuddFartoy_kallesignal, domain=TilskuddFartoy, range=str)
+
+slots.TilskuddFartoy_kulturminneId = Slot(uri=ARK.kulturminneId, name="TilskuddFartoy_kulturminneId", curie=ARK.curie('kulturminneId'),
+                   model_uri=ARK.TilskuddFartoy_kulturminneId, domain=TilskuddFartoy, range=str)
+
+slots.TilskuddFartoy_soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="TilskuddFartoy_soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
+                   model_uri=ARK.TilskuddFartoy_soeknadsnummer, domain=TilskuddFartoy, range=Union[dict, "Identifikator"])
+
+slots.TilskuddFredaBygningPrivatEie_bygningsnavn = Slot(uri=ARK.bygningsnavn, name="TilskuddFredaBygningPrivatEie_bygningsnavn", curie=ARK.curie('bygningsnavn'),
+                   model_uri=ARK.TilskuddFredaBygningPrivatEie_bygningsnavn, domain=TilskuddFredaBygningPrivatEie, range=Optional[str])
+
+slots.TilskuddFredaBygningPrivatEie_kulturminneId = Slot(uri=ARK.kulturminneId, name="TilskuddFredaBygningPrivatEie_kulturminneId", curie=ARK.curie('kulturminneId'),
+                   model_uri=ARK.TilskuddFredaBygningPrivatEie_kulturminneId, domain=TilskuddFredaBygningPrivatEie, range=str)
+
+slots.TilskuddFredaBygningPrivatEie_matrikkelnummer = Slot(uri=ARK.matrikkelnummer, name="TilskuddFredaBygningPrivatEie_matrikkelnummer", curie=ARK.curie('matrikkelnummer'),
+                   model_uri=ARK.TilskuddFredaBygningPrivatEie_matrikkelnummer, domain=TilskuddFredaBygningPrivatEie, range=Optional[Union[dict, "Matrikkelnummer"]])
+
+slots.TilskuddFredaBygningPrivatEie_soeknadsnummer = Slot(uri=ARK.soeknadsnummer, name="TilskuddFredaBygningPrivatEie_soeknadsnummer", curie=ARK.curie('soeknadsnummer'),
+                   model_uri=ARK.TilskuddFredaBygningPrivatEie_soeknadsnummer, domain=TilskuddFredaBygningPrivatEie, range=Optional[Union[dict, "Identifikator"]])
+
+slots.SoeknadDrosjeloeyve_organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="SoeknadDrosjeloeyve_organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=ARK.SoeknadDrosjeloeyve_organisasjonsnavn, domain=SoeknadDrosjeloeyve, range=str)
+
+slots.SoeknadDrosjeloeyve_orgnummer = Slot(uri=ARK.organisasjonsnummer, name="SoeknadDrosjeloeyve_orgnummer", curie=ARK.curie('organisasjonsnummer'),
+                   model_uri=ARK.SoeknadDrosjeloeyve_orgnummer, domain=SoeknadDrosjeloeyve, range=str)
+
+slots.Avskrivning_avskrevetAv = Slot(uri=ARK.avskrevetAv, name="Avskrivning_avskrevetAv", curie=ARK.curie('avskrevetAv'),
+                   model_uri=ARK.Avskrivning_avskrevetAv, domain=Avskrivning, range=str)
+
+slots.Avskrivning_avskrivningsdato = Slot(uri=ARK.avskrivningsdato, name="Avskrivning_avskrivningsdato", curie=ARK.curie('avskrivningsdato'),
+                   model_uri=ARK.Avskrivning_avskrivningsdato, domain=Avskrivning, range=Union[str, XSDDateTime])
+
+slots.Avskrivning_avskrivningsmate = Slot(uri=ARK.avskrivningsmate, name="Avskrivning_avskrivningsmate", curie=ARK.curie('avskrivningsmate'),
+                   model_uri=ARK.Avskrivning_avskrivningsmate, domain=Avskrivning, range=str)
+
+slots.Dokumentbeskrivelse_beskrivelse = Slot(uri=FINT.beskrivelse, name="Dokumentbeskrivelse_beskrivelse", curie=FINT.curie('beskrivelse'),
+                   model_uri=ARK.Dokumentbeskrivelse_beskrivelse, domain=Dokumentbeskrivelse, range=Optional[str])
+
+slots.Dokumentbeskrivelse_dokumentnummer = Slot(uri=ARK.dokumentnummer, name="Dokumentbeskrivelse_dokumentnummer", curie=ARK.curie('dokumentnummer'),
+                   model_uri=ARK.Dokumentbeskrivelse_dokumentnummer, domain=Dokumentbeskrivelse, range=Optional[int])
+
+slots.Dokumentbeskrivelse_dokumentobjekt = Slot(uri=ARK.dokumentobjekt, name="Dokumentbeskrivelse_dokumentobjekt", curie=ARK.curie('dokumentobjekt'),
+                   model_uri=ARK.Dokumentbeskrivelse_dokumentobjekt, domain=Dokumentbeskrivelse, range=Optional[Union[Union[dict, "Dokumentobjekt"], list[Union[dict, "Dokumentobjekt"]]]])
+
+slots.Dokumentbeskrivelse_forfatter = Slot(uri=ARK.forfatter, name="Dokumentbeskrivelse_forfatter", curie=ARK.curie('forfatter'),
+                   model_uri=ARK.Dokumentbeskrivelse_forfatter, domain=Dokumentbeskrivelse, range=Optional[Union[str, list[str]]])
+
+slots.Dokumentbeskrivelse_opprettetDato = Slot(uri=ARK.opprettetDato, name="Dokumentbeskrivelse_opprettetDato", curie=ARK.curie('opprettetDato'),
+                   model_uri=ARK.Dokumentbeskrivelse_opprettetDato, domain=Dokumentbeskrivelse, range=Optional[Union[str, XSDDateTime]])
+
+slots.Dokumentbeskrivelse_part = Slot(uri=ARK.part, name="Dokumentbeskrivelse_part", curie=ARK.curie('part'),
+                   model_uri=ARK.Dokumentbeskrivelse_part, domain=Dokumentbeskrivelse, range=Optional[Union[Union[dict, "Part"], list[Union[dict, "Part"]]]])
+
+slots.Dokumentbeskrivelse_referanseArkivdel = Slot(uri=ARK.referanseArkivdel, name="Dokumentbeskrivelse_referanseArkivdel", curie=ARK.curie('referanseArkivdel'),
+                   model_uri=ARK.Dokumentbeskrivelse_referanseArkivdel, domain=Dokumentbeskrivelse, range=Optional[Union[str, list[str]]])
+
+slots.Dokumentbeskrivelse_skjerming = Slot(uri=ARK.skjerming, name="Dokumentbeskrivelse_skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.Dokumentbeskrivelse_skjerming, domain=Dokumentbeskrivelse, range=Optional[Union[dict, "Skjerming"]])
+
+slots.Dokumentbeskrivelse_tilknyttetDato = Slot(uri=ARK.tilknyttetDato, name="Dokumentbeskrivelse_tilknyttetDato", curie=ARK.curie('tilknyttetDato'),
+                   model_uri=ARK.Dokumentbeskrivelse_tilknyttetDato, domain=Dokumentbeskrivelse, range=Optional[Union[str, XSDDateTime]])
+
+slots.Dokumentbeskrivelse_tittel = Slot(uri=ARK.tittel, name="Dokumentbeskrivelse_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Dokumentbeskrivelse_tittel, domain=Dokumentbeskrivelse, range=str)
+
+slots.Dokumentbeskrivelse_dokumentstatus = Slot(uri=ARK.dokumentstatus, name="Dokumentbeskrivelse_dokumentstatus", curie=ARK.curie('dokumentstatus'),
+                   model_uri=ARK.Dokumentbeskrivelse_dokumentstatus, domain=Dokumentbeskrivelse, range=Union[str, DokumentStatusId])
+
+slots.Dokumentbeskrivelse_dokumentType = Slot(uri=ARK.dokumentType, name="Dokumentbeskrivelse_dokumentType", curie=ARK.curie('dokumentType'),
+                   model_uri=ARK.Dokumentbeskrivelse_dokumentType, domain=Dokumentbeskrivelse, range=Union[str, DokumentTypeId])
+
+slots.Dokumentbeskrivelse_tilknyttetRegistreringSom = Slot(uri=ARK.tilknyttetRegistreringSom, name="Dokumentbeskrivelse_tilknyttetRegistreringSom", curie=ARK.curie('tilknyttetRegistreringSom'),
+                   model_uri=ARK.Dokumentbeskrivelse_tilknyttetRegistreringSom, domain=Dokumentbeskrivelse, range=Union[Union[str, TilknyttetRegistreringSomId], list[Union[str, TilknyttetRegistreringSomId]]])
+
+slots.Dokumentbeskrivelse_tilknyttetAv = Slot(uri=ARK.tilknyttetAv, name="Dokumentbeskrivelse_tilknyttetAv", curie=ARK.curie('tilknyttetAv'),
+                   model_uri=ARK.Dokumentbeskrivelse_tilknyttetAv, domain=Dokumentbeskrivelse, range=Union[str, ArkivressursId])
+
+slots.Dokumentbeskrivelse_opprettetAv = Slot(uri=ARK.opprettetAv, name="Dokumentbeskrivelse_opprettetAv", curie=ARK.curie('opprettetAv'),
+                   model_uri=ARK.Dokumentbeskrivelse_opprettetAv, domain=Dokumentbeskrivelse, range=Union[str, ArkivressursId])
+
+slots.Dokumentobjekt_filstorrelse = Slot(uri=ARK.filstorrelse, name="Dokumentobjekt_filstorrelse", curie=ARK.curie('filstorrelse'),
+                   model_uri=ARK.Dokumentobjekt_filstorrelse, domain=Dokumentobjekt, range=Optional[str])
+
+slots.Dokumentobjekt_formatDetaljer = Slot(uri=ARK.formatDetaljer, name="Dokumentobjekt_formatDetaljer", curie=ARK.curie('formatDetaljer'),
+                   model_uri=ARK.Dokumentobjekt_formatDetaljer, domain=Dokumentobjekt, range=Optional[str])
+
+slots.Dokumentobjekt_sjekksum = Slot(uri=ARK.sjekksum, name="Dokumentobjekt_sjekksum", curie=ARK.curie('sjekksum'),
+                   model_uri=ARK.Dokumentobjekt_sjekksum, domain=Dokumentobjekt, range=Optional[str])
+
+slots.Dokumentobjekt_sjekksumAlgoritme = Slot(uri=ARK.sjekksumAlgoritme, name="Dokumentobjekt_sjekksumAlgoritme", curie=ARK.curie('sjekksumAlgoritme'),
+                   model_uri=ARK.Dokumentobjekt_sjekksumAlgoritme, domain=Dokumentobjekt, range=Optional[str])
+
+slots.Dokumentobjekt_versjonsnummer = Slot(uri=ARK.versjonsnummer, name="Dokumentobjekt_versjonsnummer", curie=ARK.curie('versjonsnummer'),
+                   model_uri=ARK.Dokumentobjekt_versjonsnummer, domain=Dokumentobjekt, range=Optional[int])
+
+slots.Dokumentobjekt_filformat = Slot(uri=ARK.filformat, name="Dokumentobjekt_filformat", curie=ARK.curie('filformat'),
+                   model_uri=ARK.Dokumentobjekt_filformat, domain=Dokumentobjekt, range=Optional[Union[str, FormatId]])
+
+slots.Dokumentobjekt_variantFormat = Slot(uri=ARK.variantFormat, name="Dokumentobjekt_variantFormat", curie=ARK.curie('variantFormat'),
+                   model_uri=ARK.Dokumentobjekt_variantFormat, domain=Dokumentobjekt, range=Union[str, VariantformatId])
+
+slots.Dokumentobjekt_opprettetAv = Slot(uri=ARK.opprettetAv, name="Dokumentobjekt_opprettetAv", curie=ARK.curie('opprettetAv'),
+                   model_uri=ARK.Dokumentobjekt_opprettetAv, domain=Dokumentobjekt, range=Union[str, ArkivressursId])
+
+slots.Dokumentobjekt_referanseDokumentfil = Slot(uri=ARK.referanseDokumentfil, name="Dokumentobjekt_referanseDokumentfil", curie=ARK.curie('referanseDokumentfil'),
+                   model_uri=ARK.Dokumentobjekt_referanseDokumentfil, domain=Dokumentobjekt, range=Optional[Union[str, DokumentfilId]])
+
+slots.Klasse_klasseId = Slot(uri=ARK.klasseId, name="Klasse_klasseId", curie=ARK.curie('klasseId'),
+                   model_uri=ARK.Klasse_klasseId, domain=Klasse, range=str)
+
+slots.Klasse_rekkefølge = Slot(uri=ARK.rekkefolge, name="Klasse_rekkefølge", curie=ARK.curie('rekkefolge'),
+                   model_uri=ARK.Klasse_rekkefølge, domain=Klasse, range=Optional[int])
+
+slots.Klasse_skjerming = Slot(uri=ARK.skjerming, name="Klasse_skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.Klasse_skjerming, domain=Klasse, range=Optional[Union[dict, "Skjerming"]])
+
+slots.Klasse_tittel = Slot(uri=ARK.tittel, name="Klasse_tittel", curie=ARK.curie('tittel'),
+                   model_uri=ARK.Klasse_tittel, domain=Klasse, range=str)
+
+slots.Klasse_klassifikasjonssystem = Slot(uri=ARK.klassifikasjonssystem, name="Klasse_klassifikasjonssystem", curie=ARK.curie('klassifikasjonssystem'),
+                   model_uri=ARK.Klasse_klassifikasjonssystem, domain=Klasse, range=Union[str, KlassifikasjonssystemId])
+
+slots.Korrespondansepart_adresse = Slot(uri=FINT.adresse, name="Korrespondansepart_adresse", curie=FINT.curie('adresse'),
+                   model_uri=ARK.Korrespondansepart_adresse, domain=Korrespondansepart, range=Optional[Union[dict, "Adresse"]])
+
+slots.Korrespondansepart_foedselsnummer = Slot(uri=ARK.foedselsnummer, name="Korrespondansepart_foedselsnummer", curie=ARK.curie('foedselsnummer'),
+                   model_uri=ARK.Korrespondansepart_foedselsnummer, domain=Korrespondansepart, range=Optional[str])
+
+slots.Korrespondansepart_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Korrespondansepart_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=ARK.Korrespondansepart_kontaktinformasjon, domain=Korrespondansepart, range=Optional[Union[dict, "Kontaktinformasjon"]])
+
+slots.Korrespondansepart_kontaktperson_str = Slot(uri=ARK.kontaktperson, name="Korrespondansepart_kontaktperson_str", curie=ARK.curie('kontaktperson'),
+                   model_uri=ARK.Korrespondansepart_kontaktperson_str, domain=Korrespondansepart, range=Optional[str])
+
+slots.Korrespondansepart_korrespondansepartNavn = Slot(uri=ARK.korrespondansepartNavn, name="Korrespondansepart_korrespondansepartNavn", curie=ARK.curie('korrespondansepartNavn'),
+                   model_uri=ARK.Korrespondansepart_korrespondansepartNavn, domain=Korrespondansepart, range=Optional[str])
+
+slots.Korrespondansepart_orgnummer = Slot(uri=ARK.organisasjonsnummer, name="Korrespondansepart_orgnummer", curie=ARK.curie('organisasjonsnummer'),
+                   model_uri=ARK.Korrespondansepart_orgnummer, domain=Korrespondansepart, range=Optional[str])
+
+slots.Korrespondansepart_skjerming = Slot(uri=ARK.skjerming, name="Korrespondansepart_skjerming", curie=ARK.curie('skjerming'),
+                   model_uri=ARK.Korrespondansepart_skjerming, domain=Korrespondansepart, range=Optional[Union[dict, "Skjerming"]])
+
+slots.Korrespondansepart_korrespondanseparttype = Slot(uri=ARK.korrespondanseparttype, name="Korrespondansepart_korrespondanseparttype", curie=ARK.curie('korrespondanseparttype'),
+                   model_uri=ARK.Korrespondansepart_korrespondanseparttype, domain=Korrespondansepart, range=Union[str, KorrespondansepartTypeId])
+
+slots.Merknad_merknadsdato = Slot(uri=ARK.merknadsdato, name="Merknad_merknadsdato", curie=ARK.curie('merknadsdato'),
+                   model_uri=ARK.Merknad_merknadsdato, domain=Merknad, range=Union[str, XSDDateTime])
+
+slots.Merknad_merknadstekst = Slot(uri=ARK.merknadstekst, name="Merknad_merknadstekst", curie=ARK.curie('merknadstekst'),
+                   model_uri=ARK.Merknad_merknadstekst, domain=Merknad, range=str)
+
+slots.Merknad_merknadstype = Slot(uri=ARK.merknadstype, name="Merknad_merknadstype", curie=ARK.curie('merknadstype'),
+                   model_uri=ARK.Merknad_merknadstype, domain=Merknad, range=Union[str, MerknadstypeId])
+
+slots.Merknad_merknadRegistrertAv = Slot(uri=ARK.merknadRegistrertAv, name="Merknad_merknadRegistrertAv", curie=ARK.curie('merknadRegistrertAv'),
+                   model_uri=ARK.Merknad_merknadRegistrertAv, domain=Merknad, range=Union[str, ArkivressursId])
+
+slots.Part_adresse = Slot(uri=FINT.adresse, name="Part_adresse", curie=FINT.curie('adresse'),
+                   model_uri=ARK.Part_adresse, domain=Part, range=Optional[Union[dict, "Adresse"]])
+
+slots.Part_foedselsnummer = Slot(uri=ARK.foedselsnummer, name="Part_foedselsnummer", curie=ARK.curie('foedselsnummer'),
+                   model_uri=ARK.Part_foedselsnummer, domain=Part, range=Optional[str])
+
+slots.Part_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Part_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=ARK.Part_kontaktinformasjon, domain=Part, range=Optional[Union[dict, "Kontaktinformasjon"]])
+
+slots.Part_kontaktperson_str = Slot(uri=ARK.kontaktperson, name="Part_kontaktperson_str", curie=ARK.curie('kontaktperson'),
+                   model_uri=ARK.Part_kontaktperson_str, domain=Part, range=Optional[str])
+
+slots.Part_orgnummer = Slot(uri=ARK.organisasjonsnummer, name="Part_orgnummer", curie=ARK.curie('organisasjonsnummer'),
+                   model_uri=ARK.Part_orgnummer, domain=Part, range=Optional[str])
+
+slots.Part_partNavn = Slot(uri=ARK.partNavn, name="Part_partNavn", curie=ARK.curie('partNavn'),
+                   model_uri=ARK.Part_partNavn, domain=Part, range=str)
+
+slots.Part_partRolle = Slot(uri=ARK.partRolle, name="Part_partRolle", curie=ARK.curie('partRolle'),
+                   model_uri=ARK.Part_partRolle, domain=Part, range=Optional[Union[str, PartRolleId]])
+
+slots.Skjerming_skjermingshjemmel = Slot(uri=ARK.skjermingshjemmel, name="Skjerming_skjermingshjemmel", curie=ARK.curie('skjermingshjemmel'),
+                   model_uri=ARK.Skjerming_skjermingshjemmel, domain=Skjerming, range=Union[str, SkjermingshjemmelId])
+
+slots.Skjerming_tilgangsrestriksjon = Slot(uri=ARK.tilgangsrestriksjon, name="Skjerming_tilgangsrestriksjon", curie=ARK.curie('tilgangsrestriksjon'),
+                   model_uri=ARK.Skjerming_tilgangsrestriksjon, domain=Skjerming, range=Union[str, TilgangsrestriksjonId])
+
+slots.DokumentStatus_kode = Slot(uri=FINT.kode, name="DokumentStatus_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.DokumentStatus_kode, domain=DokumentStatus, range=str)
+
+slots.DokumentStatus_navn = Slot(uri=FINT.navn, name="DokumentStatus_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.DokumentStatus_navn, domain=DokumentStatus, range=str)
+
+slots.DokumentStatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="DokumentStatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.DokumentStatus_gyldighetsperiode, domain=DokumentStatus, range=Optional[Union[dict, "Periode"]])
+
+slots.DokumentStatus_passiv = Slot(uri=FINT.passiv, name="DokumentStatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.DokumentStatus_passiv, domain=DokumentStatus, range=Optional[Union[bool, Bool]])
+
+slots.DokumentType_kode = Slot(uri=FINT.kode, name="DokumentType_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.DokumentType_kode, domain=DokumentType, range=str)
+
+slots.DokumentType_navn = Slot(uri=FINT.navn, name="DokumentType_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.DokumentType_navn, domain=DokumentType, range=str)
+
+slots.DokumentType_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="DokumentType_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.DokumentType_gyldighetsperiode, domain=DokumentType, range=Optional[Union[dict, "Periode"]])
+
+slots.DokumentType_passiv = Slot(uri=FINT.passiv, name="DokumentType_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.DokumentType_passiv, domain=DokumentType, range=Optional[Union[bool, Bool]])
+
+slots.Format_kode = Slot(uri=FINT.kode, name="Format_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Format_kode, domain=Format, range=str)
+
+slots.Format_navn = Slot(uri=FINT.navn, name="Format_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Format_navn, domain=Format, range=str)
+
+slots.Format_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Format_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Format_gyldighetsperiode, domain=Format, range=Optional[Union[dict, "Periode"]])
+
+slots.Format_passiv = Slot(uri=FINT.passiv, name="Format_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Format_passiv, domain=Format, range=Optional[Union[bool, Bool]])
+
+slots.JournalpostType_kode = Slot(uri=FINT.kode, name="JournalpostType_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.JournalpostType_kode, domain=JournalpostType, range=str)
+
+slots.JournalpostType_navn = Slot(uri=FINT.navn, name="JournalpostType_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.JournalpostType_navn, domain=JournalpostType, range=str)
+
+slots.JournalpostType_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="JournalpostType_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.JournalpostType_gyldighetsperiode, domain=JournalpostType, range=Optional[Union[dict, "Periode"]])
+
+slots.JournalpostType_passiv = Slot(uri=FINT.passiv, name="JournalpostType_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.JournalpostType_passiv, domain=JournalpostType, range=Optional[Union[bool, Bool]])
+
+slots.JournalStatus_kode = Slot(uri=FINT.kode, name="JournalStatus_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.JournalStatus_kode, domain=JournalStatus, range=str)
+
+slots.JournalStatus_navn = Slot(uri=FINT.navn, name="JournalStatus_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.JournalStatus_navn, domain=JournalStatus, range=str)
+
+slots.JournalStatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="JournalStatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.JournalStatus_gyldighetsperiode, domain=JournalStatus, range=Optional[Union[dict, "Periode"]])
+
+slots.JournalStatus_passiv = Slot(uri=FINT.passiv, name="JournalStatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.JournalStatus_passiv, domain=JournalStatus, range=Optional[Union[bool, Bool]])
+
+slots.Klassifikasjonstype_kode = Slot(uri=FINT.kode, name="Klassifikasjonstype_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Klassifikasjonstype_kode, domain=Klassifikasjonstype, range=str)
+
+slots.Klassifikasjonstype_navn = Slot(uri=FINT.navn, name="Klassifikasjonstype_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Klassifikasjonstype_navn, domain=Klassifikasjonstype, range=str)
+
+slots.Klassifikasjonstype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Klassifikasjonstype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Klassifikasjonstype_gyldighetsperiode, domain=Klassifikasjonstype, range=Optional[Union[dict, "Periode"]])
+
+slots.Klassifikasjonstype_passiv = Slot(uri=FINT.passiv, name="Klassifikasjonstype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Klassifikasjonstype_passiv, domain=Klassifikasjonstype, range=Optional[Union[bool, Bool]])
+
+slots.KorrespondansepartType_kode = Slot(uri=FINT.kode, name="KorrespondansepartType_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.KorrespondansepartType_kode, domain=KorrespondansepartType, range=str)
+
+slots.KorrespondansepartType_navn = Slot(uri=FINT.navn, name="KorrespondansepartType_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.KorrespondansepartType_navn, domain=KorrespondansepartType, range=str)
+
+slots.KorrespondansepartType_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="KorrespondansepartType_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.KorrespondansepartType_gyldighetsperiode, domain=KorrespondansepartType, range=Optional[Union[dict, "Periode"]])
+
+slots.KorrespondansepartType_passiv = Slot(uri=FINT.passiv, name="KorrespondansepartType_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.KorrespondansepartType_passiv, domain=KorrespondansepartType, range=Optional[Union[bool, Bool]])
+
+slots.Merknadstype_kode = Slot(uri=FINT.kode, name="Merknadstype_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Merknadstype_kode, domain=Merknadstype, range=str)
+
+slots.Merknadstype_navn = Slot(uri=FINT.navn, name="Merknadstype_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Merknadstype_navn, domain=Merknadstype, range=str)
+
+slots.Merknadstype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Merknadstype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Merknadstype_gyldighetsperiode, domain=Merknadstype, range=Optional[Union[dict, "Periode"]])
+
+slots.Merknadstype_passiv = Slot(uri=FINT.passiv, name="Merknadstype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Merknadstype_passiv, domain=Merknadstype, range=Optional[Union[bool, Bool]])
+
+slots.PartRolle_kode = Slot(uri=FINT.kode, name="PartRolle_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.PartRolle_kode, domain=PartRolle, range=str)
+
+slots.PartRolle_navn = Slot(uri=FINT.navn, name="PartRolle_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.PartRolle_navn, domain=PartRolle, range=str)
+
+slots.PartRolle_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="PartRolle_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.PartRolle_gyldighetsperiode, domain=PartRolle, range=Optional[Union[dict, "Periode"]])
+
+slots.PartRolle_passiv = Slot(uri=FINT.passiv, name="PartRolle_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.PartRolle_passiv, domain=PartRolle, range=Optional[Union[bool, Bool]])
+
+slots.Rolle_kode = Slot(uri=FINT.kode, name="Rolle_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Rolle_kode, domain=Rolle, range=str)
+
+slots.Rolle_navn = Slot(uri=FINT.navn, name="Rolle_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Rolle_navn, domain=Rolle, range=str)
+
+slots.Rolle_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Rolle_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Rolle_gyldighetsperiode, domain=Rolle, range=Optional[Union[dict, "Periode"]])
+
+slots.Rolle_passiv = Slot(uri=FINT.passiv, name="Rolle_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Rolle_passiv, domain=Rolle, range=Optional[Union[bool, Bool]])
+
+slots.Saksmappetype_kode = Slot(uri=FINT.kode, name="Saksmappetype_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Saksmappetype_kode, domain=Saksmappetype, range=str)
+
+slots.Saksmappetype_navn = Slot(uri=FINT.navn, name="Saksmappetype_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Saksmappetype_navn, domain=Saksmappetype, range=str)
+
+slots.Saksmappetype_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Saksmappetype_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Saksmappetype_gyldighetsperiode, domain=Saksmappetype, range=Optional[Union[dict, "Periode"]])
+
+slots.Saksmappetype_passiv = Slot(uri=FINT.passiv, name="Saksmappetype_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Saksmappetype_passiv, domain=Saksmappetype, range=Optional[Union[bool, Bool]])
+
+slots.Saksstatus_kode = Slot(uri=FINT.kode, name="Saksstatus_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Saksstatus_kode, domain=Saksstatus, range=str)
+
+slots.Saksstatus_navn = Slot(uri=FINT.navn, name="Saksstatus_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Saksstatus_navn, domain=Saksstatus, range=str)
+
+slots.Saksstatus_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Saksstatus_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Saksstatus_gyldighetsperiode, domain=Saksstatus, range=Optional[Union[dict, "Periode"]])
+
+slots.Saksstatus_passiv = Slot(uri=FINT.passiv, name="Saksstatus_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Saksstatus_passiv, domain=Saksstatus, range=Optional[Union[bool, Bool]])
+
+slots.Skjermingshjemmel_kode = Slot(uri=FINT.kode, name="Skjermingshjemmel_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Skjermingshjemmel_kode, domain=Skjermingshjemmel, range=str)
+
+slots.Skjermingshjemmel_navn = Slot(uri=FINT.navn, name="Skjermingshjemmel_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Skjermingshjemmel_navn, domain=Skjermingshjemmel, range=str)
+
+slots.Skjermingshjemmel_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Skjermingshjemmel_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Skjermingshjemmel_gyldighetsperiode, domain=Skjermingshjemmel, range=Optional[Union[dict, "Periode"]])
+
+slots.Skjermingshjemmel_passiv = Slot(uri=FINT.passiv, name="Skjermingshjemmel_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Skjermingshjemmel_passiv, domain=Skjermingshjemmel, range=Optional[Union[bool, Bool]])
+
+slots.Tilgangsgruppe_kode = Slot(uri=FINT.kode, name="Tilgangsgruppe_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Tilgangsgruppe_kode, domain=Tilgangsgruppe, range=str)
+
+slots.Tilgangsgruppe_navn = Slot(uri=FINT.navn, name="Tilgangsgruppe_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Tilgangsgruppe_navn, domain=Tilgangsgruppe, range=str)
+
+slots.Tilgangsgruppe_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Tilgangsgruppe_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Tilgangsgruppe_gyldighetsperiode, domain=Tilgangsgruppe, range=Optional[Union[dict, "Periode"]])
+
+slots.Tilgangsgruppe_passiv = Slot(uri=FINT.passiv, name="Tilgangsgruppe_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Tilgangsgruppe_passiv, domain=Tilgangsgruppe, range=Optional[Union[bool, Bool]])
+
+slots.Tilgangsrestriksjon_kode = Slot(uri=FINT.kode, name="Tilgangsrestriksjon_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Tilgangsrestriksjon_kode, domain=Tilgangsrestriksjon, range=str)
+
+slots.Tilgangsrestriksjon_navn = Slot(uri=FINT.navn, name="Tilgangsrestriksjon_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Tilgangsrestriksjon_navn, domain=Tilgangsrestriksjon, range=str)
+
+slots.Tilgangsrestriksjon_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Tilgangsrestriksjon_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Tilgangsrestriksjon_gyldighetsperiode, domain=Tilgangsrestriksjon, range=Optional[Union[dict, "Periode"]])
+
+slots.Tilgangsrestriksjon_passiv = Slot(uri=FINT.passiv, name="Tilgangsrestriksjon_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Tilgangsrestriksjon_passiv, domain=Tilgangsrestriksjon, range=Optional[Union[bool, Bool]])
+
+slots.TilknyttetRegistreringSom_kode = Slot(uri=FINT.kode, name="TilknyttetRegistreringSom_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.TilknyttetRegistreringSom_kode, domain=TilknyttetRegistreringSom, range=str)
+
+slots.TilknyttetRegistreringSom_navn = Slot(uri=FINT.navn, name="TilknyttetRegistreringSom_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.TilknyttetRegistreringSom_navn, domain=TilknyttetRegistreringSom, range=str)
+
+slots.TilknyttetRegistreringSom_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="TilknyttetRegistreringSom_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.TilknyttetRegistreringSom_gyldighetsperiode, domain=TilknyttetRegistreringSom, range=Optional[Union[dict, "Periode"]])
+
+slots.TilknyttetRegistreringSom_passiv = Slot(uri=FINT.passiv, name="TilknyttetRegistreringSom_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.TilknyttetRegistreringSom_passiv, domain=TilknyttetRegistreringSom, range=Optional[Union[bool, Bool]])
+
+slots.Variantformat_kode = Slot(uri=FINT.kode, name="Variantformat_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Variantformat_kode, domain=Variantformat, range=str)
+
+slots.Variantformat_navn = Slot(uri=FINT.navn, name="Variantformat_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Variantformat_navn, domain=Variantformat, range=str)
+
+slots.Variantformat_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Variantformat_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Variantformat_gyldighetsperiode, domain=Variantformat, range=Optional[Union[dict, "Periode"]])
+
+slots.Variantformat_passiv = Slot(uri=FINT.passiv, name="Variantformat_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Variantformat_passiv, domain=Variantformat, range=Optional[Union[bool, Bool]])
+
+slots.Aktoer_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Aktoer_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=ARK.Aktoer_kontaktinformasjon, domain=Aktoer, range=Optional[Union[dict, "Kontaktinformasjon"]])
+
+slots.Aktoer_postadresse = Slot(uri=FINT.postadresse, name="Aktoer_postadresse", curie=FINT.curie('postadresse'),
+                   model_uri=ARK.Aktoer_postadresse, domain=Aktoer, range=Optional[Union[dict, "Adresse"]])
+
+slots.Begrep_kode = Slot(uri=FINT.kode, name="Begrep_kode", curie=FINT.curie('kode'),
+                   model_uri=ARK.Begrep_kode, domain=Begrep, range=str)
+
+slots.Begrep_navn = Slot(uri=FINT.navn, name="Begrep_navn", curie=FINT.curie('navn'),
+                   model_uri=ARK.Begrep_navn, domain=Begrep, range=str)
+
+slots.Begrep_gyldighetsperiode = Slot(uri=FINT.gyldighetsperiode, name="Begrep_gyldighetsperiode", curie=FINT.curie('gyldighetsperiode'),
+                   model_uri=ARK.Begrep_gyldighetsperiode, domain=Begrep, range=Optional[Union[dict, "Periode"]])
+
+slots.Begrep_passiv = Slot(uri=FINT.passiv, name="Begrep_passiv", curie=FINT.curie('passiv'),
+                   model_uri=ARK.Begrep_passiv, domain=Begrep, range=Optional[Union[bool, Bool]])
+
+slots.Elev_elevnummer = Slot(uri=FINT.elevnummer, name="Elev_elevnummer", curie=FINT.curie('elevnummer'),
+                   model_uri=ARK.Elev_elevnummer, domain=Elev, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Elev_person = Slot(uri=FINT.person, name="Elev_person", curie=FINT.curie('person'),
+                   model_uri=ARK.Elev_person, domain=Elev, range=Optional[Union[str, PersonId]])
+
+slots.Enhet_forretningsadresse = Slot(uri=FINT.forretningsadresse, name="Enhet_forretningsadresse", curie=FINT.curie('forretningsadresse'),
+                   model_uri=ARK.Enhet_forretningsadresse, domain=Enhet, range=Optional[Union[dict, "Adresse"]])
+
+slots.Enhet_organisasjonsnavn = Slot(uri=FINT.organisasjonsnavn, name="Enhet_organisasjonsnavn", curie=FINT.curie('organisasjonsnavn'),
+                   model_uri=ARK.Enhet_organisasjonsnavn, domain=Enhet, range=Optional[str])
+
+slots.Enhet_organisasjonsnummer = Slot(uri=FINT.organisasjonsnummer, name="Enhet_organisasjonsnummer", curie=FINT.curie('organisasjonsnummer'),
+                   model_uri=ARK.Enhet_organisasjonsnummer, domain=Enhet, range=Optional[Union[dict, "Identifikator"]])
+
+slots.Identifikator_identifikatorverdi = Slot(uri=FINT.identifikatorverdi, name="Identifikator_identifikatorverdi", curie=FINT.curie('identifikatorverdi'),
+                   model_uri=ARK.Identifikator_identifikatorverdi, domain=Identifikator, range=str)
+
+slots.Periode_start = Slot(uri=FINT.start, name="Periode_start", curie=FINT.curie('start'),
+                   model_uri=ARK.Periode_start, domain=Periode, range=Union[str, XSDDateTime])
+
+slots.Personnavn_fornavn = Slot(uri=FINT.fornavn, name="Personnavn_fornavn", curie=FINT.curie('fornavn'),
+                   model_uri=ARK.Personnavn_fornavn, domain=Personnavn, range=str)
+
+slots.Personnavn_etternavn = Slot(uri=FINT.etternavn, name="Personnavn_etternavn", curie=FINT.curie('etternavn'),
+                   model_uri=ARK.Personnavn_etternavn, domain=Personnavn, range=str)
+
+slots.Fylke_kommune = Slot(uri=FINT.kommune, name="Fylke_kommune", curie=FINT.curie('kommune'),
+                   model_uri=ARK.Fylke_kommune, domain=Fylke, range=Optional[Union[Union[str, KommuneId], list[Union[str, KommuneId]]]])
+
+slots.Kommune_fylke = Slot(uri=FINT.fylke, name="Kommune_fylke", curie=FINT.curie('fylke'),
+                   model_uri=ARK.Kommune_fylke, domain=Kommune, range=Union[str, FylkeId])
+
+slots.Valuta_bokstavkode = Slot(uri=FINT.bokstavkode, name="Valuta_bokstavkode", curie=FINT.curie('bokstavkode'),
+                   model_uri=ARK.Valuta_bokstavkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Valuta_valuta_navn = Slot(uri=FINT.valutaNavn, name="Valuta_valuta_navn", curie=FINT.curie('valutaNavn'),
+                   model_uri=ARK.Valuta_valuta_navn, domain=Valuta, range=str)
+
+slots.Valuta_nummerkode = Slot(uri=FINT.nummerkode, name="Valuta_nummerkode", curie=FINT.curie('nummerkode'),
+                   model_uri=ARK.Valuta_nummerkode, domain=Valuta, range=Union[dict, Identifikator])
+
+slots.Person_fodselsnummer = Slot(uri=FINT.fodselsnummer, name="Person_fodselsnummer", curie=FINT.curie('fodselsnummer'),
+                   model_uri=ARK.Person_fodselsnummer, domain=Person, range=Union[dict, Identifikator])
+
+slots.Person_person_navn = Slot(uri=FINT.personNavn, name="Person_person_navn", curie=FINT.curie('personNavn'),
+                   model_uri=ARK.Person_person_navn, domain=Person, range=Union[dict, Personnavn])
+
+slots.Person_bilde = Slot(uri=FINT.bilde, name="Person_bilde", curie=FINT.curie('bilde'),
+                   model_uri=ARK.Person_bilde, domain=Person, range=Optional[str])
+
+slots.Person_bostedsadresse = Slot(uri=FINT.bostedsadresse, name="Person_bostedsadresse", curie=FINT.curie('bostedsadresse'),
+                   model_uri=ARK.Person_bostedsadresse, domain=Person, range=Optional[Union[dict, Adresse]])
+
+slots.Person_fodselsdato = Slot(uri=FINT.fodselsdato, name="Person_fodselsdato", curie=FINT.curie('fodselsdato'),
+                   model_uri=ARK.Person_fodselsdato, domain=Person, range=Optional[Union[str, XSDDate]])
+
+slots.Person_parorende = Slot(uri=FINT.parorende, name="Person_parorende", curie=FINT.curie('parorende'),
+                   model_uri=ARK.Person_parorende, domain=Person, range=Optional[Union[Union[str, KontaktpersonId], list[Union[str, KontaktpersonId]]]])
+
+slots.Person_statsborgerskap = Slot(uri=FINT.statsborgerskap, name="Person_statsborgerskap", curie=FINT.curie('statsborgerskap'),
+                   model_uri=ARK.Person_statsborgerskap, domain=Person, range=Optional[Union[Union[str, LandkodeId], list[Union[str, LandkodeId]]]])
+
+slots.Person_kommune = Slot(uri=FINT.kommune, name="Person_kommune", curie=FINT.curie('kommune'),
+                   model_uri=ARK.Person_kommune, domain=Person, range=Optional[Union[str, KommuneId]])
+
+slots.Person_kjonn = Slot(uri=FINT.kjonn, name="Person_kjonn", curie=FINT.curie('kjonn'),
+                   model_uri=ARK.Person_kjonn, domain=Person, range=Optional[Union[str, KjonnId]])
+
+slots.Person_foreldreansvar = Slot(uri=FINT.foreldreansvar, name="Person_foreldreansvar", curie=FINT.curie('foreldreansvar'),
+                   model_uri=ARK.Person_foreldreansvar, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_foreldre = Slot(uri=FINT.foreldre, name="Person_foreldre", curie=FINT.curie('foreldre'),
+                   model_uri=ARK.Person_foreldre, domain=Person, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Person_maalform = Slot(uri=FINT.maalform, name="Person_maalform", curie=FINT.curie('maalform'),
+                   model_uri=ARK.Person_maalform, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_morsmaal = Slot(uri=FINT.morsmaal, name="Person_morsmaal", curie=FINT.curie('morsmaal'),
+                   model_uri=ARK.Person_morsmaal, domain=Person, range=Optional[Union[str, SpraakId]])
+
+slots.Person_laerling = Slot(uri=FINT.laerling, name="Person_laerling", curie=FINT.curie('laerling'),
+                   model_uri=ARK.Person_laerling, domain=Person, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
+
+slots.Person_elev = Slot(uri=FINT.elev, name="Person_elev", curie=FINT.curie('elev'),
+                   model_uri=ARK.Person_elev, domain=Person, range=Optional[Union[str, ElevId]])
+
+slots.Person_otungdom = Slot(uri=FINT.otungdom, name="Person_otungdom", curie=FINT.curie('otungdom'),
+                   model_uri=ARK.Person_otungdom, domain=Person, range=Optional[Union[str, URIorCURIE]])
+
+slots.Kontaktperson_type = Slot(uri=FINT.type, name="Kontaktperson_type", curie=FINT.curie('type'),
+                   model_uri=ARK.Kontaktperson_type, domain=Kontaktperson, range=str)
+
+slots.Kontaktperson_kontaktinformasjon = Slot(uri=FINT.kontaktinformasjon, name="Kontaktperson_kontaktinformasjon", curie=FINT.curie('kontaktinformasjon'),
+                   model_uri=ARK.Kontaktperson_kontaktinformasjon, domain=Kontaktperson, range=Optional[Union[dict, Kontaktinformasjon]])
+
+slots.Kontaktperson_kontaktperson_navn = Slot(uri=FINT.kontaktpersonNavn, name="Kontaktperson_kontaktperson_navn", curie=FINT.curie('kontaktpersonNavn'),
+                   model_uri=ARK.Kontaktperson_kontaktperson_navn, domain=Kontaktperson, range=Optional[Union[dict, Personnavn]])
+
+slots.Kontaktperson_kontaktperson = Slot(uri=FINT.kontaktpersonFor, name="Kontaktperson_kontaktperson", curie=FINT.curie('kontaktpersonFor'),
+                   model_uri=ARK.Kontaktperson_kontaktperson, domain=Kontaktperson, range=Optional[Union[Union[str, PersonId], list[Union[str, PersonId]]]])
+
+slots.Virksomhet_virksomhetsId = Slot(uri=FINT.virksomhetsId, name="Virksomhet_virksomhetsId", curie=FINT.curie('virksomhetsId'),
+                   model_uri=ARK.Virksomhet_virksomhetsId, domain=Virksomhet, range=Union[dict, Identifikator])
+
+slots.Virksomhet_laerling = Slot(uri=FINT.laerling, name="Virksomhet_laerling", curie=FINT.curie('laerling'),
+                   model_uri=ARK.Virksomhet_laerling, domain=Virksomhet, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 

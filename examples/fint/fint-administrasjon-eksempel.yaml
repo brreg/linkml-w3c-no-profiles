@@ -4,7 +4,7 @@ personar:
   - id: finta:person/ola-nordmann
     fodselsnummer:
       identifikatorverdi: "12056712345"
-    navn:
+    person_navn:
       fornavn: "Ola"
       etternavn: "Nordmann"
     fodselsdato: "1967-05-12"
@@ -15,7 +15,7 @@ personar:
   - id: finta:person/kari-olsen
     fodselsnummer:
       identifikatorverdi: "23047823456"
-    navn:
+    person_navn:
       fornavn: "Kari"
       mellomnavn: "Marie"
       etternavn: "Olsen"

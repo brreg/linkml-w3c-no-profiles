@@ -3,13 +3,13 @@
 # Slot: person 
 
 
-_Referanse til Person (Administrasjon)._
+_Referanse til Person i Administrasjon-domenet._
 
 
 
 
 
-URI: [pvn:person](https://schema.fintlabs.no/personvern/person)
+URI: [fint:person](https://schema.fintlabs.no/person)
 Alias: person
 
 <!-- no inheritance hierarchy -->
@@ -22,6 +22,7 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 | [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
@@ -35,9 +36,9 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Samtykke](samtykke.md) |
-| Slot URI | [pvn:person](https://schema.fintlabs.no/personvern/person) |
+| Range | [Person](person.md) |
+| Domain Of | [Samtykke](samtykke.md), [Elev](elev.md) |
+| Slot URI | [fint:person](https://schema.fintlabs.no/person) |
 
 ### Cardinality and Requirements
 
@@ -71,7 +72,7 @@ Alias: person
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | pvn:person |
+| self | fint:person |
 | native | https://schema.fintlabs.no/personvern/:person |
 
 
@@ -82,14 +83,15 @@ Alias: person
 <details>
 ```yaml
 name: person
-description: Referanse til Person (Administrasjon).
+description: Referanse til Person i Administrasjon-domenet.
 from_schema: https://data.norge.no/linkml/fint-personvern
 rank: 1000
-slot_uri: pvn:person
+slot_uri: fint:person
 alias: person
 domain_of:
 - Samtykke
-range: uriorcurie
+- Elev
+range: Person
 
 ```
 </details>

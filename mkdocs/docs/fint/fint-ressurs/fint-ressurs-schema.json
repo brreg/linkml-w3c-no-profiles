@@ -53,25 +53,8 @@
                         "null"
                     ]
                 },
-                "beskrivelse": {
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
-                "gyldighetsperiode": {
-                    "$ref": "#/$defs/Periode",
-                    "description": "Start- og sluttdato for gyldighetsperioden til applikasjonen."
-                },
-                "id": {
-                    "description": "URI-identifikator for ressursen.",
-                    "type": "string"
-                },
-                "navn": {
-                    "type": "string"
-                },
-                "plattform": {
-                    "description": "Den eller dei plattformane applikasjonen kan k\u00f8yre p\u00e5.",
+                "applikasjonsressurs": {
+                    "description": "Ulike ressursar (lisensar) knytt til ein applikasjon.",
                     "items": {
                         "type": "string"
                     },
@@ -80,8 +63,27 @@
                         "null"
                     ]
                 },
-                "ressurs": {
-                    "description": "Ulike ressursar (lisensar) knytt til denne applikasjonen.",
+                "beskrivelse": {
+                    "description": "Beskriven namn eller omtale.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "gyldighetsperiode": {
+                    "$ref": "#/$defs/Periode",
+                    "description": "Periode ressursen er gyldig for."
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": "string"
+                },
+                "navn": {
+                    "description": "Hovudnamn for ressursen.",
+                    "type": "string"
+                },
+                "plattform": {
+                    "description": "Plattforma ressursen er knytt til.",
                     "items": {
                         "type": "string"
                     },
@@ -111,19 +113,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -143,24 +149,25 @@
             "description": "Informasjon om kor ein applikasjon kan nyttast (lisensressurs).",
             "properties": {
                 "applikasjon": {
-                    "description": "Applikasjonen denne ressursen (lisensen) er knytt til.",
+                    "description": "Applikasjonen ressursen (lisensen) er knytt til.",
                     "type": "string"
                 },
                 "beskrivelse": {
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "brukertype": {
-                    "description": "For kva brukertypar denne lisensen er gyldig.",
+                    "description": "For kva brukertypar lisensen er gyldig.",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
                 },
                 "eier": {
-                    "description": "Referanse til Organisasjonselement som har eigarskap til lisensen.",
+                    "description": "Referanse til Organisasjonselement som har eigarskap.",
                     "type": "string"
                 },
                 "enhetskostnad": {
@@ -172,10 +179,10 @@
                 },
                 "gyldighetsperiode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Start- og sluttdato for gyldighetsperioden til ressursen."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "handhevingstype": {
-                    "description": "Korleis det skal handhevast n\u00e5r lisensantall vert overskredet (H\u00e5ndhevingstype).",
+                    "description": "Korleis lisensmodellen skal handhevast.",
                     "type": [
                         "string",
                         "null"
@@ -186,7 +193,7 @@
                     "type": "string"
                 },
                 "kreverGodkjenning": {
-                    "description": "True dersom tildeling av ressursen krev godkjenning av leiar/tenestteforvaltar eller tenesteeigr.\n",
+                    "description": "True dersom tildeling av ressursen krev godkjenning.",
                     "type": [
                         "boolean",
                         "null"
@@ -200,13 +207,14 @@
                     ]
                 },
                 "lisensmodell": {
-                    "description": "Kva lisensmodell applikasjonsressursen har.",
+                    "description": "Lisensmodellen applikasjonsressursen har.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "ressurstilgjengelighet": {
@@ -237,24 +245,24 @@
             "properties": {
                 "gyldighetsperiode": {
                     "$ref": "#/$defs/Periode",
-                    "description": "Gyldighetsperioden til applikasjonsressurstilgjengelegheita."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "konsument": {
-                    "description": "Referanse til Organisasjonselement som har tilgang til denne ressursen.",
+                    "description": "Referanse til Organisasjonselement som har tilgang til ressursen.",
                     "type": "string"
                 },
                 "lisensantall": {
-                    "description": "Totalt tal p\u00e5 lisensar tilgjengeleg for brukarar i konsumenten.",
+                    "description": "Totalt tal p\u00e5 lisensar.",
                     "type": [
                         "integer",
                         "null"
                     ]
                 },
-                "ressurs": {
+                "ressursRef": {
                     "description": "Ressursen organisasjonselementet har tilgang til.",
                     "type": "string"
                 }
@@ -263,14 +271,14 @@
                 "id",
                 "gyldighetsperiode",
                 "konsument",
-                "ressurs"
+                "ressursRef"
             ],
             "title": "Applikasjonsressurstilgjengelighet",
             "type": "object"
         },
         "Brukertype": {
             "additionalProperties": false,
-            "description": "Dei ulike brukartypane som kan nytte lisensen (t.d. Ansatt, Elev).",
+            "description": "Dei ulike brukartypane som kan nytte lisensen.",
             "properties": {
                 "gyldighetsperiode": {
                     "anyOf": [
@@ -280,19 +288,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -324,24 +336,24 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Einingsens ID i datakatalogen (t.d. ObjectId i Azure AD)."
+                    "description": "Einingsens ID i datakatalogen."
                 },
                 "eier": {
-                    "description": "Referanse til Organisasjonselement som eig eininga (om ikkje privateid).",
+                    "description": "Referanse til Organisasjonselement som har eigarskap.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "elev": {
-                    "description": "Referanse til Elev (Utdanning) som nyttar eininga.",
+                    "description": "Referanse til Elev (Utdanning).",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "enhetsgruppemedlemskap": {
-                    "description": "Einingsgruppene eininga er medlem av.",
+                    "description": "Einingsgruppemelemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -351,7 +363,7 @@
                     ]
                 },
                 "enhetstype": {
-                    "description": "Type digital eining: Mobiltelefon, datamaskin, nettbrett.",
+                    "description": "Type digital eining.",
                     "type": "string"
                 },
                 "flerbrukerenhet": {
@@ -366,21 +378,21 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namnet slik det framkjem i fagsystemet/datakatalogen.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "personalressurs": {
-                    "description": "Referanse til Personalressurs (Administrasjon) som nyttar eininga.",
+                    "description": "Referanse til Personalressurs (Administrasjon).",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "plattform": {
-                    "description": "Operativsystemplattform: Windows, macOS, Linux, iOS, Android.",
+                    "description": "Plattforma ressursen er knytt til.",
                     "type": "string"
                 },
                 "privateid": {
@@ -419,12 +431,48 @@
             "title": "DigitalEnhet",
             "type": "object"
         },
+        "Elev": {
+            "additionalProperties": false,
+            "description": "Ein elev registrert i skulesystemet.",
+            "properties": {
+                "elevnummer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Identifikator"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Skulens interne elevnummer."
+                },
+                "id": {
+                    "description": "URI-identifikator for ressursen.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "person": {
+                    "description": "Referanse til Person i Administrasjon-domenet.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Elev",
+            "type": "object"
+        },
         "Enhetsgruppe": {
             "additionalProperties": false,
-            "description": "Ei gruppering av einsarta digitale einingar (t.d. klassesett med iPadar).",
+            "description": "Ei gruppering av einsarta digitale einingar.",
             "properties": {
                 "enhetsgruppemedlemskap": {
-                    "description": "Digitale einingar som er med i denne einingsgruppen.",
+                    "description": "Einingsgruppemelemskap.",
                     "items": {
                         "type": "string"
                     },
@@ -434,7 +482,7 @@
                     ]
                 },
                 "enhetstype": {
-                    "description": "Type digital eining: Mobiltelefon, datamaskin, nettbrett.",
+                    "description": "Type digital eining.",
                     "type": "string"
                 },
                 "id": {
@@ -442,7 +490,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Namnet slik det framkjem i fagsystemet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "organisasjonsenhet": {
@@ -450,7 +498,7 @@
                     "type": "string"
                 },
                 "plattform": {
-                    "description": "Operativsystemplattform: Windows, macOS, Linux, iOS, Android.",
+                    "description": "Plattforma ressursen er knytt til.",
                     "type": "string"
                 }
             },
@@ -491,7 +539,7 @@
         },
         "Enhetstype": {
             "additionalProperties": false,
-            "description": "Type digital eining (t.d. Mobiltelefon, Datamaskin, Nettbrett).",
+            "description": "Type digital eining.",
             "properties": {
                 "gyldighetsperiode": {
                     "anyOf": [
@@ -501,19 +549,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -541,7 +593,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -552,7 +604,7 @@
                     "type": "string"
                 },
                 "kommune": {
-                    "description": "Alle kommunar som inng\u00e5r i fylket.",
+                    "description": "Kommune.",
                     "items": {
                         "type": "string"
                     },
@@ -562,7 +614,7 @@
                     ]
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -583,7 +635,7 @@
         },
         "Handhevingstype": {
             "additionalProperties": false,
-            "description": "Korleis ulike lisensmodellar kan handhevast (H\u00e5ndhevingstype).",
+            "description": "Korleis ulike lisensmodellar kan handhevast.",
             "properties": {
                 "gyldighetsperiode": {
                     "anyOf": [
@@ -593,19 +645,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -633,7 +689,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Perioden ein gjeven identifikator er gyldig."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "identifikatorverdi": {
                     "description": "Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt identifikator.",
@@ -655,7 +711,7 @@
                     "type": "string"
                 },
                 "personalressurs": {
-                    "description": "Referanse til Personalressurs (Administrasjon) knytt til identiteten.",
+                    "description": "Referanse til Personalressurs (Administrasjon).",
                     "type": [
                         "string",
                         "null"
@@ -691,7 +747,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -702,7 +758,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -726,7 +782,7 @@
             "description": "Liste over Norges kommunar.",
             "properties": {
                 "fylke": {
-                    "description": "Fylket kommunen h\u00f8yrer til.",
+                    "description": "Fylke.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -738,7 +794,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -749,7 +805,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -829,7 +885,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Kontaktinformasjon for kontaktpersonen."
+                    "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "kontaktperson": {
                     "description": "Personar kontaktpersonen er p\u00e5r\u00f8rande for.",
@@ -841,7 +897,7 @@
                         "null"
                     ]
                 },
-                "navn": {
+                "kontaktperson_navn": {
                     "anyOf": [
                         {
                             "$ref": "#/$defs/Personnavn"
@@ -853,7 +909,7 @@
                     "description": "Namn p\u00e5 kontaktpersonen."
                 },
                 "type": {
-                    "description": "Beskriv kva slags type kontaktperson.",
+                    "description": "Beskriv kva slags type.",
                     "type": "string"
                 }
             },
@@ -877,21 +933,18 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
+                    "type": "string"
                 },
                 "kode": {
                     "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -922,19 +975,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1008,7 +1065,7 @@
             "description": "Tidsperiode med obligatorisk start og valfri slutt.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Beskriven namn p\u00e5 perioden.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": [
                         "string",
                         "null"
@@ -1100,14 +1157,14 @@
                     "type": "string"
                 },
                 "kjonn": {
-                    "description": "Kj\u00f8nn for personen.",
+                    "description": "Kj\u00f8nn.",
                     "type": [
                         "string",
                         "null"
                     ]
                 },
                 "kommune": {
-                    "description": "Kommune der personen er busett.",
+                    "description": "Kommune.",
                     "type": [
                         "string",
                         "null"
@@ -1148,10 +1205,6 @@
                         "null"
                     ]
                 },
-                "navn": {
-                    "$ref": "#/$defs/Personnavn",
-                    "description": "Namn p\u00e5 personen."
-                },
                 "otungdom": {
                     "description": "Referanse til OtUngdom (Utdanning).",
                     "type": [
@@ -1168,6 +1221,10 @@
                         "array",
                         "null"
                     ]
+                },
+                "person_navn": {
+                    "$ref": "#/$defs/Personnavn",
+                    "description": "Namn p\u00e5 personen."
                 },
                 "personalressurs": {
                     "description": "Referanse til Personalressurs (Administrasjon).",
@@ -1201,7 +1258,7 @@
             "required": [
                 "id",
                 "fodselsnummer",
-                "navn"
+                "person_navn"
             ],
             "title": "Person",
             "type": "object"
@@ -1235,7 +1292,7 @@
         },
         "Plattform": {
             "additionalProperties": false,
-            "description": "Plattforma tenesta kan leverast p\u00e5 (t.d. Windows, macOS, iOS, Android).",
+            "description": "Plattforma tenesta kan leverast p\u00e5.",
             "properties": {
                 "gyldighetsperiode": {
                     "anyOf": [
@@ -1245,19 +1302,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1284,19 +1345,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1465,10 +1530,10 @@
         },
         "Rettighet": {
             "additionalProperties": false,
-            "description": "Ei namngitt rettighet. Kva rettigheta gir tilgang til er systemspesifikt.",
+            "description": "Ei namngitt rettighet.",
             "properties": {
                 "beskrivelse": {
-                    "description": "Ei skildring av kva rettigheta inneber.",
+                    "description": "Beskriven namn eller omtale.",
                     "type": "string"
                 },
                 "gyldighetsperiode": {
@@ -1480,7 +1545,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for omgrepet/koden."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1501,7 +1566,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1534,7 +1599,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Angir gyldighetsperioden for eit omgrep/kode."
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1545,7 +1610,7 @@
                     "type": "string"
                 },
                 "navn": {
-                    "description": "Hovudnamn for omgrepet.",
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
@@ -1576,19 +1641,23 @@
                         {
                             "type": "null"
                         }
-                    ]
+                    ],
+                    "description": "Periode ressursen er gyldig for."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
                 "kode": {
+                    "description": "Verdi som identifiserer omgrepet.",
                     "type": "string"
                 },
                 "navn": {
+                    "description": "Hovudnamn for ressursen.",
                     "type": "string"
                 },
                 "passiv": {
+                    "description": "Angir at koden er passiv og ikkje kan veljast.",
                     "type": [
                         "boolean",
                         "null"
@@ -1615,19 +1684,19 @@
                     "description": "URI-identifikator for ressursen.",
                     "type": "string"
                 },
-                "navn": {
-                    "description": "Namn p\u00e5 valuta.",
-                    "type": "string"
-                },
                 "nummerkode": {
                     "$ref": "#/$defs/Identifikator",
                     "description": "Nummerkode for aktuell valuta."
+                },
+                "valuta_navn": {
+                    "description": "Namn p\u00e5 valuta.",
+                    "type": "string"
                 }
             },
             "required": [
                 "id",
                 "bokstavkode",
-                "navn",
+                "valuta_navn",
                 "nummerkode"
             ],
             "title": "Valuta",
@@ -1646,7 +1715,7 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Bes\u00f8ksadresse til ein organisasjonseining i einingsregisteret."
+                    "description": "Bes\u00f8ksadresse til ein organisasjonseining."
                 },
                 "id": {
                     "description": "URI-identifikator for ressursen.",
@@ -1664,7 +1733,7 @@
                     "description": "Den f\u00f8retrekte m\u00e5ten \u00e5 kome i kontakt med ein akt\u00f8r."
                 },
                 "laerling": {
-                    "description": "Referanse til Laerling (Utdanning) i verksemda.",
+                    "description": "Referanse til Laerling (Utdanning).",
                     "items": {
                         "type": "string"
                     },

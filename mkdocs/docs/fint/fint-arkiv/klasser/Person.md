@@ -9,7 +9,7 @@ _Referanse til Person i Administrasjon-domenet._
 
 
 
-URI: [ark:person](https://schema.fintlabs.no/arkiv/person)
+URI: [fint:person](https://schema.fintlabs.no/person)
 Alias: person
 
 <!-- no inheritance hierarchy -->
@@ -23,6 +23,7 @@ Alias: person
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  yes  |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 
 
 
@@ -35,9 +36,9 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Personalmappe](personalmappe.md) |
-| Slot URI | [ark:person](https://schema.fintlabs.no/arkiv/person) |
+| Range | [Person](person.md) |
+| Domain Of | [Personalmappe](personalmappe.md), [Elev](elev.md) |
+| Slot URI | [fint:person](https://schema.fintlabs.no/person) |
 
 ### Cardinality and Requirements
 
@@ -71,7 +72,7 @@ Alias: person
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | ark:person |
+| self | fint:person |
 | native | https://schema.fintlabs.no/arkiv/:person |
 
 
@@ -85,11 +86,12 @@ name: person
 description: Referanse til Person i Administrasjon-domenet.
 from_schema: https://data.norge.no/linkml/fint-arkiv
 rank: 1000
-slot_uri: ark:person
+slot_uri: fint:person
 alias: person
 domain_of:
 - Personalmappe
-range: uriorcurie
+- Elev
+range: Person
 
 ```
 </details>

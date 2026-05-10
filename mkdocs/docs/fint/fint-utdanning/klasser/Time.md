@@ -47,7 +47,8 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:time |
+| self | xsd:time |
 | native | https://schema.fintlabs.no/utdanning/:time |
+| exact | schema:Time |
 
 

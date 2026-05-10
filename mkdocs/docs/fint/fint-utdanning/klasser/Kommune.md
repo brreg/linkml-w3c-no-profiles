@@ -3,13 +3,13 @@
 # Slot: kommune 
 
 
-_Referanse til kommunen OT-eininga dekker._
+_Kommune._
 
 
 
 
 
-URI: [utd:kommune](https://schema.fintlabs.no/utdanning/kommune)
+URI: [fint:kommune](https://schema.fintlabs.no/kommune)
 Alias: kommune
 
 <!-- no inheritance hierarchy -->
@@ -22,9 +22,9 @@ Alias: kommune
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
 | [Person](person.md) | Fysiske private personar |  yes  |
 | [Fylke](fylke.md) | Liste over Norges fylker |  yes  |
+| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
 
 
 
@@ -37,9 +37,9 @@ Alias: kommune
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
+| Range | [Kommune](kommune.md) |
 | Domain Of | [OtEnhet](otenhet.md), [Fylke](fylke.md), [Person](person.md) |
-| Slot URI | [utd:kommune](https://schema.fintlabs.no/utdanning/kommune) |
+| Slot URI | [fint:kommune](https://schema.fintlabs.no/kommune) |
 
 ### Cardinality and Requirements
 
@@ -73,7 +73,7 @@ Alias: kommune
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | utd:kommune |
+| self | fint:kommune |
 | native | https://schema.fintlabs.no/utdanning/:kommune |
 
 
@@ -84,16 +84,16 @@ Alias: kommune
 <details>
 ```yaml
 name: kommune
-description: Referanse til kommunen OT-eininga dekker.
+description: Kommune.
 from_schema: https://data.norge.no/linkml/fint-utdanning
 rank: 1000
-slot_uri: utd:kommune
+slot_uri: fint:kommune
 alias: kommune
 domain_of:
 - OtEnhet
 - Fylke
 - Person
-range: uriorcurie
+range: Kommune
 
 ```
 </details>

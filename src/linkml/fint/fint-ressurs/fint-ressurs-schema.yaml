@@ -126,10 +126,10 @@ slots:
 
   # --- Felles res-slots (delt mellom fleire klasser) ------------------------
 
-  naam:
-    slot_uri: res:naam
-    range: string
-    description: Namn på ressursen eller kodeverk-elementet.
+  # navn:
+  #   slot_uri: res:navn
+  #   range: string
+  #   description: Namn på ressursen eller kodeverk-elementet.
 
   plattform:
     slot_uri: res:plattform
@@ -330,14 +330,14 @@ classes:
     class_uri: res:Applikasjon
     slots:
       - id
-      - naam
+      - navn
       - beskrivelse
       - gyldighetsperiode
       - plattform
       - applikasjonsressurs
       - applikasjonskategori
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -364,7 +364,7 @@ classes:
     class_uri: res:Applikasjonsressurs
     slots:
       - id
-      - naam
+      - navn
       - beskrivelse
       - gyldighetsperiode
       - enhetskostnad
@@ -377,7 +377,7 @@ classes:
       - lisensmodell
       - ressurstilgjengelighet
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -455,7 +455,7 @@ classes:
     slots:
       - id
       - serienummer
-      - naam
+      - navn
       - dataobjektId
       - flerbrukerenhet
       - privateid
@@ -473,7 +473,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         in_subset:
           - Valgfri
       dataobjektId:
@@ -521,13 +521,13 @@ classes:
     class_uri: res:Enhetsgruppe
     slots:
       - id
-      - naam
+      - navn
       - organisasjonsenhet
       - enhetstype
       - plattform
       - enhetsgruppemedlemskap
     slot_usage:
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -589,7 +589,7 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - beskrivelse
       - gyldighetsperiode
       - passiv
@@ -599,7 +599,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      naam:
+      navn:
         required: true
         in_subset:
           - Obligatorisk
@@ -627,13 +627,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -648,13 +648,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -669,13 +669,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -690,13 +690,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -711,13 +711,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -732,13 +732,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -753,13 +753,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:
@@ -774,13 +774,13 @@ classes:
     slots:
       - id
       - kode
-      - naam
+      - navn
       - gyldighetsperiode
       - passiv
     slot_usage:
       kode:
         required: true
-      naam:
+      navn:
         required: true
       gyldighetsperiode:
         in_subset:

@@ -4,7 +4,7 @@
 erDiagram
 AdministrativEnhet {
     uriorcurie id  
-    string naam  
+    string navn  
     uriorcurie organisasjonselement  
 }
 Adresse {
@@ -46,13 +46,13 @@ DispensasjonAutomatiskFredaKulturminne {
 DokumentStatus {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 DokumentType {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Dokumentbeskrivelse {
@@ -78,16 +78,19 @@ Dokumentobjekt {
     string sjekksumAlgoritme  
     integer versjonsnummer  
 }
+Elev {
+    uriorcurie id  
+}
 Format {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Fylke {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Identifikator {
@@ -96,7 +99,7 @@ Identifikator {
 JournalStatus {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Journalpost {
@@ -124,7 +127,13 @@ Journalpost {
 JournalpostType {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
+    boolean passiv  
+}
+Kjonn {
+    uriorcurie id  
+    string kode  
+    string navn  
     boolean passiv  
 }
 Klasse {
@@ -144,13 +153,13 @@ Klassifikasjonssystem {
 Klassifikasjonstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Kommune {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Kontaktinformasjon {
@@ -159,6 +168,10 @@ Kontaktinformasjon {
     string nettsted  
     string sip  
     string telefonnummer  
+}
+Kontaktperson {
+    uriorcurie id  
+    string type  
 }
 Korrespondansepart {
     string foedselsnummer  
@@ -169,13 +182,13 @@ Korrespondansepart {
 KorrespondansepartType {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Landkode {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Matrikkelnummer {
@@ -191,7 +204,7 @@ Merknad {
 Merknadstype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Part {
@@ -203,7 +216,7 @@ Part {
 PartRolle {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Periode {
@@ -211,10 +224,17 @@ Periode {
     datetime slutt  
     datetime start  
 }
+Person {
+    uriorcurie id  
+    string bilde  
+    date fodselsdato  
+    uriorcurieList laerling  
+    uriorcurie otungdom  
+    uriorcurie personalressurs  
+}
 Personalmappe {
     uriorcurie arbeidssted  
     uriorcurie leder  
-    uriorcurie person  
     uriorcurie personalressurs  
     uriorcurie id  
     datetime avsluttetDato  
@@ -236,7 +256,7 @@ Personnavn {
 Rolle {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Sak {
@@ -255,13 +275,13 @@ Sak {
 Saksmappetype {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Saksstatus {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Skjerming {
@@ -270,7 +290,7 @@ Skjerming {
 Skjermingshjemmel {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 SoeknadDrosjeloeyve {
@@ -288,6 +308,12 @@ SoeknadDrosjeloeyve {
     string tittel  
     datetime utlaantDato  
 }
+Spraak {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
 Tilgang {
     uriorcurie id  
     string tittel  
@@ -295,19 +321,19 @@ Tilgang {
 Tilgangsgruppe {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Tilgangsrestriksjon {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 TilknyttetRegistreringSom {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 TilskuddFartoy {
@@ -344,7 +370,7 @@ TilskuddFredaBygningPrivatEie {
 Variantformat {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 
@@ -386,6 +412,8 @@ Dokumentobjekt ||--|o Dokumentfil : "referanseDokumentfil"
 Dokumentobjekt ||--|o Format : "filformat"
 Dokumentobjekt ||--|| Arkivressurs : "opprettetAv"
 Dokumentobjekt ||--|| Variantformat : "variantFormat"
+Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
 Format ||--|o Periode : "gyldighetsperiode"
 Fylke ||--|o Periode : "gyldighetsperiode"
 Fylke ||--}o Kommune : "kommune"
@@ -406,6 +434,7 @@ Journalpost ||--}o Korrespondansepart : "korrespondansepart"
 Journalpost ||--}o Merknad : "merknad"
 Journalpost ||--}o Part : "part"
 JournalpostType ||--|o Periode : "gyldighetsperiode"
+Kjonn ||--|o Periode : "gyldighetsperiode"
 Klasse ||--|o Skjerming : "skjerming"
 Klasse ||--|| Klassifikasjonssystem : "klassifikasjonssystem"
 Klassifikasjonssystem ||--|o Klassifikasjonstype : "klassifikasjonstype"
@@ -414,6 +443,9 @@ Klassifikasjonssystem ||--}| Klasse : "klasse"
 Klassifikasjonstype ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|o Periode : "gyldighetsperiode"
 Kommune ||--|| Fylke : "fylke"
+Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
+Kontaktperson ||--}o Person : "kontaktperson"
 Korrespondansepart ||--|o Adresse : "adresse"
 Korrespondansepart ||--|o Kontaktinformasjon : "kontaktinformasjon"
 Korrespondansepart ||--|o Skjerming : "skjerming"
@@ -429,6 +461,17 @@ Part ||--|o Adresse : "adresse"
 Part ||--|o Kontaktinformasjon : "kontaktinformasjon"
 Part ||--|o PartRolle : "partRolle"
 PartRolle ||--|o Periode : "gyldighetsperiode"
+Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
+Person ||--|o Kjonn : "kjonn"
+Person ||--|o Kommune : "kommune"
+Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Person ||--|o Spraak : "maalform, morsmaal"
+Person ||--|| Identifikator : "fodselsnummer"
+Person ||--|| Personnavn : "person_navn"
+Person ||--}o Kontaktperson : "parorende"
+Person ||--}o Landkode : "statsborgerskap"
+Person ||--}o Person : "foreldre, foreldreansvar"
 Personalmappe ||--|o AdministrativEnhet : "journalenhet"
 Personalmappe ||--|o Arkivdel : "arkivdel"
 Personalmappe ||--|o Arkivressurs : "avsluttetAv"
@@ -438,6 +481,7 @@ Personalmappe ||--|o Skjerming : "skjerming"
 Personalmappe ||--|o Tilgangsgruppe : "tilgangsgruppe"
 Personalmappe ||--|| AdministrativEnhet : "administrativEnhet"
 Personalmappe ||--|| Arkivressurs : "opprettetAv, saksansvarlig"
+Personalmappe ||--|| Person : "person"
 Personalmappe ||--|| Personnavn : "personnavn"
 Personalmappe ||--|| Saksstatus : "saksstatus"
 Personalmappe ||--}o Journalpost : "journalpost"
@@ -478,6 +522,7 @@ SoeknadDrosjeloeyve ||--}o Journalpost : "journalpost"
 SoeknadDrosjeloeyve ||--}o Klasse : "klasse"
 SoeknadDrosjeloeyve ||--}o Merknad : "merknad"
 SoeknadDrosjeloeyve ||--}o Part : "part"
+Spraak ||--|o Periode : "gyldighetsperiode"
 Tilgang ||--|o AdministrativEnhet : "administrativEnhet"
 Tilgang ||--|o Arkivdel : "arkivdel"
 Tilgang ||--|| Rolle : "rolle"
@@ -556,6 +601,7 @@ Name: fint-arkiv
 | [Dokumentobjekt](klasser/dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |
 | [DokumentStatus](klasser/dokumentstatus.md) | Status til eit dokument |
 | [DokumentType](klasser/dokumenttype.md) | Type dokument |
+| [Elev](klasser/elev.md) | Ein elev registrert i skulesystemet |
 | [Format](klasser/format.md) | Dokumentets filformat |
 | [Identifikator](klasser/identifikator.md) | Unik identifikasjon til eit objekt |
 | [JournalpostType](klasser/journalposttype.md) | Namn på type journalpost |
@@ -643,6 +689,7 @@ Name: fint-arkiv
 | [dokumenttypar](klasser/dokumenttypar.md) |  |
 | [dokumentType](klasser/dokumenttype.md) | Namn på type dokument |
 | [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](klasser/elevnummer.md) | Skulens interne elevnummer |
 | [epostadresse](klasser/epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](klasser/etternavn.md) | Etternamn til personen |
 | [fartoyNavn](klasser/fartoynavn.md) | Fartøyets namn |
@@ -691,7 +738,7 @@ Name: fint-arkiv
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](klasser/kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontaktperson_str](klasser/kontaktperson_str.md) | Kontaktperson hos ein organisasjon som er avsender, mottakar eller sakspart |
 | [korrespondansepart](klasser/korrespondansepart.md) | Mottakar eller sendar av arkivdokument |
 | [korrespondansepartNavn](klasser/korrespondansepartnavn.md) | Namn på person eller organisasjon som er avsender eller mottakar |
@@ -714,7 +761,7 @@ Name: fint-arkiv
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
 | [mottattDato](klasser/mottattdato.md) | Dato eit eksternt dokument vart motteke |
-| [naam](klasser/naam.md) | Namn på arkivenhet eller kodeverk-element |
+| [navn](klasser/navn.md) | Hovudnamn for ressursen |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [noekkelord](klasser/noekkelord.md) | Nøkkelord som skildrar innhaldet (Mappe) |
 | [nokkelord](klasser/nokkelord.md) | Nøkkelord som skildrar innhaldet (Registrering) |
@@ -736,7 +783,7 @@ Name: fint-arkiv
 | [partRolle](klasser/partrolle.md) | Rolla til parten |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [person](klasser/person.md) | Referanse til Person i Administrasjon-domenet |
-| [person_naam](klasser/person_naam.md) | Namn på personen |
+| [person_navn](klasser/person_navn.md) | Namn på personen |
 | [personalmappe_liste](klasser/personalmappe_liste.md) |  |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
 | [personnavn](klasser/personnavn.md) | Namn på person (Personnavn-objekt) |
@@ -790,7 +837,7 @@ Name: fint-arkiv
 | [tittel](klasser/tittel.md) | Tittel eller namn på arkivenheten |
 | [type](klasser/type.md) | Beskriv kva slags type |
 | [utlaantDato](klasser/utlaantdato.md) | Dato ein fysisk saksmappe eller journalpost vart utlånt |
-| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [valuta_navn](klasser/valuta_navn.md) | Namn på valuta |
 | [variantFormat](klasser/variantformat.md) | Kva variant dokumentet førekjem i |
 | [variantformatar](klasser/variantformatar.md) |  |
 | [versjonsnummer](klasser/versjonsnummer.md) | Identifikasjon av versjonar innanfor same dokument |
@@ -837,7 +884,7 @@ Name: fint-arkiv
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|
@@ -845,6 +892,7 @@ Name: fint-arkiv
 | JSON-LD kontekst | [fint-arkiv-context.jsonld](fint-arkiv-context.jsonld) |
 | JSON Schema | [fint-arkiv-schema.json](fint-arkiv-schema.json) |
 | OWL ontologi | [fint-arkiv-ontology.ttl](fint-arkiv-ontology.ttl) |
+| RDF/Turtle skjema | [fint-arkiv-schema.ttl](fint-arkiv-schema.ttl) |
 | Python-klasser | [fint-arkiv-model.py](fint-arkiv-model.py) |
 | ER-diagram (Mermaid) | [fint-arkiv-erdiagram.md](fint-arkiv-erdiagram.md) |
 | Eksempeldata (Turtle) | [fint-arkiv-eksempel.ttl](fint-arkiv-eksempel.ttl) |

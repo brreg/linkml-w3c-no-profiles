@@ -22,8 +22,8 @@ Alias: fakturagrunnlag
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 | [Fakturautsteder](fakturautsteder.md) | Eining som utformar og oversender faktura og mottar betaling |  yes  |
+| [Faktura](faktura.md) | Betalingskrav utforma og oversendt frå fakturautstedar til fakturamottakar |  yes  |
 | [OkonomiContainer](okonomicontainer.md) | Rotcontainer for FINT Økonomi-instansar |  yes  |
 
 

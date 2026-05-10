@@ -139,6 +139,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | [soeknadsnummer](soeknadsnummer.md) | range | [Identifikator](identifikator.md) |
 | [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | [mappeId](mappeid.md) | range | [Identifikator](identifikator.md) |
 | [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | [mappeId](mappeid.md) | range | [Identifikator](identifikator.md) |
+| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Enhet](enhet.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [bokstavkode](bokstavkode.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [nummerkode](nummerkode.md) | range | [Identifikator](identifikator.md) |

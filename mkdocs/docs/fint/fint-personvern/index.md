@@ -2,6 +2,11 @@
 
 ```mermaid
 erDiagram
+Adresse {
+    stringList adresselinje  
+    string postnummer  
+    string poststed  
+}
 Behandling {
     uriorcurie id  
     boolean aktiv  
@@ -11,7 +16,48 @@ Behandling {
 Behandlingsgrunnlag {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
+    boolean passiv  
+}
+Elev {
+    uriorcurie id  
+}
+Fylke {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Identifikator {
+    string identifikatorverdi  
+}
+Kjonn {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kommune {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kontaktinformasjon {
+    string epostadresse  
+    string mobiltelefonnummer  
+    string nettsted  
+    string sip  
+    string telefonnummer  
+}
+Kontaktperson {
+    uriorcurie id  
+    string type  
+}
+Landkode {
+    uriorcurie id  
+    string kode  
+    string navn  
     boolean passiv  
 }
 Periode {
@@ -19,32 +65,76 @@ Periode {
     datetime slutt  
     datetime start  
 }
+Person {
+    uriorcurie id  
+    string bilde  
+    date fodselsdato  
+    uriorcurieList laerling  
+    uriorcurie otungdom  
+    uriorcurie personalressurs  
+}
+Personnavn {
+    string etternavn  
+    string fornavn  
+    string mellomnavn  
+}
 Personopplysning {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 Samtykke {
     uriorcurie id  
     datetime opprettet  
     uriorcurie organisasjonselement  
-    uriorcurie person  
+}
+Spraak {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
 }
 Tjeneste {
     uriorcurie id  
-    string naam  
+    string navn  
     datetime slettet  
 }
 
+Adresse ||--|o Landkode : "land"
 Behandling ||--|| Behandlingsgrunnlag : "behandlingsgrunnlag"
 Behandling ||--|| Personopplysning : "personopplysning"
 Behandling ||--|| Tjeneste : "tjeneste"
 Behandling ||--}o Samtykke : "samtykke"
 Behandlingsgrunnlag ||--|o Periode : "gyldighetsperiode"
+Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
+Fylke ||--|o Periode : "gyldighetsperiode"
+Fylke ||--}o Kommune : "kommune"
+Identifikator ||--|o Periode : "gyldighetsperiode"
+Kjonn ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|| Fylke : "fylke"
+Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
+Kontaktperson ||--}o Person : "kontaktperson"
+Landkode ||--|o Periode : "gyldighetsperiode"
+Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
+Person ||--|o Kjonn : "kjonn"
+Person ||--|o Kommune : "kommune"
+Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Person ||--|o Spraak : "maalform, morsmaal"
+Person ||--|| Identifikator : "fodselsnummer"
+Person ||--|| Personnavn : "person_navn"
+Person ||--}o Kontaktperson : "parorende"
+Person ||--}o Landkode : "statsborgerskap"
+Person ||--}o Person : "foreldre, foreldreansvar"
 Personopplysning ||--|o Periode : "gyldighetsperiode"
 Samtykke ||--|| Behandling : "behandling"
 Samtykke ||--|| Periode : "gyldighetsperiode"
+Samtykke ||--|| Person : "person"
+Spraak ||--|o Periode : "gyldighetsperiode"
 Tjeneste ||--}o Behandling : "behandling"
 
 ```
@@ -77,6 +167,7 @@ Name: fint-personvern
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Spraak](klasser/spraak.md) | Verdiar for språk (2 bokstavar) |
 | [Behandling](klasser/behandling.md) | All bruk av personopplysningar (behandlingsaktivitet) |
 | [Behandlingsgrunnlag](klasser/behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysningar |
+| [Elev](klasser/elev.md) | Ein elev registrert i skulesystemet |
 | [Identifikator](klasser/identifikator.md) | Unik identifikasjon til eit objekt |
 | [Kontaktinformasjon](klasser/kontaktinformasjon.md) | Informasjon som kan brukast for å oppnå kontakt |
 | [Kontaktperson](klasser/kontaktperson.md) | Kontaktperson (pårørande) til ein person |
@@ -107,6 +198,7 @@ Name: fint-personvern
 | [bostedsadresse](klasser/bostedsadresse.md) | Folkeregistrert adresse til personen |
 | [bruksnummer](klasser/bruksnummer.md) | Fortløpande nummerering av bruk under gårdsnummer |
 | [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](klasser/elevnummer.md) | Skulens interne elevnummer |
 | [epostadresse](klasser/epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](klasser/etternavn.md) | Etternamn til personen |
 | [festenummer](klasser/festenummer.md) | Fortløpande nummerering av festar under gårdsnummer/bruksnummer |
@@ -128,14 +220,14 @@ Name: fint-personvern
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](klasser/kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [land](klasser/land.md) | Land der adressa befinn seg |
 | [maalform](klasser/maalform.md) | Målform personen føretrekkjer |
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
-| [naam](klasser/naam.md) | Namn på ressursen |
+| [navn](klasser/navn.md) | Hovudnamn for ressursen |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
 | [opprettet](klasser/opprettet.md) | Dato då samtykket vart oppretta |
@@ -145,8 +237,8 @@ Name: fint-personvern
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
 | [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
-| [person](klasser/person.md) | Referanse til Person (Administrasjon) |
-| [person_naam](klasser/person_naam.md) | Namn på personen |
+| [person](klasser/person.md) | Referanse til Person i Administrasjon-domenet |
+| [person_navn](klasser/person_navn.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs (Administrasjon) |
 | [personopplysning](klasser/personopplysning.md) | Opplysning eller vurdering som kan knytast til ein enkeltperson |
 | [personopplysningar](klasser/personopplysningar.md) |  |
@@ -165,7 +257,7 @@ Name: fint-personvern
 | [tenester](klasser/tenester.md) |  |
 | [tjeneste](klasser/tjeneste.md) | Tenesta som behandlinga tilhøyrer |
 | [type](klasser/type.md) | Beskriv kva slags type |
-| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [valuta_navn](klasser/valuta_navn.md) | Namn på valuta |
 | [virksomhetsId](klasser/virksomhetsid.md) | Intern unik identifikator i økonomisystemet |
 
 
@@ -209,7 +301,7 @@ Name: fint-personvern
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|
@@ -217,6 +309,7 @@ Name: fint-personvern
 | JSON-LD kontekst | [fint-personvern-context.jsonld](fint-personvern-context.jsonld) |
 | JSON Schema | [fint-personvern-schema.json](fint-personvern-schema.json) |
 | OWL ontologi | [fint-personvern-ontology.ttl](fint-personvern-ontology.ttl) |
+| RDF/Turtle skjema | [fint-personvern-schema.ttl](fint-personvern-schema.ttl) |
 | Python-klasser | [fint-personvern-model.py](fint-personvern-model.py) |
 | ER-diagram (Mermaid) | [fint-personvern-erdiagram.md](fint-personvern-erdiagram.md) |
 | Eksempeldata (Turtle) | [fint-personvern-eksempel.ttl](fint-personvern-eksempel.ttl) |

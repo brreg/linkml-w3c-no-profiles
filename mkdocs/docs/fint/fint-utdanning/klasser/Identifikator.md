@@ -114,7 +114,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
 | [identifikatorverdi](identifikatorverdi.md) | 1 <br/> [String](string.md) | Ein konkret kombinasjon av teikn og/eller bokstavar som utgjer ein bestemt id... |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Gyldigheitsperiode |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
 
 
 
@@ -127,10 +127,10 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Skole](skole.md) | [skolenummer](skolenummer.md) | range | [Identifikator](identifikator.md) |
 | [Skole](skole.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Skoleressurs](skoleressurs.md) | [feidenavn](feidenavn.md) | range | [Identifikator](identifikator.md) |
+| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Enhet](enhet.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [bokstavkode](bokstavkode.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [nummerkode](nummerkode.md) | range | [Identifikator](identifikator.md) |
@@ -225,10 +225,10 @@ attributes:
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Gyldigheitsperiode.
+    description: Periode ressursen er gyldig for.
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:gyldighetsperiode
+    slot_uri: fint:gyldighetsperiode
     alias: gyldighetsperiode
     owner: Identifikator
     domain_of:

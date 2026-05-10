@@ -27,6 +27,7 @@ Avbruddsaarsak {
 }
 AvlagtProve {
     uriorcurie id  
+    uriorcurieList laerling  
     date provedato  
 }
 Betalingsstatus {
@@ -80,7 +81,6 @@ Eksamensvurdering {
 }
 Elev {
     uriorcurie id  
-    uriorcurie person  
 }
 Elevforhold {
     uriorcurie id  
@@ -155,6 +155,12 @@ Fullfortkode {
     string navn  
     boolean passiv  
 }
+Fylke {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
 Halvaarsfagvurdering {
     uriorcurie id  
     string kommentar  
@@ -191,6 +197,12 @@ Karakterverdi {
     string navn  
     boolean passiv  
 }
+Kjonn {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
 Klasse {
     uriorcurie id  
     string beskrivelse  
@@ -198,6 +210,19 @@ Klasse {
 }
 Klassemedlemskap {
     uriorcurie id  
+}
+Kommune {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
+}
+Kontaktinformasjon {
+    string epostadresse  
+    string mobiltelefonnummer  
+    string nettsted  
+    string sip  
+    string telefonnummer  
 }
 Kontaktlaerergruppe {
     uriorcurie id  
@@ -207,22 +232,24 @@ Kontaktlaerergruppe {
 Kontaktlaerergruppemedlemskap {
     uriorcurie id  
 }
+Kontaktperson {
+    uriorcurie id  
+    string type  
+}
 Laerling {
     uriorcurie id  
     uriorcurie bedrift  
     string kontraktstype  
-    uriorcurie person  
 }
 Landkode {
     uriorcurie id  
     string kode  
-    string naam  
+    string navn  
     boolean passiv  
 }
 OtEnhet {
     uriorcurie id  
     string kode  
-    uriorcurie kommune  
     string navn  
     boolean passiv  
 }
@@ -236,12 +263,19 @@ OtStatus {
 }
 OtUngdom {
     uriorcurie id  
-    uriorcurie person  
 }
 Periode {
     string beskrivelse  
     datetime slutt  
     datetime start  
+}
+Person {
+    uriorcurie id  
+    string bilde  
+    date fodselsdato  
+    uriorcurieList laerling  
+    uriorcurie otungdom  
+    uriorcurie personalressurs  
 }
 Persongruppe {
     uriorcurie id  
@@ -250,6 +284,11 @@ Persongruppe {
 }
 Persongruppemedlemskap {
     uriorcurie id  
+}
+Personnavn {
+    string etternavn  
+    string fornavn  
+    string mellomnavn  
 }
 Programomrade {
     uriorcurie grepreferanse  
@@ -299,7 +338,6 @@ Skoleeiertype {
 }
 Skoleressurs {
     uriorcurie id  
-    uriorcurie person  
     uriorcurie personalressurs  
 }
 Sluttfagvurdering {
@@ -311,6 +349,12 @@ Sluttordensvurdering {
     uriorcurie id  
     string kommentar  
     datetime vurderingsdato  
+}
+Spraak {
+    uriorcurie id  
+    string kode  
+    string navn  
+    boolean passiv  
 }
 Termin {
     uriorcurie id  
@@ -387,7 +431,6 @@ AvlagtProve ||--|o Bevistype : "bevistype"
 AvlagtProve ||--|o Brevtype : "brevtype"
 AvlagtProve ||--|o Fullfortkode : "fullfortkode"
 AvlagtProve ||--|o Provestatus : "provestatus"
-AvlagtProve ||--|| Laerling : "laerling"
 Betalingsstatus ||--|o Periode : "gyldighetsperiode"
 Bevistype ||--|o Periode : "gyldighetsperiode"
 Brevtype ||--|o Periode : "gyldighetsperiode"
@@ -416,6 +459,7 @@ Eksamensvurdering ||--|| Eksamensgruppe : "eksamensgruppe"
 Eksamensvurdering ||--|| Elevvurdering : "elevvurdering"
 Eksamensvurdering ||--}o Karakterhistorie : "karakterhistorie"
 Elev ||--|o Identifikator : "elevnummer"
+Elev ||--|o Person : "person"
 Elevforhold ||--|o Avbruddsaarsak : "avbruddsarsak"
 Elevforhold ||--|o Elevkategori : "kategori"
 Elevforhold ||--|o Elevvurdering : "elevvurdering"
@@ -476,6 +520,8 @@ Fraversregistrering ||--|| Fravartype : "fravartype"
 Fraversregistrering ||--|| Periode : "periode"
 Fraversregistrering ||--|| Undervisningsgruppe : "undervisningsgruppe"
 Fullfortkode ||--|o Periode : "gyldighetsperiode"
+Fylke ||--|o Periode : "gyldighetsperiode"
+Fylke ||--}o Kommune : "kommune"
 Halvaarsfagvurdering ||--|o Fag : "fag"
 Halvaarsfagvurdering ||--|o Karakterverdi : "karakter"
 Halvaarsfagvurdering ||--|o Skoleaar : "skoleaar"
@@ -492,6 +538,7 @@ Karakterskala ||--}o Karakterverdi : "verdi"
 Karakterstatus ||--|o Periode : "gyldighetsperiode"
 Karakterverdi ||--|o Periode : "gyldighetsperiode"
 Karakterverdi ||--|| Karakterskala : "skala"
+Kjonn ||--|o Periode : "gyldighetsperiode"
 Klasse ||--|o Skole : "skole"
 Klasse ||--|o Skoleaar : "skoleaar"
 Klasse ||--}o Arstrinn : "trinn"
@@ -502,6 +549,8 @@ Klasse ||--}o Undervisningsforhold : "undervisningsforhold"
 Klassemedlemskap ||--|o Elevforhold : "elevforhold"
 Klassemedlemskap ||--|o Klasse : "klasse"
 Klassemedlemskap ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|o Periode : "gyldighetsperiode"
+Kommune ||--|| Fylke : "fylke"
 Kontaktlaerergruppe ||--|o Skole : "skole"
 Kontaktlaerergruppe ||--|o Skoleaar : "skoleaar"
 Kontaktlaerergruppe ||--}o Kontaktlaerergruppemedlemskap : "gruppemedlemskap"
@@ -511,15 +560,32 @@ Kontaktlaerergruppe ||--}| Klasse : "klasse"
 Kontaktlaerergruppemedlemskap ||--|o Elevforhold : "elevforhold"
 Kontaktlaerergruppemedlemskap ||--|o Kontaktlaerergruppe : "kontaktlaerergruppe"
 Kontaktlaerergruppemedlemskap ||--|o Periode : "gyldighetsperiode"
+Kontaktperson ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Kontaktperson ||--|o Personnavn : "kontaktperson_navn"
+Kontaktperson ||--}o Person : "kontaktperson"
 Laerling ||--|o Periode : "laretid"
 Laerling ||--|o Programomrade : "programomrade"
+Laerling ||--|| Person : "person"
 Laerling ||--}o AvlagtProve : "avlagtprove"
 Landkode ||--|o Periode : "gyldighetsperiode"
 OtEnhet ||--|o Periode : "gyldighetsperiode"
+OtEnhet ||--|| Kommune : "kommune"
 OtStatus ||--|o Periode : "gyldighetsperiode"
 OtUngdom ||--|o OtEnhet : "enhet"
 OtUngdom ||--|o OtStatus : "status"
 OtUngdom ||--|o Programomrade : "programomrade"
+OtUngdom ||--|| Person : "person"
+Person ||--|o Adresse : "bostedsadresse, postadresse"
+Person ||--|o Elev : "elev"
+Person ||--|o Kjonn : "kjonn"
+Person ||--|o Kommune : "kommune"
+Person ||--|o Kontaktinformasjon : "kontaktinformasjon"
+Person ||--|o Spraak : "maalform, morsmaal"
+Person ||--|| Identifikator : "fodselsnummer"
+Person ||--|| Personnavn : "person_navn"
+Person ||--}o Kontaktperson : "parorende"
+Person ||--}o Landkode : "statsborgerskap"
+Person ||--}o Person : "foreldre, foreldreansvar"
 Persongruppe ||--|o Skole : "skole"
 Persongruppe ||--|o Skoleaar : "skoleaar"
 Persongruppe ||--}o Elevforhold : "elev"
@@ -537,7 +603,7 @@ Programomrademedlemskap ||--|o Periode : "gyldighetsperiode"
 Programomrademedlemskap ||--|o Programomrade : "programomrade"
 Provestatus ||--|o Periode : "gyldighetsperiode"
 Rom ||--}o Eksamen : "eksamen"
-Rom ||--}o Time : "time"
+Rom ||--}o Time : "skuletime"
 Sensor ||--|| Eksamensgruppe : "eksamensgruppe"
 Sensor ||--|| Skoleressurs : "skoleressurs"
 Skole ||--|o Adresse : "forretningsadresse, postadresse"
@@ -553,6 +619,7 @@ Skole ||--}o Utdanningsprogram : "utdanningsprogram"
 Skoleaar ||--|o Periode : "gyldighetsperiode"
 Skoleeiertype ||--|o Periode : "gyldighetsperiode"
 Skoleressurs ||--|o Identifikator : "feidenavn"
+Skoleressurs ||--|o Person : "person"
 Skoleressurs ||--}o Sensor : "sensor"
 Skoleressurs ||--}o Skole : "skole"
 Sluttfagvurdering ||--|o Eksamensgruppe : "eksamensgruppe"
@@ -564,6 +631,7 @@ Sluttfagvurdering ||--}o Karakterhistorie : "karakterhistorie"
 Sluttordensvurdering ||--|o Karakterverdi : "atferd, orden"
 Sluttordensvurdering ||--|o Skoleaar : "skoleaar"
 Sluttordensvurdering ||--|| Elevvurdering : "elevvurdering"
+Spraak ||--|o Periode : "gyldighetsperiode"
 Termin ||--|o Periode : "gyldighetsperiode"
 Tilrettelegging ||--|o Periode : "gyldighetsperiode"
 Time ||--|o Periode : "tidsrom"
@@ -581,11 +649,11 @@ Undervisningsforhold ||--|o Skoleressurs : "skoleressurs"
 Undervisningsforhold ||--}o Eksamensgruppe : "eksamensgruppe"
 Undervisningsforhold ||--}o Klasse : "klasse"
 Undervisningsforhold ||--}o Kontaktlaerergruppe : "kontaktlaerergruppe"
-Undervisningsforhold ||--}o Time : "time"
+Undervisningsforhold ||--}o Time : "skuletime"
 Undervisningsgruppe ||--|o Skole : "skole"
 Undervisningsgruppe ||--|o Skoleaar : "skoleaar"
 Undervisningsgruppe ||--}o Termin : "termin"
-Undervisningsgruppe ||--}o Time : "time"
+Undervisningsgruppe ||--}o Time : "skuletime"
 Undervisningsgruppe ||--}o Undervisningsforhold : "undervisningsforhold"
 Undervisningsgruppe ||--}o Undervisningsgruppemedlemskap : "gruppemedlemskap"
 Undervisningsgruppe ||--}| Fag : "fag"
@@ -728,7 +796,7 @@ Name: fint-utdanning
 | [avlagteprover](klasser/avlagteprover.md) | Alle avlagde prøver i containeren |
 | [avlagtprove](klasser/avlagtprove.md) | Avlagde prøver |
 | [bedrift](klasser/bedrift.md) | Referanse til bedrifta lærlingen er i |
-| [beskrivelse](klasser/beskrivelse.md) | Skildring |
+| [beskrivelse](klasser/beskrivelse.md) | Beskriven namn eller omtale |
 | [betalingsstatus](klasser/betalingsstatus.md) | Betalingsstatus |
 | [bevistypar](klasser/bevistypar.md) | Alle bevistypar i containeren |
 | [bevistype](klasser/bevistype.md) | Type kompetansebevis |
@@ -749,7 +817,7 @@ Name: fint-utdanning
 | [eksamensgruppemedlemskap](klasser/eksamensgruppemedlemskap.md) | Eksamensgruppemedlemskap |
 | [eksamensgrupper](klasser/eksamensgrupper.md) | Alle eksamensgrupper i containeren |
 | [eksamensvurdering](klasser/eksamensvurdering.md) | Eksamensvurderingar |
-| [elev](klasser/elev.md) | Eleven dette gjeld |
+| [elev](klasser/elev.md) | Referanse til Elev (Utdanning) |
 | [elevar](klasser/elevar.md) | Alle elevar i containeren |
 | [elevforhold](klasser/elevforhold.md) | Elevforholdet dette gjeld |
 | [elevfravar](klasser/elevfravar.md) | Fråværsobjekt for elev |
@@ -778,7 +846,7 @@ Name: fint-utdanning
 | [foretrukketSensor](klasser/foretrukketsensor.md) | Angir om sensor er føretrekt |
 | [foretrukketSkole](klasser/foretrukketskole.md) | Angir om skulen er føretrekt for eksamenen |
 | [fornavn](klasser/fornavn.md) | Fornamn til personen |
-| [forretningsadresse](klasser/forretningsadresse.md) | Forretningsadresse |
+| [forretningsadresse](klasser/forretningsadresse.md) | Besøksadresse til ein organisasjonseining |
 | [fravaerstimer](klasser/fravaerstimer.md) | Antal fråværstimar |
 | [fravarsoversikt](klasser/fravarsoversikt.md) | Alle fråværsoversikter i containeren |
 | [fravarsprosent](klasser/fravarsprosent.md) | Fråværsprosent |
@@ -792,7 +860,7 @@ Name: fint-utdanning
 | [gaardsnummer](klasser/gaardsnummer.md) | Nummerering av gårdseiging i matrikkelen, unik innanfor kommune |
 | [grepreferanse](klasser/grepreferanse.md) | Referanse til GREP-registeret |
 | [gruppemedlemskap](klasser/gruppemedlemskap.md) | Gruppemedlemskap |
-| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Gyldigheitsperiode |
+| [gyldighetsperiode](klasser/gyldighetsperiode.md) | Periode ressursen er gyldig for |
 | [halvaar](klasser/halvaar.md) | Fråværsprosent for halvåret |
 | [halvaarsfagvurdering](klasser/halvaarsfagvurdering.md) | Halvårsfagvurderingar |
 | [halvaarsordensvurdering](klasser/halvaarsordensvurdering.md) | Halvårsordensvurderingar |
@@ -812,18 +880,18 @@ Name: fint-utdanning
 | [klasse](klasser/klasse.md) | Klasse |
 | [klassemedlemskap](klasser/klassemedlemskap.md) | Klassemedlemskap |
 | [klasser](klasser/klasser.md) | Alle klassar i containeren |
-| [kode](klasser/kode.md) | Kode |
+| [kode](klasser/kode.md) | Verdi som identifiserer omgrepet |
 | [kommentar](klasser/kommentar.md) | Kommentar |
-| [kommune](klasser/kommune.md) | Referanse til kommunen OT-eininga dekker |
+| [kommune](klasser/kommune.md) | Kommune |
 | [kommunenummer](klasser/kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](klasser/kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktlaerergruppe](klasser/kontaktlaerergruppe.md) | Kontaktlærargruppe |
 | [kontaktlaerergruppemedlemskap](klasser/kontaktlaerergruppemedlemskap.md) | Kontaktlærergruppemedlemskap |
 | [kontaktlaerergrupper](klasser/kontaktlaerergrupper.md) | Alle kontaktlærargrupper i containeren |
 | [kontaktperson](klasser/kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](klasser/kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](klasser/kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontraktstype](klasser/kontraktstype.md) | Type kontrakt for lærlingen |
-| [laerling](klasser/laerling.md) | Lærling |
+| [laerling](klasser/laerling.md) | Referanse til Laerling (Utdanning) |
 | [laerlingar](klasser/laerlingar.md) | Alle lærlingar i containeren |
 | [land](klasser/land.md) | Land der adressa befinn seg |
 | [laretid](klasser/laretid.md) | Læringstidsperiode for lærlingen |
@@ -831,8 +899,7 @@ Name: fint-utdanning
 | [mellomnavn](klasser/mellomnavn.md) | Mellomnamn |
 | [mobiltelefonnummer](klasser/mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](klasser/morsmaal.md) | Morsmål til personen |
-| [naam](klasser/naam.md) | Hovudnamn for ressursen |
-| [navn](klasser/navn.md) | Namn |
+| [navn](klasser/navn.md) | Hovudnamn for ressursen |
 | [nettsted](klasser/nettsted.md) | Adresse til eit nettstad |
 | [nummerkode](klasser/nummerkode.md) | Nummerkode for aktuell valuta |
 | [nus](klasser/nus.md) | NUS-kode |
@@ -842,22 +909,22 @@ Name: fint-utdanning
 | [opprinneligKarakterverdi](klasser/opprinneligkarakterverdi.md) | Opphavleg karakterverdi |
 | [orden](klasser/orden.md) | Ordenskarakter |
 | [organisasjon](klasser/organisasjon.md) | Referanse til Organisasjonselement i Administrasjon-domenet |
-| [organisasjonsnavn](klasser/organisasjonsnavn.md) | Organisasjonsnamn |
-| [organisasjonsnummer](klasser/organisasjonsnummer.md) | Organisasjonsnummer-identifikator |
+| [organisasjonsnavn](klasser/organisasjonsnavn.md) | Namn på eining registrert i Einingsregisteret |
+| [organisasjonsnummer](klasser/organisasjonsnummer.md) | Niisifra nummer som eintydleg identifiserer einingar i Einingsregisteret |
 | [otEnheter](klasser/otenheter.md) | Alle OT-einingar i containeren |
 | [otStatus](klasser/otstatus.md) | Alle OT-statuser i containeren |
 | [otUngdom](klasser/otungdom.md) | Alle OT-ungdom i containeren |
 | [otungdom](klasser/otungdom.md) | Referanse til OtUngdom (Utdanning) |
 | [parorende](klasser/parorende.md) | Pårørande kontaktperson til personen |
-| [passiv](klasser/passiv.md) | Angir om oppføringen er passiv/inaktiv |
+| [passiv](klasser/passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [periode](klasser/periode.md) | Periode |
 | [person](klasser/person.md) | Referanse til Person i Administrasjon-domenet |
-| [person_naam](klasser/person_naam.md) | Namn på personen |
+| [person_navn](klasser/person_navn.md) | Namn på personen |
 | [personalressurs](klasser/personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
 | [persongruppe](klasser/persongruppe.md) | Persongruppe |
 | [persongruppemedlemskap](klasser/persongruppemedlemskap.md) | Persongruppemedlemskap |
 | [persongrupper](klasser/persongrupper.md) | Alle persongrupper i containeren |
-| [postadresse](klasser/postadresse.md) | Postadresse |
+| [postadresse](klasser/postadresse.md) | Informasjon om postadresse til ein aktør |
 | [postnummer](klasser/postnummer.md) | Postnummer |
 | [poststed](klasser/poststed.md) | Poststad |
 | [programomrade](klasser/programomrade.md) | Programområde |
@@ -884,6 +951,7 @@ Name: fint-utdanning
 | [skolenummer](klasser/skolenummer.md) | Nasjonal skulenummer-identifikator |
 | [skoleressurs](klasser/skoleressurs.md) | Skoleressurs |
 | [skoleressursar](klasser/skoleressursar.md) | Alle skoleressursar i containeren |
+| [skuletime](klasser/skuletime.md) | Ein skuletime i timeplanen |
 | [slutt](klasser/slutt.md) | Til tidspunkt |
 | [sluttfagvurdering](klasser/sluttfagvurdering.md) | Sluttfagvurderingar |
 | [sluttordensvurdering](klasser/sluttordensvurdering.md) | Sluttordensvurderingar |
@@ -897,10 +965,9 @@ Name: fint-utdanning
 | [tidsrom](klasser/tidsrom.md) | Tidsrom |
 | [tilrettelegging](klasser/tilrettelegging.md) | Tilretteleggingstype |
 | [timar](klasser/timar.md) | Alle timar i containeren |
-| [time](klasser/time.md) | Time |
 | [tosprakligFagopplaering](klasser/tosprakligfagopplaering.md) | Indikerer om eleven har tospråkleg fagopplæring |
 | [trinn](klasser/trinn.md) | Årstrinnet |
-| [type](klasser/type.md) | Type |
+| [type](klasser/type.md) | Beskriv kva slags type |
 | [underveisfagvurdering](klasser/underveisfagvurdering.md) | Underveisfagvurderingar |
 | [underveisordensvurdering](klasser/underveisordensvurdering.md) | Underveisordensvurderingar |
 | [undervisningsforhold](klasser/undervisningsforhold.md) | Undervisningsforhold |
@@ -910,7 +977,7 @@ Name: fint-utdanning
 | [undervisningstimer](klasser/undervisningstimer.md) | Totalt antal undervisningstimar |
 | [utdanningsprogram](klasser/utdanningsprogram.md) | Utdanningsprogram |
 | [utsteder](klasser/utsteder.md) | Skoleressurs som sende varselet |
-| [valuta_naam](klasser/valuta_naam.md) | Namn på valuta |
+| [valuta_navn](klasser/valuta_navn.md) | Namn på valuta |
 | [varsel](klasser/varsel.md) | Varsel |
 | [varseltypar](klasser/varseltypar.md) | Alle varseltypar i containeren |
 | [verdi](klasser/verdi.md) | Karakterverdiar i skalaen |
@@ -960,7 +1027,7 @@ Name: fint-utdanning
 | [Valgfri](klasser/valgfri.md) | Valfri eigensskap |
 
 
-## Artifacts
+## Generated artifacts
 
 | Artefakt | Fil |
 |----------|-----|
@@ -968,6 +1035,7 @@ Name: fint-utdanning
 | JSON-LD kontekst | [fint-utdanning-context.jsonld](fint-utdanning-context.jsonld) |
 | JSON Schema | [fint-utdanning-schema.json](fint-utdanning-schema.json) |
 | OWL ontologi | [fint-utdanning-ontology.ttl](fint-utdanning-ontology.ttl) |
+| RDF/Turtle skjema | [fint-utdanning-schema.ttl](fint-utdanning-schema.ttl) |
 | Python-klasser | [fint-utdanning-model.py](fint-utdanning-model.py) |
 | ER-diagram (Mermaid) | [fint-utdanning-erdiagram.md](fint-utdanning-erdiagram.md) |
 | Eksempeldata (Turtle) | [fint-utdanning-eksempel.ttl](fint-utdanning-eksempel.ttl) |

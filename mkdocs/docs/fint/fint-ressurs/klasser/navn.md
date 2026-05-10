@@ -3,8 +3,13 @@
 # Slot: navn 
 
 
+_Hovudnamn for ressursen._
 
-URI: [https://schema.fintlabs.no/ressurs/:navn](https://schema.fintlabs.no/ressurs/:navn)
+
+
+
+
+URI: [fint:navn](https://schema.fintlabs.no/navn)
 Alias: navn
 
 <!-- no inheritance hierarchy -->
@@ -17,28 +22,25 @@ Alias: navn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Status](status.md) | Status på ei digital eining i fagsystemet |  no  |
-| [Enhetstype](enhetstype.md) | Type digital eining (t |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  no  |
-| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
-| [Plattform](plattform.md) | Plattforma tenesta kan leverast på (t |  no  |
-| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  no  |
-| [Produsent](produsent.md) | Produsent av ei digital eining |  no  |
+| [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  yes  |
+| [Status](status.md) | Status på ei digital eining i fagsystemet |  yes  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen (t |  no  |
-| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast (Håndhevingstype) |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar (t |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
-| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  no  |
+| [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  yes  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  yes  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  yes  |
+| [Produsent](produsent.md) | Produsent av ei digital eining |  yes  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Enhetstype](enhetstype.md) | Type digital eining |  yes  |
+| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  yes  |
 | [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  yes  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  yes  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  yes  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
 
 
 
@@ -52,7 +54,8 @@ Alias: navn
 | Property | Value |
 | --- | --- |
 | Range | [String](string.md) |
-| Domain Of | [Applikasjon](applikasjon.md), [Applikasjonsressurs](applikasjonsressurs.md), [DigitalEnhet](digitalenhet.md), [Enhetsgruppe](enhetsgruppe.md), [Rettighet](rettighet.md), [Applikasjonskategori](applikasjonskategori.md), [Brukertype](brukertype.md), [Enhetstype](enhetstype.md), [Handhevingstype](handhevingstype.md), [Lisensmodell](lisensmodell.md), [Plattform](plattform.md), [Produsent](produsent.md), [Status](status.md), [Begrep](begrep.md), [Valuta](valuta.md), [Person](person.md), [Kontaktperson](kontaktperson.md) |
+| Domain Of | [Applikasjon](applikasjon.md), [Applikasjonsressurs](applikasjonsressurs.md), [DigitalEnhet](digitalenhet.md), [Enhetsgruppe](enhetsgruppe.md), [Rettighet](rettighet.md), [Applikasjonskategori](applikasjonskategori.md), [Brukertype](brukertype.md), [Enhetstype](enhetstype.md), [Handhevingstype](handhevingstype.md), [Lisensmodell](lisensmodell.md), [Plattform](plattform.md), [Produsent](produsent.md), [Status](status.md), [Begrep](begrep.md) |
+| Slot URI | [fint:navn](https://schema.fintlabs.no/navn) |
 
 ### Cardinality and Requirements
 
@@ -74,12 +77,19 @@ Alias: navn
 
 
 
+### Schema Source
+
+
+* from schema: https://data.norge.no/linkml/fint-ressurs
+
+
+
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://schema.fintlabs.no/ressurs/:navn |
+| self | fint:navn |
 | native | https://schema.fintlabs.no/ressurs/:navn |
 
 
@@ -90,6 +100,10 @@ Alias: navn
 <details>
 ```yaml
 name: navn
+description: Hovudnamn for ressursen.
+from_schema: https://data.norge.no/linkml/fint-ressurs
+rank: 1000
+slot_uri: fint:navn
 alias: navn
 domain_of:
 - Applikasjon
@@ -106,9 +120,6 @@ domain_of:
 - Produsent
 - Status
 - Begrep
-- Valuta
-- Person
-- Kontaktperson
 range: string
 
 ```

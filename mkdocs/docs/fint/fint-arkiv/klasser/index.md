@@ -35,6 +35,7 @@ Name: fint-arkiv
 | [Dokumentobjekt](dokumentobjekt.md) | Referanse til éin og berre éin dokumentfil |
 | [DokumentStatus](dokumentstatus.md) | Status til eit dokument |
 | [DokumentType](dokumenttype.md) | Type dokument |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |
 | [Format](format.md) | Dokumentets filformat |
 | [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |
 | [JournalpostType](journalposttype.md) | Namn på type journalpost |
@@ -122,6 +123,7 @@ Name: fint-arkiv
 | [dokumenttypar](dokumenttypar.md) |  |
 | [dokumentType](dokumenttype.md) | Namn på type dokument |
 | [elev](elev.md) | Referanse til Elev (Utdanning) |
+| [elevnummer](elevnummer.md) | Skulens interne elevnummer |
 | [epostadresse](epostadresse.md) | Namngitt elektronisk adresse for mottak av e-post |
 | [etternavn](etternavn.md) | Etternamn til personen |
 | [fartoyNavn](fartoynavn.md) | Fartøyets namn |
@@ -170,7 +172,7 @@ Name: fint-arkiv
 | [kommunenummer](kommunenummer.md) | Nummerering av kommunen i høve til SSB si offisielle liste |
 | [kontaktinformasjon](kontaktinformasjon.md) | Den føretrekte måten å kome i kontakt med ein aktør |
 | [kontaktperson](kontaktperson.md) | Personar kontaktpersonen er pårørande for |
-| [kontaktperson_naam](kontaktperson_naam.md) | Namn på kontaktpersonen |
+| [kontaktperson_navn](kontaktperson_navn.md) | Namn på kontaktpersonen |
 | [kontaktperson_str](kontaktperson_str.md) | Kontaktperson hos ein organisasjon som er avsender, mottakar eller sakspart |
 | [korrespondansepart](korrespondansepart.md) | Mottakar eller sendar av arkivdokument |
 | [korrespondansepartNavn](korrespondansepartnavn.md) | Namn på person eller organisasjon som er avsender eller mottakar |
@@ -193,7 +195,7 @@ Name: fint-arkiv
 | [mobiltelefonnummer](mobiltelefonnummer.md) | Mobiltelefonnummer |
 | [morsmaal](morsmaal.md) | Morsmål til personen |
 | [mottattDato](mottattdato.md) | Dato eit eksternt dokument vart motteke |
-| [naam](naam.md) | Namn på arkivenhet eller kodeverk-element |
+| [navn](navn.md) | Hovudnamn for ressursen |
 | [nettsted](nettsted.md) | Adresse til eit nettstad |
 | [noekkelord](noekkelord.md) | Nøkkelord som skildrar innhaldet (Mappe) |
 | [nokkelord](nokkelord.md) | Nøkkelord som skildrar innhaldet (Registrering) |
@@ -215,7 +217,7 @@ Name: fint-arkiv
 | [partRolle](partrolle.md) | Rolla til parten |
 | [passiv](passiv.md) | Angir at koden er passiv og ikkje kan veljast |
 | [person](person.md) | Referanse til Person i Administrasjon-domenet |
-| [person_naam](person_naam.md) | Namn på personen |
+| [person_navn](person_navn.md) | Namn på personen |
 | [personalmappe_liste](personalmappe_liste.md) |  |
 | [personalressurs](personalressurs.md) | Referanse til Personalressurs i Administrasjon-domenet |
 | [personnavn](personnavn.md) | Namn på person (Personnavn-objekt) |
@@ -269,7 +271,7 @@ Name: fint-arkiv
 | [tittel](tittel.md) | Tittel eller namn på arkivenheten |
 | [type](type.md) | Beskriv kva slags type |
 | [utlaantDato](utlaantdato.md) | Dato ein fysisk saksmappe eller journalpost vart utlånt |
-| [valuta_naam](valuta_naam.md) | Namn på valuta |
+| [valuta_navn](valuta_navn.md) | Namn på valuta |
 | [variantFormat](variantformat.md) | Kva variant dokumentet førekjem i |
 | [variantformatar](variantformatar.md) |  |
 | [versjonsnummer](versjonsnummer.md) | Identifikasjon av versjonar innanfor same dokument |

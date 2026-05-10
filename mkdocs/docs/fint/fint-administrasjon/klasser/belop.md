@@ -22,8 +22,8 @@ Alias: belop
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
 | [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  yes  |
+| [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  yes  |
 
 
 

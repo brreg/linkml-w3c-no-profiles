@@ -85,8 +85,8 @@ URI: [utd:Varseltype](https://schema.fintlabs.no/utdanning/Varseltype)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [kode](kode.md) | 1 <br/> [String](string.md) | Kode |
-| [navn](navn.md) | 1 <br/> [String](string.md) | Namn |
+| [kode](kode.md) | 1 <br/> [String](string.md) | Verdi som identifiserer omgrepet |
+| [navn](navn.md) | 1 <br/> [String](string.md) | Hovudnamn for ressursen |
 
 
 
@@ -135,8 +135,8 @@ URI: [utd:Varseltype](https://schema.fintlabs.no/utdanning/Varseltype)
 
 | Namn | Kardinalitet og domene | Beskriving |
 | --- | --- | --- |
-| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Gyldigheitsperiode |
-| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir om oppføringen er passiv/inaktiv |
+| [gyldighetsperiode](gyldighetsperiode.md) | 0..1 <br/> [Periode](periode.md) | Periode ressursen er gyldig for |
+| [passiv](passiv.md) | 0..1 <br/> [Boolean](boolean.md) | Angir at koden er passiv og ikkje kan veljast |
 
 
 
@@ -340,7 +340,6 @@ attributes:
     - Gruppe
     - Gruppemedlemskap
     - Utdanningsforhold
-    - Elev
     - Elevforhold
     - Elevtilrettelegging
     - Skole
@@ -384,6 +383,7 @@ attributes:
     - Varseltype
     - Vitnemalsmerknad
     - Begrep
+    - Elev
     - Valuta
     - Person
     - Kontaktperson
@@ -392,12 +392,12 @@ attributes:
     required: true
   kode:
     name: kode
-    description: Kode.
+    description: Verdi som identifiserer omgrepet.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:kode
+    slot_uri: fint:kode
     alias: kode
     owner: Varseltype
     domain_of:
@@ -428,12 +428,12 @@ attributes:
     required: true
   navn:
     name: navn
-    description: Namn.
+    description: Hovudnamn for ressursen.
     in_subset:
     - Obligatorisk
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:navn
+    slot_uri: fint:navn
     alias: navn
     owner: Varseltype
     domain_of:
@@ -464,16 +464,17 @@ attributes:
     - Tilrettelegging
     - Varseltype
     - Vitnemalsmerknad
+    - Begrep
     range: string
     required: true
   gyldighetsperiode:
     name: gyldighetsperiode
-    description: Gyldigheitsperiode.
+    description: Periode ressursen er gyldig for.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:gyldighetsperiode
+    slot_uri: fint:gyldighetsperiode
     alias: gyldighetsperiode
     owner: Varseltype
     domain_of:
@@ -506,12 +507,12 @@ attributes:
     inlined: true
   passiv:
     name: passiv
-    description: Angir om oppføringen er passiv/inaktiv.
+    description: Angir at koden er passiv og ikkje kan veljast.
     in_subset:
     - Valgfri
     from_schema: https://data.norge.no/linkml/fint-utdanning
     rank: 1000
-    slot_uri: utd:passiv
+    slot_uri: fint:passiv
     alias: passiv
     owner: Varseltype
     domain_of:

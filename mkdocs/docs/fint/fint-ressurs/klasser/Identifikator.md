@@ -128,6 +128,7 @@ URI: [fint:Identifikator](https://schema.fintlabs.no/Identifikator)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [DigitalEnhet](digitalenhet.md) | [dataobjektId](dataobjektid.md) | range | [Identifikator](identifikator.md) |
+| [Elev](elev.md) | [elevnummer](elevnummer.md) | range | [Identifikator](identifikator.md) |
 | [Enhet](enhet.md) | [organisasjonsnummer](organisasjonsnummer.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [bokstavkode](bokstavkode.md) | range | [Identifikator](identifikator.md) |
 | [Valuta](valuta.md) | [nummerkode](nummerkode.md) | range | [Identifikator](identifikator.md) |

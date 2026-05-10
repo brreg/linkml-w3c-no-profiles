@@ -22,8 +22,8 @@ Alias: kontering
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 | [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
+| [Postering](postering.md) | Føring på ein konto i rekneskapet |  yes  |
 
 
 

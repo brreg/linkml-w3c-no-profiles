@@ -3,13 +3,13 @@
 # Slot: person 
 
 
-_Referanse til Person (Administrasjon)._
+_Referanse til Person i Administrasjon-domenet._
 
 
 
 
 
-URI: [okn:person](https://schema.fintlabs.no/okonomi/person)
+URI: [fint:person](https://schema.fintlabs.no/person)
 Alias: person
 
 <!-- no inheritance hierarchy -->
@@ -24,6 +24,7 @@ Alias: person
 | --- | --- | --- |
 | [Fakturamottaker](fakturamottaker.md) | Aktør som skal betale faktura (kompleks datatype) |  yes  |
 | [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 
 
 
@@ -36,9 +37,9 @@ Alias: person
 
 | Property | Value |
 | --- | --- |
-| Range | [Uriorcurie](uriorcurie.md) |
-| Domain Of | [Fakturamottaker](fakturamottaker.md), [Leverandor](leverandor.md) |
-| Slot URI | [okn:person](https://schema.fintlabs.no/okonomi/person) |
+| Range | [Person](person.md) |
+| Domain Of | [Fakturamottaker](fakturamottaker.md), [Leverandor](leverandor.md), [Elev](elev.md) |
+| Slot URI | [fint:person](https://schema.fintlabs.no/person) |
 
 ### Cardinality and Requirements
 
@@ -72,7 +73,7 @@ Alias: person
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | okn:person |
+| self | fint:person |
 | native | https://schema.fintlabs.no/okonomi/:person |
 
 
@@ -83,15 +84,16 @@ Alias: person
 <details>
 ```yaml
 name: person
-description: Referanse til Person (Administrasjon).
+description: Referanse til Person i Administrasjon-domenet.
 from_schema: https://data.norge.no/linkml/fint-okonomi
 rank: 1000
-slot_uri: okn:person
+slot_uri: fint:person
 alias: person
 domain_of:
 - Fakturamottaker
 - Leverandor
-range: uriorcurie
+- Elev
+range: Person
 
 ```
 </details>

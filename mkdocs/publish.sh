@@ -194,6 +194,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - content.code.copy
+    - navigation.instant
   palette:
     - scheme: default
       primary: indigo
@@ -201,6 +202,12 @@ theme:
 
 plugins:
   - search
+
+extra_css:
+  - stylesheets/aktivt-menypunkt.css
+
+extra_javascript:
+  - javascripts/nav-active-fix.js
 
 markdown_extensions:
   - admonition

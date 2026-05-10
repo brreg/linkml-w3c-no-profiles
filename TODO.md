@@ -1,7 +1,5 @@
 
-erstatte æøå med ae oe aa i alle klasse og slotnavn.
 forfine ap-no validatoren
-oreg og samt oversiktsdiagram rendrer ikkje
 forbere nav menyen med markering av alle nivå som inngår i gjeldande sidehierarki og ikkje kollapse menyen når du trykker på ei klasse for å vise detaljsida om den
 
 

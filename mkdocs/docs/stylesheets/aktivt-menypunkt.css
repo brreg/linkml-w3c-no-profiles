@@ -1,0 +1,30 @@
+/* --- Active styling --- */
+.md-nav__item--active > .md-nav__link {
+  background-color: #bbdefb;
+  border-left: 4px solid #42a5f5;
+}
+
+.md-nav__item--level-1.md-nav__item--active > .md-nav__link {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1976d2;
+}
+
+/* Hover */
+/* .md-nav__link:hover {
+  background-color: #f1f3f4;
+} */
+
+/* Gjer sidebar breiare */
+.md-sidebar--primary {
+  width: 18rem;
+}
+
+/* ✅ Sørg for at layout tilpassar seg */
+@media (min-width: 76.25em) {
+  .md-grid {
+    max-width: 1800px;
+  }
+}
+
+
+

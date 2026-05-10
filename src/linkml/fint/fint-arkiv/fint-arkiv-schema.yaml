@@ -670,7 +670,7 @@ slots:
     range: string
     description: Eintydig identifikasjon av klassen innanfor klassifikasjonssystemet.
 
-  rekkefølge:
+  rekkefoelge:
     slot_uri: ark:rekkefolge
     range: integer
     description: Rekkjefølgje for klassifiseringar.
@@ -1623,7 +1623,7 @@ classes:
     class_uri: ark:Klasse
     slots:
       - klasseId
-      - rekkefølge
+      - rekkefoelge
       - skjerming
       - tittel
       - klassifikasjonssystem
@@ -1632,7 +1632,7 @@ classes:
         required: true
         in_subset:
           - Obligatorisk
-      rekkefølge:
+      rekkefoelge:
         in_subset:
           - Valgfri
       skjerming:

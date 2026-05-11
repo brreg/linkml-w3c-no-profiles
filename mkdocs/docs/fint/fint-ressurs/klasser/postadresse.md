@@ -23,9 +23,9 @@ Alias: postadresse
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
 | [Enhet](enhet.md) | Abstrakt base for alle hovudeiningar, undereiningar og organisasjonsledd iden... |  no  |
 | [Aktoer](aktoer.md) | Abstrakt base for person eller eining vi samhandlar med |  yes  |
+| [Person](person.md) | Fysiske private personar |  no  |
 
 
 

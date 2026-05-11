@@ -22,8 +22,8 @@ Alias: opptjent
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 | [Variabellonn](variabellonn.md) | Informasjon om variabel lønn |  no  |
+| [Lonn](lonn.md) | Informasjon om lønn for eit arbeidsforhold (abstrakt base) |  yes  |
 | [Fastlonn](fastlonn.md) | Informasjon om fast lønnsbeordring |  no  |
 | [Fasttillegg](fasttillegg.md) | Faste tillegg til utbetaling |  no  |
 

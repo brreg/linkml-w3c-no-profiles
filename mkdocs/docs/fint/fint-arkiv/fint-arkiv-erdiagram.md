@@ -136,7 +136,7 @@ Kjonn {
 }
 Klasse {
     string klasseId  
-    integer rekkefølge  
+    integer rekkefoelge  
     string tittel  
 }
 Klassifikasjonssystem {

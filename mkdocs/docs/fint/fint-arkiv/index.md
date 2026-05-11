@@ -138,7 +138,7 @@ Kjonn {
 }
 Klasse {
     string klasseId  
-    integer rekkefølge  
+    integer rekkefoelge  
     string tittel  
 }
 Klassifikasjonssystem {
@@ -725,7 +725,7 @@ Name: fint-arkiv
 | [referanseArkivdel](klasser/referansearkivdel.md) | Referanse til arkivdelen denne arkivenheten er tilknytt |
 | [referanseDokumentfil](klasser/referansedokumentfil.md) | Referanse til fila som inneheld det elektroniske dokumentet |
 | [registreringsId](klasser/registreringsid.md) | Inngår i M004 journalpostID |
-| [rekkefølge](klasser/rekkefølge.md) | Rekkjefølgje for klassifiseringar |
+| [rekkefoelge](klasser/rekkefoelge.md) | Rekkjefølgje for klassifiseringar |
 | [rollar](klasser/rollar.md) |  |
 | [rolle](klasser/rolle.md) | Rolle tilknytt tilgangen |
 | [sakar](klasser/sakar.md) |  |

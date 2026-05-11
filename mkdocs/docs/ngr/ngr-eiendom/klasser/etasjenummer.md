@@ -22,8 +22,8 @@ Alias: etasjenummer
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Bruksenhetsnummer](bruksenhetsnummer.md) | Identifikator for ei brukseining innanfor ein bygning, t |  yes  |
 | [Etasje](etasje.md) | Ei etasje i ein bygning |  yes  |
+| [Bruksenhetsnummer](bruksenhetsnummer.md) | Identifikator for ei brukseining innanfor ein bygning, t |  yes  |
 
 
 

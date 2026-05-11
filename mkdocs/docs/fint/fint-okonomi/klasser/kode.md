@@ -22,15 +22,15 @@ Alias: kode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [OkonomiValuta](okonomivaluta.md) | Valuta for transaksjonsbeløp |  yes  |
+| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
 | [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Vare](vare.md) | Vare eller teneste som kan leverast og fakturerast |  yes  |
 | [Merverdiavgift](merverdiavgift.md) | Kodeverk for merverdiavgifter |  yes  |
 | [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [OkonomiValuta](okonomivaluta.md) | Valuta for transaksjonsbeløp |  yes  |
 
 
 

@@ -22,9 +22,9 @@ Alias: type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
-| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
 | [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  yes  |
+| [Varsel](varsel.md) | Eit varsel knytt til ein elev i ei faggruppe |  yes  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  yes  |
 
 
 

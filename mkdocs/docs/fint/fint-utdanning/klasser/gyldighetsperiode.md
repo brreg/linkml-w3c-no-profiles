@@ -22,43 +22,43 @@ Alias: gyldighetsperiode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
-| [Brevtype](brevtype.md) | Type brev knytt til lærlingprøve |  yes  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Fullfortkode](fullfortkode.md) | Kode for fullførtresultat av lærling |  yes  |
-| [Fagstatus](fagstatus.md) | Status for eit fag i eit faggruppemedlemskap |  yes  |
-| [Termin](termin.md) | Ein skuleterm (t |  yes  |
-| [Varseltype](varseltype.md) | Type varsel knytt til ein elev |  yes  |
-| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  yes  |
-| [Karakterstatus](karakterstatus.md) | Status for ein karakter (t |  yes  |
-| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  no  |
-| [Karakterverdi](karakterverdi.md) | Ein konkret karakterverdi i ei karakterskala |  yes  |
-| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  no  |
-| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
-| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  yes  |
-| [Tilrettelegging](tilrettelegging.md) | Type tilrettelegging for elevar (t |  yes  |
-| [Elevkategori](elevkategori.md) | Kategori for eit elevforhold (t |  yes  |
-| [Skoleaar](skoleaar.md) | Eit skoleår (t |  yes  |
-| [Fravartype](fravartype.md) | Type fråvær (t |  yes  |
-| [Gruppemedlemskap](gruppemedlemskap.md) | Abstrakt basisklasse for gruppemedlemskapar i utdanning |  yes  |
-| [Vitnemalsmerknad](vitnemalsmerknad.md) | Merknad på vitnemål |  yes  |
-| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Eksamensform](eksamensform.md) | Form for gjennomføring av eksamen |  yes  |
-| [Bevistype](bevistype.md) | Type kompetansebevis for lærling |  yes  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
 | [Betalingsstatus](betalingsstatus.md) | Betalingsstatus for eksamensavgift |  yes  |
-| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  no  |
+| [Gruppemedlemskap](gruppemedlemskap.md) | Abstrakt basisklasse for gruppemedlemskapar i utdanning |  yes  |
 | [Skoleeiertype](skoleeiertype.md) | Type skuleeigartilknyting |  yes  |
-| [Fagmerknad](fagmerknad.md) | Merknad knytt til eit fag i ei faggruppe |  yes  |
-| [Provestatus](provestatus.md) | Status for ei lærlingprøve |  yes  |
-| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
 | [Avbruddsaarsak](avbruddsaarsak.md) | Årsak til avbrot frå opplæring |  yes  |
-| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
+| [Identifikator](identifikator.md) | Unik identifikasjon til eit objekt |  no  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Bevistype](bevistype.md) | Type kompetansebevis for lærling |  yes  |
+| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
+| [OtStatus](otstatus.md) | Status for ein ungdom i oppfølgingstenesta |  yes  |
+| [Fullfortkode](fullfortkode.md) | Kode for fullførtresultat av lærling |  yes  |
+| [Karakterskala](karakterskala.md) | Skala for karaktersetjing (t |  yes  |
+| [Tilrettelegging](tilrettelegging.md) | Type tilrettelegging for elevar (t |  yes  |
+| [Vitnemalsmerknad](vitnemalsmerknad.md) | Merknad på vitnemål |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Karakterverdi](karakterverdi.md) | Ein konkret karakterverdi i ei karakterskala |  yes  |
+| [Fravartype](fravartype.md) | Type fråvær (t |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Karakterstatus](karakterstatus.md) | Status for ein karakter (t |  yes  |
+| [Kontaktlaerergruppemedlemskap](kontaktlaerergruppemedlemskap.md) | Eit elevs medlemskap i ei kontaktlærargruppe |  no  |
+| [Elevkategori](elevkategori.md) | Kategori for eit elevforhold (t |  yes  |
 | [Persongruppemedlemskap](persongruppemedlemskap.md) | Eit elevs medlemskap i ei persongruppe |  no  |
+| [Varseltype](varseltype.md) | Type varsel knytt til ein elev |  yes  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Brevtype](brevtype.md) | Type brev knytt til lærlingprøve |  yes  |
+| [Eksamensform](eksamensform.md) | Form for gjennomføring av eksamen |  yes  |
+| [Fagmerknad](fagmerknad.md) | Merknad knytt til eit fag i ei faggruppe |  yes  |
+| [Eksamensgruppemedlemskap](eksamensgruppemedlemskap.md) | Eit elevs deltaking i ei eksamensgruppe |  no  |
+| [Fagstatus](fagstatus.md) | Status for eit fag i eit faggruppemedlemskap |  yes  |
+| [Provestatus](provestatus.md) | Status for ei lærlingprøve |  yes  |
+| [Undervisningsgruppemedlemskap](undervisningsgruppemedlemskap.md) | Eit elevs medlemskap i ei undervisningsgruppe |  no  |
+| [Termin](termin.md) | Ein skuleterm (t |  yes  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Programomrademedlemskap](programomrademedlemskap.md) | Eit elevs tilknyting til eit programområde |  no  |
+| [Faggruppemedlemskap](faggruppemedlemskap.md) | Eit elevs medlemskap i ei faggruppe |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Skoleaar](skoleaar.md) | Eit skoleår (t |  yes  |
+| [Klassemedlemskap](klassemedlemskap.md) | Eit elevs medlemskap i ei klasse |  no  |
 
 
 

@@ -22,9 +22,9 @@ Alias: kommune
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
 | [Person](person.md) | Fysiske private personar |  yes  |
 | [Fylke](fylke.md) | Liste over Norges fylker |  yes  |
-| [OtEnhet](otenhet.md) | Eining i oppfølgingstenesta (OT) |  yes  |
 
 
 

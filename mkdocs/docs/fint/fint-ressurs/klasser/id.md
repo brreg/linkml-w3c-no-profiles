@@ -22,33 +22,33 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  no  |
-| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  no  |
-| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  no  |
-| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  no  |
-| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  no  |
-| [Status](status.md) | Status på ei digital eining i fagsystemet |  no  |
-| [Elev](elev.md) | Ein elev registrert i skulesystemet |  no  |
-| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
-| [Produsent](produsent.md) | Produsent av ei digital eining |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
 | [Plattform](plattform.md) | Plattforma tenesta kan leverast på |  no  |
-| [Rettighet](rettighet.md) | Ei namngitt rettighet |  no  |
-| [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
-| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  no  |
-| [Enhetstype](enhetstype.md) | Type digital eining |  no  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
+| [Status](status.md) | Status på ei digital eining i fagsystemet |  no  |
 | [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Produsent](produsent.md) | Produsent av ei digital eining |  no  |
+| [Applikasjonsressurstilgjengelighet](applikasjonsressurstilgjengelighet.md) | Kva organisasjonselements brukarar som har tilgang til ein ressurs |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
+| [Applikasjonskategori](applikasjonskategori.md) | Kategori av applikasjonar |  no  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  no  |
+| [Applikasjonsressurs](applikasjonsressurs.md) | Informasjon om kor ein applikasjon kan nyttast (lisensressurs) |  no  |
+| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
+| [Person](person.md) | Fysiske private personar |  no  |
+| [Rettighet](rettighet.md) | Ei namngitt rettighet |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Enhetsgruppemedlemskap](enhetsgruppemedlemskap.md) | Medlemskap mellom ei digital eining og ei einingsgruppe |  no  |
+| [Lisensmodell](lisensmodell.md) | Lisensmodellar som kan knytast til ein lisens |  no  |
+| [DigitalEnhet](digitalenhet.md) | Ei digital eining som t |  no  |
 | [Handhevingstype](handhevingstype.md) | Korleis ulike lisensmodellar kan handhevast |  no  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
+| [Enhetsgruppe](enhetsgruppe.md) | Ei gruppering av einsarta digitale einingar |  no  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Enhetstype](enhetstype.md) | Type digital eining |  no  |
+| [Applikasjon](applikasjon.md) | Ein applikasjon med tilhøyrande ressursar |  no  |
+| [Identitet](identitet.md) | Identitet som identifiserer innehavaren av rettigheiter i organisasjonen |  no  |
+| [Brukertype](brukertype.md) | Dei ulike brukartypane som kan nytte lisensen |  no  |
 
 
 

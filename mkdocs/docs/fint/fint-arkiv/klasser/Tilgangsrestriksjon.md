@@ -22,8 +22,8 @@ Alias: tilgangsrestriksjon
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
 | [Skjerming](skjerming.md) | Skjerming av mappe, registrering eller dokument etter offentleglova |  yes  |
+| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
 
 
 

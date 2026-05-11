@@ -22,8 +22,8 @@ Alias: tidsrom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 | [Time](time.md) | Ein time i timeplanen |  yes  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 

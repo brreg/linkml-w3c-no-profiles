@@ -22,8 +22,8 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 | [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
+| [Samtykke](samtykke.md) | Tillating til behandling av personopplysning |  yes  |
 
 
 

@@ -159,7 +159,7 @@ Name: fint-arkiv
 | [referanseArkivdel](referansearkivdel.md) | Referanse til arkivdelen denne arkivenheten er tilknytt |
 | [referanseDokumentfil](referansedokumentfil.md) | Referanse til fila som inneheld det elektroniske dokumentet |
 | [registreringsId](registreringsid.md) | Inngår i M004 journalpostID |
-| [rekkefølge](rekkefølge.md) | Rekkjefølgje for klassifiseringar |
+| [rekkefoelge](rekkefoelge.md) | Rekkjefølgje for klassifiseringar |
 | [rollar](rollar.md) |  |
 | [rolle](rolle.md) | Rolle tilknytt tilgangen |
 | [sakar](sakar.md) |  |

@@ -22,9 +22,9 @@ Alias: rom
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 | [Time](time.md) | Ein time i timeplanen |  yes  |
 | [UtdanningContainer](utdanningcontainer.md) | Rotcontainer for FINT Utdanning-instansar |  yes  |
+| [Eksamen](eksamen.md) | Ein eksamen knytt til ei eksamensgruppe |  yes  |
 
 
 

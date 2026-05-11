@@ -22,8 +22,8 @@ Alias: tidspunkt
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Eierskapstransaksjon](eierskapstransaksjon.md) | Transaksjon som påverkar eigarskap i selskapet |  no  |
 | [Utbytte](utbytte.md) | Utbytte knytt til ein eigarposisjon |  no  |
+| [Eierskapstransaksjon](eierskapstransaksjon.md) | Transaksjon som påverkar eigarskap i selskapet |  no  |
 
 
 

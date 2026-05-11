@@ -22,9 +22,9 @@ Alias: aktivitet
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
+| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 | [Fullmakt](fullmakt.md) | Fullmakt til å gjere handlingar i høve til ei gjeven Rolle |  yes  |
 | [Kontostreng](kontostreng.md) | Sammensetning av kontodimensjonar for bokføring |  yes  |
-| [Arbeidsforhold](arbeidsforhold.md) | Eit avtaleforhold mellom personalressurs og arbeidsgjevar |  yes  |
 
 
 

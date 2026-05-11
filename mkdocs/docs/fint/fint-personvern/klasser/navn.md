@@ -23,13 +23,13 @@ Alias: navn
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Tjeneste](tjeneste.md) | Teneste eller system som behandlar personopplysningar |  yes  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 | [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Personopplysning](personopplysning.md) | Opplysningar og vurderingar som kan knytast til enkeltpersonar |  yes  |
 | [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
 | [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
 | [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Personopplysning](personopplysning.md) | Opplysningar og vurderingar som kan knytast til enkeltpersonar |  yes  |
 | [Behandlingsgrunnlag](behandlingsgrunnlag.md) | Rettsleg grunnlag for behandling av personopplysningar |  yes  |
 
 

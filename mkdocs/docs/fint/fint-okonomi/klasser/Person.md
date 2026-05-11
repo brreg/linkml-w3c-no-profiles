@@ -22,9 +22,9 @@ Alias: person
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
 | [Elev](elev.md) | Ein elev registrert i skulesystemet |  yes  |
 | [Fakturamottaker](fakturamottaker.md) | Aktør som skal betale faktura (kompleks datatype) |  yes  |
+| [Leverandor](leverandor.md) | Person eller verksemd som leverer produkt eller tenester |  yes  |
 
 
 

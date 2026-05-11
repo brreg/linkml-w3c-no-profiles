@@ -22,34 +22,34 @@ Alias: navn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Uketimetall](uketimetall.md) | Timer per veke i 100 % stilling |  no  |
-| [Kontrakt](kontrakt.md) | Kontrakt transaksjonen er knytt til |  no  |
-| [Personalressurskategori](personalressurskategori.md) | Ansettelsesform til eit arbeidsforhold |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 | [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Anlegg](anlegg.md) | Del av kontostrengen; objekt som skal aktiverast eller avskrivast |  no  |
-| [Fravaersgrunn](fravaersgrunn.md) | Grunn til fråvær |  no  |
+| [Prosjekt](prosjekt.md) | Del av kontostrengen som peikar på løpande prosjekt |  no  |
+| [Objekt](objekt.md) | Eit bygg, ein veg eller ein mottakar av ei teneste eller eit tilskott |  no  |
+| [Stillingskode](stillingskode.md) | Felles kodeverk for stillingar |  no  |
 | [Organisasjonstype](organisasjonstype.md) | Typen til eit organisasjonselement |  no  |
 | [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Funksjon](funksjon.md) | Del av kontostrengen som beskriv kva som vert produsert |  no  |
-| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
-| [Formaal](formaal.md) | Del av kontostrengen som detaljerer inntekter og utgifter ved drift |  no  |
-| [Stillingskode](stillingskode.md) | Felles kodeverk for stillingar |  no  |
-| [Lonsart](lonsart.md) | Type ytelse |  no  |
-| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  no  |
-| [Objekt](objekt.md) | Eit bygg, ein veg eller ein mottakar av ei teneste eller eit tilskott |  no  |
-| [Ramme](ramme.md) | Del av kontostrengen som viser kva budsjettramme som skal bere kostnadane |  no  |
-| [Prosjekt](prosjekt.md) | Del av kontostrengen som peikar på løpande prosjekt |  no  |
-| [Arbeidsforholdstype](arbeidsforholdstype.md) | Viser kva behov hos arbeidsgjevar arbeidsforholdet dekkjer |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
 | [Lopenummer](lopenummer.md) | Løpenummer i ei nummerserie |  no  |
-| [Fravaerstype](fravaerstype.md) | Type fråvær |  no  |
-| [Diverse](diverse.md) | Del av kontostrengen; supplement til øvrige dimensjonar |  no  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Organisasjonselement](organisasjonselement.md) | Eit element i organisasjonsstrukturen |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Funksjon](funksjon.md) | Del av kontostrengen som beskriv kva som vert produsert |  no  |
+| [Uketimetall](uketimetall.md) | Timer per veke i 100 % stilling |  no  |
+| [Anlegg](anlegg.md) | Del av kontostrengen; objekt som skal aktiverast eller avskrivast |  no  |
 | [Art](art.md) | Del av kontostrengen som beskriv kva slags inntekter og utgifter det gjeld |  no  |
+| [Prosjektart](prosjektart.md) | Element i ei prosjektnedbrytningsstruktur eller arbeidsnedbrytningsstruktur |  no  |
+| [Kontrakt](kontrakt.md) | Kontrakt transaksjonen er knytt til |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Lonsart](lonsart.md) | Type ytelse |  no  |
+| [Fravaerstype](fravaerstype.md) | Type fråvær |  no  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Diverse](diverse.md) | Del av kontostrengen; supplement til øvrige dimensjonar |  no  |
+| [Ansvar](ansvar.md) | Del av kontostrengen som beskriv kven som har ansvaret for ei utgift eller in... |  no  |
+| [Formaal](formaal.md) | Del av kontostrengen som detaljerer inntekter og utgifter ved drift |  no  |
+| [Fravaersgrunn](fravaersgrunn.md) | Grunn til fråvær |  no  |
+| [Ramme](ramme.md) | Del av kontostrengen som viser kva budsjettramme som skal bere kostnadane |  no  |
+| [Personalressurskategori](personalressurskategori.md) | Ansettelsesform til eit arbeidsforhold |  no  |
 | [Aktivitet](aktivitet.md) | Del av kontostrengen og detaljering av funksjon |  no  |
+| [Arbeidsforholdstype](arbeidsforholdstype.md) | Viser kva behov hos arbeidsgjevar arbeidsforholdet dekkjer |  no  |
 
 
 

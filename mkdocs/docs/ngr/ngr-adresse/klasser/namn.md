@@ -22,17 +22,17 @@ Alias: namn
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Stemmekrets](stemmekrets.md) | Ei stemmekrets brukt ved val |  no  |
-| [KommunalKrets](kommunalkrets.md) | Ein kommunal krets (administrativ inndeling definert av kommunen) |  no  |
-| [Adresseomrade](adresseomrade.md) | Geografisk område eit adressenavn høyrer til, t |  no  |
-| [Fylke](fylke.md) | Eit norsk fylke |  no  |
 | [Tettsted](tettsted.md) | Eit tettbygd område definert av SSB |  no  |
-| [Poststed](poststed.md) | Eit poststed identifisert med postnummer, forvalta av Postnummerregisteret |  no  |
 | [Grunnkrets](grunnkrets.md) | Ei grunnkrets – minste geografiske eining i statistisk inndeling |  no  |
-| [Svalbard](svalbard.md) | Svalbard som særskild geografisk område |  no  |
-| [Kommune](kommune.md) | Ein norsk kommune |  no  |
-| [GeografiskOmrade](geografiskomrade.md) | Abstrakt klasse for geografiske inndelingar som offisielle adressar refererer... |  no  |
 | [Kirkesokn](kirkesokn.md) | Eit kyrkjesokn |  no  |
+| [Fylke](fylke.md) | Eit norsk fylke |  no  |
+| [GeografiskOmrade](geografiskomrade.md) | Abstrakt klasse for geografiske inndelingar som offisielle adressar refererer... |  no  |
+| [Kommune](kommune.md) | Ein norsk kommune |  no  |
+| [KommunalKrets](kommunalkrets.md) | Ein kommunal krets (administrativ inndeling definert av kommunen) |  no  |
+| [Svalbard](svalbard.md) | Svalbard som særskild geografisk område |  no  |
+| [Poststed](poststed.md) | Eit poststed identifisert med postnummer, forvalta av Postnummerregisteret |  no  |
+| [Adresseomrade](adresseomrade.md) | Geografisk område eit adressenavn høyrer til, t |  no  |
+| [Stemmekrets](stemmekrets.md) | Ei stemmekrets brukt ved val |  no  |
 
 
 

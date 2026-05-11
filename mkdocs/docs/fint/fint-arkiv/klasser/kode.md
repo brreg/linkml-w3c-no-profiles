@@ -22,29 +22,29 @@ Alias: kode
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  yes  |
-| [Merknadstype](merknadstype.md) | Namn på type merknad |  yes  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Format](format.md) | Dokumentets filformat |  yes  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
+| [Rolle](rolle.md) | Rolla til ein arkivressurs |  yes  |
+| [DokumentType](dokumenttype.md) | Type dokument |  yes  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
 | [JournalpostType](journalposttype.md) | Namn på type journalpost |  yes  |
-| [Klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |  yes  |
+| [Merknadstype](merknadstype.md) | Namn på type merknad |  yes  |
+| [Tilgangsrestriksjon](tilgangsrestriksjon.md) | Angiving av at dokumenta ikkje er offentleg tilgjengelege |  yes  |
+| [Skjermingshjemmel](skjermingshjemmel.md) | Tilvising til heimel i offentleglova, tryggingslova eller tryggingsinstruksen |  yes  |
 | [PartRolle](partrolle.md) | Rolla til ein part |  yes  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  yes  |
-| [JournalStatus](journalstatus.md) | Status til journalposten |  yes  |
+| [Saksstatus](saksstatus.md) | Status til saksmappa |  yes  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  yes  |
 | [Fylke](fylke.md) | Liste over Norges fylker |  no  |
 | [DokumentStatus](dokumentstatus.md) | Status til eit dokument |  yes  |
-| [Skjermingshjemmel](skjermingshjemmel.md) | Tilvising til heimel i offentleglova, tryggingslova eller tryggingsinstruksen |  yes  |
-| [Rolle](rolle.md) | Rolla til ein arkivressurs |  yes  |
-| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  yes  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [DokumentType](dokumenttype.md) | Type dokument |  yes  |
-| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  yes  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
 | [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
-| [Tilgangsrestriksjon](tilgangsrestriksjon.md) | Angiving av at dokumenta ikkje er offentleg tilgjengelege |  yes  |
+| [Format](format.md) | Dokumentets filformat |  yes  |
+| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  yes  |
+| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  yes  |
+| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  yes  |
+| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  yes  |
 | [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Kva rolle dokumentet har i høve registreringa (t |  yes  |
-| [Saksstatus](saksstatus.md) | Status til saksmappa |  yes  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [JournalStatus](journalstatus.md) | Status til journalposten |  yes  |
+| [Klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |  yes  |
 
 
 

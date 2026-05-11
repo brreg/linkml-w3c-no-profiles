@@ -22,52 +22,52 @@ Alias: id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  no  |
-| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
-| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
-| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
-| [Merknadstype](merknadstype.md) | Namn på type merknad |  no  |
-| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
-| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
-| [Format](format.md) | Dokumentets filformat |  no  |
-| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  no  |
-| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
-| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
-| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
-| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  no  |
-| [JournalpostType](journalposttype.md) | Namn på type journalpost |  no  |
-| [Klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |  no  |
-| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
-| [PartRolle](partrolle.md) | Rolla til ein part |  no  |
-| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
-| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
-| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  no  |
-| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
-| [JournalStatus](journalstatus.md) | Status til journalposten |  no  |
-| [Person](person.md) | Fysiske private personar |  no  |
-| [Arkivdel](arkivdel.md) | Ein vilkårleg definert del av eit arkiv |  no  |
-| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
-| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
-| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
-| [DokumentStatus](dokumentstatus.md) | Status til eit dokument |  no  |
-| [Skjermingshjemmel](skjermingshjemmel.md) | Tilvising til heimel i offentleglova, tryggingslova eller tryggingsinstruksen |  no  |
-| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
 | [Rolle](rolle.md) | Rolla til ein arkivressurs |  no  |
-| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  no  |
-| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  no  |
-| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
-| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
+| [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  no  |
+| [Personalmappe](personalmappe.md) | Saksmappe med opplysningar om ein arbeidstakars arbeidsforhold |  no  |
+| [Registrering](registrering.md) | Abstrakt basisklasse — arkivets primære byggeklossar |  no  |
+| [Sak](sak.md) | Generisk saksmappe (konkret Sak i Noark) |  no  |
 | [DokumentType](dokumenttype.md) | Type dokument |  no  |
-| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  no  |
-| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Spraak](spraak.md) | Verdiar for språk (2 bokstavar) |  no  |
+| [Valuta](valuta.md) | Valutakodar for offisielle valutaer |  no  |
+| [JournalpostType](journalposttype.md) | Namn på type journalpost |  no  |
+| [Merknadstype](merknadstype.md) | Namn på type merknad |  no  |
+| [Dokumentbeskrivelse](dokumentbeskrivelse.md) | Skildring av eit dokument tilknytt ein journalpost |  no  |
+| [TilskuddFartoy](tilskuddfartoy.md) | Sak om søknad om tilskudd til freda fartøy |  no  |
+| [Klassifikasjonssystem](klassifikasjonssystem.md) | Overordna struktur for mappene i ein eller fleire arkivdelar |  no  |
 | [Tilgangsrestriksjon](tilgangsrestriksjon.md) | Angiving av at dokumenta ikkje er offentleg tilgjengelege |  no  |
-| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  no  |
+| [Skjermingshjemmel](skjermingshjemmel.md) | Tilvising til heimel i offentleglova, tryggingslova eller tryggingsinstruksen |  no  |
+| [Person](person.md) | Fysiske private personar |  no  |
+| [Arkivressurs](arkivressurs.md) | Ansatt med rolle og rettar innanfor arkiv |  no  |
+| [PartRolle](partrolle.md) | Rolla til ein part |  no  |
+| [Mappe](mappe.md) | Abstrakt basisklasse for alle mappetypar |  no  |
 | [DispensasjonAutomatiskFredaKulturminne](dispensasjonautomatiskfredakulturminne.md) | Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne |  no  |
-| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
-| [Elev](elev.md) | Ein elev registrert i skulesystemet |  no  |
-| [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Kva rolle dokumentet har i høve registreringa (t |  no  |
-| [AdministrativEnhet](administrativenhet.md) | Administrativ eining med ansvar for saksbehandling |  no  |
 | [Saksstatus](saksstatus.md) | Status til saksmappa |  no  |
+| [Arkivdel](arkivdel.md) | Ein vilkårleg definert del av eit arkiv |  no  |
+| [Begrep](begrep.md) | Abstrakt fellesbase for alle FINT-kodeverk |  no  |
+| [Fylke](fylke.md) | Liste over Norges fylker |  no  |
+| [Journalpost](journalpost.md) | Ein journalpost (inn- eller utgåande dokument, notat o |  no  |
+| [Saksmappe](saksmappe.md) | Abstrakt spesialisering av Mappe som svarar til ei "sak" i Noark |  no  |
+| [DokumentStatus](dokumentstatus.md) | Status til eit dokument |  no  |
+| [Kjonn](kjonn.md) | Verdiar for kjønn basert på ISO/IEC 5218 |  no  |
+| [Landkode](landkode.md) | Landskode i ISO 3166-1 alpha-2 format |  no  |
+| [Format](format.md) | Dokumentets filformat |  no  |
+| [Saksmappetype](saksmappetype.md) | Type saksmappe — differensierer innhald og behandlingsrutine |  no  |
+| [Elev](elev.md) | Ein elev registrert i skulesystemet |  no  |
+| [KorrespondansepartType](korrespondanseparttype.md) | Type korrespondansepart |  no  |
+| [Tilgangsgruppe](tilgangsgruppe.md) | Tilgangsgruppe for intern skjerming av innhald |  no  |
+| [Kontaktperson](kontaktperson.md) | Kontaktperson (pårørande) til ein person |  no  |
+| [Dokumentfil](dokumentfil.md) | Sjølve dokumentfila med data og metadata |  no  |
+| [SoeknadDrosjeloeyve](soeknaddrosjeloeyve.md) | Sak om søknad om løyve til å køyre drosje |  no  |
+| [Variantformat](variantformat.md) | Angiving av kva variant eit dokument førekjem i |  no  |
+| [TilskuddFredaBygningPrivatEie](tilskuddfredabygningprivateie.md) | Sak om søknad om tilskudd til freda bygningar i privat eige (FRIP) |  no  |
+| [TilknyttetRegistreringSom](tilknyttetregistreringsom.md) | Kva rolle dokumentet har i høve registreringa (t |  no  |
+| [Kommune](kommune.md) | Liste over Norges kommunar |  no  |
+| [JournalStatus](journalstatus.md) | Status til journalposten |  no  |
+| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  no  |
+| [AdministrativEnhet](administrativenhet.md) | Administrativ eining med ansvar for saksbehandling |  no  |
+| [Klassifikasjonstype](klassifikasjonstype.md) | Type klassifikasjonssystem |  no  |
+| [Virksomhet](virksomhet.md) | Ein juridisk organisasjon som produserer varer eller tenester |  no  |
 
 
 

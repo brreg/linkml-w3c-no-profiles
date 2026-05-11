@@ -22,8 +22,8 @@ Alias: arkivressurs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  yes  |
 | [Autorisasjon](autorisasjon.md) | Siling av kva ein innlogga brukar får lov til å gjere i løysinga |  yes  |
+| [Tilgang](tilgang.md) | Styring av kven som har tilgang til kva opplysningar |  yes  |
 
 
 

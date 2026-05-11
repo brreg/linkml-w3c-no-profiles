@@ -24,8 +24,8 @@ Alias: kan_vaere_pa
 | --- | --- | --- |
 | [Grunneiendom](grunneiendom.md) | Den vanlegaste typen matrikkelenheit |  yes  |
 | [Eierseksjon](eierseksjon.md) | Ein eigarseksjon er ein eigarandel i ein seksjonert eigedom |  yes  |
-| [Jordsameie](jordsameie.md) | Eit fellesareal som vert eigd av fleire eigedommar |  yes  |
 | [Festegrunn](festegrunn.md) | Ein del av ei grunneigendom eller eit jordsameige som nokon har festa til |  yes  |
+| [Jordsameie](jordsameie.md) | Eit fellesareal som vert eigd av fleire eigedommar |  yes  |
 
 
 

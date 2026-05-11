@@ -1,0 +1,63 @@
+version: 1
+
+# Grunnleggande felt-krav (same som default)
+required:
+  schema:
+    - id
+    - name
+  class: []
+  slot: []
+
+recommended:
+  schema:
+    - description
+  class:
+    - description
+  slot:
+    - description
+
+common_classes:
+  must_use: []
+
+# Sjekkar at spesifiserte klasser inneheld obligatoriske slots (etter slot_uri).
+# Gjeld berre klasser som finst i det aktuelle skjemaet.
+class_slots:
+  must_include:
+    # Katalog (dcat:Catalog)
+    - {class: Katalog,      slot_uri: dct:description,      label: beskrivelse}
+    - {class: Katalog,      slot_uri: dcat:contactPoint,    label: kontaktpunkt}
+    - {class: Katalog,      slot_uri: dct:title,            label: tittel}
+    - {class: Katalog,      slot_uri: dct:publisher,        label: utgiver}
+    # Katalogpost (dcat:CatalogRecord)
+    - {class: Katalogpost,  slot_uri: dct:modified,         label: endringsdato}
+    - {class: Katalogpost,  slot_uri: foaf:primaryTopic,    label: primærtema}
+    # Datasett (dcat:Dataset)
+    - {class: Datasett,     slot_uri: dct:description,      label: beskrivelse}
+    - {class: Datasett,     slot_uri: dcat:contactPoint,    label: kontaktpunkt}
+    - {class: Datasett,     slot_uri: dcat:theme,           label: tema}
+    - {class: Datasett,     slot_uri: dct:title,            label: tittel}
+    - {class: Datasett,     slot_uri: dct:publisher,        label: utgiver}
+    # Distribusjon (dcat:Distribution)
+    - {class: Distribusjon, slot_uri: dcat:accessURL,       label: tilgangsURL}
+    # Datatjeneste (dcat:DataService)
+    - {class: Datatjeneste, slot_uri: dcat:endpointURL,     label: endepunktsURL}
+    - {class: Datatjeneste, slot_uri: dcat:contactPoint,    label: kontaktpunkt}
+    - {class: Datatjeneste, slot_uri: dct:title,            label: tittel}
+    - {class: Datatjeneste, slot_uri: dct:publisher,        label: utgiver}
+    # Aktør (foaf:Agent)
+    - {class: Aktør,        slot_uri: foaf:name,            label: navn}
+
+# Sjekkar at containerklassen (tree_root) i ein domenemodell
+# inkluderer dei obligatoriske og anbefalte klassane frå
+# DCAT-AP-NO og DQV-AP-NO som range på container-attributtar.
+container_classes:
+  must_include:
+    - Katalog           # dcat:Catalog        — obligatorisk i DCAT-AP-NO
+    - Datasett          # dcat:Dataset        — obligatorisk i DQV-AP-NO
+    - Kvalitetsmaal     # dqv:Metric          — obligatorisk i DQV-AP-NO
+    - Kvalitetsmaaling  # dqv:QualityMeasurement — obligatorisk i DQV-AP-NO
+  should_include:
+    - Distribusjon      # dcat:Distribution   — anbefalt i DCAT-AP-NO
+    - Datatjeneste      # dcat:DataService    — anbefalt i DCAT-AP-NO
+    - Kvalitetsdimensjon  # dqv:Dimension     — anbefalt i DQV-AP-NO
+    - Kvalitetsmerknad    # dqv:QualityAnnotation — anbefalt i DQV-AP-NO

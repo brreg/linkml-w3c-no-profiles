@@ -159,6 +159,52 @@ _FAIR_CHECKS = {
 }
 
 
+def _check_class_slots(sv, schema, policy: dict, issues: list) -> None:
+    """Sjekkar at spesifiserte klasser har slots med kravde slot_uri-ar."""
+    must_include = policy.get("class_slots", {}).get("must_include", [])
+    if not must_include:
+        return
+
+    own_class_names = set(schema.classes.keys()) if schema.classes else set()
+
+    for entry in must_include:
+        cname = entry.get("class")
+        required_uri = entry.get("slot_uri")
+        label = entry.get("label", required_uri)
+
+        if cname not in own_class_names:
+            continue
+
+        slot_uris = set()
+        visited: set = set()
+        queue = [cname]
+        while queue:
+            name = queue.pop()
+            if name in visited:
+                continue
+            visited.add(name)
+            cls = sv.get_class(name)
+            if cls is None:
+                continue
+            for sname in (cls.slots or []):
+                slot = sv.get_slot(sname)
+                if slot and slot.slot_uri:
+                    slot_uris.add(str(slot.slot_uri))
+            for attr in (cls.attributes or {}).values():
+                if attr.slot_uri:
+                    slot_uris.add(str(attr.slot_uri))
+            if cls.is_a:
+                queue.append(cls.is_a)
+            for mixin in (cls.mixins or []):
+                queue.append(mixin)
+
+        if required_uri not in slot_uris:
+            issues.append(issue(
+                "error", "class_missing_required_slot", f"class:{cname}",
+                f"Klasse '{cname}' manglar obligatorisk slot '{label}' ({required_uri})",
+            ))
+
+
 def _check_container_classes(schema, policy: dict, issues: list) -> None:
     """Sjekkar at tree_root-klassen har attributtar med range for spesifiserte klasser.
 
@@ -302,6 +348,9 @@ def validate_schema(schema_text: str, policy_name: str = "default") -> dict:
 
         # Container-klasse-sjekkar
         _check_container_classes(schema, policy, issues)
+
+        # AP-NO obligatoriske slot-sjekkar
+        _check_class_slots(sv, schema, policy, issues)
 
         # 4) FAIR-strukturelle sjekkar (berre for policyer som definerer fair_checks)
         _run_fair_checks(sv, schema, policy, issues)

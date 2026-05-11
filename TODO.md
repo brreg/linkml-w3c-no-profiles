@@ -1,5 +1,11 @@
+lage tester for alt
 
-forfine ap-no validatoren
+Oppdatere makefile med kommentarer som viser hvilke make argument forskjellige deler er knytta til
+
+oppdater makefile med logging for kvar make kommando som blir utført, i tillegg til logging av kvart artefakt som blir produsert
+
+lage agent som kan modellere linkml og bruke mcp-linkml-validator for å 
+
 forbere nav menyen med markering av alle nivå som inngår i gjeldande sidehierarki og ikkje kollapse menyen når du trykker på ei klasse for å vise detaljsida om den
 
 

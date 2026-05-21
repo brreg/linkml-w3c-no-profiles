@@ -381,7 +381,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Last opp Pages-artefakt
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: mkdocs/site/
 

@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Cache linkml-local image
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: linkml-local.tar.zst
           key: linkml-local-${{ hashFiles('src/assets/containers/Dockerfile.linkml') }}
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Cache python-pytest image
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: python-pytest.tar.zst
           key: python-pytest-${{ hashFiles('src/assets/containers/Dockerfile.python', 'src/assets/containers/requirements-python-test.txt') }}
@@ -360,7 +360,7 @@ jobs:
 
       - name: Cache mkdocs-local image
         id: cache-mkdocs
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: mkdocs-local.tar.zst
           key: mkdocs-local-${{ hashFiles('mkdocs/Dockerfile.mkdocs') }}
